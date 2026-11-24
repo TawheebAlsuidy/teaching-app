@@ -1,0 +1,402 @@
+[
+  {
+    "unit_num": 9,
+    "unit_title": "تفاعلات العناصر والمركبات",
+    "field": "كيمياء",
+    "page_start": 7,
+    "page_end": 29,
+    "pdf_start": 8,
+    "pdf_end": 30,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "أكاسيد العناصر",
+        "p_start": 8,
+        "p_end": 12,
+        "pdf_start": 9,
+        "pdf_end": 13
+      },
+      {
+        "n": 2,
+        "title": "آثار ضارة للأكسدة",
+        "p_start": 13,
+        "p_end": 16,
+        "pdf_start": 14,
+        "pdf_end": 17
+      },
+      {
+        "n": 3,
+        "title": "الكربون",
+        "p_start": 17,
+        "p_end": 19,
+        "pdf_start": 18,
+        "pdf_end": 20
+      },
+      {
+        "n": 4,
+        "title": "غاز ثاني أكسيد الكربون CO2",
+        "p_start": 20,
+        "p_end": 22,
+        "pdf_start": 21,
+        "pdf_end": 23
+      },
+      {
+        "n": 5,
+        "title": "النفط",
+        "p_start": 23,
+        "p_end": 26,
+        "pdf_start": 24,
+        "pdf_end": 27
+      },
+      {
+        "n": 6,
+        "title": "التلوث الناتج عن الصناعات الكيميائية",
+        "p_start": 27,
+        "p_end": 28,
+        "pdf_start": 28,
+        "pdf_end": 29
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة التاسعة",
+        "p_start": 29,
+        "p_end": 29,
+        "pdf_start": 30,
+        "pdf_end": 30
+      }
+    ]
+  },
+  {
+    "unit_num": 10,
+    "unit_title": "الهالوجينات",
+    "field": "كيمياء",
+    "page_start": 30,
+    "page_end": 39,
+    "pdf_start": 31,
+    "pdf_end": 40,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "خصائص الهالوجينات",
+        "p_start": 31,
+        "p_end": 32,
+        "pdf_start": 32,
+        "pdf_end": 33
+      },
+      {
+        "n": 2,
+        "title": "الهالوجينات في حياتنا",
+        "p_start": 33,
+        "p_end": 35,
+        "pdf_start": 34,
+        "pdf_end": 36
+      },
+      {
+        "n": 3,
+        "title": "الكلور",
+        "p_start": 36,
+        "p_end": 38,
+        "pdf_start": 37,
+        "pdf_end": 39
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة العاشرة",
+        "p_start": 39,
+        "p_end": 39,
+        "pdf_start": 40,
+        "pdf_end": 40
+      }
+    ]
+  },
+  {
+    "unit_num": 11,
+    "unit_title": "خواص الأجسام",
+    "field": "فيزياء المادة والموائع",
+    "page_start": 40,
+    "page_end": 75,
+    "pdf_start": 41,
+    "pdf_end": 76,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "بعض خواص الأجسام الصلبة",
+        "p_start": 41,
+        "p_end": 52,
+        "pdf_start": 42,
+        "pdf_end": 53
+      },
+      {
+        "n": 2,
+        "title": "الغشاء المشدود لسطوح السوائل (التوتر السطحي)",
+        "p_start": 53,
+        "p_end": 58,
+        "pdf_start": 54,
+        "pdf_end": 59
+      },
+      {
+        "n": 3,
+        "title": "قوى التماسك والتلاصق بين جزيئات السائل",
+        "p_start": 59,
+        "p_end": 61,
+        "pdf_start": 60,
+        "pdf_end": 62
+      },
+      {
+        "n": 4,
+        "title": "ارتفاع الماء في الأنابيب الضيقة (الخاصية الشعرية)",
+        "p_start": 62,
+        "p_end": 64,
+        "pdf_start": 63,
+        "pdf_end": 65
+      },
+      {
+        "n": 5,
+        "title": "الجريان الانسيابي المنتظم للسوائل خلال الأنابيب",
+        "p_start": 65,
+        "p_end": 67,
+        "pdf_start": 66,
+        "pdf_end": 68
+      },
+      {
+        "n": 6,
+        "title": "للسائل خاصية لزوجة",
+        "p_start": 68,
+        "p_end": 71,
+        "pdf_start": 69,
+        "pdf_end": 72
+      },
+      {
+        "n": 7,
+        "title": "الانتشار في السوائل",
+        "p_start": 72,
+        "p_end": 73,
+        "pdf_start": 73,
+        "pdf_end": 74
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة الحادية عشرة",
+        "p_start": 74,
+        "p_end": 75,
+        "pdf_start": 75,
+        "pdf_end": 76
+      }
+    ]
+  },
+  {
+    "unit_num": 12,
+    "unit_title": "الضغط في المواد الصلبة والموائع",
+    "field": "فيزياء",
+    "page_start": 76,
+    "page_end": 93,
+    "pdf_start": 77,
+    "pdf_end": 94,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "الضغط في الأجسام الصلبة",
+        "p_start": 77,
+        "p_end": 81,
+        "pdf_start": 78,
+        "pdf_end": 82
+      },
+      {
+        "n": 2,
+        "title": "للسوائل ضغط",
+        "p_start": 82,
+        "p_end": 85,
+        "pdf_start": 83,
+        "pdf_end": 86
+      },
+      {
+        "n": 3,
+        "title": "الضغط الجوي",
+        "p_start": 86,
+        "p_end": 91,
+        "pdf_start": 87,
+        "pdf_end": 92
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة الثانية عشرة",
+        "p_start": 92,
+        "p_end": 93,
+        "pdf_start": 93,
+        "pdf_end": 94
+      }
+    ]
+  },
+  {
+    "unit_num": 13,
+    "unit_title": "الطاقة الشمسية واستغلالها",
+    "field": "فيزياء وبيئة وتطبيقات",
+    "page_start": 94,
+    "page_end": 106,
+    "pdf_start": 95,
+    "pdf_end": 107,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "الطاقة الشمسية (الإشعاع الشمسي)",
+        "p_start": 95,
+        "p_end": 98,
+        "pdf_start": 96,
+        "pdf_end": 99
+      },
+      {
+        "n": 2,
+        "title": "التحويل الحراري للطاقة الشمسية",
+        "p_start": 99,
+        "p_end": 102,
+        "pdf_start": 100,
+        "pdf_end": 103
+      },
+      {
+        "n": 3,
+        "title": "تحويل الطاقة الشمسية إلى طاقة كهربائية",
+        "p_start": 103,
+        "p_end": 105,
+        "pdf_start": 104,
+        "pdf_end": 106
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة الثالثة عشرة",
+        "p_start": 106,
+        "p_end": 106,
+        "pdf_start": 107,
+        "pdf_end": 107
+      }
+    ]
+  },
+  {
+    "unit_num": 14,
+    "unit_title": "الإنسان يستثمر موارد البيئة الحية",
+    "field": "علم الأحياء والبيئة",
+    "page_start": 107,
+    "page_end": 125,
+    "pdf_start": 108,
+    "pdf_end": 126,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "وسائل تنمية الثروة النباتية والحيوانية",
+        "p_start": 108,
+        "p_end": 116,
+        "pdf_start": 109,
+        "pdf_end": 117
+      },
+      {
+        "n": 2,
+        "title": "صناعات تعتمد على الثروة النباتية والحيوانية",
+        "p_start": 117,
+        "p_end": 124,
+        "pdf_start": 118,
+        "pdf_end": 125
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة الرابعة عشرة",
+        "p_start": 125,
+        "p_end": 125,
+        "pdf_start": 126,
+        "pdf_end": 126
+      }
+    ]
+  },
+  {
+    "unit_num": 15,
+    "unit_title": "رعاية الأمومة والطفولة",
+    "field": "صحة وأحياء",
+    "page_start": 126,
+    "page_end": 135,
+    "pdf_start": 127,
+    "pdf_end": 136,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "العناية بالأم الحامل والجنين",
+        "p_start": 127,
+        "p_end": 129,
+        "pdf_start": 128,
+        "pdf_end": 130
+      },
+      {
+        "n": 2,
+        "title": "الرضاعة الطبيعية",
+        "p_start": 130,
+        "p_end": 132,
+        "pdf_start": 131,
+        "pdf_end": 133
+      },
+      {
+        "n": 3,
+        "title": "تنظيم الأسرة",
+        "p_start": 133,
+        "p_end": 133,
+        "pdf_start": 134,
+        "pdf_end": 134
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة الخامسة عشرة",
+        "p_start": 134,
+        "p_end": 135,
+        "pdf_start": 135,
+        "pdf_end": 136
+      }
+    ]
+  },
+  {
+    "unit_num": 16,
+    "unit_title": "الوراثة في الكائنات الحية",
+    "field": "علم الوراثة والأحياء",
+    "page_start": 136,
+    "page_end": 152,
+    "pdf_start": 137,
+    "pdf_end": 153,
+    "lessons": [
+      {
+        "n": 1,
+        "title": "ما الوراثة؟",
+        "p_start": 137,
+        "p_end": 141,
+        "pdf_start": 138,
+        "pdf_end": 142
+      },
+      {
+        "n": 2,
+        "title": "زواج الأقارب وما ينجم عنه",
+        "p_start": 142,
+        "p_end": 143,
+        "pdf_start": 143,
+        "pdf_end": 144
+      },
+      {
+        "n": 3,
+        "title": "الطفرات الوراثية",
+        "p_start": 144,
+        "p_end": 146,
+        "pdf_start": 145,
+        "pdf_end": 147
+      },
+      {
+        "n": 4,
+        "title": "الأمراض الوراثية",
+        "p_start": 147,
+        "p_end": 150,
+        "pdf_start": 148,
+        "pdf_end": 151
+      },
+      {
+        "n": "assessment",
+        "title": "تقويم الوحدة السادسة عشرة",
+        "p_start": 151,
+        "p_end": 152,
+        "pdf_start": 152,
+        "pdf_end": 153
+      }
+    ]
+  }
+]

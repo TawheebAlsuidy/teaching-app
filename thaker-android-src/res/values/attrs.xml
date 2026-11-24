@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="thakerBackground" format="color" />
+    <attr name="thakerSurface" format="color" />
+    <attr name="thakerSurfaceElevated" format="color" />
+    <attr name="thakerSurfaceSoft" format="color" />
+    <attr name="thakerTextPrimary" format="color" />
+    <attr name="thakerTextSecondary" format="color" />
+    <attr name="thakerBorder" format="color" />
+    <attr name="thakerPrimary" format="color" />
+    <attr name="thakerPrimaryDark" format="color" />
+    <attr name="thakerPrimaryLight" format="color" />
+    <attr name="thakerDisabled" format="color" />
+    <attr name="thakerSuccess" format="color" />
+    <attr name="thakerWarning" format="color" />
+    <attr name="thakerError" format="color" />
+    <attr name="thakerPhysics" format="color" />
+    <attr name="thakerBiology" format="color" />
+</resources>

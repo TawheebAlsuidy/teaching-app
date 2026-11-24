@@ -1,0 +1,99 @@
+{
+  "diag-co2-apparatus-3d": {
+    "id": "diag-co2-apparatus-3d",
+    "title": "جهاز تحضير غاز ثاني أكسيد الكربون (CO2) في المختبر",
+    "page_id": "sci9-p2-p020",
+    "book_figure": "شكل (1) ص 20",
+    "scientific_equation": "CaCO3 (صلب) + 2HCl (محلول) ➔ CaCl2 + H2O + CO2 ↑ (غاز)",
+    "components": [
+      {
+        "id": "woulfe-bottle",
+        "name": "زجاجة وولف (Woulfe Bottle)",
+        "role": "وعاء زجاجي بفتحتين للتفاعل الكيميائي المحكم دون تسرب الغاز."
+      },
+      {
+        "id": "thistle-funnel",
+        "name": "قمع ذو ساق طويلة (Thistle Funnel)",
+        "role": "إضافة حمض الهيدروكلوريك، ويجب أن تغوص ساقه في السائل لمنع تسرب الغاز عبره."
+      },
+      {
+        "id": "marble-chips",
+        "name": "قطع كربونات الكالسيوم CaCO3",
+        "role": "الحجر الجيري أو الرخام الذي يتفاعل مع الحمض."
+      },
+      {
+        "id": "delivery-tube",
+        "name": "أنبوبة توصيل زجاجية",
+        "role": "نقل غاز CO2 المتصاعد من زجاجة التفاعل إلى مخبار التجميع."
+      },
+      {
+        "id": "gas-jar",
+        "name": "مخبار مدرج لجمع الغاز",
+        "role": "جمع غاز CO2 بإزاحة الهواء إلى أعلى لأن كثافة CO2 أكبر من كثافة الهواء."
+      }
+    ],
+    "simulation_controls": [
+      {
+        "id": "acid_rate",
+        "name": "معدل تدفق الحمض HCl",
+        "min": 0,
+        "max": 100,
+        "default": 40,
+        "unit": "%"
+      },
+      {
+        "id": "chip_size",
+        "name": "حجم قطع كربونات الكالسيوم",
+        "min": 1,
+        "max": 3,
+        "default": 2,
+        "labels": [
+          "مسحوق ناعم",
+          "حبيبات متوسطة",
+          "قطع صخرية"
+        ]
+      }
+    ],
+    "three_scene_preset": {
+      "type": "chemical_apparatus",
+      "camera": {
+        "x": 0,
+        "y": 1.2,
+        "z": 3.4
+      },
+      "reaction_active": true
+    }
+  },
+  "diag-sulfur-burner": {
+    "id": "diag-sulfur-burner",
+    "title": "تجربة حرق الكبريت في لهب موقد بنزين",
+    "page_id": "sci9-p2-p010",
+    "book_figure": "شكل (2) ص 10",
+    "scientific_equation": "S (صلب أصفر) + O2 (غاز) ➔ SO2 ↑ (غاز خانق)",
+    "components": [
+      {
+        "id": "bunsen-burner",
+        "name": "موقد بنزين (Bunsen Burner)",
+        "role": "مصدر اللهب والحرارة اللازمة لبدء تفاعل الاحتراق."
+      },
+      {
+        "id": "crucible-tongs",
+        "name": "ملقط معادن طويل",
+        "role": "مسك قطعة الكبريت بأمان أثناء التقريب من اللهب."
+      },
+      {
+        "id": "sulfur-piece",
+        "name": "قطعة كبريت أصفر",
+        "role": "اللافلز الخاضع للأكسدة المباشرة."
+      }
+    ],
+    "three_scene_preset": {
+      "type": "combustion_flame",
+      "camera": {
+        "x": 0,
+        "y": 0.8,
+        "z": 2.5
+      }
+    }
+  }
+}

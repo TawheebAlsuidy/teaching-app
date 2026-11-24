@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:background="?attr/thakerBackground">
+
+    <!-- Top soft gradient wave -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_top_wave" />
+
+    <!-- Main Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+            <!-- Profile Button -->
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/header_squircle_btn"
+                android:src="@drawable/ic_person"
+                android:tint="?attr/thakerPrimary"
+                android:contentDescription="الملف الشخصي"
+                android:scaleType="centerInside" />
+
+            <!-- Center Logo & Title -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_app_logo_mortarboard"
+                        android:contentDescription="" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/app_name"
+                        android:textColor="?attr/thakerTextPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/app_tagline_new"
+                    android:textColor="?attr/thakerTextSecondary"
+                    android:textSize="11sp" />
+
+                <!-- Hidden grade label for controller binding -->
+                <TextView
+                    android:id="@+id/tv_grade_label"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Notifications Button with green dot -->
+            <FrameLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp">
+
+                <ImageButton
+                    android:id="@+id/btn_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/header_squircle_btn"
+                    android:src="@drawable/ic_bell"
+                    android:tint="?attr/thakerTextPrimary"
+                    android:contentDescription="الإشعارات"
+                    android:scaleType="centerInside" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/notification_badge_green" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btn_theme"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Scrollable Body -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:clipToPadding="false"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 1. Top Featured Hero Card (كتاب ومعمل الكيمياء) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/hero_card_banner"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:gravity="center_vertical"
+                    android:elevation="3dp">
+
+                    <ImageView
+                        android:layout_width="114dp"
+                        android:layout_height="114dp"
+                        android:src="@drawable/illustration_hero_lab"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="" />
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/chip_chem_pill"
+                            android:text="⚗️ الكيمياء"
+                            android:textColor="?attr/thakerPrimary"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/chem_card_title"
+                            android:textColor="?attr/thakerTextPrimary"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/chem_card_subtitle"
+                            android:textColor="?attr/thakerTextSecondary"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="✓ شرح تفاعلي"
+                                android:textColor="#059669"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:paddingStart="7dp"
+                                android:paddingEnd="7dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp" />
+
+                            <View
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="✓ تجارب افتراضية"
+                                android:textColor="#059669"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:paddingStart="7dp"
+                                android:paddingEnd="7dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp" />
+
+                            <View
+                                android:layout_width="4dp"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="✓ بدون اتصال"
+                                android:textColor="#059669"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:paddingStart="7dp"
+                                android:paddingEnd="7dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2. Segmented Stage Switcher (الثانوية / الإعدادية) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/stage_tab_bar_bg"
+                    android:padding="4dp">
+
+                    <Button
+                        android:id="@+id/tab_high_school"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:background="@drawable/tab_active"
+                        android:text="@string/stage_high_school"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_layers"
+                        android:drawablePadding="8dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <Button
+                        android:id="@+id/tab_middle_school"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:background="@drawable/tab_inactive"
+                        android:text="@string/stage_middle_school"
+                        android:textColor="?attr/thakerTextPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_graduation"
+                        android:drawablePadding="8dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+                </LinearLayout>
+
+                <!-- 3. Section Header: الكتب الدراسية -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_book_green"
+                        android:contentDescription="" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/section_books_title"
+                            android:textColor="?attr/thakerTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:text="@string/section_books_sub"
+                            android:textColor="?attr/thakerTextSecondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- High School Container -->
+                <LinearLayout
+                    android:id="@+id/container_high_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- Featured Book & Lab Card -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/featured_book_card"
+                        android:elevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="128dp"
+                                    android:layout_height="110dp"
+                                    android:src="@drawable/illustration_featured_lab"
+                                    android:scaleType="fitCenter"
+                                    android:contentDescription="" />
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="match_parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/chem_card_title"
+                                        android:textColor="?attr/thakerTextPrimary"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="@string/chem_card_subtitle"
+                                        android:textColor="?attr/thakerTextSecondary"
+                                        android:textSize="11sp" />
+
+                                    <Button
+                                        android:id="@+id/btn_open_chem_lab"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="46dp"
+                                        android:layout_marginTop="12dp"
+                                        android:minHeight="0dp"
+                                        android:minWidth="0dp"
+                                        android:background="@drawable/btn_primary_emerald"
+                                        android:text="فتح المعمل  ▶"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:paddingStart="16dp"
+                                        android:paddingEnd="16dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="44dp"
+                                android:layout_marginTop="12dp"
+                                android:orientation="horizontal"
+                                android:background="@drawable/switch_container_bg"
+                                android:gravity="center_vertical"
+                                android:paddingStart="14dp"
+                                android:paddingEnd="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/auto_launch_pref"
+                                    android:textColor="?attr/thakerTextPrimary"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <Switch
+                                    android:id="@+id/cb_auto_launch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:thumbTint="?attr/thakerPrimary"
+                                    android:trackTint="#A7F3D0" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="top|start"
+                            android:layout_marginStart="24dp"
+                            android:src="@drawable/ic_ribbon"
+                            android:contentDescription="" />
+                    </FrameLayout>
+
+                    <!-- Physics Card -->
+                    <LinearLayout
+                        android:id="@+id/card_physics"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/surface_card"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:elevation="2dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_chevron_left"
+                            android:contentDescription="" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="14dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/subject_physics"
+                                android:textColor="?attr/thakerTextPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="بصريات"
+                                android:textColor="?attr/thakerTextSecondary"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/squircle_physics">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_atom"
+                                android:contentDescription="" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Biology Card -->
+                    <LinearLayout
+                        android:id="@+id/card_biology"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/surface_card"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:elevation="2dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_chevron_left"
+                            android:contentDescription="" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="14dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/subject_biology"
+                                android:textColor="?attr/thakerTextPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="مجسمات"
+                                android:textColor="?attr/thakerTextSecondary"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/squircle_biology">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_dna"
+                                android:contentDescription="" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Middle School Container -->
+                <LinearLayout
+                    android:id="@+id/container_middle_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- 9th Grade Hero Banner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/hero_card_banner"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:elevation="3dp">
+
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/illustration_science"
+                            android:contentDescription="" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_chem_pill"
+                                android:text="🔬 العلوم والرياضيات · تاسع"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="منهج الصف التاسع التفاعلي"
+                                android:textColor="?attr/thakerTextPrimary"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="كتب 3D ومعامل وتجارب واختبارات وزارية"
+                                android:textColor="?attr/thakerTextSecondary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Next-Gen Intelligent Interactive Textbook Engine Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/hero_card_banner"
+                        android:padding="14dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:elevation="3dp">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/illustration_science"
+                            android:contentDescription="" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/chip_chem_pill"
+                                android:text="✨ الجيل الجديد · محرك تفاعلي ذكي"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="كتاب العلوم التفاعلي الذكي"
+                                android:textColor="?attr/thakerTextPrimary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="الكتاب الوزاري الأصلي + طبقة الذكاء ومعامل 3D"
+                                android:textColor="?attr/thakerTextSecondary"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:id="@+id/btn_open_sci9_interactive_engine"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/btn_primary_emerald"
+                                android:text="افتح الكتاب التفاعلي الذكي  ▶"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_open_sci9_3d_book"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btn_primary_emerald"
+                        android:text="كتاب ومعمل العلوم 3D  ▶"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_open_math9_3d_book"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/btn_primary_emerald"
+                        android:text="كتاب ومعمل الرياضيات 3D  ▶"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_open_sci9_lab"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/surface_card"
+                        android:text="معمل العلوم التفاعلي (13 درس)  ⚗️"
+                        android:textColor="?attr/thakerTextPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_exam_9th_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/surface_card"
+                        android:text="الاختبار الوزاري الشامل  📝"
+                        android:textColor="?attr/thakerPrimary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Middle School Subjects -->
+                    <!-- Sci P1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/surface_card"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sci_p1_title"
+                            android:textColor="?attr/thakerTextPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/sci_p1_sub"
+                            android:textColor="?attr/thakerTextSecondary"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_read_sci_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الكتاب"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_index_sci_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الفهرس"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_summary_sci_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الملخص"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_quiz_sci_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="اختبار"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Sci P2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/surface_card"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sci_p2_title"
+                            android:textColor="?attr/thakerTextPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/sci_p2_sub"
+                            android:textColor="?attr/thakerTextSecondary"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_read_sci_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الكتاب"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_index_sci_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الفهرس"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_summary_sci_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الملخص"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_quiz_sci_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="اختبار"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Math P1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/surface_card"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/math_p1_title"
+                            android:textColor="?attr/thakerTextPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/math_p1_sub"
+                            android:textColor="?attr/thakerTextSecondary"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_read_math_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الكتاب"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_index_math_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الفهرس"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_summary_math_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الملخص"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_quiz_math_p1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="اختبار"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Math P2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/surface_card"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/math_p2_title"
+                            android:textColor="?attr/thakerTextPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/math_p2_sub"
+                            android:textColor="?attr/thakerTextSecondary"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_read_math_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الكتاب"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_index_math_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الفهرس"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_summary_math_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="الملخص"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                            <View android:layout_width="6dp" android:layout_height="match_parent" />
+                            <Button
+                                android:id="@+id/btn_quiz_math_p2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/chip_feature_pill"
+                                android:text="اختبار"
+                                android:textColor="?attr/thakerPrimary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- About App Button -->
+                <Button
+                    android:id="@+id/btn_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:background="@drawable/chip_neutral"
+                    android:text="@string/about_app"
+                    android:textColor="?attr/thakerTextSecondary"
+                    android:textSize="10sp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Bottom Navigation Dock Bar (Matches Prototype Exactly) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_nav_dock"
+        android:elevation="12dp"
+        android:gravity="center_vertical"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp">
+
+        <!-- 1. موادي -->
+        <Button
+            android:id="@+id/nav_subjects"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@android:color/transparent"
+            android:text="@string/nav_subjects"
+            android:textColor="?attr/thakerTextSecondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_graduation_cap"
+            android:drawablePadding="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp" />
+
+        <!-- 2. المكتبة -->
+        <Button
+            android:id="@+id/nav_library"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@android:color/transparent"
+            android:text="@string/nav_library"
+            android:textColor="?attr/thakerTextSecondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_download_box"
+            android:drawablePadding="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp" />
+
+        <!-- 3. الرئيسية (Elevated FAB Center) -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+
+            <View
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/nav_fab_glow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/nav_home"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/nav_fab_home"
+                    android:drawableTop="@drawable/ic_home_white"
+                    android:gravity="center"
+                    android:paddingTop="12dp"
+                    android:elevation="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/nav_home"
+                    android:textColor="?attr/thakerPrimary"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 4. المفضلة -->
+        <Button
+            android:id="@+id/nav_favorites"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@android:color/transparent"
+            android:text="@string/nav_favorites"
+            android:textColor="?attr/thakerTextSecondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_bookmark"
+            android:drawablePadding="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp" />
+
+        <!-- 5. الإعدادات -->
+        <Button
+            android:id="@+id/nav_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@android:color/transparent"
+            android:text="@string/nav_settings"
+            android:textColor="?attr/thakerTextSecondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/ic_settings_gear"
+            android:drawablePadding="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp" />
+    </LinearLayout>
+</FrameLayout>

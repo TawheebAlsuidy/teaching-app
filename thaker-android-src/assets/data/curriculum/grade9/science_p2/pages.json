@@ -1,0 +1,63 @@
+[
+  {
+    "page_id": "sci9-p2-p006",
+    "book_page": 5,
+    "pdf_page": 6,
+    "type": "contents",
+    "title": "فهرس المحتويات (1)",
+    "unit_id": null,
+    "image": "assets/curriculum/grade9/science_p2/pages/page_006_opt.jpg",
+    "image_full": "assets/curriculum/grade9/science_p2/pages/page_006.jpg",
+    "aspect_ratio": 0.7083
+  },
+  {
+    "page_id": "sci9-p2-p007",
+    "book_page": 6,
+    "pdf_page": 7,
+    "type": "contents",
+    "title": "فهرس المحتويات (2)",
+    "unit_id": null,
+    "image": "assets/curriculum/grade9/science_p2/pages/page_007_opt.jpg",
+    "image_full": "assets/curriculum/grade9/science_p2/pages/page_007.jpg",
+    "aspect_ratio": 0.7083
+  },
+  {
+    "page_id": "sci9-p2-p010",
+    "book_page": 10,
+    "pdf_page": 11,
+    "type": "lesson_concept",
+    "title": "الأكسدة والأكاسيد الفلزية واللافلزية",
+    "unit_id": "u9",
+    "lesson_id": "u9-l1",
+    "image": "assets/curriculum/grade9/science_p2/pages/page_011_opt.jpg",
+    "image_full": "assets/curriculum/grade9/science_p2/pages/page_011.jpg",
+    "aspect_ratio": 0.7083,
+    "is_poc": true
+  },
+  {
+    "page_id": "sci9-p2-p020",
+    "book_page": 20,
+    "pdf_page": 21,
+    "type": "diagram_lab",
+    "title": "تحضير غاز ثاني أكسيد الكربون (CO2) في المختبر",
+    "unit_id": "u9",
+    "lesson_id": "u9-l4",
+    "image": "assets/curriculum/grade9/science_p2/pages/page_021_opt.jpg",
+    "image_full": "assets/curriculum/grade9/science_p2/pages/page_021.jpg",
+    "aspect_ratio": 0.7083,
+    "is_poc": true
+  },
+  {
+    "page_id": "sci9-p2-p029",
+    "book_page": 29,
+    "pdf_page": 30,
+    "type": "unit_assessment",
+    "title": "تقويم الوحدة التاسعة (تفاعلات العناصر والمركبات)",
+    "unit_id": "u9",
+    "lesson_id": "u9-assessment",
+    "image": "assets/curriculum/grade9/science_p2/pages/page_030_opt.jpg",
+    "image_full": "assets/curriculum/grade9/science_p2/pages/page_030.jpg",
+    "aspect_ratio": 0.7083,
+    "is_poc": true
+  }
+]

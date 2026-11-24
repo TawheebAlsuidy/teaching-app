@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>كتيب تجارب الكيمياء – الثالث الثانوي (معمل تفاعلي ثلاثي الأبعاد)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<!-- Top Bar -->
+<header id="topBar">
+  <!-- Title & Unit & Back Navigation -->
+  <div class="panel" id="expInfo" style="display:flex;flex-direction:row;align-items:center;gap:8px;">
+    <button class="btn-transparent-back" onclick="exitToHome()" title="العودة لتطبيق ذاكر" aria-label="رجوع">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </button>
+    <div style="display:flex;flex-direction:column;gap:2px;overflow:hidden;min-width:0;">
+      <div id="expTitle">جاري التحميل...</div>
+      <div id="expUnit">كيمياء الثالث الثانوي</div>
+    </div>
+  </div>
+
+  <!-- Actions & Tools -->
+  <div class="panel btn-group" id="actionGroup">
+    <button class="btn icon-only" id="qualityBtn" title="جودة الرسوم والأداء" onclick="toggleQualityMode()">⚡ عالٍ</button>
+    <button class="btn icon-only" id="mutb" title="كتم/تشغيل المؤثرات" onclick="toggleAudio()">🔊</button>
+    <button class="btn icon-only" id="voiceb" title="إعدادات الصوت" onclick="$('#vp').hidden=!$('#vp').hidden">🎙️</button>
+    <button class="btn icon-only" id="camResetb" title="إعادة ضبط الكاميرا" onclick="resetCamera()">🎯</button>
+    <button class="btn icon-only" id="resetb" title="إعادة ترتيب المعمل" onclick="resetExp()">🔄</button>
+    <button class="btn btn-quiz" id="quizb" onclick="openQ()">📝 اختبارات</button>
+  </div>
+
+  <!-- View Switchers & Narration Tour -->
+  <div class="panel btn-group" id="viewGroup">
+    <button class="btn active" id="btnViewBook" onclick="view('book')">📖 الكتاب</button>
+    <button class="btn" id="btnViewLab" onclick="view('lab')">🔬 معمل 3D</button>
+    <button class="btn" id="btnViewPage" onclick="view('page')">📄 الدرس</button>
+    <button class="btn" id="tourb" onclick="tour()">🎧 شرح كامل</button>
+  </div>
+</header>
+
+<!-- Touch Gesture Hint -->
+<div id="touchHint">
+  💡 المس أي أداة أو اسحبها للتفاعل · اسحب الشاشة لتدوير الرؤية · افتح وضم إصبعيك للتكبير
+</div>
+
+<!-- Chemical HUD -->
+<div class="panel" id="chemHud">
+  <div id="hudEq"></div>
+  <div id="hudSensors"></div>
+  <div id="hudHint"></div>
+</div>
+
+<!-- Lab Shelf -->
+<div id="labShelf"></div>
+
+<!-- Step Guidance Ribbon -->
+<div class="panel" id="stepRibbon">
+  <div id="stepRow">
+    <div id="stp"></div>
+    <div class="step-actions">
+      <button class="btn-action" id="autoBtn" onclick="autoStep()">▶ نفّذ الخطوة</button>
+      <!-- TODO: المرحلة د - التجربة الحرة المعملية المفتوحة -->
+      <button class="btn" id="freeBtn" style="display:none;" onclick="toggleFreeMode()">🧪 تجربة حرة</button>
+    </div>
+  </div>
+  <div id="cap"></div>
+</div>
+
+<!-- Bottom Navigation Bar -->
+<div id="bottomBar">
+  <button class="btn" onclick="nav(-1)">➡ التجربة السابقة</button>
+  <button class="btn" id="pg" onclick="pgn()">📄 صفحة الكتاب المدرسي</button>
+  <button class="btn" onclick="nav(1)">التجربة التالية ⬅</button>
+</div>
+
+<!-- Drag Tooltip Toast -->
+<div id="dragToast"></div>
+
+<!-- Voice Settings Modal -->
+<div class="panel" id="vp" hidden>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+    <b>🎙️ الشرح الصوتي</b>
+    <button class="close-btn" onclick="$('#vp').hidden=true" style="font-size:16px">✕</button>
+  </div>
+  <label>الصوت <select id="vs"></select></label>
+  <label>السرعة <input id="rt" type="range" min=".6" max="1.2" step=".05" value=".9"></label>
+  <p id="vnote"></p>
+</div>
+
+<!-- Quizzes Modal -->
+<div class="modal-overlay" id="qz" hidden>
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>📝 الاختبارات الوزارية والتقويمية</h3>
+      <button class="close-btn" onclick="closeQ()">✕</button>
+    </div>
+    <div id="qb"></div>
+  </div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

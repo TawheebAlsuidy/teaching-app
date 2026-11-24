@@ -1,0 +1,176 @@
+{
+  "sci9-p2-p010": [
+    {
+      "id": "elem-p10-def-oxidation",
+      "type": "explainable_text",
+      "title": "مفهوم الأكسدة وتكوين الأكاسيد",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.24,
+        "w": 0.77,
+        "h": 0.18
+      },
+      "explanation_ref": "exp-oxidation-metals",
+      "highlight_color": "rgba(16, 185, 129, 0.22)",
+      "indicator_label": "📌 مفهوم علمي"
+    },
+    {
+      "id": "elem-p10-trans-q",
+      "type": "explainable_text",
+      "title": "سؤال استكشافي: أكسدة العناصر اللافلزية",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.44,
+        "w": 0.77,
+        "h": 0.08
+      },
+      "explanation_ref": "exp-nonmetals-inquiry",
+      "highlight_color": "rgba(56, 189, 248, 0.22)",
+      "indicator_label": "❓ سؤال استكشافي"
+    },
+    {
+      "id": "elem-p10-act2-btn",
+      "type": "activity",
+      "title": "نشاط (2): أكسدة اللافلزات (حرق الكبريت)",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.54,
+        "w": 0.77,
+        "h": 0.06
+      },
+      "activity_ref": "act-sulfur-combustion",
+      "highlight_color": "rgba(245, 158, 11, 0.22)",
+      "indicator_label": "🧪 نشاط عملي تفاعلي"
+    },
+    {
+      "id": "elem-p10-fig2-3d",
+      "type": "interactive_3d",
+      "title": "شكل (2): حرق الكبريت في لهب موقد بنزين",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.63,
+        "w": 0.26,
+        "h": 0.23
+      },
+      "diagram_ref": "diag-sulfur-burner",
+      "highlight_color": "rgba(139, 92, 246, 0.25)",
+      "indicator_label": "🔍 استكشاف 3D"
+    }
+  ],
+  "sci9-p2-p020": [
+    {
+      "id": "elem-p20-lesson-header",
+      "type": "explainable_text",
+      "title": "الدرس الرابع: غاز ثاني أكسيد الكربون",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.07,
+        "w": 0.77,
+        "h": 0.09
+      },
+      "explanation_ref": "exp-co2-intro",
+      "highlight_color": "rgba(56, 189, 248, 0.2)",
+      "indicator_label": "📖 عنوان الدرس"
+    },
+    {
+      "id": "elem-p20-intro-text",
+      "type": "explainable_text",
+      "title": "نسبة CO2 في الهواء ومصادره الطبيعية",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.2,
+        "w": 0.77,
+        "h": 0.26
+      },
+      "explanation_ref": "exp-co2-occurrence",
+      "highlight_color": "rgba(16, 185, 129, 0.2)",
+      "indicator_label": "📌 حقائق علمية"
+    },
+    {
+      "id": "elem-p20-act1-header",
+      "type": "activity",
+      "title": "نشاط (1): تحضير CO2 في المختبر",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.48,
+        "w": 0.77,
+        "h": 0.06
+      },
+      "activity_ref": "act-co2-prep-procedure",
+      "highlight_color": "rgba(245, 158, 11, 0.22)",
+      "indicator_label": "🧪 نشاط المختبر"
+    },
+    {
+      "id": "elem-p20-fig1-apparatus",
+      "type": "interactive_3d",
+      "title": "شكل (1): جهاز تحضير غاز ثاني أكسيد الكربون",
+      "bounds": {
+        "x": 0.11,
+        "y": 0.69,
+        "w": 0.32,
+        "h": 0.185
+      },
+      "diagram_ref": "diag-co2-apparatus-3d",
+      "highlight_color": "rgba(239, 68, 68, 0.28)",
+      "indicator_label": "🔬 معمل ثلاثي الأبعاد 3D"
+    }
+  ],
+  "sci9-p2-p029": [
+    {
+      "id": "elem-p29-q1",
+      "type": "assessment",
+      "title": "سؤال 1: مقارنة أكسدة الفلزات واللافلزات",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.2,
+        "w": 0.75,
+        "h": 0.045
+      },
+      "assessment_ref": "q-book-p29-01",
+      "highlight_color": "rgba(56, 189, 248, 0.22)",
+      "indicator_label": "✍️ تمرين تفاعلي"
+    },
+    {
+      "id": "elem-p29-q2",
+      "type": "assessment",
+      "title": "سؤال 2: علل ما يأتي (تفسيرات علمية)",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.245,
+        "w": 0.75,
+        "h": 0.14
+      },
+      "assessment_ref": "q-book-p29-02",
+      "highlight_color": "rgba(16, 185, 129, 0.22)",
+      "indicator_label": "🧠 علل علمياً"
+    },
+    {
+      "id": "elem-p29-q3",
+      "type": "assessment",
+      "title": "سؤال 3: حماية الأدوات والآلات من التأكسد",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.39,
+        "w": 0.75,
+        "h": 0.055
+      },
+      "assessment_ref": "q-book-p29-03",
+      "highlight_color": "rgba(245, 158, 11, 0.22)",
+      "indicator_label": "🛠️ تطبيق عملي"
+    },
+    {
+      "id": "elem-p29-q4",
+      "type": "assessment",
+      "title": "سؤال 4: صح أم خطأ (التآصل والكربون والماس)",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.45,
+        "w": 0.75,
+        "h": 0.235
+      },
+      "assessment_ref": "q-book-p29-04",
+      "highlight_color": "rgba(239, 68, 68, 0.22)",
+      "indicator_label": "✅ صح أم خطأ ❌"
+    }
+  ]
+}

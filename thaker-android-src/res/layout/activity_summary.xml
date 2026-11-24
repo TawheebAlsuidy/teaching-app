@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/thakerBackground">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bar_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <Button
+            android:id="@+id/btn_summary_back"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:text="⬅"
+            android:textColor="?attr/thakerTextPrimary"
+            android:background="@drawable/badge_soon"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="💡 ملخصات وقوانين ونظريات الصف التاسع"
+            android:textColor="?attr/thakerTextPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <!-- Subject Tabs -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tab_sum_math1"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="📐 رياضيات - ج1"
+                android:textColor="?attr/thakerTextPrimary"
+                android:background="@drawable/tab_active"
+                android:textSize="12sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/tab_sum_math2"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="📐 رياضيات - ج2"
+                android:textColor="?attr/thakerTextSecondary"
+                android:background="@drawable/tab_inactive"
+                android:textSize="12sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/tab_sum_sci1"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="🧪 علوم - ج1"
+                android:textColor="?attr/thakerTextSecondary"
+                android:background="@drawable/tab_inactive"
+                android:textSize="12sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/tab_sum_sci2"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="🧪 علوم - ج2"
+                android:textColor="?attr/thakerTextSecondary"
+                android:background="@drawable/tab_inactive"
+                android:textSize="12sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Content Cards Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/summary_cards_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+</LinearLayout>

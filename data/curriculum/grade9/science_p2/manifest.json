@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0.0",
+  "pack_id": "sci-g9-p2-interactive-2026",
+  "subject": "science",
+  "grade": 9,
+  "part": 2,
+  "edition": {
+    "title": "العلوم - الجزء الثاني - الصف التاسع من مرحلة التعليم الأساسي",
+    "ministry": "الجمهورية اليمنية - وزارة التربية والتعليم - قطاع المناهج",
+    "curriculum_version": "1447هـ - 2026م",
+    "official_pdf": "science_part2_9th.pdf",
+    "total_pdf_pages": 154,
+    "total_book_pages": 152
+  },
+  "features": {
+    "original_page_rendering": true,
+    "interactive_overlays": true,
+    "smart_text_bottom_sheet": true,
+    "explanation_levels_count": 3,
+    "interactive_3d_science": true,
+    "simulated_activities": true,
+    "remediation_mistake_review": true,
+    "offline_audio_synthesis": true,
+    "multi_student_profiles": true
+  },
+  "data_files": [
+    "pages.json",
+    "lessons.json",
+    "interactions.json",
+    "explanations.json",
+    "diagrams.json",
+    "activities.json",
+    "assessments.json",
+    "glossary.json"
+  ]
+}

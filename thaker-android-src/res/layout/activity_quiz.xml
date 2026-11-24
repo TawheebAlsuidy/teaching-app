@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/thakerBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_quiz_back"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:text="⬅"
+                android:textColor="?attr/thakerTextPrimary"
+                android:background="@drawable/badge_soon"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/tv_quiz_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="اختبار وزاري مؤتمت"
+                    android:textColor="?attr/thakerTextPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_quiz_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="السؤال 1 من 15"
+                    android:textColor="?attr/thakerPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_quiz_score_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="النقاط: 0"
+                android:textColor="?attr/thakerPrimary"
+                android:background="@drawable/badge_soon"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Question Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/hero_card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="نص السؤال هنا..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp" />
+        </LinearLayout>
+
+        <!-- Options Container -->
+        <LinearLayout
+            android:id="@+id/options_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_opt_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="الخيار الأول"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/quiz_option_normal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="right|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btn_opt_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="الخيار الثاني"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/quiz_option_normal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="right|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btn_opt_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="الخيار الثالث"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/quiz_option_normal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="right|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btn_opt_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="الخيار الرابع"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/quiz_option_normal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="right|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+
+        <!-- Explanation Card -->
+        <LinearLayout
+            android:id="@+id/card_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="14dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_explain_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="إجابة صحيحة! ✅"
+                android:textColor="?attr/thakerSuccess"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_explain_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="الشرح والتعليل العلمي هنا..."
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
+
+        <!-- Next / Finish Button -->
+        <Button
+            android:id="@+id/btn_quiz_next"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="السؤال التالي ⬅"
+            android:textColor="?attr/thakerTextPrimary"
+            android:background="@drawable/btn_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

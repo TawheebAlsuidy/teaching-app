@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/thakerBackground">
+
+    <!-- Zoomable PDF Page Display -->
+    <ImageView
+        android:id="@+id/pdf_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:contentDescription="صفحة الكتاب" />
+
+    <!-- Loading Spinner -->
+    <ProgressBar
+        android:id="@+id/pdf_progress"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- Top Toolbar (Toggleable) -->
+    <LinearLayout
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:background="@drawable/bar_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <Button
+            android:id="@+id/btn_back_viewer"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:text="⬅"
+            android:textColor="?attr/thakerTextPrimary"
+            android:background="@drawable/badge_soon"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tv_viewer_book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="عنوان الكتاب"
+                android:textColor="?attr/thakerTextPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_viewer_unit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الوحدة الحالية"
+                android:textColor="?attr/thakerPrimary"
+                android:textSize="11sp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_open_unit_index"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:text="📋 الفهرس"
+            android:textColor="?attr/thakerPrimary"
+            android:background="@drawable/badge_soon"
+            android:textSize="11sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_reset_zoom"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:text="🔍"
+            android:textColor="?attr/thakerTextPrimary"
+            android:background="@drawable/badge_soon"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Bottom Toolbar: Prev, Next, Page Indicator & Scrubber -->
+    <LinearLayout
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@drawable/bar_bg"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="10dp">
+
+        <SeekBar
+            android:id="@+id/page_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btn_prev_page"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="◀ السابق"
+                android:textColor="?attr/thakerTextPrimary"
+                android:background="@drawable/btn_secondary"
+                android:textSize="12sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp" />
+
+            <TextView
+                android:id="@+id/tv_page_indicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="صفحة 1 من 100"
+                android:textColor="?attr/thakerTextPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_next_page"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="التالي ▶"
+                android:textColor="?attr/thakerTextPrimary"
+                android:background="@drawable/btn_secondary"
+                android:textSize="12sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
