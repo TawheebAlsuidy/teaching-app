@@ -37,25 +37,60 @@ window.THAKER_CURRICULUM_P2 = {
   },
   "pages": [
     {
-      "page_id": "sci9-p2-p006",
+      "page_id": "sci9-p2-p005",
       "book_page": 5,
       "pdf_page": 6,
       "type": "contents",
-      "title": "فهرس المحتويات (1)",
+      "title": "فهرس المحتويات (الجزء الأول)",
       "unit_id": null,
       "image": "assets/curriculum/grade9/science_p2/pages/page_006_opt.jpg",
       "image_full": "assets/curriculum/grade9/science_p2/pages/page_006.jpg",
       "aspect_ratio": 0.7083
     },
     {
-      "page_id": "sci9-p2-p007",
+      "page_id": "sci9-p2-p006",
       "book_page": 6,
       "pdf_page": 7,
       "type": "contents",
-      "title": "فهرس المحتويات (2)",
+      "title": "فهرس المحتويات (الجزء الثاني)",
       "unit_id": null,
       "image": "assets/curriculum/grade9/science_p2/pages/page_007_opt.jpg",
       "image_full": "assets/curriculum/grade9/science_p2/pages/page_007.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p007",
+      "book_page": 7,
+      "pdf_page": 8,
+      "type": "unit_cover",
+      "title": "الوحدة التاسعة: تفاعلات العناصر والمركبات",
+      "unit_id": "u9",
+      "image": "assets/curriculum/grade9/science_p2/pages/page_008_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_008.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p008",
+      "book_page": 8,
+      "pdf_page": 9,
+      "type": "lesson_intro",
+      "title": "الدرس 1: أكاسيد العناصر - النشاط والتفاعل",
+      "unit_id": "u9",
+      "lesson_num": 1,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_009_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_009.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p009",
+      "book_page": 9,
+      "pdf_page": 10,
+      "type": "lesson_activity",
+      "title": "الدرس 1: الأكاسيد الفلزية وتباع الشمس",
+      "unit_id": "u9",
+      "lesson_num": 1,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_010_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_010.jpg",
       "aspect_ratio": 0.7083
     },
     {
@@ -63,26 +98,230 @@ window.THAKER_CURRICULUM_P2 = {
       "book_page": 10,
       "pdf_page": 11,
       "type": "lesson_concept",
-      "title": "الأكسدة والأكاسيد الفلزية واللافلزية",
+      "title": "الدرس 1: الأكسدة والأكاسيد الفلزية واللافلزية",
       "unit_id": "u9",
-      "lesson_id": "u9-l1",
+      "lesson_num": 1,
       "image": "assets/curriculum/grade9/science_p2/pages/page_011_opt.jpg",
       "image_full": "assets/curriculum/grade9/science_p2/pages/page_011.jpg",
       "aspect_ratio": 0.7083,
       "is_poc": true
     },
     {
+      "page_id": "sci9-p2-p011",
+      "book_page": 11,
+      "pdf_page": 12,
+      "type": "lesson_exercise",
+      "title": "الدرس 1: تدريبات الأكاسيد وتطبيقاتها",
+      "unit_id": "u9",
+      "lesson_num": 1,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_012_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_012.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p012",
+      "book_page": 12,
+      "pdf_page": 13,
+      "type": "lesson_summary",
+      "title": "الدرس 1: خلاصة وتدريبات أكاسيد العناصر",
+      "unit_id": "u9",
+      "lesson_num": 1,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_013_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_013.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p013",
+      "book_page": 13,
+      "pdf_page": 14,
+      "type": "lesson_intro",
+      "title": "الدرس 2: آثار ضارة للأكسدة - صدأ الحديد",
+      "unit_id": "u9",
+      "lesson_num": 2,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_014_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_014.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p014",
+      "book_page": 14,
+      "pdf_page": 15,
+      "type": "lesson_activity",
+      "title": "الدرس 2: شروط تكون الصدأ وتجاربه",
+      "unit_id": "u9",
+      "lesson_num": 2,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_015_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_015.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p015",
+      "book_page": 15,
+      "pdf_page": 16,
+      "type": "lesson_concept",
+      "title": "الدرس 2: حماية المعادن والسبائك من التآكل",
+      "unit_id": "u9",
+      "lesson_num": 2,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_016_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_016.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p016",
+      "book_page": 16,
+      "pdf_page": 17,
+      "type": "lesson_exercise",
+      "title": "الدرس 2: تدريبات آثار الأكسدة وطرق الوقاية",
+      "unit_id": "u9",
+      "lesson_num": 2,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_017_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_017.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p017",
+      "book_page": 17,
+      "pdf_page": 18,
+      "type": "lesson_concept",
+      "title": "الدرس 3: الكربون - ظاهرة التآصل (الماس والجرافيت)",
+      "unit_id": "u9",
+      "lesson_num": 3,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_018_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_018.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p018",
+      "book_page": 18,
+      "pdf_page": 19,
+      "type": "lesson_concept",
+      "title": "الدرس 3: الخواص الفيزيائية والكيميائية للكربون",
+      "unit_id": "u9",
+      "lesson_num": 3,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_019_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_019.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p019",
+      "book_page": 19,
+      "pdf_page": 20,
+      "type": "lesson_exercise",
+      "title": "الدرس 3: استخدامات الكربون وتطبيقاته الصناعية",
+      "unit_id": "u9",
+      "lesson_num": 3,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_020_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_020.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
       "page_id": "sci9-p2-p020",
       "book_page": 20,
       "pdf_page": 21,
       "type": "diagram_lab",
-      "title": "تحضير غاز ثاني أكسيد الكربون (CO2) في المختبر",
+      "title": "الدرس 4: تحضير غاز ثاني أكسيد الكربون (CO2) في المختبر",
       "unit_id": "u9",
-      "lesson_id": "u9-l4",
+      "lesson_num": 4,
       "image": "assets/curriculum/grade9/science_p2/pages/page_021_opt.jpg",
       "image_full": "assets/curriculum/grade9/science_p2/pages/page_021.jpg",
       "aspect_ratio": 0.7083,
       "is_poc": true
+    },
+    {
+      "page_id": "sci9-p2-p021",
+      "book_page": 21,
+      "pdf_page": 22,
+      "type": "lesson_concept",
+      "title": "الدرس 4: خواص غاز ثاني أكسيد الكربون الفيزيائية والكيميائية",
+      "unit_id": "u9",
+      "lesson_num": 4,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_022_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_022.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p022",
+      "book_page": 22,
+      "pdf_page": 23,
+      "type": "lesson_activity",
+      "title": "الدرس 4: الكشف عن ثاني أكسيد الكربون واستخداماته",
+      "unit_id": "u9",
+      "lesson_num": 4,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_023_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_023.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p023",
+      "book_page": 23,
+      "pdf_page": 24,
+      "type": "lesson_intro",
+      "title": "الدرس 5: النفط - نشأته وتركيبه وطرق استخراجه",
+      "unit_id": "u9",
+      "lesson_num": 5,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_024_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_024.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p024",
+      "book_page": 24,
+      "pdf_page": 25,
+      "type": "lesson_concept",
+      "title": "الدرس 5: تكرير النفط بالتقطير التجزيئي",
+      "unit_id": "u9",
+      "lesson_num": 5,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_025_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_025.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p025",
+      "book_page": 25,
+      "pdf_page": 26,
+      "type": "lesson_concept",
+      "title": "الدرس 5: مشتقات النفط واستخداماتها الحياتية",
+      "unit_id": "u9",
+      "lesson_num": 5,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_026_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_026.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p026",
+      "book_page": 26,
+      "pdf_page": 27,
+      "type": "lesson_exercise",
+      "title": "الدرس 5: تدريبات واستخدامات المنتجات النفطية",
+      "unit_id": "u9",
+      "lesson_num": 5,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_027_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_027.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p027",
+      "book_page": 27,
+      "pdf_page": 28,
+      "type": "lesson_intro",
+      "title": "الدرس 6: التلوث الناتج عن الصناعات الكيميائية والنفطية",
+      "unit_id": "u9",
+      "lesson_num": 6,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_028_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_028.jpg",
+      "aspect_ratio": 0.7083
+    },
+    {
+      "page_id": "sci9-p2-p028",
+      "book_page": 28,
+      "pdf_page": 29,
+      "type": "lesson_concept",
+      "title": "الدرس 6: حماية البيئة ومكافحة التلوث الصناعي",
+      "unit_id": "u9",
+      "lesson_num": 6,
+      "image": "assets/curriculum/grade9/science_p2/pages/page_029_opt.jpg",
+      "image_full": "assets/curriculum/grade9/science_p2/pages/page_029.jpg",
+      "aspect_ratio": 0.7083
     },
     {
       "page_id": "sci9-p2-p029",
@@ -91,7 +330,6 @@ window.THAKER_CURRICULUM_P2 = {
       "type": "unit_assessment",
       "title": "تقويم الوحدة التاسعة (تفاعلات العناصر والمركبات)",
       "unit_id": "u9",
-      "lesson_id": "u9-assessment",
       "image": "assets/curriculum/grade9/science_p2/pages/page_030_opt.jpg",
       "image_full": "assets/curriculum/grade9/science_p2/pages/page_030.jpg",
       "aspect_ratio": 0.7083,
@@ -674,6 +912,81 @@ window.THAKER_CURRICULUM_P2 = {
         "highlight_color": "rgba(239, 68, 68, 0.22)",
         "indicator_label": "✅ صح أم خطأ ❌"
       }
+    ],
+    "sci9-p2-p008": [
+      {
+        "id": "int-p008-magnesium-act",
+        "type": "activity",
+        "bounds": {
+          "x": 0.1,
+          "y": 0.28,
+          "w": 0.8,
+          "h": 0.32
+        },
+        "indicator_label": "🔬 نشاط احتراق الماغنسيوم",
+        "title": "نشاط احتراق شريط الماغنسيوم في الهواء",
+        "explanation_ref": "exp-oxidation-metals"
+      }
+    ],
+    "sci9-p2-p013": [
+      {
+        "id": "int-p013-rust-concept",
+        "type": "explainable_text",
+        "bounds": {
+          "x": 0.12,
+          "y": 0.25,
+          "w": 0.76,
+          "h": 0.3
+        },
+        "indicator_label": "💡 صدأ الحديد",
+        "title": "مفهوم صدأ الحديد وشروط تكونه",
+        "explanation_ref": "exp-rusting-iron"
+      }
+    ],
+    "sci9-p2-p017": [
+      {
+        "id": "int-p017-carbon-allotropy",
+        "type": "explainable_text",
+        "bounds": {
+          "x": 0.12,
+          "y": 0.3,
+          "w": 0.76,
+          "h": 0.32
+        },
+        "indicator_label": "💎 تآصل الكربون",
+        "title": "ظاهرة التآصل وصور الكربون في الطبيعة",
+        "explanation_ref": "exp-carbon-allotropy"
+      }
+    ],
+    "sci9-p2-p024": [
+      {
+        "id": "int-p024-petroleum-distillation",
+        "type": "activity",
+        "bounds": {
+          "x": 0.1,
+          "y": 0.26,
+          "w": 0.8,
+          "h": 0.38
+        },
+        "indicator_label": "🛢️ برج التقطير التجزيئي",
+        "title": "عملية تكرير النفط وفصل مشتقاته بالحرارة",
+        "explanation_ref": "exp-petroleum-refining"
+      }
+    ],
+    "sci9-p2-p027": [
+      {
+        "id": "int-p027-chemical-pollution",
+        "type": "explainable_text",
+        "bounds": {
+          "x": 0.12,
+          "y": 0.25,
+          "w": 0.76,
+          "h": 0.3
+        },
+        "indicator_label": "⚠️ التلوث الكيميائي",
+        "title": "مخاطر التلوث الناتج عن الصناعات الكيميائية",
+        "explanation_ref": "exp-chemical-pollution"
+      }
     ]
   },
   "explanations": {
@@ -747,6 +1060,93 @@ window.THAKER_CURRICULUM_P2 = {
       ],
       "real_world_example": "أحجار البناء البيضاء الشائعة في العمارة اليمنية (البلق والحجر الجيري) تتكون أساساً من كربونات الكالسيوم CaCO3 الغنية بالكربون.",
       "tts_text": "يوجد ثاني أكسيد الكربون في الهواء بنسبة ضئيلة، ولكنه يشكل المكون الرئيسي لصخور الحجر الجيري والرخام."
+    },
+    "exp-rusting-iron": {
+      "id": "exp-rusting-iron",
+      "title": "صدأ الحديد وآثار الأكسدة الضارة",
+      "original_text": "صدأ الحديد هو مركب كيميائي ينتج عن تفاعل الحديد ببطء مع أكسجين الهواء الرطب في وجود الماء، وهو هيدروكسيد الحديد المائي الثلاثي ذو اللون البني المحمر الهش.",
+      "companion_speech": "يا بطل، صدأ الحديد من أشهر أمثلة الأكسدة البطيئة في حياتنا اليومية، وعلشان كذا ندهن الشبابيك والجسور علشان نحميها!",
+      "levels": {
+        "basic": "الحديد عندما يتعرض للهواء والرطوبة (الماء) يتفاعل مع الأكسجين ويتحول إلى قشرة بنية هشة نسميها الصدأ، وتؤدي لتآكل وتلف الأواني والسيارات والجسور.",
+        "intermediate": "يحدث صدأ الحديد بتوفر شرطين معاً: أكسجين الهواء الجوي والرطوبة (بخار الماء). وتزداد سرعة الصدأ في وجود الأملاح. والصيغة التقريبية للصدأ هي Fe2O3.xH2O.",
+        "advanced": "الصدأ هو تآكل كيميائي كهربائي (إلكتروكيميائي)، حيث تتكون خلايا جلفانية موضعية دقيقة على سطح الحديد تؤدي لأكسدة ذرات الحديد إلى أيونات الحديدوز ثم الحديديك، مكونة هيدروكسيد الحديديك غير المتماسك الذي يتقشر كاشفاً طبقات جديدة للتآكل."
+      },
+      "equations": [
+        "4Fe + 3O2 + 2xH2O -> 2Fe2O3.xH2O (صدأ الحديد)"
+      ],
+      "vocabulary": [
+        {
+          "term": "صدأ الحديد",
+          "definition": "أكسيد وهيدروكسيد الحديد المائي المتكون على سطح الحديد بفعل الأكسجين والماء."
+        },
+        {
+          "term": "الجلفنة",
+          "definition": "طلاء الحديد بطبقة رقيقة من الخارصين (الزنك) لحمايته من الصدأ."
+        }
+      ]
+    },
+    "exp-carbon-allotropy": {
+      "id": "exp-carbon-allotropy",
+      "title": "ظاهرة التآصل في الكربون (الماس والجرافيت)",
+      "original_text": "التآصل هو وجود العنصر في عدة صور تختلف في خواصها الفيزيائية وتتفق في خواصها الكيميائية، ومن صور الكربون: الماس والجرافيت والفحم.",
+      "companion_speech": "سبحان الله يا بطل، الماس والجرافيت من نفس عنصر الكربون تماماً، لكن ترتيب الذرات يخلي الماس أصلب مادة والجرافيت لين وموصل للكهرباء!",
+      "levels": {
+        "basic": "الكربون يوجد في الطبيعة بصور مختلفة مثل الفحم والماس وسن القلم الرصاص (الجرافيت)، وكلها كربون نقي لكن شكل ارتباط الذرات هو اللي يفرق بينها.",
+        "intermediate": "ظاهرة التآصل تعني أن العنصر الواحد يظهر بأشكال بلورية متباينة؛ في الماس ترتبط كل ذرة كربون بأربع ذرات أخرى في شكل رباعي الأوجه مما يعطيه صلادة فائقة، بينما في الجرافيت ترتبط الذرات في طبقات سداسية تنزلق بسهولة وتوصل التيار.",
+        "advanced": "تفسر نظرية التهجين المداري خواص صور الكربون؛ ففي الماس يكون التهجين sp3 وروابط سيجما القوية تنتشر فراغياً في الأبعاد الثلاثة، بينما في الجرافيت يكون التهجين sp2 مع وجود إلكترونات دي-لوكالايزد حرة الحركة مسؤولة عن التوصيل الكهربائي."
+      },
+      "vocabulary": [
+        {
+          "term": "التآصل",
+          "definition": "وجود العنصر الواحد في أكثر من صورة بلورية تختلف في الخواص الفيزيائية وتتطابق في الكيميائية."
+        },
+        {
+          "term": "الجرافيت",
+          "definition": "صورة سوداء ناعمة من الكربون موصلة للكهرباء ومقاومة للحرارة."
+        }
+      ]
+    },
+    "exp-petroleum-refining": {
+      "id": "exp-petroleum-refining",
+      "title": "تكرير النفط بالتقطير التجزيئي",
+      "original_text": "النفط مزيج معقد من الهيدروكربونات، ويتم فصله إلى مكوناته المفيدة في برج التقطير التجزيئي اعتماداً على اختلاف درجات غليان كل مكون.",
+      "companion_speech": "النفط الخام كنز الطاقة، وفي مصافي النفط مثل مصفاة عدن يتم تسخينه ليفصل إلى غاز الطبخ، البنزين، الديزل، والأسفلت!",
+      "levels": {
+        "basic": "النفط الخام سائل أسود ثقيل يتم تسخينه في أبراج عملاقة؛ المشتقات الخفيفة مثل غاز الطبخ والبنزين تصعد للأعلى، والمشتقات الثقيلة مثل الديزل والزفت تستقر في الأسفل.",
+        "intermediate": "يعتمد التقطير التجزيئي على تباين درجات الغليان لسلاسل الهيدروكربونات؛ كلما قل عدد ذرات الكربون في الجزيء انخفضت درجة غليانه وتصاعد كأبخرة إلى القمم العلوية للبرج لتتكثف وتُجمع في أطباق مخصصة.",
+        "advanced": "في برج التقطير التجزيئي المستمر، يدخل النفط المسخن عند 350-400 مئوية، ويتدرج الضغط ودرجات الحرارة من الأسفل للأعلى (Bubble cap trays) مما يسمح بفصل قطفات دقيقة تبدأ من غازات C1-C4 وتنتهي بالبواقي الثقيلة الإسفلتية C20+."
+      },
+      "vocabulary": [
+        {
+          "term": "التقطير التجزيئي",
+          "definition": "فصل خليط من سوائل قابلة للامتزاج تعتمد على اختلاف درجات غليانها."
+        },
+        {
+          "term": "الهيدروكربونات",
+          "definition": "مركبات كيميائية تتكون من عنصري الكربون والهيدروجين فقط."
+        }
+      ]
+    },
+    "exp-chemical-pollution": {
+      "id": "exp-chemical-pollution",
+      "title": "التلوث الكيميائي وحماية البيئة",
+      "original_text": "ينتج عن الصناعات الكيميائية والنفطية مخلفات غازية وسائلة وصلبة تؤثر سلباً على صحة الإنسان وتوازن البيئة، كالأمطار الحمضية وغازات الاحتباس الحراري.",
+      "companion_speech": "حماية بيئتنا وبلادنا مسؤوليتنا جميعاً، والحلول العلمية هي اللي تساعدنا نتخلص من التلوث ونزرع ونحمي الهواء النقي!",
+      "levels": {
+        "basic": "دخان المصانع والسيارات ومخلفات المعامل تلوث الهواء والماء والتربة، وتسبب أمراضاً تنفسية وأضراراً للحيوانات والنباتات.",
+        "intermediate": "أكاسيد الكبريت والنيتروجين المتصاعدة من حرق الوقود تتفاعل مع بخار الماء في الجو لتكون الأمطار الحمضية التي تأكل المباني وتضر بالتربة، بينما غاز CO2 يسبب الاحتباس الحراري.",
+        "advanced": "تعتمد المعالجة البيئية الحديثة على الكيمياء الخضراء، وتثبيت فلاتر الامتصاص الكيميائي (Scrubbers) لإزالة SO2 باستخدام الجير المطفأ، وإعادة تدوير المخلفات، واستبدال الوقود الأحفوري بمصادر الطاقة المتجددة."
+      },
+      "vocabulary": [
+        {
+          "term": "الأمطار الحمضية",
+          "definition": "أمطار تكتسب خاصية حمضية بسبب ذوبان أكاسيد الكبريت والنيتروجين المنبعثة من الوقود في مياه السحب."
+        },
+        {
+          "term": "الاحتباس الحراري",
+          "definition": "ارتفاع حرارة الغلاف الجوي للأرض نتيجة زيادة تركيز غازات الدفيئة كـ CO2."
+        }
+      ]
     }
   },
   "diagrams": {
