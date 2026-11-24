@@ -49,6 +49,8 @@
     <string name="soon">قريباً</string>
     <string name="book_science_3d">كتاب ومعمل العلوم 3D</string>
     <string name="book_math_3d">كتاب ومعمل الرياضيات 3D</string>
+    <string name="book_physics_3d">كتاب ومعمل الفيزياء 3D</string>
+    <string name="book_biology_3d">كتاب ومعمل الأحياء 3D</string>
     <string name="science_lab">معمل العلوم التفاعلي</string>
 
     <string name="nav_home">الرئيسية</string>

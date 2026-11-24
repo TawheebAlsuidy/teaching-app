@@ -70,6 +70,32 @@ public class MainActivity extends Activity {
             }
         });
 
+        // Grade 12 Physics Interactive Textbook & 3D Lab
+        View cardPhysics = findViewById(R.id.card_physics);
+        if (cardPhysics != null) {
+            cardPhysics.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
+                    labIntent.putExtra("html_asset", "physics-12th-book.html");
+                    startActivity(labIntent);
+                }
+            });
+        }
+
+        // Grade 12 Biology Interactive Textbook & 3D Lab
+        View cardBiology = findViewById(R.id.card_biology);
+        if (cardBiology != null) {
+            cardBiology.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
+                    labIntent.putExtra("html_asset", "biology-12th-book.html");
+                    startActivity(labIntent);
+                }
+            });
+        }
+
         // Next-Gen Intelligent Interactive Textbook Engine (Science P2)
         View btnInteractiveEngine = findViewById(R.id.btn_open_sci9_interactive_engine);
         if (btnInteractiveEngine != null) {
@@ -232,16 +258,23 @@ public class MainActivity extends Activity {
         builder.setTitle(R.string.library_title);
         builder.setItems(new CharSequence[]{
                 getString(R.string.chem_card_title),
+                getString(R.string.book_physics_3d),
+                getString(R.string.book_biology_3d),
                 getString(R.string.book_science_3d),
-                getString(R.string.book_math_3d),
-                getString(R.string.science_lab)
+                getString(R.string.book_math_3d)
         }, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String asset = null;
-                if (which == 1 || which == 3) {
-                    asset = "science-9th-book.html";
+                if (which == 0) {
+                    asset = "chem-lab-book.html";
+                } else if (which == 1) {
+                    asset = "physics-12th-book.html";
                 } else if (which == 2) {
+                    asset = "biology-12th-book.html";
+                } else if (which == 3) {
+                    asset = "science-9th-book.html";
+                } else if (which == 4) {
                     asset = "math-9th-book.html";
                 }
                 Intent intent = new Intent(MainActivity.this, LabActivity.class);

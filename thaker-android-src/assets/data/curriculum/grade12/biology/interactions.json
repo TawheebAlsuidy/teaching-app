@@ -1,0 +1,138 @@
+{
+  "bio12-p010": [
+    {
+      "id": "elem-bio-p10-hydra-net",
+      "type": "explainable_text",
+      "title": "الشبكة العصبية في الهيدرا ودودة الأرض",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.18,
+        "w": 0.76,
+        "h": 0.22
+      },
+      "explanation_ref": "exp-bio-u1-neuron-structure",
+      "highlight_color": "rgba(0, 168, 89, 0.22)",
+      "indicator_label": "📌 الجهاز العصبي البدائي"
+    },
+    {
+      "id": "elem-bio-p10-quiz",
+      "type": "assessment",
+      "title": "اختبر نفسك: الجهاز العصبي في اللافقاريات",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.55,
+        "w": 0.76,
+        "h": 0.1
+      },
+      "assessment_ref": "quiz-bio-u1",
+      "highlight_color": "rgba(245, 158, 11, 0.22)",
+      "indicator_label": "❓ اختبر فهمك فورا"
+    }
+  ],
+  "bio12-p012": [
+    {
+      "id": "elem-bio-p12-neuron-text",
+      "type": "explainable_text",
+      "title": "تركيب الخلية العصبية وأجسام نسل",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.15,
+        "w": 0.76,
+        "h": 0.22
+      },
+      "explanation_ref": "exp-bio-u1-neuron-structure",
+      "highlight_color": "rgba(0, 168, 89, 0.22)",
+      "indicator_label": "📌 تركيب العصبون"
+    },
+    {
+      "id": "elem-bio-p12-neuron-3d",
+      "type": "interactive_3d",
+      "title": "النموذج التشريحي ثلاثي الأبعاد للخلية العصبية",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.42,
+        "w": 0.76,
+        "h": 0.28
+      },
+      "diagram_ref": "diag-bio-neuron-3d",
+      "highlight_color": "rgba(2, 132, 199, 0.25)",
+      "indicator_label": "🔍 استكشاف العصبون 3D"
+    }
+  ],
+  "bio12-p026": [
+    {
+      "id": "elem-bio-p26-eye-text",
+      "type": "explainable_text",
+      "title": "المستقبلات الضوئية وتركيب كرة العين",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.16,
+        "w": 0.76,
+        "h": 0.22
+      },
+      "explanation_ref": "exp-bio-u1-eye-anatomy",
+      "highlight_color": "rgba(0, 168, 89, 0.22)",
+      "indicator_label": "📌 تشريح العين والرؤية"
+    },
+    {
+      "id": "elem-bio-p26-eye-3d",
+      "type": "interactive_3d",
+      "title": "النموذج التشريحي ثلاثي الأبعاد للعين البشرية",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.45,
+        "w": 0.76,
+        "h": 0.28
+      },
+      "diagram_ref": "diag-bio-eye-3d",
+      "highlight_color": "rgba(139, 92, 246, 0.25)",
+      "indicator_label": "🔍 استكشاف تشريح العين 3D"
+    }
+  ],
+  "bio12-p042": [
+    {
+      "id": "elem-bio-p42-auxin-act",
+      "type": "activity",
+      "title": "نشاط عملي تفاعلي: تجارب الانتحاء الضوئي والأكسينات",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.35,
+        "w": 0.76,
+        "h": 0.12
+      },
+      "activity_ref": "act-bio-auxin-phototropism",
+      "highlight_color": "rgba(245, 158, 11, 0.25)",
+      "indicator_label": "🧪 معمل الانتحاء التفاعلي"
+    }
+  ],
+  "bio12-p135": [
+    {
+      "id": "elem-bio-p135-dna-text",
+      "type": "explainable_text",
+      "title": "النموذج اللولبي المزدوج لـ DNA لواطسون وكريك",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.15,
+        "w": 0.76,
+        "h": 0.22
+      },
+      "explanation_ref": "exp-bio-u5-dna-replication-protein",
+      "highlight_color": "rgba(0, 168, 89, 0.22)",
+      "indicator_label": "📌 تركيب لولب DNA المزدوج"
+    },
+    {
+      "id": "elem-bio-p135-dna-3d",
+      "type": "interactive_3d",
+      "title": "نموذج لولب DNA المزدوج ثلاثي الأبعاد",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.42,
+        "w": 0.76,
+        "h": 0.28
+      },
+      "diagram_ref": "diag-bio-dna-helix-3d",
+      "highlight_color": "rgba(2, 132, 199, 0.25)",
+      "indicator_label": "🔍 استكشاف DNA ثلاثي الأبعاد"
+    }
+  ]
+}

@@ -25,8 +25,11 @@ D8 = f"{BUILD_TOOLS_DIR}/d8"
 ZIPALIGN = f"{BUILD_TOOLS_DIR}/zipalign"
 APKSIGNER = f"{BUILD_TOOLS_DIR}/apksigner"
 
-WORKSPACE = "/mnt/sdcard/projects/teaching-app"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+WORKSPACE = SCRIPT_DIR if os.path.exists(f"{SCRIPT_DIR}/chem-lab-book.html") else "/mnt/sdcard/projects/teaching-app"
 SOURCE_HTML = f"{WORKSPACE}/chem-lab-book.html"
+SOURCE_PHYS_HTML = f"{WORKSPACE}/physics-12th-book.html"
+SOURCE_BIO_HTML = f"{WORKSPACE}/biology-12th-book.html"
 SOURCE_SCI9_HTML = f"{WORKSPACE}/science9-interactive.html"
 SOURCE_SCI9_3D = f"{WORKSPACE}/science-9th-book.html"
 SOURCE_MATH9_3D = f"{WORKSPACE}/math-9th-book.html"
@@ -427,6 +430,8 @@ def write_resources(base_dir):
     <string name="soon">قريباً</string>
     <string name="book_science_3d">كتاب ومعمل العلوم 3D</string>
     <string name="book_math_3d">كتاب ومعمل الرياضيات 3D</string>
+    <string name="book_physics_3d">كتاب ومعمل الفيزياء 3D</string>
+    <string name="book_biology_3d">كتاب ومعمل الأحياء 3D</string>
     <string name="science_lab">معمل العلوم التفاعلي</string>
 
     <string name="nav_home">الرئيسية</string>
@@ -2884,6 +2889,32 @@ public class MainActivity extends Activity {
             }
         });
 
+        // Grade 12 Physics Interactive Textbook & 3D Lab
+        View cardPhysics = findViewById(R.id.card_physics);
+        if (cardPhysics != null) {
+            cardPhysics.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
+                    labIntent.putExtra("html_asset", "physics-12th-book.html");
+                    startActivity(labIntent);
+                }
+            });
+        }
+
+        // Grade 12 Biology Interactive Textbook & 3D Lab
+        View cardBiology = findViewById(R.id.card_biology);
+        if (cardBiology != null) {
+            cardBiology.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
+                    labIntent.putExtra("html_asset", "biology-12th-book.html");
+                    startActivity(labIntent);
+                }
+            });
+        }
+
         // Next-Gen Intelligent Interactive Textbook Engine (Science P2)
         View btnInteractiveEngine = findViewById(R.id.btn_open_sci9_interactive_engine);
         if (btnInteractiveEngine != null) {
@@ -3046,16 +3077,23 @@ public class MainActivity extends Activity {
         builder.setTitle(R.string.library_title);
         builder.setItems(new CharSequence[]{
                 getString(R.string.chem_card_title),
+                getString(R.string.book_physics_3d),
+                getString(R.string.book_biology_3d),
                 getString(R.string.book_science_3d),
-                getString(R.string.book_math_3d),
-                getString(R.string.science_lab)
+                getString(R.string.book_math_3d)
         }, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String asset = null;
-                if (which == 1 || which == 3) {
-                    asset = "science-9th-book.html";
+                if (which == 0) {
+                    asset = "chem-lab-book.html";
+                } else if (which == 1) {
+                    asset = "physics-12th-book.html";
                 } else if (which == 2) {
+                    asset = "biology-12th-book.html";
+                } else if (which == 3) {
+                    asset = "science-9th-book.html";
+                } else if (which == 4) {
                     asset = "math-9th-book.html";
                 }
                 Intent intent = new Intent(MainActivity.this, LabActivity.class);
@@ -4541,6 +4579,12 @@ def copy_assets(base_dir):
     
     # 1. Interactive books
     shutil.copy2(SOURCE_HTML, f"{assets_dir}/chem-lab-book.html")
+    if os.path.exists(SOURCE_PHYS_HTML):
+        shutil.copy2(SOURCE_PHYS_HTML, f"{assets_dir}/physics-12th-book.html")
+        print(f"  ✓ Bundled 3D Physics Book: physics-12th-book.html ({os.path.getsize(SOURCE_PHYS_HTML) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_BIO_HTML):
+        shutil.copy2(SOURCE_BIO_HTML, f"{assets_dir}/biology-12th-book.html")
+        print(f"  ✓ Bundled 3D Biology Book: biology-12th-book.html ({os.path.getsize(SOURCE_BIO_HTML) / 1024:.0f} KB)")
     if os.path.exists(SOURCE_SCI9_3D):
         shutil.copy2(SOURCE_SCI9_3D, f"{assets_dir}/science-9th-book.html")
         shutil.copy2(SOURCE_SCI9_3D, f"{assets_dir}/science9-interactive.html")

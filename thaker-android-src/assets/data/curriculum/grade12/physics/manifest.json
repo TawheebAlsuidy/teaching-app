@@ -1,0 +1,40 @@
+{
+  "schema_version": "2.0.0",
+  "pack_id": "phys-g12-interactive-2026",
+  "subject": "physics",
+  "grade": 12,
+  "edition": {
+    "title": "الفيزياء - الصف الثالث الثانوي - القسم العلمي",
+    "ministry": "الجمهورية اليمنية - وزارة التربية والتعليم - قطاع المناهج",
+    "curriculum_version": "1447هـ - 2026م",
+    "official_pdf": "كتاب-فيزياء-ثالث-ثانوي-اليمن.pdf",
+    "total_pdf_pages": 219,
+    "start_pdf_page": 6,
+    "end_pdf_page": 219,
+    "total_book_pages": 214
+  },
+  "features": {
+    "original_page_rendering": true,
+    "interactive_overlays": true,
+    "smart_text_bottom_sheet": true,
+    "explanation_levels_count": 3,
+    "interactive_3d_physics_lab": true,
+    "interactive_step_by_step_equations": true,
+    "simulated_activities": true,
+    "remediation_mistake_review": true,
+    "offline_audio_synthesis": true,
+    "yemeni_companion_prompts": true,
+    "multi_student_profiles": true
+  },
+  "data_files": [
+    "pages.json",
+    "units.json",
+    "lessons.json",
+    "interactions.json",
+    "explanations.json",
+    "diagrams.json",
+    "activities.json",
+    "assessments.json",
+    "glossary.json"
+  ]
+}
