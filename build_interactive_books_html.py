@@ -13,10 +13,40 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 ACTIVITY_MODAL_HTML = """
 <!-- Grade 12 Guided Interactive Simulator Modal (Dark-Navy Design Matching تصاميم التجارب) -->
-<div id="g12ActivityModal" style="display:none; position:fixed; inset:0; background:radial-gradient(circle at 50% 22%, #13283E 0%, #091522 60%, #060E17 100%); z-index:960; color:#F8FAFC; overflow-y:auto;">
-  <div style="max-width:580px; min-height:100%; margin:0 auto; display:flex; flex-direction:column; justify-content:space-between;">
-    <div>
-      <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 16px 6px; gap:10px;">
+<style id="g12-lab-modal-responsive">
+#g12ActivityModal { height: 100dvh; max-height: 100dvh; overflow: hidden; }
+#g12ActivityModal .g12-lab-head { flex: 0 0 auto; }
+#g12ActivityModal .g12-lab-stage { flex: 1 1 auto; min-height: 0; min-width: 0; }
+#g12ActivityModal .g12-lab-sheet {
+  flex: 0 0 auto; min-height: 0; max-height: min(52dvh, 460px);
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+#g12ActivityModal #actVisualStage { width: 100%; max-width: 100%; min-width: 0; overflow-wrap: anywhere; }
+#g12ActivityModal #actControlsContainer > div { min-width: 0; }
+#g12ActivityModal #g12MainCtaBtn {
+  position: sticky; bottom: 0; z-index: 2; flex-shrink: 0;
+  box-shadow: 0 -6px 18px 6px #0F1D2E, 0 8px 20px rgba(5,150,105,0.35);
+}
+#g12MoreBackdrop > div { max-height: min(75dvh, 560px); padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+@media (max-width: 480px) {
+  #g12ActivityModal .g12-lab-head { padding: 10px 10px 6px; }
+  #g12ActivityModal .g12-lab-head button { width: 38px; height: 38px; }
+  #g12ActivityModal .g12-lab-stage { padding: 8px 10px 6px; }
+  #g12ActivityModal .g12-lab-sheet {
+    max-height: 58dvh;
+    padding: 12px 12px calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+  #g12ActivityModal #g12BottomStepTitle { font-size: 17px; }
+  #g12ActivityModal #actModalDesc { font-size: 12.5px; }
+}
+@media (max-height: 640px) {
+  #g12ActivityModal .g12-lab-sheet { max-height: 64dvh; }
+}
+</style>
+<div id="g12ActivityModal" style="display:none; position:fixed; inset:0; height:100dvh; max-height:100dvh; background:radial-gradient(circle at 50% 22%, #13283E 0%, #091522 60%, #060E17 100%); z-index:960; color:#F8FAFC; overflow:hidden; align-items:center; justify-content:center;">
+  <div class="g12-lab-shell" style="width:100%; max-width:580px; height:100%; min-height:0; margin:0 auto; display:flex; flex-direction:column;">
+    <div class="g12-lab-head" style="flex:0 0 auto;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 12px 6px; gap:10px;">
         <button class="act-circle-btn" style="width:42px; height:42px; border-radius:13px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); color:#fff; font-size:18px; cursor:pointer;" onclick="closeActivityModal()">✕</button>
         <div style="text-align:center; flex:1; min-width:0;">
           <div id="actModalTitle" style="font-size:17px; font-weight:800; color:#FFFFFF; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">المختبر التفاعلي</div>
@@ -24,7 +54,7 @@ ACTIVITY_MODAL_HTML = """
         </div>
         <button class="act-circle-btn" style="width:42px; height:42px; border-radius:13px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); color:#fff; font-size:18px; cursor:pointer;" onclick="toggleG12MoreMenu(true)">···</button>
       </div>
-      <div style="display:flex; align-items:center; gap:6px; padding:6px 16px 4px;">
+      <div style="display:flex; align-items:center; gap:6px; padding:6px 12px 4px;">
         <div style="flex:1; display:flex; gap:6px;">
           <div id="g12Seg1" onclick="setG12Step(1)" style="flex:1; height:4.5px; border-radius:99px; background:#0EA5E9; cursor:pointer;"></div>
           <div id="g12Seg2" onclick="setG12Step(2)" style="flex:1; height:4.5px; border-radius:99px; background:rgba(255,255,255,0.14); cursor:pointer;"></div>
@@ -34,13 +64,13 @@ ACTIVITY_MODAL_HTML = """
       </div>
     </div>
 
-    <div style="position:relative; flex:1; min-height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:12px 16px;">
+    <div class="g12-lab-stage" style="position:relative; flex:1 1 auto; min-height:0; min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 12px 6px; overflow:hidden;">
       <div id="actVisualStage" style="width:100%; color:#f8fafc; text-align:center;"></div>
       <div id="g12DoneCheckBadge" style="display:none; width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#10B981,#059669); box-shadow:0 0 0 10px rgba(16,185,129,0.16); align-items:center; justify-content:center; font-size:30px; color:#fff; font-weight:900; margin-top:12px;">✓</div>
       <div style="position:absolute; left:0; right:0; bottom:0; height:26px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(6,14,23,0.4)); border-top:1px solid rgba(255,255,255,0.08); pointer-events:none;"></div>
     </div>
 
-    <div style="background:#0F1D2E; border-top:1px solid rgba(255,255,255,0.08); border-radius:28px 28px 0 0; padding:18px 18px 20px; display:flex; flex-direction:column; gap:11px; box-shadow:0 -10px 30px rgba(0,0,0,0.35);">
+    <div class="g12-lab-sheet" style="background:#0F1D2E; border-top:1px solid rgba(255,255,255,0.08); border-radius:28px 28px 0 0; padding:14px 14px calc(16px + env(safe-area-inset-bottom, 0px)); display:flex; flex-direction:column; flex:0 0 auto; min-height:0; gap:10px; max-height:min(52dvh, 460px); overflow-y:auto; -webkit-overflow-scrolling:touch; box-shadow:0 -10px 30px rgba(0,0,0,0.35);">
       <h4 id="g12BottomStepTitle" style="margin:0; font-size:19px; font-weight:800; color:#FFFFFF;">اضبط المتغيرات ولاحظ النتيجة</h4>
       <p id="actModalDesc" style="margin:0; font-size:13px; color:#94A3B8; line-height:1.6;"></p>
       <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
@@ -177,7 +207,7 @@ function openActivityModal(actRef) {
     }).join('');
   }
 
-  document.getElementById('g12ActivityModal').style.display = 'block';
+  document.getElementById('g12ActivityModal').style.display = 'flex';
   setG12Step(1);
   updateActivitySimulation();
 }
@@ -288,13 +318,13 @@ function updateActivitySimulation() {
     const f0 = 1 / (2 * Math.PI * Math.sqrt(L * C));
     const isRes = Math.abs(XL - Xc) < 3;
     stage.innerHTML = `
-      <div style="display:flex; justify-content:space-around; align-items:center; height:120px; text-align:center;">
-        <div style="padding:10px; border-radius:10px; background:rgba(56,189,248,0.15); border:1px solid #38bdf8;">
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:8px; min-height:110px; text-align:center;">
+        <div style="min-width:0; max-width:46%; padding:8px; border-radius:10px; background:rgba(56,189,248,0.15); border:1px solid #38bdf8;">
           <div style="font-size:11px; color:#94a3b8;">المفاعلة الحثية XL</div>
           <div style="font-size:18px; font-weight:800; color:#38bdf8;">${XL.toFixed(1)} Ω</div>
         </div>
         <div style="font-size:22px;">${isRes ? '⚡ رنين!' : (XL > Xc ? '🔺 حثية' : '🔻 سعوية')}</div>
-        <div style="padding:10px; border-radius:10px; background:rgba(245,158,11,0.15); border:1px solid #f59e0b;">
+        <div style="min-width:0; max-width:46%; padding:8px; border-radius:10px; background:rgba(245,158,11,0.15); border:1px solid #f59e0b;">
           <div style="font-size:11px; color:#94a3b8;">المفاعلة السعوية Xc</div>
           <div style="font-size:18px; font-weight:800; color:#f59e0b;">${Xc.toFixed(1)} Ω</div>
         </div>
@@ -306,10 +336,10 @@ function updateActivitySimulation() {
     const ie = (ib / 1000) + ic;
     const alpha = beta / (beta + 1);
     stage.innerHTML = `
-      <div style="display:flex; justify-content:space-around; align-items:center; height:115px; text-align:center;">
-        <div><div style="font-size:12px; color:#94a3b8;">تيار القاعدة (IB)</div><div style="font-size:17px; color:#f59e0b; font-weight:bold;">${ib} µA</div></div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:8px; min-height:110px; text-align:center;">
+        <div style="min-width:0;"><div style="font-size:12px; color:#94a3b8;">تيار القاعدة (IB)</div><div style="font-size:17px; color:#f59e0b; font-weight:bold;">${ib} µA</div></div>
         <div style="font-size:24px;">➔ [ β = ${beta} ] ➔</div>
-        <div><div style="font-size:12px; color:#94a3b8;">تيار المجمع (IC)</div><div style="font-size:20px; color:#10b981; font-weight:800;">${ic.toFixed(2)} mA</div></div>
+        <div style="min-width:0;"><div style="font-size:12px; color:#94a3b8;">تيار المجمع (IC)</div><div style="font-size:20px; color:#10b981; font-weight:800;">${ic.toFixed(2)} mA</div></div>
       </div>`;
     readout.innerHTML = `<b>📊 معادلات الترانزستور:</b><br>• تيار المجمع IC = β·IB = <b>${ic.toFixed(2)} mA</b><br>• تيار الباعث IE = IB + IC = <b>${ie.toFixed(3)} mA</b><br>• معامل التوزيع α = IC/IE = <b>${alpha.toFixed(4)}</b>`;
   } else if (st === 'phys_radar_lab') {
@@ -602,17 +632,28 @@ function buildSubject3dScene(diagRef) {
   }
 }
 
+function resizeLab3d() {
+  const container = document.getElementById('labCanvasContainer');
+  if (!container || !labRenderer || !labCamera || !labScene) return;
+  const w = Math.max(1, container.clientWidth);
+  const h = Math.max(1, container.clientHeight);
+  labRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  labRenderer.setSize(w, h);
+  labCamera.aspect = w / h;
+  labCamera.updateProjectionMatrix();
+  labRenderer.render(labScene, labCamera);
+}
+window.addEventListener('resize', resizeLab3d);
+window.addEventListener('orientationchange', function() { setTimeout(resizeLab3d, 120); });
+
 openLab3d = function(diagRef) {
   const modal = document.getElementById('lab3dModal');
   modal.classList.add('open');
   if (!labRenderer) initLabThree();
-
-  const container = document.getElementById('labCanvasContainer');
-  labRenderer.setSize(container.clientWidth, container.clientHeight);
-  labCamera.aspect = container.clientWidth / container.clientHeight;
-  labCamera.updateProjectionMatrix();
+  resizeLab3d();
 
   buildSubject3dScene(diagRef);
+  requestAnimationFrame(resizeLab3d);
 
   const data = DIAGRAMS[diagRef] || Object.values(DIAGRAMS)[0];
   const badgesContainer = document.getElementById('labPartsBadges');
@@ -622,7 +663,7 @@ openLab3d = function(diagRef) {
     `).join('') + `<div id="labPartInfoBox" style="width:100%; margin-top:8px; padding:10px; border-radius:10px; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); color:#e2e8f0; font-size:12.5px; display:none;"></div>`;
   }
 
-  animateLab();
+  if (!labAnimId) animateLab();
 };
 
 highlightLabPart = function(id, name, role) {
@@ -643,6 +684,8 @@ onAcidSliderChange = function(val) {
 };
 
 animateLab = function() {
+  const modal = document.getElementById('lab3dModal');
+  if (!modal || !modal.classList.contains('open')) { labAnimId = 0; return; }
   labAnimId = requestAnimationFrame(animateLab);
   const sliderEl = document.querySelector('#lab3dModal input[type="range"]');
   const speedMul = sliderEl ? (parseFloat(sliderEl.value) || 4) * 0.004 : 0.015;

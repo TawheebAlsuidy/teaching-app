@@ -191,6 +191,55 @@ NEW_ACTIVITY_CSS = r"""/* Layer 3D: Guided 5-Step Dark Lab Modal (/mnt/sdcard/ت
   background: radial-gradient(circle, #ffffff 32%, #e0f2fe 65%, transparent 85%);
   box-shadow: 0 0 60px 28px #ffffff, 0 0 110px 55px rgba(186,230,253,0.65);
 }
+
+/* Mobile viewport safeguards (short screens / Android navigation bar) */
+#activityModal, .act-shell { height: 100dvh; max-height: 100dvh; }
+.act-bench-stage { min-height: 0; }
+.act-bottom-sheet {
+  max-height: 54dvh; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  flex: 0 0 auto; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+}
+.act-step-h, .act-step-p, .act-safety-line, .act-eq-box { overflow-wrap: anywhere; }
+.act-primary-cta {
+  position: sticky; bottom: 0; z-index: 2;
+  box-shadow: 0 -6px 18px 6px #0F1D2E, 0 8px 22px rgba(5, 150, 105, 0.35);
+}
+#labCanvasContainer { min-height: 0; }
+.lab-title { max-width: calc(100% - 60px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lab-touch-hint {
+  max-width: calc(100% - 20px); white-space: normal; text-align: center; line-height: 1.4;
+}
+.lab-controls-dock {
+  max-height: min(35dvh, 220px);
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (max-width: 480px) {
+  .act-top-bar { padding: 10px 12px 6px; }
+  .act-sq-btn { width: 38px; height: 38px; }
+  .act-seg-row { padding: 6px 12px 4px; }
+  .act-bench-stage { min-height: 150px; padding: 6px 10px 14px; }
+  .act-prop-stack { right: 8px; top: 8px; max-width: 62%; flex-wrap: wrap; gap: 5px; }
+  .act-prop-chip { font-size: 10.5px; padding: 4px 8px; }
+  .act-bottom-sheet { max-height: 58dvh; padding: 14px 12px calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .act-step-h { font-size: 17px; }
+  .act-step-p { font-size: 12.5px; line-height: 1.55; }
+  .act-primary-cta { height: 48px; }
+  .act-complete-badge {
+    width: 56px; height: 56px; font-size: 26px;
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.16), 0 12px 26px rgba(5, 150, 105, 0.45);
+  }
+  .act-micro-cols { flex-wrap: wrap; }
+  .act-micro-side { flex: 1 1 120px; min-width: 0; }
+  .act-more-sheet {
+    max-height: min(78dvh, 520px);
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-height: 640px) {
+  .act-bottom-sheet { max-height: 62dvh; }
+  .act-bench-stage { min-height: 120px; }
+}
 """
 
 NEW_ACTIVITY_HTML = r"""<!-- Layer 3D: Guided 5-Step Lab Modal (/mnt/sdcard/تطبيق ذاكر/تصميم التجارب) -->
@@ -1075,9 +1124,11 @@ def main():
     with open(HTML_PATH, "r", encoding="utf-8") as f:
         src = f.read()
 
+    already_v3 = "// LAYER 3D: GUIDED 5-STEP INTERACTIVE LAB ENGINE (DESIGN V3)" in src
+
     # 1. Replace Activity Modal CSS block cleanly
     css_pattern = re.compile(
-        r"/\* Layer 3D: Dark Immersive Activity Modal.*?/\* Assessment Modal \(10-quiz\.png\) \*/",
+        r"/\* Layer 3D: (?:Dark Immersive Activity Modal|Guided 5-Step Dark Lab Modal).*?/\* Assessment Modal \(10-quiz\.png\) \*/",
         re.S,
     )
     if not css_pattern.search(src):
@@ -1086,37 +1137,40 @@ def main():
 
     # 2. Replace Activity Modal HTML block cleanly
     html_pattern = re.compile(
-        r"<!-- Layer 3D: Immersive Step-by-Step Activity Modal.*?<!-- Layer 3C: Assessment Modal",
+        r"<!-- Layer 3D: (?:Immersive Step-by-Step Activity Modal|Guided 5-Step Lab Modal).*?<!-- Layer 3C: Assessment Modal",
         re.S,
     )
     if not html_pattern.search(src):
         raise RuntimeError("Could not find HTML activityModal block in thaker-interactive-book.html")
     src = html_pattern.sub(lambda _: NEW_ACTIVITY_HTML + "\n<!-- Layer 3C: Assessment Modal", src, count=1)
 
-    # 3. Replace old actState + open/switch/update/execute/renderMagnesium block while KEEPING custom stage renderers!
-    js_top_pat = re.compile(
-        r"// LAYER 3D: INTERACTIVE ACTIVITY ENGINE \(ALL 7 UNIT 9 ACTIVITIES\).*?function renderChlorinePrepStage",
-        re.S,
-    )
-    if not js_top_pat.search(src):
-        raise RuntimeError("Could not find JS actState..renderChlorinePrepStage block")
-    src = js_top_pat.sub(lambda _: NEW_ACTIVITY_JS + "\nfunction renderChlorinePrepStage", src, count=1)
+    if already_v3:
+        print("✓ Guided 5-Step lab engine already present; keeping existing JS engine")
+    else:
+        # 3. Replace old actState + open/switch/update/execute/renderMagnesium block while KEEPING custom stage renderers!
+        js_top_pat = re.compile(
+            r"// LAYER 3D: INTERACTIVE ACTIVITY ENGINE \(ALL 7 UNIT 9 ACTIVITIES\).*?function renderChlorinePrepStage",
+            re.S,
+        )
+        if not js_top_pat.search(src):
+            raise RuntimeError("Could not find JS actState..renderChlorinePrepStage block")
+        src = js_top_pat.sub(lambda _: NEW_ACTIVITY_JS + "\nfunction renderChlorinePrepStage", src, count=1)
 
-    # 4. Also remove old renderMagnesiumStage + duplicate executeCurrentActAction..testOtherMetal after renderPetroleumStage
-    js_tail_pat = re.compile(
-        r"// 1\. Magnesium Combustion Visual Stage.*?function renderSulfurStage",
-        re.S,
-    )
-    if js_tail_pat.search(src):
-        src = js_tail_pat.sub(lambda _: "// 2. Sulfur Combustion Visual Stage\nfunction renderSulfurStage", src, count=1)
+        # 4. Also remove old renderMagnesiumStage + duplicate executeCurrentActAction..testOtherMetal after renderPetroleumStage
+        js_tail_pat = re.compile(
+            r"// 1\. Magnesium Combustion Visual Stage.*?function renderSulfurStage",
+            re.S,
+        )
+        if js_tail_pat.search(src):
+            src = js_tail_pat.sub(lambda _: "// 2. Sulfur Combustion Visual Stage\nfunction renderSulfurStage", src, count=1)
 
-    js_exec_pat = re.compile(
-        r"function executeCurrentActAction\(\).*?// LAYER 3A: SMART TEXT BOTTOM SHEET",
-        re.S,
-    )
-    if not js_exec_pat.search(src):
-        raise RuntimeError("Could not find old executeCurrentActAction block")
-    src = js_exec_pat.sub(lambda _: "\n// LAYER 3A: SMART TEXT BOTTOM SHEET", src, count=1)
+        js_exec_pat = re.compile(
+            r"function executeCurrentActAction\(\).*?// LAYER 3A: SMART TEXT BOTTOM SHEET",
+            re.S,
+        )
+        if not js_exec_pat.search(src):
+            raise RuntimeError("Could not find old executeCurrentActAction block")
+        src = js_exec_pat.sub(lambda _: "\n// LAYER 3A: SMART TEXT BOTTOM SHEET", src, count=1)
 
     with open(HTML_PATH, "w", encoding="utf-8") as f:
         f.write(src)
