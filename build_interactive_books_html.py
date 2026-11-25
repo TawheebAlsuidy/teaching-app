@@ -9,26 +9,25 @@ Generates:
 import os
 import json
 
-BASE_DIR = "/media/tawheeb/New Volume2/ذاكر/teaching-app"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 ACTIVITY_MODAL_HTML = """
-<!-- Interactive Activity Simulator Modal -->
-<div id="activityModal" style="display:none; position:fixed; inset:0; background:rgba(2,6,23,0.92); backdrop-filter:blur(10px); z-index:960; padding:16px; overflow-y:auto;">
-  <div style="max-width:680px; margin:20px auto; background:var(--bg-surface); border:1px solid var(--border-light); border-radius:20px; padding:20px; box-shadow:0 20px 50px rgba(0,0,0,0.5);">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-light); padding-bottom:12px; margin-bottom:14px;">
-      <div>
-        <div style="font-size:12px; font-weight:800; color:var(--primary);">🧪 المختبر والنشاط التفاعلي</div>
-        <h3 id="actModalTitle" style="margin:2px 0 0; font-size:17px; color:var(--text-main);">عنوان النشاط</h3>
+<!-- Grade 12 Interactive Activity Simulator Modal -->
+<div id="g12ActivityModal" style="display:none; position:fixed; inset:0; background:#0B151C; z-index:960; padding:16px; overflow-y:auto; color:#f8fafc;">
+  <div style="max-width:680px; margin:14px auto; display:flex; flex-direction:column; gap:12px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <button class="act-circle-btn" onclick="closeActivityModal()">✕</button>
+      <div style="text-align:center; flex:1;">
+        <div style="font-size:11.5px; font-weight:800; color:#38bdf8;">🧪 المختبر والنشاط التفاعلي</div>
+        <h3 id="actModalTitle" style="margin:2px 0 0; font-size:16.5px; color:#FFFFFF;">عنوان النشاط</h3>
       </div>
-      <button class="btn-close" onclick="closeActivityModal()">✕</button>
+      <div style="width:40px;"></div>
     </div>
-    <p id="actModalDesc" style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;"></p>
-    <div id="actVisualStage" style="background:rgba(15,23,42,0.85); border:1px solid rgba(56,189,248,0.25); border-radius:14px; padding:14px; margin-bottom:14px; color:#f8fafc; min-height:150px;"></div>
-    <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:10px; margin-bottom:14px;"></div>
-    <div id="actReadoutBox" style="background:rgba(0,168,89,0.1); border:1px solid var(--primary); border-radius:12px; padding:12px; font-size:13.5px; line-height:1.7; color:var(--text-main);"></div>
-    <div style="margin-top:14px; display:flex; justify-content:flex-end;">
-      <button class="btn-nav" onclick="closeActivityModal()" style="background:var(--primary); color:#fff; border-color:var(--primary);">إغلاق والعودة للكتاب</button>
-    </div>
+    <p id="actModalDesc" style="font-size:13px; color:#94a3b8; line-height:1.6; text-align:center;"></p>
+    <div id="actVisualStage" style="background:radial-gradient(circle at 50% 45%, #163044 0%, #0B151C 100%); border:1px solid rgba(56,189,248,0.25); border-radius:20px; padding:16px; color:#f8fafc; min-height:160px;"></div>
+    <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
+    <div id="actReadoutBox" style="background:rgba(0,168,89,0.14); border:1px solid var(--primary); border-radius:16px; padding:12px 14px; font-size:13.5px; line-height:1.7; color:#f8fafc;"></div>
+    <button class="btn-nav" onclick="closeActivityModal()" style="background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px; padding:12px; width:100%;">إغلاق والعودة للكتاب</button>
   </div>
 </div>
 """
@@ -87,7 +86,7 @@ function openCurrentPageQuiz() {
 // Override handleHotspotClick to support activities natively
 handleHotspotClick = function(item) {
   playClickSound();
-  if (item.type === 'explainable_text') {
+  if (item.type === 'explainable_text' || item.type === 'title') {
     openTextExplanation(item.explanation_ref);
   } else if (item.type === 'interactive_3d') {
     openLab3d(item.diagram_ref);
@@ -128,12 +127,12 @@ function openActivityModal(actRef) {
     `;
   }).join('');
 
-  document.getElementById('activityModal').style.display = 'block';
+  document.getElementById('g12ActivityModal').style.display = 'block';
   updateActivitySimulation();
 }
 
 function closeActivityModal() {
-  document.getElementById('activityModal').style.display = 'none';
+  document.getElementById('g12ActivityModal').style.display = 'none';
 }
 
 function onActivityControlChange(id, val) {
@@ -698,68 +697,17 @@ const UNITS = CURR_DATA?.units || [];
 
     # Customize titles and colors
     html_new = html_new.replace("<title>ذاكر — كتاب العلوم التفاعلي الذكي (الصف التاسع - الجزء الثاني)</title>", f"<title>{title_main}</title>")
+    html_new = html_new.replace('<span class="title-main" id="currentSectionTitle">كتاب العلوم التفاعلي الذكي</span>', f'<span class="title-main" id="currentSectionTitle">{title_main}</span>')
     html_new = html_new.replace('<span class="title-main">كتاب العلوم التفاعلي الذكي</span>', f'<span class="title-main">{title_main}</span>')
     html_new = html_new.replace('<span class="title-sub" id="currentSectionTitle">الصف التاسع الأساسي · الجزء الثاني</span>', f'<span class="title-sub" id="currentSectionTitle">{title_sub}</span>')
+    html_new = html_new.replace('id="indexBookSub">كتاب العلوم · الجزء الثاني', f'id="indexBookSub">{title_main} · {title_sub}')
     html_new = html_new.replace("فهرس وحدات الجزء الثاني", f"فهرس وحدات {title_sub}")
     html_new = html_new.replace("المعادلات الكيميائية المرتبطة:", eq_label)
-
-    # Replace hardcoded 9th-grade quickJumpPoc dock buttons with dynamic page-context action buttons
-    old_dock_btns = """    <button class="btn-nav" onclick="quickJumpPoc(10)" style="background:var(--primary);color:#fff;">المفاهيم (ص10)</button>
-    <button class="btn-nav" onclick="quickJumpPoc(20)" style="background:#0284c7;color:#fff;">معمل 3D (ص20)</button>
-    <button class="btn-nav" onclick="quickJumpPoc(29)" style="background:#d97706;color:#fff;">التقويم (ص29)</button>"""
-
-    new_dock_btns = """    <button class="btn-nav" onclick="openCurrentPageExplanation()" style="background:var(--primary);color:#fff;">💡 شرح</button>
-    <button class="btn-nav" onclick="openCurrentPageActivity()" style="background:#7c3aed;color:#fff;">🧪 نشاط</button>
-    <button class="btn-nav" onclick="openCurrentPage3d()" style="background:#0284c7;color:#fff;">🧊 3D</button>
-    <button class="btn-nav" onclick="openCurrentPageQuiz()" style="background:#d97706;color:#fff;">📝 اختبر</button>"""
-    html_new = html_new.replace(old_dock_btns, new_dock_btns)
 
     if primary_color != "#00a859":
         html_new = html_new.replace("--primary: #00a859;", f"--primary: {primary_color};")
         html_new = html_new.replace("--primary-dark: #008f4c;", f"--primary-dark: {primary_color};")
         html_new = html_new.replace("border-color: #00a859;", f"border-color: {primary_color};")
-
-    # Update renderToc logic to handle UNITS/LESSONS structure
-    toc_old = """function renderToc() {
-  const container = document.getElementById('tocListContainer');
-  container.innerHTML = LESSONS.map(u => `
-    <div style="font-size:12px; font-weight:800; color:var(--primary); margin-top:8px;">الوحدة ${u.unit_num}: ${u.unit_title}</div>
-    ${u.lessons.map(l => `
-      <div class="toc-item" onclick="jumpToBookPage(${l.p_start})">
-        <span>${l.title}</span>
-        <span style="opacity:0.6;">ص ${l.p_start}</span>
-      </div>
-    `).join('')}
-  `).join('');
-}"""
-
-    toc_new = """function renderToc() {
-  const container = document.getElementById('tocListContainer');
-  if (!container) return;
-  if (UNITS && UNITS.length > 0) {
-    container.innerHTML = UNITS.map(u => {
-      const uLessons = LESSONS.filter(l => l.unitId === u.id);
-      return `
-        <div style="font-size:12px; font-weight:800; color:var(--primary); margin-top:10px; padding:4px 8px; background:rgba(0,168,89,0.08); border-radius:6px;">
-          ${u.title}
-        </div>
-        ${uLessons.map(l => `
-          <div class="toc-item" onclick="jumpToBookPage(${l.pages[0]})">
-            <span>${l.title}</span>
-            <span style="opacity:0.75; font-size:11px;">ص ${l.pages[0]}</span>
-          </div>
-        `).join('')}
-      `;
-    }).join('');
-  } else {
-    container.innerHTML = LESSONS.map(l => `
-      <div class="toc-item" onclick="jumpToBookPage(${l.pages ? l.pages[0] : 1})">
-        <span>${l.title}</span>
-      </div>
-    `).join('');
-  }
-}"""
-    html_new = html_new.replace(toc_old, toc_new)
 
     # Inject Activity Modal + Full Interactive JS Engine before </body>
     injection = f"""

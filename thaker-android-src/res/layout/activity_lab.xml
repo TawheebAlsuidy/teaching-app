@@ -2,23 +2,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/thakerBackground">
-
+    android:background="#F2F7F4">
     <WebView
-        android:id="@+id/lab_webview"
+        android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <ImageButton
-        android:id="@+id/btn_exit_to_hub"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="top|start"
-        android:layout_margin="10dp"
-        android:background="@drawable/floating_back_transparent"
-        android:src="@drawable/ic_chevron_left"
-        android:tint="?attr/thakerPrimary"
-        android:scaleType="centerInside"
-        android:contentDescription="العودة"
-        android:visibility="gone" />
+        android:layout_height="match_parent"/>
 </FrameLayout>

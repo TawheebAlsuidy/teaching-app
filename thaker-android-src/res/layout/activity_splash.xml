@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_emerald_bg"
+    android:layoutDirection="rtl">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_rays"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <ImageView
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:src="@drawable/logo_splash_card"
+            android:elevation="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ذاكر"
+            android:textColor="#FFFFFF"
+            android:textSize="38sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="افهم · جرّب · أتقن"
+            android:textColor="#FBBF24"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="منهجك اليمني.. تفاعلي ثلاثي الأبعاد"
+            android:textColor="#E2F4EC"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="يعمل بالكامل بلا إنترنت"
+            android:textColor="#A7F3D0"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View android:layout_width="6dp" android:layout_height="6dp" android:background="#80FFFFFF" android:layout_margin="3dp"/>
+            <View android:layout_width="6dp" android:layout_height="6dp" android:background="#80FFFFFF" android:layout_margin="3dp"/>
+            <View android:layout_width="24dp" android:layout_height="6dp" android:background="#FBBF24" android:layout_margin="3dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="الإصدار 2.0"
+            android:textColor="#A7F3D0"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</FrameLayout>

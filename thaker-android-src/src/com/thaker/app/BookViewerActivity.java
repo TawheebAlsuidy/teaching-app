@@ -277,7 +277,10 @@ public class BookViewerActivity extends Activity {
     private void updateUiInfo() {
         tvPageIndicator.setText("صفحة " + (curPageIndex + 1) + " من " + totalPages);
         pageSeekBar.setProgress(curPageIndex);
-        tvUnitName.setText(getUnitNameForPage(bookKey, curPageIndex + 1));
+        String unitTxt = getUnitNameForPage(bookKey, curPageIndex + 1);
+        tvUnitName.setText(unitTxt);
+        int pct = totalPages > 0 ? Math.max(1, Math.min(100, ((curPageIndex + 1) * 100) / totalPages)) : 1;
+        ThakerStore.saveReadingProgress(this, bookKey, getBookDisplayName(bookKey), unitTxt + " · صفحة " + (curPageIndex + 1), "pdf", bookKey, curPageIndex + 1, pct);
     }
 
     private String getUnitNameForPage(String key, int page) {
@@ -290,12 +293,14 @@ public class BookViewerActivity extends Activity {
             if (page < 151) return "الوحدة 6: التكاثر في الكائنات الحية";
             return "الوحدة 7: أمراض الجهازين البولي والتناسلي";
         } else if ("sci_p2".equals(key)) {
-            if (page < 25) return "الوحدة 8: الكهرباء الساكنة والتيار";
-            if (page < 55) return "الوحدة 9: المغناطيسية والكهرومغناطيسية";
-            if (page < 81) return "الوحدة 10: الطاقة وتحولاتها";
-            if (page < 105) return "الوحدة 11: البيئة والتوازن البيئي";
-            if (page < 131) return "الوحدة 12: علوم الأرض والمعادن";
-            return "الوحدة 13: الفضاء والنظام الشمسي";
+            if (page < 25) return "الوحدة 9: تفاعلات العناصر والمركبات";
+            if (page < 49) return "الوحدة 10: الهالوجينات";
+            if (page < 66) return "الوحدة 11: خواص الأجسام";
+            if (page < 88) return "الوحدة 12: الضغط في المواد الصلبة والموائع";
+            if (page < 108) return "الوحدة 13: الطاقة الشمسية واستغلالها";
+            if (page < 125) return "الوحدة 14: الإنسان يستثمر موارد البيئة";
+            if (page < 135) return "الوحدة 15: رعاية الأمومة والطفولة";
+            return "الوحدة 16: الوراثة في الكائنات الحية";
         } else if ("math_p1".equals(key)) {
             if (page < 32) return "الوحدة 1: المجموعات والعلاقات";
             if (page < 40) return "الوحدة 2: التطبيقات";
@@ -528,14 +533,16 @@ public class BookViewerActivity extends Activity {
             pages = new int[]{1, 21, 47, 67, 99, 125, 151};
         } else if ("sci_p2".equals(bookKey)) {
             units = new String[]{
-                "الوحدة 8: الكهرباء الساكنة والتيار (ص 1)",
-                "الوحدة 9: المغناطيسية والكهرومغناطيسية (ص 25)",
-                "الوحدة 10: الطاقة ومصادرها (ص 55)",
-                "الوحدة 11: البيئة والتوازن البيئي (ص 81)",
-                "الوحدة 12: علوم الأرض والمعادن (ص 105)",
-                "الوحدة 13: الفضاء والنظام الشمسي (ص 131)"
+                "الوحدة 9: تفاعلات العناصر والمركبات (ص 1)",
+                "الوحدة 10: الهالوجينات (ص 25)",
+                "الوحدة 11: خواص الأجسام (ص 49)",
+                "الوحدة 12: الضغط في المواد الصلبة والموائع (ص 66)",
+                "الوحدة 13: الطاقة الشمسية واستغلالها (ص 88)",
+                "الوحدة 14: الإنسان يستثمر موارد البيئة (ص 108)",
+                "الوحدة 15: رعاية الأمومة والطفولة (ص 125)",
+                "الوحدة 16: الوراثة في الكائنات الحية (ص 135)"
             };
-            pages = new int[]{1, 25, 55, 81, 105, 131};
+            pages = new int[]{1, 25, 49, 66, 88, 108, 125, 135};
         } else if ("math_p1".equals(bookKey)) {
             units = new String[]{
                 "الوحدة 1: المجموعات والعلاقات (ص 7)",

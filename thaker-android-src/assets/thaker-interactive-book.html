@@ -6,36 +6,39 @@
 <title>ذاكر — كتاب العلوم التفاعلي الذكي (الصف التاسع - الجزء الثاني)</title>
 <style>
 /* ========================================================
-   THAKER INTELLIGENT INTERACTIVE TEXTBOOK ENGINE (v2.0)
-   Design System: Emerald Green (#00A859), Mint, Modern RTL
+   THAKER DESIGN SYSTEM v2.0 (Mint & Emerald Edition)
    ======================================================== */
 :root {
   --primary: #00a859;
   --primary-dark: #008f4c;
+  --primary-deep: #064E3B;
   --primary-light: #e8f8f0;
   --accent-cyan: #0284c7;
   --accent-amber: #d97706;
+  --accent-gold-bg: #FEF3C7;
   --accent-purple: #7c3aed;
-  --bg-page: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-card: #243248;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-light: rgba(148, 163, 184, 0.2);
-  --border-primary: rgba(0, 168, 89, 0.35);
-  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.45);
+  --bg-page: #F2F7F4;
+  --bg-surface: #FFFFFF;
+  --bg-card: #F8FBF9;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-primary: rgba(5, 150, 105, 0.35);
+  --shadow-lg: 0 12px 32px rgba(6, 78, 59, 0.12);
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
   --font-base: 'Tajawal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-body.light-theme {
-  --bg-page: #f1f5f9;
-  --bg-surface: #ffffff;
-  --bg-card: #f8fafc;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --border-light: rgba(100, 116, 139, 0.2);
-  --border-primary: rgba(0, 168, 89, 0.45);
-  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.12);
+body.dark-theme {
+  --bg-page: #0B151C;
+  --bg-surface: #12242E;
+  --bg-card: #182F3B;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border-light: rgba(148, 163, 184, 0.18);
+  --border-primary: rgba(0, 214, 120, 0.38);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -44,537 +47,610 @@ html, body {
   font-family: var(--font-base); background: var(--bg-page); color: var(--text-main);
 }
 
-/* Top Navigation Bar */
+/* Top Navigation Bar (05-reader.png style) */
 #topBar {
-  position: fixed; top: 0; left: 0; right: 0; height: 54px;
-  background: var(--bg-surface); border-bottom: 1px solid var(--border-light);
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: var(--bg-page);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 12px; padding-right: 62px; z-index: 50; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 6px 14px; z-index: 60;
 }
-.nav-left, .nav-right { display: flex; align-items: center; gap: 8px; }
-.btn-icon {
-  width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border-light);
-  background: var(--bg-card); color: var(--text-main); cursor: pointer;
-  display: flex; align-items: center; justify-content: center; font-size: 16px;
-  transition: all 0.2s ease;
-}
-.btn-icon:hover { background: var(--primary); color: #ffffff; border-color: var(--primary); }
-.book-title-badge { display: flex; flex-direction: column; overflow: hidden; }
-.title-main { font-size: 14px; font-weight: 800; color: var(--primary); white-space: nowrap; }
-.title-sub { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
-
-/* Corner Action Controls: Exit Arrow + 3 Lines Sidebar Icon Directly Below It */
-.corner-actions-dock {
-  position: fixed; top: 7px; right: 10px; display: flex; flex-direction: column; gap: 6px; z-index: 170;
-}
-.btn-corner-btn {
-  width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border-light);
+.top-squircle-btn {
+  width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--border-light);
   background: var(--bg-surface); color: var(--text-main); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25); transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex; align-items: center; justify-content: center; font-size: 16px;
+  box-shadow: var(--shadow-sm); transition: all 0.2s ease; flex-shrink: 0;
 }
-.btn-corner-btn:hover {
-  background: var(--primary); color: #ffffff; border-color: var(--primary); transform: scale(1.05);
+.top-squircle-btn:active { transform: scale(0.94); }
+.top-squircle-btn.bookmarked { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+.top-center-title {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 0 8px; overflow: hidden; text-align: center;
 }
-.btn-corner-btn:active { transform: scale(0.95); }
-.btn-corner-btn.active {
-  background: var(--primary); color: #ffffff; border-color: var(--primary);
-  box-shadow: 0 0 12px rgba(0, 168, 89, 0.55);
-}
-.btn-corner-btn svg { display: block; }
+.title-main { font-size: 14.5px; font-weight: 800; color: var(--text-main); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 100%; }
+.title-sub { font-size: 11px; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
 
-/* Main Book Stage - 100% Fixed & Stable on Screen */
+.top-right-actions { display: flex; align-items: center; gap: 6px; }
+
+/* View Containers for 4 Tabs */
+.tab-view {
+  position: fixed; top: 60px; bottom: 0; left: 0; right: 0;
+  display: none; flex-direction: column; overflow: hidden;
+}
+.tab-view.active { display: flex; }
+
+/* Reader Viewport */
 #bookViewport {
-  position: fixed; top: 54px; bottom: 52px; left: 0; right: 0;
+  flex: 1; position: relative;
   overflow: hidden; display: flex; align-items: center; justify-content: center;
-  padding: 8px; user-select: none; background: var(--bg-page);
+  padding: 6px 10px 124px 10px; user-select: none; background: var(--bg-page);
   touch-action: none;
 }
 #pageContainer {
   position: relative;
-  /* Exact 1004:1417 pixel-perfect aspect ratio dynamically managed by updatePageContainerDimensions */
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
   transform-origin: center center;
   transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-  display: block;
-  margin: auto;
-  overflow: hidden;
-  touch-action: none;
-  will-change: transform;
+  display: block; margin: auto; overflow: hidden;
+  touch-action: none; will-change: transform;
 }
-
-/* Layer 1: Page Image */
 #pageImg {
   width: 100%; height: 100%; object-fit: fill; display: block;
-  border-radius: 8px; pointer-events: none;
+  border-radius: 16px; pointer-events: none;
 }
 
-/* Layer 2: Interactive Overlay */
-#interactiveOverlay {
-  position: absolute; inset: 0; border-radius: 8px; overflow: hidden;
-}
+/* Layer 2: Interactive Overlay Hotspots (05-reader.png style) */
+#interactiveOverlay { position: absolute; inset: 0; border-radius: 16px; overflow: hidden; }
 .hotspot-box {
-  position: absolute; cursor: pointer; border-radius: 6px;
-  border: 2px dashed rgba(0, 168, 89, 0.6);
-  background: rgba(0, 168, 89, 0.12);
+  position: absolute; cursor: pointer; border-radius: 12px;
+  border: 2px dashed rgba(2, 132, 199, 0.7);
+  background: rgba(2, 132, 199, 0.10);
   transition: all 0.2s ease;
   display: flex; align-items: flex-start; justify-content: flex-end;
   padding: 4px; z-index: 10;
 }
 .hotspot-box:hover, .hotspot-box.active {
-  border-color: #00a859; background: rgba(0, 168, 89, 0.28);
-  box-shadow: 0 0 15px rgba(0, 168, 89, 0.45);
+  border-color: var(--primary); background: rgba(0, 168, 89, 0.22);
+  box-shadow: 0 0 14px rgba(0, 168, 89, 0.35);
 }
 .hotspot-box.type-title {
-  border-color: rgba(14, 165, 233, 0.85); background: rgba(14, 165, 233, 0.12);
-}
-.hotspot-box.type-title:hover {
-  border-color: #0ea5e9; background: rgba(14, 165, 233, 0.25);
-  box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+  border-color: rgba(2, 132, 199, 0.75); background: rgba(2, 132, 199, 0.08);
 }
 .hotspot-box.type-explainable_text {
-  border-color: rgba(16, 185, 129, 0.85); background: rgba(16, 185, 129, 0.12);
-}
-.hotspot-box.type-explainable_text:hover {
-  border-color: #10b981; background: rgba(16, 185, 129, 0.25);
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
-}
-.hotspot-box.type-3d {
-  border-color: rgba(239, 68, 68, 0.8); background: rgba(239, 68, 68, 0.16);
-}
-.hotspot-box.type-3d:hover {
-  border-color: #ef4444; background: rgba(239, 68, 68, 0.32);
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+  border-color: rgba(2, 132, 199, 0.78); background: rgba(224, 242, 254, 0.42);
 }
 .hotspot-box.type-activity {
-  border-color: rgba(245, 158, 11, 0.8); background: rgba(245, 158, 11, 0.16);
+  border-color: rgba(217, 119, 6, 0.85); background: rgba(254, 243, 199, 0.45);
+}
+.hotspot-box.type-3d, .hotspot-box.type-interactive_3d {
+  border-color: rgba(0, 168, 89, 0.85); background: rgba(232, 248, 240, 0.42);
 }
 .hotspot-box.type-assessment {
-  border-color: rgba(2, 132, 199, 0.8); background: rgba(2, 132, 199, 0.16);
+  border-color: rgba(124, 58, 237, 0.8); background: rgba(243, 232, 255, 0.40);
 }
 .hotspot-pill {
-  background: #0f172a; color: #ffffff; font-size: 10.5px; font-weight: 700;
-  padding: 2px 7px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.2);
+  background: #064E3B; color: #ffffff; font-size: 10.5px; font-weight: 800;
+  padding: 3px 9px; border-radius: 999px; box-shadow: 0 3px 10px rgba(6,78,59,0.28);
+  display: flex; align-items: center; gap: 4px;
 }
 
-/* Bottom Navigation Dock */
-#bottomDock {
-  position: fixed; bottom: 0; left: 0; right: 0; height: 52px;
-  background: var(--bg-surface); border-top: 1px solid var(--border-light);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 12px; z-index: 50; box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+/* Floating Hotspot Counter & Slider & 4-Tab Pill Dock */
+#readerFloatingBar {
+  position: fixed; bottom: 72px; left: 14px; right: 14px; z-index: 65;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  pointer-events: none;
 }
-.page-nav-group { display: flex; align-items: center; gap: 8px; }
+.hotspot-summary-pill {
+  pointer-events: auto;
+  background: #064E3B; color: #FFFFFF; font-size: 12px; font-weight: 800;
+  padding: 6px 16px; border-radius: 999px; border: none; cursor: pointer;
+  box-shadow: 0 6px 18px rgba(6, 78, 59, 0.32);
+  display: flex; align-items: center; gap: 6px;
+}
+.page-scrubber-bar {
+  pointer-events: auto;
+  width: 100%; max-width: 520px; background: var(--bg-surface);
+  border: 1px solid var(--border-light); border-radius: 16px 16px 8px 8px;
+  padding: 4px 12px; display: flex; align-items: center; gap: 8px;
+  box-shadow: var(--shadow-sm); font-size: 11px; font-weight: 700; color: var(--text-muted);
+}
+.page-scrubber-bar input[type=range] {
+  flex: 1; accent-color: var(--primary); height: 4px; cursor: pointer;
+}
+.scrubber-nav-btn {
+  background: var(--primary-light); color: var(--primary); border: none;
+  border-radius: 8px; padding: 3px 8px; font-size: 11px; font-weight: 800; cursor: pointer;
+}
+
+/* Bottom 4-Tab Floating Pill Dock (05-reader / 08-index / 09-summary) */
+#bottomDock {
+  position: fixed; bottom: 10px; left: 14px; right: 14px; height: 54px;
+  background: var(--bg-surface); border: 1px solid var(--border-light);
+  border-radius: 999px; display: flex; align-items: center; justify-content: space-around;
+  padding: 4px 6px; z-index: 70; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+.dock-tab-btn {
+  flex: 1; height: 100%; border: none; background: transparent;
+  border-radius: 999px; color: var(--text-muted);
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dock-tab-btn.active {
+  background: var(--primary); color: #FFFFFF; font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 168, 89, 0.28);
+}
+
 .btn-nav {
   background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-light);
-  padding: 6px 12px; border-radius: 8px; font-size: 12.5px; font-weight: 700;
-  cursor: pointer; display: flex; align-items: center; gap: 5px;
+  padding: 8px 14px; border-radius: 12px; font-size: 13px; font-weight: 700;
+  cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   transition: all 0.2s ease;
 }
 .btn-nav:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-#pageIndicatorText { font-size: 13px; font-weight: 800; color: var(--primary); white-space: nowrap; }
 
-/* Layer 3: Smart Text Bottom Sheet */
+/* Index View (08-index.png) */
+.page-scroll-container {
+  flex: 1; overflow-y: auto; padding: 14px 16px 86px 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.search-pill-box {
+  background: var(--bg-surface); border: 1px solid var(--border-light);
+  border-radius: 999px; padding: 10px 16px; display: flex; align-items: center; gap: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.search-pill-box input {
+  flex: 1; border: none; outline: none; background: transparent;
+  font-size: 14px; color: var(--text-main); font-family: var(--font-base);
+}
+.index-unit-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light);
+  border-radius: 20px; padding: 14px; box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.index-unit-head {
+  display: flex; align-items: center; gap: 12px; cursor: pointer;
+}
+.unit-ring-badge {
+  width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 800; color: var(--primary); background: var(--primary-light); flex-shrink: 0;
+}
+.index-lesson-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 10px 8px; border-top: 1px solid var(--border-light); cursor: pointer;
+}
+.index-lesson-row:hover { background: var(--bg-card); border-radius: 10px; }
+.lesson-check-dot {
+  width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #cbd5e1;
+  display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0;
+}
+.lesson-check-dot.done { background: var(--primary); border-color: var(--primary); color: #fff; }
+.page-chip-soft {
+  background: var(--primary-light); color: var(--primary-dark);
+  padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 800; white-space: nowrap;
+}
+
+/* Summary View (09-summary.png) */
+.summary-stripe-card {
+  background: var(--bg-surface); border-radius: 20px; padding: 16px;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border-light);
+  border-right: 5px solid var(--primary); display: flex; flex-direction: column; gap: 8px;
+}
+.summary-stripe-card.purple { border-right-color: #7C3AED; }
+.summary-stripe-card.blue { border-right-color: #0284C7; }
+.summary-stripe-card.amber { border-right-color: #D97706; }
+.summary-stripe-card.red { border-right-color: #EF4444; }
+.formula-highlight-box {
+  background: #EFF6FF; border-radius: 12px; padding: 12px; text-align: center;
+  color: #0369A1; font-weight: 800; font-size: 14.5px;
+}
+body.dark-theme .formula-highlight-box { background: rgba(2,132,199,0.18); color: #7dd3fc; }
+
+/* Quiz View & Modal (10-quiz.png) */
+.quiz-question-card {
+  background: var(--bg-surface); border-radius: 22px; padding: 18px;
+  border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.amber-tag-pill {
+  align-self: flex-start; background: var(--accent-gold-bg); color: #92400E;
+  padding: 4px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 800;
+}
+.quiz-opt {
+  background: var(--bg-surface); color: var(--text-main) !important;
+  border: 1.5px solid var(--border-light); border-radius: 16px;
+  padding: 14px 16px; font-size: 14px; font-weight: 700; cursor: pointer;
+  text-align: right; display: flex; justify-content: space-between; align-items: center;
+  box-shadow: var(--shadow-sm); transition: all 0.2s ease; width: 100%;
+}
+.quiz-opt.correct { background: #ECFDF5 !important; border-color: #059669 !important; color: #064E3B !important; }
+.quiz-opt.wrong { background: #FEF2F2 !important; border-color: #EF4444 !important; color: #991B1B !important; }
+.why-wrong-box {
+  background: var(--bg-surface); border: 1.5px solid #FECACA;
+  color: var(--text-main); border-radius: 16px; padding: 14px; font-size: 13.5px; line-height: 1.6;
+}
+
+/* Layer 3A: Explain Bottom Sheet (06-explain-sheet.png) */
 #textSheet {
-  position: fixed; bottom: 0; left: 0; right: 0; max-height: 85vh;
-  background: var(--bg-surface); border-top: 2px solid var(--primary);
-  border-radius: 24px 24px 0 0; padding: 20px; z-index: 100;
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
-  display: none; flex-direction: column; gap: 14px;
+  position: fixed; bottom: 0; left: 0; right: 0; max-height: 88vh;
+  background: var(--bg-surface);
+  border-radius: 28px 28px 0 0; padding: 12px 18px 20px 18px; z-index: 100;
+  box-shadow: 0 -14px 45px rgba(15, 23, 42, 0.25);
+  display: none; flex-direction: column; gap: 12px;
   overflow-y: auto; transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #textSheet.open { display: flex; transform: translateY(0); }
+.sheet-drag-handle {
+  width: 44px; height: 5px; border-radius: 999px; background: #cbd5e1;
+  align-self: center; margin-bottom: 2px;
+}
 .sheet-header {
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--border-light); padding-bottom: 10px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
 }
-.sheet-title { font-size: 17px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+.sheet-title { font-size: 18px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
 .btn-close {
-  background: none; border: none; font-size: 20px; color: var(--text-muted); cursor: pointer; padding: 4px;
-}
-.btn-close:hover { color: #ef4444; }
-
-.original-callout {
-  background: rgba(0, 168, 89, 0.08); border-right: 4px solid var(--primary);
-  padding: 10px 14px; border-radius: 6px; font-size: 14px; line-height: 1.6;
-  color: var(--text-main);
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 50%;
+  width: 34px; height: 34px; font-size: 16px; color: var(--text-muted); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
 }
 .depth-selector {
-  display: flex; gap: 8px; background: var(--bg-card); padding: 4px; border-radius: 10px;
+  display: flex; gap: 6px; padding: 4px 0;
 }
 .depth-btn {
-  flex: 1; padding: 8px; border-radius: 8px; border: none; background: transparent;
-  color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer;
-  transition: all 0.2s ease;
+  flex: 1; padding: 8px 6px; border-radius: 999px; border: 1px solid var(--border-light);
+  background: var(--bg-surface); color: var(--text-muted); font-size: 12px; font-weight: 700;
+  cursor: pointer; transition: all 0.2s ease; white-space: nowrap;
 }
-.depth-btn.active { background: var(--primary); color: #ffffff; }
+.depth-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+.explanation-body { font-size: 14.5px; line-height: 1.75; color: var(--text-main); }
 
-.explanation-body { font-size: 14.5px; line-height: 1.7; color: var(--text-main); min-height: 50px; }
-
-.vocab-chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.dark-rule-card {
+  background: linear-gradient(135deg, #064E3B, #047857); color: #FFFFFF;
+  border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
+}
+.rule-chip {
+  background: rgba(255, 255, 255, 0.16); color: #FFFFFF; font-size: 11px; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px;
+}
+.soft-example-box {
+  background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 14px;
+  padding: 12px 14px; color: #064E3B; font-size: 13.5px; font-weight: 700; text-align: center;
+}
+body.dark-theme .soft-example-box { background: rgba(16,185,129,0.14); color: #a7f3d0; border-color: rgba(16,185,129,0.3); }
+.soft-mistake-box {
+  background: #FEF2F2; border: 1px solid #FECACA; border-radius: 14px;
+  padding: 11px 14px; color: #991B1B; font-size: 12.5px; font-weight: 600;
+}
+body.dark-theme .soft-mistake-box { background: rgba(239,68,68,0.15); color: #fecaca; border-color: rgba(239,68,68,0.35); }
+.original-callout {
+  background: var(--bg-card); border-right: 4px solid var(--primary);
+  padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.6; color: var(--text-muted);
+}
+.vocab-chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 .vocab-chip {
-  background: rgba(2, 132, 199, 0.15); border: 1px solid rgba(2, 132, 199, 0.35);
-  color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700;
-  cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+  background: var(--primary-light); border: 1px solid var(--border-primary);
+  color: var(--primary-dark); padding: 4px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; cursor: pointer;
 }
-.vocab-chip:hover { background: rgba(2, 132, 199, 0.3); }
-
 .equation-card {
   background: var(--bg-card); border: 1px solid var(--border-light);
-  border-radius: 10px; padding: 10px 14px; font-family: monospace; font-size: 15px;
-  color: #38bdf8; display: flex; align-items: center; justify-content: space-between;
+  border-radius: 10px; padding: 8px 12px; font-family: monospace; font-size: 14px;
+  color: var(--accent-cyan); display: flex; align-items: center; justify-content: space-between;
 }
-
-/* Yemeni White Dialect Companion Banner */
 .companion-banner {
   display: flex; align-items: center; gap: 10px;
-  background: linear-gradient(135deg, rgba(0, 168, 89, 0.15), rgba(2, 132, 199, 0.15));
+  background: linear-gradient(135deg, rgba(0, 168, 89, 0.12), rgba(2, 132, 199, 0.10));
   border: 1px solid var(--border-primary); border-radius: 12px; padding: 8px 12px;
 }
-.companion-avatar { font-size: 22px; }
-.companion-text { font-size: 12.5px; font-weight: 600; color: #f8fafc; }
+.companion-avatar { font-size: 20px; }
+.companion-text { font-size: 12px; font-weight: 700; color: var(--text-main); }
 
-/* 3D Science Lab Modal */
+/* 3D Lab Modal */
 #lab3dModal {
-  display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.88);
-  z-index: 120; flex-direction: column; backdrop-filter: blur(8px);
+  display: none; position: fixed; inset: 0; background: #0B151C;
+  z-index: 120; flex-direction: column;
 }
 #lab3dModal.open { display: flex; }
 .lab-header {
-  height: 54px; background: rgba(15, 23, 42, 0.95); display: flex;
+  height: 54px; background: rgba(15, 23, 42, 0.96); display: flex;
   align-items: center; justify-content: space-between; padding: 0 16px;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25);
 }
-.lab-title { font-size: 16px; font-weight: 800; color: #38bdf8; }
-
+.lab-title { font-size: 15.5px; font-weight: 800; color: #38bdf8; }
 .diag-tabs-bar {
-  background: rgba(15, 23, 42, 0.92); display: flex; gap: 6px; padding: 8px 12px;
+  background: rgba(15, 23, 42, 0.94); display: flex; gap: 6px; padding: 8px 12px;
   overflow-x: auto; white-space: nowrap; border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-  -webkit-overflow-scrolling: touch;
 }
 .diag-tab-btn {
-  background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-light);
-  padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;
-  transition: all 0.2s ease; flex-shrink: 0;
+  background: #182F3B; color: #94a3b8; border: 1px solid rgba(148,163,184,0.2);
+  padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; cursor: pointer; flex-shrink: 0;
 }
-.diag-tab-btn:hover { color: #ffffff; border-color: var(--primary); }
-.diag-tab-btn.active {
-  background: var(--primary); color: #ffffff; border-color: var(--primary);
-  box-shadow: 0 0 10px rgba(0, 168, 89, 0.4);
-}
-
+.diag-tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 #labCanvasContainer { flex: 1; position: relative; width: 100%; height: 100%; overflow: hidden; touch-action: none; }
 #labCanvas { width: 100%; height: 100%; display: block; touch-action: none; }
-
-.lab-hud-zoom {
-  position: absolute; bottom: 16px; right: 16px; display: flex; flex-direction: column; gap: 6px; z-index: 20;
-}
+.lab-hud-zoom { position: absolute; bottom: 16px; right: 16px; display: flex; flex-direction: column; gap: 6px; z-index: 20; }
 .btn-lab-hud {
-  width: 38px; height: 38px; border-radius: 10px; background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 18px; font-weight: bold;
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); transition: all 0.2s ease;
-}
-.btn-lab-hud:hover, .btn-lab-hud:active {
-  background: var(--primary); color: #ffffff; border-color: var(--primary); transform: scale(1.08);
+  width: 38px; height: 38px; border-radius: 12px; background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 18px; font-weight: bold; cursor: pointer;
 }
 .lab-touch-hint {
   position: absolute; top: 10px; right: 10px; background: rgba(15, 23, 42, 0.85);
-  padding: 6px 12px; border-radius: 8px; font-size: 11.5px; color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.3); pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  padding: 6px 12px; border-radius: 999px; font-size: 11px; color: #38bdf8; pointer-events: none;
 }
-
 .lab-controls-dock {
-  background: rgba(15, 23, 42, 0.95); border-top: 1px solid var(--border-light);
-  padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; max-height: 35vh; overflow-y: auto;
+  background: rgba(15, 23, 42, 0.96); border-top: 1px solid rgba(148,163,184,0.2);
+  padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; max-height: 35vh; overflow-y: auto; color: #f8fafc;
 }
 .control-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
 .control-slider { flex: 1; height: 6px; accent-color: var(--primary); }
 .parts-badges { display: flex; flex-wrap: wrap; gap: 6px; }
 .part-badge {
   background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3px 8px; border-radius: 6px; font-size: 12px; cursor: pointer; color: #fff;
-}
-.part-badge.active { background: #00a859; border-color: #4ade80; }
-
-/* Assessment View (Page 29) */
-#assessmentModal {
-  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
-  z-index: 110; align-items: center; justify-content: center; padding: 16px;
-}
-#assessmentModal.open { display: flex; }
-.assessment-card {
-  background: var(--bg-surface); border: 1.5px solid var(--primary);
-  border-radius: 20px; width: 100%; max-width: 620px; max-height: 90vh;
-  padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-}
-.quiz-opt {
-  background: var(--bg-card); color: #ffffff !important; border: 1px solid var(--border-light);
-  border-radius: 12px; padding: 12px 16px; font-size: 14.5px; font-weight: 600;
-  cursor: pointer; text-align: right; display: flex; justify-content: space-between; align-items: center;
-  transition: all 0.2s ease;
-}
-.quiz-opt:hover { background: #334155; border-color: var(--primary); }
-.quiz-opt.correct { background: #059669 !important; border-color: #10b981 !important; }
-.quiz-opt.wrong { background: #b91c1c !important; border-color: #ef4444 !important; }
-.why-wrong-box {
-  background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4);
-  color: #fef08a; border-radius: 8px; padding: 10px 14px; font-size: 13.5px; line-height: 1.5;
+  padding: 4px 10px; border-radius: 999px; font-size: 11.5px; cursor: pointer; color: #fff;
 }
 
-
-/* Layer 3D: Interactive Activity Simulator (Activity 1: Magnesium Combustion) */
+/* Layer 3D: Dark Immersive Activity Modal (07-activity-3d.png) */
 #activityModal {
-  display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.88);
-  z-index: 130; align-items: center; justify-content: center; padding: 12px;
-  backdrop-filter: blur(8px);
+  display: none; position: fixed; inset: 0; background: #0B151C;
+  z-index: 130; flex-direction: column; color: #f8fafc; overflow-y: auto; padding: 12px 14px 20px;
 }
 #activityModal.open { display: flex; }
 .activity-card {
-  background: var(--bg-surface); border: 1.5px solid #8b5cf6;
-  border-radius: 20px; width: 100%; max-width: 780px; max-height: 92vh;
-  overflow-y: auto; display: flex; flex-direction: column; gap: 14px;
-  padding: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-  color: #f8fafc;
+  width: 100%; max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;
 }
-.act-header {
-  display: flex; justify-content: space-between; align-items: center;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.3); padding-bottom: 12px;
+.act-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.act-circle-btn {
+  width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14); color: #f8fafc; font-size: 17px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.act-title { font-size: 17px; font-weight: 800; color: #a78bfa; display: flex; align-items: center; gap: 8px; }
-
-/* Activity Stepper Bar */
+.act-title { font-size: 16px; font-weight: 800; color: #FFFFFF; text-align: center; flex: 1; }
 .act-selector-bar {
-  display: flex; gap: 6px; overflow-x: auto; padding: 6px 4px;
-  background: rgba(15, 23, 42, 0.6); border-radius: 10px;
-  border: 1px solid rgba(139, 92, 246, 0.25); -webkit-overflow-scrolling: touch;
+  display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; -webkit-overflow-scrolling: touch;
 }
 .act-sel-btn {
-  background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-light);
-  padding: 6px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 700; cursor: pointer;
-  white-space: nowrap; transition: all 0.2s ease; flex-shrink: 0;
+  background: #162530; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0;
 }
-.act-sel-btn:hover { color: #ffffff; border-color: #8b5cf6; }
-.act-sel-btn.active {
-  background: #8b5cf6; color: #ffffff; border-color: #a78bfa;
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
-}
-.act-stepper-bar {
-  display: flex; gap: 6px; overflow-x: auto; padding: 4px 2px;
-  border-bottom: 1px solid var(--border-light); -webkit-overflow-scrolling: touch;
-}
+.act-sel-btn.active { background: #0284c7; color: #fff; border-color: #38bdf8; }
+.act-stepper-bar { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; }
 .act-step-btn {
-  background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-light);
-  padding: 6px 12px; border-radius: 8px; font-size: 11.5px; font-weight: 700; cursor: pointer;
-  white-space: nowrap; transition: all 0.2s ease;
+  flex: 1; background: rgba(255,255,255,0.08); color: #94a3b8; border: none;
+  padding: 6px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap;
 }
-.act-step-btn:hover { color: #ffffff; border-color: #8b5cf6; }
-.act-step-btn.active {
-  background: #8b5cf6; color: #ffffff; border-color: #a78bfa;
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
-}
-.act-step-btn.done { border-color: #10b981; color: #4ade80; }
-
-/* Visual Experiment Stage */
+.act-step-btn.active { background: #38bdf8; color: #0B151C; font-weight: 800; }
+.act-step-btn.done { background: rgba(16,185,129,0.28); color: #6ee7b7; }
 .act-stage-box {
-  background: linear-gradient(180deg, #090d16 0%, #111827 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px;
-  position: relative; height: 230px; display: flex; align-items: center;
-  justify-content: center; overflow: hidden; box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+  background: radial-gradient(circle at 50% 45%, #163044 0%, #0B151C 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22); border-radius: 22px;
+  position: relative; height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
+.telemetry-dark-card {
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px; padding: 12px 16px; display: grid; grid-template-columns: repeat(3, 1fr);
+  text-align: center; gap: 8px;
+}
+.telemetry-val { font-size: 16px; font-weight: 800; }
+.telemetry-lbl { font-size: 10.5px; color: #94a3b8; margin-top: 2px; }
 .burner-flame {
   width: 28px; height: 50px; background: radial-gradient(ellipse at bottom, #38bdf8 0%, #f59e0b 60%, transparent 80%);
   border-radius: 50% 50% 20% 20%; animation: flameFlicker 0.15s infinite alternate;
-  filter: drop-shadow(0 0 12px #38bdf8);
 }
-@keyframes flameFlicker {
-  0% { transform: scale(1) skewX(-1deg); opacity: 0.9; }
-  100% { transform: scale(1.08, 0.96) skewX(1deg); opacity: 1; }
-}
+@keyframes flameFlicker { 0% { transform: scale(1); } 100% { transform: scale(1.08, 0.96); } }
 .magnesium-glow {
   position: absolute; width: 60px; height: 60px; border-radius: 50%;
-  background: radial-gradient(circle, #ffffff 30%, #e0f2fe 60%, rgba(255,255,255,0) 80%);
-  box-shadow: 0 0 50px 25px #ffffff, 0 0 90px 45px #38bdf8;
-  animation: glowPulse 0.3s infinite alternate;
+  background: radial-gradient(circle, #fff 30%, #e0f2fe 60%, transparent 80%);
+  box-shadow: 0 0 50px 25px #fff, 0 0 90px 45px #38bdf8;
 }
-@keyframes glowPulse {
-  0% { transform: scale(0.95); opacity: 0.9; }
-  100% { transform: scale(1.15); opacity: 1; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 560px) { .comparison-grid { grid-template-columns: 1fr; } }
+.comp-card { border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.comp-card.before { background: rgba(148,163,184,0.12); border: 1px solid rgba(148,163,184,0.4); }
+.comp-card.after { background: rgba(16,185,129,0.14); border: 1px solid #10b981; }
+.comp-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px dashed rgba(255,255,255,0.1); }
+.comp-label { color: #94a3b8; }
+.comp-val { font-weight: 700; color: #fff; text-align: left; }
+
+/* Assessment Modal (10-quiz.png) */
+#assessmentModal {
+  display: none; position: fixed; inset: 0; background: var(--bg-page);
+  z-index: 110; align-items: center; justify-content: center; padding: 14px; overflow-y: auto;
+}
+#assessmentModal.open { display: flex; }
+.assessment-card {
+  background: var(--bg-page); width: 100%; max-width: 600px; max-height: 96vh;
+  overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 8px 4px;
 }
 
-/* Before and After Comparative Cards */
-.comparison-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px;
-}
-@media (max-width: 580px) {
-  .comparison-grid { grid-template-columns: 1fr; }
-}
-.comp-card {
-  border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;
-}
-.comp-card.before {
-  background: rgba(148, 163, 184, 0.1); border: 1.5px solid #94a3b8;
-}
-.comp-card.after {
-  background: rgba(16, 185, 129, 0.12); border: 1.5px solid #10b981;
-}
-.comp-card-header {
-  font-size: 13.5px; font-weight: 800; display: flex; align-items: center; gap: 6px;
-}
-.comp-row {
-  display: flex; justify-content: space-between; font-size: 12px; padding: 4px 0;
-  border-bottom: 1px dashed rgba(255,255,255,0.1);
-}
-.comp-row:last-child { border-bottom: none; }
-.comp-label { color: var(--text-muted); font-weight: 600; }
-.comp-val { font-weight: 700; color: #ffffff; text-align: left; }
-
-/* Table of Contents Drawer (Sidebar) */
-.drawer-backdrop {
-  position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(2px); z-index: 140; opacity: 0; pointer-events: none;
-  transition: opacity 0.25s ease;
-}
+/* Legacy TOC Drawer kept safe */
+.drawer-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,0.5); z-index: 140; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
 .drawer-backdrop.open { opacity: 1; pointer-events: auto; }
-
 #tocDrawer {
   position: fixed; top: 0; bottom: 0; right: 0; width: 320px; max-width: 85vw;
-  background: var(--bg-surface); border-left: 1px solid var(--border-light);
-  z-index: 150; box-shadow: -10px 0 35px rgba(0,0,0,0.55); transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column;
+  background: var(--bg-surface); z-index: 150; transform: translateX(100%);
+  transition: transform 0.3s ease; display: flex; flex-direction: column;
 }
 #tocDrawer.open { transform: translateX(0); }
-.toc-header {
-  padding: 14px 16px; padding-right: 58px; border-bottom: 1px solid var(--border-light);
-  display: flex; justify-content: space-between; align-items: center;
-}
+.toc-header { padding: 14px 16px; border-bottom: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; }
 .toc-list { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
-.toc-item {
-  padding: 10px 12px; border-radius: 8px; background: var(--bg-card);
-  font-size: 13px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between;
-  border: 1px solid transparent; transition: all 0.15s ease;
-}
-.toc-item:hover, .toc-item.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.toc-item { padding: 10px 12px; border-radius: 10px; background: var(--bg-card); font-size: 13px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
 
 #toast {
-  position: fixed; bottom: 65px; left: 50%; transform: translateX(-50%);
-  background: #0f172a; color: #fff; padding: 8px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 600; z-index: 200; opacity: 0; pointer-events: none;
-  transition: opacity 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  position: fixed; bottom: 78px; left: 50%; transform: translateX(-50%);
+  background: #064E3B; color: #fff; padding: 8px 18px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 700; z-index: 210; opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease; box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 #toast.show { opacity: 1; }
 </style>
 </head>
 <body>
 
-<!-- Fixed Corner Actions Dock: Exit Arrow + 3 Lines Sidebar Icon Directly Below It -->
-<div class="corner-actions-dock" id="cornerActionsDock">
-  <!-- 1. سهم الخروج -->
-  <button class="btn-corner-btn btn-exit" onclick="exitToHome()" title="العودة للصفحة الرئيسية (خروج)">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M19 12H5"></path>
-      <path d="M12 19l-7-7 7-7"></path>
-    </svg>
-  </button>
-  
-  <!-- 2. أسفل من سهم الخروج: أيقونة السايدبار (ثلاث خطوط) -->
-  <button class="btn-corner-btn btn-sidebar-toggle" id="btnSidebarToggle" onclick="toggleToc()" title="فهرس الكتاب والوحدات (السايدبار)">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </button>
-</div>
-
-<!-- Top Navigation Bar -->
+<!-- Clean Light Mint Header (05-reader.png) -->
 <header id="topBar">
-  <div class="nav-left">
-    <div class="book-title-badge">
-      <span class="title-main">كتاب العلوم التفاعلي الذكي</span>
-      <span class="title-sub" id="currentSectionTitle">الصف التاسع الأساسي · الجزء الثاني</span>
-    </div>
+  <button class="top-squircle-btn" onclick="exitToHome()" title="العودة">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="top-center-title">
+    <span class="title-main" id="currentSectionTitle">كتاب العلوم التفاعلي الذكي</span>
+    <span class="title-sub" id="pageIndicatorText">صفحة 7 من 152</span>
   </div>
-  <div class="nav-right">
-    <button class="btn-icon" onclick="toggleTheme()" title="تبديل المظهر (فاتح / داكن)">🌓</button>
-    <button class="btn-icon" id="btnAudioToggle" onclick="toggleAudio()" title="تشغيل / كتم الصوت">🔊</button>
+  <div class="top-right-actions">
+    <button class="top-squircle-btn" id="btnBookmarkPage" onclick="toggleBookmarkPage()" title="حفظ في المفضلة">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    </button>
+    <button class="top-squircle-btn" onclick="toggleTheme()" title="الوضع الفاتح / الداكن" style="width:36px;height:36px;font-size:14px;">🌓</button>
+    <button class="top-squircle-btn" id="btnAudioToggle" onclick="toggleAudio()" title="الصوت" style="width:36px;height:36px;font-size:14px;">🔊</button>
   </div>
 </header>
 
-<!-- Main Book Viewport -->
-<main id="bookViewport">
-  <div id="pageContainer">
-    <!-- Layer 1: Authentic Page Image -->
-    <img id="pageImg" src="" alt="صفحة الكتاب الوزاري">
-    
-    <!-- Layer 2: Interactive Overlay -->
-    <div id="interactiveOverlay"></div>
-  </div>
-</main>
+<!-- TAB 1: READER VIEW (05-reader.png) -->
+<section id="viewReader" class="tab-view active">
+  <main id="bookViewport">
+    <div id="pageContainer">
+      <img id="pageImg" src="" alt="صفحة الكتاب الوزاري">
+      <div id="interactiveOverlay"></div>
+    </div>
+  </main>
 
-<!-- Bottom Navigation Dock: Previous, Current Page Indicator, Next -->
+  <div id="readerFloatingBar">
+    <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()">
+      <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
+    </button>
+    <div class="page-scrubber-bar">
+      <button class="scrubber-nav-btn" onclick="prevPage()">السابق</button>
+      <span id="sliderMinLabel">1</span>
+      <input type="range" id="pageRangeSlider" min="0" max="147" value="2" oninput="onSliderScrub(this.value)">
+      <span id="sliderMaxLabel">152</span>
+      <button class="scrubber-nav-btn" onclick="nextPage()">التالي</button>
+    </div>
+  </div>
+</section>
+
+<!-- TAB 2: INDEX VIEW (08-index.png) -->
+<section id="viewIndex" class="tab-view">
+  <div class="page-scroll-container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+      <div>
+        <div style="font-size:24px; font-weight:900; color:var(--text-main);">الفهرس</div>
+        <div style="font-size:12.5px; color:var(--text-muted);" id="indexBookSub">كتاب العلوم · الجزء الثاني</div>
+      </div>
+    </div>
+    <div class="search-pill-box">
+      <span>🔍</span>
+      <input type="text" id="indexSearchInput" placeholder="ابحث في الكتاب أو اسم الدرس..." oninput="renderIndexView()">
+    </div>
+    <div id="indexUnitsContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+  </div>
+</section>
+
+<!-- TAB 3: SUMMARY VIEW (09-summary.png) -->
+<section id="viewSummary" class="tab-view">
+  <div class="page-scroll-container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <div style="font-size:24px; font-weight:900; color:var(--text-main);">الملخص</div>
+        <div style="font-size:12.5px; color:var(--text-muted);" id="summaryUnitSub">ملخص مفاهيم وقوانين الدرس</div>
+      </div>
+      <button class="scrubber-nav-btn" id="btnSaveSummaryStar" onclick="toggleBookmarkPage()" style="background:#FEF3C7; color:#92400E; padding:6px 12px; border-radius:999px;">⭐ احفظ</button>
+    </div>
+    <div id="summaryCardsContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+    <button onclick="switchBookTab('quiz')" style="background:var(--primary); color:#fff; border:none; border-radius:999px; padding:14px; font-size:15px; font-weight:800; cursor:pointer; box-shadow:0 6px 18px rgba(0,168,89,0.28); margin-top:4px;">
+      اختبر نفسك في هذا الدرس ‹
+    </button>
+  </div>
+</section>
+
+<!-- TAB 4: QUIZ VIEW (10-quiz.png) -->
+<section id="viewQuiz" class="tab-view">
+  <div class="page-scroll-container">
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      <span class="page-chip-soft" id="quizTabCounter">1 / 4</span>
+      <span style="font-size:15px; font-weight:800; color:var(--text-main);">اختبر نفسك · تدريب</span>
+      <button class="btn-close" onclick="switchBookTab('reader')">✕</button>
+    </div>
+    <div style="width:100%; height:6px; background:var(--border-light); border-radius:999px; overflow:hidden;">
+      <div id="quizTabProgressBar" style="width:25%; height:100%; background:var(--primary); transition:width 0.3s;"></div>
+    </div>
+    <div id="quizTabContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+  </div>
+</section>
+
+<!-- Floating 4-Tab Pill Dock -->
 <footer id="bottomDock">
-  <button class="btn-nav" onclick="prevPage()" style="min-width:92px; font-weight:700;">السابق ▶</button>
-  <div id="pageIndicatorText" style="font-size:13.5px; font-weight:800; color:var(--primary); white-space:nowrap;">صفحة 10 (كتاب الوزارة)</div>
-  <button class="btn-nav" onclick="nextPage()" style="min-width:92px; font-weight:700; background:var(--primary); color:#ffffff;">◀ التالي</button>
+  <button class="dock-tab-btn active" id="dockTabReader" onclick="switchBookTab('reader')">القارئ</button>
+  <button class="dock-tab-btn" id="dockTabIndex" onclick="switchBookTab('index')">الفهرس</button>
+  <button class="dock-tab-btn" id="dockTabSummary" onclick="switchBookTab('summary')">الملخص</button>
+  <button class="dock-tab-btn" id="dockTabQuiz" onclick="switchBookTab('quiz')">اختبر نفسك</button>
 </footer>
 
-<!-- Layer 3A: Smart Text Bottom Sheet -->
+<!-- Layer 3A: Smart Text Bottom Sheet (06-explain-sheet.png) -->
 <div id="textSheet">
+  <div class="sheet-drag-handle"></div>
   <div class="sheet-header">
     <div class="sheet-title">
-      <span>💡 الشرح التعليمي الذكي</span>
+      <div style="width:38px; height:38px; border-radius:10px; background:var(--primary-light); display:flex; align-items:center; justify-content:center; font-size:18px;">📐</div>
+      <div>
+        <div id="sheetHeaderTitleText" style="font-size:17px; font-weight:900; color:var(--text-main);">الشرح التعليمي الذكي</div>
+        <div id="sheetHeaderMetaText" style="font-size:11.5px; color:var(--text-muted); font-weight:600;">صفحة الكتاب</div>
+      </div>
     </div>
     <button class="btn-close" onclick="closeTextSheet()">✕</button>
   </div>
 
-  <div class="companion-banner">
-    <span class="companion-avatar">🧑‍🏫</span>
-    <span class="companion-text" id="sheetCompanionSpeech">أهلاً بك يا بطل! اقرأ المفهوم ولاحظ التوضيحات بالأسفل.</span>
+  <div class="depth-selector">
+    <button class="depth-btn active" id="btnDepthBasic" onclick="setDepth('basic')">شرح مفصل</button>
+    <button class="depth-btn" id="btnDepthIntermediate" onclick="setDepth('intermediate')">توسّع</button>
+    <button class="depth-btn" id="btnDepthAdvanced" onclick="setDepth('advanced')">مثال وتعمّق</button>
+  </div>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;">
+    <div style="display:flex; gap:5px;">
+      <span id="cardStepDot1" style="width:22px;height:4px;border-radius:999px;background:var(--primary);"></span>
+      <span id="cardStepDot2" style="width:22px;height:4px;border-radius:999px;background:#cbd5e1;"></span>
+      <span id="cardStepDot3" style="width:22px;height:4px;border-radius:999px;background:#cbd5e1;"></span>
+    </div>
+    <span id="sheetCardCountLabel">بطاقة 1 من 3</span>
+  </div>
+
+  <div style="font-size:14px; font-weight:800; color:var(--primary-dark);">الفكرة ببساطة</div>
+  <div class="explanation-body" id="sheetExplanationText"></div>
+
+  <div class="dark-rule-card" id="sheetEquationBlock" style="display:none;">
+    <div style="font-size:12px; color:#A7F3D0; font-weight:700;">القاعدة والمعادلة العلمية</div>
+    <div id="sheetEquationsList" style="display:flex; flex-direction:column; gap:6px; font-size:15px; font-weight:800;"></div>
   </div>
 
   <div class="original-callout">
-    <div style="font-size:11.5px; font-weight:800; color:var(--primary); margin-bottom:4px;">النص الأصلي من كتاب الوزارة:</div>
+    <div style="font-size:11px; font-weight:800; color:var(--primary); margin-bottom:2px;">النص المرجعي في كتاب الوزارة:</div>
     <div id="sheetOriginalText"></div>
   </div>
 
-  <div class="depth-selector">
-    <button class="depth-btn active" id="btnDepthBasic" onclick="setDepth('basic')">🟢 شرح مبسط</button>
-    <button class="depth-btn" id="btnDepthIntermediate" onclick="setDepth('intermediate')">🔵 مفهوم متوسط</button>
-    <button class="depth-btn" id="btnDepthAdvanced" onclick="setDepth('advanced')">🟣 تفسير معمق</button>
-  </div>
-
-  <div class="explanation-body" id="sheetExplanationText"></div>
-
   <div id="sheetVocabularyBlock" style="display:none;">
-    <div style="font-size:12px; font-weight:bold; color:var(--text-muted); margin-bottom:4px;">المصطلحات العلمية في هذا النص:</div>
+    <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:4px;">المصطلحات العلمية:</div>
     <div class="vocab-chips-row" id="sheetVocabChips"></div>
   </div>
 
-  <div id="sheetEquationBlock" style="display:none;">
-    <div style="font-size:12px; font-weight:bold; color:var(--text-muted); margin-bottom:4px;">المعادلات الكيميائية المرتبطة:</div>
-    <div id="sheetEquationsList" style="display:flex; flex-direction:column; gap:6px;"></div>
+  <div class="companion-banner">
+    <span class="companion-avatar">🧑‍🏫</span>
+    <span class="companion-text" id="sheetCompanionSpeech">أهلاً بك يا بطل! اقرأ الفكرة بتركيز ثم جرّب التطبيق العملي.</span>
   </div>
 
-  <div style="display:flex; gap:8px; margin-top:8px;">
-    <button class="btn-nav" id="btnPlaySpeech" onclick="playCurrentTextAudio()" style="flex:1;">🔊 استمع للنص</button>
-    <button class="btn-nav" onclick="closeTextSheet()" style="flex:1;">إغلاق والعودة للكتاب</button>
+  <div style="display:flex; gap:8px; margin-top:4px;">
+    <button class="btn-nav" onclick="openRelatedActivityFromSheet()" style="flex:1.4; background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px;">🧪 جرّب في النشاط</button>
+    <button class="btn-nav" id="btnPlaySpeech" onclick="playCurrentTextAudio()" style="flex:0.9; border-radius:999px;">🔊 استمع</button>
+    <button class="btn-nav" onclick="closeTextSheet()" style="flex:0.8; border-radius:999px;">إغلاق ‹</button>
   </div>
 </div>
 
 <!-- Layer 3B: Interactive 3D Science Laboratory Modal -->
 <div id="lab3dModal">
   <div class="lab-header">
-    <div class="lab-title" id="labModalTitle">🔬 محاكاة معمل الكيمياء ثلاثية الأبعاد (3D)</div>
-    <button class="btn-close" onclick="closeLab3d()" style="color:#fff; font-size:22px;">✕</button>
+    <div class="lab-title" id="labModalTitle">🔬 محاكاة معمل 3D التفاعلي</div>
+    <button class="btn-close" onclick="closeLab3d()" style="background:rgba(255,255,255,0.1); color:#fff;">✕</button>
   </div>
-
-  <!-- Diagram Selector Tabs Bar -->
   <div class="diag-tabs-bar" id="labDiagTabs">
     <button class="diag-tab-btn active" data-diag="diag-co2-prep" onclick="loadDiagramModel('diag-co2-prep')">⚗️ تحضير CO2 (ص 20)</button>
     <button class="diag-tab-btn" data-diag="diag-sulfur-combustion" onclick="loadDiagramModel('diag-sulfur-combustion')">🔥 احتراق الكبريت (ص 8)</button>
@@ -586,239 +662,157 @@ html, body {
     <button class="diag-tab-btn" data-diag="diag-hydraulic-press" onclick="loadDiagramModel('diag-hydraulic-press')">⚙️ المكبس الهيدروليكي (ص 84)</button>
     <button class="diag-tab-btn" data-diag="diag-dna-double-helix" onclick="loadDiagramModel('diag-dna-double-helix')">🧬 الحمض النووي DNA (ص 140)</button>
   </div>
-
   <div id="labCanvasContainer">
     <canvas id="labCanvas"></canvas>
-    
-    <!-- On-Screen 3D Zoom HUD Controls -->
     <div class="lab-hud-zoom">
       <button class="btn-lab-hud" onclick="zoomLab3d(1)" title="تكبير 3D">+</button>
       <button class="btn-lab-hud" onclick="zoomLab3d(-1)" title="تصغير 3D">-</button>
       <button class="btn-lab-hud" onclick="resetLab3dView()" title="إعادة ضبط الرؤية">⟲</button>
     </div>
-
-    <div class="lab-touch-hint">
-      🖐️ إصبع للتدوير 360° • ✌️ إصبعين للتكبير والتصغير • نقر مزدوج للضبط
-    </div>
+    <div class="lab-touch-hint">🖐️ إصبع للتدوير 360° • ✌️ إصبعين للتكبير والتصغير</div>
   </div>
-
   <div class="lab-controls-dock">
     <div class="control-row">
       <span style="color:#f8fafc; font-weight:bold;" id="labControlLabel">معدل سكب حمض HCl:</span>
       <input type="range" class="control-slider" id="sliderAcidRate" min="0" max="100" value="45" oninput="onAcidSliderChange(this.value)">
       <span id="sliderAcidVal" style="color:#38bdf8; font-weight:bold; width:45px;">45%</span>
     </div>
-    
     <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-      <div style="font-size:12px; color:var(--text-muted);">أجزاء الجهاز المختبري:</div>
+      <div style="font-size:12px; color:#94a3b8;">أجزاء الجهاز:</div>
       <div class="parts-badges" id="labPartsBadges"></div>
     </div>
-
-    <div style="background:rgba(2,132,199,0.12); border:1px solid rgba(2,132,199,0.3); border-radius:8px; padding:6px 12px; font-size:12.5px; color:#e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+    <div style="background:rgba(2,132,199,0.14); border:1px solid rgba(56,189,248,0.3); border-radius:10px; padding:6px 12px; font-size:12px; color:#e2e8f0; display:flex; justify-content:space-between; align-items:center;">
       <span id="labEquationBadge">⚖️ المعادلة: <b>CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂ ↑</b></span>
       <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تصاعد الغاز: نشط</span>
     </div>
   </div>
 </div>
 
-<!-- Layer 3D: Interactive Step-by-Step Activity Simulator Modal -->
+<!-- Layer 3D: Immersive Step-by-Step Activity Modal (07-activity-3d.png) -->
 <div id="activityModal">
   <div class="activity-card">
     <div class="act-header">
-      <div class="act-title">
-        <span>🧪</span>
-        <span id="actModalMainTitle">الأنشطة العملية والتفاعلية (كتاب العلوم - الجزء الثاني)</span>
+      <button class="act-circle-btn" onclick="resetActivitySimulation()" title="إعادة الخطوات">⟲</button>
+      <div style="flex:1; text-align:center;">
+        <div class="act-title" id="actModalMainTitle">نشاط عملي تفاعلي</div>
+        <div style="font-size:11px; color:#94a3b8;" id="actStepCounterBadge">خطوة 1 من 5</div>
       </div>
-      <button class="btn-close" onclick="closeActivityModal()">✕</button>
+      <button class="act-circle-btn" onclick="closeActivityModal()" title="إغلاق">✕</button>
     </div>
 
-    <!-- Activity Selector Tabs Bar: Quick Jump to Any of the 7 Unit Activities -->
     <div class="act-selector-bar" id="actSelectorBar">
-      <button class="act-sel-btn active" data-act="act-magnesium-combustion" onclick="switchActivity('act-magnesium-combustion')">⚗️ نشاط 1: الماغنسيوم (ص8)</button>
-      <button class="act-sel-btn" data-act="act-sulfur-combustion" onclick="switchActivity('act-sulfur-combustion')">🔥 نشاط 2: الكبريت (ص10)</button>
-      <button class="act-sel-btn" data-act="act-rusting-conditions" onclick="switchActivity('act-rusting-conditions')">🧪 نشاط 3: صدأ الحديد (ص13)</button>
-      <button class="act-sel-btn" data-act="act-carbon-allotropy" onclick="switchActivity('act-carbon-allotropy')">💎 نشاط 4: تآصل الكربون (ص17)</button>
-      <button class="act-sel-btn" data-act="act-co2-prep-procedure" onclick="switchActivity('act-co2-prep-procedure')">🔬 نشاط 5: تحضير CO2 (ص20)</button>
-      <button class="act-sel-btn" data-act="act-co2-properties" onclick="switchActivity('act-co2-properties')">🕯️ نشاط 6: خواص CO2 (ص21)</button>
-      <button class="act-sel-btn" data-act="act-petroleum-refining" onclick="switchActivity('act-petroleum-refining')">🛢️ نشاط 7: تكرير النفط (ص24)</button>
-      <button class="act-sel-btn" data-act="act-chlorine-prep" onclick="switchActivity('act-chlorine-prep')">🧪 تحضير الكلور (ص36)</button>
-      <button class="act-sel-btn" data-act="act-elasticity-solids" onclick="switchActivity('act-elasticity-solids')">🔩 المرونة واللدونة (ص41)</button>
-      <button class="act-sel-btn" data-act="act-surface-tension" onclick="switchActivity('act-surface-tension')">💧 التوتر السطحي (ص53)</button>
-      <button class="act-sel-btn" data-act="act-viscosity-liquids" onclick="switchActivity('act-viscosity-liquids')">🍯 اللزوجة (ص68)</button>
-      <button class="act-sel-btn" data-act="act-liquid-pressure-depth" onclick="switchActivity('act-liquid-pressure-depth')">🌊 ضغط السوائل (ص82)</button>
-      <button class="act-sel-btn" data-act="act-atmospheric-cup" onclick="switchActivity('act-atmospheric-cup')">🥛 الضغط الجوي (ص86)</button>
-      <button class="act-sel-btn" data-act="act-solar-concentration" onclick="switchActivity('act-solar-concentration')">☀️ الطاقة الشمسية (ص99)</button>
-      <button class="act-sel-btn" data-act="act-mendel-punnett" onclick="switchActivity('act-mendel-punnett')">🧬 تجارب مندل (ص138)</button>
+      <button class="act-sel-btn active" data-act="act-magnesium-combustion" onclick="switchActivity('act-magnesium-combustion')">⚗️ نشاط 1: الماغنسيوم</button>
+      <button class="act-sel-btn" data-act="act-sulfur-combustion" onclick="switchActivity('act-sulfur-combustion')">🔥 نشاط 2: الكبريت</button>
+      <button class="act-sel-btn" data-act="act-rusting-conditions" onclick="switchActivity('act-rusting-conditions')">🧪 نشاط 3: صدأ الحديد</button>
+      <button class="act-sel-btn" data-act="act-carbon-allotropy" onclick="switchActivity('act-carbon-allotropy')">💎 تآصل الكربون</button>
+      <button class="act-sel-btn" data-act="act-co2-prep-procedure" onclick="switchActivity('act-co2-prep-procedure')">🔬 تحضير CO2</button>
+      <button class="act-sel-btn" data-act="act-co2-properties" onclick="switchActivity('act-co2-properties')">🕯️ خواص CO2</button>
+      <button class="act-sel-btn" data-act="act-petroleum-refining" onclick="switchActivity('act-petroleum-refining')">🛢️ تكرير النفط</button>
+      <button class="act-sel-btn" data-act="act-chlorine-prep" onclick="switchActivity('act-chlorine-prep')">🧪 تحضير الكلور</button>
+      <button class="act-sel-btn" data-act="act-elasticity-solids" onclick="switchActivity('act-elasticity-solids')">🔩 المرونة واللدونة</button>
+      <button class="act-sel-btn" data-act="act-surface-tension" onclick="switchActivity('act-surface-tension')">💧 التوتر السطحي</button>
+      <button class="act-sel-btn" data-act="act-viscosity-liquids" onclick="switchActivity('act-viscosity-liquids')">🍯 اللزوجة</button>
+      <button class="act-sel-btn" data-act="act-liquid-pressure-depth" onclick="switchActivity('act-liquid-pressure-depth')">🌊 ضغط السوائل</button>
+      <button class="act-sel-btn" data-act="act-atmospheric-cup" onclick="switchActivity('act-atmospheric-cup')">🥛 الضغط الجوي</button>
+      <button class="act-sel-btn" data-act="act-solar-concentration" onclick="switchActivity('act-solar-concentration')">☀️ الطاقة الشمسية</button>
+      <button class="act-sel-btn" data-act="act-mendel-punnett" onclick="switchActivity('act-mendel-punnett')">🧬 تجارب مندل</button>
     </div>
 
-    <!-- Companion Banner -->
-    <div class="companion-banner" style="border-color:#8b5cf6;">
-      <span class="companion-avatar">🧑‍🏫</span>
-      <span class="companion-text" id="actCompanionSpeech">أهلاً بك يا بطل! سننفذ خطوات النشاط عملياً ونقارن بين خواص المادة قبل التفاعل وبعده.</span>
-    </div>
-
-    <!-- Stepper Navigation -->
     <div class="act-stepper-bar" id="actStepperBar">
-      <button class="act-step-btn active" id="actStepBtn1" onclick="jumpActivityStep(1)">١. فحص المادة (قبل)</button>
-      <button class="act-step-btn" id="actStepBtn2" onclick="jumpActivityStep(2)">٢. بدء التجربة</button>
-      <button class="act-step-btn" id="actStepBtn3" onclick="jumpActivityStep(3)">٣. تفاعل وظاهرة</button>
-      <button class="act-step-btn" id="actStepBtn4" onclick="jumpActivityStep(4)">٤. جمع الناتج</button>
-      <button class="act-step-btn" id="actStepBtn5" onclick="jumpActivityStep(5)">٥. مقارنة قبل وبعد</button>
+      <button class="act-step-btn active" id="actStepBtn1" onclick="jumpActivityStep(1)">١. فحص</button>
+      <button class="act-step-btn" id="actStepBtn2" onclick="jumpActivityStep(2)">٢. تحضير</button>
+      <button class="act-step-btn" id="actStepBtn3" onclick="jumpActivityStep(3)">٣. تفاعل</button>
+      <button class="act-step-btn" id="actStepBtn4" onclick="jumpActivityStep(4)">٤. نتيجة</button>
+      <button class="act-step-btn" id="actStepBtn5" onclick="jumpActivityStep(5)">٥. مقارنة</button>
     </div>
 
-    <!-- Visual Interactive Experiment Stage (Dynamic for all 7 activities) -->
+    <div style="text-align:center; font-size:13.5px; font-weight:800; color:#38bdf8;" id="actStepTitleText">الخطوة ١</div>
+
     <div class="act-stage-box" id="actStageBox">
-      <!-- Dynamic Stage Content rendered by renderStageVisuals() -->
       <div id="dynamicStageVisual" style="width:100%; height:100%; position:relative; display:flex; align-items:center; justify-content:center;"></div>
     </div>
 
-    <!-- Step Description & Interactive Action Controls -->
-    <div style="background:var(--bg-card); border:1px solid var(--border-light); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px;">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-size:14.5px; font-weight:800; color:#38bdf8;" id="actStepTitleText">الخطوة ١: فحص المادة قبل التفاعل</span>
-        <span style="font-size:12px; font-weight:700; color:var(--primary);" id="actStepCounterBadge">خطوة 1 من 5</span>
-      </div>
-      <div id="actStepInstructionText" style="font-size:13.5px; color:#e2e8f0; line-height:1.6;">
-        تفحص خواص المادة الفيزيائية الأصلية ومظهرها.
-      </div>
-      
-      <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:4px;">
-        <button class="btn-nav" id="btnPrevActStep" onclick="prevActivityStep()" style="display:none;">السابق ▶</button>
-        <button class="btn-nav" id="btnExecuteActAction" onclick="executeCurrentActAction()" style="background:#8b5cf6; color:#ffffff; font-weight:800; flex:1;">
-          ⚡ تنفيذ الخطوة
-        </button>
-        <button class="btn-nav" id="btnNextActStep" onclick="nextActivityStep()" style="background:var(--primary); color:#ffffff;">
-          التالي ◀
-        </button>
+    <div class="telemetry-dark-card">
+      <div><div class="telemetry-val" style="color:#c084fc;" id="telVal1">تجربة عملية</div><div class="telemetry-lbl">الحالة</div></div>
+      <div><div class="telemetry-val" style="color:#38bdf8;" id="telVal2">25° م</div><div class="telemetry-lbl">الظروف</div></div>
+      <div><div class="telemetry-val" style="color:#4ade80;" id="telVal3">آمن ✓</div><div class="telemetry-lbl">السلامة</div></div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:12px; display:flex; flex-direction:column; gap:8px;">
+      <div id="actStepInstructionText" style="font-size:13px; color:#e2e8f0; line-height:1.6;"></div>
+      <div style="display:flex; justify-content:space-between; gap:8px;">
+        <button class="btn-nav" id="btnPrevActStep" onclick="prevActivityStep()" style="background:#1e293b; color:#fff; border-color:#334155; display:none;">السابق</button>
+        <button class="btn-nav" id="btnExecuteActAction" onclick="executeCurrentActAction()" style="background:var(--primary); color:#fff; border-color:var(--primary); font-weight:800; flex:1; border-radius:999px;">⚡ نفّذ الخطوة</button>
+        <button class="btn-nav" id="btnNextActStep" onclick="nextActivityStep()" style="background:#0284c7; color:#fff; border-color:#0284c7; border-radius:999px;">التالي ‹</button>
       </div>
     </div>
 
-    <!-- Step 5: Side-by-Side Before vs After Comparison Card -->
+    <div id="actExtraToolsButtons" style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center;"></div>
+
+    <div class="companion-banner" style="background:rgba(245,158,11,0.12); border-color:rgba(245,158,11,0.35);">
+      <span class="companion-avatar">💡</span>
+      <span class="companion-text" id="actCompanionSpeech" style="color:#fde68a;">ماذا لو غيرت ظروف التجربة؟ لاحظ الفرق بين قبل وبعد!</span>
+    </div>
+
     <div id="actComparisonBox" style="display:none;">
-      <div style="font-size:15px; font-weight:800; color:#f8fafc; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-        <span>⚖️</span>
-        <span id="compHeaderTitle">جدول المقارنة الدقيقة: (قبل التفاعل vs بعد التفاعل)</span>
-      </div>
-
+      <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:6px;" id="compHeaderTitle">⚖️ المقارنة الدقيقة (قبل vs بعد)</div>
       <div class="comparison-grid">
-        <!-- Before Card -->
         <div class="comp-card before">
-          <div class="comp-card-header" style="color:#cbd5e1;">
-            <span id="compBeforeTitle">🔘 قبل التفاعل (المادة الأصلية)</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">اللون والمظهر:</span>
-            <span class="comp-val" id="compBeforeColor">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">الحالة الفيزيائية:</span>
-            <span class="comp-val" id="compBeforeState">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">البريق واللمعان:</span>
-            <span class="comp-val" id="compBeforeLuster">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">التوصيل الكهربائي:</span>
-            <span class="comp-val" id="compBeforeConductivity">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">طبيعة المادة والصيغة:</span>
-            <span class="comp-val" id="compBeforeNature">-</span>
-          </div>
+          <div style="font-size:13px;font-weight:800;color:#cbd5e1;" id="compBeforeTitle">🔘 قبل التفاعل</div>
+          <div class="comp-row"><span class="comp-label">اللون:</span><span class="comp-val" id="compBeforeColor">-</span></div>
+          <div class="comp-row"><span class="comp-label">الحالة:</span><span class="comp-val" id="compBeforeState">-</span></div>
+          <div class="comp-row"><span class="comp-label">البريق:</span><span class="comp-val" id="compBeforeLuster">-</span></div>
+          <div class="comp-row"><span class="comp-label">التوصيل:</span><span class="comp-val" id="compBeforeConductivity">-</span></div>
+          <div class="comp-row"><span class="comp-label">الطبيعة:</span><span class="comp-val" id="compBeforeNature">-</span></div>
         </div>
-
-        <!-- After Card -->
         <div class="comp-card after">
-          <div class="comp-card-header" style="color:#4ade80;">
-            <span id="compAfterTitle">⚪ بعد التفاعل (المادة الناتجة)</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">اللون والمظهر:</span>
-            <span class="comp-val" id="compAfterColor" style="color:#f8fafc;">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">الحالة الفيزيائية:</span>
-            <span class="comp-val" id="compAfterState">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">البريق واللمعان:</span>
-            <span class="comp-val" id="compAfterLuster">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">التوصيل الكهربائي:</span>
-            <span class="comp-val" id="compAfterConductivity">-</span>
-          </div>
-          <div class="comp-row">
-            <span class="comp-label">طبيعة المادة والصيغة:</span>
-            <span class="comp-val" id="compAfterNature" style="color:#4ade80;">-</span>
-          </div>
+          <div style="font-size:13px;font-weight:800;color:#4ade80;" id="compAfterTitle">⚪ بعد التفاعل</div>
+          <div class="comp-row"><span class="comp-label">اللون:</span><span class="comp-val" id="compAfterColor">-</span></div>
+          <div class="comp-row"><span class="comp-label">الحالة:</span><span class="comp-val" id="compAfterState">-</span></div>
+          <div class="comp-row"><span class="comp-label">البريق:</span><span class="comp-val" id="compAfterLuster">-</span></div>
+          <div class="comp-row"><span class="comp-label">التوصيل:</span><span class="comp-val" id="compAfterConductivity">-</span></div>
+          <div class="comp-row"><span class="comp-label">الطبيعة:</span><span class="comp-val" id="compAfterNature" style="color:#4ade80;">-</span></div>
         </div>
       </div>
-
-      <!-- Chemical Equation Callout -->
-      <div style="background:rgba(2,132,199,0.12); border:1px solid rgba(2,132,199,0.4); border-radius:12px; padding:12px; margin-top:10px; display:flex; flex-direction:column; gap:6px;">
-        <div style="font-size:13.5px; font-weight:800; color:#38bdf8;">📝 المعادلة الكيميائية الموزونة والتفسير العلمي:</div>
-        <div id="actEquationSymbolic" style="font-size:14.5px; font-weight:700; color:#ffffff; direction:ltr; text-align:center; padding:4px 0;">
-          -
-        </div>
-        <div id="actEquationVerbal" style="font-size:12.5px; color:#cbd5e1; text-align:center;">
-          -
-        </div>
+      <div style="background:rgba(2,132,199,0.16); border:1px solid rgba(56,189,248,0.35); border-radius:12px; padding:10px; margin-top:8px; text-align:center;">
+        <div id="actEquationSymbolic" style="font-size:14px; font-weight:800; color:#fff; direction:ltr;">-</div>
+        <div id="actEquationVerbal" style="font-size:12px; color:#bae6fd; margin-top:4px;">-</div>
       </div>
     </div>
 
-    <!-- Secondary Switcher / Action Bar -->
-    <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-light); padding-top:10px;">
-      <div style="font-size:12px; color:var(--text-muted);" id="actExtraToolsLabel">أدوات إضافية:</div>
-      <div style="display:flex; gap:6px;" id="actExtraToolsButtons">
-        <button class="btn-nav" onclick="resetActivitySimulation()" style="font-size:11.5px; padding:4px 10px; background:#334155; color:#fff;">إعادة الخطوات ⟲</button>
-      </div>
+    <div style="display:flex; gap:8px;">
+      <button onclick="closeActivityModal()" style="flex:1; background:rgba(255,255,255,0.1); color:#fff; border:none; border-radius:999px; padding:12px; font-weight:800; cursor:pointer;">إلى الصفحة</button>
+      <button onclick="closeActivityModal(); switchBookTab('quiz');" style="flex:1.2; background:var(--primary); color:#fff; border:none; border-radius:999px; padding:12px; font-weight:800; cursor:pointer;">اختبر نفسك</button>
     </div>
   </div>
 </div>
 
-
-<!-- Layer 3C: Assessment Modal (Page 29 Authentic Exercises) -->
+<!-- Layer 3C: Assessment Modal (10-quiz.png) -->
 <div id="assessmentModal">
   <div class="assessment-card">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-light); padding-bottom:10px;">
-      <div style="font-size:17px; font-weight:800; color:var(--primary);">📝 تقويم الوحدة التاسعة (كتاب الوزارة ص 29)</div>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <span class="page-chip-soft" id="assessmentScoreText">الدرجة: 0 / 0</span>
+      <span style="font-size:16px; font-weight:800; color:var(--text-main);">اختبر نفسك · تدريب</span>
       <button class="btn-close" onclick="closeAssessmentModal()">✕</button>
     </div>
-
-    <div class="companion-banner">
-      <span class="companion-avatar">🧑‍🏫</span>
-      <span class="companion-text">حل تمرين الكتاب الوزاري! كل خطأ فرصة لفهم السبب وتثبيت المعلومة.</span>
+    <div class="quiz-question-card">
+      <span class="amber-tag-pill">تمرين كتاب الوزارة</span>
+      <div id="assessmentQuestionPrompt" style="font-size:16px; font-weight:800; color:var(--text-main); line-height:1.6;"></div>
     </div>
-
-    <div id="assessmentQuestionPrompt" style="font-size:15.5px; font-weight:700; color:#fff; line-height:1.5;"></div>
-
-    <div id="assessmentOptionsContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
-
-    <div id="assessmentFeedbackBox" style="display:none; border-radius:10px; padding:12px;"></div>
-
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
-      <div id="assessmentScoreText" style="font-size:14px; font-weight:bold; color:var(--primary);">الدرجة: 0 / 0</div>
-      <button class="btn-nav" id="btnNextExercise" onclick="nextAssessmentExercise()" style="background:var(--primary); color:#fff; display:none;">التمرين التالي ◀</button>
+    <div id="assessmentOptionsContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
+    <div id="assessmentFeedbackBox" class="why-wrong-box" style="display:none;"></div>
+    <div style="display:flex; gap:8px; margin-top:4px;">
+      <button onclick="closeAssessmentModal()" class="btn-nav" style="flex:1; border-radius:999px;">📖 راجع الصفحة</button>
+      <button class="btn-nav" id="btnNextExercise" onclick="nextAssessmentExercise()" style="flex:1.3; background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px; display:none;">السؤال التالي ‹</button>
     </div>
   </div>
 </div>
 
-<!-- Table of Contents Backdrop -->
+<!-- Legacy TOC Drawer (kept compatible) -->
 <div id="tocBackdrop" class="drawer-backdrop" onclick="toggleToc()"></div>
-
-<!-- Table of Contents Drawer (Sidebar) -->
 <div id="tocDrawer">
   <div class="toc-header">
-    <div style="font-size:14.5px; font-weight:800; color:var(--primary); display:flex; align-items:center; gap:6px;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-      فهرس وحدات الجزء الثاني
-    </div>
+    <div style="font-size:14.5px; font-weight:800; color:var(--primary);">فهرس وحدات الجزء الثاني</div>
     <button class="btn-close" onclick="toggleToc()">✕</button>
   </div>
   <div class="toc-list" id="tocListContainer"></div>
@@ -9555,7 +9549,7 @@ const state = {
   curAssessmentId: null,
   studentId: 'default',
   audioEnabled: true,
-  isDark: true
+  isDark: false
 };
 
 // --------------------------------------------------------
@@ -11633,7 +11627,7 @@ function saveStudentProgress() {
 
 function toggleTheme() {
   state.isDark = !state.isDark;
-  document.body.classList.toggle('light-theme', !state.isDark);
+  document.body.classList.toggle('dark-theme', state.isDark);
   showToast(state.isDark ? 'الوضع الداكن' : 'الوضع الفاتح');
 }
 
@@ -11652,15 +11646,426 @@ function exitToHome() {
   }
 }
 
+// ========================================================
+// 4-TAB READER CONTROLLER (القارئ / الفهرس / الملخص / اختبر نفسك)
+// ========================================================
+let currentTab = 'reader';
+let quizTabIdx = 0;
+
+function switchBookTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.dock-tab-btn').forEach(b => b.classList.remove('active'));
+
+  if (tab === 'reader') {
+    document.getElementById('viewReader')?.classList.add('active');
+    document.getElementById('dockTabReader')?.classList.add('active');
+    setTimeout(updatePageContainerDimensions, 30);
+  } else if (tab === 'index') {
+    document.getElementById('viewIndex')?.classList.add('active');
+    document.getElementById('dockTabIndex')?.classList.add('active');
+    renderIndexView();
+  } else if (tab === 'summary') {
+    document.getElementById('viewSummary')?.classList.add('active');
+    document.getElementById('dockTabSummary')?.classList.add('active');
+    renderSummaryView();
+  } else if (tab === 'quiz') {
+    document.getElementById('viewQuiz')?.classList.add('active');
+    document.getElementById('dockTabQuiz')?.classList.add('active');
+    renderQuizView();
+  }
+}
+
+function cyclePageHotspot() {
+  const p = PAGES[state.curPageIdx];
+  const items = INTERACTIONS[p?.page_id] || [];
+  if (items.length === 0) {
+    showToast('لا توجد نقاط تفاعلية في هذه الصفحة');
+    return;
+  }
+  handleHotspotClick(items[0]);
+}
+
+function onSliderScrub(val) {
+  const idx = parseInt(val, 10);
+  if (!isNaN(idx) && idx >= 0 && idx < PAGES.length) {
+    loadPage(idx, 0);
+  }
+}
+
+function toggleBookmarkPage() {
+  const p = PAGES[state.curPageIdx];
+  if (!p) return;
+  try {
+    const key = 'thaker_bookmarks_v2';
+    const bms = JSON.parse(localStorage.getItem(key) || '[]');
+    const existsIdx = bms.findIndex(b => b.page_id === p.page_id);
+    if (existsIdx >= 0) {
+      bms.splice(existsIdx, 1);
+      showToast('تمت الإزالة من المفضلة');
+    } else {
+      bms.push({ page_id: p.page_id, book_page: p.book_page, title: p.title });
+      showToast('تم حفظ الصفحة في المفضلة ⭐');
+    }
+    localStorage.setItem(key, JSON.stringify(bms));
+    updateBookmarkButtonUI(p.page_id);
+  } catch (e) {}
+}
+
+function updateBookmarkButtonUI(pageId) {
+  try {
+    const bms = JSON.parse(localStorage.getItem('thaker_bookmarks_v2') || '[]');
+    const marked = bms.some(b => b.page_id === pageId);
+    const btn = document.getElementById('btnBookmarkPage');
+    if (btn) btn.classList.toggle('bookmarked', marked);
+  } catch (e) {}
+}
+
+function getVisitedPagesSet() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem('thaker_visited_pages') || '[]'));
+  } catch (e) { return new Set(); }
+}
+
+function markPageVisited(bookPage) {
+  try {
+    const s = getVisitedPagesSet();
+    s.add(bookPage);
+    localStorage.setItem('thaker_visited_pages', JSON.stringify([...s]));
+  } catch (e) {}
+}
+
+function renderIndexView() {
+  const container = document.getElementById('indexUnitsContainer');
+  if (!container) return;
+  const query = (document.getElementById('indexSearchInput')?.value || '').trim();
+  const visited = getVisitedPagesSet();
+
+  if (typeof UNITS !== 'undefined' && UNITS && UNITS.length > 0) {
+    container.innerHTML = UNITS.map((u, idx) => {
+      const uLessons = (LESSONS || []).filter(l => l.unitId === u.id || l.unit_id === u.id)
+        .filter(l => !query || (l.title || '').includes(query));
+      if (query && uLessons.length === 0 && !(u.title || '').includes(query)) return '';
+      return `
+        <div class="index-unit-card">
+          <div class="index-unit-head">
+            <div class="unit-ring-badge">${u.number || idx + 1}</div>
+            <div style="flex:1;">
+              <div style="font-size:15px; font-weight:800; color:var(--text-main);">${u.title || ('الوحدة ' + (idx+1))}</div>
+              <div style="font-size:11.5px; color:var(--text-muted);">${uLessons.length} دروس متاحة</div>
+            </div>
+          </div>
+          ${uLessons.map(l => {
+            const pT = (l.pages && l.pages.length) ? l.pages[0] : (l.p_start || 1);
+            const done = visited.has(pT);
+            return `
+              <div class="index-lesson-row" onclick="jumpFromIndex(${pT})">
+                <div class="lesson-check-dot ${done ? 'done' : ''}">${done ? '✓' : ''}</div>
+                <div style="flex:1; font-size:13.5px; font-weight:700;">${l.title}</div>
+                <span class="page-chip-soft">ص ${pT}</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }).join('');
+    return;
+  }
+
+  container.innerHTML = (LESSONS || []).map(u => {
+    const list = u.lessons || [];
+    const filtered = list.filter(l => !query || (l.title || '').includes(query) || (u.unit_title || '').includes(query));
+    if (query && filtered.length === 0) return '';
+    let doneCount = 0;
+    filtered.forEach(l => { if (visited.has(l.p_start)) doneCount++; });
+    const pct = filtered.length ? Math.round((doneCount / filtered.length) * 100) : 0;
+    return `
+      <div class="index-unit-card">
+        <div class="index-unit-head">
+          <div class="unit-ring-badge">${u.unit_num}</div>
+          <div style="flex:1;">
+            <div style="font-size:15px; font-weight:800; color:var(--text-main);">${u.unit_title}</div>
+            <div style="font-size:11.5px; color:var(--text-muted);">${pct}% مكتمل · ص ${u.page_start}–${u.page_end}</div>
+          </div>
+        </div>
+        ${filtered.map(l => {
+          const isDone = visited.has(l.p_start);
+          return `
+            <div class="index-lesson-row" onclick="jumpFromIndex(${l.p_start})">
+              <div class="lesson-check-dot ${isDone ? 'done' : ''}">${isDone ? '✓' : ''}</div>
+              <div style="flex:1; font-size:13.5px; font-weight:700; color:var(--text-main);">${l.title}</div>
+              <span style="font-size:13px;">🧪</span>
+              <span class="page-chip-soft">ص ${l.p_start}</span>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }).join('');
+}
+
+function jumpFromIndex(bookPage) {
+  switchBookTab('reader');
+  const idx = PAGES.findIndex(p => p.book_page === bookPage);
+  if (idx !== -1) loadPage(idx);
+  else showToast(`صفحة ${bookPage}`);
+}
+
+function renderSummaryView() {
+  const container = document.getElementById('summaryCardsContainer');
+  if (!container) return;
+  const p = PAGES[state.curPageIdx] || PAGES[0] || {};
+  const uId = p.unit_id || 'u9';
+  const ints = INTERACTIONS[p.page_id] || [];
+  const expRef = ints.find(i => i.explanation_ref)?.explanation_ref;
+  const expObj = (expRef && EXPLANATIONS[expRef]) || Object.values(EXPLANATIONS)[0];
+
+  document.getElementById('summaryUnitSub').textContent = p.title || 'ملخص الدرس والمفاهيم الأساسية';
+
+  let cards = [];
+  // Definitions card (purple)
+  const vocabIds = expObj?.vocabulary_ids || Object.keys(GLOSSARY).slice(0, 3);
+  const vocabHtml = vocabIds.map(vid => GLOSSARY[vid]).filter(Boolean).map(v =>
+    `<div style="font-size:13.5px; line-height:1.6;"><b style="color:var(--text-main);">${v.term}:</b> <span style="color:var(--text-muted);">${v.definition}</span></div>`
+  ).join('');
+  if (vocabHtml) {
+    cards.push(`
+      <div class="summary-stripe-card purple">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#7C3AED;">💡 تعريفات ومصطلحات</span>
+          <span class="page-chip-soft">ص ${p.book_page || 7}</span>
+        </div>
+        ${vocabHtml}
+      </div>
+    `);
+  }
+
+  // Rule / Equation card (blue)
+  const eqs = expObj?.chemical_equations || [];
+  if (eqs.length > 0 || expObj) {
+    const eqBlock = eqs.length
+      ? eqs.map(e => `<div class="formula-highlight-box">${e.label}: <span style="direction:ltr;display:inline-block;">${e.eq}</span></div>`).join('')
+      : `<div class="formula-highlight-box">${expObj?.levels?.basic || expObj?.original_text || ''}</div>`;
+    cards.push(`
+      <div class="summary-stripe-card blue">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#0284C7;">📐 القاعدة والمبدأ الأساسي</span>
+          <span class="page-chip-soft">ص ${p.book_page || 7}</span>
+        </div>
+        ${eqBlock}
+      </div>
+    `);
+  }
+
+  // Key factors / Intermediate explanation (amber)
+  if (expObj?.levels?.intermediate) {
+    cards.push(`
+      <div class="summary-stripe-card amber">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#D97706;">🧪 الشرح التطبيقي والعوامل</span>
+          <span class="page-chip-soft">${uId.toUpperCase()}</span>
+        </div>
+        <div style="font-size:13.5px; line-height:1.7; color:var(--text-main);">${expObj.levels.intermediate}</div>
+      </div>
+    `);
+  }
+
+  // Common mistake / Advanced caution (red)
+  cards.push(`
+    <div class="summary-stripe-card red">
+      <div style="font-size:15px; font-weight:800; color:#DC2626;">⚠️ نقطة مهمة وتنبيه علمي</div>
+      <div style="font-size:13.5px; line-height:1.6; color:var(--text-main);">${expObj?.levels?.advanced || 'تأكد من فهم الفرق بين الخواص الفيزيائية والتغير الكيميائي عند حل التمارين.'}</div>
+    </div>
+  `);
+
+  container.innerHTML = cards.join('');
+}
+
+function renderQuizView() {
+  const container = document.getElementById('quizTabContainer');
+  if (!container) return;
+  const rawVals = Object.values(ASSESSMENTS || {});
+  const qList = [];
+  rawVals.forEach(item => {
+    if (Array.isArray(item)) item.forEach(sub => qList.push(sub));
+    else if (item) qList.push(item);
+  });
+  window._flatQuizList = qList;
+  if (qList.length === 0) {
+    container.innerHTML = '<div class="quiz-question-card">ستتوفر تمارين إضافية قريباً!</div>';
+    return;
+  }
+  if (quizTabIdx >= qList.length) quizTabIdx = 0;
+  const q = qList[quizTabIdx];
+  document.getElementById('quizTabCounter').textContent = `${quizTabIdx + 1} / ${qList.length}`;
+  document.getElementById('quizTabProgressBar').style.width = `${Math.round(((quizTabIdx + 1) / qList.length) * 100)}%`;
+
+  if (q.type === 'true_false_set' && q.sub_questions?.length) {
+    const sub = q.sub_questions[0];
+    container.innerHTML = `
+      <div class="quiz-question-card">
+        <span class="amber-tag-pill">صح أم خطأ · كتاب الوزارة</span>
+        <div style="font-size:16px; font-weight:800; line-height:1.6;">${sub.statement}</div>
+      </div>
+      <button class="quiz-opt" id="qtOpt0" onclick="answerTabQuizTF(true, ${sub.is_true})"><span>✅ عبارة صحيحة</span><span>⚪</span></button>
+      <button class="quiz-opt" id="qtOpt1" onclick="answerTabQuizTF(false, ${sub.is_true})"><span>❌ عبارة خاطئة</span><span>⚪</span></button>
+      <div id="quizTabFeedback" class="why-wrong-box" style="display:none;"></div>
+      <button onclick="quizTabIdx = (quizTabIdx + 1) % ${qList.length}; renderQuizView();" style="background:var(--primary); color:#fff; border:none; border-radius:999px; padding:14px; font-size:15px; font-weight:800; cursor:pointer;">السؤال التالي ‹</button>
+    `;
+    return;
+  }
+
+  const opts = q.options || [];
+  container.innerHTML = `
+    <div class="quiz-question-card">
+      <span class="amber-tag-pill">تمرين كتاب الوزارة</span>
+      <div style="font-size:16px; font-weight:800; line-height:1.6;">${q.prompt || q.q || q.question}</div>
+    </div>
+    ${opts.map((o, i) => `
+      <button class="quiz-opt" id="qtOpt${i}" onclick="answerTabQuiz(${i})">
+        <span>${o.text || o}</span>
+        <span>⚪</span>
+      </button>
+    `).join('')}
+    <div id="quizTabFeedback" class="why-wrong-box" style="display:none;"></div>
+    <div style="display:flex; gap:8px;">
+      <button onclick="switchBookTab('reader')" class="btn-nav" style="flex:1; border-radius:999px;">📖 راجع الصفحة</button>
+      <button onclick="quizTabIdx = (quizTabIdx + 1) % ${qList.length}; renderQuizView();" style="flex:1.3; background:var(--primary); color:#fff; border:none; border-radius:999px; padding:13px; font-size:14.5px; font-weight:800; cursor:pointer;">السؤال التالي ‹</button>
+    </div>
+  `;
+}
+
+function answerTabQuiz(idx) {
+  const qList = window._flatQuizList || [];
+  const q = qList[quizTabIdx];
+  if (!q) return;
+  const correctIdx = (typeof q.answer === 'number') ? q.answer : (q.correct_index ?? 0);
+  (q.options || []).forEach((_, i) => {
+    const b = document.getElementById('qtOpt' + i);
+    if (!b) return;
+    b.disabled = true;
+    if (i === correctIdx) { b.classList.add('correct'); b.lastElementChild.textContent = '✓'; }
+    else if (i === idx) { b.classList.add('wrong'); b.lastElementChild.textContent = '✕'; }
+  });
+  const fb = document.getElementById('quizTabFeedback');
+  if (fb) {
+    fb.style.display = 'block';
+    const ok = idx === correctIdx;
+    const explainText = q.explain || q.explanation || '';
+    const why = q.options?.[idx]?.why_wrong || explainText;
+    fb.innerHTML = ok
+      ? `<div style="color:#059669; font-weight:800; margin-bottom:4px;">✅ إجابة صحيحة وممتازة!</div><div>${explainText}</div>`
+      : `<div style="color:#DC2626; font-weight:800; margin-bottom:4px;">لماذا أخطأت؟</div><div>${why}</div>`;
+  }
+}
+
+function answerTabQuizTF(chosen, expected) {
+  const qList = window._flatQuizList || [];
+  const q = qList[quizTabIdx];
+  const sub = q?.sub_questions?.[0];
+  const fb = document.getElementById('quizTabFeedback');
+  if (fb) {
+    fb.style.display = 'block';
+    fb.innerHTML = chosen === expected
+      ? `<div style="color:#059669;font-weight:800;">✅ أحسنت!</div><div>${sub?.why_wrong || ''}</div>`
+      : `<div style="color:#DC2626;font-weight:800;">❌ إجابة غير دقيقة</div><div>${sub?.why_wrong || ''}</div>`;
+  }
+}
+
+function openRelatedActivityFromSheet() {
+  closeTextSheet();
+  const p = PAGES[state.curPageIdx];
+  const ints = INTERACTIONS[p?.page_id] || [];
+  const actInt = ints.find(i => i.activity_ref);
+  openActivityModal(actInt?.activity_ref || Object.keys(window.THAKER_CURRICULUM_P2?.activities || {})[0]);
+}
+
+// Wrap loadPage to update scrubber, hotspot pill, bookmark UI, and Android ThakerBridge progress
+const _origLoadPage = loadPage;
+loadPage = function(pageIdx, direction = 0) {
+  _origLoadPage(pageIdx, direction);
+  const p = PAGES[pageIdx];
+  if (!p) return;
+  const totalBook = PAGES[PAGES.length - 1]?.book_page || PAGES.length;
+  const ind = document.getElementById('pageIndicatorText');
+  if (ind) ind.textContent = `صفحة ${p.book_page} من ${totalBook}`;
+
+  const slider = document.getElementById('pageRangeSlider');
+  if (slider) {
+    slider.max = Math.max(0, PAGES.length - 1);
+    slider.value = pageIdx;
+  }
+  const minLbl = document.getElementById('sliderMinLabel');
+  const maxLbl = document.getElementById('sliderMaxLabel');
+  if (minLbl) minLbl.textContent = PAGES[0]?.book_page || 1;
+  if (maxLbl) maxLbl.textContent = totalBook;
+
+  const hsCount = (INTERACTIONS[p.page_id] || []).length;
+  const hsText = document.getElementById('hotspotCountText');
+  if (hsText) hsText.textContent = `✨ النقاط التفاعلية · ${hsCount}`;
+
+  updateBookmarkButtonUI(p.page_id);
+  markPageVisited(p.book_page);
+
+  // Sync progress to Native Android Shell if inside WebView
+  if (window.ThakerBridge && window.ThakerBridge.updateProgress) {
+    try {
+      const pct = Math.max(1, Math.round(((pageIdx + 1) / PAGES.length) * 100));
+      window.ThakerBridge.updateProgress(document.title, p.book_page, pct, p.unit_id || 'u9', p.title || '');
+    } catch (e) {}
+  }
+};
+
+// Enhance openTextExplanation to update the v2.0 Sheet header & dots cleanly
+const _origOpenTextExplanation = openTextExplanation;
+openTextExplanation = function(refId) {
+  _origOpenTextExplanation(refId);
+  const data = EXPLANATIONS[refId];
+  const p = PAGES[state.curPageIdx];
+  const hTitle = document.getElementById('sheetHeaderTitleText');
+  const hMeta = document.getElementById('sheetHeaderMetaText');
+  if (hTitle && data) hTitle.textContent = data.title || 'الشرح التعليمي الذكي';
+  if (hMeta && p) hMeta.textContent = `صفحة ${p.book_page} · ${p.unit_id ? p.unit_id.toUpperCase() : ''}`;
+};
+
+const _origSetDepth = setDepth;
+setDepth = function(level) {
+  _origSetDepth(level);
+  const mapIdx = level === 'basic' ? 1 : (level === 'intermediate' ? 2 : 3);
+  const lbl = document.getElementById('sheetCardCountLabel');
+  if (lbl) lbl.textContent = `بطاقة ${mapIdx} من 3`;
+  for (let i = 1; i <= 3; i++) {
+    const dot = document.getElementById('cardStepDot' + i);
+    if (dot) dot.style.background = i <= mapIdx ? 'var(--primary)' : '#cbd5e1';
+  }
+};
+
 // Initialize Engine
 function initApp() {
+  state.isDark = false;
   window.addEventListener("resize", updatePageContainerDimensions);
   window.addEventListener("orientationchange", function() {
     setTimeout(updatePageContainerDimensions, 100);
   });
   updatePageContainerDimensions();
   initTouchGestures();
-  loadPage(2); // Start on Unit 9 Cover (Book page 7)
+
+  let startIdx = Math.min(2, Math.max(0, PAGES.length - 1));
+  let startTab = 'reader';
+  try {
+    const hash = window.location.hash || '';
+    const pm = hash.match(/page=(\d+)/);
+    if (pm) {
+      const targetBp = parseInt(pm[1], 10);
+      const foundIdx = PAGES.findIndex(p => p.book_page === targetBp);
+      if (foundIdx !== -1) startIdx = foundIdx;
+    }
+    const tm = hash.match(/tab=(reader|index|summary|quiz)/);
+    if (tm) startTab = tm[1];
+  } catch (e) {}
+
+  loadPage(startIdx);
+  if (startTab !== 'reader') switchBookTab(startTab);
 }
 
 if (document.readyState === 'loading') {

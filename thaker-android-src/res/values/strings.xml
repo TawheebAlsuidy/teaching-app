@@ -1,67 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ذاكر</string>
-    <string name="app_tagline">منصتك التعليمية الشاملة</string>
-    <string name="app_tagline_new">منصتك التعليمية الشاملة</string>
-    <string name="stage_high_school">الثانوية</string>
-    <string name="stage_middle_school">الإعدادية</string>
-    <string name="grade_12_title">الصف الثالث الثانوي · علمي</string>
-    <string name="grade_9_title">الصف التاسع الأساسي</string>
-    
-    <!-- 9th Grade Subject Names -->
-    <string name="sci_p1_title">العلوم · الجزء الأول</string>
-    <string name="sci_p1_sub">المحاليل، التفاعلات، الصوت والضوء، الإخراج، التكاثر</string>
-    <string name="sci_p2_title">العلوم · الجزء الثاني</string>
-    <string name="sci_p2_sub">الكهرباء، الطاقة، البيئة، علوم الأرض والفضاء</string>
-    <string name="math_p1_title">الرياضيات · الجزء الأول</string>
-    <string name="math_p1_sub">المجموعات، الأعداد الحقيقية، المقادير الجبرية</string>
-    <string name="math_p2_title">الرياضيات · الجزء الثاني</string>
-    <string name="math_p2_sub">الهندسة، الدائرة، حساب المثلثات، الإحصاء</string>
-    
-    <string name="btn_read_book">الكتاب</string>
-    <string name="btn_index">الفهرس</string>
-    <string name="btn_summary">الملخص</string>
-    <string name="btn_quiz">اختبار</string>
-    <string name="btn_comprehensive_quiz">الاختبار الشامل · تاسع</string>
-    
-    <!-- Chem 3D Lab Strings -->
-    <string name="chem_card_title">كتاب ومعمل الكيمياء</string>
-    <string name="chem_card_subtitle">الثالث الثانوي · المنهج اليمني</string>
-    <string name="chem_card_desc">اقرأ الكتاب، وجرّب التفاعلات بثلاثة أبعاد، واستمع للشرح. يعمل دون اتصال.</string>
-    <string name="btn_start_lab">افتح المعمل</string>
-    <string name="tag_curriculum">20 صفحة ممسوحة</string>
-    <string name="tag_experiments">15 تجربة 3D</string>
-    <string name="tag_offline">بدون إنترنت</string>
-    <string name="tag_interactive">تفاعل باللمس</string>
-    <string name="auto_launch_pref">فتح المعمل عند تشغيل التطبيق</string>
-    <string name="about_app">عن ذاكر</string>
-
-    <string name="section_books_title">الكتب الدراسية</string>
-    <string name="section_books_sub">اختر المادة التي تريد دراستها</string>
-    <string name="subject_physics">الفيزياء</string>
-    <string name="subject_physics_sub">الصوت، الضوء، الكهرباء والطاقة</string>
-    <string name="subject_biology">الأحياء</string>
-    <string name="subject_biology_sub">الخلية، الوراثة، البيئة والجسم</string>
-    <string name="subject_math">الرياضيات</string>
-    <string name="subject_math_sub">الجبر، الهندسة والإحصاء</string>
-    <string name="subject_science">العلوم</string>
-    <string name="subject_science_sub">المحاليل، التفاعلات وعلوم الأرض</string>
-    <string name="soon">قريباً</string>
-    <string name="book_sci_interactive">كتاب العلوم التفاعلي الذكي</string>
-    <string name="book_science_3d">كتاب ومعمل العلوم 3D</string>
-    <string name="book_math_3d">كتاب ومعمل الرياضيات 3D</string>
-    <string name="book_physics_3d">كتاب ومعمل الفيزياء 3D</string>
-    <string name="book_biology_3d">كتاب ومعمل الأحياء 3D</string>
-    <string name="science_lab">معمل العلوم التفاعلي</string>
-
-    <string name="nav_home">الرئيسية</string>
+    <string name="app_subtitle">افهم · جرّب · أتقن</string>
     <string name="nav_subjects">موادي</string>
     <string name="nav_library">المكتبة</string>
-    <string name="nav_favorites">المفضلة</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_bookmarks">المفضلة</string>
     <string name="nav_settings">الإعدادات</string>
-    <string name="theme_light">الوضع الفاتح</string>
-    <string name="theme_dark">الوضع الداكن</string>
-    <string name="theme_toggle">تغيير المظهر</string>
-    <string name="library_title">مكتبة ذاكر</string>
-    <string name="favorites_empty">لم تضف أي مادة إلى المفضلة بعد.</string>
 </resources>

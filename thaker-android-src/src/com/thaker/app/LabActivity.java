@@ -1,94 +1,48 @@
 package com.thaker.app;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 
 public class LabActivity extends Activity {
 
     private WebView webView;
+    private String htmlAsset = "thaker-interactive-book.html";
 
+    @SuppressLint({"SetJavaScriptEnabled", "JavascriptInterface"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ThemeUtil.apply(this);
         super.onCreate(savedInstanceState);
-
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
-
-        enableImmersiveMode();
         setContentView(R.layout.activity_lab);
 
-        webView = findViewById(R.id.lab_webview);
-        setupWebView();
-
-        View btnExit = findViewById(R.id.btn_exit_to_hub);
-        if (btnExit != null) {
-            btnExit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    confirmExit();
-                }
-            });
+        String requested = getIntent().getStringExtra("html_asset");
+        if (requested != null && !requested.trim().isEmpty()) {
+            htmlAsset = requested.trim();
         }
-    }
+        int startPage = getIntent().getIntExtra("start_page", 0);
+        String startTab = getIntent().getStringExtra("start_tab");
 
-    private void enableImmersiveMode() {
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-            | View.SYSTEM_UI_FLAG_FULLSCREEN
-            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        );
-    }
+        ThakerStore.unlockLabBadge(this);
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            enableImmersiveMode();
-        }
-    }
-
-    private void setupWebView() {
+        webView = findViewById(R.id.webview);
         WebSettings ws = webView.getSettings();
         ws.setJavaScriptEnabled(true);
         ws.setDomStorageEnabled(true);
-        ws.setDatabaseEnabled(true);
         ws.setAllowFileAccess(true);
-        ws.setAllowContentAccess(true);
         ws.setAllowFileAccessFromFileURLs(true);
         ws.setAllowUniversalAccessFromFileURLs(true);
-        ws.setMediaPlaybackRequiresUserGesture(false);
-        ws.setBuiltInZoomControls(false);
+        ws.setBuiltInZoomControls(true);
         ws.setDisplayZoomControls(false);
-        ws.setSupportZoom(true);
         ws.setUseWideViewPort(true);
         ws.setLoadWithOverviewMode(true);
-        ws.setCacheMode(WebSettings.LOAD_NO_CACHE);
-
-        webView.clearCache(true);
         webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
-        webView.setWebChromeClient(new WebChromeClient());
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                return false;
-            }
-        });
 
         webView.addJavascriptInterface(new Object() {
             @JavascriptInterface
@@ -96,51 +50,68 @@ public class LabActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        returnToMain();
+                        finish();
                     }
                 });
             }
+
+            @JavascriptInterface
+            public void updateProgress(String bookTitle, int pageNum, int pct, String unitId, String sectionTitle) {
+                String cleanTitle = (bookTitle != null && !bookTitle.trim().isEmpty()) ? bookTitle.trim() : getBookTitleForAsset(htmlAsset);
+                String sub = (sectionTitle != null && !sectionTitle.trim().isEmpty())
+                        ? (sectionTitle.trim() + " · صفحة " + pageNum)
+                        : ("صفحة " + pageNum);
+                ThakerStore.saveReadingProgress(LabActivity.this, assetToKey(htmlAsset), cleanTitle, sub, "html", htmlAsset, pageNum, pct);
+                if (unitId != null && !unitId.trim().isEmpty()) {
+                    int lvl = pct >= 70 ? 3 : (pct >= 25 ? 2 : 1);
+                    ThakerStore.setUnitMastery(LabActivity.this, unitId.trim(), Math.max(lvl, ThakerStore.getUnitMastery(LabActivity.this, unitId.trim(), 0)));
+                }
+            }
         }, "ThakerBridge");
 
-        String htmlAsset = getIntent().getStringExtra("html_asset");
-        if (htmlAsset == null || htmlAsset.isEmpty() || htmlAsset.contains("/") || htmlAsset.contains("..")) {
-            htmlAsset = "chem-lab-book.html";
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
+
+        StringBuilder url = new StringBuilder("file:///android_asset/").append(htmlAsset);
+        if (startPage > 0 || (startTab != null && !startTab.isEmpty())) {
+            url.append("#");
+            boolean needAmp = false;
+            if (startPage > 0) {
+                url.append("page=").append(startPage);
+                needAmp = true;
+            }
+            if (startTab != null && !startTab.isEmpty()) {
+                if (needAmp) url.append("&");
+                url.append("tab=").append(startTab);
+            }
         }
-        webView.loadUrl("file:///android_asset/" + htmlAsset);
+        webView.loadUrl(url.toString());
     }
 
-    private void returnToMain() {
-        Intent intent = new Intent(LabActivity.this, MainActivity.class);
-        intent.putExtra("no_auto_launch", true);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
-        finish();
+    private String assetToKey(String asset) {
+        if (asset.contains("thaker-interactive")) return "sci_p2";
+        if (asset.contains("science-9th")) return "sci_p1_lab";
+        if (asset.contains("math-9th")) return "math_lab";
+        if (asset.contains("physics-12th")) return "phys_12";
+        if (asset.contains("biology-12th")) return "bio_12";
+        return "chem_12";
     }
 
-    private void confirmExit() {
-        returnToMain();
+    private String getBookTitleForAsset(String asset) {
+        if (asset.contains("thaker-interactive")) return "العلوم - الجزء الثاني";
+        if (asset.contains("science-9th")) return "العلوم 3D - الصف التاسع";
+        if (asset.contains("math-9th")) return "الرياضيات 3D - الصف التاسع";
+        if (asset.contains("physics-12th")) return "الفيزياء - الثالث الثانوي";
+        if (asset.contains("biology-12th")) return "الأحياء - الثالث الثانوي";
+        return "الكيمياء - الثالث الثانوي";
     }
 
     @Override
     public void onBackPressed() {
-        returnToMain();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (webView != null) webView.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (webView != null) webView.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        if (webView != null) webView.destroy();
-        super.onDestroy();
+        if (webView != null && webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

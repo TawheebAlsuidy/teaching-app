@@ -2,152 +2,149 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/thakerBackground">
+    android:background="#E6EFEA"
+    android:layoutDirection="rtl">
 
-    <!-- Zoomable PDF Page Display -->
     <ImageView
         android:id="@+id/pdf_image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="matrix"
-        android:contentDescription="صفحة الكتاب" />
+        android:scaleType="matrix"/>
 
-    <!-- Loading Spinner -->
     <ProgressBar
         android:id="@+id/pdf_progress"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
-    <!-- Top Toolbar (Toggleable) -->
+    <!-- Top Emerald Floating Bar -->
     <LinearLayout
         android:id="@+id/top_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:orientation="horizontal"
-        android:background="@drawable/bar_bg"
+        android:layout_margin="10dp"
+        android:background="@drawable/viewer_bar_pill"
+        android:elevation="8dp"
         android:gravity="center_vertical"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <Button
             android:id="@+id/btn_back_viewer"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:text="⬅"
-            android:textColor="?attr/thakerTextPrimary"
-            android:background="@drawable/badge_soon"
-            android:textSize="16sp" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/pill_white_translucent"
+            android:text="→"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="8dp">
-
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp">
             <TextView
                 android:id="@+id/tv_viewer_book_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="عنوان الكتاب"
-                android:textColor="?attr/thakerTextPrimary"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:singleLine="true" />
-
+                android:singleLine="true"
+                android:text="الكتاب المدرسي"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tv_viewer_unit_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="الوحدة الحالية"
-                android:textColor="?attr/thakerPrimary"
-                android:textSize="11sp"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="الوحدة"
+                android:textColor="#A7F3D0"
+                android:textSize="11sp"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_open_unit_index"
             android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:text="📋 الفهرس"
-            android:textColor="?attr/thakerPrimary"
-            android:background="@drawable/badge_soon"
-            android:textSize="11sp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:layout_marginEnd="6dp" />
+            android:layout_height="36dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/pill_gold"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="الفهرس"
+            android:textColor="#92400E"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btn_reset_zoom"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:text="🔍"
-            android:textColor="?attr/thakerTextPrimary"
-            android:background="@drawable/badge_soon"
-            android:textSize="12sp" />
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/pill_white_translucent"
+            android:text="⌖"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
     </LinearLayout>
 
-    <!-- Bottom Toolbar: Prev, Next, Page Indicator & Scrubber -->
+    <!-- Bottom Page Scrubber Pill -->
     <LinearLayout
         android:id="@+id/bottom_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_dock_pill"
+        android:elevation="10dp"
         android:orientation="vertical"
-        android:background="@drawable/bar_bg"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="10dp">
+        android:padding="10dp">
 
         <SeekBar
             android:id="@+id/page_seekbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp" />
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
             <Button
                 android:id="@+id/btn_prev_page"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="◀ السابق"
-                android:textColor="?attr/thakerTextPrimary"
-                android:background="@drawable/btn_secondary"
+                android:layout_height="38dp"
+                android:background="@drawable/pill_mint"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:text="السابق"
+                android:textColor="#065F46"
                 android:textSize="12sp"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp" />
-
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/tv_page_indicator"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="صفحة 1 من 100"
+                android:gravity="center"
+                android:text="صفحة 1 من 1"
                 android:textColor="?attr/thakerTextPrimary"
                 android:textSize="13sp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
+                android:textStyle="bold"/>
             <Button
                 android:id="@+id/btn_next_page"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="التالي ▶"
-                android:textColor="?attr/thakerTextPrimary"
-                android:background="@drawable/btn_secondary"
+                android:layout_height="38dp"
+                android:background="@drawable/pill_emerald_btn"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:text="التالي"
+                android:textColor="#FFFFFF"
                 android:textSize="12sp"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp" />
+                android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

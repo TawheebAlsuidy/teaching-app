@@ -4,514 +4,519 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Switch;
 import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Calendar;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
-    private static final String PREFS_NAME = "thaker_app_prefs";
-    private static final String KEY_AUTO_LAUNCH = "auto_launch_lab";
-
-    private SharedPreferences prefs;
-    private LinearLayout containerHighSchool;
-    private LinearLayout containerMiddleSchool;
-    private Button tabHighSchool;
-    private Button tabMiddleSchool;
-    private TextView tvGradeLabel;
+    private String currentTab = "home";
+    private View pageHome, pageSubjects, pageLibrary, pageBookmarks, pageSettings;
+    private TextView tvGreeting, tvCountdown, tvResumeTitle, tvResumeSubtitle, tvResumePct, btnStreakPill;
+    private ProgressBar progResume;
+    private TextView chkTask1, chkTask2;
+    private LinearLayout homeSubjectsContainer, allSubjectsContainer, libraryContainer, bookmarksContainer, settingsContainer;
+    private float dp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ThemeUtil.apply(this);
         super.onCreate(savedInstanceState);
-
-        prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        boolean autoLaunch = prefs.getBoolean(KEY_AUTO_LAUNCH, false);
-
-        if (autoLaunch && !getIntent().getBooleanExtra("no_auto_launch", false)) {
-            Intent intent = new Intent(this, LabActivity.class);
-            startActivity(intent);
-        }
-
         setContentView(R.layout.activity_main);
+        dp = getResources().getDisplayMetrics().density;
 
-        containerHighSchool = findViewById(R.id.container_high_school);
-        containerMiddleSchool = findViewById(R.id.container_middle_school);
-        tabHighSchool = findViewById(R.id.tab_high_school);
-        tabMiddleSchool = findViewById(R.id.tab_middle_school);
-        tvGradeLabel = findViewById(R.id.tv_grade_label);
+        pageHome = findViewById(R.id.page_home);
+        pageSubjects = findViewById(R.id.page_subjects);
+        pageLibrary = findViewById(R.id.page_library);
+        pageBookmarks = findViewById(R.id.page_bookmarks);
+        pageSettings = findViewById(R.id.page_settings);
 
-        // Stage Switcher Tabs
-        tabHighSchool.setOnClickListener(new View.OnClickListener() {
+        tvGreeting = findViewById(R.id.tv_home_greeting);
+        tvCountdown = findViewById(R.id.tv_home_countdown);
+        tvResumeTitle = findViewById(R.id.tv_resume_title);
+        tvResumeSubtitle = findViewById(R.id.tv_resume_subtitle);
+        tvResumePct = findViewById(R.id.tv_resume_pct);
+        progResume = findViewById(R.id.prog_resume_bar);
+        btnStreakPill = findViewById(R.id.btn_home_streak_pill);
+
+        chkTask1 = findViewById(R.id.chk_task_1);
+        chkTask2 = findViewById(R.id.chk_task_2);
+
+        homeSubjectsContainer = findViewById(R.id.home_subjects_container);
+        allSubjectsContainer = findViewById(R.id.all_subjects_container);
+        libraryContainer = findViewById(R.id.library_container);
+        bookmarksContainer = findViewById(R.id.bookmarks_container);
+        settingsContainer = findViewById(R.id.settings_container);
+
+        View.OnClickListener openProgress = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switchToHighSchool();
+                startActivity(new Intent(MainActivity.this, ProgressActivity.class));
             }
-        });
+        };
+        findViewById(R.id.btn_home_avatar).setOnClickListener(openProgress);
+        findViewById(R.id.btn_home_progress_bell).setOnClickListener(openProgress);
+        btnStreakPill.setOnClickListener(openProgress);
 
-        tabMiddleSchool.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_resume_reading).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switchToMiddleSchool();
-            }
-        });
-
-        // Chem Lab 3D Launch
-        findViewById(R.id.btn_open_chem_lab).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LabActivity.class));
-            }
-        });
-
-        // Grade 12 Physics Interactive Textbook & 3D Lab
-        View cardPhysics = findViewById(R.id.card_physics);
-        if (cardPhysics != null) {
-            cardPhysics.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
-                    labIntent.putExtra("html_asset", "physics-12th-book.html");
-                    startActivity(labIntent);
-                }
-            });
-        }
-
-        // Grade 12 Biology Interactive Textbook & 3D Lab
-        View cardBiology = findViewById(R.id.card_biology);
-        if (cardBiology != null) {
-            cardBiology.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
-                    labIntent.putExtra("html_asset", "biology-12th-book.html");
-                    startActivity(labIntent);
-                }
-            });
-        }
-
-        // Next-Gen Intelligent Interactive Textbook Engine (Science P2)
-        View btnInteractiveEngine = findViewById(R.id.btn_open_sci9_interactive_engine);
-        if (btnInteractiveEngine != null) {
-            btnInteractiveEngine.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
-                    labIntent.putExtra("html_asset", "thaker-interactive-book.html");
-                    startActivity(labIntent);
-                }
-            });
-        }
-
-        // 9th Grade 3D Science Book & Laboratory
-        findViewById(R.id.btn_open_sci9_3d_book).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
-                labIntent.putExtra("html_asset", "science-9th-book.html");
-                startActivity(labIntent);
+                openLastRead();
             }
         });
 
-        // 9th Grade 3D Math Book & Laboratory
-        findViewById(R.id.btn_open_math9_3d_book).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.card_task_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
-                labIntent.putExtra("html_asset", "math-9th-book.html");
-                startActivity(labIntent);
+                boolean next = !ThakerStore.isTaskDone(MainActivity.this, 1);
+                ThakerStore.setTaskDone(MainActivity.this, 1, next);
+                if (next) ThakerStore.bumpStudyStreak(MainActivity.this);
+                refreshHomeHeaderAndTasks();
+            }
+        });
+        findViewById(R.id.card_task_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean next = !ThakerStore.isTaskDone(MainActivity.this, 2);
+                ThakerStore.setTaskDone(MainActivity.this, 2, next);
+                if (next) ThakerStore.bumpStudyStreak(MainActivity.this);
+                refreshHomeHeaderAndTasks();
             }
         });
 
-        // 9th Grade Interactive Science Lab (opens complete 3D Science Book & Lab)
-        findViewById(R.id.btn_open_sci9_lab).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_view_all_subjects).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent labIntent = new Intent(MainActivity.this, LabActivity.class);
-                labIntent.putExtra("html_asset", "science-9th-book.html");
-                startActivity(labIntent);
+                switchTab("subjects");
             }
         });
 
-        // Auto launch checkbox
-        Switch cb = findViewById(R.id.cb_auto_launch);
-        cb.setChecked(autoLaunch);
-        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                prefs.edit().putBoolean(KEY_AUTO_LAUNCH, isChecked).apply();
-            }
-        });
+        String reqTab = getIntent().getStringExtra("open_tab");
+        if (reqTab != null && !reqTab.isEmpty()) currentTab = reqTab;
+        refreshAllTabs();
+        switchTab(currentTab);
+    }
 
-        // About Button
-        findViewById(R.id.btn_about).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showAboutDialog();
-            }
-        });
-
-        setupMiddleSchoolButtons();
-
-        findViewById(R.id.btn_notifications).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showSimpleDialog("الإشعارات", "لا توجد إشعارات جديدة.");
-            }
-        });
-        findViewById(R.id.btn_profile).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showSimpleDialog("الملف الشخصي", "تطبيق ذاكر يعمل بالكامل دون اتصال بالإنترنت.");
-            }
-        });
-        findViewById(R.id.btn_theme).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ThemeUtil.toggle(MainActivity.this);
-            }
-        });
-        findViewById(R.id.nav_home).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNav(0);
-            }
-        });
-        findViewById(R.id.nav_subjects).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNav(1);
-                switchToMiddleSchool();
-            }
-        });
-        findViewById(R.id.nav_library).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNav(2);
-                showLibraryDialog();
-            }
-        });
-        findViewById(R.id.nav_favorites).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNav(3);
-                showSimpleDialog("المفضلة", getString(R.string.favorites_empty));
-            }
-        });
-        findViewById(R.id.nav_settings).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNav(4);
-                showThemeDialog();
-            }
-        });
-
-        setNav(0);
-        int stage = prefs.getInt(KEY_STAGE, 0);
-        if (stage == 1) {
-            switchToMiddleSchool();
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        String reqTab = intent.getStringExtra("open_tab");
+        if (reqTab != null && !reqTab.isEmpty()) {
+            switchTab(reqTab);
         }
     }
 
-    private static final String KEY_STAGE = "stage";
-
-    private void setNav(int active) {
-        TextView tvHome = findViewById(R.id.tv_nav_home);
-        if (tvHome != null) {
-            tvHome.setTextColor(active == 0 ? ThemeUtil.color(this, R.attr.thakerPrimary) : ThemeUtil.color(this, R.attr.thakerTextSecondary));
-        }
-        int[] otherIds = new int[]{R.id.nav_subjects, R.id.nav_library, R.id.nav_favorites, R.id.nav_settings};
-        int[] otherIndices = new int[]{1, 2, 3, 4};
-        for (int i = 0; i < otherIds.length; i++) {
-            Button b = findViewById(otherIds[i]);
-            if (b != null) {
-                boolean isCurrent = (active == otherIndices[i]);
-                b.setTextColor(isCurrent ? ThemeUtil.color(this, R.attr.thakerPrimary) : ThemeUtil.color(this, R.attr.thakerTextSecondary));
-            }
-        }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshAllTabs();
     }
 
-    private void showSimpleDialog(String title, String message) {
-        new AlertDialog.Builder(this).setTitle(title).setMessage(message).setPositiveButton("حسناً", null).show();
-    }
+    private void switchTab(String tab) {
+        currentTab = tab;
+        pageHome.setVisibility("home".equals(tab) ? View.VISIBLE : View.GONE);
+        pageSubjects.setVisibility("subjects".equals(tab) ? View.VISIBLE : View.GONE);
+        pageLibrary.setVisibility("library".equals(tab) ? View.VISIBLE : View.GONE);
+        pageBookmarks.setVisibility("bookmarks".equals(tab) ? View.VISIBLE : View.GONE);
+        pageSettings.setVisibility("settings".equals(tab) ? View.VISIBLE : View.GONE);
 
-    private void showThemeDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.theme_toggle);
-        builder.setItems(new CharSequence[]{getString(R.string.theme_light), getString(R.string.theme_dark)}, new DialogInterface.OnClickListener() {
+        NavBarHelper.setup(this, tab, new NavBarHelper.TabListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                ThemeUtil.setDark(MainActivity.this, which == 1);
-            }
-        });
-        builder.show();
-    }
-
-    private void showLibraryDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.library_title);
-        builder.setItems(new CharSequence[]{
-                getString(R.string.book_sci_interactive),
-                getString(R.string.book_physics_3d),
-                getString(R.string.book_biology_3d),
-                getString(R.string.chem_card_title),
-                getString(R.string.book_science_3d),
-                getString(R.string.book_math_3d)
-        }, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String asset = null;
-                if (which == 0) {
-                    asset = "thaker-interactive-book.html";
-                } else if (which == 1) {
-                    asset = "physics-12th-book.html";
-                } else if (which == 2) {
-                    asset = "biology-12th-book.html";
-                } else if (which == 3) {
-                    asset = "chem-lab-book.html";
-                } else if (which == 4) {
-                    asset = "science-9th-book.html";
-                } else if (which == 5) {
-                    asset = "math-9th-book.html";
-                }
-                Intent intent = new Intent(MainActivity.this, LabActivity.class);
-                if (asset != null) {
-                    intent.putExtra("html_asset", asset);
-                }
-                startActivity(intent);
-            }
-        });
-        builder.show();
-    }
-
-    private void switchToHighSchool() {
-        tabHighSchool.setBackgroundResource(R.drawable.tab_active);
-        tabHighSchool.setTextColor(0xFFFFFFFF);
-        tabMiddleSchool.setBackgroundResource(R.drawable.tab_inactive);
-        tabMiddleSchool.setTextColor(ThemeUtil.color(this, R.attr.thakerTextSecondary));
-        tvGradeLabel.setText(R.string.grade_12_title);
-        containerHighSchool.setVisibility(View.VISIBLE);
-        containerMiddleSchool.setVisibility(View.GONE);
-        prefs.edit().putInt(KEY_STAGE, 0).apply();
-    }
-
-    private void switchToMiddleSchool() {
-        tabMiddleSchool.setBackgroundResource(R.drawable.tab_active);
-        tabMiddleSchool.setTextColor(0xFFFFFFFF);
-        tabHighSchool.setBackgroundResource(R.drawable.tab_inactive);
-        tabHighSchool.setTextColor(ThemeUtil.color(this, R.attr.thakerTextSecondary));
-        tvGradeLabel.setText(R.string.grade_9_title);
-        containerHighSchool.setVisibility(View.GONE);
-        containerMiddleSchool.setVisibility(View.VISIBLE);
-        prefs.edit().putInt(KEY_STAGE, 1).apply();
-    }
-
-    private void setupMiddleSchoolButtons() {
-        // Science Part 1
-        findViewById(R.id.btn_read_sci_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBook("sci_p1", 0);
-            }
-        });
-        findViewById(R.id.btn_index_sci_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showUnitIndexDialog("sci_p1");
-            }
-        });
-        findViewById(R.id.btn_summary_sci_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSummary("sci_p1");
-            }
-        });
-        findViewById(R.id.btn_quiz_sci_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuiz("sci_p1");
-            }
-        });
-
-        // Science Part 2
-        findViewById(R.id.btn_read_sci_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBook("sci_p2", 0);
-            }
-        });
-        findViewById(R.id.btn_index_sci_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showUnitIndexDialog("sci_p2");
-            }
-        });
-        findViewById(R.id.btn_summary_sci_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSummary("sci_p2");
-            }
-        });
-        findViewById(R.id.btn_quiz_sci_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuiz("sci_p2");
-            }
-        });
-
-        // Math Part 1
-        findViewById(R.id.btn_read_math_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBook("math_p1", 0);
-            }
-        });
-        findViewById(R.id.btn_index_math_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showUnitIndexDialog("math_p1");
-            }
-        });
-        findViewById(R.id.btn_summary_math_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSummary("math_p1");
-            }
-        });
-        findViewById(R.id.btn_quiz_math_p1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuiz("math_p1");
-            }
-        });
-
-        // Math Part 2
-        findViewById(R.id.btn_read_math_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBook("math_p2", 0);
-            }
-        });
-        findViewById(R.id.btn_index_math_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showUnitIndexDialog("math_p2");
-            }
-        });
-        findViewById(R.id.btn_summary_math_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSummary("math_p2");
-            }
-        });
-        findViewById(R.id.btn_quiz_math_p2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuiz("math_p2");
-            }
-        });
-
-        // Comprehensive Exam (all 9th subjects)
-        findViewById(R.id.btn_exam_9th_all).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuiz("all_9th");
+            public void onTabSelected(String tabKey) {
+                switchTab(tabKey);
             }
         });
     }
 
-    private void openBook(String bookKey, int startPage) {
-        Intent intent = new Intent(this, BookViewerActivity.class);
-        intent.putExtra("book_key", bookKey);
-        intent.putExtra("start_page", startPage);
-        startActivity(intent);
+    private void refreshAllTabs() {
+        refreshHomeHeaderAndTasks();
+        buildHomeSubjectsGrid();
+        buildAllSubjectsTab();
+        buildLibraryTab();
+        buildBookmarksTab();
+        buildSettingsTab();
     }
 
-    private void openSummary(String tabKey) {
-        Intent intent = new Intent(this, SummaryActivity.class);
-        intent.putExtra("active_tab", tabKey);
-        startActivity(intent);
+    private void refreshHomeHeaderAndTasks() {
+        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        String salutation = (hour >= 4 && hour < 12) ? "صباح الخير يا " : "مساء الخير يا ";
+        tvGreeting.setText(salutation + ThakerStore.getStudentName(this));
+
+        String cert = ThakerStore.getStage(this) == 1 ? "امتحان الثانوية العامة" : "امتحان الشهادة الأساسية";
+        tvCountdown.setText("📅 باقي " + ThakerStore.getExamDaysLeft(this) + " يوماً على " + cert);
+
+        tvResumeTitle.setText(ThakerStore.getLastTitle(this));
+        tvResumeSubtitle.setText(ThakerStore.getLastSubtitle(this));
+        int pct = ThakerStore.getLastPct(this);
+        progResume.setProgress(pct);
+        tvResumePct.setText(pct + "% من الجزء");
+
+        btnStreakPill.setText("🔥 " + ThakerStore.getStreakDays(this) + " من " + ThakerStore.getWeeklyGoal(this) + " أيام");
+
+        boolean t1 = ThakerStore.isTaskDone(this, 1);
+        chkTask1.setBackgroundResource(t1 ? R.drawable.pill_mint : R.drawable.pill_gray);
+        chkTask1.setText(t1 ? "✓" : "");
+
+        boolean t2 = ThakerStore.isTaskDone(this, 2);
+        chkTask2.setBackgroundResource(t2 ? R.drawable.pill_mint : R.drawable.pill_gray);
+        chkTask2.setText(t2 ? "✓" : "");
     }
 
-    private void openQuiz(String subjectKey) {
-        Intent intent = new Intent(this, QuizActivity.class);
-        intent.putExtra("quiz_subject", subjectKey);
-        startActivity(intent);
-    }
-
-    private void showUnitIndexDialog(final String bookKey) {
-        final String[] units;
-        final int[] pages;
-        String title;
-
-        if ("sci_p1".equals(bookKey)) {
-            title = "فهرس وحدات العلوم (الجزء الأول)";
-            units = new String[]{
-                "الوحدة 1: المحاليل وطرق التعبير عنها (ص 1)",
-                "الوحدة 2: التفاعلات الكيميائية في حياتنا (ص 21)",
-                "الوحدة 3: الصوت وانتقاله وتطبيقاته (ص 47)",
-                "الوحدة 4: الضوء والرؤية والمرايا والعدسات (ص 67)",
-                "الوحدة 5: الإخراج في الكائنات الحية (ص 99)",
-                "الوحدة 6: التكاثر في الكائنات الحية (ص 125)",
-                "الوحدة 7: أمراض الجهازين البولي والتناسلي (ص 151)"
-            };
-            pages = new int[]{1, 21, 47, 67, 99, 125, 151};
-        } else if ("sci_p2".equals(bookKey)) {
-            title = "فهرس وحدات العلوم (الجزء الثاني)";
-            units = new String[]{
-                "الوحدة 8: الكهرباء الساكنة والتيار وقانون أوم (ص 1)",
-                "الوحدة 9: المغناطيسية والكهرومغناطيسية (ص 25)",
-                "الوحدة 10: الطاقة ومصادرها وتحولاتها (ص 55)",
-                "الوحدة 11: البيئة والتوازن البيئي والتلوث (ص 81)",
-                "الوحدة 12: علوم الأرض والمعادن والطبقات (ص 105)",
-                "الوحدة 13: الفضاء والكون والنظام الشمسي (ص 131)"
-            };
-            pages = new int[]{1, 25, 55, 81, 105, 131};
-        } else if ("math_p1".equals(bookKey)) {
-            title = "فهرس وحدات الرياضيات (الجزء الأول)";
-            units = new String[]{
-                "الوحدة 1: المجموعات والعلاقات والتكافؤ (ص 7)",
-                "الوحدة 2: التطبيقات وأنواعها (ص 32)",
-                "الوحدة 3: مجموعة الأعداد الحقيقية R (ص 40)",
-                "الوحدة 4: تحليل المقادير الجبرية (ص 61)",
-                "الوحدة 5: الكسور الجبرية والعمليات عليها (ص 94)",
-                "تمارين عامة ومسائل وزارية شاملة (ص 160)"
-            };
-            pages = new int[]{7, 32, 40, 61, 94, 160};
+    private void openLastRead() {
+        String type = ThakerStore.getLastType(this);
+        String target = ThakerStore.getLastAsset(this);
+        int pg = ThakerStore.getLastPage(this);
+        if ("pdf".equals(type)) {
+            Intent i = new Intent(this, BookViewerActivity.class);
+            i.putExtra("book_key", target);
+            i.putExtra("start_page", Math.max(0, pg - 1));
+            startActivity(i);
         } else {
-            title = "فهرس وحدات الرياضيات (الجزء الثاني)";
-            units = new String[]{
-                "الوحدة 5: الهندسة المستوية (الدائرة ونظرياتها) (ص 5)",
-                "الوحدة 6: حساب المثلثات والزوايا الحادة (ص 45)",
-                "الوحدة 7: التحويلات الهندسية والتكبير (ص 80)",
-                "الوحدة 8: الإحصاء والاحتمالات (ص 111)"
-            };
-            pages = new int[]{5, 45, 80, 111};
+            Intent i = new Intent(this, LabActivity.class);
+            i.putExtra("html_asset", target);
+            i.putExtra("start_page", pg);
+            i.putExtra("start_tab", "reader");
+            startActivity(i);
         }
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(title);
-        builder.setItems(units, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                openBook(bookKey, pages[which] - 1);
-            }
-        });
-        builder.setNegativeButton("إلغاء", null);
-        builder.show();
     }
 
-    private void showAboutDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("عن ذاكر");
-        builder.setMessage("كتاب ومعمل للصف التاسع والثالث الثانوي.\n\nتقرأ المنهج، وتجرّب التفاعلات بثلاثة أبعاد، وتتدرب على الأسئلة الوزارية. كل شيء يعمل دون إنترنت.\n\nتعلّم بوضوح.");
-        builder.setPositiveButton("حسناً", null);
-        builder.show();
+    private void buildHomeSubjectsGrid() {
+        homeSubjectsContainer.removeAllViews();
+        if (ThakerStore.getStage(this) == 0) {
+            LinearLayout row = makeRow();
+            row.addView(makeSubjectTile("العلوم", "جزءان · تفاعلي 3D", R.drawable.ic_subj_science, R.drawable.card_mint_tint, "science", true));
+            row.addView(makeSpace(10));
+            row.addView(makeSubjectTile("الرياضيات", "جزءان · هندسة وجبر", R.drawable.ic_subj_math, R.drawable.card_cream_tint, "math", true));
+            homeSubjectsContainer.addView(row);
+        } else {
+            LinearLayout row1 = makeRow();
+            row1.addView(makeSubjectTile("الكيمياء 3D", "الثالث الثانوي", R.drawable.ic_subj_chem, R.drawable.card_mint_tint, "chemistry", true));
+            row1.addView(makeSpace(10));
+            row1.addView(makeSubjectTile("الفيزياء 3D", "منهج تفاعلي", R.drawable.ic_subj_physics, R.drawable.card_cream_tint, "physics", true));
+            homeSubjectsContainer.addView(row1);
+
+            LinearLayout row2 = makeRow();
+            row2.setPadding(0, (int) (10 * dp), 0, 0);
+            row2.addView(makeSubjectTile("الأحياء 3D", "منهج تفاعلي", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
+            row2.addView(makeSpace(10));
+            row2.addView(makeSubjectTile("التاسع (العلوم)", "استعراض الإعدادية", R.drawable.ic_subj_science, R.drawable.card_white_rounded, "science", true));
+            homeSubjectsContainer.addView(row2);
+        }
+    }
+
+    private void buildAllSubjectsTab() {
+        allSubjectsContainer.removeAllViews();
+        addSectionTitle(allSubjectsContainer, "📚 موادي الدراسية");
+        addMutedSub(allSubjectsContainer, "اختر أي مادة لفتح كتبها وملخصاتها واختباراتها");
+
+        addSubSectionLabel(allSubjectsContainer, "المرحلة الإعدادية (الصف التاسع)");
+        LinearLayout r1 = makeRow();
+        r1.addView(makeSubjectTile("العلوم", "15 وحدة · تفاعلي + PDF", R.drawable.ic_subj_science, R.drawable.card_mint_tint, "science", true));
+        r1.addView(makeSpace(10));
+        r1.addView(makeSubjectTile("الرياضيات", "الجبر + الدائرة والمثلثات", R.drawable.ic_subj_math, R.drawable.card_cream_tint, "math", true));
+        allSubjectsContainer.addView(r1);
+
+        addSubSectionLabel(allSubjectsContainer, "المرحلة الثانوية (الثالث الثانوي العلمي)");
+        LinearLayout r2 = makeRow();
+        r2.addView(makeSubjectTile("الكيمياء 3D", "مختبر العناصر والتفاعلات", R.drawable.ic_subj_chem, R.drawable.card_mint_tint, "chemistry", true));
+        r2.addView(makeSpace(10));
+        r2.addView(makeSubjectTile("الفيزياء 3D", "214 صفحة تفاعلية", R.drawable.ic_subj_physics, R.drawable.card_cream_tint, "physics", true));
+        allSubjectsContainer.addView(r2);
+
+        LinearLayout r3 = makeRow();
+        r3.setPadding(0, (int) (10 * dp), 0, 0);
+        r3.addView(makeSubjectTile("الأحياء 3D", "218 صفحة تفاعلية", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
+        allSubjectsContainer.addView(r3);
+    }
+
+    private void buildLibraryTab() {
+        libraryContainer.removeAllViews();
+        addSectionTitle(libraryContainer, "📖 المكتبة الشاملة");
+        addMutedSub(libraryContainer, "جميع الكتب التفاعلية 3D والملفات الرسمية بلا إنترنت");
+
+        LinearLayout progBanner = makeListCard("📊 تقدمي وخريطة الإتقان", "تابع هدفك الأسبوعي، وحداتك المتقنة، وأخطاءك للمراجعة", R.drawable.card_mint_tint);
+        progBanner.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) { startActivity(new Intent(MainActivity.this, ProgressActivity.class)); }
+        });
+        libraryContainer.addView(progBanner);
+
+        addSubSectionLabel(libraryContainer, "الكتب التفاعلية المطوّرة 3D (إصدار 2.0)");
+        addHtmlBookItem("🧪 العلوم 9 - الجزء الثاني التفاعلي (148 صفحة)", "شروح مفصلة، تجارب 3D متحركة، ملخصات واختبارات", "thaker-interactive-book.html");
+        addHtmlBookItem("⚡ الفيزياء 12 التفاعلي (214 صفحة)", "كمية التحرك، التيار المتردد، الذرة والفيزياء النووية", "physics-12th-book.html");
+        addHtmlBookItem("🧬 الأحياء 12 التفاعلي (218 صفحة)", "الجهاز العصبي، الهرمونات، الوراثة وتضاعف DNA", "biology-12th-book.html");
+        addHtmlBookItem("⚗️ مختبر الكيمياء 3D - الثالث الثانوي", "معمل كيمياء ثلاثي الأبعاد بالكامل", "chem-lab-book.html");
+        addHtmlBookItem("🔬 المعمل التفاعلي 3D لعلوم التاسع", "13 درساً وتجربة علمية ثلاثية الأبعاد", "science-9th-book.html");
+        addHtmlBookItem("📐 كتاب الرياضيات التفاعلي 3D (التاسع)", "نماذج هندسية تفاعلية للمبرهنات والدائرة", "math-9th-book.html");
+
+        addSubSectionLabel(libraryContainer, "الكتب المدرسية الرسمية الكاملة (PDF)");
+        addPdfBookItem("📘 العلوم 9 - الجزء الأول (PDF الرسمي)", "sci_p1");
+        addPdfBookItem("📗 العلوم 9 - الجزء الثاني (PDF الرسمي)", "sci_p2");
+        addPdfBookItem("📙 الرياضيات 9 - الجزء الأول (PDF الرسمي)", "math_p1");
+        addPdfBookItem("📕 الرياضيات 9 - الجزء الثاني (PDF الرسمي)", "math_p2");
+    }
+
+    private void buildBookmarksTab() {
+        bookmarksContainer.removeAllViews();
+        addSectionTitle(bookmarksContainer, "⭐ المفضلة");
+        addMutedSub(bookmarksContainer, "الدروس والملخصات التي حفظتها للوصول السريع");
+
+        List<String> list = ThakerStore.getBookmarks(this);
+        if (list.isEmpty()) {
+            LinearLayout empty = makeListCard("لا توجد عناصر محفوظة بعد", "اضغط على زر (⭐ احفظ) في صفحة أي ملخص أو كتاب لإضافتها هنا.", R.drawable.card_white_rounded);
+            empty.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this, SummaryActivity.class);
+                    i.putExtra("summary_subject", "science");
+                    startActivity(i);
+                }
+            });
+            bookmarksContainer.addView(empty);
+        } else {
+            for (String item : list) {
+                final String[] parts = item.split("\\|");
+                String label = parts.length > 0 ? parts[0] : item;
+                final String kind = parts.length > 1 ? parts[1] : "summary";
+                final String target = parts.length > 2 ? parts[2] : "science";
+                LinearLayout card = makeListCard("⭐ " + label, "اضغط للفتح مباشرة", R.drawable.card_white_rounded);
+                card.setOnClickListener(new View.OnClickListener() {
+                    @Override public void onClick(View v) {
+                        if ("html".equals(kind)) {
+                            Intent i = new Intent(MainActivity.this, LabActivity.class);
+                            i.putExtra("html_asset", target);
+                            startActivity(i);
+                        } else {
+                            Intent i = new Intent(MainActivity.this, SummaryActivity.class);
+                            i.putExtra("summary_subject", target);
+                            startActivity(i);
+                        }
+                    }
+                });
+                bookmarksContainer.addView(card);
+            }
+        }
+    }
+
+    private void buildSettingsTab() {
+        settingsContainer.removeAllViews();
+        addSectionTitle(settingsContainer, "⚙️ الإعدادات");
+        addMutedSub(settingsContainer, "تخصيص الحساب الدراسي والمظهر");
+
+        LinearLayout profCard = makeListCard("👤 الملف الشخصي: " + ThakerStore.getStudentName(this),
+            ThakerStore.getGradeLabel(this) + " · متبقي " + ThakerStore.getExamDaysLeft(this) + " يوماً للامتحان", R.drawable.card_white_rounded);
+        profCard.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                final EditText et = new EditText(MainActivity.this);
+                et.setText(ThakerStore.getStudentName(MainActivity.this));
+                new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("تعديل اسم الطالب")
+                    .setView(et)
+                    .setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+                        @Override public void onClick(DialogInterface dialog, int which) {
+                            ThakerStore.setStudentName(MainActivity.this, et.getText().toString());
+                            refreshAllTabs();
+                        }
+                    }).setNegativeButton("إلغاء", null).show();
+            }
+        });
+        settingsContainer.addView(profCard);
+
+        LinearLayout themeRow = new LinearLayout(this);
+        themeRow.setBackgroundResource(R.drawable.card_white_rounded);
+        themeRow.setGravity(Gravity.CENTER_VERTICAL);
+        themeRow.setOrientation(LinearLayout.HORIZONTAL);
+        int p = (int) (14 * dp);
+        themeRow.setPadding(p, p, p, p);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(-1, -2);
+        lp.topMargin = (int) (10 * dp);
+        themeRow.setLayoutParams(lp);
+        TextView tvTheme = new TextView(this);
+        tvTheme.setText("🌙 الوضع الليلي الداكن");
+        tvTheme.setTextColor(ThakerStore.isDarkMode(this) ? 0xFFECFAF2 : 0xFF0F291E);
+        tvTheme.setTextSize(15);
+        tvTheme.setLayoutParams(new LinearLayout.LayoutParams(0, -2, 1f));
+        Switch sw = new Switch(this);
+        sw.setChecked(ThakerStore.isDarkMode(this));
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ThemeUtil.toggleDarkMode(MainActivity.this, isChecked);
+            }
+        });
+        themeRow.addView(tvTheme);
+        themeRow.addView(sw);
+        settingsContainer.addView(themeRow);
+
+        LinearLayout stageCard = makeListCard("🎓 تغيير المرحلة والصف والهدف", "إعادة فتح شاشة الإعداد الترحيبية", R.drawable.card_white_rounded);
+        stageCard.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, OnboardingActivity.class));
+            }
+        });
+        settingsContainer.addView(stageCard);
+
+        LinearLayout resetCard = makeListCard("🔄 إعادة تعيين التقدم والأخطاء", "مسح إحصائيات المذاكرة الحالية والبدء من جديد", R.drawable.card_white_rounded);
+        resetCard.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("تأكيد المسح")
+                    .setMessage("هل تريد إعادة تعيين جميع نقاط التقدم وسجل الأخطاء؟")
+                    .setPositiveButton("نعم، امسح", new DialogInterface.OnClickListener() {
+                        @Override public void onClick(DialogInterface dialog, int which) {
+                            ThakerStore.resetAll(MainActivity.this);
+                            ThakerStore.setOnboarded(MainActivity.this, true);
+                            refreshAllTabs();
+                            Toast.makeText(MainActivity.this, "تمت إعادة التعيين", Toast.LENGTH_SHORT).show();
+                        }
+                    }).setNegativeButton("إلغاء", null).show();
+            }
+        });
+        settingsContainer.addView(resetCard);
+
+        LinearLayout about = makeListCard("💚 عن تطبيق ذاكر (الإصدار 2.0)", "تطبيق تعليمي يمني شامل وتفاعلي ثلاثي الأبعاد يعمل بالكامل بلا إنترنت.", R.drawable.card_mint_tint);
+        settingsContainer.addView(about);
+    }
+
+    private LinearLayout makeRow() {
+        LinearLayout r = new LinearLayout(this);
+        r.setOrientation(LinearLayout.HORIZONTAL);
+        return r;
+    }
+
+    private View makeSpace(int widthDp) {
+        View v = new View(this);
+        v.setLayoutParams(new LinearLayout.LayoutParams((int) (widthDp * dp), 1));
+        return v;
+    }
+
+    private LinearLayout makeSubjectTile(String title, String sub, int iconRes, int bgRes, final String subjectKey, boolean weighted) {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        card.setGravity(Gravity.CENTER_HORIZONTAL);
+        card.setBackgroundResource(bgRes);
+        card.setElevation(2 * dp);
+        int pad = (int) (14 * dp);
+        card.setPadding(pad, pad, pad, pad);
+        card.setLayoutParams(weighted ? new LinearLayout.LayoutParams(0, -2, 1f) : new LinearLayout.LayoutParams(-1, -2));
+
+        ImageView iv = new ImageView(this);
+        int sz = (int) (56 * dp);
+        iv.setLayoutParams(new LinearLayout.LayoutParams(sz, sz));
+        iv.setImageResource(iconRes);
+        card.addView(iv);
+
+        TextView tvT = new TextView(this);
+        tvT.setText(title);
+        tvT.setTextColor(ThakerStore.isDarkMode(this) ? 0xFFECFAF2 : 0xFF0F291E);
+        tvT.setTextSize(16);
+        tvT.setGravity(Gravity.CENTER);
+        tvT.setPadding(0, (int) (8 * dp), 0, 0);
+        tvT.getPaint().setFakeBoldText(true);
+        card.addView(tvT);
+
+        TextView tvS = new TextView(this);
+        tvS.setText(sub);
+        tvS.setTextColor(ThakerStore.isDarkMode(this) ? 0xFF9BC4B0 : 0xFF5A7267);
+        tvS.setTextSize(11);
+        tvS.setGravity(Gravity.CENTER);
+        tvS.setPadding(0, (int) (2 * dp), 0, 0);
+        card.addView(tvS);
+
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SubjectActivity.class);
+                i.putExtra("subject_key", subjectKey);
+                startActivity(i);
+            }
+        });
+        return card;
+    }
+
+    private void addHtmlBookItem(String title, String sub, final String assetName) {
+        LinearLayout c = makeListCard(title, sub, R.drawable.card_white_rounded);
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, LabActivity.class);
+                i.putExtra("html_asset", assetName);
+                startActivity(i);
+            }
+        });
+        libraryContainer.addView(c);
+    }
+
+    private void addPdfBookItem(String title, final String bookKey) {
+        LinearLayout c = makeListCard(title, "عرض فوري بلا إنترنت مع تقريب وفهرس وحدات", R.drawable.card_white_rounded);
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, BookViewerActivity.class);
+                i.putExtra("book_key", bookKey);
+                startActivity(i);
+            }
+        });
+        libraryContainer.addView(c);
+    }
+
+    private LinearLayout makeListCard(String title, String sub, int bgRes) {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        card.setBackgroundResource(bgRes);
+        card.setElevation(2 * dp);
+        int p = (int) (14 * dp);
+        card.setPadding(p, p, p, p);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(-1, -2);
+        lp.topMargin = (int) (10 * dp);
+        card.setLayoutParams(lp);
+
+        TextView t = new TextView(this);
+        t.setText(title);
+        t.setTextColor(ThakerStore.isDarkMode(this) ? 0xFFECFAF2 : 0xFF0F291E);
+        t.setTextSize(15);
+        t.getPaint().setFakeBoldText(true);
+        card.addView(t);
+
+        TextView s = new TextView(this);
+        s.setText(sub);
+        s.setTextColor(ThakerStore.isDarkMode(this) ? 0xFF9BC4B0 : 0xFF5A7267);
+        s.setTextSize(12);
+        s.setPadding(0, (int) (3 * dp), 0, 0);
+        card.addView(s);
+        return card;
+    }
+
+    private void addSectionTitle(LinearLayout parent, String text) {
+        TextView t = new TextView(this);
+        t.setText(text);
+        t.setTextColor(ThakerStore.isDarkMode(this) ? 0xFFECFAF2 : 0xFF0F291E);
+        t.setTextSize(22);
+        t.getPaint().setFakeBoldText(true);
+        parent.addView(t);
+    }
+
+    private void addMutedSub(LinearLayout parent, String text) {
+        TextView t = new TextView(this);
+        t.setText(text);
+        t.setTextColor(ThakerStore.isDarkMode(this) ? 0xFF9BC4B0 : 0xFF5A7267);
+        t.setTextSize(13);
+        t.setPadding(0, (int) (2 * dp), 0, (int) (8 * dp));
+        parent.addView(t);
+    }
+
+    private void addSubSectionLabel(LinearLayout parent, String text) {
+        TextView t = new TextView(this);
+        t.setText(text);
+        t.setTextColor(0xFF059669);
+        t.setTextSize(14);
+        t.getPaint().setFakeBoldText(true);
+        t.setPadding(0, (int) (16 * dp), 0, (int) (8 * dp));
+        parent.addView(t);
     }
 }

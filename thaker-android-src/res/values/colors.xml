@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Light Mode (Exact match to prototipe.for.image.png) -->
-    <color name="light_background">#F5FAF7</color>
-    <color name="light_surface">#FFFFFF</color>
-    <color name="light_surface_elevated">#FFFFFF</color>
-    <color name="light_surface_soft">#EDF8F2</color>
-    <color name="light_text_primary">#0F172A</color>
-    <color name="light_text_secondary">#64748B</color>
-    <color name="light_border">#E2F0E7</color>
-    <color name="light_primary">#00A859</color>
-    <color name="light_primary_dark">#008C4A</color>
-    <color name="light_primary_light">#E8F8F0</color>
-    <color name="light_disabled">#CBD5E1</color>
-    <color name="light_success">#059669</color>
-    <color name="light_warning">#F59E0B</color>
-    <color name="light_error">#EF4444</color>
-    <color name="light_physics">#0284C7</color>
-    <color name="light_biology">#9333EA</color>
+    <color name="emerald_deep">#064E3B</color>
+    <color name="emerald_mid">#047857</color>
+    <color name="emerald_action">#059669</color>
+    <color name="mint_canvas">#F2F7F4</color>
+    <color name="mint_pill_bg">#D1FAE5</color>
+    <color name="mint_pill_text">#065F46</color>
+    <color name="gold_pill_bg">#FEF3C7</color>
+    <color name="gold_pill_text">#92400E</color>
+    <color name="amber_accent">#F59E0B</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="card_cream">#FFFBEB</color>
+    <color name="stroke_soft">#DCE8E0</color>
+    <color name="text_dark">#0F291E</color>
+    <color name="text_muted">#5A7267</color>
 
-    <!-- Dark Mode -->
-    <color name="dark_background">#0B151C</color>
-    <color name="dark_surface">#12242E</color>
-    <color name="dark_surface_elevated">#182F3B</color>
-    <color name="dark_surface_soft">#1A3D36</color>
-    <color name="dark_text_primary">#F8FAFC</color>
-    <color name="dark_text_secondary">#94A3B8</color>
-    <color name="dark_border">#244852</color>
-    <color name="dark_primary">#00D678</color>
-    <color name="dark_primary_dark">#00A859</color>
-    <color name="dark_primary_light">#1A453B</color>
-    <color name="dark_disabled">#334D55</color>
-    <color name="dark_success">#10B981</color>
-    <color name="dark_warning">#FBBF24</color>
-    <color name="dark_error">#F87171</color>
-    <color name="dark_physics">#38BDF8</color>
-    <color name="dark_biology">#C084FC</color>
+    <color name="dark_canvas">#0A1410</color>
+    <color name="dark_card">#11221B</color>
+    <color name="dark_card_alt">#162C23</color>
+    <color name="dark_stroke">#244537</color>
+    <color name="dark_text">#ECFAF2</color>
+    <color name="dark_text_muted">#9BC4B0</color>
 </resources>

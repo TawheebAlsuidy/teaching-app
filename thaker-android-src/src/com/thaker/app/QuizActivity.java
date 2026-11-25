@@ -3,10 +3,12 @@ package com.thaker.app;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,34 +17,35 @@ import java.util.List;
 public class QuizActivity extends Activity {
 
     public static class Question {
-        String text;
+        String id, unitBadge, text, explanation, reviewAsset;
         String[] options;
-        int correctIdx;
-        String explanation;
+        int correctIdx, reviewPage;
 
-        public Question(String text, String[] options, int correctIdx, String explanation) {
+        public Question(String id, String unitBadge, String text, String[] options, int correctIdx,
+                        String explanation, String reviewAsset, int reviewPage) {
+            this.id = id;
+            this.unitBadge = unitBadge;
             this.text = text;
             this.options = options;
             this.correctIdx = correctIdx;
             this.explanation = explanation;
+            this.reviewAsset = reviewAsset;
+            this.reviewPage = reviewPage;
         }
     }
 
-    private String quizSubject = "sci_p1";
-    private List<Question> questions = new ArrayList<Question>();
+    private String quizSubject = "sci_p2";
+    private boolean reviewWrongOnly = false;
+    private final List<Question> questions = new ArrayList<Question>();
     private int curIndex = 0;
     private int score = 0;
     private boolean answered = false;
 
-    private TextView tvSubject;
-    private TextView tvProgress;
-    private TextView tvScoreTop;
-    private TextView tvQuestion;
-    private Button[] btnOpts = new Button[4];
+    private TextView tvSubject, tvProgress, tvScoreTop, tvUnitBadge, tvQuestion, tvExplainHeader, tvExplainBody;
+    private ProgressBar progQuizBar;
+    private final Button[] btnOpts = new Button[4];
     private LinearLayout cardExplain;
-    private TextView tvExplainHeader;
-    private TextView tvExplainBody;
-    private Button btnNext;
+    private Button btnNext, btnReviewPage, btnTryLab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +53,16 @@ public class QuizActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        quizSubject = getIntent().getStringExtra("quiz_subject");
-        if (quizSubject == null) quizSubject = "sci_p1";
+        String sub = getIntent().getStringExtra("quiz_subject");
+        if (sub != null && !sub.isEmpty()) quizSubject = sub;
+        reviewWrongOnly = getIntent().getBooleanExtra("review_wrong", false);
 
         tvSubject = findViewById(R.id.tv_quiz_subject);
         tvProgress = findViewById(R.id.tv_quiz_progress);
         tvScoreTop = findViewById(R.id.tv_quiz_score_top);
+        tvUnitBadge = findViewById(R.id.tv_quiz_unit_badge);
         tvQuestion = findViewById(R.id.tv_question_text);
+        progQuizBar = findViewById(R.id.prog_quiz_bar);
 
         btnOpts[0] = findViewById(R.id.btn_opt_0);
         btnOpts[1] = findViewById(R.id.btn_opt_1);
@@ -66,12 +72,25 @@ public class QuizActivity extends Activity {
         cardExplain = findViewById(R.id.card_explanation);
         tvExplainHeader = findViewById(R.id.tv_explain_header);
         tvExplainBody = findViewById(R.id.tv_explain_body);
+        btnReviewPage = findViewById(R.id.btn_quiz_review_page);
+        btnTryLab = findViewById(R.id.btn_quiz_try_lab);
         btnNext = findViewById(R.id.btn_quiz_next);
 
         findViewById(R.id.btn_quiz_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
+            @Override public void onClick(View v) { finish(); }
+        });
+
+        for (int i = 0; i < 4; i++) {
+            final int idx = i;
+            btnOpts[i].setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) { handleAnswer(idx); }
+            });
+        }
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                curIndex++;
+                displayCurrentQuestion();
             }
         });
 
@@ -79,90 +98,104 @@ public class QuizActivity extends Activity {
         displayCurrentQuestion();
     }
 
+    private List<Question> buildAllQuestions() {
+        List<Question> bank = new ArrayList<Question>();
+        bank.add(new Question("sp2_1", "سهل · الوحدة 10: الهالوجينات",
+            "ما الخاصية المشتركة بين جميع عناصر الهالوجينات (المجموعة 7A) في الجدول الدوري؟",
+            new String[]{"لها 7 إلكترونات في المدار الأخير وتميل لاكتساب إلكترون", "غازات خاملة لا تتفاعل إطلاقاً", "فلزات قلوية موصلة جيدة جداً للكهرباء", "درجة انصهارها أعلى من الحديد"}, 0,
+            "تمتلك الهالوجينات 7 إلكترونات تكافؤ فتسعى بقوة لاكتساب إلكترون واحد للوصول للاستقرار.", "thaker-interactive-book.html", 27));
+        bank.add(new Question("sp2_2", "متوسط · تحضير الكلور",
+            "عند تسخين ثاني أكسيد المنغنيز (MnO₂) مع حمض الهيدروكلوريك المركز يتصاعد غاز:",
+            new String[]{"الهيدروجين", "الكلور الأصفر المخضر", "الأكسجين", "النيتروجين"}, 1,
+            "MnO₂ + 4HCl → MnCl₂ + 2H₂O + Cl₂↑ ويُجمع غاز الكلور بإزاحة الهواء لأعلى.", "thaker-interactive-book.html", 31));
+        bank.add(new Question("sp2_3", "سهل · الوحدة 11: خواص الأجسام",
+            "السبب الفيزيائي لقدرة بعض الحشرات الخفيفة على المشي فوق سطح الماء دون أن تغوص هو:",
+            new String[]{"ظاهرة التوتر السطحي", "انخفاض كثافة الهواء", "القوة النووية", "ضعف الجاذبية"}, 0,
+            "تجذب جزيئات سطح السائل بعضها البعض للداخل فتشكّل طبقة تشبه الغشاء المشدود.", "thaker-interactive-book.html", 53));
+        bank.add(new Question("sp2_4", "متوسط · الوحدة 12: الضغط والموائع",
+            "إذا ضاعفنا عمق نقطة داخل سائل ساكن متجانس فإن ضغط السائل عند تلك النقطة:",
+            new String[]{"يبقى ثابتاً", "يقل إلى النصف", "يتضاعف", "ينعدم"}, 2,
+            "ضغط السائل يتناسب طردياً مع العمق حسب العلاقة: ض = ث × جـ × ل.", "thaker-interactive-book.html", 69));
+        bank.add(new Question("sp2_5", "سهل · الوحدة 16: الوراثة ومندل",
+            "إذا تزاوج نباتا بازلاء كلاهما طويل الساق هجين (Tt × Tt)، فنسبة النباتات قصيرة الساق في الجيل الناتج هي:",
+            new String[]{"25% (1 من 4)", "50%", "75%", "100%"}, 0,
+            "ينتج من التزاوج: TT , Tt , Tt , tt فتكون نسبة المتنحي (tt) 1 إلى 3 (25%).", "thaker-interactive-book.html", 136));
+
+        bank.add(new Question("sp1_1", "سهل · المحاليل",
+            "المحلول الذي لا يستطيع إذابة أي كمية إضافية من المذاب عند درجة حرارة معينة يُسمى:",
+            new String[]{"المحلول غير المشبع", "المحلول المشبع", "المحلول المخفف", "المعلق"}, 1,
+            "يصل المحلول للتشبع عندما تتوازن سرعة الذوبان مع سرعة الترسيب عند ثبوت الحرارة.", "science-9th-book.html", 1));
+        bank.add(new Question("sp1_2", "سهل · الضوء والرؤية",
+            "المرآة الكروية التي تُكوّن دائماً صورة تقديرية مصغرة ومعتدلة وتوضع على جانبي السيارة هي:",
+            new String[]{"المرآة المقعرة", "المرآة المحدبة", "المرآة المستوية", "العدسة المحدبة"}, 1,
+            "المرآة المحدبة تفرق الأشعة فتوسّع مجال الرؤية خلف السائق.", "science-9th-book.html", 1));
+        bank.add(new Question("sp1_3", "متوسط · الإخراج",
+            "الوحدة الوظيفية الأساسية لترشيح الدم وتكوين البول في كلية الإنسان هي:",
+            new String[]{"الحالب", "النفرون (الأنبوبة البولية)", "المثانة", "حوض الكلية"}, 1,
+            "تضم كل كلية قرابة مليون نفرون تقوم بترشيح الدم واستعادة المواد المفيدة.", "science-9th-book.html", 1));
+
+        bank.add(new Question("mp1_1", "سهل · التحليل الجبري",
+            "تحليل المقدار الجبري (س² − 25) تحليلاً كاملاً يساوي:",
+            new String[]{"(س − 5)(س − 5)", "(س + 5)(س − 5)", "(س + 25)(س − 1)", "س(س − 25)"}, 1,
+            "فرق بين مربعين: أ² − ب² = (أ − ب)(أ + ب).", "math-9th-book.html", 1));
+        bank.add(new Question("mp1_2", "متوسط · مجموع المكعبين",
+            "تحليل المقدار (س³ + 8) يساوي:",
+            new String[]{"(س + 2)(س² − 2س + 4)", "(س + 2)(س² + 2س + 4)", "(س − 2)(س² + 2س + 4)", "(س + 2)³"}, 0,
+            "مجموع مكعبين: (س + أ)(س² − أس + أ²) مع عكس إشارة الحد الأوسط.", "math-9th-book.html", 1));
+        bank.add(new Question("mp2_1", "سهل · الدائرة",
+            "قياس الزاوية المحيطية المرسومة في دائرة يساوي دائماً بالنسبة للمركزية المشتركة معها في القوس:",
+            new String[]{"ضعف المركزية", "نصف المركزية", "يساوي المركزية", "90 درجة دائماً"}, 1,
+            "مبرهنة أساسية: قياس الزاوية المحيطية = ½ قياس الزاوية المركزية المشتركة في نفس القوس.", "math-9th-book.html", 1));
+        bank.add(new Question("mp2_2", "متوسط · حساب المثلثات",
+            "في المثلث القائم، قيمة (جتا 60° + جا 30°) تساوي:",
+            new String[]{"½", "1", "√3", "2"}, 1,
+            "بما أن جا 30° = ½ وجتا 60° = ½، فإن مجموعهما = ½ + ½ = 1.", "math-9th-book.html", 1));
+
+        bank.add(new Question("p12_1", "متوسط · الفيزياء 12",
+            "عند إطلاق مقذوف بنفس السرعة الابتدائية، فإنه يبلغ أقصى مدى أفقي عندما تكون زاوية الإطلاق:",
+            new String[]{"30°", "45°", "60°", "90°"}, 1,
+            "المدى الأفقي يعتمد على جا(2θ) وتبلغ قيمته العظمى (1) عندما 2θ = 90° أي θ = 45°.", "physics-12th-book.html", 24));
+        bank.add(new Question("b12_1", "متوسط · الأحياء 12",
+            "ما قيمة جهد الراحة لغشاء الليف العصبي (العصبون) في الحالة الطبيعية قبل الإثارة؟",
+            new String[]{"+30 ملي فولت", "-70 ملي فولت", "صفر ملي فولت", "-120 ملي فولت"}, 1,
+            "يكون السطح الخارجي موجباً والداخلي سالباً بفرق جهد قدره -70 mV بفضل مضخة Na+/K+.", "biology-12th-book.html", 14));
+        bank.add(new Question("c12_1", "سهل · الكيمياء 12",
+            "العناصر التي يتم فيها امتلاء المستوى الفرعي (d) بالإلكترونات بالتتابع هي عناصر الفئة:",
+            new String[]{"العناصر الممثلة", "العناصر الانتقالية الرئيسية", "الغازات النبيلة", "اللانثانيدات"}, 1,
+            "العناصر الانتقالية الرئيسية تقع وسط الجدول الدوري وتتميز بتعدد حالات تأكسدها.", "chem-lab-book.html", 1));
+        return bank;
+    }
+
     private void loadQuestions() {
         questions.clear();
-
-        if ("sci_p1".equals(quizSubject) || "all_9th".equals(quizSubject)) {
-            questions.add(new Question("المحلول الذي لا يستطيع إذابة أي كمية إضافية من المذاب عند درجة حرارة معينة يُسمى:",
-                new String[]{"المحلول غير المشبع", "المحلول المشبع", "المحلول فوق المشبع", "المحلول المعلق"}, 1,
-                "المحلول المشبع يحتوي على أقصى كمية ممكنة من المذاب عند ثبوت درجة الحرارة."));
-
-            questions.add(new Question("تُقاس سرعة الصوت في الهواء الجاف عند درجة الصفر المئوي بحوالي:",
-                new String[]{"331 م/ث", "500 م/ث", "1500 م/ث", "300000 كم/ث"}, 0,
-                "سرعة الصوت في الهواء عند صفر مئوي هي 331 م/ث وتزداد بارتفاع درجة الحرارة."));
-
-            questions.add(new Question("المرآة الكروية التي تُكوّن دائماً صورة تقديرية مصغرة ومعتدلة للأجسام هي:",
-                new String[]{"المرآة المقعرة", "المرآة المحدبة", "المرآة المستوية", "المرآة الأسطوانية"}, 1,
-                "المرآة المحدبة تفرق الأشعة وتُستخدم على جانبي السيارة لكشف مساحة أوسع."));
-
-            questions.add(new Question("الوحدة الوظيفية الأساسية للإخراج وتنقية الدم في كلية الإنسان هي:",
-                new String[]{"الحالب", "النفرون (الأنبوبة البولية)", "حوض الكلية", "المثانة"}, 1,
-                "تحتوي كل كلية على حوالي مليون نفرون يقوم بترشيح الدم واستعادة المواد النافعة."));
-
-            questions.add(new Question("التكاثر الخضري في النباتات يتميز بأنه:",
-                new String[]{"ينتج أفراداً متطابقة مع النبات الأصلي", "يتطلب وجود حبوب اللقاح", "يؤدي لتنوع وراثي كبير", "يتم فقط عن طريق البذور"}, 0,
-                "التكاثر الخضري هو تكاثر لا جنسي يُحافظ على الصفات الممتازة للنبات الأم."));
+        List<Question> all = buildAllQuestions();
+        if (reviewWrongOnly) {
+            List<String> wrongIds = ThakerStore.getWrongIds(this);
+            tvSubject.setText("مراجعة أخطائي (" + wrongIds.size() + ")");
+            for (Question q : all) {
+                if (wrongIds.contains(q.id)) questions.add(q);
+            }
         }
+        if (questions.isEmpty()) {
+            String prefix = null;
+            if ("sci_p2".equals(quizSubject)) prefix = "sp2_";
+            else if ("sci_p1".equals(quizSubject)) prefix = "sp1_";
+            else if ("math_p1".equals(quizSubject) || "math_p2".equals(quizSubject)) prefix = "mp";
+            else if ("phys_12".equals(quizSubject)) prefix = "p12_";
+            else if ("bio_12".equals(quizSubject)) prefix = "b12_";
+            else if ("chem_12".equals(quizSubject)) prefix = "c12_";
 
-        if ("sci_p2".equals(quizSubject) || "all_9th".equals(quizSubject)) {
-            questions.add(new Question("ينص قانون أوم في الكهرباء على أن شدة التيار (ت) تتناسب طردياً مع فرق الجهد (جـ) وعكسياً مع:",
-                new String[]{"المقاومة الكهربائية (م)", "القدرة الكهربائية", "الطاقة المستهلكة", "الشحنة الكهربائية"}, 0,
-                "قانون أوم: جـ = ت × م، فكلما زادت المقاومة قلّ التيار الكهربائي."));
-
-            questions.add(new Question("الجهاز الذي يحول الطاقة الميكانيكية الحركية إلى طاقة كهربائية هو:",
-                new String[]{"المحرك الكهربائي", "المولد الكهربائي (الدينامو)", "المحول الكهربائي", "المكثف"}, 1,
-                "المولد يعمل بظاهرة الحث الكهرومغناطيسي لفاراداي لتوليد التيار."));
-
-            questions.add(new Question("أقرب الكواكب إلى الشمس في نظامنا الشمسي هو:",
-                new String[]{"الزهرة", "المريخ", "عطارد", "الأرض"}, 2,
-                "عطارد هو أصغر وأقرب الكواكب للشمس ويدور حولها في 88 يوماً."));
-
-            questions.add(new Question("الصخور المتكونة من تبريد وتبلور الماغما في باطن الأرض أو اللابة على سطحها هي:",
-                new String[]{"الصخور الرسوبية", "الصخور النارية", "الصخور المتحولة", "الصخور الطينية"}, 1,
-                "الصخور النارية مثل البازلت والجرانيت هي أصل جميع الصخور في القشرة الأرضية."));
+            for (Question q : all) {
+                if (prefix == null || q.id.startsWith(prefix)) questions.add(q);
+            }
+            if (questions.size() < 4) {
+                for (Question q : all) {
+                    if (!questions.contains(q)) questions.add(q);
+                    if (questions.size() >= 6) break;
+                }
+            }
+            Collections.shuffle(questions);
         }
-
-        if ("math_p1".equals(quizSubject) || "all_9th".equals(quizSubject)) {
-            questions.add(new Question("العلاقة التي تتصف بأنها انعكاسية ومتماثلة ومتعدية تُسمى:",
-                new String[]{"علاقة ترتيب جزئي", "علاقة تكافؤ", "علاقة عكسية", "تطبيق شامل"}, 1,
-                "علاقة التكافؤ تجمع الخواص الثلاث: الانعكاس والتماثل والتعدي."));
-
-            questions.add(new Question("تحليل المقدار الجبري (س² − 25) هو:",
-                new String[]{"(س − 5)(س − 5)", "(س + 5)(س − 5)", "(س + 25)(س − 1)", "س(س − 25)"}, 1,
-                "الفرق بين مربعين: أ² − ب² = (أ − ب)(أ + ب)."));
-
-            questions.add(new Question("تحليل مجموع المكعبين (س³ + 8) يساوي:",
-                new String[]{"(س + 2)(س² − 2س + 4)", "(س + 2)(س² + 2س + 4)", "(س − 2)(س² + 2س + 4)", "(س + 2)³"}, 0,
-                "مجموع مكعبين: (س + أ)(س² − أس + أ²)."));
-
-            questions.add(new Question("مجموعة الأعداد الحقيقية R تتكون من اتحاد مجموعة الأعداد النسبية Q مع:",
-                new String[]{"الأعداد الطبيعية", "الأعداد الصحيحة", "الأعداد غير النسبية (الجذور الصماء)", "الصفر فقط"}, 2,
-                "ح = ن ∪ ن̄ (النسبية وغير النسبية مثل π وجذر 2)."));
-        }
-
-        if ("math_p2".equals(quizSubject) || "all_9th".equals(quizSubject)) {
-            questions.add(new Question("العمود النازل من مركز الدائرة على أي وتر فيها:",
-                new String[]{"يوازي الوتر", "ينصف الوتر", "يضاعف طول الوتر", "يمس الدائرة"}, 1,
-                "مبرهنة هندسية أساسية: المستقيم المار بمركز الدائرة عمودياً على وتر ينصف ذلك الوتر."));
-
-            questions.add(new Question("قياس الزاوية المحيطية يساوي دائماً:",
-                new String[]{"ضعف قياس المركزية المشتركة معها في القوس", "نصف قياس المركزية المشتركة معها في القوس", "يساوي تماماً قياس المركزية", "180 درجة"}, 1,
-                "الزاوية المحيطية = 1/2 الزاوية المركزية المشتركة معها في القوس نفسه."));
-
-            questions.add(new Question("في أي شكل رباعي دائري، مجموع قياسي أي زاويتين متقابلتين يساوي:",
-                new String[]{"90°", "180° (متكاملتان)", "360°", "270°"}, 1,
-                "خاصية مميزة للرباعي الدائري: كل زاويتين متقابلتين متكاملتان (مجموعهما 180°)."));
-
-            questions.add(new Question("قيمة النسبة المثلثية جيب تمام الزاوية 60° (جتا 60°) تساوي:",
-                new String[]{"1/2", "جذر(3)/2", "1", "جذر(2)"}, 0,
-                "جتا 60° = 1/2 = جا 30°، وظا 45° = 1."));
-
-            questions.add(new Question("المتوسط الحسابي للقيم (4 ، 6 ، 8 ، 10 ، 12) يساوي:",
-                new String[]{"6", "8", "10", "40"}, 1,
-                "المتوسط الحسابي = مجموع القيم (40) / عددها (5) = 8."));
-        }
-
-        Collections.shuffle(questions);
     }
 
     private void displayCurrentQuestion() {
@@ -170,105 +203,97 @@ public class QuizActivity extends Activity {
             showFinalResults();
             return;
         }
-
         answered = false;
-        Question q = questions.get(curIndex);
+        final Question q = questions.get(curIndex);
 
-        tvSubject.setText(getQuizTitle(quizSubject));
-        tvProgress.setText("السؤال " + (curIndex + 1) + " من " + questions.size());
+        if (!reviewWrongOnly) tvSubject.setText("اختبر نفسك · تدريب");
+        tvProgress.setText((curIndex + 1) + " / " + questions.size());
         tvScoreTop.setText("النقاط: " + score);
+        tvUnitBadge.setText(q.unitBadge);
         tvQuestion.setText(q.text);
+        progQuizBar.setProgress((int) (((curIndex + 1) * 100f) / Math.max(1, questions.size())));
 
         cardExplain.setVisibility(View.GONE);
         btnNext.setVisibility(View.GONE);
 
+        String[] letters = {"أ", "ب", "ج", "د"};
+        int textColor = ThakerStore.isDarkMode(this) ? 0xFFECFAF2 : 0xFF0F291E;
         for (int i = 0; i < 4; i++) {
-            final int optIdx = i;
-            btnOpts[i].setText(q.options[i]);
-            btnOpts[i].setBackgroundResource(R.drawable.quiz_option_normal);
             btnOpts[i].setEnabled(true);
-            btnOpts[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    handleOptionClick(optIdx);
-                }
-            });
+            btnOpts[i].setBackgroundResource(R.drawable.quiz_opt_default);
+            btnOpts[i].setTextColor(textColor);
+            btnOpts[i].setText(letters[i] + " )  " + q.options[i]);
         }
+
+        btnReviewPage.setText("📖 راجع ص " + q.reviewPage);
+        View.OnClickListener goBook = new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Intent i = new Intent(QuizActivity.this, LabActivity.class);
+                i.putExtra("html_asset", q.reviewAsset);
+                i.putExtra("start_page", q.reviewPage);
+                i.putExtra("start_tab", "reader");
+                startActivity(i);
+            }
+        };
+        btnReviewPage.setOnClickListener(goBook);
+        btnTryLab.setOnClickListener(goBook);
     }
 
-    private void handleOptionClick(int selectedIdx) {
+    private void handleAnswer(int selectedIdx) {
         if (answered) return;
         answered = true;
-
         Question q = questions.get(curIndex);
-        boolean isCorrect = (selectedIdx == q.correctIdx);
 
-        for (int i = 0; i < 4; i++) {
-            btnOpts[i].setEnabled(false);
-            if (i == q.correctIdx) {
-                btnOpts[i].setBackgroundResource(R.drawable.quiz_option_correct);
-            } else if (i == selectedIdx) {
-                btnOpts[i].setBackgroundResource(R.drawable.quiz_option_wrong);
-            }
-        }
+        for (Button b : btnOpts) b.setEnabled(false);
 
-        if (isCorrect) {
+        if (selectedIdx == q.correctIdx) {
             score++;
-            tvExplainHeader.setText("إجابة صحيحة وممتازة! ✅");
-            tvExplainHeader.setTextColor(ThemeUtil.color(this, R.attr.thakerSuccess));
+            ThakerStore.removeWrongId(this, q.id);
+            btnOpts[selectedIdx].setBackgroundResource(R.drawable.quiz_opt_right);
+            btnOpts[selectedIdx].setTextColor(0xFF065F46);
+            btnOpts[selectedIdx].setText("✓  " + btnOpts[selectedIdx].getText());
+            tvExplainHeader.setText("✓ إجابة صحيحة! أحسنت");
+            tvExplainHeader.setTextColor(0xFF065F46);
         } else {
-            tvExplainHeader.setText("إجابة غير صحيحة ❌");
-            tvExplainHeader.setTextColor(ThemeUtil.color(this, R.attr.thakerError));
+            ThakerStore.addWrongId(this, q.id);
+            btnOpts[selectedIdx].setBackgroundResource(R.drawable.quiz_opt_wrong);
+            btnOpts[selectedIdx].setTextColor(0xFF991B1B);
+            btnOpts[selectedIdx].setText("✕  " + btnOpts[selectedIdx].getText());
+
+            btnOpts[q.correctIdx].setBackgroundResource(R.drawable.quiz_opt_right);
+            btnOpts[q.correctIdx].setTextColor(0xFF065F46);
+            btnOpts[q.correctIdx].setText("✓  " + btnOpts[q.correctIdx].getText());
+            tvExplainHeader.setText("✕ لماذا أخطأت؟ · الحل الصحيح");
+            tvExplainHeader.setTextColor(0xFF991B1B);
         }
 
+        tvScoreTop.setText("النقاط: " + score);
         tvExplainBody.setText(q.explanation);
         cardExplain.setVisibility(View.VISIBLE);
-
         btnNext.setVisibility(View.VISIBLE);
-        btnNext.setText(curIndex + 1 < questions.size() ? "السؤال التالي ⬅" : "عرض النتيجة النهائية 🏆");
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                curIndex++;
-                displayCurrentQuestion();
-            }
-        });
+        btnNext.setText(curIndex == questions.size() - 1 ? "عرض النتيجة النهائية 🏆" : "السؤال التالي  ←");
     }
 
     private void showFinalResults() {
-        int pct = Math.round(((float) score / questions.size()) * 100);
-        String msg = "حصلت على: " + score + " من " + questions.size() + " (" + pct + "%)\n\n";
-        if (pct >= 85) msg += "🌟 ممتاز جداً! أداء متميز ومتقن في المنهج الوزاري!";
-        else if (pct >= 65) msg += "👍 جيد جداً! واصل المراجعة لضمان الدرجة الكاملة.";
-        else msg += "📚 ننصحك بمراجعة وحدات الكتاب والملخصات ثم إعادة الاختبار.";
+        int total = Math.max(1, questions.size());
+        int pct = (score * 100) / total;
+        ThakerStore.setTaskDone(this, 2, true);
+        ThakerStore.bumpStudyStreak(this);
 
-        AlertDialog.Builder b = new AlertDialog.Builder(this);
-        b.setTitle("نتيجة الاختبار الوزاري");
-        b.setMessage(msg);
-        b.setCancelable(false);
-        b.setPositiveButton("إعادة الاختبار", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                curIndex = 0;
-                score = 0;
-                loadQuestions();
-                displayCurrentQuestion();
-            }
-        });
-        b.setNegativeButton("العودة للرئيسية", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
-        });
-        b.show();
-    }
+        String unitKey = "phys_12".equals(quizSubject) ? "phys_u1" : ("bio_12".equals(quizSubject) ? "bio_u1" : "u9");
+        ThakerStore.setUnitMastery(this, unitKey, pct >= 80 ? 3 : (pct >= 50 ? 2 : 1));
 
-    private String getQuizTitle(String key) {
-        if ("sci_p1".equals(key)) return "اختبار علوم 9 - الجزء الأول";
-        if ("sci_p2".equals(key)) return "اختبار علوم 9 - الجزء الثاني";
-        if ("math_p1".equals(key)) return "اختبار رياضيات 9 - الجزء الأول";
-        if ("math_p2".equals(key)) return "اختبار رياضيات 9 - الجزء الثاني";
-        return "الاختبار الشامل للشهادة الأساسية (تاسع)";
+        String gradeMsg = pct >= 85 ? "ممتاز! إتقان رائع 🌟" : (pct >= 60 ? "جيد جداً! واصل التقدم 👍" : "تحتاج مراجعة بسيطة، أخطاؤك محفوظة للتدرب 💪");
+        new AlertDialog.Builder(this)
+            .setTitle("النتيجة النهائية 🏆")
+            .setMessage("درجتك: " + score + " من " + total + " (" + pct + "%)\n\n" + gradeMsg)
+            .setPositiveButton("إعادة التدريب", new DialogInterface.OnClickListener() {
+                @Override public void onClick(DialogInterface dialog, int which) {
+                    curIndex = 0; score = 0; loadQuestions(); displayCurrentQuestion();
+                }
+            })
+            .setNegativeButton("عودة", new DialogInterface.OnClickListener() {
+                @Override public void onClick(DialogInterface dialog, int which) { finish(); }
+            }).setCancelable(false).show();
     }
 }

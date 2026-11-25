@@ -6,36 +6,39 @@
 <title>كتاب ومعمل الأحياء التفاعلي الذكي</title>
 <style>
 /* ========================================================
-   THAKER INTELLIGENT INTERACTIVE TEXTBOOK ENGINE (v2.0)
-   Design System: Emerald Green (#00A859), Mint, Modern RTL
+   THAKER DESIGN SYSTEM v2.0 (Mint & Emerald Edition)
    ======================================================== */
 :root {
   --primary: #00a859;
   --primary-dark: #008f4c;
+  --primary-deep: #064E3B;
   --primary-light: #e8f8f0;
   --accent-cyan: #0284c7;
   --accent-amber: #d97706;
+  --accent-gold-bg: #FEF3C7;
   --accent-purple: #7c3aed;
-  --bg-page: #0f172a;
-  --bg-surface: #1e293b;
-  --bg-card: #243248;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-light: rgba(148, 163, 184, 0.2);
-  --border-primary: rgba(0, 168, 89, 0.35);
-  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.45);
+  --bg-page: #F2F7F4;
+  --bg-surface: #FFFFFF;
+  --bg-card: #F8FBF9;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-primary: rgba(5, 150, 105, 0.35);
+  --shadow-lg: 0 12px 32px rgba(6, 78, 59, 0.12);
+  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.06);
   --font-base: 'Tajawal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-body.light-theme {
-  --bg-page: #f1f5f9;
-  --bg-surface: #ffffff;
-  --bg-card: #f8fafc;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --border-light: rgba(100, 116, 139, 0.2);
-  --border-primary: rgba(0, 168, 89, 0.45);
-  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.12);
+body.dark-theme {
+  --bg-page: #0B151C;
+  --bg-surface: #12242E;
+  --bg-card: #182F3B;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border-light: rgba(148, 163, 184, 0.18);
+  --border-primary: rgba(0, 214, 120, 0.38);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -44,450 +47,772 @@ html, body {
   font-family: var(--font-base); background: var(--bg-page); color: var(--text-main);
 }
 
-/* Top Navigation Bar */
+/* Top Navigation Bar (05-reader.png style) */
 #topBar {
-  position: fixed; top: 0; left: 0; right: 0; height: 54px;
-  background: var(--bg-surface); border-bottom: 1px solid var(--border-light);
+  position: fixed; top: 0; left: 0; right: 0; height: 60px;
+  background: var(--bg-page);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 12px; padding-right: 62px; z-index: 50; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 6px 14px; z-index: 60;
 }
-.nav-left, .nav-right { display: flex; align-items: center; gap: 8px; }
-.btn-icon {
-  width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border-light);
-  background: var(--bg-card); color: var(--text-main); cursor: pointer;
-  display: flex; align-items: center; justify-content: center; font-size: 16px;
-  transition: all 0.2s ease;
-}
-.btn-icon:hover { background: var(--primary); color: #ffffff; border-color: var(--primary); }
-.book-title-badge { display: flex; flex-direction: column; overflow: hidden; }
-.title-main { font-size: 14px; font-weight: 800; color: var(--primary); white-space: nowrap; }
-.title-sub { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
-
-/* Corner Action Controls: Exit Arrow + 3 Lines Sidebar Icon Directly Below It */
-.corner-actions-dock {
-  position: fixed; top: 7px; right: 10px; display: flex; flex-direction: column; gap: 6px; z-index: 170;
-}
-.btn-corner-btn {
-  width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border-light);
+.top-squircle-btn {
+  width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--border-light);
   background: var(--bg-surface); color: var(--text-main); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25); transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex; align-items: center; justify-content: center; font-size: 16px;
+  box-shadow: var(--shadow-sm); transition: all 0.2s ease; flex-shrink: 0;
 }
-.btn-corner-btn:hover {
-  background: var(--primary); color: #ffffff; border-color: var(--primary); transform: scale(1.05);
+.top-squircle-btn:active { transform: scale(0.94); }
+.top-squircle-btn.bookmarked { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+.top-center-title {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 0 8px; overflow: hidden; text-align: center;
 }
-.btn-corner-btn:active { transform: scale(0.95); }
-.btn-corner-btn.active {
-  background: var(--primary); color: #ffffff; border-color: var(--primary);
-  box-shadow: 0 0 12px rgba(0, 168, 89, 0.55);
-}
-.btn-corner-btn svg { display: block; }
+.title-main { font-size: 14.5px; font-weight: 800; color: var(--text-main); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 100%; }
+.title-sub { font-size: 11px; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
 
-/* Main Book Stage - 100% Fixed & Stable on Screen */
+.top-right-actions { display: flex; align-items: center; gap: 6px; }
+
+/* View Containers for 4 Tabs */
+.tab-view {
+  position: fixed; top: 60px; bottom: 0; left: 0; right: 0;
+  display: none; flex-direction: column; overflow: hidden;
+}
+.tab-view.active { display: flex; }
+
+/* Reader Viewport */
 #bookViewport {
-  position: fixed; top: 54px; bottom: 52px; left: 0; right: 0;
+  flex: 1; position: relative;
   overflow: hidden; display: flex; align-items: center; justify-content: center;
-  padding: 6px; user-select: none; background: var(--bg-page);
+  padding: 6px 10px 124px 10px; user-select: none; background: var(--bg-page);
+  touch-action: none;
 }
 #pageContainer {
   position: relative;
-  /* Mathematically locked to available screen area, maintaining 1:1.412 ratio */
-  width: min(680px, calc((100vh - 120px) * 0.7083), calc(100vw - 16px));
-  height: calc(min(680px, calc((100vh - 120px) * 0.7083), calc(100vw - 16px)) / 0.7083);
-  max-height: calc(100vh - 120px);
-  max-width: calc(100vw - 16px);
-  aspect-ratio: 0.7083;
-  background: #ffffff; border-radius: 8px; box-shadow: var(--shadow-lg);
-  transform-origin: center center; transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-  display: flex; align-items: center; justify-content: center; margin: auto; overflow: hidden;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  transform-origin: center center;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: block; margin: auto; overflow: hidden;
+  touch-action: none; will-change: transform;
 }
-
-/* Layer 1: Page Image */
 #pageImg {
-  width: 100%; height: 100%; object-fit: contain; display: block;
-  border-radius: 8px; pointer-events: none;
+  width: 100%; height: 100%; object-fit: fill; display: block;
+  border-radius: 16px; pointer-events: none;
 }
 
-/* Layer 2: Interactive Overlay */
-#interactiveOverlay {
-  position: absolute; inset: 0; border-radius: 8px; overflow: hidden;
-}
+/* Layer 2: Interactive Overlay Hotspots (05-reader.png style) */
+#interactiveOverlay { position: absolute; inset: 0; border-radius: 16px; overflow: hidden; }
 .hotspot-box {
-  position: absolute; cursor: pointer; border-radius: 6px;
-  border: 2px dashed rgba(0, 168, 89, 0.6);
-  background: rgba(0, 168, 89, 0.12);
+  position: absolute; cursor: pointer; border-radius: 12px;
+  border: 2px dashed rgba(2, 132, 199, 0.7);
+  background: rgba(2, 132, 199, 0.10);
   transition: all 0.2s ease;
   display: flex; align-items: flex-start; justify-content: flex-end;
   padding: 4px; z-index: 10;
 }
 .hotspot-box:hover, .hotspot-box.active {
-  border-color: #00a859; background: rgba(0, 168, 89, 0.28);
-  box-shadow: 0 0 15px rgba(0, 168, 89, 0.45);
+  border-color: var(--primary); background: rgba(0, 168, 89, 0.22);
+  box-shadow: 0 0 14px rgba(0, 168, 89, 0.35);
 }
-.hotspot-box.type-3d {
-  border-color: rgba(239, 68, 68, 0.8); background: rgba(239, 68, 68, 0.16);
+.hotspot-box.type-title {
+  border-color: rgba(2, 132, 199, 0.75); background: rgba(2, 132, 199, 0.08);
 }
-.hotspot-box.type-3d:hover {
-  border-color: #ef4444; background: rgba(239, 68, 68, 0.32);
-  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+.hotspot-box.type-explainable_text {
+  border-color: rgba(2, 132, 199, 0.78); background: rgba(224, 242, 254, 0.42);
 }
 .hotspot-box.type-activity {
-  border-color: rgba(245, 158, 11, 0.8); background: rgba(245, 158, 11, 0.16);
+  border-color: rgba(217, 119, 6, 0.85); background: rgba(254, 243, 199, 0.45);
+}
+.hotspot-box.type-3d, .hotspot-box.type-interactive_3d {
+  border-color: rgba(0, 168, 89, 0.85); background: rgba(232, 248, 240, 0.42);
 }
 .hotspot-box.type-assessment {
-  border-color: rgba(2, 132, 199, 0.8); background: rgba(2, 132, 199, 0.16);
+  border-color: rgba(124, 58, 237, 0.8); background: rgba(243, 232, 255, 0.40);
 }
 .hotspot-pill {
-  background: #0f172a; color: #ffffff; font-size: 10.5px; font-weight: 700;
-  padding: 2px 7px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.2);
+  background: #064E3B; color: #ffffff; font-size: 10.5px; font-weight: 800;
+  padding: 3px 9px; border-radius: 999px; box-shadow: 0 3px 10px rgba(6,78,59,0.28);
+  display: flex; align-items: center; gap: 4px;
 }
 
-/* Bottom Navigation Dock */
-#bottomDock {
-  position: fixed; bottom: 0; left: 0; right: 0; height: 52px;
-  background: var(--bg-surface); border-top: 1px solid var(--border-light);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 12px; z-index: 50; box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+/* Floating Hotspot Counter & Slider & 4-Tab Pill Dock */
+#readerFloatingBar {
+  position: fixed; bottom: 72px; left: 14px; right: 14px; z-index: 65;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  pointer-events: none;
 }
-.page-nav-group { display: flex; align-items: center; gap: 8px; }
+.hotspot-summary-pill {
+  pointer-events: auto;
+  background: #064E3B; color: #FFFFFF; font-size: 12px; font-weight: 800;
+  padding: 6px 16px; border-radius: 999px; border: none; cursor: pointer;
+  box-shadow: 0 6px 18px rgba(6, 78, 59, 0.32);
+  display: flex; align-items: center; gap: 6px;
+}
+.page-scrubber-bar {
+  pointer-events: auto;
+  width: 100%; max-width: 520px; background: var(--bg-surface);
+  border: 1px solid var(--border-light); border-radius: 16px 16px 8px 8px;
+  padding: 4px 12px; display: flex; align-items: center; gap: 8px;
+  box-shadow: var(--shadow-sm); font-size: 11px; font-weight: 700; color: var(--text-muted);
+}
+.page-scrubber-bar input[type=range] {
+  flex: 1; accent-color: var(--primary); height: 4px; cursor: pointer;
+}
+.scrubber-nav-btn {
+  background: var(--primary-light); color: var(--primary); border: none;
+  border-radius: 8px; padding: 3px 8px; font-size: 11px; font-weight: 800; cursor: pointer;
+}
+
+/* Bottom 4-Tab Floating Pill Dock (05-reader / 08-index / 09-summary) */
+#bottomDock {
+  position: fixed; bottom: 10px; left: 14px; right: 14px; height: 54px;
+  background: var(--bg-surface); border: 1px solid var(--border-light);
+  border-radius: 999px; display: flex; align-items: center; justify-content: space-around;
+  padding: 4px 6px; z-index: 70; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+.dock-tab-btn {
+  flex: 1; height: 100%; border: none; background: transparent;
+  border-radius: 999px; color: var(--text-muted);
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dock-tab-btn.active {
+  background: var(--primary); color: #FFFFFF; font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 168, 89, 0.28);
+}
+
 .btn-nav {
   background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-light);
-  padding: 6px 12px; border-radius: 8px; font-size: 12.5px; font-weight: 700;
-  cursor: pointer; display: flex; align-items: center; gap: 5px;
+  padding: 8px 14px; border-radius: 12px; font-size: 13px; font-weight: 700;
+  cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   transition: all 0.2s ease;
 }
 .btn-nav:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-#pageIndicatorText { font-size: 13px; font-weight: 800; color: var(--primary); white-space: nowrap; }
 
-/* Layer 3: Smart Text Bottom Sheet */
+/* Index View (08-index.png) */
+.page-scroll-container {
+  flex: 1; overflow-y: auto; padding: 14px 16px 86px 16px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.search-pill-box {
+  background: var(--bg-surface); border: 1px solid var(--border-light);
+  border-radius: 999px; padding: 10px 16px; display: flex; align-items: center; gap: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.search-pill-box input {
+  flex: 1; border: none; outline: none; background: transparent;
+  font-size: 14px; color: var(--text-main); font-family: var(--font-base);
+}
+.index-unit-card {
+  background: var(--bg-surface); border: 1px solid var(--border-light);
+  border-radius: 20px; padding: 14px; box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.index-unit-head {
+  display: flex; align-items: center; gap: 12px; cursor: pointer;
+}
+.unit-ring-badge {
+  width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 800; color: var(--primary); background: var(--primary-light); flex-shrink: 0;
+}
+.index-lesson-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 10px 8px; border-top: 1px solid var(--border-light); cursor: pointer;
+}
+.index-lesson-row:hover { background: var(--bg-card); border-radius: 10px; }
+.lesson-check-dot {
+  width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #cbd5e1;
+  display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0;
+}
+.lesson-check-dot.done { background: var(--primary); border-color: var(--primary); color: #fff; }
+.page-chip-soft {
+  background: var(--primary-light); color: var(--primary-dark);
+  padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 800; white-space: nowrap;
+}
+
+/* Summary View (09-summary.png) */
+.summary-stripe-card {
+  background: var(--bg-surface); border-radius: 20px; padding: 16px;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border-light);
+  border-right: 5px solid var(--primary); display: flex; flex-direction: column; gap: 8px;
+}
+.summary-stripe-card.purple { border-right-color: #7C3AED; }
+.summary-stripe-card.blue { border-right-color: #0284C7; }
+.summary-stripe-card.amber { border-right-color: #D97706; }
+.summary-stripe-card.red { border-right-color: #EF4444; }
+.formula-highlight-box {
+  background: #EFF6FF; border-radius: 12px; padding: 12px; text-align: center;
+  color: #0369A1; font-weight: 800; font-size: 14.5px;
+}
+body.dark-theme .formula-highlight-box { background: rgba(2,132,199,0.18); color: #7dd3fc; }
+
+/* Quiz View & Modal (10-quiz.png) */
+.quiz-question-card {
+  background: var(--bg-surface); border-radius: 22px; padding: 18px;
+  border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.amber-tag-pill {
+  align-self: flex-start; background: var(--accent-gold-bg); color: #92400E;
+  padding: 4px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 800;
+}
+.quiz-opt {
+  background: var(--bg-surface); color: var(--text-main) !important;
+  border: 1.5px solid var(--border-light); border-radius: 16px;
+  padding: 14px 16px; font-size: 14px; font-weight: 700; cursor: pointer;
+  text-align: right; display: flex; justify-content: space-between; align-items: center;
+  box-shadow: var(--shadow-sm); transition: all 0.2s ease; width: 100%;
+}
+.quiz-opt.correct { background: #ECFDF5 !important; border-color: #059669 !important; color: #064E3B !important; }
+.quiz-opt.wrong { background: #FEF2F2 !important; border-color: #EF4444 !important; color: #991B1B !important; }
+.why-wrong-box {
+  background: var(--bg-surface); border: 1.5px solid #FECACA;
+  color: var(--text-main); border-radius: 16px; padding: 14px; font-size: 13.5px; line-height: 1.6;
+}
+
+/* Layer 3A: Explain Bottom Sheet (06-explain-sheet.png) */
 #textSheet {
-  position: fixed; bottom: 0; left: 0; right: 0; max-height: 85vh;
-  background: var(--bg-surface); border-top: 2px solid var(--primary);
-  border-radius: 24px 24px 0 0; padding: 20px; z-index: 100;
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
-  display: none; flex-direction: column; gap: 14px;
+  position: fixed; bottom: 0; left: 0; right: 0; max-height: 88vh;
+  background: var(--bg-surface);
+  border-radius: 28px 28px 0 0; padding: 12px 18px 20px 18px; z-index: 100;
+  box-shadow: 0 -14px 45px rgba(15, 23, 42, 0.25);
+  display: none; flex-direction: column; gap: 12px;
   overflow-y: auto; transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #textSheet.open { display: flex; transform: translateY(0); }
+.sheet-drag-handle {
+  width: 44px; height: 5px; border-radius: 999px; background: #cbd5e1;
+  align-self: center; margin-bottom: 2px;
+}
 .sheet-header {
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--border-light); padding-bottom: 10px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
 }
-.sheet-title { font-size: 17px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+.sheet-title { font-size: 18px; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
 .btn-close {
-  background: none; border: none; font-size: 20px; color: var(--text-muted); cursor: pointer; padding: 4px;
-}
-.btn-close:hover { color: #ef4444; }
-
-.original-callout {
-  background: rgba(0, 168, 89, 0.08); border-right: 4px solid var(--primary);
-  padding: 10px 14px; border-radius: 6px; font-size: 14px; line-height: 1.6;
-  color: var(--text-main);
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 50%;
+  width: 34px; height: 34px; font-size: 16px; color: var(--text-muted); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
 }
 .depth-selector {
-  display: flex; gap: 8px; background: var(--bg-card); padding: 4px; border-radius: 10px;
+  display: flex; gap: 6px; padding: 4px 0;
 }
 .depth-btn {
-  flex: 1; padding: 8px; border-radius: 8px; border: none; background: transparent;
-  color: var(--text-muted); font-size: 12.5px; font-weight: 700; cursor: pointer;
-  transition: all 0.2s ease;
+  flex: 1; padding: 8px 6px; border-radius: 999px; border: 1px solid var(--border-light);
+  background: var(--bg-surface); color: var(--text-muted); font-size: 12px; font-weight: 700;
+  cursor: pointer; transition: all 0.2s ease; white-space: nowrap;
 }
-.depth-btn.active { background: var(--primary); color: #ffffff; }
+.depth-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+.explanation-body { font-size: 14.5px; line-height: 1.75; color: var(--text-main); }
 
-.explanation-body { font-size: 14.5px; line-height: 1.7; color: var(--text-main); min-height: 50px; }
-
-.vocab-chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.dark-rule-card {
+  background: linear-gradient(135deg, #064E3B, #047857); color: #FFFFFF;
+  border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
+}
+.rule-chip {
+  background: rgba(255, 255, 255, 0.16); color: #FFFFFF; font-size: 11px; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px;
+}
+.soft-example-box {
+  background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 14px;
+  padding: 12px 14px; color: #064E3B; font-size: 13.5px; font-weight: 700; text-align: center;
+}
+body.dark-theme .soft-example-box { background: rgba(16,185,129,0.14); color: #a7f3d0; border-color: rgba(16,185,129,0.3); }
+.soft-mistake-box {
+  background: #FEF2F2; border: 1px solid #FECACA; border-radius: 14px;
+  padding: 11px 14px; color: #991B1B; font-size: 12.5px; font-weight: 600;
+}
+body.dark-theme .soft-mistake-box { background: rgba(239,68,68,0.15); color: #fecaca; border-color: rgba(239,68,68,0.35); }
+.original-callout {
+  background: var(--bg-card); border-right: 4px solid var(--primary);
+  padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.6; color: var(--text-muted);
+}
+.vocab-chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 .vocab-chip {
-  background: rgba(2, 132, 199, 0.15); border: 1px solid rgba(2, 132, 199, 0.35);
-  color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700;
-  cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+  background: var(--primary-light); border: 1px solid var(--border-primary);
+  color: var(--primary-dark); padding: 4px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; cursor: pointer;
 }
-.vocab-chip:hover { background: rgba(2, 132, 199, 0.3); }
-
 .equation-card {
   background: var(--bg-card); border: 1px solid var(--border-light);
-  border-radius: 10px; padding: 10px 14px; font-family: monospace; font-size: 15px;
-  color: #38bdf8; display: flex; align-items: center; justify-content: space-between;
+  border-radius: 10px; padding: 8px 12px; font-family: monospace; font-size: 14px;
+  color: var(--accent-cyan); display: flex; align-items: center; justify-content: space-between;
 }
-
-/* Yemeni White Dialect Companion Banner */
 .companion-banner {
   display: flex; align-items: center; gap: 10px;
-  background: linear-gradient(135deg, rgba(0, 168, 89, 0.15), rgba(2, 132, 199, 0.15));
+  background: linear-gradient(135deg, rgba(0, 168, 89, 0.12), rgba(2, 132, 199, 0.10));
   border: 1px solid var(--border-primary); border-radius: 12px; padding: 8px 12px;
 }
-.companion-avatar { font-size: 22px; }
-.companion-text { font-size: 12.5px; font-weight: 600; color: #f8fafc; }
+.companion-avatar { font-size: 20px; }
+.companion-text { font-size: 12px; font-weight: 700; color: var(--text-main); }
 
-/* 3D Science Lab Modal */
+/* 3D Lab Modal */
 #lab3dModal {
-  display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.88);
-  z-index: 120; flex-direction: column; backdrop-filter: blur(8px);
+  display: none; position: fixed; inset: 0; background: #0B151C;
+  z-index: 120; flex-direction: column;
 }
 #lab3dModal.open { display: flex; }
 .lab-header {
-  height: 54px; background: rgba(15, 23, 42, 0.95); display: flex;
+  height: 54px; background: rgba(15, 23, 42, 0.96); display: flex;
   align-items: center; justify-content: space-between; padding: 0 16px;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.25);
 }
-.lab-title { font-size: 16px; font-weight: 800; color: #38bdf8; }
-#labCanvasContainer { flex: 1; position: relative; width: 100%; height: 100%; overflow: hidden; }
-#labCanvas { width: 100%; height: 100%; display: block; }
+.lab-title { font-size: 15.5px; font-weight: 800; color: #38bdf8; }
+.diag-tabs-bar {
+  background: rgba(15, 23, 42, 0.94); display: flex; gap: 6px; padding: 8px 12px;
+  overflow-x: auto; white-space: nowrap; border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+.diag-tab-btn {
+  background: #182F3B; color: #94a3b8; border: 1px solid rgba(148,163,184,0.2);
+  padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; cursor: pointer; flex-shrink: 0;
+}
+.diag-tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+#labCanvasContainer { flex: 1; position: relative; width: 100%; height: 100%; overflow: hidden; touch-action: none; }
+#labCanvas { width: 100%; height: 100%; display: block; touch-action: none; }
+.lab-hud-zoom { position: absolute; bottom: 16px; right: 16px; display: flex; flex-direction: column; gap: 6px; z-index: 20; }
+.btn-lab-hud {
+  width: 38px; height: 38px; border-radius: 12px; background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 18px; font-weight: bold; cursor: pointer;
+}
+.lab-touch-hint {
+  position: absolute; top: 10px; right: 10px; background: rgba(15, 23, 42, 0.85);
+  padding: 6px 12px; border-radius: 999px; font-size: 11px; color: #38bdf8; pointer-events: none;
+}
 .lab-controls-dock {
-  background: rgba(15, 23, 42, 0.95); border-top: 1px solid var(--border-light);
-  padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; max-height: 35vh; overflow-y: auto;
+  background: rgba(15, 23, 42, 0.96); border-top: 1px solid rgba(148,163,184,0.2);
+  padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; max-height: 35vh; overflow-y: auto; color: #f8fafc;
 }
 .control-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
 .control-slider { flex: 1; height: 6px; accent-color: var(--primary); }
 .parts-badges { display: flex; flex-wrap: wrap; gap: 6px; }
 .part-badge {
   background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3px 8px; border-radius: 6px; font-size: 12px; cursor: pointer; color: #fff;
+  padding: 4px 10px; border-radius: 999px; font-size: 11.5px; cursor: pointer; color: #fff;
 }
-.part-badge.active { background: #00a859; border-color: #4ade80; }
 
-/* Assessment View (Page 29) */
+/* Layer 3D: Dark Immersive Activity Modal (07-activity-3d.png) */
+#activityModal {
+  display: none; position: fixed; inset: 0; background: #0B151C;
+  z-index: 130; flex-direction: column; color: #f8fafc; overflow-y: auto; padding: 12px 14px 20px;
+}
+#activityModal.open { display: flex; }
+.activity-card {
+  width: 100%; max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;
+}
+.act-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.act-circle-btn {
+  width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14); color: #f8fafc; font-size: 17px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.act-title { font-size: 16px; font-weight: 800; color: #FFFFFF; text-align: center; flex: 1; }
+.act-selector-bar {
+  display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; -webkit-overflow-scrolling: touch;
+}
+.act-sel-btn {
+  background: #162530; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0;
+}
+.act-sel-btn.active { background: #0284c7; color: #fff; border-color: #38bdf8; }
+.act-stepper-bar { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; }
+.act-step-btn {
+  flex: 1; background: rgba(255,255,255,0.08); color: #94a3b8; border: none;
+  padding: 6px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap;
+}
+.act-step-btn.active { background: #38bdf8; color: #0B151C; font-weight: 800; }
+.act-step-btn.done { background: rgba(16,185,129,0.28); color: #6ee7b7; }
+.act-stage-box {
+  background: radial-gradient(circle at 50% 45%, #163044 0%, #0B151C 100%);
+  border: 1px solid rgba(56, 189, 248, 0.22); border-radius: 22px;
+  position: relative; height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.telemetry-dark-card {
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px; padding: 12px 16px; display: grid; grid-template-columns: repeat(3, 1fr);
+  text-align: center; gap: 8px;
+}
+.telemetry-val { font-size: 16px; font-weight: 800; }
+.telemetry-lbl { font-size: 10.5px; color: #94a3b8; margin-top: 2px; }
+.burner-flame {
+  width: 28px; height: 50px; background: radial-gradient(ellipse at bottom, #38bdf8 0%, #f59e0b 60%, transparent 80%);
+  border-radius: 50% 50% 20% 20%; animation: flameFlicker 0.15s infinite alternate;
+}
+@keyframes flameFlicker { 0% { transform: scale(1); } 100% { transform: scale(1.08, 0.96); } }
+.magnesium-glow {
+  position: absolute; width: 60px; height: 60px; border-radius: 50%;
+  background: radial-gradient(circle, #fff 30%, #e0f2fe 60%, transparent 80%);
+  box-shadow: 0 0 50px 25px #fff, 0 0 90px 45px #38bdf8;
+}
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 560px) { .comparison-grid { grid-template-columns: 1fr; } }
+.comp-card { border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+.comp-card.before { background: rgba(148,163,184,0.12); border: 1px solid rgba(148,163,184,0.4); }
+.comp-card.after { background: rgba(16,185,129,0.14); border: 1px solid #10b981; }
+.comp-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px dashed rgba(255,255,255,0.1); }
+.comp-label { color: #94a3b8; }
+.comp-val { font-weight: 700; color: #fff; text-align: left; }
+
+/* Assessment Modal (10-quiz.png) */
 #assessmentModal {
-  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
-  z-index: 110; align-items: center; justify-content: center; padding: 16px;
+  display: none; position: fixed; inset: 0; background: var(--bg-page);
+  z-index: 110; align-items: center; justify-content: center; padding: 14px; overflow-y: auto;
 }
 #assessmentModal.open { display: flex; }
 .assessment-card {
-  background: var(--bg-surface); border: 1.5px solid var(--primary);
-  border-radius: 20px; width: 100%; max-width: 620px; max-height: 90vh;
-  padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-}
-.quiz-opt {
-  background: var(--bg-card); color: #ffffff !important; border: 1px solid var(--border-light);
-  border-radius: 12px; padding: 12px 16px; font-size: 14.5px; font-weight: 600;
-  cursor: pointer; text-align: right; display: flex; justify-content: space-between; align-items: center;
-  transition: all 0.2s ease;
-}
-.quiz-opt:hover { background: #334155; border-color: var(--primary); }
-.quiz-opt.correct { background: #059669 !important; border-color: #10b981 !important; }
-.quiz-opt.wrong { background: #b91c1c !important; border-color: #ef4444 !important; }
-.why-wrong-box {
-  background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4);
-  color: #fef08a; border-radius: 8px; padding: 10px 14px; font-size: 13.5px; line-height: 1.5;
+  background: var(--bg-page); width: 100%; max-width: 600px; max-height: 96vh;
+  overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 8px 4px;
 }
 
-/* Table of Contents Drawer (Sidebar) */
-.drawer-backdrop {
-  position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(2px); z-index: 140; opacity: 0; pointer-events: none;
-  transition: opacity 0.25s ease;
-}
+/* Legacy TOC Drawer kept safe */
+.drawer-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,0.5); z-index: 140; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
 .drawer-backdrop.open { opacity: 1; pointer-events: auto; }
-
 #tocDrawer {
   position: fixed; top: 0; bottom: 0; right: 0; width: 320px; max-width: 85vw;
-  background: var(--bg-surface); border-left: 1px solid var(--border-light);
-  z-index: 150; box-shadow: -10px 0 35px rgba(0,0,0,0.55); transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column;
+  background: var(--bg-surface); z-index: 150; transform: translateX(100%);
+  transition: transform 0.3s ease; display: flex; flex-direction: column;
 }
 #tocDrawer.open { transform: translateX(0); }
-.toc-header {
-  padding: 14px 16px; padding-right: 58px; border-bottom: 1px solid var(--border-light);
-  display: flex; justify-content: space-between; align-items: center;
-}
+.toc-header { padding: 14px 16px; border-bottom: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; }
 .toc-list { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
-.toc-item {
-  padding: 10px 12px; border-radius: 8px; background: var(--bg-card);
-  font-size: 13px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between;
-  border: 1px solid transparent; transition: all 0.15s ease;
-}
-.toc-item:hover, .toc-item.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.toc-item { padding: 10px 12px; border-radius: 10px; background: var(--bg-card); font-size: 13px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
 
 #toast {
-  position: fixed; bottom: 65px; left: 50%; transform: translateX(-50%);
-  background: #0f172a; color: #fff; padding: 8px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 600; z-index: 200; opacity: 0; pointer-events: none;
-  transition: opacity 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  position: fixed; bottom: 78px; left: 50%; transform: translateX(-50%);
+  background: #064E3B; color: #fff; padding: 8px 18px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 700; z-index: 210; opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease; box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 #toast.show { opacity: 1; }
 </style>
 </head>
 <body>
 
-<!-- Fixed Corner Actions Dock: Exit Arrow + 3 Lines Sidebar Icon Directly Below It -->
-<div class="corner-actions-dock" id="cornerActionsDock">
-  <!-- 1. سهم الخروج -->
-  <button class="btn-corner-btn btn-exit" onclick="exitToHome()" title="العودة للصفحة الرئيسية (خروج)">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M19 12H5"></path>
-      <path d="M12 19l-7-7 7-7"></path>
-    </svg>
-  </button>
-  
-  <!-- 2. أسفل من سهم الخروج: أيقونة السايدبار (ثلاث خطوط) -->
-  <button class="btn-corner-btn btn-sidebar-toggle" id="btnSidebarToggle" onclick="toggleToc()" title="فهرس الكتاب والوحدات (السايدبار)">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </button>
-</div>
-
-<!-- Top Navigation Bar -->
+<!-- Clean Light Mint Header (05-reader.png) -->
 <header id="topBar">
-  <div class="nav-left">
-    <div class="book-title-badge">
-      <span class="title-main">كتاب ومعمل الأحياء التفاعلي الذكي</span>
-      <span class="title-sub" id="currentSectionTitle">الصف الثالث الثانوي · القسم العلمي</span>
-    </div>
+  <button class="top-squircle-btn" onclick="exitToHome()" title="العودة">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="top-center-title">
+    <span class="title-main" id="currentSectionTitle">كتاب ومعمل الأحياء التفاعلي الذكي</span>
+    <span class="title-sub" id="pageIndicatorText">صفحة 7 من 152</span>
   </div>
-  <div class="nav-right">
-    <button class="btn-icon" onclick="toggleTheme()" title="تبديل المظهر (فاتح / داكن)">🌓</button>
-    <button class="btn-icon" id="btnAudioToggle" onclick="toggleAudio()" title="تشغيل / كتم الصوت">🔊</button>
+  <div class="top-right-actions">
+    <button class="top-squircle-btn" id="btnBookmarkPage" onclick="toggleBookmarkPage()" title="حفظ في المفضلة">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    </button>
+    <button class="top-squircle-btn" onclick="toggleTheme()" title="الوضع الفاتح / الداكن" style="width:36px;height:36px;font-size:14px;">🌓</button>
+    <button class="top-squircle-btn" id="btnAudioToggle" onclick="toggleAudio()" title="الصوت" style="width:36px;height:36px;font-size:14px;">🔊</button>
   </div>
 </header>
 
-<!-- Main Book Viewport -->
-<main id="bookViewport">
-  <div id="pageContainer">
-    <!-- Layer 1: Authentic Page Image -->
-    <img id="pageImg" src="" alt="صفحة الكتاب الوزاري">
-    
-    <!-- Layer 2: Interactive Overlay -->
-    <div id="interactiveOverlay"></div>
-  </div>
-</main>
+<!-- TAB 1: READER VIEW (05-reader.png) -->
+<section id="viewReader" class="tab-view active">
+  <main id="bookViewport">
+    <div id="pageContainer">
+      <img id="pageImg" src="" alt="صفحة الكتاب الوزاري">
+      <div id="interactiveOverlay"></div>
+    </div>
+  </main>
 
-<!-- Bottom Navigation Dock -->
+  <div id="readerFloatingBar">
+    <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()">
+      <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
+    </button>
+    <div class="page-scrubber-bar">
+      <button class="scrubber-nav-btn" onclick="prevPage()">السابق</button>
+      <span id="sliderMinLabel">1</span>
+      <input type="range" id="pageRangeSlider" min="0" max="147" value="2" oninput="onSliderScrub(this.value)">
+      <span id="sliderMaxLabel">152</span>
+      <button class="scrubber-nav-btn" onclick="nextPage()">التالي</button>
+    </div>
+  </div>
+</section>
+
+<!-- TAB 2: INDEX VIEW (08-index.png) -->
+<section id="viewIndex" class="tab-view">
+  <div class="page-scroll-container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+      <div>
+        <div style="font-size:24px; font-weight:900; color:var(--text-main);">الفهرس</div>
+        <div style="font-size:12.5px; color:var(--text-muted);" id="indexBookSub">كتاب ومعمل الأحياء التفاعلي الذكي · الصف الثالث الثانوي · القسم العلمي</div>
+      </div>
+    </div>
+    <div class="search-pill-box">
+      <span>🔍</span>
+      <input type="text" id="indexSearchInput" placeholder="ابحث في الكتاب أو اسم الدرس..." oninput="renderIndexView()">
+    </div>
+    <div id="indexUnitsContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+  </div>
+</section>
+
+<!-- TAB 3: SUMMARY VIEW (09-summary.png) -->
+<section id="viewSummary" class="tab-view">
+  <div class="page-scroll-container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <div style="font-size:24px; font-weight:900; color:var(--text-main);">الملخص</div>
+        <div style="font-size:12.5px; color:var(--text-muted);" id="summaryUnitSub">ملخص مفاهيم وقوانين الدرس</div>
+      </div>
+      <button class="scrubber-nav-btn" id="btnSaveSummaryStar" onclick="toggleBookmarkPage()" style="background:#FEF3C7; color:#92400E; padding:6px 12px; border-radius:999px;">⭐ احفظ</button>
+    </div>
+    <div id="summaryCardsContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+    <button onclick="switchBookTab('quiz')" style="background:var(--primary); color:#fff; border:none; border-radius:999px; padding:14px; font-size:15px; font-weight:800; cursor:pointer; box-shadow:0 6px 18px rgba(0,168,89,0.28); margin-top:4px;">
+      اختبر نفسك في هذا الدرس ‹
+    </button>
+  </div>
+</section>
+
+<!-- TAB 4: QUIZ VIEW (10-quiz.png) -->
+<section id="viewQuiz" class="tab-view">
+  <div class="page-scroll-container">
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      <span class="page-chip-soft" id="quizTabCounter">1 / 4</span>
+      <span style="font-size:15px; font-weight:800; color:var(--text-main);">اختبر نفسك · تدريب</span>
+      <button class="btn-close" onclick="switchBookTab('reader')">✕</button>
+    </div>
+    <div style="width:100%; height:6px; background:var(--border-light); border-radius:999px; overflow:hidden;">
+      <div id="quizTabProgressBar" style="width:25%; height:100%; background:var(--primary); transition:width 0.3s;"></div>
+    </div>
+    <div id="quizTabContainer" style="display:flex; flex-direction:column; gap:12px;"></div>
+  </div>
+</section>
+
+<!-- Floating 4-Tab Pill Dock -->
 <footer id="bottomDock">
-  <div class="page-nav-group">
-    <button class="btn-nav" onclick="prevPage()">السابق ▶</button>
-    <button class="btn-nav" onclick="nextPage()">◀ التالي</button>
-  </div>
-  <div id="pageIndicatorText">صفحة 10 (كتاب الوزارة)</div>
-  <div>
-    <button class="btn-nav" onclick="openCurrentPageExplanation()" style="background:var(--primary);color:#fff;">💡 شرح</button>
-    <button class="btn-nav" onclick="openCurrentPageActivity()" style="background:#7c3aed;color:#fff;">🧪 نشاط</button>
-    <button class="btn-nav" onclick="openCurrentPage3d()" style="background:#0284c7;color:#fff;">🧊 3D</button>
-    <button class="btn-nav" onclick="openCurrentPageQuiz()" style="background:#d97706;color:#fff;">📝 اختبر</button>
-  </div>
+  <button class="dock-tab-btn active" id="dockTabReader" onclick="switchBookTab('reader')">القارئ</button>
+  <button class="dock-tab-btn" id="dockTabIndex" onclick="switchBookTab('index')">الفهرس</button>
+  <button class="dock-tab-btn" id="dockTabSummary" onclick="switchBookTab('summary')">الملخص</button>
+  <button class="dock-tab-btn" id="dockTabQuiz" onclick="switchBookTab('quiz')">اختبر نفسك</button>
 </footer>
 
-<!-- Layer 3A: Smart Text Bottom Sheet -->
+<!-- Layer 3A: Smart Text Bottom Sheet (06-explain-sheet.png) -->
 <div id="textSheet">
+  <div class="sheet-drag-handle"></div>
   <div class="sheet-header">
     <div class="sheet-title">
-      <span>💡 الشرح التعليمي الذكي</span>
+      <div style="width:38px; height:38px; border-radius:10px; background:var(--primary-light); display:flex; align-items:center; justify-content:center; font-size:18px;">📐</div>
+      <div>
+        <div id="sheetHeaderTitleText" style="font-size:17px; font-weight:900; color:var(--text-main);">الشرح التعليمي الذكي</div>
+        <div id="sheetHeaderMetaText" style="font-size:11.5px; color:var(--text-muted); font-weight:600;">صفحة الكتاب</div>
+      </div>
     </div>
     <button class="btn-close" onclick="closeTextSheet()">✕</button>
   </div>
 
-  <div class="companion-banner">
-    <span class="companion-avatar">🧑‍🏫</span>
-    <span class="companion-text" id="sheetCompanionSpeech">أهلاً بك يا بطل! اقرأ المفهوم ولاحظ التوضيحات بالأسفل.</span>
+  <div class="depth-selector">
+    <button class="depth-btn active" id="btnDepthBasic" onclick="setDepth('basic')">شرح مفصل</button>
+    <button class="depth-btn" id="btnDepthIntermediate" onclick="setDepth('intermediate')">توسّع</button>
+    <button class="depth-btn" id="btnDepthAdvanced" onclick="setDepth('advanced')">مثال وتعمّق</button>
+  </div>
+
+  <div style="display:flex; align-items:center; justify-content:space-between; font-size:11px; color:var(--text-muted); font-weight:700;">
+    <div style="display:flex; gap:5px;">
+      <span id="cardStepDot1" style="width:22px;height:4px;border-radius:999px;background:var(--primary);"></span>
+      <span id="cardStepDot2" style="width:22px;height:4px;border-radius:999px;background:#cbd5e1;"></span>
+      <span id="cardStepDot3" style="width:22px;height:4px;border-radius:999px;background:#cbd5e1;"></span>
+    </div>
+    <span id="sheetCardCountLabel">بطاقة 1 من 3</span>
+  </div>
+
+  <div style="font-size:14px; font-weight:800; color:var(--primary-dark);">الفكرة ببساطة</div>
+  <div class="explanation-body" id="sheetExplanationText"></div>
+
+  <div class="dark-rule-card" id="sheetEquationBlock" style="display:none;">
+    <div style="font-size:12px; color:#A7F3D0; font-weight:700;">القاعدة والمعادلة العلمية</div>
+    <div id="sheetEquationsList" style="display:flex; flex-direction:column; gap:6px; font-size:15px; font-weight:800;"></div>
   </div>
 
   <div class="original-callout">
-    <div style="font-size:11.5px; font-weight:800; color:var(--primary); margin-bottom:4px;">النص الأصلي من كتاب الوزارة:</div>
+    <div style="font-size:11px; font-weight:800; color:var(--primary); margin-bottom:2px;">النص المرجعي في كتاب الوزارة:</div>
     <div id="sheetOriginalText"></div>
   </div>
 
-  <div class="depth-selector">
-    <button class="depth-btn active" id="btnDepthBasic" onclick="setDepth('basic')">🟢 شرح مبسط</button>
-    <button class="depth-btn" id="btnDepthIntermediate" onclick="setDepth('intermediate')">🔵 مفهوم متوسط</button>
-    <button class="depth-btn" id="btnDepthAdvanced" onclick="setDepth('advanced')">🟣 تفسير معمق</button>
-  </div>
-
-  <div class="explanation-body" id="sheetExplanationText"></div>
-
   <div id="sheetVocabularyBlock" style="display:none;">
-    <div style="font-size:12px; font-weight:bold; color:var(--text-muted); margin-bottom:4px;">المصطلحات العلمية في هذا النص:</div>
+    <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:4px;">المصطلحات العلمية:</div>
     <div class="vocab-chips-row" id="sheetVocabChips"></div>
   </div>
 
-  <div id="sheetEquationBlock" style="display:none;">
-    <div style="font-size:12px; font-weight:bold; color:var(--text-muted); margin-bottom:4px;">التفاعلات والنسب الحيوية المرتبطة:</div>
-    <div id="sheetEquationsList" style="display:flex; flex-direction:column; gap:6px;"></div>
+  <div class="companion-banner">
+    <span class="companion-avatar">🧑‍🏫</span>
+    <span class="companion-text" id="sheetCompanionSpeech">أهلاً بك يا بطل! اقرأ الفكرة بتركيز ثم جرّب التطبيق العملي.</span>
   </div>
 
-  <div style="display:flex; gap:8px; margin-top:8px;">
-    <button class="btn-nav" id="btnPlaySpeech" onclick="playCurrentTextAudio()" style="flex:1;">🔊 استمع للنص</button>
-    <button class="btn-nav" onclick="closeTextSheet()" style="flex:1;">إغلاق والعودة للكتاب</button>
+  <div style="display:flex; gap:8px; margin-top:4px;">
+    <button class="btn-nav" onclick="openRelatedActivityFromSheet()" style="flex:1.4; background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px;">🧪 جرّب في النشاط</button>
+    <button class="btn-nav" id="btnPlaySpeech" onclick="playCurrentTextAudio()" style="flex:0.9; border-radius:999px;">🔊 استمع</button>
+    <button class="btn-nav" onclick="closeTextSheet()" style="flex:0.8; border-radius:999px;">إغلاق ‹</button>
   </div>
 </div>
 
 <!-- Layer 3B: Interactive 3D Science Laboratory Modal -->
 <div id="lab3dModal">
   <div class="lab-header">
-    <div class="lab-title" id="labModalTitle">🔬 محاكاة معمل الكيمياء ثلاثية الأبعاد (3D)</div>
-    <button class="btn-close" onclick="closeLab3d()" style="color:#fff; font-size:22px;">✕</button>
+    <div class="lab-title" id="labModalTitle">🔬 محاكاة معمل 3D التفاعلي</div>
+    <button class="btn-close" onclick="closeLab3d()" style="background:rgba(255,255,255,0.1); color:#fff;">✕</button>
   </div>
-
+  <div class="diag-tabs-bar" id="labDiagTabs">
+    <button class="diag-tab-btn active" data-diag="diag-co2-prep" onclick="loadDiagramModel('diag-co2-prep')">⚗️ تحضير CO2 (ص 20)</button>
+    <button class="diag-tab-btn" data-diag="diag-sulfur-combustion" onclick="loadDiagramModel('diag-sulfur-combustion')">🔥 احتراق الكبريت (ص 8)</button>
+    <button class="diag-tab-btn" data-diag="diag-rust-experiment" onclick="loadDiagramModel('diag-rust-experiment')">🧪 تجربة الصدأ (ص 13)</button>
+    <button class="diag-tab-btn" data-diag="diag-carbon-allotropes" onclick="loadDiagramModel('diag-carbon-allotropes')">💎 الماس والجرافيت (ص 17)</button>
+    <button class="diag-tab-btn" data-diag="diag-petroleum-fractionation" onclick="loadDiagramModel('diag-petroleum-fractionation')">🛢️ برج النفط (ص 24)</button>
+    <button class="diag-tab-btn" data-diag="diag-chlorine-prep" onclick="loadDiagramModel('diag-chlorine-prep')">🧪 تحضير الكلور Cl₂ (ص 36)</button>
+    <button class="diag-tab-btn" data-diag="diag-capillarity-tubes" onclick="loadDiagramModel('diag-capillarity-tubes')">💧 الخاصية الشعرية (ص 62)</button>
+    <button class="diag-tab-btn" data-diag="diag-hydraulic-press" onclick="loadDiagramModel('diag-hydraulic-press')">⚙️ المكبس الهيدروليكي (ص 84)</button>
+    <button class="diag-tab-btn" data-diag="diag-dna-double-helix" onclick="loadDiagramModel('diag-dna-double-helix')">🧬 الحمض النووي DNA (ص 140)</button>
+  </div>
   <div id="labCanvasContainer">
     <canvas id="labCanvas"></canvas>
-    <div style="position:absolute; top:12px; right:12px; background:rgba(15,23,42,0.85); padding:8px 12px; border-radius:8px; font-size:12px; color:#38bdf8; border:1px solid rgba(56,189,248,0.3); pointer-events:none;">
-      🔄 اسحب للتدوير 360° • قرّب للتكبير • انقر على أي جزء لمعرفة دوره
+    <div class="lab-hud-zoom">
+      <button class="btn-lab-hud" onclick="zoomLab3d(1)" title="تكبير 3D">+</button>
+      <button class="btn-lab-hud" onclick="zoomLab3d(-1)" title="تصغير 3D">-</button>
+      <button class="btn-lab-hud" onclick="resetLab3dView()" title="إعادة ضبط الرؤية">⟲</button>
     </div>
+    <div class="lab-touch-hint">🖐️ إصبع للتدوير 360° • ✌️ إصبعين للتكبير والتصغير</div>
   </div>
-
   <div class="lab-controls-dock">
     <div class="control-row">
       <span style="color:#f8fafc; font-weight:bold;" id="labControlLabel">معدل سكب حمض HCl:</span>
       <input type="range" class="control-slider" id="sliderAcidRate" min="0" max="100" value="45" oninput="onAcidSliderChange(this.value)">
       <span id="sliderAcidVal" style="color:#38bdf8; font-weight:bold; width:45px;">45%</span>
     </div>
-    
     <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-      <div style="font-size:12px; color:var(--text-muted);">أجزاء الجهاز المختبري:</div>
+      <div style="font-size:12px; color:#94a3b8;">أجزاء الجهاز:</div>
       <div class="parts-badges" id="labPartsBadges"></div>
     </div>
-
-    <div style="background:rgba(2,132,199,0.12); border:1px solid rgba(2,132,199,0.3); border-radius:8px; padding:6px 12px; font-size:12.5px; color:#e2e8f0; display:flex; justify-content:space-between; align-items:center;">
-      <span>⚖️ المعادلة: <b>CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂ ↑</b></span>
+    <div style="background:rgba(2,132,199,0.14); border:1px solid rgba(56,189,248,0.3); border-radius:10px; padding:6px 12px; font-size:12px; color:#e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+      <span id="labEquationBadge">⚖️ المعادلة: <b>CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂ ↑</b></span>
       <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تصاعد الغاز: نشط</span>
     </div>
   </div>
 </div>
 
-<!-- Layer 3C: Assessment Modal (Page 29 Authentic Exercises) -->
-<div id="assessmentModal">
-  <div class="assessment-card">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-light); padding-bottom:10px;">
-      <div style="font-size:17px; font-weight:800; color:var(--primary);">📝 تقويم الوحدة التاسعة (كتاب الوزارة ص 29)</div>
-      <button class="btn-close" onclick="closeAssessmentModal()">✕</button>
+<!-- Layer 3D: Immersive Step-by-Step Activity Modal (07-activity-3d.png) -->
+<div id="activityModal">
+  <div class="activity-card">
+    <div class="act-header">
+      <button class="act-circle-btn" onclick="resetActivitySimulation()" title="إعادة الخطوات">⟲</button>
+      <div style="flex:1; text-align:center;">
+        <div class="act-title" id="actModalMainTitle">نشاط عملي تفاعلي</div>
+        <div style="font-size:11px; color:#94a3b8;" id="actStepCounterBadge">خطوة 1 من 5</div>
+      </div>
+      <button class="act-circle-btn" onclick="closeActivityModal()" title="إغلاق">✕</button>
     </div>
 
-    <div class="companion-banner">
-      <span class="companion-avatar">🧑‍🏫</span>
-      <span class="companion-text">حل تمرين الكتاب الوزاري! كل خطأ فرصة لفهم السبب وتثبيت المعلومة.</span>
+    <div class="act-selector-bar" id="actSelectorBar">
+      <button class="act-sel-btn active" data-act="act-magnesium-combustion" onclick="switchActivity('act-magnesium-combustion')">⚗️ نشاط 1: الماغنسيوم</button>
+      <button class="act-sel-btn" data-act="act-sulfur-combustion" onclick="switchActivity('act-sulfur-combustion')">🔥 نشاط 2: الكبريت</button>
+      <button class="act-sel-btn" data-act="act-rusting-conditions" onclick="switchActivity('act-rusting-conditions')">🧪 نشاط 3: صدأ الحديد</button>
+      <button class="act-sel-btn" data-act="act-carbon-allotropy" onclick="switchActivity('act-carbon-allotropy')">💎 تآصل الكربون</button>
+      <button class="act-sel-btn" data-act="act-co2-prep-procedure" onclick="switchActivity('act-co2-prep-procedure')">🔬 تحضير CO2</button>
+      <button class="act-sel-btn" data-act="act-co2-properties" onclick="switchActivity('act-co2-properties')">🕯️ خواص CO2</button>
+      <button class="act-sel-btn" data-act="act-petroleum-refining" onclick="switchActivity('act-petroleum-refining')">🛢️ تكرير النفط</button>
+      <button class="act-sel-btn" data-act="act-chlorine-prep" onclick="switchActivity('act-chlorine-prep')">🧪 تحضير الكلور</button>
+      <button class="act-sel-btn" data-act="act-elasticity-solids" onclick="switchActivity('act-elasticity-solids')">🔩 المرونة واللدونة</button>
+      <button class="act-sel-btn" data-act="act-surface-tension" onclick="switchActivity('act-surface-tension')">💧 التوتر السطحي</button>
+      <button class="act-sel-btn" data-act="act-viscosity-liquids" onclick="switchActivity('act-viscosity-liquids')">🍯 اللزوجة</button>
+      <button class="act-sel-btn" data-act="act-liquid-pressure-depth" onclick="switchActivity('act-liquid-pressure-depth')">🌊 ضغط السوائل</button>
+      <button class="act-sel-btn" data-act="act-atmospheric-cup" onclick="switchActivity('act-atmospheric-cup')">🥛 الضغط الجوي</button>
+      <button class="act-sel-btn" data-act="act-solar-concentration" onclick="switchActivity('act-solar-concentration')">☀️ الطاقة الشمسية</button>
+      <button class="act-sel-btn" data-act="act-mendel-punnett" onclick="switchActivity('act-mendel-punnett')">🧬 تجارب مندل</button>
     </div>
 
-    <div id="assessmentQuestionPrompt" style="font-size:15.5px; font-weight:700; color:#fff; line-height:1.5;"></div>
+    <div class="act-stepper-bar" id="actStepperBar">
+      <button class="act-step-btn active" id="actStepBtn1" onclick="jumpActivityStep(1)">١. فحص</button>
+      <button class="act-step-btn" id="actStepBtn2" onclick="jumpActivityStep(2)">٢. تحضير</button>
+      <button class="act-step-btn" id="actStepBtn3" onclick="jumpActivityStep(3)">٣. تفاعل</button>
+      <button class="act-step-btn" id="actStepBtn4" onclick="jumpActivityStep(4)">٤. نتيجة</button>
+      <button class="act-step-btn" id="actStepBtn5" onclick="jumpActivityStep(5)">٥. مقارنة</button>
+    </div>
 
-    <div id="assessmentOptionsContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
+    <div style="text-align:center; font-size:13.5px; font-weight:800; color:#38bdf8;" id="actStepTitleText">الخطوة ١</div>
 
-    <div id="assessmentFeedbackBox" style="display:none; border-radius:10px; padding:12px;"></div>
+    <div class="act-stage-box" id="actStageBox">
+      <div id="dynamicStageVisual" style="width:100%; height:100%; position:relative; display:flex; align-items:center; justify-content:center;"></div>
+    </div>
 
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
-      <div id="assessmentScoreText" style="font-size:14px; font-weight:bold; color:var(--primary);">الدرجة: 0 / 0</div>
-      <button class="btn-nav" id="btnNextExercise" onclick="nextAssessmentExercise()" style="background:var(--primary); color:#fff; display:none;">التمرين التالي ◀</button>
+    <div class="telemetry-dark-card">
+      <div><div class="telemetry-val" style="color:#c084fc;" id="telVal1">تجربة عملية</div><div class="telemetry-lbl">الحالة</div></div>
+      <div><div class="telemetry-val" style="color:#38bdf8;" id="telVal2">25° م</div><div class="telemetry-lbl">الظروف</div></div>
+      <div><div class="telemetry-val" style="color:#4ade80;" id="telVal3">آمن ✓</div><div class="telemetry-lbl">السلامة</div></div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:12px; display:flex; flex-direction:column; gap:8px;">
+      <div id="actStepInstructionText" style="font-size:13px; color:#e2e8f0; line-height:1.6;"></div>
+      <div style="display:flex; justify-content:space-between; gap:8px;">
+        <button class="btn-nav" id="btnPrevActStep" onclick="prevActivityStep()" style="background:#1e293b; color:#fff; border-color:#334155; display:none;">السابق</button>
+        <button class="btn-nav" id="btnExecuteActAction" onclick="executeCurrentActAction()" style="background:var(--primary); color:#fff; border-color:var(--primary); font-weight:800; flex:1; border-radius:999px;">⚡ نفّذ الخطوة</button>
+        <button class="btn-nav" id="btnNextActStep" onclick="nextActivityStep()" style="background:#0284c7; color:#fff; border-color:#0284c7; border-radius:999px;">التالي ‹</button>
+      </div>
+    </div>
+
+    <div id="actExtraToolsButtons" style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center;"></div>
+
+    <div class="companion-banner" style="background:rgba(245,158,11,0.12); border-color:rgba(245,158,11,0.35);">
+      <span class="companion-avatar">💡</span>
+      <span class="companion-text" id="actCompanionSpeech" style="color:#fde68a;">ماذا لو غيرت ظروف التجربة؟ لاحظ الفرق بين قبل وبعد!</span>
+    </div>
+
+    <div id="actComparisonBox" style="display:none;">
+      <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:6px;" id="compHeaderTitle">⚖️ المقارنة الدقيقة (قبل vs بعد)</div>
+      <div class="comparison-grid">
+        <div class="comp-card before">
+          <div style="font-size:13px;font-weight:800;color:#cbd5e1;" id="compBeforeTitle">🔘 قبل التفاعل</div>
+          <div class="comp-row"><span class="comp-label">اللون:</span><span class="comp-val" id="compBeforeColor">-</span></div>
+          <div class="comp-row"><span class="comp-label">الحالة:</span><span class="comp-val" id="compBeforeState">-</span></div>
+          <div class="comp-row"><span class="comp-label">البريق:</span><span class="comp-val" id="compBeforeLuster">-</span></div>
+          <div class="comp-row"><span class="comp-label">التوصيل:</span><span class="comp-val" id="compBeforeConductivity">-</span></div>
+          <div class="comp-row"><span class="comp-label">الطبيعة:</span><span class="comp-val" id="compBeforeNature">-</span></div>
+        </div>
+        <div class="comp-card after">
+          <div style="font-size:13px;font-weight:800;color:#4ade80;" id="compAfterTitle">⚪ بعد التفاعل</div>
+          <div class="comp-row"><span class="comp-label">اللون:</span><span class="comp-val" id="compAfterColor">-</span></div>
+          <div class="comp-row"><span class="comp-label">الحالة:</span><span class="comp-val" id="compAfterState">-</span></div>
+          <div class="comp-row"><span class="comp-label">البريق:</span><span class="comp-val" id="compAfterLuster">-</span></div>
+          <div class="comp-row"><span class="comp-label">التوصيل:</span><span class="comp-val" id="compAfterConductivity">-</span></div>
+          <div class="comp-row"><span class="comp-label">الطبيعة:</span><span class="comp-val" id="compAfterNature" style="color:#4ade80;">-</span></div>
+        </div>
+      </div>
+      <div style="background:rgba(2,132,199,0.16); border:1px solid rgba(56,189,248,0.35); border-radius:12px; padding:10px; margin-top:8px; text-align:center;">
+        <div id="actEquationSymbolic" style="font-size:14px; font-weight:800; color:#fff; direction:ltr;">-</div>
+        <div id="actEquationVerbal" style="font-size:12px; color:#bae6fd; margin-top:4px;">-</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:8px;">
+      <button onclick="closeActivityModal()" style="flex:1; background:rgba(255,255,255,0.1); color:#fff; border:none; border-radius:999px; padding:12px; font-weight:800; cursor:pointer;">إلى الصفحة</button>
+      <button onclick="closeActivityModal(); switchBookTab('quiz');" style="flex:1.2; background:var(--primary); color:#fff; border:none; border-radius:999px; padding:12px; font-weight:800; cursor:pointer;">اختبر نفسك</button>
     </div>
   </div>
 </div>
 
-<!-- Table of Contents Backdrop -->
-<div id="tocBackdrop" class="drawer-backdrop" onclick="toggleToc()"></div>
+<!-- Layer 3C: Assessment Modal (10-quiz.png) -->
+<div id="assessmentModal">
+  <div class="assessment-card">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <span class="page-chip-soft" id="assessmentScoreText">الدرجة: 0 / 0</span>
+      <span style="font-size:16px; font-weight:800; color:var(--text-main);">اختبر نفسك · تدريب</span>
+      <button class="btn-close" onclick="closeAssessmentModal()">✕</button>
+    </div>
+    <div class="quiz-question-card">
+      <span class="amber-tag-pill">تمرين كتاب الوزارة</span>
+      <div id="assessmentQuestionPrompt" style="font-size:16px; font-weight:800; color:var(--text-main); line-height:1.6;"></div>
+    </div>
+    <div id="assessmentOptionsContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
+    <div id="assessmentFeedbackBox" class="why-wrong-box" style="display:none;"></div>
+    <div style="display:flex; gap:8px; margin-top:4px;">
+      <button onclick="closeAssessmentModal()" class="btn-nav" style="flex:1; border-radius:999px;">📖 راجع الصفحة</button>
+      <button class="btn-nav" id="btnNextExercise" onclick="nextAssessmentExercise()" style="flex:1.3; background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px; display:none;">السؤال التالي ‹</button>
+    </div>
+  </div>
+</div>
 
-<!-- Table of Contents Drawer (Sidebar) -->
+<!-- Legacy TOC Drawer (kept compatible) -->
+<div id="tocBackdrop" class="drawer-backdrop" onclick="toggleToc()"></div>
 <div id="tocDrawer">
   <div class="toc-header">
-    <div style="font-size:14.5px; font-weight:800; color:var(--primary); display:flex; align-items:center; gap:6px;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-      فهرس وحدات الصف الثالث الثانوي · القسم العلمي
-    </div>
+    <div style="font-size:14.5px; font-weight:800; color:var(--primary);">فهرس وحدات الصف الثالث الثانوي · القسم العلمي</div>
     <button class="btn-close" onclick="toggleToc()">✕</button>
   </div>
   <div class="toc-list" id="tocListContainer"></div>
@@ -518,17 +843,67 @@ const LESSONS = CURR_DATA?.lessons || [];
 const UNITS = CURR_DATA?.units || [];
 
 
+const state = {
+  curPageIdx: 2,
+  scale: 1.0,
+  panX: 0,
+  panY: 0,
+  zoomLevel: 1.0,
+  curDepth: 'basic',
+  curExplanationRef: null,
+  curAssessmentId: null,
+  studentId: 'default',
+  audioEnabled: true,
+  isDark: false
+};
+
 // --------------------------------------------------------
 // LAYER 1: ORIGINAL PAGE RENDERER
 // --------------------------------------------------------
-function loadPage(pageIdx) {
+function updatePageContainerDimensions() {
+  const vp = document.getElementById('bookViewport');
+  const pc = document.getElementById('pageContainer');
+  if (!vp || !pc) return;
+  const pad = 16;
+  const availW = Math.max(100, vp.clientWidth - pad);
+  const availH = Math.max(100, vp.clientHeight - pad);
+  const pageAspect = 1004 / 1417;
+
+  let targetW, targetH;
+  if (availW / availH > pageAspect) {
+    targetH = availH;
+    targetW = Math.round(targetH * pageAspect);
+  } else {
+    targetW = availW;
+    targetH = Math.round(targetW / pageAspect);
+  }
+
+  pc.style.width = targetW + 'px';
+  pc.style.height = targetH + 'px';
+}
+
+function loadPage(pageIdx, direction = 0) {
   if (pageIdx < 0 || pageIdx >= PAGES.length) return;
   state.curPageIdx = pageIdx;
   const p = PAGES[pageIdx];
 
   resetPageZoom();
 
+  const container = document.getElementById('pageContainer');
+  if (container && direction !== 0) {
+    container.style.transition = 'transform 0.15s ease-out, opacity 0.15s ease-out';
+    container.style.opacity = '0.4';
+    container.style.transform = direction > 0 ? 'translateX(-22px)' : 'translateX(22px)';
+    setTimeout(() => {
+      container.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease';
+      container.style.opacity = '1';
+      container.style.transform = 'none';
+    }, 25);
+  }
+
   const imgEl = document.getElementById('pageImg');
+  imgEl._retried = false;
+  imgEl._triedFull = false;
   imgEl.onerror = function() {
     if (this.src.indexOf('assets/curriculum') !== -1 && !this._retried) {
       this._retried = true;
@@ -538,7 +913,9 @@ function loadPage(pageIdx) {
       this.src = p.image_full || p.image;
     }
   };
+  imgEl.onload = function() { updatePageContainerDimensions(); };
   imgEl.src = p.image || p.image_full;
+  updatePageContainerDimensions();
 
   document.getElementById('pageIndicatorText').textContent = `صفحة ${p.book_page} (كتاب الوزارة)`;
   document.getElementById('currentSectionTitle').textContent = p.title || 'كتاب العلوم التفاعلي الذكي';
@@ -548,13 +925,21 @@ function loadPage(pageIdx) {
 }
 
 function prevPage() {
-  if (state.curPageIdx > 0) loadPage(state.curPageIdx - 1);
-  else showToast('أنت في بداية الكتاب');
+  if (state.curPageIdx > 0) {
+    playSnapSound();
+    loadPage(state.curPageIdx - 1, -1);
+  } else {
+    showToast('أنت في بداية الكتاب');
+  }
 }
 
 function nextPage() {
-  if (state.curPageIdx < PAGES.length - 1) loadPage(state.curPageIdx + 1);
-  else showToast('أنت في نهاية الصفحات المتاحة حالياً');
+  if (state.curPageIdx < PAGES.length - 1) {
+    playSnapSound();
+    loadPage(state.curPageIdx + 1, 1);
+  } else {
+    showToast('أنت في نهاية الصفحات المتاحة حالياً');
+  }
 }
 
 function quickJumpPoc(bookPageNum) {
@@ -720,6 +1105,30 @@ function initTouchGestures() {
     if (e.touches.length === 0) {
       touchState.isGesturing = false;
 
+      // Horizontal Swipe Gesture to Flip Pages: Swipe Right -> Next, Swipe Left -> Previous
+      if (state.scale <= 1.08 && e.changedTouches && e.changedTouches.length > 0) {
+        const t = e.changedTouches[0];
+        const dx = t.clientX - touchState.startX;
+        const dy = t.clientY - touchState.startY;
+        const absDx = Math.abs(dx);
+        const absDy = Math.abs(dy);
+
+        // Threshold: at least 42px horizontal movement, and horizontal dominates vertical movement
+        if (absDx > 42 && absDx > absDy * 1.1) {
+          touchState.wasGesture = true;
+          touchState.lastTapTime = 0; // prevent double tap
+          if (dx > 42) {
+            // Swiped to the right: Next Page
+            nextPage();
+            return;
+          } else if (dx < -42) {
+            // Swiped to the left: Previous Page
+            prevPage();
+            return;
+          }
+        }
+      }
+
       if (state.scale <= 1.05) {
         state.scale = 1.0;
         state.panX = 0;
@@ -822,18 +1231,705 @@ function renderInteractionsOverlay(pageId) {
 
 function handleHotspotClick(item) {
   playClickSound();
-  if (item.type === 'explainable_text') {
+  if (item.type === 'explainable_text' || item.type === 'title') {
     openTextExplanation(item.explanation_ref);
   } else if (item.type === 'interactive_3d') {
     openLab3d(item.diagram_ref);
   } else if (item.type === 'activity') {
-    openTextExplanation(item.explanation_ref || 'exp-oxidation-metals');
+    openActivityModal(item.activity_ref || 'act-magnesium-combustion');
   } else if (item.type === 'assessment') {
     openAssessmentModal(item.assessment_ref);
   }
 }
 
 // --------------------------------------------------------
+
+// --------------------------------------------------------
+// --------------------------------------------------------
+// LAYER 3D: INTERACTIVE ACTIVITY ENGINE (ALL 7 UNIT 9 ACTIVITIES)
+// --------------------------------------------------------
+const actState = {
+  currentActId: 'act-magnesium-combustion',
+  curStep: 1,
+  totalSteps: 5,
+  metal: 'mg'
+};
+
+function openActivityModal(actId) {
+  if (actId) actState.currentActId = actId;
+  const modal = document.getElementById('activityModal');
+  if (!modal) return;
+  modal.classList.add('open');
+  switchActivity(actState.currentActId);
+  playDingSound();
+}
+
+function closeActivityModal() {
+  const modal = document.getElementById('activityModal');
+  if (modal) modal.classList.remove('open');
+  playClickSound();
+}
+
+function switchActivity(actId) {
+  actState.currentActId = actId || 'act-magnesium-combustion';
+  actState.curStep = 1;
+  actState.metal = 'mg';
+
+  // Update tabs in selector bar
+  document.querySelectorAll('.act-sel-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-act') === actState.currentActId);
+  });
+
+  const acts = window.THAKER_CURRICULUM_P2?.activities || {};
+  const data = acts[actState.currentActId];
+  if (!data) return;
+
+  document.getElementById('actModalMainTitle').textContent = data.title;
+  actState.totalSteps = data.steps?.length || 5;
+
+  // Update stepper buttons text
+  for (let i = 1; i <= 5; i++) {
+    const btn = document.getElementById(`actStepBtn${i}`);
+    if (btn) {
+      if (data.steps && data.steps[i - 1]) {
+        btn.textContent = `${i}. ${data.steps[i - 1].title}`;
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    }
+  }
+
+  // Update extra tools buttons (e.g. metals for activity 1)
+  const extraToolsContainer = document.getElementById('actExtraToolsButtons');
+  if (actState.currentActId === 'act-magnesium-combustion') {
+    extraToolsContainer.innerHTML = `
+      <button class="btn-nav" onclick="testOtherMetal('na')" style="font-size:11px; padding:4px 8px; background:#f59e0b; color:#fff;">الصوديوم (Na)</button>
+      <button class="btn-nav" onclick="testOtherMetal('ca')" style="font-size:11px; padding:4px 8px; background:#ef4444; color:#fff;">الكالسيوم (Ca)</button>
+      <button class="btn-nav" onclick="testOtherMetal('fe')" style="font-size:11px; padding:4px 8px; background:#64748b; color:#fff;">الحديد (Fe)</button>
+      <button class="btn-nav" onclick="resetActivitySimulation()" style="font-size:11px; padding:4px 8px; background:#334155; color:#fff;">إعادة ⟲</button>
+    `;
+  } else {
+    extraToolsContainer.innerHTML = `
+      <button class="btn-nav" onclick="resetActivitySimulation()" style="font-size:11.5px; padding:4px 10px; background:#334155; color:#fff;">إعادة الخطوات ⟲</button>
+    `;
+  }
+
+  updateActivityUI();
+}
+
+function updateActivityUI() {
+  const acts = window.THAKER_CURRICULUM_P2?.activities || {};
+  const data = acts[actState.currentActId];
+  if (!data) return;
+
+  const step = actState.curStep;
+  const curStepData = data.steps?.[step - 1];
+
+  // Update Stepper buttons active/done
+  for (let i = 1; i <= actState.totalSteps; i++) {
+    const btn = document.getElementById(`actStepBtn${i}`);
+    if (btn) {
+      btn.classList.toggle('active', i === step);
+      btn.classList.toggle('done', i < step);
+    }
+  }
+
+  // Text details
+  document.getElementById('actStepCounterBadge').textContent = `خطوة ${step} من ${actState.totalSteps}`;
+  document.getElementById('actStepTitleText').textContent = `الخطوة ${step}: ${curStepData?.title || ''}`;
+  document.getElementById('actStepInstructionText').textContent = curStepData?.desc || '';
+  document.getElementById('actCompanionSpeech').textContent = curStepData?.voice || 'أهلاً بك يا بطل! نفذ الخطوة لتكتشف النتيجة العلمية.';
+
+  document.getElementById('btnPrevActStep').style.display = step > 1 ? 'block' : 'none';
+  document.getElementById('btnNextActStep').style.display = step < actState.totalSteps ? 'block' : 'none';
+
+  // Comparison Box (Step 5)
+  const compBox = document.getElementById('actComparisonBox');
+  if (step === actState.totalSteps && data.comparison) {
+    compBox.style.display = 'block';
+    const c = data.comparison;
+    document.getElementById('compBeforeTitle').textContent = `🔘 ${c.before.title}`;
+    document.getElementById('compBeforeColor').textContent = c.before.color;
+    document.getElementById('compBeforeState').textContent = c.before.state;
+    document.getElementById('compBeforeLuster').textContent = c.before.luster;
+    document.getElementById('compBeforeConductivity').textContent = c.before.conductivity;
+    document.getElementById('compBeforeNature').textContent = c.before.nature;
+
+    document.getElementById('compAfterTitle').textContent = `⚪ ${c.after.title}`;
+    document.getElementById('compAfterColor').textContent = c.after.color;
+    document.getElementById('compAfterState').textContent = c.after.state;
+    document.getElementById('compAfterLuster').textContent = c.after.luster;
+    document.getElementById('compAfterConductivity').textContent = c.after.conductivity;
+    document.getElementById('compAfterNature').textContent = c.after.nature;
+
+    document.getElementById('actEquationSymbolic').textContent = data.equation_symbolic || '';
+    document.getElementById('actEquationVerbal').textContent = data.equation_verbal || '';
+  } else {
+    compBox.style.display = 'none';
+  }
+
+  // Render Visual Stage for this specific activity and step
+  renderStageVisuals(actState.currentActId, step);
+}
+
+function renderStageVisuals(actId, step) {
+  const container = document.getElementById('dynamicStageVisual');
+  if (!container) return;
+
+  if (actId === 'act-magnesium-combustion') {
+    renderMagnesiumStage(container, step);
+  } else if (actId === 'act-sulfur-combustion') {
+    renderSulfurStage(container, step);
+  } else if (actId === 'act-rusting-conditions') {
+    renderRustingStage(container, step);
+  } else if (actId === 'act-carbon-allotropy') {
+    renderCarbonStage(container, step);
+  } else if (actId === 'act-co2-prep-procedure') {
+    renderCo2PrepStage(container, step);
+  } else if (actId === 'act-co2-properties') {
+    renderCo2PropsStage(container, step);
+  } else if (actId === 'act-petroleum-refining') {
+    renderPetroleumStage(container, step);
+  } else if (actId === 'act-chlorine-prep') {
+    renderChlorinePrepStage(container, step);
+  } else if (actId === 'act-elasticity-solids') {
+    renderElasticityStage(container, step);
+  } else if (actId === 'act-surface-tension') {
+    renderSurfaceTensionStage(container, step);
+  } else if (actId === 'act-viscosity-liquids') {
+    renderViscosityStage(container, step);
+  } else if (actId === 'act-liquid-pressure-depth') {
+    renderLiquidPressureStage(container, step);
+  } else if (actId === 'act-atmospheric-cup') {
+    renderAtmosphericCupStage(container, step);
+  } else if (actId === 'act-solar-concentration') {
+    renderSolarConcentrationStage(container, step);
+  } else if (actId === 'act-mendel-punnett') {
+    renderMendelPunnettStage(container, step);
+  } else {
+    renderDynamicActivityStage(container, actId, step);
+  }
+}
+
+function renderChlorinePrepStage(el, step) {
+  const heating = step >= 2;
+  const gasVisible = step >= 2;
+  const washed = step >= 3;
+  const bleached = step >= 4;
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; align-items:flex-end; justify-content:space-around; padding:12px 10px 14px; position:relative;">
+      <!-- Heating Flask (MnO2 + HCl) -->
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="width:58px; height:58px; border-radius:50%; border:2px solid #94a3b8; background:rgba(255,255,255,0.06); position:relative; overflow:hidden;">
+          <div style="position:absolute; bottom:0; left:0; right:0; height:16px; background:#1e293b;"></div>
+          <div style="position:absolute; bottom:14px; left:0; right:0; height:14px; background:rgba(163,230,53,0.45);"></div>
+          ${gasVisible ? '<div style="position:absolute; top:4px; left:18px; font-size:12px;">🟢</div>' : ''}
+        </div>
+        ${heating ? '<div class="burner-flame" style="transform:scale(0.65); margin-top:-4px;"></div>' : '<div style="height:18px;"></div>'}
+        <span style="font-size:10px; color:#cbd5e1; font-weight:700;">دورق MnO₂+HCl</span>
+      </div>
+      <div style="align-self:center; font-size:16px; color:#a3e635;">➔</div>
+      <!-- Wash & Dry Bottles -->
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="display:flex; gap:6px;">
+          <div style="width:32px; height:54px; border:2px solid #38bdf8; border-radius:6px; background:linear-gradient(to top, rgba(14,165,233,0.45) 55%, transparent 55%); display:flex; align-items:center; justify-content:center; font-size:9px; color:#fff;">ماء</div>
+          <div style="width:32px; height:54px; border:2px solid #eab308; border-radius:6px; background:linear-gradient(to top, rgba(234,179,8,0.45) 55%, transparent 55%); display:flex; align-items:center; justify-content:center; font-size:8px; color:#fff;">H₂SO₄</div>
+        </div>
+        <span style="font-size:10px; color:#94a3b8; margin-top:4px;">${washed ? 'تنقية وتجفيف ✓' : 'غسيل وتجفيف'}</span>
+      </div>
+      <div style="align-self:center; font-size:16px; color:#a3e635;">➔</div>
+      <!-- Chlorine Jar + Flower -->
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="width:54px; height:76px; border:2px solid #84cc16; border-radius:6px; background:${gasVisible ? 'rgba(163,230,53,0.38)' : 'rgba(255,255,255,0.04)'}; display:flex; flex-direction:column; align-items:center; justify-content:center; transition:all 0.4s;">
+          <span style="font-size:20px; filter:${bleached ? 'grayscale(1) brightness(1.8)' : 'none'}; transition:filter 0.5s;">🌺</span>
+          <span style="font-size:9px; font-weight:800; color:#ecfccb;">${gasVisible ? 'Cl₂' : 'فارغ'}</span>
+        </div>
+        <span style="font-size:10px; color:#bef264; margin-top:4px;">${bleached ? 'زوال لون الزهرة ✓' : 'مخبار جمع الكلور'}</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderElasticityStage(el, step) {
+  const stretched = step === 2;
+  const released = step >= 3;
+  const springW = stretched ? '115px' : '72px';
+  const clayRadius = step >= 2 ? '45% 25% 50% 30%' : '12px';
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; justify-content:space-around; align-items:center; padding:12px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="width:${springW}; height:28px; border:3px dashed #38bdf8; border-radius:8px; background:rgba(56,189,248,0.18); transition:width 0.45s ease; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#bae6fd;">نابض مرن</div>
+        <span style="font-size:11px; color:#38bdf8; font-weight:700;">${stretched ? 'استطالة عند الشد' : (released ? 'عاد لشكله الأصلي ✓' : 'الشكل الأصلي')}</span>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="width:68px; height:42px; background:linear-gradient(135deg, #f59e0b, #b45309); border-radius:${clayRadius}; transition:border-radius 0.45s ease; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff;">صلصال</div>
+        <span style="font-size:11px; color:#fbbf24; font-weight:700;">${step >= 2 ? 'بقي متغيراً (لدونة)!' : 'قبل الضغط'}</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderSurfaceTensionStage(el, step) {
+  const needleTop = step >= 4 ? '92px' : '32px';
+  const soapAdded = step >= 4;
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px;">
+      <div style="width:220px; height:115px; border:2px solid #94a3b8; border-top:none; border-radius:0 0 12px 12px; position:relative; background:linear-gradient(to bottom, transparent 28%, rgba(14,165,233,0.45) 28%); overflow:hidden;">
+        <div style="position:absolute; top:32px; left:0; right:0; height:2px; background:${soapAdded ? 'rgba(239,68,68,0.5)' : '#38bdf8'};"></div>
+        ${step >= 2 ? `<div style="position:absolute; top:${needleTop}; left:50%; transform:translateX(-50%); width:70px; height:5px; background:linear-gradient(90deg, #94a3b8, #f8fafc, #94a3b8); border-radius:4px; transition:top 0.6s ease;"></div>` : ''}
+        ${soapAdded ? '<div style="position:absolute; top:12px; right:24px; font-size:14px;">🫧 صابون</div>' : ''}
+      </div>
+      <span style="font-size:11.5px; color:#e2e8f0; margin-top:8px; font-weight:700;">${soapAdded ? 'انكسر التوتر السطحي وغاصت الإبرة!' : (step >= 2 ? 'الإبرة تطفو على الغشاء المشدود ✓' : 'حوض ماء نقي ساكن')}</span>
+    </div>
+  `;
+}
+
+function renderViscosityStage(el, step) {
+  const dropped = step >= 2;
+  const ballWater = dropped ? '88px' : '12px';
+  const ballOil = dropped ? '58px' : '12px';
+  const ballHoney = dropped ? (step >= 4 ? '72px' : '28px') : '12px';
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; justify-content:space-around; align-items:flex-end; padding:14px;">
+      ${[
+        { name: 'ماء', bg: 'rgba(14,165,233,0.45)', top: ballWater, dur: '0.4s' },
+        { name: 'زيت', bg: 'rgba(250,204,21,0.45)', top: ballOil, dur: '0.9s' },
+        { name: step >= 4 ? 'عسل دافئ' : 'عسل', bg: 'rgba(217,119,6,0.65)', top: ballHoney, dur: '1.5s' }
+      ].map(t => `
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div style="width:36px; height:110px; border:2px solid #cbd5e1; border-radius:6px; background:${t.bg}; position:relative;">
+            <div style="width:14px; height:14px; border-radius:50%; background:#f1f5f9; position:absolute; left:9px; top:${t.top}; transition:top ${t.dur} ease-in;"></div>
+          </div>
+          <span style="font-size:11px; color:#e2e8f0; margin-top:4px; font-weight:700;">${t.name}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderLiquidPressureStage(el, step) {
+  const flowing = step >= 3;
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; gap:14px; padding:10px;">
+      <div style="width:68px; height:125px; border:2px solid #94a3b8; border-radius:8px; background:linear-gradient(to top, rgba(14,165,233,0.65) 85%, transparent 85%); position:relative;">
+        ${flowing ? `
+          <div style="position:absolute; top:26px; left:-34px; width:34px; height:3px; background:#38bdf8; border-radius:2px;"></div>
+          <div style="position:absolute; top:60px; left:-68px; width:68px; height:4px; background:#38bdf8; border-radius:2px;"></div>
+          <div style="position:absolute; top:96px; left:-110px; width:110px; height:5px; background:#0ea5e9; border-radius:2px;"></div>
+        ` : ''}
+      </div>
+      <div style="font-size:11.5px; color:#bae6fd; font-weight:700; max-width:145px;">
+        ${flowing ? 'الاندفاع من الثقب السفلي هو الأبعد لأن الضغط يزداد بالعمق (P = ρgh) ✓' : 'زجاجة ماء بها 3 ثقوب على أعماق مختلفة'}
+      </div>
+    </div>
+  `;
+}
+
+function renderAtmosphericCupStage(el, step) {
+  const inverted = step >= 3;
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px;">
+      <div style="transform:${inverted ? 'rotate(180deg)' : 'none'}; transition:transform 0.6s ease; display:flex; flex-direction:column; align-items:center;">
+        ${step >= 2 ? '<div style="width:76px; height:6px; background:#f59e0b; border-radius:2px;"></div>' : ''}
+        <div style="width:64px; height:86px; border:2px solid #cbd5e1; border-top:none; border-radius:0 0 8px 8px; background:rgba(14,165,233,0.55);"></div>
+      </div>
+      <span style="font-size:11.5px; color:#38bdf8; font-weight:800; margin-top:10px;">${step >= 4 ? '⬆️ الضغط الجوي للأعلى يحمل الماء ويمنع انسكابه ✓' : 'تجربة الكأس المقلوب'}</span>
+    </div>
+  `;
+}
+
+function renderSolarConcentrationStage(el, step) {
+  const focused = step >= 2;
+  const burning = step >= 3;
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:space-around; padding:12px;">
+      <div style="font-size:30px;">☀️</div>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="width:14px; height:74px; border-radius:50%; background:rgba(56,189,248,0.35); border:2px solid #38bdf8;"></div>
+        <span style="font-size:10px; color:#94a3b8;">عدسة محدبة</span>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div style="width:60px; height:66px; background:#fef3c7; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:20px; box-shadow:${focused ? '0 0 14px #f59e0b' : 'none'};">
+          ${burning ? '🔥' : (focused ? '🔆' : '📄')}
+        </div>
+        <span style="font-size:10px; color:#fbbf24; margin-top:4px;">${burning ? 'تركيز الطاقة واشتعال!' : 'بؤرة الأشعة'}</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderMendelPunnettStage(el, step) {
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10px;">
+      <div style="display:flex; align-items:center; gap:10px; font-size:13px; font-weight:800;">
+        <span style="background:rgba(168,85,247,0.22); border:1px solid #a855f7; padding:4px 10px; border-radius:8px; color:#e9d5ff;">🌸 أرجواني AA</span>
+        <span>×</span>
+        <span style="background:rgba(248,250,252,0.12); border:1px solid #cbd5e1; padding:4px 10px; border-radius:8px; color:#f8fafc;">🤍 أبيض aa</span>
+      </div>
+      ${step >= 3 ? `
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; width:170px; text-align:center; font-size:12px; font-weight:800;">
+          <div style="background:rgba(168,85,247,0.35); padding:5px; border-radius:6px;">AA (سائد)</div>
+          <div style="background:rgba(168,85,247,0.25); padding:5px; border-radius:6px;">Aa (سائد)</div>
+          <div style="background:rgba(168,85,247,0.25); padding:5px; border-radius:6px;">Aa (سائد)</div>
+          <div style="background:rgba(255,255,255,0.15); padding:5px; border-radius:6px;">aa (متنحٍ 25%)</div>
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function renderDynamicActivityStage(el, actId, step) {
+  const acts = window.THAKER_CURRICULUM_P2?.activities || {};
+  const data = acts[actId];
+  if (!data) return;
+  const curStep = data.steps?.[step - 1] || {};
+  const total = data.steps?.length || 5;
+  const pct = Math.round((step / total) * 100);
+  const mats = (data.materials || []).slice(0, 4).map(m =>
+    `<span style="background:rgba(56,189,248,0.14); border:1px solid rgba(56,189,248,0.35); color:#bae6fd; padding:3px 8px; border-radius:999px; font-size:11px;">🧪 ${m}</span>`
+  ).join('');
+  const safetyHtml = curStep.safety ? `<div style="margin-top:8px; padding:6px 10px; border-radius:8px; background:rgba(239,68,68,0.18); border:1px solid #ef4444; color:#fecaca; font-size:11.5px; font-weight:700;">${curStep.safety}</div>` : '';
+  const eqHtml = (step === total && data.equation_symbolic) ? `<div style="margin-top:8px; padding:6px 10px; border-radius:8px; background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#a7f3d0; font-size:12px; font-weight:800; direction:ltr; text-align:center;">${data.equation_symbolic}</div>` : '';
+
+  el.innerHTML = `
+    <div style="width:100%; height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:12px 14px; text-align:right;">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+        <span style="font-size:12px; font-weight:800; color:#38bdf8;">🔬 محاكاة الخطوة ${step} من ${total}</span>
+        <span style="font-size:11px; font-weight:700; color:#10b981;">${pct}% مكتمل</span>
+      </div>
+      <div style="width:100%; height:6px; background:rgba(255,255,255,0.1); border-radius:999px; overflow:hidden; margin:6px 0;">
+        <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #0ea5e9, #10b981); transition:width 0.35s ease;"></div>
+      </div>
+      <div style="font-size:13px; font-weight:800; color:#f8fafc; margin-bottom:4px;">${curStep.title || data.title}</div>
+      <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:4px;">${mats}</div>
+      ${safetyHtml}
+      ${eqHtml}
+    </div>
+  `;
+}
+
+// 1. Magnesium Combustion Visual Stage
+function renderMagnesiumStage(el, step) {
+  let ribbonPos = step === 1 ? 'top:30px; left:48%;' : (step <= 3 ? 'top:50px; left:24%;' : 'top:60px; left:55%;');
+  let flashDisplay = step === 3 ? 'block' : 'none';
+  let ashOpacity = step >= 4 ? '1' : '0';
+  let ribbonDisplay = step >= 4 ? 'none' : 'block';
+
+  el.innerHTML = `
+    <!-- Bunsen Burner on Left -->
+    <div style="position:absolute; bottom:12px; left:25%; display:flex; flex-direction:column; align-items:center;">
+      <div class="burner-flame"></div>
+      <div style="width:30px; height:65px; background:linear-gradient(90deg, #475569, #94a3b8, #334155); border-radius:4px;"></div>
+      <div style="width:70px; height:12px; background:#1e293b; border-radius:6px; margin-top:2px; border:1px solid #64748b;"></div>
+      <span style="font-size:10px; color:#94a3b8; margin-top:2px;">موقد بنسن</span>
+    </div>
+
+    <!-- Tongs and Magnesium Ribbon -->
+    <div style="position:absolute; ${ribbonPos} transition:all 0.4s ease; display:flex; flex-direction:column; align-items:center;">
+      <div style="width:120px; height:10px; background:linear-gradient(180deg, #94a3b8, #475569); border-radius:4px; transform:rotate(-15deg); transform-origin:left center;"></div>
+      <div style="width:90px; height:12px; background:linear-gradient(90deg, #cbd5e1, #f1f5f9, #94a3b8); border-radius:3px; margin-top:-2px; box-shadow:0 0 6px rgba(255,255,255,0.4); display:${ribbonDisplay};"></div>
+      <span style="font-size:11px; font-weight:bold; color:#e2e8f0; margin-top:4px;">${step <= 3 ? 'شريط ماغنيسيوم فضي لامع (Mg)' : 'تفتت الشريط وسقوط الرماد'}</span>
+    </div>
+
+    <!-- Watch Glass for Ash -->
+    <div style="position:absolute; bottom:12px; right:18%; display:flex; flex-direction:column; align-items:center;">
+      <div style="width:110px; height:24px; border-radius:50%; background:rgba(255,255,255,0.12); border:2px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center;">
+        <div style="width:45px; height:12px; background:#ffffff; border-radius:50%; filter:blur(1px); opacity:${ashOpacity}; box-shadow:0 0 10px #ffffff;"></div>
+      </div>
+      <span style="font-size:10px; color:#94a3b8; margin-top:4px;">صحن ساعة زجاجي</span>
+    </div>
+
+    <!-- Dazzling Flash -->
+    <div class="magnesium-glow" style="display:${flashDisplay}; left:33%; bottom:60px;"></div>
+    ${step === 3 ? '<div style="position:absolute; top:12px; right:12px; background:rgba(239,68,68,0.3); border:1px solid #ef4444; border-radius:8px; padding:4px 10px; font-size:11.5px; font-weight:700; color:#fca5a5;">⚠️ تحذير: تجنب النظر المباشر للوهج!</div>' : ''}
+  `;
+}
+
+// 2. Sulfur Combustion Visual Stage
+function renderSulfurStage(el, step) {
+  let sulfurState = step === 1 ? 'مسحوق كبريت أصفر صلب' : (step === 2 ? 'انصهار الكبريت إلى سائل برتقالي' : 'اشتعال بلهب أزرق خافت وتصاعد SO2');
+  let litmusColor = step >= 4 ? '#ef4444' : '#38bdf8';
+  let litmusText = step >= 4 ? 'ورقة دوار شمس احمرت (حامضي)' : 'ورقة دوار شمس زرقاء مبللة';
+
+  el.innerHTML = `
+    <!-- Bunsen Burner -->
+    <div style="position:absolute; bottom:12px; left:20%; display:flex; flex-direction:column; align-items:center;">
+      <div class="burner-flame" style="filter:drop-shadow(0 0 10px #0284c7);"></div>
+      <div style="width:28px; height:60px; background:#475569; border-radius:4px;"></div>
+      <div style="width:65px; height:10px; background:#1e293b; border-radius:6px;"></div>
+      <span style="font-size:10px; color:#94a3b8;">موقد بنسن</span>
+    </div>
+
+    <!-- Combustion Spoon -->
+    <div style="position:absolute; top:${step >= 4 ? '40px' : '65px'}; left:${step >= 4 ? '58%' : '26%'}; transition:all 0.4s ease; display:flex; flex-direction:column; align-items:center;">
+      <div style="width:110px; height:8px; background:#94a3b8; border-radius:4px; transform:rotate(-25deg); transform-origin:left center;"></div>
+      <div style="width:34px; height:18px; border-radius:50%; background:#eab308; border:2px solid #ca8a04; box-shadow:0 0 12px ${step >= 3 ? '#38bdf8' : '#eab308'}; display:flex; align-items:center; justify-content:center;">
+        ${step >= 3 ? '<div style="width:14px; height:20px; background:#38bdf8; border-radius:50%; filter:blur(1px); animation:flameFlicker 0.15s infinite alternate;"></div>' : ''}
+      </div>
+      <span style="font-size:11px; font-weight:bold; color:#fef08a; margin-top:4px;">${sulfurState}</span>
+    </div>
+
+    <!-- Gas Jar & Litmus Paper -->
+    <div style="position:absolute; bottom:12px; right:20%; display:flex; flex-direction:column; align-items:center;">
+      <div style="width:75px; height:120px; border:2px solid rgba(255,255,255,0.3); border-radius:8px 8px 0 0; background:rgba(255,255,255,0.06); position:relative; display:flex; align-items:center; justify-content:center;">
+        <!-- Litmus Paper -->
+        <div style="position:absolute; top:20px; width:14px; height:60px; background:${litmusColor}; border-radius:2px; box-shadow:0 0 6px ${litmusColor}; transition:background 0.5s ease;"></div>
+        <span style="position:absolute; bottom:6px; font-size:9.5px; color:#cbd5e1;">مخبار SO2</span>
+      </div>
+      <span style="font-size:10.5px; font-weight:bold; color:${litmusColor}; margin-top:4px;">${litmusText}</span>
+    </div>
+  `;
+}
+
+// 3. Rusting 4 Tubes Visual Stage
+function renderRustingStage(el, step) {
+  let daysText = step <= 2 ? 'اليوم 0 (قبل التفاعل)' : (step === 3 ? 'اليوم 3 (بدء الصدأ)' : 'اليوم 7 (نتائج كاملة)');
+  let tube1Rust = step >= 3 ? '#b45309' : '#94a3b8';
+  let tube4Rust = step >= 3 ? '#9a3412' : '#94a3b8';
+
+  el.innerHTML = `
+    <div style="width:90%; height:90%; display:flex; flex-direction:column; align-items:center; justify-content:space-between;">
+      <div style="font-size:12px; font-weight:bold; color:#38bdf8; background:rgba(15,23,42,0.8); padding:3px 12px; border-radius:12px; border:1px solid rgba(56,189,248,0.3);">
+        ⏱️ فترة التجربة: ${daysText}
+      </div>
+
+      <!-- 4 Test Tubes Rack -->
+      <div style="display:flex; gap:16px; align-items:flex-end; padding:8px 16px; background:rgba(133,77,14,0.3); border-radius:12px; border:2px solid #854d0e;">
+        <!-- Tube 1: Water + Air -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+          <div style="width:36px; height:110px; border:2px solid rgba(255,255,255,0.35); border-radius:0 0 18px 18px; position:relative; background:rgba(2,132,199,0.15); display:flex; align-items:center; justify-content:center;">
+            <div style="width:8px; height:70px; background:${tube1Rust}; border-radius:2px; box-shadow:0 0 6px ${tube1Rust};"></div>
+          </div>
+          <span style="font-size:9px; color:#f8fafc; font-weight:bold;">1. ماء + هواء</span>
+          <span style="font-size:8.5px; color:${step>=3 ? '#ea580c':'#94a3b8'};">${step>=3 ? 'صدأ واضح' : 'بدون صدأ'}</span>
+        </div>
+
+        <!-- Tube 2: Boiled Water + Oil -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+          <div style="width:36px; height:110px; border:2px solid rgba(255,255,255,0.35); border-radius:0 0 18px 18px; position:relative; background:rgba(2,132,199,0.15); display:flex; flex-direction:column; align-items:center; justify-content:flex-end;">
+            <div style="width:100%; height:14px; background:#f59e0b; opacity:0.8; border-radius:2px;"></div>
+            <div style="width:8px; height:70px; background:#94a3b8; border-radius:2px; margin-bottom:10px;"></div>
+          </div>
+          <span style="font-size:9px; color:#f8fafc; font-weight:bold;">2. مغلي + زيت</span>
+          <span style="font-size:8.5px; color:#4ade80;">لا صدأ (غياب O2)</span>
+        </div>
+
+        <!-- Tube 3: Dry Air (CaCl2) -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+          <div style="width:36px; height:110px; border:2px solid rgba(255,255,255,0.35); border-radius:0 0 18px 18px; position:relative; background:rgba(255,255,255,0.05); display:flex; flex-direction:column; align-items:center; justify-content:flex-end;">
+            <div style="width:8px; height:70px; background:#94a3b8; border-radius:2px; margin-bottom:12px;"></div>
+            <div style="width:100%; height:18px; background:#ffffff; opacity:0.6; border-radius:0 0 14px 14px;"></div>
+          </div>
+          <span style="font-size:9px; color:#f8fafc; font-weight:bold;">3. هواء جاف</span>
+          <span style="font-size:8.5px; color:#4ade80;">لا صدأ (غياب H2O)</span>
+        </div>
+
+        <!-- Tube 4: Salt Water -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+          <div style="width:36px; height:110px; border:2px solid rgba(255,255,255,0.35); border-radius:0 0 18px 18px; position:relative; background:rgba(180,83,9,0.25); display:flex; align-items:center; justify-content:center;">
+            <div style="width:8px; height:70px; background:${tube4Rust}; border-radius:2px; box-shadow:0 0 10px #ea580c;"></div>
+          </div>
+          <span style="font-size:9px; color:#f8fafc; font-weight:bold;">4. ماء مالح</span>
+          <span style="font-size:8.5px; color:#ef4444; font-weight:bold;">صدأ شديد وسريع</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// 4. Carbon Allotropy Visual Stage
+function renderCarbonStage(el, step) {
+  let lampOn = step >= 3;
+  let lampGlow = lampOn ? 'background:#fef08a; box-shadow:0 0 25px 12px #facc15;' : 'background:#475569;';
+
+  el.innerHTML = `
+    <div style="width:90%; height:90%; display:flex; align-items:center; justify-content:space-around;">
+      <!-- Diamond Side -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="width:80px; height:80px; border:2px solid #38bdf8; border-radius:12px; background:radial-gradient(circle, #e0f2fe, #38bdf8); transform:rotate(45deg); box-shadow:0 0 20px #38bdf8; display:flex; align-items:center; justify-content:center;">
+          <span style="transform:rotate(-45deg); font-size:24px;">💎</span>
+        </div>
+        <span style="font-size:12px; font-weight:bold; color:#38bdf8;">الماس (صلب جداً · عازل)</span>
+        <span style="font-size:10px; color:#94a3b8;">روابط تساهمية فراغية sp³</span>
+      </div>
+
+      <!-- Testing Circuit (Battery & Lamp) -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px; background:rgba(15,23,42,0.6); padding:8px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.15);">
+        <div style="width:36px; height:36px; border-radius:50%; ${lampGlow} transition:all 0.3s ease; display:flex; align-items:center; justify-content:center; border:2px solid #cbd5e1;">
+          <span style="font-size:16px;">💡</span>
+        </div>
+        <span style="font-size:10.5px; font-weight:bold; color:${lampOn ? '#facc15' : '#94a3b8'};">
+          ${lampOn ? 'المصباح يضيء مع الجرافيت!' : 'دائرة اختبار التوصيل'}
+        </span>
+        <div style="width:60px; height:10px; background:#ef4444; border-radius:3px; font-size:8px; text-align:center; color:#fff;">بطارية 9V</div>
+      </div>
+
+      <!-- Graphite Side -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="width:80px; height:80px; border:2px solid #64748b; border-radius:8px; background:linear-gradient(135deg, #1e293b, #475569); box-shadow:0 0 15px rgba(255,255,255,0.2); display:flex; flex-direction:column; justify-content:space-around; padding:8px;">
+          <div style="height:8px; background:#94a3b8; border-radius:2px;"></div>
+          <div style="height:8px; background:#94a3b8; border-radius:2px;"></div>
+          <div style="height:8px; background:#94a3b8; border-radius:2px;"></div>
+        </div>
+        <span style="font-size:12px; font-weight:bold; color:#cbd5e1;">الجرافيت (ناعم · موصل)</span>
+        <span style="font-size:10px; color:#4ade80;">طبقات سداسية مستوية sp²</span>
+      </div>
+    </div>
+  `;
+}
+
+// 5. CO2 Preparation Visual Stage
+function renderCo2PrepStage(el, step) {
+  let bubbling = step >= 3 ? 'display:block;' : 'display:none;';
+  let gasFilled = step >= 4 ? 'background:rgba(56,189,248,0.2); box-shadow:0 0 12px #38bdf8;' : 'background:transparent;';
+
+  el.innerHTML = `
+    <div style="width:85%; height:90%; position:relative; display:flex; align-items:center; justify-content:space-between;">
+      <!-- Woulff Bottle on Left -->
+      <div style="position:relative; width:110px; height:140px; border:2px solid rgba(255,255,255,0.4); border-radius:20px 20px 10px 10px; background:rgba(2,132,199,0.1); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:8px;">
+        <!-- Thistle Funnel -->
+        <div style="position:absolute; top:-40px; left:20px; width:10px; height:130px; background:rgba(255,255,255,0.4); border-radius:2px; display:flex; flex-direction:column; align-items:center;">
+          <div style="width:28px; height:18px; border-radius:0 0 10px 10px; background:rgba(255,255,255,0.5);"></div>
+        </div>
+        <!-- Delivery Tube -->
+        <div style="position:absolute; top:-25px; right:20px; width:120px; height:6px; background:rgba(255,255,255,0.4); transform:rotate(12deg); transform-origin:left center;"></div>
+        
+        <!-- Marble chips CaCO3 -->
+        <div style="display:flex; gap:4px; flex-wrap:wrap; width:70px; justify-content:center; margin-bottom:4px;">
+          <div style="width:14px; height:14px; background:#f1f5f9; border-radius:2px;"></div>
+          <div style="width:16px; height:12px; background:#e2e8f0; border-radius:2px;"></div>
+          <div style="width:12px; height:15px; background:#cbd5e1; border-radius:2px;"></div>
+        </div>
+        <!-- Bubbles -->
+        <div style="position:absolute; bottom:25px; font-size:12px; ${bubbling} animation:flameFlicker 0.2s infinite alternate;">🫧 🫧 🫧</div>
+        <span style="font-size:9.5px; color:#94a3b8;">كربونات كالسيوم + حمض</span>
+      </div>
+
+      <!-- Gas Jar on Right -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <div style="width:70px; height:130px; border:2px solid rgba(255,255,255,0.4); border-radius:6px 6px 0 0; ${gasFilled} display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <span style="font-size:11px; font-weight:bold; color:#38bdf8;">${step>=4 ? 'غاز CO2 مجموع' : 'مخبار فارغ'}</span>
+          <span style="font-size:9px; color:#cbd5e1;">(إزاحة الهواء لأعلى)</span>
+        </div>
+        <span style="font-size:10px; color:#94a3b8;">مخبار جمع الغاز</span>
+      </div>
+    </div>
+  `;
+}
+
+// 6. CO2 Properties Visual Stage
+function renderCo2PropsStage(el, step) {
+  let candleLit = step <= 1 ? 'display:block;' : 'display:none;';
+  let limeWaterColor = step >= 5 ? '#f8fafc' : 'rgba(2,132,199,0.1)';
+  let limeWaterText = step >= 5 ? 'ماء الجير تعكر (راسب CaCO3 أبيض)' : 'ماء جير رائق شفاف Ca(OH)2';
+
+  el.innerHTML = `
+    <div style="width:90%; height:90%; display:flex; align-items:center; justify-content:space-around;">
+      <!-- Candle Extinguishing -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <div style="position:relative; width:22px; height:70px; background:#fef08a; border-radius:3px; display:flex; flex-direction:column; align-items:center;">
+          <div class="burner-flame" style="${candleLit} width:16px; height:24px; position:absolute; top:-22px;"></div>
+        </div>
+        <span style="font-size:11px; font-weight:bold; color:${step<=1 ? '#facc15' : '#ef4444'};">
+          ${step<=1 ? 'شمعة مشتعلة' : 'انطفأت الشمعة فوراً! (CO2 لا يشتعل)'}
+        </span>
+      </div>
+
+      <!-- Limewater Tube & Straw -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <div style="position:relative; width:45px; height:120px; border:2px solid rgba(255,255,255,0.4); border-radius:0 0 20px 20px; background:${limeWaterColor}; transition:background 0.5s ease; display:flex; align-items:center; justify-content:center;">
+          <!-- Straw -->
+          <div style="position:absolute; top:-20px; width:8px; height:110px; background:#ef4444; border-radius:2px; transform:rotate(8deg);"></div>
+          <span style="position:absolute; bottom:8px; font-size:10px; color:${step>=5 ? '#1e293b':'#38bdf8'}; font-weight:bold;">
+            ${step>=5 ? 'عكارة بيضاء' : 'رائق'}
+          </span>
+        </div>
+        <span style="font-size:11px; font-weight:bold; color:#f8fafc;">${limeWaterText}</span>
+      </div>
+    </div>
+  `;
+}
+
+// 7. Petroleum Refining Tower Visual Stage
+function renderPetroleumStage(el, step) {
+  el.innerHTML = `
+    <div style="width:90%; height:90%; display:flex; align-items:center; justify-content:space-around;">
+      <!-- Crude Oil Flask -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <div style="width:70px; height:80px; border-radius:50% 50% 10px 10px; background:#0f172a; border:2px solid #475569; box-shadow:0 0 10px rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:10px; color:#cbd5e1;">نفط خام</span>
+        </div>
+        <div class="burner-flame" style="width:18px; height:26px;"></div>
+        <span style="font-size:9.5px; color:#94a3b8;">تسخين >400°م</span>
+      </div>
+
+      <!-- Fractionating Tower -->
+      <div style="position:relative; width:120px; height:160px; border:2px solid #64748b; border-radius:12px; background:linear-gradient(180deg, #0284c7 0%, #10b981 30%, #f59e0b 60%, #0f172a 100%); display:flex; flex-direction:column; justify-content:space-between; padding:6px;">
+        <span style="font-size:8.5px; color:#fff; font-weight:bold;">قمة: غازات + بنزين (<70°م)</span>
+        <span style="font-size:8.5px; color:#fff; font-weight:bold;">وسط: كيروسين (170°م)</span>
+        <span style="font-size:8.5px; color:#fff; font-weight:bold;">أسفل: ديزل (270°م)</span>
+        <span style="font-size:8.5px; color:#fff; font-weight:bold;">قاع: أسفلت (>350°م)</span>
+      </div>
+    </div>
+  `;
+}
+
+function executeCurrentActAction() {
+  playDingSound();
+  const acts = window.THAKER_CURRICULUM_P2?.activities || {};
+  const data = acts[actState.currentActId];
+  if (!data) return;
+
+  const curStep = data.steps?.[actState.curStep - 1];
+  showToast(curStep?.title || 'تم تنفيذ الخطوة بنجاح!');
+  if (curStep?.voice) speakCompanion(curStep.voice);
+
+  if (actState.curStep < actState.totalSteps) {
+    setTimeout(() => {
+      jumpActivityStep(actState.curStep + 1);
+    }, 900);
+  }
+}
+
+function jumpActivityStep(stepNum) {
+  actState.curStep = Math.max(1, Math.min(actState.totalSteps, stepNum));
+  playClickSound();
+  updateActivityUI();
+}
+
+function nextActivityStep() {
+  if (actState.curStep < actState.totalSteps) jumpActivityStep(actState.curStep + 1);
+  else showToast("أكملت جميع خطوات هذا النشاط بنجاح!");
+}
+
+function prevActivityStep() {
+  if (actState.curStep > 1) jumpActivityStep(actState.curStep - 1);
+}
+
+function resetActivitySimulation() {
+  actState.curStep = 1;
+  actState.metal = 'mg';
+  updateActivityUI();
+  playSnapSound();
+}
+
+function testOtherMetal(metalKey) {
+  playClickSound();
+  actState.metal = metalKey;
+  if (metalKey === 'na') {
+    showToast('الصوديوم Na: اشتعال سريع بلهب أصفر ذهبي ساطع (Na2O)');
+    speakCompanion('الصوديوم فلز نشط جداً ويشتعل بوهج أصفر ذهبي ليكون أكسيد الصوديوم.');
+  } else if (metalKey === 'ca') {
+    showToast('الكالسيوم Ca: يشتعل بلهب أحمر قرميدي (CaO)');
+    speakCompanion('الكالسيوم يشتعل بلهب أحمر قرميدي ليعطي أكسيد الكالسيوم أو الجير الحي.');
+  } else if (metalKey === 'fe') {
+    showToast('ليف الحديد Fe: يتوهج مع تطاير شرارات مضيئة (Fe3O4)');
+    speakCompanion('ليف الحديد يتوهج مع تطاير شرارات ساطعة ليكون أكسيد الحديد المغناطيسي.');
+  }
+}
+
+
 // LAYER 3A: SMART TEXT BOTTOM SHEET
 // --------------------------------------------------------
 function openTextExplanation(refId) {
@@ -919,8 +2015,10 @@ function showVocabDetail(vid) {
 // LAYER 3B: INTERACTIVE 3D SCIENCE LABORATORY (THREE.JS)
 // --------------------------------------------------------
 let labScene, labCamera, labRenderer, labApparatusGroup;
-let labAnimId = null;
+let currentDiagId = 'diag-co2-prep';
 let bubbles = [];
+let labAnimId = null;
+let flameMesh = null;
 
 function initLabThree() {
   const container = document.getElementById('labCanvasContainer');
@@ -937,44 +2035,145 @@ function initLabThree() {
   labRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   // Lights
-  const ambLight = new THREE.AmbientLight(0xffffff, 0.7);
+  const ambLight = new THREE.AmbientLight(0xffffff, 0.75);
   labScene.add(ambLight);
 
   const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
   dirLight.position.set(3, 5, 4);
   labScene.add(dirLight);
 
-  const ptLight = new THREE.PointLight(0x0284c7, 1.2, 8);
+  const ptLight = new THREE.PointLight(0x38bdf8, 1.2, 8);
   ptLight.position.set(-1, 2, 2);
   labScene.add(ptLight);
 
-  buildCo2Apparatus();
   setupLabDragControls(canvas);
+}
+
+function loadDiagramModel(diagId) {
+  currentDiagId = diagId || 'diag-co2-prep';
+  if (!labScene) initLabThree();
+
+  if (labApparatusGroup) {
+    labScene.remove(labApparatusGroup);
+    labApparatusGroup = null;
+  }
+  bubbles = [];
+  flameMesh = null;
+
+  // Update tabs UI
+  document.querySelectorAll('.diag-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-diag') === currentDiagId);
+  });
+
+  if (currentDiagId === 'diag-co2-prep' || currentDiagId === 'diag-co2-apparatus-3d') {
+    buildCo2Apparatus();
+    updateLabInfo('تحضير غاز ثاني أكسيد الكربون (CO2)', 'معدل سكب حمض HCl:', 'CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂ ↑', [
+      'قارورة وف: يوضع فيها قطع الرخام',
+      'قمع الإضافة: لسكب حمض HCl تدريجياً',
+      'أنبوبة التوصيل: نقل الغاز المتصاعد',
+      'مخبار الغاز: جمع الغاز بإزاحة الهواء لأعلى'
+    ]);
+  } else if (currentDiagId === 'diag-sulfur-combustion' || currentDiagId === 'diag-sulfur-burner') {
+    buildCombustionApparatus();
+    updateLabInfo('احتراق الكبريت والماغنسيوم وموقد بنسن', 'شدة لهب موقد بنسن:', 'S + O₂ ➔ SO₂ | 2Mg + O₂ ➔ 2MgO', [
+      'موقد بنسن: توفير حرارة الاشتعال العالية',
+      'ملعقة الاحتراق: لحمل مسحوق الكبريت في اللهب',
+      'مخبار الغاز: حجز غاز ثاني أكسيد الكبريت',
+      'ورقة تباع الشمس: اختبار حامضية الغاز'
+    ]);
+  } else if (currentDiagId === 'diag-rust-experiment') {
+    buildRustApparatus();
+    updateLabInfo('تجربة شروط صدأ وتآكل الحديد (4 أنابيب)', 'زمن التجربة (بالأيام):', '4Fe + 3O₂ + 2xH₂O ➔ 2Fe₂O₃.xH₂O', [
+      'أنبوبة 1 (ماء + هواء): صدأ كثيف لوجود الماء والأكسجين',
+      'أنبوبة 2 (ماء مغلي + زيت): لا صدأ لعدم وجود الأكسجين',
+      'أنبوبة 3 (CaCl₂ جاف): لا صدأ لغياب الرطوبة والماء',
+      'أنبوبة 4 (ماء مالح): صدأ شديد وسريع بسبب الأملاح'
+    ]);
+  } else if (currentDiagId === 'diag-carbon-allotropes') {
+    buildAllotropeApparatus();
+    updateLabInfo('النموذج البلوري للماس والجرافيت (تآصل الكربون)', 'تدوير وفحص الروابط التساهمية:', 'الماس والجرافيت: صور بلورية لنفس عنصر الكربون C', [
+      'الماس (sp³): شبكة تساهمية صلبة رباعية الأوجه',
+      'الجرافيت (sp²): طبقات سداسية مستوية تنزلق بسهولة',
+      'روابط فان دير فالس: قوى ضعيفة بين طبقات الجرافيت',
+      'التوصيل الكهربائي: الجرافيت يوصل والماس عازل'
+    ]);
+  } else if (currentDiagId === 'diag-petroleum-fractionation') {
+    buildPetroleumTowerApparatus();
+    updateLabInfo('برج التقطير التجزيئي لفصل مشتقات النفط', 'حرارة تسخين النفط الخام:', 'النفط الخام ➔ غازات + بنزين + كيروسين + ديزل + أسفلت', [
+      'قمة البرج (<20°م): غاز الطبخ والبروبان والبيوتان',
+      'المنطقة العلوية (20-70°م): بنزين وقود السيارات',
+      'المنطقة الوسطى (170-250°م): كيروسين الطائرات',
+      'المنطقة السفلية (250-350°م): زيت الديزل والشحوم',
+      'قاع البرج (>350°م): الأسفلت والمازوت الثقيل'
+    ]);
+  } else if (currentDiagId === 'diag-chlorine-prep') {
+    buildChlorineApparatus();
+    updateLabInfo('جهاز تحضير وتجفيف غاز الكلور (Cl₂)', 'معدل التسخين وتفاعل HCl:', 'MnO₂ + 4HCl ➔ MnCl₂ + 2H₂O + Cl₂ ↑', [
+      'دورق التفاعل: مسحوق MnO₂ الأسود + حمض HCl المركز مع التسخين',
+      'قنينة الماء: غسيل غاز الكلور من أبخرة الحمض العالقة',
+      'قنينة H₂SO₄ المركز: تجفيف الغاز من بخار الماء',
+      'مخبار التجميع: جمع غاز Cl₂ الأصفر المخضر بإزاحة الهواء لأعلى'
+    ]);
+  } else if (currentDiagId === 'diag-capillarity-tubes') {
+    buildCapillarityApparatus();
+    updateLabInfo('الخاصية الشعرية في الأنابيب الضيقة', 'تأثير نصف قطر الأنبوب:', 'كلما قلّ قطر الأنبوب الشعري زاد ارتفاع السائل', [
+      'حوض الماء: مصدر السائل المتصل بالأنابيب',
+      'أنبوب واسع: ارتفاع طفيف للماء',
+      'أنبوب متوسط: ارتفاع متوسط بسطح مقعر',
+      'أنبوب شعري ضيق: أقصى ارتفاع بسبب غلبة قوى التلاصق'
+    ]);
+  } else if (currentDiagId === 'diag-hydraulic-press') {
+    buildHydraulicPressApparatus();
+    updateLabInfo('مبدأ باسكال والمكبس الهيدروليكي', 'نسبة القوة والمساحة:', 'P₁ = P₂  ⟹  F₁ / A₁ = F₂ / A₂', [
+      'المكبس الصغير (A₁): تؤثر عليه قوة صغيرة F₁',
+      'السائل الهيدروليكي: ينقل الضغط بالتساوي في كل الاتجاهات',
+      'المكبس الكبير (A₂): تتضاعف القوة F₂ لرفع الأثقال الكبيرة'
+    ]);
+  } else if (currentDiagId === 'diag-dna-double-helix') {
+    buildDnaHelixApparatus();
+    updateLabInfo('نموذج الحلزون المزدوج للحمض النووي (DNA)', 'تدوير واستكشاف القواعد النيتروجينية:', 'الكروموسوم = DNA ملتف حول بروتينات (يحمل الجينات)', [
+      'العمود الفقري: شريطا السكر الخماسي ومجموعات الفوسفات',
+      'أزواج القواعد (A-T): الأدينين يرتبط بالثايمين',
+      'أزواج القواعد (C-G): السايتوسين يرتبط بالجوانين'
+    ]);
+  }
+
+  resetLab3dView();
+}
+
+function updateLabInfo(title, sliderLabel, equationText, partsList) {
+  const titleEl = document.getElementById('labModalTitle');
+  if (titleEl) titleEl.textContent = `🔬 ${title}`;
+
+  const labelEl = document.getElementById('labControlLabel');
+  if (labelEl) labelEl.textContent = sliderLabel;
+
+  const eqEl = document.getElementById('labEquationBadge');
+  if (eqEl) eqEl.innerHTML = `⚖️ المعادلة: <b>${equationText}</b>`;
+
+  const badgesContainer = document.getElementById('labPartsBadges');
+  if (badgesContainer && partsList) {
+    badgesContainer.innerHTML = partsList.map(p => `
+      <div class="part-badge" onclick="alert('${p}')">${p}</div>
+    `).join('');
+  }
 }
 
 function buildCo2Apparatus() {
   labApparatusGroup = new THREE.Group();
-
-  // Glass material
   const glassMat = new THREE.MeshPhysicalMaterial({
-    color: 0xffffff, transparent: true, opacity: 0.38,
-    roughness: 0.1, transmission: 0.9, ior: 1.5
+    color: 0xffffff, transparent: true, opacity: 0.38, roughness: 0.1, transmission: 0.9, ior: 1.5
   });
 
-  // 1. Woulfe Bottle (Two-neck flask)
   const flaskBody = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.65, 1.2, 32), glassMat);
   flaskBody.position.set(-0.7, 0.6, 0);
   labApparatusGroup.add(flaskBody);
 
-  // Liquid inside Woulfe bottle (Acid + Reaction)
-  const liquidMat = new THREE.MeshStandardMaterial({
-    color: 0x0284c7, transparent: true, opacity: 0.65, roughness: 0.2
-  });
+  const liquidMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, transparent: true, opacity: 0.65, roughness: 0.2 });
   const liquid = new THREE.Mesh(new THREE.CylinderGeometry(0.53, 0.62, 0.6, 32), liquidMat);
   liquid.position.set(-0.7, 0.32, 0);
   labApparatusGroup.add(liquid);
 
-  // Marble Chips (CaCO3) in bottle
   const chipMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, roughness: 0.8 });
   for (let i = 0; i < 9; i++) {
     const chip = new THREE.Mesh(new THREE.DodecahedronGeometry(0.08 + Math.random()*0.04), chipMat);
@@ -982,8 +2181,6 @@ function buildCo2Apparatus() {
     labApparatusGroup.add(chip);
   }
 
-  // 2. Thistle Funnel (القمع الطويل)
-  const stemMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.3, roughness: 0.2 });
   const funnelStem = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, 1.5, 16), glassMat);
   funnelStem.position.set(-0.85, 1.15, 0);
   labApparatusGroup.add(funnelStem);
@@ -993,19 +2190,16 @@ function buildCo2Apparatus() {
   funnelCup.rotation.x = Math.PI;
   labApparatusGroup.add(funnelCup);
 
-  // 3. Delivery Tube (أنبوبة التوصيل المثنية)
   const tubeMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.7 });
   const tubeH = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 1.45, 16), tubeMat);
   tubeH.rotation.z = Math.PI / 2;
   tubeH.position.set(0.05, 1.35, 0);
   labApparatusGroup.add(tubeH);
 
-  // 4. Gas Jar (مخبار جمع الغاز)
   const jar = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.35, 1.4, 24), glassMat);
   jar.position.set(0.8, 0.7, 0);
   labApparatusGroup.add(jar);
 
-  // Bubbles Generator
   bubbles = [];
   const bMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.8 });
   for (let i = 0; i < 25; i++) {
@@ -1019,36 +2213,374 @@ function buildCo2Apparatus() {
   labScene.add(labApparatusGroup);
 }
 
+function buildChlorineApparatus() {
+  labApparatusGroup = new THREE.Group();
+  const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, transparent: true, opacity: 0.36, roughness: 0.1 });
+  const metalMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.7, roughness: 0.3 });
+
+  // Bunsen burner under flask
+  const burnerBase = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.32, 0.08, 20), metalMat);
+  burnerBase.position.set(-1.1, 0.04, 0);
+  labApparatusGroup.add(burnerBase);
+  const burnerTube = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.35, 16), metalMat);
+  burnerTube.position.set(-1.1, 0.24, 0);
+  labApparatusGroup.add(burnerTube);
+  flameMesh = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.28, 16), new THREE.MeshBasicMaterial({ color: 0x38bdf8 }));
+  flameMesh.position.set(-1.1, 0.52, 0);
+  labApparatusGroup.add(flameMesh);
+
+  // Heating Flask (MnO2 + HCl)
+  const flask = new THREE.Mesh(new THREE.SphereGeometry(0.42, 24, 24), glassMat);
+  flask.position.set(-1.1, 1.0, 0);
+  labApparatusGroup.add(flask);
+  const mno2 = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.26, 0.16, 20), new THREE.MeshStandardMaterial({ color: 0x1e293b }));
+  mno2.position.set(-1.1, 0.72, 0);
+  labApparatusGroup.add(mno2);
+  const hcl = new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.32, 0.22, 20), new THREE.MeshStandardMaterial({ color: 0xa3e635, transparent: true, opacity: 0.45 }));
+  hcl.position.set(-1.1, 0.90, 0);
+  labApparatusGroup.add(hcl);
+
+  // Wash Bottle (Water) & Drying Bottle (H2SO4)
+  const washBottle = new THREE.Mesh(new THREE.CylinderGeometry(0.26, 0.26, 0.8, 20), glassMat);
+  washBottle.position.set(-0.35, 0.42, 0);
+  labApparatusGroup.add(washBottle);
+  const waterFill = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.24, 0.4, 20), new THREE.MeshStandardMaterial({ color: 0x0ea5e9, transparent: true, opacity: 0.5 }));
+  waterFill.position.set(-0.35, 0.22, 0);
+  labApparatusGroup.add(waterFill);
+
+  const dryBottle = new THREE.Mesh(new THREE.CylinderGeometry(0.26, 0.26, 0.8, 20), glassMat);
+  dryBottle.position.set(0.35, 0.42, 0);
+  labApparatusGroup.add(dryBottle);
+  const acidFill = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.24, 0.4, 20), new THREE.MeshStandardMaterial({ color: 0xfacc15, transparent: true, opacity: 0.45 }));
+  acidFill.position.set(0.35, 0.22, 0);
+  labApparatusGroup.add(acidFill);
+
+  // Delivery tube connecting all vessels
+  const tubeMat = new THREE.MeshStandardMaterial({ color: 0x84cc16, transparent: true, opacity: 0.8 });
+  const topTube = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 2.2, 12), tubeMat);
+  topTube.rotation.z = Math.PI / 2;
+  topTube.position.set(0.0, 1.38, 0);
+  labApparatusGroup.add(topTube);
+
+  // Chlorine Collection Jar (yellow-green gas)
+  const jar = new THREE.Mesh(new THREE.CylinderGeometry(0.34, 0.34, 1.25, 24), glassMat);
+  jar.position.set(1.08, 0.64, 0);
+  labApparatusGroup.add(jar);
+  const cl2Gas = new THREE.Mesh(new THREE.CylinderGeometry(0.31, 0.31, 1.0, 24), new THREE.MeshStandardMaterial({ color: 0xa3e635, transparent: true, opacity: 0.42 }));
+  cl2Gas.position.set(1.08, 0.55, 0);
+  labApparatusGroup.add(cl2Gas);
+
+  bubbles = [];
+  const bMat = new THREE.MeshBasicMaterial({ color: 0xbef264, transparent: true, opacity: 0.85 });
+  for (let i = 0; i < 20; i++) {
+    const b = new THREE.Mesh(new THREE.SphereGeometry(0.025, 8, 8), bMat);
+    b.position.set(1.08 + (Math.random() - 0.5) * 0.35, 0.15 + Math.random() * 0.8, (Math.random() - 0.5) * 0.35);
+    b.userData.speed = 0.012 + Math.random() * 0.02;
+    b.userData.baseX = 1.08;
+    labApparatusGroup.add(b);
+    bubbles.push(b);
+  }
+  labScene.add(labApparatusGroup);
+}
+
+function buildCapillarityApparatus() {
+  labApparatusGroup = new THREE.Group();
+  const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, transparent: true, opacity: 0.35, roughness: 0.1 });
+  const waterMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, transparent: true, opacity: 0.72 });
+
+  const trough = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.45, 0.8), glassMat);
+  trough.position.set(0, 0.24, 0);
+  labApparatusGroup.add(trough);
+  const troughWater = new THREE.Mesh(new THREE.BoxGeometry(2.1, 0.3, 0.72), waterMat);
+  troughWater.position.set(0, 0.18, 0);
+  labApparatusGroup.add(troughWater);
+
+  const specs = [
+    { x: -0.65, r: 0.14, h: 0.45 },
+    { x: 0.0,   r: 0.08, h: 0.95 },
+    { x: 0.65,  r: 0.04, h: 1.65 }
+  ];
+  specs.forEach(s => {
+    const tube = new THREE.Mesh(new THREE.CylinderGeometry(s.r, s.r, 1.9, 20), glassMat);
+    tube.position.set(s.x, 1.1, 0);
+    labApparatusGroup.add(tube);
+    const col = new THREE.Mesh(new THREE.CylinderGeometry(s.r * 0.82, s.r * 0.82, s.h, 16), waterMat);
+    col.position.set(s.x, 0.2 + s.h / 2, 0);
+    labApparatusGroup.add(col);
+  });
+  labScene.add(labApparatusGroup);
+}
+
+function buildHydraulicPressApparatus() {
+  labApparatusGroup = new THREE.Group();
+  const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 });
+  const oilMat = new THREE.MeshStandardMaterial({ color: 0x0ea5e9, transparent: true, opacity: 0.68 });
+  const metalMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.7, roughness: 0.25 });
+
+  // Base channel + left narrow + right wide cylinders
+  const base = new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.35, 0.6), oilMat);
+  base.position.set(0, 0.2, 0);
+  labApparatusGroup.add(base);
+
+  const leftCyl = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 1.2, 24), glassMat);
+  leftCyl.position.set(-0.75, 0.8, 0);
+  labApparatusGroup.add(leftCyl);
+  const leftOil = new THREE.Mesh(new THREE.CylinderGeometry(0.19, 0.19, 0.7, 20), oilMat);
+  leftOil.position.set(-0.75, 0.55, 0);
+  labApparatusGroup.add(leftOil);
+  const smallPiston = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.18, 20), metalMat);
+  smallPiston.position.set(-0.75, 0.96, 0);
+  labApparatusGroup.add(smallPiston);
+
+  const rightCyl = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.55, 1.2, 28), glassMat);
+  rightCyl.position.set(0.45, 0.8, 0);
+  labApparatusGroup.add(rightCyl);
+  const rightOil = new THREE.Mesh(new THREE.CylinderGeometry(0.51, 0.51, 0.7, 24), oilMat);
+  rightOil.position.set(0.45, 0.55, 0);
+  labApparatusGroup.add(rightOil);
+  const largePiston = new THREE.Mesh(new THREE.CylinderGeometry(0.48, 0.48, 0.2, 24), metalMat);
+  largePiston.position.set(0.45, 0.98, 0);
+  labApparatusGroup.add(largePiston);
+
+  const load = new THREE.Mesh(new THREE.BoxGeometry(0.65, 0.45, 0.65), new THREE.MeshStandardMaterial({ color: 0xf59e0b, roughness: 0.4 }));
+  load.position.set(0.45, 1.32, 0);
+  labApparatusGroup.add(load);
+  labScene.add(labApparatusGroup);
+}
+
+function buildDnaHelixApparatus() {
+  labApparatusGroup = new THREE.Group();
+  labApparatusGroup.userData.autoRotate = true;
+  const matA = new THREE.MeshStandardMaterial({ color: 0x0ea5e9, roughness: 0.3 });
+  const matB = new THREE.MeshStandardMaterial({ color: 0x10b981, roughness: 0.3 });
+  const rungMats = [
+    new THREE.MeshStandardMaterial({ color: 0xf59e0b }),
+    new THREE.MeshStandardMaterial({ color: 0xec4899 })
+  ];
+  for (let i = 0; i < 16; i++) {
+    const angle = i * 0.45;
+    const y = 0.15 + i * 0.13;
+    const r = 0.55;
+    const x1 = Math.cos(angle) * r, z1 = Math.sin(angle) * r;
+    const x2 = -x1, z2 = -z1;
+
+    const s1 = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 12), matA);
+    s1.position.set(x1, y, z1);
+    labApparatusGroup.add(s1);
+
+    const s2 = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 12), matB);
+    s2.position.set(x2, y, z2);
+    labApparatusGroup.add(s2);
+
+    const rung = new THREE.Mesh(new THREE.CylinderGeometry(0.025, 0.025, r * 2, 8), rungMats[i % 2]);
+    rung.position.set(0, y, 0);
+    rung.rotation.z = Math.PI / 2;
+    rung.rotation.y = -angle;
+    labApparatusGroup.add(rung);
+  }
+  labScene.add(labApparatusGroup);
+}
+
+function buildCombustionApparatus() {
+  labApparatusGroup = new THREE.Group();
+  const metalMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.8, roughness: 0.3 });
+  const base = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.55, 0.15, 24), metalMat);
+  base.position.set(-0.5, 0.08, 0);
+  labApparatusGroup.add(base);
+
+  const tube = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 1.1, 24), metalMat);
+  tube.position.set(-0.5, 0.7, 0);
+  labApparatusGroup.add(tube);
+
+  // Flame
+  flameMesh = new THREE.Mesh(new THREE.ConeGeometry(0.18, 0.65, 16), new THREE.MeshBasicMaterial({ color: 0x38bdf8 }));
+  flameMesh.position.set(-0.5, 1.55, 0);
+  labApparatusGroup.add(flameMesh);
+
+  // Deflagrating spoon & burning sulfur
+  const spoon = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 1.4, 12), metalMat);
+  spoon.position.set(0.35, 1.1, 0);
+  spoon.rotation.z = -0.35;
+  labApparatusGroup.add(spoon);
+
+  const sulfur = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 12), new THREE.MeshBasicMaterial({ color: 0xfacc15 }));
+  sulfur.position.set(-0.5, 1.45, 0);
+  labApparatusGroup.add(sulfur);
+
+  // Glass collecting cylinder
+  const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 });
+  const jar = new THREE.Mesh(new THREE.CylinderGeometry(0.4, 0.4, 1.5, 24), glassMat);
+  jar.position.set(0.8, 0.75, 0);
+  labApparatusGroup.add(jar);
+
+  labScene.add(labApparatusGroup);
+}
+
+
+function buildRustApparatus() {
+  labApparatusGroup = new THREE.Group();
+  const woodMat = new THREE.MeshStandardMaterial({ color: 0x854d0e, roughness: 0.8 });
+  const rack = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.12, 0.6), woodMat);
+  rack.position.set(0, 0.06, 0);
+  labApparatusGroup.add(rack);
+
+  const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, transparent: true, opacity: 0.4 });
+  const nailMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.85, roughness: 0.2 });
+  const rustMat = new THREE.MeshStandardMaterial({ color: 0xb45309, roughness: 0.95 });
+
+  for (let i = 0; i < 4; i++) {
+    const xPos = (i - 1.5) * 0.6;
+    const tube = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 1.3, 24), glassMat);
+    tube.position.set(xPos, 0.8, 0);
+    labApparatusGroup.add(tube);
+
+    const nail = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.85, 12), i === 0 || i === 3 ? rustMat : nailMat);
+    nail.position.set(xPos, 0.65, 0);
+    labApparatusGroup.add(nail);
+
+    if (i === 0 || i === 1 || i === 3) {
+      const liquidMat = new THREE.MeshStandardMaterial({
+        color: i === 3 ? 0x78350f : 0x0284c7, transparent: true, opacity: 0.5
+      });
+      const liquid = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.15, 0.5, 16), liquidMat);
+      liquid.position.set(xPos, 0.4, 0);
+      labApparatusGroup.add(liquid);
+    }
+  }
+
+  labScene.add(labApparatusGroup);
+}
+
+
+function buildAllotropeApparatus() {
+  labApparatusGroup = new THREE.Group();
+
+  // Diamond on left (Tetrahedral lattice)
+  const diamondMat = new THREE.MeshPhysicalMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.85, roughness: 0.1 });
+  for (let i = 0; i < 8; i++) {
+    const s = new THREE.Mesh(new THREE.SphereGeometry(0.09, 12, 12), diamondMat);
+    s.position.set(-0.9 + (i%2)*0.45, 0.5 + Math.floor(i/4)*0.45, ((Math.floor(i/2)%2)-0.5)*0.45);
+    labApparatusGroup.add(s);
+  }
+
+  // Graphite on right (Hexagonal sheets)
+  const graphiteMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.5 });
+  for (let layer = 0; layer < 2; layer++) {
+    for (let j = 0; j < 6; j++) {
+      const angle = (j / 6) * Math.PI * 2;
+      const s = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 12), graphiteMat);
+      s.position.set(0.9 + Math.cos(angle)*0.4, 0.5 + layer*0.45, Math.sin(angle)*0.4);
+      labApparatusGroup.add(s);
+    }
+  }
+
+  labScene.add(labApparatusGroup);
+}
+
+
+function buildPetroleumTowerApparatus() {
+  labApparatusGroup = new THREE.Group();
+  const towerMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.6, roughness: 0.3 });
+  const tower = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.65, 2.5, 32), towerMat);
+  tower.position.set(0, 1.25, 0);
+  labApparatusGroup.add(tower);
+
+  // 5 side pipes
+  const pipeColors = [0x38bdf8, 0xef4444, 0xf59e0b, 0x10b981, 0x0f172a];
+  for (let k = 0; k < 5; k++) {
+    const y = 2.2 - k * 0.45;
+    const pipe = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.6, 12), new THREE.MeshStandardMaterial({ color: pipeColors[k] }));
+    pipe.rotation.z = Math.PI / 2;
+    pipe.position.set(0.55, y, 0);
+    labApparatusGroup.add(pipe);
+  }
+
+  labScene.add(labApparatusGroup);
+}
+
+
 function setupLabDragControls(canvas) {
   let isDragging = false;
   let prevX = 0, prevY = 0;
+  let startPinchDist = 0;
+  let startCameraZ = 3.6;
 
-  canvas.onmousedown = (e) => { isDragging = true; prevX = e.clientX; prevY = e.clientY; };
-  window.onmouseup = () => { isDragging = false; };
-  window.onmousemove = (e) => {
+  canvas.onmousedown = (e) => {
+    isDragging = true;
+    prevX = e.clientX;
+    prevY = e.clientY;
+  };
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  window.addEventListener('mousemove', (e) => {
     if (!isDragging || !labApparatusGroup) return;
     const dx = e.clientX - prevX;
     const dy = e.clientY - prevY;
-    labApparatusGroup.rotation.y += dx * 0.01;
-    labApparatusGroup.rotation.x += dy * 0.01;
-    prevX = e.clientX; prevY = e.clientY;
-  };
+    labApparatusGroup.rotation.y += dx * 0.008;
+    labApparatusGroup.rotation.x += dy * 0.008;
+    prevX = e.clientX;
+    prevY = e.clientY;
+  });
 
-  // Touch controls
-  canvas.ontouchstart = (e) => {
+  // Touch controls: 1-finger rotate, 2-finger pinch to zoom!
+  canvas.addEventListener('touchstart', (e) => {
     if (e.touches.length === 1) {
-      isDragging = true; prevX = e.touches[0].clientX; prevY = e.touches[0].clientY;
+      isDragging = true;
+      prevX = e.touches[0].clientX;
+      prevY = e.touches[0].clientY;
+    } else if (e.touches.length === 2) {
+      isDragging = false;
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      startPinchDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+      startCameraZ = labCamera ? labCamera.position.z : 3.6;
     }
-  };
-  canvas.ontouchend = () => { isDragging = false; };
-  canvas.ontouchmove = (e) => {
-    if (!isDragging || e.touches.length !== 1 || !labApparatusGroup) return;
-    const dx = e.touches[0].clientX - prevX;
-    const dy = e.touches[0].clientY - prevY;
-    labApparatusGroup.rotation.y += dx * 0.012;
-    labApparatusGroup.rotation.x += dy * 0.012;
-    prevX = e.touches[0].clientX; prevY = e.touches[0].clientY;
-  };
+  }, { passive: false });
+
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    if (e.touches.length === 2 && startPinchDist > 0 && labCamera) {
+      // 2-Fingers: Pinch to zoom in / out
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      const curDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+      const ratio = curDist / startPinchDist;
+      const targetZ = startCameraZ / ratio;
+      labCamera.position.z = Math.max(1.2, Math.min(6.5, targetZ));
+    } else if (e.touches.length === 1 && isDragging && labApparatusGroup) {
+      // 1-Finger: Rotate
+      const dx = e.touches[0].clientX - prevX;
+      const dy = e.touches[0].clientY - prevY;
+      labApparatusGroup.rotation.y += dx * 0.01;
+      labApparatusGroup.rotation.x += dy * 0.01;
+      prevX = e.touches[0].clientX;
+      prevY = e.touches[0].clientY;
+    }
+  }, { passive: false });
+
+  canvas.addEventListener('touchend', (e) => {
+    if (e.touches.length < 2) startPinchDist = 0;
+    if (e.touches.length === 0) isDragging = false;
+  });
+
+  // Mouse wheel zoom
+  canvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (!labCamera) return;
+    labCamera.position.z = Math.max(1.2, Math.min(6.5, labCamera.position.z + e.deltaY * 0.005));
+  }, { passive: false });
+}
+
+function zoomLab3d(direction) {
+  if (!labCamera) return;
+  labCamera.position.z = Math.max(1.2, Math.min(6.5, labCamera.position.z - direction * 0.5));
+  playDingSound();
+}
+
+function resetLab3dView() {
+  if (!labCamera) return;
+  labCamera.position.set(0, 1.2, 3.6);
+  if (labApparatusGroup) labApparatusGroup.rotation.set(0, 0, 0);
+  playSnapSound();
 }
 
 function openLab3d(diagRef) {
@@ -1061,34 +2593,47 @@ function openLab3d(diagRef) {
   labCamera.aspect = container.clientWidth / container.clientHeight;
   labCamera.updateProjectionMatrix();
 
-  // Populate parts badges
-  const data = DIAGRAMS[diagRef] || DIAGRAMS['diag-co2-apparatus-3d'];
-  const badgesContainer = document.getElementById('labPartsBadges');
-  if (data && data.components) {
-    badgesContainer.innerHTML = data.components.map((c, i) => `
-      <span class="part-badge" onclick="highlightLabPart('${c.id}', '${c.name}', '${c.role}')">${c.name}</span>
-    `).join('');
-  }
+  loadDiagramModel(diagRef || 'diag-co2-prep');
 
-  animateLab();
+  if (!labAnimId) {
+    animateLab();
+  }
 }
 
 function closeLab3d() {
   document.getElementById('lab3dModal').classList.remove('open');
-  if (labAnimId) cancelAnimationFrame(labAnimId);
+  if (labAnimId) {
+    cancelAnimationFrame(labAnimId);
+    labAnimId = null;
+  }
 }
 
 function animateLab() {
   labAnimId = requestAnimationFrame(animateLab);
 
-  // Animate rising bubbles
-  bubbles.forEach(b => {
-    b.position.y += b.userData.speed;
-    if (b.position.y > 0.6) {
-      b.position.y = 0.12;
-      b.position.x = -0.7 + (Math.random()-0.5)*0.45;
-    }
-  });
+  // Animate rising bubbles for CO2 / Cl2
+  if (bubbles.length > 0) {
+    bubbles.forEach(b => {
+      b.position.y += b.userData.speed;
+      const maxY = b.userData.baseX ? 1.05 : 0.6;
+      const baseX = b.userData.baseX || -0.7;
+      if (b.position.y > maxY) {
+        b.position.y = 0.12;
+        b.position.x = baseX + (Math.random()-0.5)*0.35;
+      }
+    });
+  }
+
+  // Animate flame flicker
+  if (flameMesh) {
+    flameMesh.scale.y = 0.95 + Math.random() * 0.15;
+    flameMesh.scale.x = 0.95 + Math.random() * 0.1;
+  }
+
+  // Auto-rotate DNA / crystal models
+  if (labApparatusGroup && labApparatusGroup.userData.autoRotate) {
+    labApparatusGroup.rotation.y += 0.012;
+  }
 
   if (labRenderer && labScene && labCamera) {
     labRenderer.render(labScene, labCamera);
@@ -1096,18 +2641,23 @@ function animateLab() {
 }
 
 function onAcidSliderChange(val) {
-  document.getElementById('sliderAcidVal').textContent = `${val}%`;
-  bubbles.forEach(b => {
-    b.userData.speed = (0.005 + (val / 100) * 0.05);
-  });
-  document.getElementById('labLiveRateText').textContent = val > 60 ? 'تصاعد الغاز: عنيف ومكثف ⚡' :
-                                                          val > 20 ? 'تصاعد الغاز: منتظم ومستقر ✅' : 'تصاعد الغاز: بطيء جداً ⏸️';
+  const valEl = document.getElementById('sliderAcidVal');
+  if (valEl) valEl.textContent = `${val}%`;
+
+  if (bubbles.length > 0) {
+    bubbles.forEach(b => {
+      b.userData.speed = (0.005 + (val / 100) * 0.05);
+    });
+  }
+  const rateText = document.getElementById('labLiveRateText');
+  if (rateText) {
+    rateText.textContent = val > 60 ? 'النشاط: عنيف ومكثف ⚡' :
+                           val > 20 ? 'النشاط: منتظم ومستقر ✅' : 'النشاط: بطيء جداً ⏸️';
+  }
 }
 
 function highlightLabPart(id, name, role) {
-  alert(`【${name}】
-
-الوظيفة في التجربة: ${role}`);
+  alert(`【${name}】\n\nالوظيفة في التجربة: ${role}`);
 }
 
 // --------------------------------------------------------
@@ -1309,20 +2859,62 @@ function toggleToc() {
 
 function renderToc() {
   const container = document.getElementById('tocListContainer');
-  container.innerHTML = LESSONS.map(u => `
-    <div style="font-size:12px; font-weight:800; color:var(--primary); margin-top:8px;">الوحدة ${u.unit_num}: ${u.unit_title}</div>
-    ${u.lessons.map(l => `
-      <div class="toc-item" onclick="jumpToBookPage(${l.p_start})">
-        <span>${l.title}</span>
-        <span style="color:var(--text-muted); font-size:11.5px;">ص ${l.p_start}</span>
-      </div>
-    `).join('')}
-  `).join('');
+  if (!container) return;
+  if (typeof UNITS !== 'undefined' && UNITS && UNITS.length > 0) {
+    container.innerHTML = UNITS.map(u => {
+      const uLessons = (typeof LESSONS !== 'undefined' && LESSONS) ? LESSONS.filter(l => l.unitId === u.id || l.unit_id === u.id) : [];
+      return `
+        <div style="font-size:12px; font-weight:800; color:var(--primary); margin-top:10px; padding:4px 8px; background:rgba(0,168,89,0.08); border-radius:6px;">
+          ${u.title || ('الوحدة ' + (u.number || u.id))}
+        </div>
+        ${uLessons.map(l => {
+          const pTarget = (l.pages && l.pages.length > 0) ? l.pages[0] : (l.p_start || 1);
+          return `
+            <div class="toc-item" onclick="jumpToBookPage(${pTarget})">
+              <span>${l.title}</span>
+              <span style="color:var(--text-muted); font-size:11.5px;">ص ${pTarget}</span>
+            </div>
+          `;
+        }).join('')}
+      `;
+    }).join('');
+  } else if (typeof LESSONS !== 'undefined' && LESSONS && LESSONS.length > 0) {
+    container.innerHTML = LESSONS.map(u => {
+      if (u.lessons && Array.isArray(u.lessons)) {
+        return `
+          <div style="font-size:12px; font-weight:800; color:var(--primary); margin-top:8px;">الوحدة ${u.unit_num}: ${u.unit_title}</div>
+          ${u.lessons.map(l => `
+            <div class="toc-item" onclick="jumpToBookPage(${l.p_start})">
+              <span>${l.title}</span>
+              <span style="color:var(--text-muted); font-size:11.5px;">ص ${l.p_start}</span>
+            </div>
+          `).join('')}
+        `;
+      } else {
+        const pTarget = (u.pages && u.pages.length > 0) ? u.pages[0] : (u.p_start || 1);
+        return `
+          <div class="toc-item" onclick="jumpToBookPage(${pTarget})">
+            <span>${u.title}</span>
+            <span style="color:var(--text-muted); font-size:11.5px;">ص ${pTarget}</span>
+          </div>
+        `;
+      }
+    }).join('');
+  }
 }
 
 function jumpToBookPage(pNum) {
   toggleToc();
-  quickJumpPoc(pNum);
+  const idx = PAGES.findIndex(p => p.book_page === pNum);
+  if (idx !== -1) {
+    loadPage(idx);
+  } else {
+    if (pNum >= 0 && pNum < PAGES.length) {
+      loadPage(pNum);
+    } else {
+      showToast(`صفحة ${pNum} غير متوفرة`);
+    }
+  }
 }
 
 // --------------------------------------------------------
@@ -1340,7 +2932,7 @@ function saveStudentProgress() {
 
 function toggleTheme() {
   state.isDark = !state.isDark;
-  document.body.classList.toggle('light-theme', !state.isDark);
+  document.body.classList.toggle('dark-theme', state.isDark);
   showToast(state.isDark ? 'الوضع الداكن' : 'الوضع الفاتح');
 }
 
@@ -1359,31 +2951,452 @@ function exitToHome() {
   }
 }
 
-// Initialize Engine on DOM Load
-window.addEventListener('DOMContentLoaded', () => {
+// ========================================================
+// 4-TAB READER CONTROLLER (القارئ / الفهرس / الملخص / اختبر نفسك)
+// ========================================================
+let currentTab = 'reader';
+let quizTabIdx = 0;
+
+function switchBookTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.dock-tab-btn').forEach(b => b.classList.remove('active'));
+
+  if (tab === 'reader') {
+    document.getElementById('viewReader')?.classList.add('active');
+    document.getElementById('dockTabReader')?.classList.add('active');
+    setTimeout(updatePageContainerDimensions, 30);
+  } else if (tab === 'index') {
+    document.getElementById('viewIndex')?.classList.add('active');
+    document.getElementById('dockTabIndex')?.classList.add('active');
+    renderIndexView();
+  } else if (tab === 'summary') {
+    document.getElementById('viewSummary')?.classList.add('active');
+    document.getElementById('dockTabSummary')?.classList.add('active');
+    renderSummaryView();
+  } else if (tab === 'quiz') {
+    document.getElementById('viewQuiz')?.classList.add('active');
+    document.getElementById('dockTabQuiz')?.classList.add('active');
+    renderQuizView();
+  }
+}
+
+function cyclePageHotspot() {
+  const p = PAGES[state.curPageIdx];
+  const items = INTERACTIONS[p?.page_id] || [];
+  if (items.length === 0) {
+    showToast('لا توجد نقاط تفاعلية في هذه الصفحة');
+    return;
+  }
+  handleHotspotClick(items[0]);
+}
+
+function onSliderScrub(val) {
+  const idx = parseInt(val, 10);
+  if (!isNaN(idx) && idx >= 0 && idx < PAGES.length) {
+    loadPage(idx, 0);
+  }
+}
+
+function toggleBookmarkPage() {
+  const p = PAGES[state.curPageIdx];
+  if (!p) return;
+  try {
+    const key = 'thaker_bookmarks_v2';
+    const bms = JSON.parse(localStorage.getItem(key) || '[]');
+    const existsIdx = bms.findIndex(b => b.page_id === p.page_id);
+    if (existsIdx >= 0) {
+      bms.splice(existsIdx, 1);
+      showToast('تمت الإزالة من المفضلة');
+    } else {
+      bms.push({ page_id: p.page_id, book_page: p.book_page, title: p.title });
+      showToast('تم حفظ الصفحة في المفضلة ⭐');
+    }
+    localStorage.setItem(key, JSON.stringify(bms));
+    updateBookmarkButtonUI(p.page_id);
+  } catch (e) {}
+}
+
+function updateBookmarkButtonUI(pageId) {
+  try {
+    const bms = JSON.parse(localStorage.getItem('thaker_bookmarks_v2') || '[]');
+    const marked = bms.some(b => b.page_id === pageId);
+    const btn = document.getElementById('btnBookmarkPage');
+    if (btn) btn.classList.toggle('bookmarked', marked);
+  } catch (e) {}
+}
+
+function getVisitedPagesSet() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem('thaker_visited_pages') || '[]'));
+  } catch (e) { return new Set(); }
+}
+
+function markPageVisited(bookPage) {
+  try {
+    const s = getVisitedPagesSet();
+    s.add(bookPage);
+    localStorage.setItem('thaker_visited_pages', JSON.stringify([...s]));
+  } catch (e) {}
+}
+
+function renderIndexView() {
+  const container = document.getElementById('indexUnitsContainer');
+  if (!container) return;
+  const query = (document.getElementById('indexSearchInput')?.value || '').trim();
+  const visited = getVisitedPagesSet();
+
+  if (typeof UNITS !== 'undefined' && UNITS && UNITS.length > 0) {
+    container.innerHTML = UNITS.map((u, idx) => {
+      const uLessons = (LESSONS || []).filter(l => l.unitId === u.id || l.unit_id === u.id)
+        .filter(l => !query || (l.title || '').includes(query));
+      if (query && uLessons.length === 0 && !(u.title || '').includes(query)) return '';
+      return `
+        <div class="index-unit-card">
+          <div class="index-unit-head">
+            <div class="unit-ring-badge">${u.number || idx + 1}</div>
+            <div style="flex:1;">
+              <div style="font-size:15px; font-weight:800; color:var(--text-main);">${u.title || ('الوحدة ' + (idx+1))}</div>
+              <div style="font-size:11.5px; color:var(--text-muted);">${uLessons.length} دروس متاحة</div>
+            </div>
+          </div>
+          ${uLessons.map(l => {
+            const pT = (l.pages && l.pages.length) ? l.pages[0] : (l.p_start || 1);
+            const done = visited.has(pT);
+            return `
+              <div class="index-lesson-row" onclick="jumpFromIndex(${pT})">
+                <div class="lesson-check-dot ${done ? 'done' : ''}">${done ? '✓' : ''}</div>
+                <div style="flex:1; font-size:13.5px; font-weight:700;">${l.title}</div>
+                <span class="page-chip-soft">ص ${pT}</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }).join('');
+    return;
+  }
+
+  container.innerHTML = (LESSONS || []).map(u => {
+    const list = u.lessons || [];
+    const filtered = list.filter(l => !query || (l.title || '').includes(query) || (u.unit_title || '').includes(query));
+    if (query && filtered.length === 0) return '';
+    let doneCount = 0;
+    filtered.forEach(l => { if (visited.has(l.p_start)) doneCount++; });
+    const pct = filtered.length ? Math.round((doneCount / filtered.length) * 100) : 0;
+    return `
+      <div class="index-unit-card">
+        <div class="index-unit-head">
+          <div class="unit-ring-badge">${u.unit_num}</div>
+          <div style="flex:1;">
+            <div style="font-size:15px; font-weight:800; color:var(--text-main);">${u.unit_title}</div>
+            <div style="font-size:11.5px; color:var(--text-muted);">${pct}% مكتمل · ص ${u.page_start}–${u.page_end}</div>
+          </div>
+        </div>
+        ${filtered.map(l => {
+          const isDone = visited.has(l.p_start);
+          return `
+            <div class="index-lesson-row" onclick="jumpFromIndex(${l.p_start})">
+              <div class="lesson-check-dot ${isDone ? 'done' : ''}">${isDone ? '✓' : ''}</div>
+              <div style="flex:1; font-size:13.5px; font-weight:700; color:var(--text-main);">${l.title}</div>
+              <span style="font-size:13px;">🧪</span>
+              <span class="page-chip-soft">ص ${l.p_start}</span>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }).join('');
+}
+
+function jumpFromIndex(bookPage) {
+  switchBookTab('reader');
+  const idx = PAGES.findIndex(p => p.book_page === bookPage);
+  if (idx !== -1) loadPage(idx);
+  else showToast(`صفحة ${bookPage}`);
+}
+
+function renderSummaryView() {
+  const container = document.getElementById('summaryCardsContainer');
+  if (!container) return;
+  const p = PAGES[state.curPageIdx] || PAGES[0] || {};
+  const uId = p.unit_id || 'u9';
+  const ints = INTERACTIONS[p.page_id] || [];
+  const expRef = ints.find(i => i.explanation_ref)?.explanation_ref;
+  const expObj = (expRef && EXPLANATIONS[expRef]) || Object.values(EXPLANATIONS)[0];
+
+  document.getElementById('summaryUnitSub').textContent = p.title || 'ملخص الدرس والمفاهيم الأساسية';
+
+  let cards = [];
+  // Definitions card (purple)
+  const vocabIds = expObj?.vocabulary_ids || Object.keys(GLOSSARY).slice(0, 3);
+  const vocabHtml = vocabIds.map(vid => GLOSSARY[vid]).filter(Boolean).map(v =>
+    `<div style="font-size:13.5px; line-height:1.6;"><b style="color:var(--text-main);">${v.term}:</b> <span style="color:var(--text-muted);">${v.definition}</span></div>`
+  ).join('');
+  if (vocabHtml) {
+    cards.push(`
+      <div class="summary-stripe-card purple">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#7C3AED;">💡 تعريفات ومصطلحات</span>
+          <span class="page-chip-soft">ص ${p.book_page || 7}</span>
+        </div>
+        ${vocabHtml}
+      </div>
+    `);
+  }
+
+  // Rule / Equation card (blue)
+  const eqs = expObj?.chemical_equations || [];
+  if (eqs.length > 0 || expObj) {
+    const eqBlock = eqs.length
+      ? eqs.map(e => `<div class="formula-highlight-box">${e.label}: <span style="direction:ltr;display:inline-block;">${e.eq}</span></div>`).join('')
+      : `<div class="formula-highlight-box">${expObj?.levels?.basic || expObj?.original_text || ''}</div>`;
+    cards.push(`
+      <div class="summary-stripe-card blue">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#0284C7;">📐 القاعدة والمبدأ الأساسي</span>
+          <span class="page-chip-soft">ص ${p.book_page || 7}</span>
+        </div>
+        ${eqBlock}
+      </div>
+    `);
+  }
+
+  // Key factors / Intermediate explanation (amber)
+  if (expObj?.levels?.intermediate) {
+    cards.push(`
+      <div class="summary-stripe-card amber">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#D97706;">🧪 الشرح التطبيقي والعوامل</span>
+          <span class="page-chip-soft">${uId.toUpperCase()}</span>
+        </div>
+        <div style="font-size:13.5px; line-height:1.7; color:var(--text-main);">${expObj.levels.intermediate}</div>
+      </div>
+    `);
+  }
+
+  // Common mistake / Advanced caution (red)
+  cards.push(`
+    <div class="summary-stripe-card red">
+      <div style="font-size:15px; font-weight:800; color:#DC2626;">⚠️ نقطة مهمة وتنبيه علمي</div>
+      <div style="font-size:13.5px; line-height:1.6; color:var(--text-main);">${expObj?.levels?.advanced || 'تأكد من فهم الفرق بين الخواص الفيزيائية والتغير الكيميائي عند حل التمارين.'}</div>
+    </div>
+  `);
+
+  container.innerHTML = cards.join('');
+}
+
+function renderQuizView() {
+  const container = document.getElementById('quizTabContainer');
+  if (!container) return;
+  const rawVals = Object.values(ASSESSMENTS || {});
+  const qList = [];
+  rawVals.forEach(item => {
+    if (Array.isArray(item)) item.forEach(sub => qList.push(sub));
+    else if (item) qList.push(item);
+  });
+  window._flatQuizList = qList;
+  if (qList.length === 0) {
+    container.innerHTML = '<div class="quiz-question-card">ستتوفر تمارين إضافية قريباً!</div>';
+    return;
+  }
+  if (quizTabIdx >= qList.length) quizTabIdx = 0;
+  const q = qList[quizTabIdx];
+  document.getElementById('quizTabCounter').textContent = `${quizTabIdx + 1} / ${qList.length}`;
+  document.getElementById('quizTabProgressBar').style.width = `${Math.round(((quizTabIdx + 1) / qList.length) * 100)}%`;
+
+  if (q.type === 'true_false_set' && q.sub_questions?.length) {
+    const sub = q.sub_questions[0];
+    container.innerHTML = `
+      <div class="quiz-question-card">
+        <span class="amber-tag-pill">صح أم خطأ · كتاب الوزارة</span>
+        <div style="font-size:16px; font-weight:800; line-height:1.6;">${sub.statement}</div>
+      </div>
+      <button class="quiz-opt" id="qtOpt0" onclick="answerTabQuizTF(true, ${sub.is_true})"><span>✅ عبارة صحيحة</span><span>⚪</span></button>
+      <button class="quiz-opt" id="qtOpt1" onclick="answerTabQuizTF(false, ${sub.is_true})"><span>❌ عبارة خاطئة</span><span>⚪</span></button>
+      <div id="quizTabFeedback" class="why-wrong-box" style="display:none;"></div>
+      <button onclick="quizTabIdx = (quizTabIdx + 1) % ${qList.length}; renderQuizView();" style="background:var(--primary); color:#fff; border:none; border-radius:999px; padding:14px; font-size:15px; font-weight:800; cursor:pointer;">السؤال التالي ‹</button>
+    `;
+    return;
+  }
+
+  const opts = q.options || [];
+  container.innerHTML = `
+    <div class="quiz-question-card">
+      <span class="amber-tag-pill">تمرين كتاب الوزارة</span>
+      <div style="font-size:16px; font-weight:800; line-height:1.6;">${q.prompt || q.q || q.question}</div>
+    </div>
+    ${opts.map((o, i) => `
+      <button class="quiz-opt" id="qtOpt${i}" onclick="answerTabQuiz(${i})">
+        <span>${o.text || o}</span>
+        <span>⚪</span>
+      </button>
+    `).join('')}
+    <div id="quizTabFeedback" class="why-wrong-box" style="display:none;"></div>
+    <div style="display:flex; gap:8px;">
+      <button onclick="switchBookTab('reader')" class="btn-nav" style="flex:1; border-radius:999px;">📖 راجع الصفحة</button>
+      <button onclick="quizTabIdx = (quizTabIdx + 1) % ${qList.length}; renderQuizView();" style="flex:1.3; background:var(--primary); color:#fff; border:none; border-radius:999px; padding:13px; font-size:14.5px; font-weight:800; cursor:pointer;">السؤال التالي ‹</button>
+    </div>
+  `;
+}
+
+function answerTabQuiz(idx) {
+  const qList = window._flatQuizList || [];
+  const q = qList[quizTabIdx];
+  if (!q) return;
+  const correctIdx = (typeof q.answer === 'number') ? q.answer : (q.correct_index ?? 0);
+  (q.options || []).forEach((_, i) => {
+    const b = document.getElementById('qtOpt' + i);
+    if (!b) return;
+    b.disabled = true;
+    if (i === correctIdx) { b.classList.add('correct'); b.lastElementChild.textContent = '✓'; }
+    else if (i === idx) { b.classList.add('wrong'); b.lastElementChild.textContent = '✕'; }
+  });
+  const fb = document.getElementById('quizTabFeedback');
+  if (fb) {
+    fb.style.display = 'block';
+    const ok = idx === correctIdx;
+    const explainText = q.explain || q.explanation || '';
+    const why = q.options?.[idx]?.why_wrong || explainText;
+    fb.innerHTML = ok
+      ? `<div style="color:#059669; font-weight:800; margin-bottom:4px;">✅ إجابة صحيحة وممتازة!</div><div>${explainText}</div>`
+      : `<div style="color:#DC2626; font-weight:800; margin-bottom:4px;">لماذا أخطأت؟</div><div>${why}</div>`;
+  }
+}
+
+function answerTabQuizTF(chosen, expected) {
+  const qList = window._flatQuizList || [];
+  const q = qList[quizTabIdx];
+  const sub = q?.sub_questions?.[0];
+  const fb = document.getElementById('quizTabFeedback');
+  if (fb) {
+    fb.style.display = 'block';
+    fb.innerHTML = chosen === expected
+      ? `<div style="color:#059669;font-weight:800;">✅ أحسنت!</div><div>${sub?.why_wrong || ''}</div>`
+      : `<div style="color:#DC2626;font-weight:800;">❌ إجابة غير دقيقة</div><div>${sub?.why_wrong || ''}</div>`;
+  }
+}
+
+function openRelatedActivityFromSheet() {
+  closeTextSheet();
+  const p = PAGES[state.curPageIdx];
+  const ints = INTERACTIONS[p?.page_id] || [];
+  const actInt = ints.find(i => i.activity_ref);
+  openActivityModal(actInt?.activity_ref || Object.keys(window.THAKER_CURRICULUM_P2?.activities || {})[0]);
+}
+
+// Wrap loadPage to update scrubber, hotspot pill, bookmark UI, and Android ThakerBridge progress
+const _origLoadPage = loadPage;
+loadPage = function(pageIdx, direction = 0) {
+  _origLoadPage(pageIdx, direction);
+  const p = PAGES[pageIdx];
+  if (!p) return;
+  const totalBook = PAGES[PAGES.length - 1]?.book_page || PAGES.length;
+  const ind = document.getElementById('pageIndicatorText');
+  if (ind) ind.textContent = `صفحة ${p.book_page} من ${totalBook}`;
+
+  const slider = document.getElementById('pageRangeSlider');
+  if (slider) {
+    slider.max = Math.max(0, PAGES.length - 1);
+    slider.value = pageIdx;
+  }
+  const minLbl = document.getElementById('sliderMinLabel');
+  const maxLbl = document.getElementById('sliderMaxLabel');
+  if (minLbl) minLbl.textContent = PAGES[0]?.book_page || 1;
+  if (maxLbl) maxLbl.textContent = totalBook;
+
+  const hsCount = (INTERACTIONS[p.page_id] || []).length;
+  const hsText = document.getElementById('hotspotCountText');
+  if (hsText) hsText.textContent = `✨ النقاط التفاعلية · ${hsCount}`;
+
+  updateBookmarkButtonUI(p.page_id);
+  markPageVisited(p.book_page);
+
+  // Sync progress to Native Android Shell if inside WebView
+  if (window.ThakerBridge && window.ThakerBridge.updateProgress) {
+    try {
+      const pct = Math.max(1, Math.round(((pageIdx + 1) / PAGES.length) * 100));
+      window.ThakerBridge.updateProgress(document.title, p.book_page, pct, p.unit_id || 'u9', p.title || '');
+    } catch (e) {}
+  }
+};
+
+// Enhance openTextExplanation to update the v2.0 Sheet header & dots cleanly
+const _origOpenTextExplanation = openTextExplanation;
+openTextExplanation = function(refId) {
+  _origOpenTextExplanation(refId);
+  const data = EXPLANATIONS[refId];
+  const p = PAGES[state.curPageIdx];
+  const hTitle = document.getElementById('sheetHeaderTitleText');
+  const hMeta = document.getElementById('sheetHeaderMetaText');
+  if (hTitle && data) hTitle.textContent = data.title || 'الشرح التعليمي الذكي';
+  if (hMeta && p) hMeta.textContent = `صفحة ${p.book_page} · ${p.unit_id ? p.unit_id.toUpperCase() : ''}`;
+};
+
+const _origSetDepth = setDepth;
+setDepth = function(level) {
+  _origSetDepth(level);
+  const mapIdx = level === 'basic' ? 1 : (level === 'intermediate' ? 2 : 3);
+  const lbl = document.getElementById('sheetCardCountLabel');
+  if (lbl) lbl.textContent = `بطاقة ${mapIdx} من 3`;
+  for (let i = 1; i <= 3; i++) {
+    const dot = document.getElementById('cardStepDot' + i);
+    if (dot) dot.style.background = i <= mapIdx ? 'var(--primary)' : '#cbd5e1';
+  }
+};
+
+// Initialize Engine
+function initApp() {
+  state.isDark = false;
+  window.addEventListener("resize", updatePageContainerDimensions);
+  window.addEventListener("orientationchange", function() {
+    setTimeout(updatePageContainerDimensions, 100);
+  });
+  updatePageContainerDimensions();
   initTouchGestures();
-  loadPage(2); // Start on PoC Page 10
-});
+
+  let startIdx = Math.min(2, Math.max(0, PAGES.length - 1));
+  let startTab = 'reader';
+  try {
+    const hash = window.location.hash || '';
+    const pm = hash.match(/page=(\d+)/);
+    if (pm) {
+      const targetBp = parseInt(pm[1], 10);
+      const foundIdx = PAGES.findIndex(p => p.book_page === targetBp);
+      if (foundIdx !== -1) startIdx = foundIdx;
+    }
+    const tm = hash.match(/tab=(reader|index|summary|quiz)/);
+    if (tm) startTab = tm[1];
+  } catch (e) {}
+
+  loadPage(startIdx);
+  if (startTab !== 'reader') switchBookTab(startTab);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 </script>
 
 
-<!-- Interactive Activity Simulator Modal -->
-<div id="activityModal" style="display:none; position:fixed; inset:0; background:rgba(2,6,23,0.92); backdrop-filter:blur(10px); z-index:960; padding:16px; overflow-y:auto;">
-  <div style="max-width:680px; margin:20px auto; background:var(--bg-surface); border:1px solid var(--border-light); border-radius:20px; padding:20px; box-shadow:0 20px 50px rgba(0,0,0,0.5);">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-light); padding-bottom:12px; margin-bottom:14px;">
-      <div>
-        <div style="font-size:12px; font-weight:800; color:var(--primary);">🧪 المختبر والنشاط التفاعلي</div>
-        <h3 id="actModalTitle" style="margin:2px 0 0; font-size:17px; color:var(--text-main);">عنوان النشاط</h3>
+<!-- Grade 12 Interactive Activity Simulator Modal -->
+<div id="g12ActivityModal" style="display:none; position:fixed; inset:0; background:#0B151C; z-index:960; padding:16px; overflow-y:auto; color:#f8fafc;">
+  <div style="max-width:680px; margin:14px auto; display:flex; flex-direction:column; gap:12px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <button class="act-circle-btn" onclick="closeActivityModal()">✕</button>
+      <div style="text-align:center; flex:1;">
+        <div style="font-size:11.5px; font-weight:800; color:#38bdf8;">🧪 المختبر والنشاط التفاعلي</div>
+        <h3 id="actModalTitle" style="margin:2px 0 0; font-size:16.5px; color:#FFFFFF;">عنوان النشاط</h3>
       </div>
-      <button class="btn-close" onclick="closeActivityModal()">✕</button>
+      <div style="width:40px;"></div>
     </div>
-    <p id="actModalDesc" style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;"></p>
-    <div id="actVisualStage" style="background:rgba(15,23,42,0.85); border:1px solid rgba(56,189,248,0.25); border-radius:14px; padding:14px; margin-bottom:14px; color:#f8fafc; min-height:150px;"></div>
-    <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:10px; margin-bottom:14px;"></div>
-    <div id="actReadoutBox" style="background:rgba(0,168,89,0.1); border:1px solid var(--primary); border-radius:12px; padding:12px; font-size:13.5px; line-height:1.7; color:var(--text-main);"></div>
-    <div style="margin-top:14px; display:flex; justify-content:flex-end;">
-      <button class="btn-nav" onclick="closeActivityModal()" style="background:var(--primary); color:#fff; border-color:var(--primary);">إغلاق والعودة للكتاب</button>
-    </div>
+    <p id="actModalDesc" style="font-size:13px; color:#94a3b8; line-height:1.6; text-align:center;"></p>
+    <div id="actVisualStage" style="background:radial-gradient(circle at 50% 45%, #163044 0%, #0B151C 100%); border:1px solid rgba(56,189,248,0.25); border-radius:20px; padding:16px; color:#f8fafc; min-height:160px;"></div>
+    <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
+    <div id="actReadoutBox" style="background:rgba(0,168,89,0.14); border:1px solid var(--primary); border-radius:16px; padding:12px 14px; font-size:13.5px; line-height:1.7; color:#f8fafc;"></div>
+    <button class="btn-nav" onclick="closeActivityModal()" style="background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px; padding:12px; width:100%;">إغلاق والعودة للكتاب</button>
   </div>
 </div>
 
@@ -1442,7 +3455,7 @@ function openCurrentPageQuiz() {
 // Override handleHotspotClick to support activities natively
 handleHotspotClick = function(item) {
   playClickSound();
-  if (item.type === 'explainable_text') {
+  if (item.type === 'explainable_text' || item.type === 'title') {
     openTextExplanation(item.explanation_ref);
   } else if (item.type === 'interactive_3d') {
     openLab3d(item.diagram_ref);
@@ -1483,12 +3496,12 @@ function openActivityModal(actRef) {
     `;
   }).join('');
 
-  document.getElementById('activityModal').style.display = 'block';
+  document.getElementById('g12ActivityModal').style.display = 'block';
   updateActivitySimulation();
 }
 
 function closeActivityModal() {
-  document.getElementById('activityModal').style.display = 'none';
+  document.getElementById('g12ActivityModal').style.display = 'none';
 }
 
 function onActivityControlChange(id, val) {
