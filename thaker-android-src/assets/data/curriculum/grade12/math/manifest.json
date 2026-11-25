@@ -1,0 +1,49 @@
+{
+  "schema_version": "2.0.0",
+  "pack_id": "math-g12-interactive-2026",
+  "subject": "math",
+  "grade": 12,
+  "edition": {
+    "title": "الرياضيات - الصف الثالث الثانوي - القسم العلمي",
+    "ministry": "الجمهورية اليمنية - وزارة التربية والتعليم - قطاع المناهج",
+    "curriculum_version": "1447هـ - 2026م",
+    "official_pdf": "الرياضيات-للصف-الثالث-الثانوي.pdf",
+    "practice_pdf": "الرياضيات-التمارين-للصف-الثالث-الثانوي-القسم-العلمي.pdf",
+    "total_pdf_pages": 259,
+    "start_pdf_page": 9,
+    "end_pdf_page": 258,
+    "total_book_pages": 250,
+    "page_offset": "book_page = pdf_page - 2",
+    "workbook_start_pdf_page": 8,
+    "workbook_end_pdf_page": 82
+  },
+  "features": {
+    "original_page_rendering": true,
+    "interactive_overlays": true,
+    "smart_text_bottom_sheet": true,
+    "explanation_levels_count": 3,
+    "interactive_step_by_step_equations": true,
+    "interactive_3d_geometry_lab": true,
+    "simulated_activities": true,
+    "remediation_mistake_review": true,
+    "offline_audio_synthesis": true,
+    "yemeni_companion_prompts": true,
+    "multi_student_profiles": true
+  },
+  "data_files": [
+    "manifest.json",
+    "pages.json",
+    "workbook_pages.json",
+    "units.json",
+    "lessons.json",
+    "interactions.json",
+    "explanations.json",
+    "diagrams.json",
+    "activities.json",
+    "assessments.json",
+    "glossary.json",
+    "solution_steps.json",
+    "geometry_lab.json",
+    "data_bundle.js"
+  ]
+}

@@ -1,0 +1,700 @@
+{
+  "act-math-complex-add": {
+    "id": "act-math-complex-add",
+    "title": "جمع الأعداد المركبة",
+    "unit_id": "u1",
+    "book_page": 13,
+    "sim_type": "math_complex_add",
+    "description": "غيّر المكوّنات الحقيقية والتخيلية ولاحظ نتيجة الجمع في مستوى أرغاند.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "الجزء الحقيقي z₁",
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "b",
+        "label": "الجزء التخيلي z₁",
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "id": "c",
+        "label": "الجزء الحقيقي z₂",
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "default": -1
+      },
+      {
+        "id": "d",
+        "label": "الجزء التخيلي z₂",
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-math-complex-modulus": {
+    "id": "act-math-complex-modulus",
+    "title": "القيمة المطلقة والسعة",
+    "unit_id": "u1",
+    "book_page": 19,
+    "sim_type": "math_complex_modulus",
+    "description": "احسب طول متجه العدد المركب من مكوّناته.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "الجزء الحقيقي a",
+        "min": -6,
+        "max": 6,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "id": "b",
+        "label": "الجزء التخيلي b",
+        "min": -6,
+        "max": 6,
+        "step": 1,
+        "default": 4
+      }
+    ]
+  },
+  "act-math-polar": {
+    "id": "act-math-polar",
+    "title": "التحويل إلى الصيغة القطبية",
+    "unit_id": "u1",
+    "book_page": 38,
+    "sim_type": "math_polar",
+    "description": "حرك الطول r والزاوية θ ولاحظ الإحداثيات الجبرية.",
+    "controls": [
+      {
+        "id": "r",
+        "label": "القيمة المطلقة r",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 5
+      },
+      {
+        "id": "theta",
+        "label": "الزاوية θ",
+        "min": 0,
+        "max": 360,
+        "step": 5,
+        "default": 60
+      }
+    ]
+  },
+  "act-math-demoivre": {
+    "id": "act-math-demoivre",
+    "title": "مبرهنة دي موافر",
+    "unit_id": "u2",
+    "book_page": 46,
+    "sim_type": "math_de_moivre",
+    "description": "ارفع العدد المركب إلى القوة n ولاحظ تضاعف الطول والزاوية.",
+    "controls": [
+      {
+        "id": "r",
+        "label": "القيمة المطلقة r",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "theta",
+        "label": "الزاوية θ",
+        "min": 0,
+        "max": 120,
+        "step": 5,
+        "default": 30
+      },
+      {
+        "id": "n",
+        "label": "القوة n",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-roots": {
+    "id": "act-math-roots",
+    "title": "الجذور النونية للعدد المركب",
+    "unit_id": "u2",
+    "book_page": 52,
+    "sim_type": "math_roots",
+    "description": "اعرض الجذور النونية موزعة على دائرة نصف قطرها r^(1/n).",
+    "controls": [
+      {
+        "id": "r",
+        "label": "القيمة المطلقة r",
+        "min": 1,
+        "max": 16,
+        "step": 1,
+        "default": 8
+      },
+      {
+        "id": "theta",
+        "label": "زاوية العدد θ",
+        "min": 0,
+        "max": 360,
+        "step": 15,
+        "default": 60
+      },
+      {
+        "id": "n",
+        "label": "درجة الجذر n",
+        "min": 2,
+        "max": 8,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-binomial": {
+    "id": "act-math-binomial",
+    "title": "التوسعة ذات الحدين",
+    "unit_id": "u2",
+    "book_page": 58,
+    "sim_type": "math_binomial",
+    "description": "اختر n و k لحساب المعامل C(n,k) وحد التوسعة.",
+    "controls": [
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 2,
+        "max": 12,
+        "step": 1,
+        "default": 6
+      },
+      {
+        "id": "k",
+        "label": "رقم الحد k",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-math-cone": {
+    "id": "act-math-cone",
+    "title": "قطع المخروط",
+    "unit_id": "u3",
+    "book_page": 106,
+    "sim_type": "math_cone_sections",
+    "description": "غيّر ميل مستوى القطع ولاحظ نوع القطع الناتج.",
+    "controls": [
+      {
+        "id": "tilt",
+        "label": "ميل مستوى القطع",
+        "min": 0,
+        "max": 90,
+        "step": 5,
+        "default": 35
+      }
+    ]
+  },
+  "act-math-ellipse": {
+    "id": "act-math-ellipse",
+    "title": "القطع الناقص",
+    "unit_id": "u3",
+    "book_page": 112,
+    "sim_type": "math_ellipse_lab",
+    "description": "غيّر a و b ولاحظ شكل القطع الناقص وبؤرتيه.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "نصف المحور الكبير a",
+        "min": 2,
+        "max": 8,
+        "step": 1,
+        "default": 5
+      },
+      {
+        "id": "b",
+        "label": "نصف المحور الصغير b",
+        "min": 1,
+        "max": 7,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-hyperbola": {
+    "id": "act-math-hyperbola",
+    "title": "القطع الزائد",
+    "unit_id": "u3",
+    "book_page": 120,
+    "sim_type": "math_hyperbola_lab",
+    "description": "غيّر a و b ولاحظ الفروع والخطين المقاربين.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "المعلمة a",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "b",
+        "label": "المعلمة b",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-parabola": {
+    "id": "act-math-parabola",
+    "title": "القطع المكافئ",
+    "unit_id": "u3",
+    "book_page": 126,
+    "sim_type": "math_parabola_lab",
+    "description": "غيّر p ولاحظ حركة البؤرة والدليل.",
+    "controls": [
+      {
+        "id": "p",
+        "label": "المعلمة p",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-math-space-diagonal": {
+    "id": "act-math-space-diagonal",
+    "title": "القطر الفراغي للمكعب",
+    "unit_id": "u4",
+    "book_page": 136,
+    "sim_type": "math_space_diagonal",
+    "description": "غيّر طول ضلع المكعب واحسب القطر الفراغي a√3.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "طول الضلع a",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 4
+      }
+    ]
+  },
+  "act-math-line-plane": {
+    "id": "act-math-line-plane",
+    "title": "الزاوية بين مستقيم ومستوى",
+    "unit_id": "u4",
+    "book_page": 144,
+    "sim_type": "math_line_plane",
+    "description": "غيّر زاوية المستقيم مع المتجه الطبيعي ولاحظ الزاوية مع المستوى.",
+    "controls": [
+      {
+        "id": "alpha",
+        "label": "زاوية المستقيم مع الطبيعي",
+        "min": 0,
+        "max": 90,
+        "step": 5,
+        "default": 40
+      }
+    ]
+  },
+  "act-math-dihedral": {
+    "id": "act-math-dihedral",
+    "title": "الزاوية ثنائية الوجه",
+    "unit_id": "u4",
+    "book_page": 149,
+    "sim_type": "math_dihedral",
+    "description": "دور مستوى حول خط التقاطع ولاحظ الزاوية بين المتجهين الطبيعيين.",
+    "controls": [
+      {
+        "id": "phi",
+        "label": "زاوية المستوى الثاني",
+        "min": 0,
+        "max": 120,
+        "step": 5,
+        "default": 60
+      }
+    ]
+  },
+  "act-math-prob-union": {
+    "id": "act-math-prob-union",
+    "title": "قاعدة جمع الاحتمالات",
+    "unit_id": "u5",
+    "book_page": 82,
+    "sim_type": "math_prob_union",
+    "description": "غيّر احتمالي الحدثين وتداخلهما ولاحظ P(A∪B).",
+    "controls": [
+      {
+        "id": "pa",
+        "label": "P(A)",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 55
+      },
+      {
+        "id": "pb",
+        "label": "P(B)",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 40
+      },
+      {
+        "id": "inter",
+        "label": "P(A∩B)",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 20
+      }
+    ]
+  },
+  "act-math-prob-conditional": {
+    "id": "act-math-prob-conditional",
+    "title": "الاحتمال الشرطي",
+    "unit_id": "u5",
+    "book_page": 89,
+    "sim_type": "math_prob_conditional",
+    "description": "احسب احتمال A بشرط حدوث B.",
+    "controls": [
+      {
+        "id": "pa",
+        "label": "P(A∩B)",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 25
+      },
+      {
+        "id": "pb",
+        "label": "P(B)",
+        "min": 5,
+        "max": 100,
+        "step": 5,
+        "default": 50
+      }
+    ]
+  },
+  "act-math-prob-binomial": {
+    "id": "act-math-prob-binomial",
+    "title": "التوزيع ذو الحدين",
+    "unit_id": "u5",
+    "book_page": 96,
+    "sim_type": "math_prob_binomial",
+    "description": "احتمال k نجاحاً في n تجربة مستقلة.",
+    "controls": [
+      {
+        "id": "n",
+        "label": "عدد التجارب n",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "default": 10
+      },
+      {
+        "id": "p",
+        "label": "احتمال النجاح p",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 50
+      },
+      {
+        "id": "k",
+        "label": "عدد النجاحات k",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "default": 4
+      }
+    ]
+  },
+  "act-math-power-rule": {
+    "id": "act-math-power-rule",
+    "title": "قاعدة القوة في الاشتقاق",
+    "unit_id": "u6",
+    "book_page": 162,
+    "sim_type": "math_power_derivative",
+    "description": "اشتق xⁿ ولاحظ قيمة المشتقة عند x.",
+    "controls": [
+      {
+        "id": "x",
+        "label": "القيمة x",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-product-rule": {
+    "id": "act-math-product-rule",
+    "title": "قاعدة الجداء",
+    "unit_id": "u6",
+    "book_page": 166,
+    "sim_type": "math_product_rule",
+    "description": "طبّق (uv)′ = u′v + uv′ على مثال بسيط.",
+    "controls": [
+      {
+        "id": "x",
+        "label": "القيمة x",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "a",
+        "label": "معامل u",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "b",
+        "label": "معامل v",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-chain-rule": {
+    "id": "act-math-chain-rule",
+    "title": "قاعدة السلسلة",
+    "unit_id": "u6",
+    "book_page": 169,
+    "sim_type": "math_chain_rule",
+    "description": "اشتق (ax+b)ⁿ خطوة بخطوة.",
+    "controls": [
+      {
+        "id": "x",
+        "label": "القيمة x",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "a",
+        "label": "المعامل a",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 2,
+        "max": 6,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-extrema": {
+    "id": "act-math-extrema",
+    "title": "القيم القصوى",
+    "unit_id": "u6",
+    "book_page": 192,
+    "sim_type": "math_extrema",
+    "description": "ابحث عن النقطة الحرجة لدالة تربيعية.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "المعامل a",
+        "min": -5,
+        "max": 5,
+        "step": 1,
+        "default": 1
+      },
+      {
+        "id": "b",
+        "label": "المعامل b",
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "default": -4
+      },
+      {
+        "id": "c",
+        "label": "الثابت c",
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-mvt": {
+    "id": "act-math-mvt",
+    "title": "نظرية القيمة المتوسطة",
+    "unit_id": "u6",
+    "book_page": 203,
+    "sim_type": "math_mvt",
+    "description": "قارن ميل القطرة بميل المماس عند نقطة داخل الفترة.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "الحد الأدنى a",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "default": 1
+      },
+      {
+        "id": "b",
+        "label": "الحد الأعلى b",
+        "min": 3,
+        "max": 10,
+        "step": 1,
+        "default": 5
+      }
+    ]
+  },
+  "act-math-indefinite": {
+    "id": "act-math-indefinite",
+    "title": "التكامل غير المحدد",
+    "unit_id": "u7",
+    "book_page": 214,
+    "sim_type": "math_indefinite",
+    "description": "طبّق قاعدة تكامل القوة.",
+    "controls": [
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 0,
+        "max": 8,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-math-definite": {
+    "id": "act-math-definite",
+    "title": "التكامل المحدد",
+    "unit_id": "u7",
+    "book_page": 237,
+    "sim_type": "math_definite_integral",
+    "description": "احسب ∫xⁿdx من a إلى b.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "الحد الأدنى a",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "default": 1
+      },
+      {
+        "id": "b",
+        "label": "الحد الأعلى b",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 0,
+        "max": 6,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-math-area": {
+    "id": "act-math-area",
+    "title": "المساحة تحت المنحنى",
+    "unit_id": "u7",
+    "book_page": 246,
+    "sim_type": "math_area_between",
+    "description": "احسب المساحة تحت xⁿ بين حدين.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "الحد الأدنى a",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "default": 0
+      },
+      {
+        "id": "b",
+        "label": "الحد الأعلى b",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-math-revolution": {
+    "id": "act-math-revolution",
+    "title": "حجم مجسم الدوران",
+    "unit_id": "u7",
+    "book_page": 250,
+    "sim_type": "math_revolution_volume",
+    "description": "احسب حجم دوران y=xⁿ حول محور x.",
+    "controls": [
+      {
+        "id": "a",
+        "label": "الحد الأدنى a",
+        "min": 0,
+        "max": 4,
+        "step": 1,
+        "default": 0
+      },
+      {
+        "id": "b",
+        "label": "الحد الأعلى b",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "n",
+        "label": "الأس n",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 1
+      }
+    ]
+  }
+}

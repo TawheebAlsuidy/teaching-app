@@ -1,0 +1,528 @@
+{
+  "title": "معمل الرياضيات التفاعلي - الصف الثالث الثانوي",
+  "theme_color": "#00a859",
+  "default_scene": "lab-math-complex",
+  "scenes": [
+    {
+      "id": "lab-math-complex",
+      "title": "مستوى أرغاند",
+      "unit_id": "u1",
+      "page": 16,
+      "sim_key": "math_complex",
+      "kind": "2d",
+      "formula": "z = a + bi، |z| = √(a²+b²)",
+      "prompt": "حرك r والزاوية θ ولاحظ أثرهما على موضع العدد المركب.",
+      "controls": [
+        {
+          "id": "r",
+          "label": "القيمة المطلقة r",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "id": "theta",
+          "label": "الزاوية θ",
+          "min": 0,
+          "max": 360,
+          "step": 5,
+          "default": 45
+        }
+      ],
+      "steps": [
+        {
+          "title": "الإسقاط على المحور الحقيقي",
+          "detail": "a = r cos θ",
+          "formula": "a=r cosθ"
+        },
+        {
+          "title": "الإسقاط على المحور التخيلي",
+          "detail": "b = r sin θ",
+          "formula": "b=r sinθ"
+        },
+        {
+          "title": "الطول",
+          "detail": "القيمة المطلقة هي طول المتجه من المبدأ.",
+          "formula": "|z|=r"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-cone",
+      "title": "قطوع المخروط",
+      "unit_id": "u3",
+      "page": 104,
+      "sim_key": "math_cone_sections",
+      "kind": "3d",
+      "formula": "e = PF / PD",
+      "prompt": "غيّر ميل مستوى القطع ولاحظ نوع المنحنى الناتج.",
+      "controls": [
+        {
+          "id": "tilt",
+          "label": "ميل المستوى",
+          "min": 0,
+          "max": 90,
+          "step": 5,
+          "default": 35
+        }
+      ],
+      "steps": [
+        {
+          "title": "مستوى مواز لقاعدة المخروط",
+          "detail": "ينتج دائرة.",
+          "formula": "e=0"
+        },
+        {
+          "title": "مستوى مائل",
+          "detail": "ينتج قطعاً ناقصاً أو مكافئاً أو زائداً حسب الميل.",
+          "formula": "e=PF/PD"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر ميل مستوى القطع ولاحظ نوع المنحنى الناتج.",
+          "formula": "e = PF / PD"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-ellipse",
+      "title": "القطع الناقص",
+      "unit_id": "u3",
+      "page": 110,
+      "sim_key": "math_ellipse",
+      "kind": "2d",
+      "formula": "x²/a² + y²/b² = 1",
+      "prompt": "غيّر a و b ولاحظ البؤرتين وشكل المنحنى.",
+      "controls": [
+        {
+          "id": "a",
+          "label": "نصف المحور a",
+          "min": 2,
+          "max": 8,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "id": "b",
+          "label": "نصف المحور b",
+          "min": 1,
+          "max": 7,
+          "step": 1,
+          "default": 3
+        }
+      ],
+      "steps": [
+        {
+          "title": "المحور الكبير",
+          "detail": "a هي أكبر نصف محور.",
+          "formula": "a>b"
+        },
+        {
+          "title": "البؤرتان",
+          "detail": "c² = a² − b²",
+          "formula": "c=√(a²−b²)"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر a و b ولاحظ البؤرتين وشكل المنحنى.",
+          "formula": "x²/a² + y²/b² = 1"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-hyperbola",
+      "title": "القطع الزائد",
+      "unit_id": "u3",
+      "page": 118,
+      "sim_key": "math_hyperbola",
+      "kind": "2d",
+      "formula": "x²/a² − y²/b² = 1",
+      "prompt": "غيّر a و b ولاحظ الفروع والخطين المقاربين.",
+      "controls": [
+        {
+          "id": "a",
+          "label": "المعلمة a",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 2
+        },
+        {
+          "id": "b",
+          "label": "المعلمة b",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 3
+        }
+      ],
+      "steps": [
+        {
+          "title": "الفروع",
+          "detail": "الفرق المطلق للبعدين يساوي 2a.",
+          "formula": "|PF₁−PF₂|=2a"
+        },
+        {
+          "title": "المقاربة",
+          "detail": "y = ±(b/a)x",
+          "formula": "y=±(b/a)x"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر a و b ولاحظ الفروع والخطين المقاربين.",
+          "formula": "x²/a² − y²/b² = 1"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-parabola",
+      "title": "القطع المكافئ",
+      "unit_id": "u3",
+      "page": 124,
+      "sim_key": "math_parabola",
+      "kind": "2d",
+      "formula": "y² = 4px",
+      "prompt": "غيّر p ولاحظ البؤرة والدليل.",
+      "controls": [
+        {
+          "id": "p",
+          "label": "المعلمة p",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 2
+        }
+      ],
+      "steps": [
+        {
+          "title": "البؤرة",
+          "detail": "F = (p، 0)",
+          "formula": "F=(p،0)"
+        },
+        {
+          "title": "الدليل",
+          "detail": "x = −p",
+          "formula": "x=−p"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر p ولاحظ البؤرة والدليل.",
+          "formula": "y² = 4px"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-space",
+      "title": "القطر الفراغي للمكعب",
+      "unit_id": "u4",
+      "page": 136,
+      "sim_key": "math_3d_pythagoras",
+      "kind": "3d",
+      "formula": "d = a√3",
+      "prompt": "دور المكعب وغيّر ضلعه لترى القطر الفراغي.",
+      "controls": [
+        {
+          "id": "a",
+          "label": "طول الضلع",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 4
+        }
+      ],
+      "steps": [
+        {
+          "title": "قطر الوجه",
+          "detail": "a√2",
+          "formula": "d_face=a√2"
+        },
+        {
+          "title": "القطر الفراغي",
+          "detail": "a√3",
+          "formula": "d=a√3"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "دور المكعب وغيّر ضلعه لترى القطر الفراغي.",
+          "formula": "d = a√3"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-line-plane",
+      "title": "مستقيم ومستوى",
+      "unit_id": "u4",
+      "page": 142,
+      "sim_key": "math_line_plane",
+      "kind": "3d",
+      "formula": "sin θ = |u·n|/(|u||n|)",
+      "prompt": "غيّر زاوية المستقيم مع الطبيعي ولاحظ الزاوية مع المستوى.",
+      "controls": [
+        {
+          "id": "alpha",
+          "label": "الزاوية مع الطبيعي",
+          "min": 0,
+          "max": 90,
+          "step": 5,
+          "default": 40
+        }
+      ],
+      "steps": [
+        {
+          "title": "المتجه الطبيعي",
+          "detail": "n يحدد العمود على المستوى.",
+          "formula": "n=(A،B،C)"
+        },
+        {
+          "title": "الزاوية المطلوبة",
+          "detail": "θ = 90° − α",
+          "formula": "θ=90°−α"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر زاوية المستقيم مع الطبيعي ولاحظ الزاوية مع المستوى.",
+          "formula": "sin θ = |u·n|/(|u||n|)"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-dihedral",
+      "title": "زاوية بين مستويين",
+      "unit_id": "u4",
+      "page": 147,
+      "sim_key": "math_dihedral",
+      "kind": "3d",
+      "formula": "cos φ = |n₁·n₂|/(|n₁||n₂|)",
+      "prompt": "دور المستوى الثاني حول خط التقاطع.",
+      "controls": [
+        {
+          "id": "phi",
+          "label": "زاوية الدوران",
+          "min": 0,
+          "max": 120,
+          "step": 5,
+          "default": 60
+        }
+      ],
+      "steps": [
+        {
+          "title": "المتجهان الطبيعيان",
+          "detail": "ناتج الجداء يعطي جيب تمام الزاوية.",
+          "formula": "cosφ=|n₁·n₂|/(|n₁||n₂|)"
+        },
+        {
+          "title": "الخلاصة والتطبيق 2",
+          "detail": "دور المستوى الثاني حول خط التقاطع.",
+          "formula": "cos φ = |n₁·n₂|/(|n₁||n₂|)"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "دور المستوى الثاني حول خط التقاطع.",
+          "formula": "cos φ = |n₁·n₂|/(|n₁||n₂|)"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-probability",
+      "title": "فضاء العينة",
+      "unit_id": "u5",
+      "page": 79,
+      "sim_key": "math_probability_space",
+      "kind": "2d",
+      "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)",
+      "prompt": "غيّر احتمالي الحدثين والتقاطع.",
+      "controls": [
+        {
+          "id": "pa",
+          "label": "P(A)",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 55
+        },
+        {
+          "id": "pb",
+          "label": "P(B)",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 40
+        },
+        {
+          "id": "inter",
+          "label": "P(A∩B)",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "default": 20
+        }
+      ],
+      "steps": [
+        {
+          "title": "الجمع",
+          "detail": "اجمع الاحتمالين.",
+          "formula": "P(A)+P(B)"
+        },
+        {
+          "title": "إزالة التداخل",
+          "detail": "اطرح التقاطع حتى لا يُحسب مرتين.",
+          "formula": "−P(A∩B)"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر احتمالي الحدثين والتقاطع.",
+          "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-derivative",
+      "title": "مماس المنحنى",
+      "unit_id": "u6",
+      "page": 154,
+      "sim_key": "math_derivative",
+      "kind": "2d",
+      "formula": "f′(x)=lim[f(x+h)−f(x)]/h",
+      "prompt": "حرك نقطة على المنحنى ولاحظ ميل المماس.",
+      "controls": [
+        {
+          "id": "x",
+          "label": "موضع النقطة",
+          "min": 1,
+          "max": 9,
+          "step": 1,
+          "default": 4
+        }
+      ],
+      "steps": [
+        {
+          "title": "المنحنى",
+          "detail": "f(x)=x²/8",
+          "formula": "f(x)=x²/8"
+        },
+        {
+          "title": "المشتقة",
+          "detail": "f′(x)=x/4",
+          "formula": "f′(x)=x/4"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "حرك نقطة على المنحنى ولاحظ ميل المماس.",
+          "formula": "f′(x)=lim[f(x+h)−f(x)]/h"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-integral",
+      "title": "التكامل والمساحة",
+      "unit_id": "u7",
+      "page": 235,
+      "sim_key": "math_integral",
+      "kind": "2d",
+      "formula": "∫ₐᵇf(x)dx=F(b)−F(a)",
+      "prompt": "غيّر الحد العلوي ولاحظ تراكم المساحة.",
+      "controls": [
+        {
+          "id": "b",
+          "label": "الحد العلوي",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 6
+        }
+      ],
+      "steps": [
+        {
+          "title": "الدالة",
+          "detail": "f(x)=x/4",
+          "formula": "f(x)=x/4"
+        },
+        {
+          "title": "المساحة",
+          "detail": "A=b²/8",
+          "formula": "A=b²/8"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر الحد العلوي ولاحظ تراكم المساحة.",
+          "formula": "∫ₐᵇf(x)dx=F(b)−F(a)"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-area",
+      "title": "المساحة بين منحنيين",
+      "unit_id": "u7",
+      "page": 244,
+      "sim_key": "math_area_between",
+      "kind": "2d",
+      "formula": "A=∫ₐᵇ|f(x)−g(x)|dx",
+      "prompt": "غيّر الحد العلوي ولاحظ الفرق بين المنحنيين.",
+      "controls": [
+        {
+          "id": "b",
+          "label": "الحد العلوي",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 5
+        }
+      ],
+      "steps": [
+        {
+          "title": "المنحنى العلوي",
+          "detail": "f(x)=2",
+          "formula": "f(x)=2"
+        },
+        {
+          "title": "المنحنى السفلي",
+          "detail": "g(x)=x/4",
+          "formula": "g(x)=x/4"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر الحد العلوي ولاحظ الفرق بين المنحنيين.",
+          "formula": "A=∫ₐᵇ|f(x)−g(x)|dx"
+        }
+      ]
+    },
+    {
+      "id": "lab-math-revolution",
+      "title": "مجسم الدوران",
+      "unit_id": "u7",
+      "page": 248,
+      "sim_key": "math_revolution",
+      "kind": "3d",
+      "formula": "V=π∫ₐᵇ[f(x)]²dx",
+      "prompt": "غيّر عدد الأقراص لتراكم حجم المجسم.",
+      "controls": [
+        {
+          "id": "n",
+          "label": "عدد الأقراص",
+          "min": 4,
+          "max": 20,
+          "step": 1,
+          "default": 10
+        }
+      ],
+      "steps": [
+        {
+          "title": "القرص",
+          "detail": "نصف قطره f(x) وسمكه dx",
+          "formula": "dV=π[f(x)]²dx"
+        },
+        {
+          "title": "الحجم",
+          "detail": "مجموع الأقراص يقترب من التكامل.",
+          "formula": "V=π∫[f(x)]²dx"
+        },
+        {
+          "title": "الخلاصة والتطبيق 3",
+          "detail": "غيّر عدد الأقراص لتراكم حجم المجسم.",
+          "formula": "V=π∫ₐᵇ[f(x)]²dx"
+        }
+      ]
+    }
+  ]
+}

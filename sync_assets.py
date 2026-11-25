@@ -26,7 +26,9 @@ def sync():
         "chemistry-12th-book.html",
         "physics-12th-book.html",
         "biology-12th-book.html",
+        "math-12th-book.html",
         "chem-lab-book.html",
+        "math-12th-lab.html",
     ]
     assets_dir = os.path.join(ROOT, "thaker-android-src", "assets")
     os.makedirs(assets_dir, exist_ok=True)

@@ -968,6 +968,9 @@ const DIAGRAMS = CURR_DATA?.diagrams || {};
 const ACTIVITIES = CURR_DATA?.activities || {};
 const ASSESSMENTS = CURR_DATA?.assessments || {};
 const GLOSSARY = CURR_DATA?.glossary || {};
+const SOLUTION_STEPS = CURR_DATA?.solution_steps || {};
+const WORKBOOK_PAGES = CURR_DATA?.workbook_pages || [];
+const GEOMETRY_LAB = CURR_DATA?.geometry_lab || {};
 const LESSONS = CURR_DATA?.lessons || [];
 const UNITS = CURR_DATA?.units || [];
 
@@ -4034,11 +4037,61 @@ if (document.readyState === 'loading') {
   </div>
 </div>
 
+
+<style id="math-solution-modal-responsive">
+#g12MathSolutionModal { height: 100dvh; max-height: 100dvh; overflow: hidden; }
+#g12MathSolutionModal .math-sol-sheet { max-height: min(72dvh, 620px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 480px) {
+  #g12MathSolutionModal .math-sol-sheet { max-height: 78dvh; padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+}
+</style>
+<div id="g12MathSolutionModal" style="display:none; position:fixed; inset:0; background:rgba(3,8,15,0.78); z-index:970; align-items:flex-end; justify-content:center;" onclick="if(event.target===this) closeMathSolution()">
+  <div class="math-sol-sheet" style="width:100%; max-width:680px; background:linear-gradient(180deg,#0F1D2E 0%,#091522 100%); border-top:1px solid rgba(255,255,255,0.12); border-radius:26px 26px 0 0; padding:16px 16px calc(20px + env(safe-area-inset-bottom,0px)); color:#F8FAFC; box-shadow:0 -12px 40px rgba(0,0,0,0.45);">
+    <div style="width:44px; height:4px; border-radius:99px; background:rgba(255,255,255,0.24); margin:0 auto 12px;"></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+      <div style="min-width:0;">
+        <div id="mathSolTitle" style="font-size:17px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">حل خطوة بخطوة</div>
+        <div id="mathSolMeta" style="font-size:12px; color:#94A3B8; margin-top:2px;"></div>
+      </div>
+      <button onclick="closeMathSolution()" style="width:40px; height:40px; border-radius:12px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:#fff; font-size:18px; cursor:pointer; flex-shrink:0;">✕</button>
+    </div>
+    <div id="mathSolPrompt" style="margin-top:12px; font-size:14px; font-weight:700; line-height:1.7; color:#E2E8F0;"></div>
+    <div id="mathSolGiven" style="margin-top:6px; font-size:12.5px; line-height:1.6; color:#94A3B8;"></div>
+    <div id="mathSolSteps" style="margin-top:12px; display:flex; flex-direction:column; gap:8px;"></div>
+    <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+      <button id="mathSolNextBtn" onclick="revealNextMathStep()" style="flex:1; min-width:140px; background:linear-gradient(135deg,#10B981,#059669); color:#fff; border:none; border-radius:999px; padding:12px; font-size:14px; font-weight:800; cursor:pointer; font-family:inherit;">أظهر الخطوة التالية ‹</button>
+      <button onclick="showMathHint()" style="flex:0.7; min-width:110px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14); color:#F1F5F9; border-radius:999px; padding:12px; font-size:13.5px; font-weight:700; cursor:pointer; font-family:inherit;">💡 تلميح</button>
+    </div>
+    <div id="mathSolHint" style="display:none; margin-top:8px; padding:10px 12px; border-radius:12px; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.35); font-size:13px; line-height:1.6; color:#D1FAE5;"></div>
+    <div id="mathSolAnswerBox" style="display:none; margin-top:12px; padding:12px 14px; border-radius:14px; background:rgba(16,185,129,0.14); border:1px solid rgba(16,185,129,0.45); font-size:15px; font-weight:800; color:#6EE7B7;"></div>
+    <div style="margin-top:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.1); display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="mathSolInput" inputmode="decimal" placeholder="اكتب إجابتك للتحقق" style="flex:1; min-width:140px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:12px; padding:11px 12px; color:#F8FAFC; font-family:inherit; font-size:14px;">
+      <button onclick="checkMathSolution()" style="background:var(--primary); color:#fff; border:none; border-radius:12px; padding:11px 16px; font-weight:800; font-size:13.5px; cursor:pointer; font-family:inherit;">تحقق ✓</button>
+    </div>
+    <div id="mathSolFeedback" style="display:none; margin-top:8px; font-size:13px; line-height:1.6; border-radius:12px; padding:10px 12px;"></div>
+  </div>
+</div>
+
 <script>
 
 // ========================================================
 // GRADE 12 FULL INTERACTIVE ENGINE (ACTIVITIES, 3D & QUIZZES)
 // ========================================================
+const MATH_LAB_BY_UNIT = {
+  u1: 'lab-math-complex', u2: 'lab-math-complex', u3: 'lab-math-cone',
+  u4: 'lab-math-space', u5: 'lab-math-probability', u6: 'lab-math-derivative', u7: 'lab-math-integral'
+};
+const MATH_LAB_BY_ACTIVITY = {
+  'act-math-complex-add': 'lab-math-complex', 'act-math-complex-modulus': 'lab-math-complex', 'act-math-polar': 'lab-math-complex',
+  'act-math-demoivre': 'lab-math-complex', 'act-math-roots': 'lab-math-complex', 'act-math-binomial': 'lab-math-complex',
+  'act-math-cone': 'lab-math-cone', 'act-math-ellipse': 'lab-math-ellipse', 'act-math-hyperbola': 'lab-math-hyperbola', 'act-math-parabola': 'lab-math-parabola',
+  'act-math-space-diagonal': 'lab-math-space', 'act-math-line-plane': 'lab-math-line-plane', 'act-math-dihedral': 'lab-math-dihedral',
+  'act-math-prob-union': 'lab-math-probability', 'act-math-prob-conditional': 'lab-math-probability', 'act-math-prob-binomial': 'lab-math-probability',
+  'act-math-power-rule': 'lab-math-derivative', 'act-math-product-rule': 'lab-math-derivative', 'act-math-chain-rule': 'lab-math-derivative',
+  'act-math-extrema': 'lab-math-derivative', 'act-math-mvt': 'lab-math-derivative',
+  'act-math-indefinite': 'lab-math-integral', 'act-math-definite': 'lab-math-integral', 'act-math-area': 'lab-math-area', 'act-math-revolution': 'lab-math-revolution'
+};
+
 function getCurrentPageContext() {
   const p = PAGES[state.curPageIdx] || PAGES[0] || {};
   const uid = p.unit_id || 'u1';
@@ -4049,6 +4102,7 @@ function getCurrentPageContext() {
   const lid = matchedLesson ? matchedLesson.id : '';
   const spots = INTERACTIONS[p.page_id] || [];
   const expSpot = spots.find(s => s.type === 'explainable_text');
+  const solSpot = spots.find(s => s.type === 'step_by_step_equation');
   const actSpot = spots.find(s => s.type === 'activity');
   const diagSpot = spots.find(s => s.type === 'interactive_3d');
   const quizSpot = spots.find(s => s.type === 'assessment');
@@ -4056,6 +4110,7 @@ function getCurrentPageContext() {
     page: p,
     unitId: uid,
     expRef: (expSpot && expSpot.explanation_ref) || ('exp-' + lid) || Object.keys(EXPLANATIONS)[0],
+    solRef: (solSpot && solSpot.solution_ref) || Object.keys(SOLUTION_STEPS).find(k => k.includes(uid)) || Object.keys(SOLUTION_STEPS)[0],
     actRef: (actSpot && actSpot.activity_ref) || Object.keys(ACTIVITIES).find(k => k.endsWith(uid)) || Object.keys(ACTIVITIES)[0],
     diagRef: (diagSpot && diagSpot.diagram_ref) || Object.keys(DIAGRAMS)[0],
     quizRef: (quizSpot && quizSpot.assessment_ref) || Object.keys(ASSESSMENTS).find(k => k.endsWith(uid)) || Object.keys(ASSESSMENTS)[0]
@@ -4066,6 +4121,12 @@ function openCurrentPageExplanation() {
   const ctx = getCurrentPageContext();
   if (ctx.expRef && EXPLANATIONS[ctx.expRef]) openTextExplanation(ctx.expRef);
   else showToast('لا يوجد شرح مضاف لهذه الصفحة التمهيدية، انتقل لوحدة دراسية');
+}
+
+function openCurrentPageSolution() {
+  const ctx = getCurrentPageContext();
+  if (ctx.solRef && SOLUTION_STEPS[ctx.solRef]) openMathSolution(ctx.solRef);
+  else showToast('لا يوجد حل خطوة بخطوة لهذه الصفحة');
 }
 
 function openCurrentPageActivity() {
@@ -4091,6 +4152,8 @@ handleHotspotClick = function(item) {
   playClickSound();
   if (item.type === 'explainable_text' || item.type === 'title') {
     openTextExplanation(item.explanation_ref);
+  } else if (item.type === 'step_by_step_equation') {
+    openMathSolution(item.solution_ref);
   } else if (item.type === 'interactive_3d') {
     openLab3d(item.diagram_ref);
   } else if (item.type === 'activity') {
@@ -4103,6 +4166,10 @@ handleHotspotClick = function(item) {
 function getUnitDefaultExpForPage(p) {
   const spots = INTERACTIONS[p?.page_id] || [];
   const actSpot = spots.find(s => s.type === 'activity' && s.activity_ref);
+  if (BOOK_SUBJECT_KEY === 'math') {
+    if (actSpot && MATH_LAB_BY_ACTIVITY[actSpot.activity_ref]) return MATH_LAB_BY_ACTIVITY[actSpot.activity_ref];
+    return MATH_LAB_BY_UNIT[p?.unit_id || 'u1'] || 'lab-math-complex';
+  }
   if (actSpot) {
     if (actSpot.lab_exp) return actSpot.lab_exp;
     const actObj = ACTIVITIES[actSpot.activity_ref];
@@ -4180,7 +4247,7 @@ function openActivityModal(actRef) {
 
   const simKeys = Object.keys(ACTIVITIES).filter(k => ACTIVITIES[k] && ACTIVITIES[k].sim_type && ACTIVITIES[k].has_lab !== true);
   const unitMatchAct = Object.values(ACTIVITIES).find(a => a && a.unit_id === (p.unit_id || 'u1') && a.sim_type && a.controls && a.controls.length);
-  const subjFallback = BOOK_SUBJECT_KEY === 'chemistry'
+  const subjFallback = (BOOK_SUBJECT_KEY === 'chemistry' || BOOK_SUBJECT_KEY === 'math')
     ? unitMatchAct
     : ACTIVITIES[`act-${BOOK_SUBJECT_KEY === 'physics' ? 'phys' : 'bio'}-${p.unit_id || 'u1'}`];
   const fallback = (candidate && candidate.sim_type) ? candidate : (subjFallback || ACTIVITIES[simKeys[0]] || Object.values(ACTIVITIES)[0]);
@@ -4301,6 +4368,128 @@ function onActivityControlChange(id, val) {
   const lbl = document.getElementById('actVal_' + id);
   if (lbl) lbl.textContent = val;
   updateActivitySimulation();
+}
+
+function mathFact(n) {
+  let r = 1;
+  for (let i = 2; i <= n; i++) r *= i;
+  return r;
+}
+
+function mathChoose(n, k) {
+  if (k < 0 || k > n) return 0;
+  return mathFact(n) / (mathFact(k) * mathFact(n - k));
+}
+
+function mathFmt(v) {
+  if (!Number.isFinite(v)) return '—';
+  if (Math.abs(v) >= 1000 || (Math.abs(v) > 0 && Math.abs(v) < 0.001)) return v.toExponential(3);
+  return String(Number(v.toFixed(3)));
+}
+
+function mathPlot(points, axesLabel) {
+  const pts = points.map(p => {
+    const x = Math.max(-5.4, Math.min(5.4, p[0]));
+    const y = Math.max(-5.4, Math.min(5.4, p[1]));
+    return `${(150 + x * 25).toFixed(1)},${(75 - y * 12).toFixed(1)}`;
+  }).join(' ');
+  return `<svg viewBox="0 0 300 150" style="width:100%; height:150px; background:rgba(2,6,23,0.35); border-radius:12px;">
+    <line x1="10" y1="75" x2="290" y2="75" stroke="#475569" stroke-width="1"/>
+    <line x1="150" y1="8" x2="150" y2="142" stroke="#475569" stroke-width="1"/>
+    <polyline points="${pts}" fill="none" stroke="#10B981" stroke-width="3"/>
+    <text x="278" y="70" fill="#94A3B8" font-size="10">x</text>
+    <text x="156" y="16" fill="#94A3B8" font-size="10">y</text>
+    <text x="150" y="144" fill="#94A3B8" font-size="10" text-anchor="middle">${axesLabel || ''}</text>
+  </svg>`;
+}
+
+function mathShowLab(stage, readout, title, resultHtml, svg, note) {
+  stage.innerHTML = `<div style="text-align:center; padding:4px;">
+    <div style="font-size:15px; font-weight:800; color:#6EE7B7; margin-bottom:6px;">${title}</div>
+    ${svg || ''}
+    <div dir="ltr" style="text-align:left; display:inline-block; margin-top:8px; padding:8px 12px; border-radius:10px; background:rgba(16,185,129,0.10); border:1px solid rgba(16,185,129,0.35); font-family:monospace; font-size:14px; color:#D1FAE5;">${resultHtml}</div>
+  </div>`;
+  readout.innerHTML = note || '';
+}
+
+function mathSceneVal(data, id, fallback) {
+  const c = (data && data.controls || []).find(x => x.id === id);
+  return c ? (c.default ?? fallback) : fallback;
+}
+
+function drawMath2DFallback(data, sliderVal, ctx, w, h) {
+  const sk = (data && data.sim_key) || '';
+  const px = x => w / 2 + x * (w / 14);
+  const py = y => h / 2 - y * (h / 12);
+  const txt = (s, x, y, color, size) => {
+    ctx.fillStyle = color || '#e2e8f0';
+    ctx.font = `bold ${size || 14}px Tajawal, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.fillText(s, x, y);
+  };
+  ctx.fillStyle = '#091522';
+  ctx.fillRect(0, 0, w, h);
+  ctx.strokeStyle = '#475569';
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(10, h/2); ctx.lineTo(w-10, h/2); ctx.moveTo(w/2, 10); ctx.lineTo(w/2, h-10); ctx.stroke();
+  txt(data ? data.title : 'محاكاة رياضية', w/2, 26, '#6EE7B7', 16);
+
+  if (sk === 'math_complex') {
+    const r = mathSceneVal(data, 'r', 5), th = (sliderVal ?? 45) * Math.PI / 180;
+    const x = r * Math.cos(th), y = r * Math.sin(th);
+    ctx.strokeStyle = '#10B981'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(px(0), py(0)); ctx.lineTo(px(x), py(y)); ctx.stroke();
+    ctx.fillStyle = '#34d399'; ctx.beginPath(); ctx.arc(px(x), py(y), 6, 0, Math.PI*2); ctx.fill();
+    txt(`z = ${mathFmt(x)} + ${mathFmt(y)}i`, w/2, h-22, '#D1FAE5', 13);
+  } else if (sk === 'math_cone_sections') {
+    ctx.strokeStyle = '#38bdf8'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(px(-4), py(-3)); ctx.lineTo(px(0), py(4)); ctx.lineTo(px(4), py(-3)); ctx.stroke();
+    ctx.strokeStyle = '#f59e0b'; ctx.beginPath(); ctx.moveTo(px(-3.5), py(1)); ctx.lineTo(px(3.5), py(1 + Math.tan((sliderVal||35)*Math.PI/180))); ctx.stroke();
+    txt(`ميل القطع = ${sliderVal}°`, w/2, h-22, '#FCD34D', 13);
+  } else if (sk === 'math_ellipse' || sk === 'math_hyperbola' || sk === 'math_parabola') {
+    const a = mathSceneVal(data, 'a', 4), b = mathSceneVal(data, 'b', 3), p = mathSceneVal(data, 'p', 2);
+    ctx.strokeStyle = '#10B981'; ctx.lineWidth = 2; ctx.beginPath();
+    if (sk === 'math_ellipse') {
+      for (let t = 0; t <= Math.PI*2 + 0.01; t += 0.05) {
+        const X = a*Math.cos(t), Y = b*Math.sin(t);
+        if (t === 0) ctx.moveTo(px(X), py(Y)); else ctx.lineTo(px(X), py(Y));
+      }
+    } else if (sk === 'math_hyperbola') {
+      for (let x = -6; x <= 6; x += 0.1) {
+        if (Math.abs(x) >= a) { const y = (b/a)*Math.sqrt(x*x-a*a); ctx.lineTo(px(x), py(y)); }
+      }
+      ctx.stroke(); ctx.beginPath();
+      for (let x = -6; x <= 6; x += 0.1) {
+        if (Math.abs(x) >= a) { const y = -(b/a)*Math.sqrt(x*x-a*a); ctx.lineTo(px(x), py(y)); }
+      }
+    } else {
+      for (let y = -5; y <= 5; y += 0.1) { const x = y*y/(4*p); if (y === -5) ctx.moveTo(px(x), py(y)); else ctx.lineTo(px(x), py(y)); }
+    }
+    ctx.stroke();
+    txt(data.formula || '', w/2, h-22, '#D1FAE5', 13);
+  } else if (sk === 'math_probability_space') {
+    ctx.strokeStyle = '#10B981'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(w/2 - 34, h/2, 58, 0, Math.PI*2); ctx.stroke();
+    ctx.strokeStyle = '#38bdf8'; ctx.beginPath(); ctx.arc(w/2 + 34, h/2, 58, 0, Math.PI*2); ctx.stroke();
+    txt(`P(A)=${mathSceneVal(data,'pa',55)}%  P(B)=${mathSceneVal(data,'pb',40)}%`, w/2, h-22, '#D1FAE5', 13);
+  } else if (sk === 'math_derivative' || sk === 'math_integral' || sk === 'math_area_between') {
+    ctx.strokeStyle = '#10B981'; ctx.lineWidth = 2; ctx.beginPath();
+    for (let x = 0; x <= 9; x += 0.1) { const y = x*x/8; if (x === 0) ctx.moveTo(px(x), py(y)); else ctx.lineTo(px(x), py(y)); }
+    ctx.stroke();
+    const bx = sliderVal ?? 5;
+    ctx.fillStyle = 'rgba(16,185,129,0.22)';
+    ctx.fillRect(px(0), py(bx*bx/8), px(bx)-px(0), py(0)-py(bx*bx/8));
+    txt(`x = ${bx}`, w/2, h-22, '#D1FAE5', 13);
+  } else if (sk === 'math_revolution') {
+    for (let i = 0; i < Math.min(20, sliderVal || 10); i++) {
+      const y = py(i * 0.32 - 2.2), r = (i * 0.32 + 0.3) * (w/40);
+      ctx.strokeStyle = '#10B981'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.ellipse(w/2, y, r, 8, 0, 0, Math.PI*2); ctx.stroke();
+    }
+    txt('دوران y=x حول محور x', w/2, h-22, '#D1FAE5', 13);
+  } else {
+    txt(data ? data.formula || data.title : '', w/2, h/2, '#D1FAE5', 14);
+  }
 }
 
 function updateActivitySimulation() {
@@ -4558,7 +4747,7 @@ function updateActivitySimulation() {
     stage.innerHTML = `<div style="padding:12px;"><div style="font-size:17px; font-weight:800; color:#fbbf24;">🛢️ ${t}</div><div style="font-size:13px; margin-top:8px; color:#e2e8f0;">${d}</div></div>`;
     readout.innerHTML = `<b>📋 نشاط (7-1) ص 124:</b> تمتاز مشتقات البترول بتنوع استخداماتها الصناعية في كل بيت وسوق تجاري.`;
   } else if (st === 'chem_oil_origin_sim') {
-    const th = v.theory || 1;
+    const th = v.thetaeory || 1;
     stage.innerHTML = `<div style="padding:12px;"><div style="font-size:16px; font-weight:800; color:${th===1?'#4ade80':'#f59e0b'};">${th===1?'🐚 نظرية الأصل الحي (الراجحة علمياً)':'⛏️ نظرية الكربيد غير العضوية'}</div><div style="font-size:13px; margin-top:8px;">${th===1?'تحلل بقايا الكائنات البحرية والنباتية الدقيقة تحت طبقات الرسوب والضغط والحرارة عبر ملايين السنين.':'تفاعل كربيدات الفلزات مثل CaC₂ مع الماء منتجة أسيتيلين يتبلمر بالحرارة والضغط.'}</div></div>`;
     readout.innerHTML = `<b>🔍 الأدلة العلمية (نشاط 7-2 ص 128):</b> وجود مركبات النيتروجين والفوسفور والنشاط الضوئي والحفريات البحرية بالصخور الرسوبية يرجّح <b>نظرية الأصل الحي</b>.`;
   } else if (st === 'chem_yemen_oil_sim') {
@@ -4591,6 +4780,190 @@ function updateActivitySimulation() {
     const [hTitle, hSol] = eMap[et];
     stage.innerHTML = `<div style="padding:12px;"><div style="font-size:16px; font-weight:800; color:#34d399;">🌍 ${hTitle}</div><div style="font-size:13px; margin-top:8px; color:#e2e8f0;">${hSol}</div></div>`;
     readout.innerHTML = `<b>♻️ نشاط (9-2) ص 182:</b> الحلول الكيميائية والوقائية تعمل معاً لحماية الهواء والماء والتربة في البيئة المحلية.`;
+  } else if (st && st.indexOf('math_') === 0) {
+    if (st === 'math_complex_add') {
+      const a = v.a ?? 2, b = v.b ?? 3, c = v.c ?? -1, d = v.d ?? 2;
+      const re = a + c, im = b + d, mod = Math.hypot(re, im);
+      mathShowLab(stage, readout, 'جمع الأعداد المركبة في مستوى أرغاند',
+        `z₁=${a}+(${b})i<br>z₂=${c}+(${d})i<br>z₁+z₂=${re}+(${im})i`,
+        mathPlot([[a,b],[c,d],[re,im]], `|z₁+z₂|=${mathFmt(mod)}`),
+        `<b>القاعدة:</b> نجمع الأجزاء الحقيقية معاً والتخيلية معاً.<br>القيمة المطلقة للمجموع = <b>${mathFmt(mod)}</b>`);
+    } else if (st === 'math_complex_modulus') {
+      const a = v.a ?? 3, b = v.b ?? 4, mod = Math.hypot(a, b);
+      mathShowLab(stage, readout, 'طول متجه العدد المركب',
+        `z=${a}+(${b})i<br>|z|=√(${a}²+${b}²)=${mathFmt(mod)}`,
+        mathPlot([[0,0],[a,b]], 'المتجه من المبدأ إلى z'),
+        `<b>فيثاغورس في مستوى أرغاند:</b> |a+bi| = √(a²+b²).`);
+    } else if (st === 'math_polar') {
+      const r = v.r ?? 5, th = v.theta ?? 60, rad = th * Math.PI / 180;
+      const a = r * Math.cos(rad), b = r * Math.sin(rad);
+      mathShowLab(stage, readout, 'من القطبية إلى الجبرية',
+        `a=r cosθ=${mathFmt(a)}<br>b=r sinθ=${mathFmt(b)}<br>z=${mathFmt(a)}+${mathFmt(b)}i`,
+        mathPlot([[0,0],[a,b]], `r=${r}, θ=${th}°`),
+        `<b>ملاحظة:</b> r هو الطول و θ هي الزاوية مع المحور الحقيقي الموجب.`);
+    } else if (st === 'math_de_moivre') {
+      const r = v.r ?? 2, th = v.theta ?? 30, n = v.n ?? 3, rn = Math.pow(r, n), na = n * th;
+      mathShowLab(stage, readout, 'مبرهنة دي موافر',
+        `rⁿ=${mathFmt(rn)}<br>nθ=${na}°<br>zⁿ=${mathFmt(rn)}(cos${na}°+i sin${na}°)`,
+        mathPlot([[0,0],[rn*Math.cos(na*Math.PI/180), rn*Math.sin(na*Math.PI/180)]], 'الطول يُرفع والزاوية تُضرب'),
+        `<b>القاعدة:</b> [r(cosθ+i sinθ)]ⁿ = rⁿ(cos nθ + i sin nθ).`);
+    } else if (st === 'math_roots') {
+      const r = v.r ?? 8, th = v.theta ?? 60, n = v.n ?? 3, rad = Math.pow(r, 1 / n);
+      const pts = [];
+      for (let k = 0; k < n; k++) {
+        const ang = (th + 360 * k) / n * Math.PI / 180;
+        pts.push([rad * Math.cos(ang), rad * Math.sin(ang)]);
+      }
+      mathShowLab(stage, readout, 'الجذور النونية لعدد مركب',
+        `نصف القطر=r^(1/n)=${mathFmt(rad)}<br>عدد الجذور=${n}<br>الزاوية بين جذرين=${mathFmt(360/n)}°`,
+        mathPlot(pts, 'الجذور موزعة على دائرة'),
+        `<b>الصيغة:</b> wₖ=r^(1/n)[cos((θ+360k)/n)+i sin((θ+360k)/n)].`);
+    } else if (st === 'math_binomial') {
+      const n = v.n ?? 6, k = Math.max(0, Math.min(v.k ?? 2, n)), c = mathChoose(n, k);
+      mathShowLab(stage, readout, 'معامل التوسعة ذات الحدين',
+        `C(${n},${k})=${mathFmt(c)}<br>الحد=${
+          (k === 0 ? '' : c + 'a^' + (n-k) + 'b^' + k)
+        }`,
+        `<div style="padding:12px; font-size:18px; color:#6EE7B7; font-weight:800; text-align:center;">C(${n},${k}) = ${mathFmt(c)}</div>`,
+        `<b>قاعدة المعامل:</b> C(n,k)=n!/(k!(n−k)!).<br>عدد حدود التوسعة = ${n + 1}.`);
+    } else if (st === 'math_cone_sections') {
+      const tilt = v.tilt ?? 35;
+      const type = tilt === 0 ? 'دائرة' : (tilt < 45 ? 'قطع ناقص' : (tilt === 45 ? 'قطع مكافئ' : 'قطع زائد'));
+      mathShowLab(stage, readout, 'قطع المخروط بمستوى',
+        `ميل المستوى=${tilt}°<br>القطع الناتج: ${type}`,
+        `<div style="padding:12px; font-size:34px; text-align:center;">${tilt===0?'⭕':tilt<45?'⬭':tilt===45?'∪':'><'}</div>`,
+        `<b>ملاحظة:</b> توضيح بصري مبسط؛ النوع الدقيق يعتمد على e=PF/PD.`);
+    } else if (st === 'math_ellipse_lab') {
+      const a = v.a ?? 5, b = v.b ?? 3, c = Math.sqrt(Math.max(0, a*a - b*b));
+      mathShowLab(stage, readout, 'القطع الناقص وبؤرتاه',
+        `x²/${a}² + y²/${b}² = 1<br>c=√(${a}²−${b}²)=${mathFmt(c)}<br>البؤرتان: (±${mathFmt(c)}, 0)`,
+        mathPlot([[-a,0],[0,b],[a,0],[0,-b],[-a,0]], `مجموع البعدين=2a=${2*a}`),
+        `<b>الخاصية:</b> مجموع بعدي أي نقطة عن البؤرتين يساوي 2a.`);
+    } else if (st === 'math_hyperbola_lab') {
+      const a = v.a ?? 2, b = v.b ?? 3, ratio = b / a;
+      const pts = [];
+      for (let x = -5; x <= 5; x += 0.5) {
+        if (Math.abs(x) >= a) pts.push([x, ratio * Math.sqrt(x*x - a*a)]);
+      }
+      for (let x = 5; x >= -5; x -= 0.5) {
+        if (Math.abs(x) >= a) pts.push([x, -ratio * Math.sqrt(x*x - a*a)]);
+      }
+      mathShowLab(stage, readout, 'القطع الزائد وخطاه المقاربان',
+        `x²/${a}² − y²/${b}² = 1<br>المقاربة: y=±${mathFmt(ratio)}x`,
+        mathPlot(pts, 'الفرق المطلق للبعدين=2a'),
+        `<b>الخاصية:</b> |PF₁−PF₂|=2a=${2*a}.`);
+    } else if (st === 'math_parabola_lab') {
+      const p = v.p ?? 2, pts = [];
+      for (let y = -5; y <= 5; y += 0.5) pts.push([y*y/(4*p), y]);
+      mathShowLab(stage, readout, 'القطع المكافئ',
+        `y²=${4*p}x<br>البؤرة=(${p},0)<br>الدليل: x=−${p}`,
+        mathPlot(pts, 'كل نقطة متساوية البعد عن البؤرة والدليل'),
+        `<b>الصيغة القياسية:</b> y²=4px، p>0 يفتح نحو اليمين.`);
+    } else if (st === 'math_space_diagonal') {
+      const a = v.a ?? 4, d = a * Math.sqrt(3);
+      mathShowLab(stage, readout, 'القطر الفراغي للمكعب',
+        `a=${a}<br>d=a√3=${mathFmt(d)}`,
+        `<div style="padding:12px; font-size:30px; text-align:center;">🧊 ⟶ ${mathFmt(d)}</div>`,
+        `<b>التبرير:</b> قطر الوجه=a√2، ثم قطر المكعب=√((a√2)²+a²)=a√3.`);
+    } else if (st === 'math_line_plane') {
+      const alpha = v.alpha ?? 40, theta = 90 - alpha;
+      mathShowLab(stage, readout, 'زاوية مستقيم مع مستوى',
+        `زاوية المستقيم مع الطبيعي=${alpha}°<br>الزاوية مع المستوى=${theta}°`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">∠ ${theta}°</div>`,
+        `<b>العلاقة:</b> الزاويتان مكمّلتان: θ=90°−α.`);
+    } else if (st === 'math_dihedral') {
+      const phi = v.phi ?? 60, c = Math.cos(phi * Math.PI / 180);
+      mathShowLab(stage, readout, 'الزاوية ثنائية الوجه',
+        `φ=${phi}°<br>|n₁·n₂|/(|n₁||n₂|)=${mathFmt(c)}`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">∠ ${phi}°</div>`,
+        `<b>القاعدة:</b> زاوية المستويين تُقاس من متجهيهما الطبيعيين.`);
+    } else if (st === 'math_prob_union') {
+      const pa = v.pa ?? 55, pb = v.pb ?? 40;
+      const inter = Math.max(0, Math.min(v.inter ?? 20, pa, pb));
+      const uni = pa + pb - inter;
+      mathShowLab(stage, readout, 'احتمال اتحاد حدثين',
+        `P(A)=${pa}% · P(B)=${pb}%<br>P(A∩B)=${inter}%<br>P(A∪B)=${mathFmt(uni)}%`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">A ∪ B = ${mathFmt(uni)}%</div>`,
+        `<b>قاعدة الجمع:</b> P(A∪B)=P(A)+P(B)−P(A∩B).`);
+    } else if (st === 'math_prob_conditional') {
+      const pa = v.pa ?? 25, pb = v.pb ?? 50, res = pb > 0 ? pa / pb : 0;
+      mathShowLab(stage, readout, 'الاحتمال الشرطي',
+        `P(A∩B)=${pa}% · P(B)=${pb}%<br>P(A|B)=${mathFmt(res*100)}%`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">P(A|B) = ${mathFmt(res)}</div>`,
+        `<b>القاعدة:</b> P(A|B)=P(A∩B)/P(B)، بشرط P(B)>0.`);
+    } else if (st === 'math_prob_binomial') {
+      const n = v.n ?? 10, p = (v.p ?? 50) / 100, k = Math.max(0, Math.min(v.k ?? 4, n));
+      const prob = mathChoose(n, k) * Math.pow(p, k) * Math.pow(1 - p, n - k);
+      mathShowLab(stage, readout, 'التوزيع ذو الحدين',
+        `n=${n} · p=${mathFmt(p)} · k=${k}<br>P(X=${k})=${mathFmt(prob)}`,
+        `<div style="padding:12px; font-size:26px; text-align:center;">${mathFmt(prob*100)}%</div>`,
+        `<b>الصيغة:</b> C(n,k)pᵏ(1−p)ⁿ⁻ᵏ.`);
+    } else if (st === 'math_power_derivative') {
+      const x = v.x ?? 3, n = v.n ?? 3, res = n * Math.pow(x, n - 1);
+      mathShowLab(stage, readout, 'مشتقة دالة قوة',
+        `f(x)=x^${n}<br>f′(x)=${n}x^${n-1}<br>f′(${x})=${mathFmt(res)}`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">${mathFmt(res)}</div>`,
+        `<b>القاعدة:</b> (xⁿ)′=n xⁿ⁻¹.`);
+    } else if (st === 'math_product_rule') {
+      const x = v.x ?? 2, a = v.a ?? 2, b = v.b ?? 3;
+      const u = a*x, w = b*x, du = a, dw = b, res = du*w + u*dw;
+      mathShowLab(stage, readout, 'قاعدة الجداء',
+        `u=${a}x · v=${b}x<br>u′v+uv′=(${a})(${mathFmt(w)})+(${mathFmt(u)})(${b})<br>النتيجة=${mathFmt(res)}`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">(uv)′=${mathFmt(res)}</div>`,
+        `<b>القاعدة:</b> (uv)′=u′v+uv′.`);
+    } else if (st === 'math_chain_rule') {
+      const x = v.x ?? 2, a = v.a ?? 2, n = v.n ?? 3;
+      const inner = a*x + 1, res = n*a*Math.pow(inner, n-1);
+      mathShowLab(stage, readout, 'قاعدة السلسلة',
+        `f(x)=(${a}x+1)^${n}<br>f′(x)=${n}(${a}x+1)^${n-1}·${a}<br>f′(${x})=${mathFmt(res)}`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">${mathFmt(res)}</div>`,
+        `<b>القاعدة:</b> (f∘g)′=f′(g)·g′.`);
+    } else if (st === 'math_extrema') {
+      const a = v.a ?? 1, b = v.b ?? -4, c = v.c ?? 3;
+      const x = a !== 0 ? -b/(2*a) : NaN, y = Number.isFinite(x) ? a*x*x + b*x + c : NaN;
+      mathShowLab(stage, readout, 'النقطة الحرجة لدالة تربيعية',
+        `f(x)=${a}x²+${b}x+${c}<br>x=−b/(2a)=${mathFmt(x)}<br>f(${mathFmt(x)})=${mathFmt(y)}`,
+        `<div style="padding:12px; font-size:26px; text-align:center;">${a>0?'قيمة صغرى':'قيمة كبرى'} عند x=${mathFmt(x)}</div>`,
+        `<b>الشرط:</b> f′(x)=0، ثم يحدد النوع بإشارة a أو f″.`);
+    } else if (st === 'math_mvt') {
+      const a = v.a ?? 1, b = v.b ?? 5;
+      const slope = a + b, c = slope/2;
+      mathShowLab(stage, readout, 'نظرية القيمة المتوسطة',
+        `f(x)=x² على [${a},${b}]<br>ميل القطرة=(${b}²−${a}²)/(${b}−${a})=${mathFmt(slope)}<br>2c=${mathFmt(slope)} ⇒ c=${mathFmt(c)}`,
+        `<div style="padding:12px; font-size:26px; text-align:center;">c=${mathFmt(c)}</div>`,
+        `<b>النتيجة:</b> يوجد c داخل الفترة يحقق f′(c)=ميل القطرة.`);
+    } else if (st === 'math_indefinite') {
+      const n = v.n ?? 3;
+      mathShowLab(stage, readout, 'تكامل قوة',
+        `∫x^${n}dx = x^${n+1}/${n+1} + C`,
+        `<div style="padding:12px; font-size:24px; text-align:center;">x^${n+1}/${n+1}+C</div>`,
+        `<b>القاعدة:</b> ∫xⁿdx=xⁿ⁺¹/(n+1)+C، حيث n≠−1.`);
+    } else if (st === 'math_definite_integral') {
+      const a = v.a ?? 1, b = v.b ?? 4, n = v.n ?? 2;
+      const res = (Math.pow(b, n+1) - Math.pow(a, n+1)) / (n+1);
+      mathShowLab(stage, readout, 'تكامل محدد',
+        `∫${a}^${b} x^${n} dx = (${b}^${n+1}−${a}^${n+1})/${n+1}`,
+        `<div style="padding:12px; font-size:28px; text-align:center;">${mathFmt(res)}</div>`,
+        `<b>قاعدة نيوتن-لايبنتز:</b> ∫ₐᵇf(x)dx=F(b)−F(a).`);
+    } else if (st === 'math_area_between') {
+      const a = v.a ?? 0, b = v.b ?? 3, n = v.n ?? 2;
+      const res = (Math.pow(b, n+1) - Math.pow(a, n+1)) / (n+1);
+      const pts = [];
+      for (let x = a; x <= b; x += Math.max(0.2, (b-a)/12)) pts.push([x, Math.pow(x, n/2)]);
+      mathShowLab(stage, readout, 'المساحة تحت المنحنى',
+        `A=∫${a}^${b} x^${n} dx=${mathFmt(res)}`,
+        mathPlot(pts, `المساحة=${mathFmt(res)}`),
+        `<b>ملاحظة:</b> إذا كان المنحنى سالباً نأخذ القيمة المطلقة.`);
+    } else if (st === 'math_revolution_volume') {
+      const a = v.a ?? 0, b = v.b ?? 2, n = v.n ?? 1;
+      const res = Math.PI * (Math.pow(b, 2*n+1) - Math.pow(a, 2*n+1)) / (2*n+1);
+      mathShowLab(stage, readout, 'حجم مجسم الدوران',
+        `V=π∫${a}^${b} (x^${n})²dx<br>V=${mathFmt(res)}`,
+        `<div style="padding:12px; font-size:26px; text-align:center;">V=${mathFmt(res)}</div>`,
+        `<b>طريقة الأقراص:</b> dV=π[f(x)]²dx.`);
+    } else {
+      mathShowLab(stage, readout, 'محاكاة رياضية', `sim_type: ${st}`, '', 'اختر متغيراً ولاحظ النتيجة.');
+    }
   }
 }
 
@@ -4634,6 +5007,11 @@ function drawLab2DFallback(data, sliderVal) {
 
   // Only draw 2D canvas schematic when WebGL renderer is unavailable
   if (labRenderer) return;
+
+  if (data && (data.sim_key || '').indexOf('math_') === 0) {
+    drawMath2DFallback(data, sliderVal, ctx, w, h);
+    return;
+  }
 
   // Pure 2D fallback visualization when WebGL is unavailable
   ctx.fillStyle = '#091522';
@@ -4719,11 +5097,95 @@ function buildSubject3dScene(diagRef) {
     labApparatusGroup.add(m);
     return m;
   };
+  const addLine = points => {
+    const geo = new THREE.BufferGeometry().setFromPoints(points.map(p => new THREE.Vector3(p[0], p[1], p[2])));
+    const line = new THREE.Line(geo, new THREE.LineBasicMaterial({ color: 0x10b981 }));
+    labApparatusGroup.add(line);
+    return line;
+  };
 
   // Bench base
   addMesh(new THREE.BoxGeometry(3.5, 0.08, 1.6), 0x1e293b, 0, -0.92, 0);
 
-  if (sk === 'phys_collision1d' || sk === 'phys_collision2d') {
+  if (String(did || '').indexOf('diag-math-') === 0 || sk.indexOf('math_') === 0) {
+    if (sk === 'math_complex') {
+      addLine([[-1.35,0,0],[1.35,0,0]]);
+      addLine([[0,-1.05,0],[0,1.05,0]]);
+      const point = addMesh(new THREE.SphereGeometry(0.13, 20, 20), 0x10b981, 0.9, 0.9, 0);
+      labDynamicMeshes.push({ type: 'math_complex_point', mesh: point, r: mathSceneVal(data, 'r', 5) });
+    } else if (sk === 'math_cone_sections') {
+      addMesh(new THREE.ConeGeometry(0.95, 1.9, 32, 1, true), 0x38bdf8, 0, 0.05, 0, 0, 0, 0, 0.5);
+      const plane = addMesh(new THREE.BoxGeometry(1.9, 0.035, 1.15), 0xf59e0b, 0, 0.1, 0, 0, 0, 0, 0.85);
+      labDynamicMeshes.push({ type: 'math_cone_plane', mesh: plane });
+    } else if (sk === 'math_ellipse' || sk === 'math_hyperbola' || sk === 'math_parabola') {
+      const curve = new THREE.Group();
+      const a = mathSceneVal(data, 'a', 3), b = mathSceneVal(data, 'b', 2), p = mathSceneVal(data, 'p', 2);
+      for (let i = 0; i < 44; i++) {
+        const t = i / 43;
+        let X = 0, Y = 0;
+        if (sk === 'math_ellipse') { const ang = t * Math.PI * 2; X = Math.cos(ang) * Math.min(1.25, a/5); Y = Math.sin(ang) * Math.min(0.85, b/5); }
+        else if (sk === 'math_hyperbola') { const x = -1.25 + t*2.5; X = x; Y = Math.sign(x) * Math.sqrt(Math.max(0, x*x/a - 1)) * 0.42; }
+        else { const y = -1 + t*2; X = y*y/(4*p) * 1.15; Y = y; }
+        const dot = new THREE.Mesh(new THREE.SphereGeometry(0.045, 10, 10), new THREE.MeshPhongMaterial({ color: 0x10b981 }));
+        dot.position.set(X, Y, 0); curve.add(dot);
+      }
+      labApparatusGroup.add(curve);
+      addLine([[-1.35,0,0],[1.35,0,0]]);
+      addLine([[0,-1.05,0],[0,1.05,0]]);
+      labDynamicMeshes.push({ type: 'math_curve_group', mesh: curve });
+    } else if (sk === 'math_3d_pythagoras') {
+      const cube = new THREE.Group();
+      const edges = new THREE.LineSegments(
+        new THREE.EdgesGeometry(new THREE.BoxGeometry(1.4, 1.4, 1.4)),
+        new THREE.LineBasicMaterial({ color: 0x10b981 })
+      );
+      cube.add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), new THREE.MeshPhongMaterial({ color: 0x10b981, transparent: true, opacity: 0.12 })));
+      cube.add(edges);
+      const diag = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-0.7,-0.7,-0.7), new THREE.Vector3(0.7,0.7,0.7)]),
+        new THREE.LineBasicMaterial({ color: 0xf59e0b })
+      );
+      cube.add(diag);
+      labApparatusGroup.add(cube);
+      labDynamicMeshes.push({ type: 'math_cube', mesh: cube, edge: edges, diag: diag });
+    } else if (sk === 'math_line_plane') {
+      addMesh(new THREE.BoxGeometry(2.5, 0.035, 1.55), 0x0ea5e9, 0, -0.35, 0, 0, 0, 0, 0.55);
+      const line = addMesh(new THREE.CylinderGeometry(0.035, 0.035, 1.9, 12), 0xf59e0b, 0, 0.35, 0, 0, 0, Math.PI/3);
+      const normal = addMesh(new THREE.CylinderGeometry(0.025, 0.025, 1.1, 12), 0x10b981, 0, 0.15, 0);
+      labDynamicMeshes.push({ type: 'math_line_plane', line: line, normal: normal });
+    } else if (sk === 'math_dihedral') {
+      const p1 = addMesh(new THREE.BoxGeometry(2.0, 0.035, 1.2), 0x38bdf8, 0, -0.15, 0, 0, 0, 0, 0.5);
+      const p2 = addMesh(new THREE.BoxGeometry(2.0, 0.035, 1.2), 0x10b981, 0, -0.15, 0, 0, 0, 0, 0.5);
+      labDynamicMeshes.push({ type: 'math_dihedral', mesh: p2, fixed: p1 });
+    } else if (sk === 'math_probability_space') {
+      const eA = addMesh(new THREE.SphereGeometry(0.52, 24, 24), 0x10b981, -0.34, 0, 0, 0, 0, 0, 0.35);
+      const eB = addMesh(new THREE.SphereGeometry(0.52, 24, 24), 0x38bdf8, 0.34, 0, 0, 0, 0, 0, 0.35);
+      labDynamicMeshes.push({ type: 'math_probability', a: eA, b: eB });
+    } else if (sk === 'math_derivative' || sk === 'math_integral' || sk === 'math_area_between') {
+      const curve = new THREE.Group();
+      for (let i = 0; i <= 18; i++) {
+        const x = i * 0.13 - 1.2, y = x*x*0.42 - 0.7;
+        const dot = new THREE.Mesh(new THREE.SphereGeometry(0.045, 10, 10), new THREE.MeshPhongMaterial({ color: 0x10b981 }));
+        dot.position.set(x, y, 0); curve.add(dot);
+      }
+      labApparatusGroup.add(curve);
+      const marker = addMesh(new THREE.SphereGeometry(0.1, 16, 16), 0xf59e0b, 0, -0.55, 0);
+      labDynamicMeshes.push({ type: 'math_curve_marker', mesh: marker });
+    } else if (sk === 'math_revolution') {
+      const discs = new THREE.Group();
+      for (let i = 0; i < 12; i++) {
+        const r = 0.12 + i * 0.095;
+        const disc = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.025, 24), new THREE.MeshPhongMaterial({ color: 0x10b981, transparent: true, opacity: 0.65 }));
+        disc.rotation.z = Math.PI / 2;
+        disc.position.x = -1.25 + i * 0.22;
+        discs.add(disc);
+      }
+      labApparatusGroup.add(discs);
+      labDynamicMeshes.push({ type: 'math_revolution', mesh: discs });
+    } else {
+      addMesh(new THREE.SphereGeometry(0.72, 24, 24), 0x00a859, 0, 0, 0, 0, 0, 0, 0.55);
+    }
+  } else if (sk === 'phys_collision1d' || sk === 'phys_collision2d') {
     addMesh(new THREE.BoxGeometry(3.1, 0.06, 0.55), 0x334155, 0, -0.78, 0);
     const b1 = addMesh(new THREE.SphereGeometry(0.26, 24, 24), 0xef4444, -1.0, -0.5, 0);
     const b2 = addMesh(new THREE.SphereGeometry(0.26, 24, 24), 0x38bdf8, 0.2, -0.5, 0);
@@ -4966,6 +5428,38 @@ onAcidSliderChange = function(val) {
       const gap = Math.max(0.18, 0.9 - (f / 1000));
       item.p1.position.x = -gap; item.p2.position.x = gap;
     }
+    if (item.type === 'math_complex_point') {
+      const rad = f * Math.PI / 180;
+      const s = Math.min(1.5, item.r / 6);
+      item.mesh.position.x = Math.cos(rad) * s;
+      item.mesh.position.z = Math.sin(rad) * s;
+      item.mesh.position.y = Math.sin(rad) * s * 0.25;
+    }
+    if (item.type === 'math_cone_plane') item.mesh.rotation.x = -f * Math.PI / 180;
+    if (item.type === 'math_cube') {
+      const k = Math.max(0.35, Math.min(1.7, f / 4));
+      item.mesh.scale.setScalar(k);
+    }
+    if (item.type === 'math_line_plane') {
+      item.line.rotation.z = (90 - f) * Math.PI / 180;
+      item.normal.rotation.z = -f * Math.PI / 180;
+    }
+    if (item.type === 'math_dihedral') item.mesh.rotation.y = f * Math.PI / 180;
+    if (item.type === 'math_probability') {
+      const k = Math.max(0.55, Math.min(1.35, f / 70));
+      item.a.scale.setScalar(k);
+      item.b.scale.setScalar(Math.max(0.55, Math.min(1.35, (100 - f) / 70)));
+    }
+    if (item.type === 'math_curve_marker') {
+      const x = Math.max(-1.2, Math.min(1.2, (f - 5) / 7));
+      item.mesh.position.x = x;
+      item.mesh.position.y = x*x*0.42 - 0.7;
+    }
+    if (item.type === 'math_revolution') {
+      const total = item.mesh.children.length;
+      item.mesh.children.forEach((d, i) => { d.visible = i < Math.max(2, Math.min(total, f)); });
+    }
+    if (item.type === 'math_curve_group') item.mesh.rotation.z = Math.sin(f * Math.PI / 180) * 0.06;
   });
   drawLab2DFallback(curLabDiag, f);
 };
@@ -5438,6 +5932,131 @@ renderQuizView = function() {
     </div>
   `;
 };
+
+let curMathSolution = null;
+let mathStepReveal = 0;
+
+function mathNormalizeText(text) {
+  const map = {'٠':'0','١':'1','٢':'2','٣':'3','٤':'4','٥':'5','٦':'6','٧':'7','٨':'8','٩':'9','٫':'.'};
+  return String(text == null ? '' : text)
+    .replace(/[٠-٩٫]/g, ch => map[ch] || ch)
+    .replace(/،/g, ',')
+    .replace(/\s+/g, '')
+    .toLowerCase();
+}
+
+function mathFirstNumber(text) {
+  const m = mathNormalizeText(text).match(/-?\d+(?:\.\d+)?/);
+  return m ? parseFloat(m[0]) : NaN;
+}
+
+function openMathSolution(ref) {
+  const sol = SOLUTION_STEPS[ref] || Object.values(SOLUTION_STEPS)[0];
+  if (!sol) {
+    showToast('لا يوجد حل خطوة بخطوة متاح لهذه الصفحة');
+    return;
+  }
+  curMathSolution = sol;
+  mathStepReveal = 0;
+  const modal = document.getElementById('g12MathSolutionModal');
+  if (!modal) return;
+  const setText = (id, value) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value || '';
+  };
+  setText('mathSolTitle', sol.title || 'حل مسألة خطوة بخطوة');
+  setText('mathSolMeta', `ص ${sol.source_page || ''} · ${(sol.steps || []).length} خطوات`);
+  setText('mathSolPrompt', sol.prompt || '');
+  setText('mathSolGiven', sol.given ? `المعطيات: ${sol.given}` : '');
+  setText('mathSolHint', sol.hint || 'لا يوجد تلميح إضافي.');
+  const hint = document.getElementById('mathSolHint');
+  if (hint) hint.style.display = 'none';
+  const ans = document.getElementById('mathSolAnswerBox');
+  if (ans) ans.style.display = 'none';
+  const fb = document.getElementById('mathSolFeedback');
+  if (fb) fb.style.display = 'none';
+  const input = document.getElementById('mathSolInput');
+  if (input) input.value = '';
+  modal.style.display = 'flex';
+  renderMathSolutionSteps();
+}
+
+function renderMathSolutionSteps() {
+  if (!curMathSolution) return;
+  const box = document.getElementById('mathSolSteps');
+  if (!box) return;
+  const steps = curMathSolution.steps || [];
+  box.innerHTML = steps.map((s, i) => {
+    const visible = i < mathStepReveal;
+    return `
+      <div style="border-radius:14px; padding:11px 13px; border:1px solid ${visible ? 'rgba(16,185,129,0.45)' : 'rgba(255,255,255,0.10)'}; background:${visible ? 'rgba(16,185,129,0.10)' : 'rgba(255,255,255,0.04)'};">
+        <div style="font-size:13.5px; font-weight:800; color:${visible ? '#6EE7B7' : '#94A3B8'};">
+          ${visible ? '✓' : '•'} ${i + 1}. ${s.title || ''}
+        </div>
+        ${visible ? `<div style="font-size:13px; line-height:1.7; margin-top:5px; color:#E2E8F0;">${s.detail || ''}</div>
+        <div dir="ltr" style="text-align:left; margin-top:5px; font-family:monospace; font-size:13px; color:#A7F3D0;">${s.formula || ''}</div>` : ''}
+      </div>`;
+  }).join('');
+  const btn = document.getElementById('mathSolNextBtn');
+  if (btn) {
+    btn.textContent = mathStepReveal >= steps.length ? '✓ ظهرت كل الخطوات' : `أظهر الخطوة التالية (${mathStepReveal + 1}/${steps.length}) ‹`;
+    btn.disabled = mathStepReveal >= steps.length;
+  }
+}
+
+function revealNextMathStep() {
+  if (!curMathSolution) return;
+  const total = (curMathSolution.steps || []).length;
+  if (mathStepReveal < total) mathStepReveal += 1;
+  renderMathSolutionSteps();
+  if (mathStepReveal >= total) {
+    const ans = document.getElementById('mathSolAnswerBox');
+    if (ans) {
+      ans.style.display = 'block';
+      ans.textContent = 'الإجابة النهائية: ' + (curMathSolution.answer || '');
+    }
+  }
+}
+
+function showMathHint() {
+  const hint = document.getElementById('mathSolHint');
+  if (hint) hint.style.display = 'block';
+}
+
+function closeMathSolution() {
+  const modal = document.getElementById('g12MathSolutionModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function checkMathSolution() {
+  if (!curMathSolution) return;
+  const input = document.getElementById('mathSolInput');
+  const fb = document.getElementById('mathSolFeedback');
+  if (!input || !fb) return;
+  const raw = input.value.trim();
+  if (!raw) {
+    fb.style.display = 'block';
+    fb.style.background = 'rgba(245,158,11,0.12)';
+    fb.style.color = '#FCD34D';
+    fb.textContent = 'اكتب إجابة أولاً قبل التحقق.';
+    return;
+  }
+  const expected = curMathSolution.answer || '';
+  const a = mathFirstNumber(raw), b = mathFirstNumber(expected);
+  let ok;
+  if (!Number.isNaN(a) && !Number.isNaN(b)) {
+    ok = Math.abs(a - b) <= (curMathSolution.tolerance || 0.01);
+  } else {
+    ok = mathNormalizeText(raw) === mathNormalizeText(expected) || mathNormalizeText(expected).includes(mathNormalizeText(raw));
+  }
+  fb.style.display = 'block';
+  fb.style.background = ok ? 'rgba(16,185,129,0.14)' : 'rgba(239,68,68,0.12)';
+  fb.style.color = ok ? '#6EE7B7' : '#FCA5A5';
+  fb.innerHTML = ok
+    ? '✅ إجابة صحيحة! راجع الخطوات ثم انتقل للاختبار.'
+    : `❌ ليست الإجابة النهائية الصحيحة. ${curMathSolution.hint || 'راجع الخطوة المناسبة.'}`;
+  if (ok) revealNextMathStep();
+}
 
 initApp = function() {
   state.isDark = false;

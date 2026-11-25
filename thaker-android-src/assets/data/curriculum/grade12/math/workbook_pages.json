@@ -1,0 +1,677 @@
+[
+  {
+    "page_id": "math12-w008",
+    "book_page": 6,
+    "pdf_page": 8,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_008.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_008.jpg"
+  },
+  {
+    "page_id": "math12-w009",
+    "book_page": 7,
+    "pdf_page": 9,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_009.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_009.jpg"
+  },
+  {
+    "page_id": "math12-w010",
+    "book_page": 8,
+    "pdf_page": 10,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_010.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_010.jpg"
+  },
+  {
+    "page_id": "math12-w011",
+    "book_page": 9,
+    "pdf_page": 11,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_011.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_011.jpg"
+  },
+  {
+    "page_id": "math12-w012",
+    "book_page": 10,
+    "pdf_page": 12,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_012.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_012.jpg"
+  },
+  {
+    "page_id": "math12-w013",
+    "book_page": 11,
+    "pdf_page": 13,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_013.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_013.jpg"
+  },
+  {
+    "page_id": "math12-w014",
+    "book_page": 12,
+    "pdf_page": 14,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_014.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_014.jpg"
+  },
+  {
+    "page_id": "math12-w015",
+    "book_page": 13,
+    "pdf_page": 15,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_015.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_015.jpg"
+  },
+  {
+    "page_id": "math12-w016",
+    "book_page": 14,
+    "pdf_page": 16,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_016.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_016.jpg"
+  },
+  {
+    "page_id": "math12-w017",
+    "book_page": 15,
+    "pdf_page": 17,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_017.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_017.jpg"
+  },
+  {
+    "page_id": "math12-w018",
+    "book_page": 16,
+    "pdf_page": 18,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_018.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_018.jpg"
+  },
+  {
+    "page_id": "math12-w019",
+    "book_page": 17,
+    "pdf_page": 19,
+    "unit_id": "u1",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_019.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_019.jpg"
+  },
+  {
+    "page_id": "math12-w020",
+    "book_page": 18,
+    "pdf_page": 20,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_020.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_020.jpg"
+  },
+  {
+    "page_id": "math12-w021",
+    "book_page": 19,
+    "pdf_page": 21,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_021.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_021.jpg"
+  },
+  {
+    "page_id": "math12-w022",
+    "book_page": 20,
+    "pdf_page": 22,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_022.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_022.jpg"
+  },
+  {
+    "page_id": "math12-w023",
+    "book_page": 21,
+    "pdf_page": 23,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_023.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_023.jpg"
+  },
+  {
+    "page_id": "math12-w024",
+    "book_page": 22,
+    "pdf_page": 24,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_024.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_024.jpg"
+  },
+  {
+    "page_id": "math12-w025",
+    "book_page": 23,
+    "pdf_page": 25,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_025.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_025.jpg"
+  },
+  {
+    "page_id": "math12-w026",
+    "book_page": 24,
+    "pdf_page": 26,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_026.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_026.jpg"
+  },
+  {
+    "page_id": "math12-w027",
+    "book_page": 25,
+    "pdf_page": 27,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_027.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_027.jpg"
+  },
+  {
+    "page_id": "math12-w028",
+    "book_page": 26,
+    "pdf_page": 28,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_028.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_028.jpg"
+  },
+  {
+    "page_id": "math12-w029",
+    "book_page": 27,
+    "pdf_page": 29,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_029.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_029.jpg"
+  },
+  {
+    "page_id": "math12-w030",
+    "book_page": 28,
+    "pdf_page": 30,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_030.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_030.jpg"
+  },
+  {
+    "page_id": "math12-w031",
+    "book_page": 29,
+    "pdf_page": 31,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_031.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_031.jpg"
+  },
+  {
+    "page_id": "math12-w032",
+    "book_page": 30,
+    "pdf_page": 32,
+    "unit_id": "u2",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_032.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_032.jpg"
+  },
+  {
+    "page_id": "math12-w033",
+    "book_page": 31,
+    "pdf_page": 33,
+    "unit_id": "u3",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_033.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_033.jpg"
+  },
+  {
+    "page_id": "math12-w034",
+    "book_page": 32,
+    "pdf_page": 34,
+    "unit_id": "u3",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_034.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_034.jpg"
+  },
+  {
+    "page_id": "math12-w035",
+    "book_page": 33,
+    "pdf_page": 35,
+    "unit_id": "u3",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_035.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_035.jpg"
+  },
+  {
+    "page_id": "math12-w036",
+    "book_page": 34,
+    "pdf_page": 36,
+    "unit_id": "u3",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_036.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_036.jpg"
+  },
+  {
+    "page_id": "math12-w037",
+    "book_page": 35,
+    "pdf_page": 37,
+    "unit_id": "u3",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_037.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_037.jpg"
+  },
+  {
+    "page_id": "math12-w038",
+    "book_page": 36,
+    "pdf_page": 38,
+    "unit_id": "u3",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_038.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_038.jpg"
+  },
+  {
+    "page_id": "math12-w039",
+    "book_page": 37,
+    "pdf_page": 39,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_039.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_039.jpg"
+  },
+  {
+    "page_id": "math12-w040",
+    "book_page": 38,
+    "pdf_page": 40,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_040.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_040.jpg"
+  },
+  {
+    "page_id": "math12-w041",
+    "book_page": 39,
+    "pdf_page": 41,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_041.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_041.jpg"
+  },
+  {
+    "page_id": "math12-w042",
+    "book_page": 40,
+    "pdf_page": 42,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_042.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_042.jpg"
+  },
+  {
+    "page_id": "math12-w043",
+    "book_page": 41,
+    "pdf_page": 43,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_043.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_043.jpg"
+  },
+  {
+    "page_id": "math12-w044",
+    "book_page": 42,
+    "pdf_page": 44,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_044.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_044.jpg"
+  },
+  {
+    "page_id": "math12-w045",
+    "book_page": 43,
+    "pdf_page": 45,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_045.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_045.jpg"
+  },
+  {
+    "page_id": "math12-w046",
+    "book_page": 44,
+    "pdf_page": 46,
+    "unit_id": "u4",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_046.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_046.jpg"
+  },
+  {
+    "page_id": "math12-w047",
+    "book_page": 45,
+    "pdf_page": 47,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_047.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_047.jpg"
+  },
+  {
+    "page_id": "math12-w048",
+    "book_page": 46,
+    "pdf_page": 48,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_048.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_048.jpg"
+  },
+  {
+    "page_id": "math12-w049",
+    "book_page": 47,
+    "pdf_page": 49,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_049.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_049.jpg"
+  },
+  {
+    "page_id": "math12-w050",
+    "book_page": 48,
+    "pdf_page": 50,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_050.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_050.jpg"
+  },
+  {
+    "page_id": "math12-w051",
+    "book_page": 49,
+    "pdf_page": 51,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_051.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_051.jpg"
+  },
+  {
+    "page_id": "math12-w052",
+    "book_page": 50,
+    "pdf_page": 52,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_052.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_052.jpg"
+  },
+  {
+    "page_id": "math12-w053",
+    "book_page": 51,
+    "pdf_page": 53,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_053.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_053.jpg"
+  },
+  {
+    "page_id": "math12-w054",
+    "book_page": 52,
+    "pdf_page": 54,
+    "unit_id": "u5",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_054.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_054.jpg"
+  },
+  {
+    "page_id": "math12-w055",
+    "book_page": 53,
+    "pdf_page": 55,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_055.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_055.jpg"
+  },
+  {
+    "page_id": "math12-w056",
+    "book_page": 54,
+    "pdf_page": 56,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_056.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_056.jpg"
+  },
+  {
+    "page_id": "math12-w057",
+    "book_page": 55,
+    "pdf_page": 57,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_057.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_057.jpg"
+  },
+  {
+    "page_id": "math12-w058",
+    "book_page": 56,
+    "pdf_page": 58,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_058.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_058.jpg"
+  },
+  {
+    "page_id": "math12-w059",
+    "book_page": 57,
+    "pdf_page": 59,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_059.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_059.jpg"
+  },
+  {
+    "page_id": "math12-w060",
+    "book_page": 58,
+    "pdf_page": 60,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_060.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_060.jpg"
+  },
+  {
+    "page_id": "math12-w061",
+    "book_page": 59,
+    "pdf_page": 61,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_061.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_061.jpg"
+  },
+  {
+    "page_id": "math12-w062",
+    "book_page": 60,
+    "pdf_page": 62,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_062.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_062.jpg"
+  },
+  {
+    "page_id": "math12-w063",
+    "book_page": 61,
+    "pdf_page": 63,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_063.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_063.jpg"
+  },
+  {
+    "page_id": "math12-w064",
+    "book_page": 62,
+    "pdf_page": 64,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_064.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_064.jpg"
+  },
+  {
+    "page_id": "math12-w065",
+    "book_page": 63,
+    "pdf_page": 65,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_065.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_065.jpg"
+  },
+  {
+    "page_id": "math12-w066",
+    "book_page": 64,
+    "pdf_page": 66,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_066.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_066.jpg"
+  },
+  {
+    "page_id": "math12-w067",
+    "book_page": 65,
+    "pdf_page": 67,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_067.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_067.jpg"
+  },
+  {
+    "page_id": "math12-w068",
+    "book_page": 66,
+    "pdf_page": 68,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_068.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_068.jpg"
+  },
+  {
+    "page_id": "math12-w069",
+    "book_page": 67,
+    "pdf_page": 69,
+    "unit_id": "u6",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_069.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_069.jpg"
+  },
+  {
+    "page_id": "math12-w070",
+    "book_page": 68,
+    "pdf_page": 70,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_070.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_070.jpg"
+  },
+  {
+    "page_id": "math12-w071",
+    "book_page": 69,
+    "pdf_page": 71,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_071.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_071.jpg"
+  },
+  {
+    "page_id": "math12-w072",
+    "book_page": 70,
+    "pdf_page": 72,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_072.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_072.jpg"
+  },
+  {
+    "page_id": "math12-w073",
+    "book_page": 71,
+    "pdf_page": 73,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_073.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_073.jpg"
+  },
+  {
+    "page_id": "math12-w074",
+    "book_page": 72,
+    "pdf_page": 74,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_074.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_074.jpg"
+  },
+  {
+    "page_id": "math12-w075",
+    "book_page": 73,
+    "pdf_page": 75,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_075.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_075.jpg"
+  },
+  {
+    "page_id": "math12-w076",
+    "book_page": 74,
+    "pdf_page": 76,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_076.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_076.jpg"
+  },
+  {
+    "page_id": "math12-w077",
+    "book_page": 75,
+    "pdf_page": 77,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_077.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_077.jpg"
+  },
+  {
+    "page_id": "math12-w078",
+    "book_page": 76,
+    "pdf_page": 78,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_078.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_078.jpg"
+  },
+  {
+    "page_id": "math12-w079",
+    "book_page": 77,
+    "pdf_page": 79,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_079.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_079.jpg"
+  },
+  {
+    "page_id": "math12-w080",
+    "book_page": 78,
+    "pdf_page": 80,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_080.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_080.jpg"
+  },
+  {
+    "page_id": "math12-w081",
+    "book_page": 79,
+    "pdf_page": 81,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_081.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_081.jpg"
+  },
+  {
+    "page_id": "math12-w082",
+    "book_page": 80,
+    "pdf_page": 82,
+    "unit_id": "u7",
+    "role": "practice_only",
+    "image": "assets/curriculum/grade12/math/workbook_pages/workbook_page_082.jpg",
+    "image_full": "assets/curriculum/grade12/math/workbook_pages/workbook_page_082.jpg"
+  }
+]

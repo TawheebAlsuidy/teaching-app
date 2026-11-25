@@ -1,0 +1,2956 @@
+{
+  "quiz-math-u1": [
+    {
+      "id": "qm-u1-01",
+      "unitId": "u1",
+      "lessonId": "math-u1-l1",
+      "page": 7,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما الجزء الحقيقي في العدد 3 + 2i؟",
+      "options": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "2",
+          "why_wrong": "هذا الجزء التخيلي، وليس الحقيقي."
+        },
+        {
+          "text": "5",
+          "why_wrong": "هذا مجموع المكوّنين، وليس الجزء الحقيقي."
+        },
+        {
+          "text": "√13",
+          "why_wrong": "هذه القيمة المطلقة للعدد، وليس جزأه الحقيقي."
+        }
+      ],
+      "answer": 0,
+      "explain": "الجزء الحقيقي هو المعامل الذي لا يضرب في i."
+    },
+    {
+      "id": "qm-u1-02",
+      "unitId": "u1",
+      "lessonId": "math-u1-l2",
+      "page": 13,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما قيمة i²؟",
+      "options": [
+        {
+          "text": "1",
+          "why_wrong": "هذا ينتج من نسيان تعريف الوحدة التخيلية."
+        },
+        {
+          "text": "0",
+          "why_wrong": "الوحدة التخيلية ليست صفراً."
+        },
+        {
+          "text": "i",
+          "why_wrong": "تربيع i يعطي عدداً حقيقياً سالباً."
+        },
+        {
+          "text": "−1"
+        }
+      ],
+      "answer": 3,
+      "explain": "بالتعريف i² = −1."
+    },
+    {
+      "id": "qm-u1-03",
+      "unitId": "u1",
+      "lessonId": "math-u1-l3",
+      "page": 18,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "احسب |3 + 4i|.",
+      "options": [
+        {
+          "text": "25",
+          "why_wrong": "هذا مربع القيمة المطلقة قبل أخذ الجذر."
+        },
+        {
+          "text": "√7",
+          "why_wrong": "استخدمت المجموع بدل مجموع المربعات."
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "7",
+          "why_wrong": "جمع المكوّنات لا يعطي القيمة المطلقة."
+        }
+      ],
+      "answer": 2,
+      "explain": "|z| = √(3² + 4²) = 5."
+    },
+    {
+      "id": "qm-u1-04",
+      "unitId": "u1",
+      "lessonId": "math-u1-l4",
+      "page": 26,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "احسب (2 + 3i) + (1 − i).",
+      "options": [
+        {
+          "text": "−1 + 4i",
+          "why_wrong": "خلطت بين الجمع والطرح."
+        },
+        {
+          "text": "3 + 2i"
+        },
+        {
+          "text": "3 + 4i",
+          "why_wrong": "طرح 1 بدل جمعه في الجزء التخيلي."
+        },
+        {
+          "text": "1 + 2i",
+          "why_wrong": "نسيت جمع الجزء الحقيقي 2 + 1."
+        }
+      ],
+      "answer": 1,
+      "explain": "نجمع الأجزاء الحقيقية والتخيلية على حدة."
+    },
+    {
+      "id": "qm-u1-05",
+      "unitId": "u1",
+      "lessonId": "math-u1-l5",
+      "page": 37,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "احسب (2 + i)(1 − i).",
+      "options": [
+        {
+          "text": "3 − i"
+        },
+        {
+          "text": "1 − i",
+          "why_wrong": "نسيت حد i² عند التبسيط."
+        },
+        {
+          "text": "3 + i",
+          "why_wrong": "أخطأت في إشارة الحد التخيلي."
+        },
+        {
+          "text": "2 − 2i",
+          "why_wrong": "حذفت بعض حدود الضرب."
+        }
+      ],
+      "answer": 0,
+      "explain": "الضرب يعطي 2 − 2i + i − i² = 3 − i."
+    },
+    {
+      "id": "qm-u1-06",
+      "unitId": "u1",
+      "lessonId": "math-u1-l6",
+      "page": 40,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "ما مرافق العدد 4 − 5i؟",
+      "options": [
+        {
+          "text": "−4 − 5i",
+          "why_wrong": "هذا عكس العدد، وليس مرافقه."
+        },
+        {
+          "text": "4 − 5i",
+          "why_wrong": "المرافق يغيّر إشارة الجزء التخيلي."
+        },
+        {
+          "text": "5 − 4i",
+          "why_wrong": "بادل بين الجزأين الحقيقي والتخيلي."
+        },
+        {
+          "text": "4 + 5i"
+        }
+      ],
+      "answer": 3,
+      "explain": "نغيّر إشارة الجزء التخيلي فقط."
+    },
+    {
+      "id": "qm-u1-07",
+      "unitId": "u1",
+      "lessonId": "math-u1-l1",
+      "page": 8,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "ما سعة العدد 1 + i بالدرجات؟",
+      "options": [
+        {
+          "text": "90°",
+          "why_wrong": "الزاوية 90° تعني أن الجزء الحقيقي صفر."
+        },
+        {
+          "text": "135°",
+          "why_wrong": "النقطة في الربع الأول لا الثاني."
+        },
+        {
+          "text": "45°"
+        },
+        {
+          "text": "30°",
+          "why_wrong": "tan θ = 1، فالزاوية 45° لا 30°."
+        }
+      ],
+      "answer": 2,
+      "explain": "tan θ = 1/1، والنقطة تقع في الربع الأول."
+    },
+    {
+      "id": "qm-u1-08",
+      "unitId": "u1",
+      "lessonId": "math-u1-l2",
+      "page": 15,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "ما القيمة المطلقة للعدد 1 + √3 i؟",
+      "options": [
+        {
+          "text": "√2",
+          "why_wrong": "استخدمت 1² + 1² بدل 1² + (√3)²."
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "√3",
+          "why_wrong": "هذا الجزء التخيلي فقط."
+        },
+        {
+          "text": "4",
+          "why_wrong": "هذا مربع القيمة المطلقة."
+        }
+      ],
+      "answer": 1,
+      "explain": "|z| = √(1 + 3) = 2."
+    },
+    {
+      "id": "qm-u1-09",
+      "unitId": "u1",
+      "lessonId": "math-u1-l3",
+      "page": 17,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "اكتب −1 + i بالصيغة القطبية.",
+      "options": [
+        {
+          "text": "√2(cos135° + i sin135°)"
+        },
+        {
+          "text": "√2(cos45° + i sin45°)",
+          "why_wrong": "هذه زاوية الربع الأول، والعدد في الربع الثاني."
+        },
+        {
+          "text": "2(cos135° + i sin135°)",
+          "why_wrong": "القيمة المطلقة √2 وليست 2."
+        },
+        {
+          "text": "√2(cos225° + i sin225°)",
+          "why_wrong": "الزاوية 225° تعطي −1 − i."
+        }
+      ],
+      "answer": 0,
+      "explain": "r = √2 والزاوية 135° لأن النقطة في الربع الثاني."
+    },
+    {
+      "id": "qm-u1-10",
+      "unitId": "u1",
+      "lessonId": "math-u1-l4",
+      "page": 32,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "احسب |6 + 8i|.",
+      "options": [
+        {
+          "text": "14",
+          "why_wrong": "جمع المكوّنات لا يعطي الطول."
+        },
+        {
+          "text": "48",
+          "why_wrong": "هذا حاصل ضرب المكوّنين."
+        },
+        {
+          "text": "√10",
+          "why_wrong": "استخدمت المجموع بدل مجموع المربعات."
+        },
+        {
+          "text": "10"
+        }
+      ],
+      "answer": 3,
+      "explain": "|z| = √(36 + 64) = 10."
+    },
+    {
+      "id": "qm-u1-11",
+      "unitId": "u1",
+      "lessonId": "math-u1-l5",
+      "page": 36,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "اكتب 5(cos60° + i sin60°) بالصيغة الجبرية.",
+      "options": [
+        {
+          "text": "5/2 + 5i",
+          "why_wrong": "الجزء التخيلي يجب أن يكون (5√3)/2."
+        },
+        {
+          "text": "5√3 + (5/2)i",
+          "why_wrong": "بادل بين الإسقاطين."
+        },
+        {
+          "text": "5/2 + (5√3/2)i"
+        },
+        {
+          "text": "5 + √3i",
+          "why_wrong": "لم تضرب r في cosθ و sinθ."
+        }
+      ],
+      "answer": 2,
+      "explain": "a = 5cos60° = 5/2 و b = 5sin60° = 5√3/2."
+    },
+    {
+      "id": "qm-u1-12",
+      "unitId": "u1",
+      "lessonId": "math-u1-l6",
+      "page": 41,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "احسب 2i + (−3i).",
+      "options": [
+        {
+          "text": "−5i",
+          "why_wrong": "جمعت بوصفهما سالبين."
+        },
+        {
+          "text": "−i"
+        },
+        {
+          "text": "i",
+          "why_wrong": "أخطأت في إشارة المجموع."
+        },
+        {
+          "text": "5i",
+          "why_wrong": "جمعت القيم المطلقة بدل الإشارات."
+        }
+      ],
+      "answer": 1,
+      "explain": "2i − 3i = −i."
+    },
+    {
+      "id": "qm-u1-13",
+      "unitId": "u1",
+      "lessonId": "math-u1-l1",
+      "page": 9,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما المسافة بين 1 + 2i و 4 + 6i؟",
+      "options": [
+        {
+          "text": "5"
+        },
+        {
+          "text": "7",
+          "why_wrong": "جمعت الفروق بدل استخدام فيثاغورس."
+        },
+        {
+          "text": "√5",
+          "why_wrong": "استخدمت فرقاً واحداً فقط."
+        },
+        {
+          "text": "25",
+          "why_wrong": "هذا مربع المسافة."
+        }
+      ],
+      "answer": 0,
+      "explain": "المسافة = |(4+6i)−(1+2i)| = |3+4i| = 5."
+    },
+    {
+      "id": "qm-u1-14",
+      "unitId": "u1",
+      "lessonId": "math-u1-l2",
+      "page": 13,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "إذا كان |a + bi| = 0 فماذا ينتج؟",
+      "options": [
+        {
+          "text": "a = 0 فقط",
+          "why_wrong": "يجب أن يصفر الجزء التخيلي أيضاً."
+        },
+        {
+          "text": "b = 0 فقط",
+          "why_wrong": "يجب أن يصفر الجزء الحقيقي أيضاً."
+        },
+        {
+          "text": "a = b = 1",
+          "why_wrong": "القيمة المطلقة حينها √2 لا صفر."
+        },
+        {
+          "text": "a = 0 و b = 0"
+        }
+      ],
+      "answer": 3,
+      "explain": "مجموع مربعين لا يساوي صفراً إلا إذا كان كلاهما صفراً."
+    },
+    {
+      "id": "qm-u1-15",
+      "unitId": "u1",
+      "lessonId": "math-u1-l3",
+      "page": 16,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "احسب (1 + i)².",
+      "options": [
+        {
+          "text": "1 + 2i",
+          "why_wrong": "حذفت حد i² خطأً."
+        },
+        {
+          "text": "0",
+          "why_wrong": "النتيجة ليست صفراً؛ i² = −1."
+        },
+        {
+          "text": "2i"
+        },
+        {
+          "text": "2",
+          "why_wrong": "نسيت أن 2i متبقٍ بعد إلغاء i²."
+        }
+      ],
+      "answer": 2,
+      "explain": "(1+i)² = 1+2i+i² = 2i."
+    }
+  ],
+  "quiz-math-u2": [
+    {
+      "id": "qm-u2-01",
+      "unitId": "u2",
+      "lessonId": "math-u2-l1",
+      "page": 45,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "احسب (cos30° + i sin30°)⁴.",
+      "options": [
+        {
+          "text": "cos120° + i sin120°"
+        },
+        {
+          "text": "cos34° + i sin34°",
+          "why_wrong": "قاعدة دي موافر تضرب الزاوية في الأس لا تجمعها."
+        },
+        {
+          "text": "cos120° − i sin120°",
+          "why_wrong": "إشارة الجزء التخيلي لا تتغير في الرفع."
+        },
+        {
+          "text": "cos60° + i sin60°",
+          "why_wrong": "4 × 30° = 120° وليس 60°."
+        }
+      ],
+      "answer": 0,
+      "explain": "نضرب الزاوية في الأس: nθ = 120°."
+    },
+    {
+      "id": "qm-u2-02",
+      "unitId": "u2",
+      "lessonId": "math-u2-l2",
+      "page": 50,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "إذا كان z = 2(cos30° + i sin30°) فما z³؟",
+      "options": [
+        {
+          "text": "6(cos90° + i sin90°)",
+          "why_wrong": "القيمة المطلقة تُرفع للأس: 2³ = 8."
+        },
+        {
+          "text": "8(cos10° + i sin10°)",
+          "why_wrong": "الزاوية تُضرب في الأس لا تُقسم."
+        },
+        {
+          "text": "2(cos90° + i sin90°)",
+          "why_wrong": "نسيت رفع r إلى القوة الثالثة."
+        },
+        {
+          "text": "8(cos90° + i sin90°)"
+        }
+      ],
+      "answer": 3,
+      "explain": "z³ = 2³(cos 3×30° + i sin 3×30°)."
+    },
+    {
+      "id": "qm-u2-03",
+      "unitId": "u2",
+      "lessonId": "math-u2-l3",
+      "page": 57,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "كم جذراً نونياً للعدد 1 من الدرجة الخامسة؟",
+      "options": [
+        {
+          "text": "10",
+          "why_wrong": "لا تضاعف الدرجة."
+        },
+        {
+          "text": "1",
+          "why_wrong": "لكل درجة n يوجد n جذراً مركباً."
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "4",
+          "why_wrong": "عدد الجذور يساوي درجة الجذر لا نصفها."
+        }
+      ],
+      "answer": 2,
+      "explain": "معادلة z⁵ = 1 لها خمسة جذور مركبة."
+    },
+    {
+      "id": "qm-u2-04",
+      "unitId": "u2",
+      "lessonId": "math-u2-l4",
+      "page": 68,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "ما الفرق في الزاوية بين جذرين متجاورين من جذور z⁶؟",
+      "options": [
+        {
+          "text": "30°",
+          "why_wrong": "نصف القيمة الصحيحة."
+        },
+        {
+          "text": "60°"
+        },
+        {
+          "text": "90°",
+          "why_wrong": "الفرق هو 360°/6."
+        },
+        {
+          "text": "45°",
+          "why_wrong": "استخدمت 360°/8 بدل 360°/6."
+        }
+      ],
+      "answer": 1,
+      "explain": "الفرق = 2π/n = 360°/6 = 60°."
+    },
+    {
+      "id": "qm-u2-05",
+      "unitId": "u2",
+      "lessonId": "math-u2-l1",
+      "page": 45,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "احسب C(6,2).",
+      "options": [
+        {
+          "text": "15"
+        },
+        {
+          "text": "12",
+          "why_wrong": "حساب المعامل خاطئ؛ (6×5)/(2×1)=15."
+        },
+        {
+          "text": "30",
+          "why_wrong": "نسيت القسمة على 2!."
+        },
+        {
+          "text": "20",
+          "why_wrong": "هذه قيمة C(6,3)."
+        }
+      ],
+      "answer": 0,
+      "explain": "C(6,2) = 6!/(2!4!) = 15."
+    },
+    {
+      "id": "qm-u2-06",
+      "unitId": "u2",
+      "lessonId": "math-u2-l2",
+      "page": 54,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "ما معاملات (a+b)⁴؟",
+      "options": [
+        {
+          "text": "1، 3، 3، 1",
+          "why_wrong": "هذه معاملات (a+b)³."
+        },
+        {
+          "text": "1، 4، 4، 1",
+          "why_wrong": "حذفت المعامل الأوسط 6."
+        },
+        {
+          "text": "1، 5، 10، 5، 1",
+          "why_wrong": "هذه معاملات الأس الخامس."
+        },
+        {
+          "text": "1، 4، 6، 4، 1"
+        }
+      ],
+      "answer": 3,
+      "explain": "من مثلث باسكال للصف الرابع."
+    },
+    {
+      "id": "qm-u2-07",
+      "unitId": "u2",
+      "lessonId": "math-u2-l3",
+      "page": 61,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "ما الحد الأوسط في توسعة (x+y)⁶؟",
+      "options": [
+        {
+          "text": "6x³y³",
+          "why_wrong": "نسيت حساب C(6,3)=20."
+        },
+        {
+          "text": "20x⁴y²",
+          "why_wrong": "الأسود يجب أن يكونا 3 و 3."
+        },
+        {
+          "text": "20x³y³"
+        },
+        {
+          "text": "15x²y⁴",
+          "why_wrong": "هذا ليس الحد الأوسط للأس 6."
+        }
+      ],
+      "answer": 2,
+      "explain": "الحد الأوسط C(6,3)x³y³ = 20x³y³."
+    },
+    {
+      "id": "qm-u2-08",
+      "unitId": "u2",
+      "lessonId": "math-u2-l4",
+      "page": 72,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "احسب (1 + i)⁴.",
+      "options": [
+        {
+          "text": "−2",
+          "why_wrong": "نسيت رفع القيمة المطلقة للأس الرابع."
+        },
+        {
+          "text": "−4"
+        },
+        {
+          "text": "4",
+          "why_wrong": "الزاوية 180° تعطي إشارة سالبة."
+        },
+        {
+          "text": "2",
+          "why_wrong": "القيمة المطلقة (√2)⁴ = 4."
+        }
+      ],
+      "answer": 1,
+      "explain": "|1+i|=√2 والزاوية 45°، إذن النتيجة 4(cos180°+i sin180°)=−4."
+    },
+    {
+      "id": "qm-u2-09",
+      "unitId": "u2",
+      "lessonId": "math-u2-l1",
+      "page": 45,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "ما قيمة r لأحد الجذور التكعيبية لـ 8(cos90° + i sin90°)؟",
+      "options": [
+        {
+          "text": "2"
+        },
+        {
+          "text": "8",
+          "why_wrong": "جذر القيمة المطلقة يُؤخذ: 8^(1/3)=2."
+        },
+        {
+          "text": "√8",
+          "why_wrong": "هذا جذر تربيعي لا تكعيبي."
+        },
+        {
+          "text": "6",
+          "why_wrong": "لا تُقسم القيمة المطلقة على الأس."
+        }
+      ],
+      "answer": 0,
+      "explain": "نصف قطر الجذور هو r^(1/n) = 2."
+    },
+    {
+      "id": "qm-u2-10",
+      "unitId": "u2",
+      "lessonId": "math-u2-l2",
+      "page": 52,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "ما معامل x² في (1+x)⁵؟",
+      "options": [
+        {
+          "text": "5",
+          "why_wrong": "هذا معامل x فقط."
+        },
+        {
+          "text": "20",
+          "why_wrong": "هذا معامل x³."
+        },
+        {
+          "text": "15",
+          "why_wrong": "حساب C(5,2) خاطئ."
+        },
+        {
+          "text": "10"
+        }
+      ],
+      "answer": 3,
+      "explain": "المعامل C(5,2)=10."
+    },
+    {
+      "id": "qm-u2-11",
+      "unitId": "u2",
+      "lessonId": "math-u2-l3",
+      "page": 55,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "كم عدد حدود توسعة (a+b)⁹؟",
+      "options": [
+        {
+          "text": "8",
+          "why_wrong": "طرحت واحداً بدل إضافة واحد."
+        },
+        {
+          "text": "11",
+          "why_wrong": "أضفت اثنين بدل واحد."
+        },
+        {
+          "text": "10"
+        },
+        {
+          "text": "9",
+          "why_wrong": "عدد الحدود n+1."
+        }
+      ],
+      "answer": 2,
+      "explain": "عدد الحدود = 9 + 1 = 10."
+    },
+    {
+      "id": "qm-u2-12",
+      "unitId": "u2",
+      "lessonId": "math-u2-l4",
+      "page": 67,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "ما الصيغة المناسبة لتطبيق دي موافر مباشرة؟",
+      "options": [
+        {
+          "text": "أي صيغة بزاوية بالراديان فقط",
+          "why_wrong": "الدرجات مقبولة طالما متسقة."
+        },
+        {
+          "text": "r(cosθ + i sinθ)"
+        },
+        {
+          "text": "a + bi فقط",
+          "why_wrong": "تحتاج تحويلاً أولاً إلى الصيغة القطبية."
+        },
+        {
+          "text": "عدد حقيقي فقط",
+          "why_wrong": "المبرهنة للأعداد المركبة."
+        }
+      ],
+      "answer": 1,
+      "explain": "الصيغة القطبية تجعل الرفع إلى قوة بسيطاً."
+    },
+    {
+      "id": "qm-u2-13",
+      "unitId": "u2",
+      "lessonId": "math-u2-l1",
+      "page": 45,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "احسب (−1 + i)².",
+      "options": [
+        {
+          "text": "−2i"
+        },
+        {
+          "text": "2i",
+          "why_wrong": "أخطأت في إشارة الحد التخيلي الناتج."
+        },
+        {
+          "text": "−2",
+          "why_wrong": "الحد 2i لا يلغي عند التربيع."
+        },
+        {
+          "text": "0",
+          "why_wrong": "القيمة المطلقة ليست صفراً."
+        }
+      ],
+      "answer": 0,
+      "explain": "(−1+i)² = 1−2i+i² = −2i."
+    },
+    {
+      "id": "qm-u2-14",
+      "unitId": "u2",
+      "lessonId": "math-u2-l2",
+      "page": 50,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "احسب C(5,3).",
+      "options": [
+        {
+          "text": "5",
+          "why_wrong": "هذا C(5,1)."
+        },
+        {
+          "text": "15",
+          "why_wrong": "هذا C(6,2)."
+        },
+        {
+          "text": "20",
+          "why_wrong": "حساب خاطئ للمعامل."
+        },
+        {
+          "text": "10"
+        }
+      ],
+      "answer": 3,
+      "explain": "C(5,3)=C(5,2)=10."
+    },
+    {
+      "id": "qm-u2-15",
+      "unitId": "u2",
+      "lessonId": "math-u2-l3",
+      "page": 59,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما مجموع معاملات (1+1)⁸؟",
+      "options": [
+        {
+          "text": "64",
+          "why_wrong": "هذه 2⁶."
+        },
+        {
+          "text": "8",
+          "why_wrong": "هذا الأس نفسه، لا مجموع المعاملات."
+        },
+        {
+          "text": "256"
+        },
+        {
+          "text": "128",
+          "why_wrong": "هذه 2⁷ لا 2⁸."
+        }
+      ],
+      "answer": 2,
+      "explain": "مجموع المعاملات = (1+1)⁸ = 2⁸ = 256."
+    }
+  ],
+  "quiz-math-u3": [
+    {
+      "id": "qm-u3-01",
+      "unitId": "u3",
+      "lessonId": "math-u3-l1",
+      "page": 104,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "في القطع x²/16 + y²/9 = 1، ما طول المحور الكبير؟",
+      "options": [
+        {
+          "text": "8"
+        },
+        {
+          "text": "6",
+          "why_wrong": "هذا طول المحور الصغير."
+        },
+        {
+          "text": "3",
+          "why_wrong": "هذا نصف المحور الصغير."
+        },
+        {
+          "text": "4",
+          "why_wrong": "هذا نصف المحور الكبير."
+        }
+      ],
+      "answer": 0,
+      "explain": "a=4 إذن طول المحور الكبير 2a=8."
+    },
+    {
+      "id": "qm-u3-02",
+      "unitId": "u3",
+      "lessonId": "math-u3-l2",
+      "page": 111,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما بُعد البؤرة عن المركز في x²/16 + y²/9 = 1؟",
+      "options": [
+        {
+          "text": "√5",
+          "why_wrong": "طرحت 16−9 خطأً."
+        },
+        {
+          "text": "7",
+          "why_wrong": "هذا c² وليس c."
+        },
+        {
+          "text": "5",
+          "why_wrong": "جمع المقامين بدل طرحهما."
+        },
+        {
+          "text": "√7"
+        }
+      ],
+      "answer": 3,
+      "explain": "c=√(16−9)=√7."
+    },
+    {
+      "id": "qm-u3-03",
+      "unitId": "u3",
+      "lessonId": "math-u3-l3",
+      "page": 120,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما خطا مقاربة القطع x²/9 − y²/16 = 1؟",
+      "options": [
+        {
+          "text": "y = ±4x",
+          "why_wrong": "نسيت القسمة على a."
+        },
+        {
+          "text": "y = ±3x",
+          "why_wrong": "استخدمت a بدل b/a."
+        },
+        {
+          "text": "y = ±(4/3)x"
+        },
+        {
+          "text": "y = ±(3/4)x",
+          "why_wrong": "عكست b/a."
+        }
+      ],
+      "answer": 2,
+      "explain": "للقطع الأفقي y=±(b/a)x=±(4/3)x."
+    },
+    {
+      "id": "qm-u3-04",
+      "unitId": "u3",
+      "lessonId": "math-u3-l4",
+      "page": 127,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "في y² = 20x، ما قيمة p؟",
+      "options": [
+        {
+          "text": "√20",
+          "why_wrong": "لا يوجد جذر هنا."
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "20",
+          "why_wrong": "المعطى هو 4p لا p."
+        },
+        {
+          "text": "10",
+          "why_wrong": "قسمت على 2 بدل 4."
+        }
+      ],
+      "answer": 1,
+      "explain": "4p=20 إذن p=5."
+    },
+    {
+      "id": "qm-u3-05",
+      "unitId": "u3",
+      "lessonId": "math-u3-l5",
+      "page": 131,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "أي قطع مخروطي انحرافه e أكبر من 1؟",
+      "options": [
+        {
+          "text": "القطع الزائد"
+        },
+        {
+          "text": "القطع الناقص",
+          "why_wrong": "القطع الناقص له e<1."
+        },
+        {
+          "text": "القطع المكافئ",
+          "why_wrong": "القطع المكافئ له e=1."
+        },
+        {
+          "text": "الدائرة",
+          "why_wrong": "الدائرة حالة خاصة بـ e=0."
+        }
+      ],
+      "answer": 0,
+      "explain": "e>1 يعطي القطع الزائد."
+    },
+    {
+      "id": "qm-u3-06",
+      "unitId": "u3",
+      "lessonId": "math-u3-l1",
+      "page": 109,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "أي قطع مخروطي انحرافه e يساوي 1؟",
+      "options": [
+        {
+          "text": "القطع الناقص",
+          "why_wrong": "للقطع الناقص e<1."
+        },
+        {
+          "text": "القطع الزائد",
+          "why_wrong": "للقطع الزائد e>1."
+        },
+        {
+          "text": "الدائرة",
+          "why_wrong": "للدائرة e=0."
+        },
+        {
+          "text": "القطع المكافئ"
+        }
+      ],
+      "answer": 3,
+      "explain": "e=1 هو تعريف القطع المكافئ."
+    },
+    {
+      "id": "qm-u3-07",
+      "unitId": "u3",
+      "lessonId": "math-u3-l2",
+      "page": 116,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "في x²/25 + y²/9 = 1، ما c؟",
+      "options": [
+        {
+          "text": "3",
+          "why_wrong": "هذا b."
+        },
+        {
+          "text": "√34",
+          "why_wrong": "جمعت المقامين بدل طرحهما."
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "5",
+          "why_wrong": "هذا a وليس c."
+        }
+      ],
+      "answer": 2,
+      "explain": "c=√(25−9)=4."
+    },
+    {
+      "id": "qm-u3-08",
+      "unitId": "u3",
+      "lessonId": "math-u3-l3",
+      "page": 119,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "إذا كان a=3 لقطع زائد، فما طول محوره القطعي؟",
+      "options": [
+        {
+          "text": "8",
+          "why_wrong": "لا علاقة له بالمعطى."
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "3",
+          "why_wrong": "هذا نصف المحور."
+        },
+        {
+          "text": "9",
+          "why_wrong": "هذا a²."
+        }
+      ],
+      "answer": 1,
+      "explain": "طول المحور القطعي = 2a = 6."
+    },
+    {
+      "id": "qm-u3-09",
+      "unitId": "u3",
+      "lessonId": "math-u3-l4",
+      "page": 126,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "ما دليل القطع y² = 12x؟",
+      "options": [
+        {
+          "text": "x = −3"
+        },
+        {
+          "text": "x = 3",
+          "why_wrong": "الدليل يقع في الجهة المعاكسة للبؤرة."
+        },
+        {
+          "text": "y = −3",
+          "why_wrong": "محور التماثل أفقي، فالدليل مستقيم رأسي."
+        },
+        {
+          "text": "x = −6",
+          "why_wrong": "12 = 4p إذن p=3 لا 6."
+        }
+      ],
+      "answer": 0,
+      "explain": "4p=12، p=3، والدليل x=−p."
+    },
+    {
+      "id": "qm-u3-10",
+      "unitId": "u3",
+      "lessonId": "math-u3-l5",
+      "page": 130,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "ما مركز القطع x²/4 + y²/9 = 1؟",
+      "options": [
+        {
+          "text": "(2، 3)",
+          "why_wrong": "هذه قيم المقامات، لا إحداثيات المركز."
+        },
+        {
+          "text": "(4، 9)",
+          "why_wrong": "المقامات ليست إحداثيات."
+        },
+        {
+          "text": "(0، 1)",
+          "why_wrong": "لا يوجد إزاحة في المعادلة."
+        },
+        {
+          "text": "(0، 0)"
+        }
+      ],
+      "answer": 3,
+      "explain": "لا توجد حدود (x−h) أو (y−k)، فالمركز المبدأ."
+    },
+    {
+      "id": "qm-u3-11",
+      "unitId": "u3",
+      "lessonId": "math-u3-l1",
+      "page": 108,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "ما مركز (x−1)²/9 + (y+2)²/4 = 1؟",
+      "options": [
+        {
+          "text": "(1، 2)",
+          "why_wrong": "y+2 تعطي k=−2."
+        },
+        {
+          "text": "(−1، −2)",
+          "why_wrong": "x−1 تعطي h=1."
+        },
+        {
+          "text": "(1، −2)"
+        },
+        {
+          "text": "(−1، 2)",
+          "why_wrong": "عكست الإشارتين."
+        }
+      ],
+      "answer": 2,
+      "explain": "المركز (h، k) = (1، −2)."
+    },
+    {
+      "id": "qm-u3-12",
+      "unitId": "u3",
+      "lessonId": "math-u3-l2",
+      "page": 113,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "أي اتجاه يفتح له القطع x²/9 − y²/4 = 1؟",
+      "options": [
+        {
+          "text": "دائرياً",
+          "why_wrong": "الإشارة سالبة في y²، فليس دائرة."
+        },
+        {
+          "text": "أفقياً"
+        },
+        {
+          "text": "رأسياً",
+          "why_wrong": "الحد الموجب هو x²، إذن المحور أفقي."
+        },
+        {
+          "text": "لأعلى فقط",
+          "why_wrong": "القطع الزائد له فرعان متقابلان."
+        }
+      ],
+      "answer": 1,
+      "explain": "الإشارة الموجبة أمام x² تعني محوراً قطعياً أفقياً."
+    },
+    {
+      "id": "qm-u3-13",
+      "unitId": "u3",
+      "lessonId": "math-u3-l3",
+      "page": 118,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما انحراف الدائرة؟",
+      "options": [
+        {
+          "text": "0"
+        },
+        {
+          "text": "1",
+          "why_wrong": "هذا انحراف القطع المكافئ."
+        },
+        {
+          "text": "∞",
+          "why_wrong": "لا يحدث للدائرة."
+        },
+        {
+          "text": "0.5",
+          "why_wrong": "ينتمي لقطع ناقص غير دائري."
+        }
+      ],
+      "answer": 0,
+      "explain": "الدائرة حالة خاصة من القطع الناقص بـ e=0."
+    },
+    {
+      "id": "qm-u3-14",
+      "unitId": "u3",
+      "lessonId": "math-u3-l4",
+      "page": 125,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما رأس القطع (y−1)² = 8(x−2)؟",
+      "options": [
+        {
+          "text": "(1، 2)",
+          "why_wrong": "عكست الإحداثيات."
+        },
+        {
+          "text": "(−2، 1)",
+          "why_wrong": "x−2 تعطي h=2 لا −2."
+        },
+        {
+          "text": "(2، −1)",
+          "why_wrong": "y−1 تعطي k=1."
+        },
+        {
+          "text": "(2، 1)"
+        }
+      ],
+      "answer": 3,
+      "explain": "الصيغة (y−k)²=4p(x−h) تعطي الرأس (2،1)."
+    },
+    {
+      "id": "qm-u3-15",
+      "unitId": "u3",
+      "lessonId": "math-u3-l5",
+      "page": 132,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما بؤرة القطع y² = 8x؟",
+      "options": [
+        {
+          "text": "(4، 0)",
+          "why_wrong": "8 = 4p إذن p=2."
+        },
+        {
+          "text": "(8، 0)",
+          "why_wrong": "8 هي 4p وليست p."
+        },
+        {
+          "text": "(2، 0)"
+        },
+        {
+          "text": "(0، 2)",
+          "why_wrong": "بادل بين الإحداثيات."
+        }
+      ],
+      "answer": 2,
+      "explain": "4p=8، p=2، فالبؤرة (2،0)."
+    }
+  ],
+  "quiz-math-u4": [
+    {
+      "id": "qm-u4-01",
+      "unitId": "u4",
+      "lessonId": "math-u4-l1",
+      "page": 133,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما المتجه الطبيعي للمستوى Ax + By + Cz + D = 0؟",
+      "options": [
+        {
+          "text": "(A، B، C)"
+        },
+        {
+          "text": "(A، B، D)",
+          "why_wrong": "الثابت D لا يدخل المتجه الطبيعي."
+        },
+        {
+          "text": "(−D، −B، −A)",
+          "why_wrong": "ترتيب وإشارات خاطئة."
+        },
+        {
+          "text": "(1، 1، 1)",
+          "why_wrong": "غير صحيح إلا إذا كانت A=B=C=1."
+        }
+      ],
+      "answer": 0,
+      "explain": "معاملات x و y و z تمثل المتجه الطبيعي."
+    },
+    {
+      "id": "qm-u4-02",
+      "unitId": "u4",
+      "lessonId": "math-u4-l2",
+      "page": 143,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما مسافة نقطة من مستوى؟",
+      "options": [
+        {
+          "text": "|Ax₀+By₀+Cz₀+D| / (A²+B²+C²)",
+          "why_wrong": "حذفت الجذر من المقام."
+        },
+        {
+          "text": "|Ax₀+By₀+Cz₀+D| / D",
+          "why_wrong": "لا تُقسم على الثابت."
+        },
+        {
+          "text": "Ax₀+By₀+Cz₀+D فقط",
+          "why_wrong": " يجب أخذ القيمة المطلقة والقسمة على طول الطبيعي."
+        },
+        {
+          "text": "|Ax₀+By₀+Cz₀+D| / √(A²+B²+C²)"
+        }
+      ],
+      "answer": 3,
+      "explain": "المسافة هي الإسقاط العمودي مقسوماً على |n|."
+    },
+    {
+      "id": "qm-u4-03",
+      "unitId": "u4",
+      "lessonId": "math-u4-l3",
+      "page": 149,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما طول القطر الفراغي لمكعب ضلعه a؟",
+      "options": [
+        {
+          "text": "2a",
+          "why_wrong": "هذا ضعف الضلع."
+        },
+        {
+          "text": "3a",
+          "why_wrong": "لا يُجمع الضلع ثلاث مرات."
+        },
+        {
+          "text": "a√3"
+        },
+        {
+          "text": "a√2",
+          "why_wrong": "هذا قطر الوجه."
+        }
+      ],
+      "answer": 2,
+      "explain": "بفيثاغورس مرتين: d=√(a²+a²+a²)=a√3."
+    },
+    {
+      "id": "qm-u4-04",
+      "unitId": "u4",
+      "lessonId": "math-u4-l1",
+      "page": 136,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "إذا كانت زاوية مستقيم مع الطبيعي 30°، فما زاويته مع المستوى؟",
+      "options": [
+        {
+          "text": "45°",
+          "why_wrong": "المكمّل لـ 30° هو 60°."
+        },
+        {
+          "text": "60°"
+        },
+        {
+          "text": "30°",
+          "why_wrong": "الزاويتان ليستا متساويتين."
+        },
+        {
+          "text": "120°",
+          "why_wrong": "الزاوية مع المستوى حادة مكمّلة."
+        }
+      ],
+      "answer": 1,
+      "explain": "θ = 90° − 30° = 60°."
+    },
+    {
+      "id": "qm-u4-05",
+      "unitId": "u4",
+      "lessonId": "math-u4-l2",
+      "page": 146,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "متى يكون مستويان متعامدين؟",
+      "options": [
+        {
+          "text": "عندما n₁·n₂ = 0"
+        },
+        {
+          "text": "عندما n₁ = n₂",
+          "why_wrong": "هذا يعني مستويين متوازيين."
+        },
+        {
+          "text": "عندما n₁ = 2n₂",
+          "why_wrong": "مضاعفة المتجه تعني توازياً."
+        },
+        {
+          "text": "عندما |n₁| = |n₂|",
+          "why_wrong": "تساوي الطولين لا يحدد الزاوية."
+        }
+      ],
+      "answer": 0,
+      "explain": "تعامد المتجهين الطبيعيين يعطي تعامد المستويين."
+    },
+    {
+      "id": "qm-u4-06",
+      "unitId": "u4",
+      "lessonId": "math-u4-l3",
+      "page": 152,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "ما cosφ بين المستوى xy والمستوى xz؟",
+      "options": [
+        {
+          "text": "1",
+          "why_wrong": "المتجهان (0,0,1) و (0,1,0) متعامدان."
+        },
+        {
+          "text": "−1",
+          "why_wrong": "ليسا متعاكسين."
+        },
+        {
+          "text": "1/2",
+          "why_wrong": "الزاوية 90° لا 60°."
+        },
+        {
+          "text": "0"
+        }
+      ],
+      "answer": 3,
+      "explain": "n₁=(0,0,1)، n₂=(0,1,0)، جيب تمام الزاوية صفر."
+    },
+    {
+      "id": "qm-u4-07",
+      "unitId": "u4",
+      "lessonId": "math-u4-l1",
+      "page": 139,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "ما مسافة النقطة (1،2،5) من المستوى x = 3؟",
+      "options": [
+        {
+          "text": "4",
+          "why_wrong": "حسبت الإحداثي الخاطئ."
+        },
+        {
+          "text": "√30",
+          "why_wrong": "استخدمت طول متجه النقطة."
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "3",
+          "why_wrong": "هذا موضع المستوى من المبدأ."
+        }
+      ],
+      "answer": 2,
+      "explain": "المسافة = |1−3| = 2."
+    },
+    {
+      "id": "qm-u4-08",
+      "unitId": "u4",
+      "lessonId": "math-u4-l2",
+      "page": 144,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "ما زاوية المستقيم باتجاه (1،0،0) مع المستوى z = 0؟",
+      "options": [
+        {
+          "text": "180°",
+          "why_wrong": "الزاوية مع مستوى لا تُقاس هكذا."
+        },
+        {
+          "text": "0°"
+        },
+        {
+          "text": "90°",
+          "why_wrong": "هذا مع المتجه الطبيعي لا مع المستوى."
+        },
+        {
+          "text": "45°",
+          "why_wrong": "لا يوجد ميل رأسي."
+        }
+      ],
+      "answer": 1,
+      "explain": "المتجه موازٍ للمستوى، فالزاوية صفر."
+    },
+    {
+      "id": "qm-u4-09",
+      "unitId": "u4",
+      "lessonId": "math-u4-l3",
+      "page": 148,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "ما الزاوية بين المستويين xy و xz؟",
+      "options": [
+        {
+          "text": "90°"
+        },
+        {
+          "text": "0°",
+          "why_wrong": "المستويان مختلفان و متعامدان."
+        },
+        {
+          "text": "45°",
+          "why_wrong": "لا يوجد ميل بمقدار 45°."
+        },
+        {
+          "text": "180°",
+          "why_wrong": "ليسا مستوى واحداً بعكس الاتجاه."
+        }
+      ],
+      "answer": 0,
+      "explain": "المتجهان الطبيعيان متعامدان."
+    },
+    {
+      "id": "qm-u4-10",
+      "unitId": "u4",
+      "lessonId": "math-u4-l1",
+      "page": 133,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "ما معادلة المستوى المار بالمبدأ وبطبيعي (0،0،1)؟",
+      "options": [
+        {
+          "text": "x = 0",
+          "why_wrong": "هذا طبيعيته (1،0،0)."
+        },
+        {
+          "text": "y = 0",
+          "why_wrong": "هذا طبيعيته (0،1،0)."
+        },
+        {
+          "text": "x + y = 1",
+          "why_wrong": "لا يمر بالمبدأ ولا طبيعيته المطلوبة."
+        },
+        {
+          "text": "z = 0"
+        }
+      ],
+      "answer": 3,
+      "explain": "المعادلة 0x+0y+1z+0=0."
+    },
+    {
+      "id": "qm-u4-11",
+      "unitId": "u4",
+      "lessonId": "math-u4-l2",
+      "page": 142,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "ما معادلة مستقيم يمر بـ P واتجاهه u؟",
+      "options": [
+        {
+          "text": "r = P/t",
+          "why_wrong": "لا تمثل هذه معادلة خط مستقيم."
+        },
+        {
+          "text": "r = u − tP",
+          "why_wrong": "النقطة والاتجاه معكوسان."
+        },
+        {
+          "text": "r = P + tu"
+        },
+        {
+          "text": "r = P·u",
+          "why_wrong": "هذا ناتج جداء لا معادلة مستقيم."
+        }
+      ],
+      "answer": 2,
+      "explain": "المعادلة المتجهية للمستقيم هي r=P+tu."
+    },
+    {
+      "id": "qm-u4-12",
+      "unitId": "u4",
+      "lessonId": "math-u4-l3",
+      "page": 151,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "ما مسافة المبدأ من المستوى 3x + 4y + 12z − 13 = 0؟",
+      "options": [
+        {
+          "text": "1/13",
+          "why_wrong": "قلبت النسبة."
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "13",
+          "why_wrong": "هذا البسط قبل القسمة."
+        },
+        {
+          "text": "12",
+          "why_wrong": "هذا أكبر معامل."
+        }
+      ],
+      "answer": 1,
+      "explain": "|−13|/√(9+16+144)=13/13=1."
+    },
+    {
+      "id": "qm-u4-13",
+      "unitId": "u4",
+      "lessonId": "math-u4-l1",
+      "page": 136,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "إذا كان مستقيم موازياً لمستوى، فما زاويته مع الطبيعي؟",
+      "options": [
+        {
+          "text": "90°"
+        },
+        {
+          "text": "0°",
+          "why_wrong": "هذه الزاوية مع المستوى."
+        },
+        {
+          "text": "45°",
+          "why_wrong": "لا يوجد ميل رأسي."
+        },
+        {
+          "text": "180°",
+          "why_wrong": "الزاوية مع طبيعي扼 مستوى تكون قائمة."
+        }
+      ],
+      "answer": 0,
+      "explain": "الموازي للمستوى عمودي على متجهه الطبيعي."
+    },
+    {
+      "id": "qm-u4-14",
+      "unitId": "u4",
+      "lessonId": "math-u4-l2",
+      "page": 145,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما قطر وجه مكعب ضلعه a؟",
+      "options": [
+        {
+          "text": "a√3",
+          "why_wrong": "هذا القطر الفراغي."
+        },
+        {
+          "text": "2a",
+          "why_wrong": "ضعف الضلع."
+        },
+        {
+          "text": "a/√2",
+          "why_wrong": "قلبت العلاقة."
+        },
+        {
+          "text": "a√2"
+        }
+      ],
+      "answer": 3,
+      "explain": "قطر الوجه = √(a²+a²)=a√2."
+    },
+    {
+      "id": "qm-u4-15",
+      "unitId": "u4",
+      "lessonId": "math-u4-l3",
+      "page": 147,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما مسافة (1،1،1) من المستوى 2x − y + 2z − 4 = 0؟",
+      "options": [
+        {
+          "text": "3",
+          "why_wrong": "هذا المقام لا المسافة."
+        },
+        {
+          "text": "2/3",
+          "why_wrong": "حساب البسط خاطئ؛ البسط 1."
+        },
+        {
+          "text": "1/3"
+        },
+        {
+          "text": "1",
+          "why_wrong": "المقام √(4+1+4)=3."
+        }
+      ],
+      "answer": 2,
+      "explain": "|2−1+2−4|/3 = 1/3."
+    }
+  ],
+  "quiz-math-u5": [
+    {
+      "id": "qm-u5-01",
+      "unitId": "u5",
+      "lessonId": "math-u5-l1",
+      "page": 74,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "إذا كان P(A)=0.3 فما P(Aᶜ)؟",
+      "options": [
+        {
+          "text": "0.7"
+        },
+        {
+          "text": "0.3",
+          "why_wrong": "المكمّل ليس الحدث نفسه."
+        },
+        {
+          "text": "0.5",
+          "why_wrong": "لا تُقسم الاحتمال على 2."
+        },
+        {
+          "text": "1.3",
+          "why_wrong": "الاحتمال لا يتجاوز 1."
+        }
+      ],
+      "answer": 0,
+      "explain": "P(Aᶜ)=1−P(A)=0.7."
+    },
+    {
+      "id": "qm-u5-02",
+      "unitId": "u5",
+      "lessonId": "math-u5-l2",
+      "page": 80,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "إذا كان A و B متنافيين، P(A)=0.4 و P(B)=0.3، فما P(A∪B)؟",
+      "options": [
+        {
+          "text": "0.12",
+          "why_wrong": "قاعدة الضرب للحدثين المستقلين، لا الجمع للمتنافيين."
+        },
+        {
+          "text": "0.1",
+          "why_wrong": "طرحت بدل جمعت."
+        },
+        {
+          "text": "1",
+          "why_wrong": "المجموع 0.7 وليس يقيناً."
+        },
+        {
+          "text": "0.7"
+        }
+      ],
+      "answer": 3,
+      "explain": "للتنافي P(A∪B)=P(A)+P(B)."
+    },
+    {
+      "id": "qm-u5-03",
+      "unitId": "u5",
+      "lessonId": "math-u5-l3",
+      "page": 88,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "إذا كان A و B مستقلين، P(A)=0.5 و P(B)=0.2، فما P(A∩B)؟",
+      "options": [
+        {
+          "text": "0.3",
+          "why_wrong": "طرحت بدل ضربت."
+        },
+        {
+          "text": "0.25",
+          "why_wrong": "استخدمت P(B)=0.5."
+        },
+        {
+          "text": "0.1"
+        },
+        {
+          "text": "0.7",
+          "why_wrong": "هذا الجمع، لا التقاطع."
+        }
+      ],
+      "answer": 2,
+      "explain": "للاستقلال P(A∩B)=P(A)P(B)=0.1."
+    },
+    {
+      "id": "qm-u5-04",
+      "unitId": "u5",
+      "lessonId": "math-u5-l4",
+      "page": 96,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "إذا كان P(A)=0.5، P(B)=0.4 و P(A∩B)=0.2، فما P(A∪B)؟",
+      "options": [
+        {
+          "text": "1.1",
+          "why_wrong": "الاحتمال لا يتجاوز 1."
+        },
+        {
+          "text": "0.7"
+        },
+        {
+          "text": "0.9",
+          "why_wrong": "حسبت التقاطع مرتين."
+        },
+        {
+          "text": "0.3",
+          "why_wrong": "طرحت التقاطع من حد واحد فقط."
+        }
+      ],
+      "answer": 1,
+      "explain": "0.5+0.4−0.2=0.7."
+    },
+    {
+      "id": "qm-u5-05",
+      "unitId": "u5",
+      "lessonId": "math-u5-l5",
+      "page": 102,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "إذا كان P(A∩B)=0.2 و P(B)=0.5، فما P(A|B)؟",
+      "options": [
+        {
+          "text": "0.4"
+        },
+        {
+          "text": "0.1",
+          "why_wrong": "ضربت بدل قسمت."
+        },
+        {
+          "text": "0.7",
+          "why_wrong": "جمعت بدل قسمت."
+        },
+        {
+          "text": "2.5",
+          "why_wrong": "قلبت البسط والمقام."
+        }
+      ],
+      "answer": 0,
+      "explain": "P(A|B)=0.2/0.5=0.4."
+    },
+    {
+      "id": "qm-u5-06",
+      "unitId": "u5",
+      "lessonId": "math-u5-l1",
+      "page": 74,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "ما مجموع احتمالات كل النتجات المتنافية في فضاء العينة؟",
+      "options": [
+        {
+          "text": "0",
+          "why_wrong": "هذا مستحيل لمجموع كامل."
+        },
+        {
+          "text": "∞",
+          "why_wrong": "الاحتمال محدود."
+        },
+        {
+          "text": "يعتمد على التجربة",
+          "why_wrong": "المجموع دائماً 1."
+        },
+        {
+          "text": "1"
+        }
+      ],
+      "answer": 3,
+      "explain": "مجموع فضاء العينة يساوي 1."
+    },
+    {
+      "id": "qm-u5-07",
+      "unitId": "u5",
+      "lessonId": "math-u5-l2",
+      "page": 85,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "عند رمي عملة مرتين، ما احتمال HH؟",
+      "options": [
+        {
+          "text": "1/3",
+          "why_wrong": "فضاء العينة له 4 نتجات متساوية."
+        },
+        {
+          "text": "1/8",
+          "why_wrong": "هذا لثلاث رميات."
+        },
+        {
+          "text": "1/4"
+        },
+        {
+          "text": "1/2",
+          "why_wrong": "هذا احتمال نتيجة واحدة في رمية واحدة."
+        }
+      ],
+      "answer": 2,
+      "explain": "النتجات: HH, HT, TH, TT، إذن 1/4."
+    },
+    {
+      "id": "qm-u5-08",
+      "unitId": "u5",
+      "lessonId": "math-u5-l3",
+      "page": 86,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "عند رمي نرد عادل، ما احتمال ظهور عدد زوجي؟",
+      "options": [
+        {
+          "text": "2/3",
+          "why_wrong": "هذا احتمال الفردي أو الزوجي معاً خطأً."
+        },
+        {
+          "text": "1/2"
+        },
+        {
+          "text": "1/6",
+          "why_wrong": "هذا احتمال رقم واحد."
+        },
+        {
+          "text": "1/3",
+          "why_wrong": "الأعداد الزوجية 2 و 4 و 6 من أصل 6."
+        }
+      ],
+      "answer": 1,
+      "explain": "3 نتجات زوجية من 6."
+    },
+    {
+      "id": "qm-u5-09",
+      "unitId": "u5",
+      "lessonId": "math-u5-l4",
+      "page": 96,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "في 5 تجارب برنولي p=0.5، ما احتمال نجاحين بالضبط؟",
+      "options": [
+        {
+          "text": "10/32"
+        },
+        {
+          "text": "5/32",
+          "why_wrong": "نسيت C(5,2)=10."
+        },
+        {
+          "text": "10/16",
+          "why_wrong": "المقام يجب أن يكون 2⁵=32."
+        },
+        {
+          "text": "1/32",
+          "why_wrong": "هذا احتمال حالة واحدة فقط."
+        }
+      ],
+      "answer": 0,
+      "explain": "C(5,2)(0.5)²(0.5)³=10/32."
+    },
+    {
+      "id": "qm-u5-10",
+      "unitId": "u5",
+      "lessonId": "math-u5-l5",
+      "page": 101,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "إذا كان A و B مستقلين، فما P(A|B)؟",
+      "options": [
+        {
+          "text": "P(A∩B)",
+          "why_wrong": "هذا احتمال تقاطع، لا شرطي."
+        },
+        {
+          "text": "0",
+          "why_wrong": "الشرط لا يلغي الاحتمال."
+        },
+        {
+          "text": "1−P(A)",
+          "why_wrong": "هذا احتمال المكمّل."
+        },
+        {
+          "text": "P(A)"
+        }
+      ],
+      "answer": 3,
+      "explain": "الاستقلال يعني أن الشرط لا يغيّر الاحتمال."
+    },
+    {
+      "id": "qm-u5-11",
+      "unitId": "u5",
+      "lessonId": "math-u5-l1",
+      "page": 74,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "أي علاقة صحيحة دائماً؟",
+      "options": [
+        {
+          "text": "P(A∩B)>P(A)",
+          "why_wrong": "التقاطع لا يمكن أن يتجاوز أحد الحدثين."
+        },
+        {
+          "text": "P(A∩B)=0 دائماً",
+          "why_wrong": "فقط للمتنافيين."
+        },
+        {
+          "text": "P(A∩B) ≤ P(A)"
+        },
+        {
+          "text": "P(A∩B)=P(A) دائماً",
+          "why_wrong": "يحدث فقط إذا B يضم A."
+        }
+      ],
+      "answer": 2,
+      "explain": "التقاطع جزء من A، فاحتماله لا يتجاوز احتمال A."
+    },
+    {
+      "id": "qm-u5-12",
+      "unitId": "u5",
+      "lessonId": "math-u5-l2",
+      "page": 83,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "السحب دون إرجاع يجعل الحدثين",
+      "options": [
+        {
+          "text": "احتمال كل منهما 1",
+          "why_wrong": "ليس بالضرورة."
+        },
+        {
+          "text": "غير مستقلين"
+        },
+        {
+          "text": "مستقلين",
+          "why_wrong": "السحب يغيّر احتمال الثاني."
+        },
+        {
+          "text": "متنافيين دائماً",
+          "why_wrong": "قد يحصل كلاهما في سحبتين."
+        }
+      ],
+      "answer": 1,
+      "explain": "تغيّر فضاء العينة بعد السحب يلغي الاستقلال."
+    },
+    {
+      "id": "qm-u5-13",
+      "unitId": "u5",
+      "lessonId": "math-u5-l3",
+      "page": 91,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "متى يساوي P(A∪B)=P(A)+P(B)؟",
+      "options": [
+        {
+          "text": "عند تنافي A و B"
+        },
+        {
+          "text": "عند استقلالهما",
+          "why_wrong": "الاستقلال يعطي ضرب التقاطع لا إلغاءه."
+        },
+        {
+          "text": "عند تساويهما",
+          "why_wrong": "لا علاقة لذلك."
+        },
+        {
+          "text": "عند كمالهما",
+          "why_wrong": "التكامل يعطي مجموع 1، لكن التقاطع معدوم فقط عند التنافي."
+        }
+      ],
+      "answer": 0,
+      "explain": "يُحذف الحد P(A∩B) فقط إذا كان التقاطع صفراً."
+    },
+    {
+      "id": "qm-u5-14",
+      "unitId": "u5",
+      "lessonId": "math-u5-l4",
+      "page": 96,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما شرط التوزيع ذي الحدين؟",
+      "options": [
+        {
+          "text": "سحب مع إرجاع فقط",
+          "why_wrong": "ليس شرطاً حصرياً."
+        },
+        {
+          "text": "احتمال متغير في كل تجربة",
+          "why_wrong": "يجب أن يكون p ثابتاً."
+        },
+        {
+          "text": "تجارب مؤثرة",
+          "why_wrong": "يجب أن تكون مستقلة."
+        },
+        {
+          "text": "تجارب مستقلة واحتمال نجاح ثابت"
+        }
+      ],
+      "answer": 3,
+      "explain": "التوزيع ذو الحدين يتطلب n تجارب مستقلة و p ثابت."
+    },
+    {
+      "id": "qm-u5-15",
+      "unitId": "u5",
+      "lessonId": "math-u5-l5",
+      "page": 100,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "في تجربتين مستقلتين p=0.5، ما احتمال نجاح واحدة على الأقل؟",
+      "options": [
+        {
+          "text": "0.25",
+          "why_wrong": "هذا احتمال الفشل في التجربتين."
+        },
+        {
+          "text": "1",
+          "why_wrong": "لا يوجد يقين بالنجاح."
+        },
+        {
+          "text": "0.75"
+        },
+        {
+          "text": "0.5",
+          "why_wrong": "هذا احتمال نجاح واحدة بالضبط في تجربة واحدة."
+        }
+      ],
+      "answer": 2,
+      "explain": "1−P(فشلان)=1−0.25=0.75."
+    }
+  ],
+  "quiz-math-u6": [
+    {
+      "id": "qm-u6-01",
+      "unitId": "u6",
+      "lessonId": "math-u6-l1",
+      "page": 154,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما مشتقة x⁵؟",
+      "options": [
+        {
+          "text": "5x⁴"
+        },
+        {
+          "text": "x⁴",
+          "why_wrong": "نسيت ضرب الأس الأصلي."
+        },
+        {
+          "text": "5x⁵",
+          "why_wrong": "لم ينقص الأس."
+        },
+        {
+          "text": "4x⁴",
+          "why_wrong": "استخدمت ناتج التنقيص بدل الأس الأصلي."
+        }
+      ],
+      "answer": 0,
+      "explain": "(xⁿ)′=nxⁿ⁻¹."
+    },
+    {
+      "id": "qm-u6-02",
+      "unitId": "u6",
+      "lessonId": "math-u6-l2",
+      "page": 161,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما مشتقة الثابت 7؟",
+      "options": [
+        {
+          "text": "7",
+          "why_wrong": "الثابت لا يتغير."
+        },
+        {
+          "text": "1",
+          "why_wrong": "مشتقة x هي 1 لا مشتقة الثابت."
+        },
+        {
+          "text": "غير معرفة",
+          "why_wrong": "مشتقة الثابت معرفة وتساوي صفراً."
+        },
+        {
+          "text": "0"
+        }
+      ],
+      "answer": 3,
+      "explain": "معدل تغير الثابت صفر."
+    },
+    {
+      "id": "qm-u6-03",
+      "unitId": "u6",
+      "lessonId": "math-u6-l3",
+      "page": 168,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "إذا كان f(x)=x³، فما f′(2)؟",
+      "options": [
+        {
+          "text": "6",
+          "why_wrong": "حسبت 3×2 بدل 3×2²."
+        },
+        {
+          "text": "3",
+          "why_wrong": "هذا الأس فقط."
+        },
+        {
+          "text": "12"
+        },
+        {
+          "text": "8",
+          "why_wrong": "هذا f(2) لا المشتقة."
+        }
+      ],
+      "answer": 2,
+      "explain": "f′(x)=3x²، إذن f′(2)=12."
+    },
+    {
+      "id": "qm-u6-04",
+      "unitId": "u6",
+      "lessonId": "math-u6-l4",
+      "page": 174,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "ما مشتقة x² sinx باستخدام قاعدة الجداء؟",
+      "options": [
+        {
+          "text": "2x sinx فقط",
+          "why_wrong": "نسيت مشتقة العامل الثاني."
+        },
+        {
+          "text": "2x sinx + x² cosx"
+        },
+        {
+          "text": "2x cosx",
+          "why_wrong": "حذفت حداً من قاعدة الجداء."
+        },
+        {
+          "text": "x² cosx فقط",
+          "why_wrong": "نسيت مشتقة العامل الأول."
+        }
+      ],
+      "answer": 1,
+      "explain": "(uv)′=u′v+uv′."
+    },
+    {
+      "id": "qm-u6-05",
+      "unitId": "u6",
+      "lessonId": "math-u6-l5",
+      "page": 179,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "ما مشتقة (3x+1)⁴؟",
+      "options": [
+        {
+          "text": "12(3x+1)³"
+        },
+        {
+          "text": "4(3x+1)³",
+          "why_wrong": "نسيت مشتقة الداخل 3."
+        },
+        {
+          "text": "3(3x+1)⁴",
+          "why_wrong": "لم تنقص الأس."
+        },
+        {
+          "text": "(3x+1)³",
+          "why_wrong": "حذفت العاملين 4 و 3."
+        }
+      ],
+      "answer": 0,
+      "explain": "قاعدة السلسلة: 4(3x+1)³×3."
+    },
+    {
+      "id": "qm-u6-06",
+      "unitId": "u6",
+      "lessonId": "math-u6-l6",
+      "page": 184,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "ما مشتقة 1/x؟",
+      "options": [
+        {
+          "text": "1/x²",
+          "why_wrong": "أخطأت في الإشارة."
+        },
+        {
+          "text": "−1/x",
+          "why_wrong": "لم تطبق قاعدة القوة بشكل صحيح."
+        },
+        {
+          "text": "ln x",
+          "why_wrong": "هذا تكامل 1/x."
+        },
+        {
+          "text": "−1/x²"
+        }
+      ],
+      "answer": 3,
+      "explain": "1/x = x⁻¹، فمشتقتها −x⁻²."
+    },
+    {
+      "id": "qm-u6-07",
+      "unitId": "u6",
+      "lessonId": "math-u6-l7",
+      "page": 193,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "ما مشتقة √x؟",
+      "options": [
+        {
+          "text": "2√x",
+          "why_wrong": "هذا تكامل تقريبي خاطئ."
+        },
+        {
+          "text": "√x/2",
+          "why_wrong": "ليست الصيغة الصحيحة."
+        },
+        {
+          "text": "1/(2√x)"
+        },
+        {
+          "text": "1/√x",
+          "why_wrong": "نسيت العامل 2."
+        }
+      ],
+      "answer": 2,
+      "explain": "√x = x^(1/2)، فالمشتقة (1/2)x^(−1/2)."
+    },
+    {
+      "id": "qm-u6-08",
+      "unitId": "u6",
+      "lessonId": "math-u6-l8",
+      "page": 207,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "ما ميل مماس f(x)=x² عند x=3؟",
+      "options": [
+        {
+          "text": "2",
+          "why_wrong": "هذا الأس."
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "3",
+          "why_wrong": "هذا موضع النقطة لا الميل."
+        },
+        {
+          "text": "9",
+          "why_wrong": "هذا قيمة الدالة."
+        }
+      ],
+      "answer": 1,
+      "explain": "f′(x)=2x، إذن f′(3)=6."
+    },
+    {
+      "id": "qm-u6-09",
+      "unitId": "u6",
+      "lessonId": "math-u6-l1",
+      "page": 156,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "ما النقطة الحرجة لـ f(x)=x²−6x+1؟",
+      "options": [
+        {
+          "text": "x = 3"
+        },
+        {
+          "text": "x = 6",
+          "why_wrong": "حللت المعادلة خطأً."
+        },
+        {
+          "text": "x = 1",
+          "why_wrong": "هذا الثابت."
+        },
+        {
+          "text": "x = −3",
+          "why_wrong": "أخطأت في إشارة b."
+        }
+      ],
+      "answer": 0,
+      "explain": "f′(x)=2x−6=0، إذن x=3."
+    },
+    {
+      "id": "qm-u6-10",
+      "unitId": "u6",
+      "lessonId": "math-u6-l2",
+      "page": 163,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "ماذا يعني f″(x)>0 عند نقطة حرجة؟",
+      "options": [
+        {
+          "text": "قيمة كبرى محلية",
+          "why_wrong": "التقعر للأعلى يعطي صغرى."
+        },
+        {
+          "text": "نقطة انعطاف دائماً",
+          "why_wrong": "تحتاج تغيّر إشارة المشتقة الثانية."
+        },
+        {
+          "text": "المشتقة الأولى معدومة دائماً",
+          "why_wrong": "ليس شرطاً كافياً."
+        },
+        {
+          "text": "قيمة صغرى محلية"
+        }
+      ],
+      "answer": 3,
+      "explain": "اختبار المشتقة الثانية: f″>0 يعطي قيمة صغرى."
+    },
+    {
+      "id": "qm-u6-11",
+      "unitId": "u6",
+      "lessonId": "math-u6-l3",
+      "page": 166,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "للدالة f(x)=x² على [1،4]، ما c في نظرية القيمة المتوسطة؟",
+      "options": [
+        {
+          "text": "3",
+          "why_wrong": "ليس داخل الحل الصحيح."
+        },
+        {
+          "text": "5",
+          "why_wrong": "هذا ميل القطرة لا c."
+        },
+        {
+          "text": "2.5"
+        },
+        {
+          "text": "2",
+          "why_wrong": "ميل القطرة 5، و2c=5."
+        }
+      ],
+      "answer": 2,
+      "explain": "(16−1)/(4−1)=5، و f′(c)=2c=5، إذن c=2.5."
+    },
+    {
+      "id": "qm-u6-12",
+      "unitId": "u6",
+      "lessonId": "math-u6-l4",
+      "page": 174,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "ما مشتقة 5x³ − 2x؟",
+      "options": [
+        {
+          "text": "15x² + 2",
+          "why_wrong": "أخطأت في إشارة مشتقة −2x."
+        },
+        {
+          "text": "15x² − 2"
+        },
+        {
+          "text": "15x²",
+          "why_wrong": "نسيت مشتقة −2x."
+        },
+        {
+          "text": "5x³ − 2",
+          "why_wrong": "لم تشتق الحد الأول."
+        }
+      ],
+      "answer": 1,
+      "explain": "نشتق كل حد على حدة."
+    },
+    {
+      "id": "qm-u6-13",
+      "unitId": "u6",
+      "lessonId": "math-u6-l5",
+      "page": 179,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما مشتقة (x+2)²؟",
+      "options": [
+        {
+          "text": "2(x+2)"
+        },
+        {
+          "text": "2x + 2",
+          "why_wrong": "التوسيع يعطي x²+4x+4، ومشتقته 2x+4."
+        },
+        {
+          "text": "(x+2)",
+          "why_wrong": "نسيت ضرب الأس."
+        },
+        {
+          "text": "2",
+          "why_wrong": "هذا الأس فقط."
+        }
+      ],
+      "answer": 0,
+      "explain": "قاعدة السلسلة تعطي 2(x+2)×1."
+    },
+    {
+      "id": "qm-u6-14",
+      "unitId": "u6",
+      "lessonId": "math-u6-l6",
+      "page": 184,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ماذا تمثل مشتقة الموضع بالنسبة للزمن؟",
+      "options": [
+        {
+          "text": "التكامل",
+          "why_wrong": "التكامل يعطي الموضع من السرعة."
+        },
+        {
+          "text": "التسارع",
+          "why_wrong": "التسارع مشتقة السرعة."
+        },
+        {
+          "text": "الزمن",
+          "why_wrong": "الزمن هو المتغير المستقل."
+        },
+        {
+          "text": "السرعة"
+        }
+      ],
+      "answer": 3,
+      "explain": "v(t)=ds/dt."
+    },
+    {
+      "id": "qm-u6-15",
+      "unitId": "u6",
+      "lessonId": "math-u6-l7",
+      "page": 188,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما مماس f(x)=x² عند x=1؟",
+      "options": [
+        {
+          "text": "y − 1 = x − 1",
+          "why_wrong": "الميل يجب أن يكون 2."
+        },
+        {
+          "text": "y = x²",
+          "why_wrong": "هذا المنحنى نفسه."
+        },
+        {
+          "text": "y − 1 = 2(x − 1)"
+        },
+        {
+          "text": "y = 2x",
+          "why_wrong": "هذا y=2x، لا يمر بنقطة (1،1)."
+        }
+      ],
+      "answer": 2,
+      "explain": "الميل f′(1)=2، ويمر بـ (1،1)."
+    }
+  ],
+  "quiz-math-u7": [
+    {
+      "id": "qm-u7-01",
+      "unitId": "u7",
+      "lessonId": "math-u7-l1",
+      "page": 210,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما ∫x³dx؟",
+      "options": [
+        {
+          "text": "x⁴/4 + C"
+        },
+        {
+          "text": "3x² + C",
+          "why_wrong": "هذه مشتقة x³ لا تكاملها."
+        },
+        {
+          "text": "x⁴ + C",
+          "why_wrong": "نسيت القسمة على الأس الجديد."
+        },
+        {
+          "text": "x⁴/3 + C",
+          "why_wrong": "قسمت على الأس القديم."
+        }
+      ],
+      "answer": 0,
+      "explain": "∫xⁿdx=xⁿ⁺¹/(n+1)+C."
+    },
+    {
+      "id": "qm-u7-02",
+      "unitId": "u7",
+      "lessonId": "math-u7-l2",
+      "page": 223,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما ∫5dx؟",
+      "options": [
+        {
+          "text": "5 + C",
+          "why_wrong": "تكامل الثابت يعطي الثابت مضروباً في x."
+        },
+        {
+          "text": "x⁵/5 + C",
+          "why_wrong": "خلطت بين x⁵ والثابت 5."
+        },
+        {
+          "text": "0",
+          "why_wrong": "مشتقة الثابت صفر، لا تكامله."
+        },
+        {
+          "text": "5x + C"
+        }
+      ],
+      "answer": 3,
+      "explain": "∫k dx = kx + C."
+    },
+    {
+      "id": "qm-u7-03",
+      "unitId": "u7",
+      "lessonId": "math-u7-l3",
+      "page": 237,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "ما ∫(2x+1)dx؟",
+      "options": [
+        {
+          "text": "2x² + x + C",
+          "why_wrong": "∫2x = x² لا 2x²."
+        },
+        {
+          "text": "x² + 1 + C",
+          "why_wrong": "∫1 = x وليس 1."
+        },
+        {
+          "text": "x² + x + C"
+        },
+        {
+          "text": "x² + C",
+          "why_wrong": "نسيت تكامل الثابت 1."
+        }
+      ],
+      "answer": 2,
+      "explain": "نكامل كل حد على حدة."
+    },
+    {
+      "id": "qm-u7-04",
+      "unitId": "u7",
+      "lessonId": "math-u7-l4",
+      "page": 243,
+      "difficulty": "easy",
+      "skillId": "application",
+      "q": "ما ∫₁³ x²dx؟",
+      "options": [
+        {
+          "text": "8/3",
+          "why_wrong": "حسبت 3³−1 خطأً."
+        },
+        {
+          "text": "26/3"
+        },
+        {
+          "text": "9",
+          "why_wrong": "هذا 3²، لا التكامل."
+        },
+        {
+          "text": "26",
+          "why_wrong": "نسيت القسمة على 3."
+        }
+      ],
+      "answer": 1,
+      "explain": "[x³/3]₁³=(27−1)/3=26/3."
+    },
+    {
+      "id": "qm-u7-05",
+      "unitId": "u7",
+      "lessonId": "math-u7-l5",
+      "page": 244,
+      "difficulty": "medium",
+      "skillId": "recall",
+      "q": "ما ∫₀² 2xdx؟",
+      "options": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "2",
+          "why_wrong": "هذا حاصل الضرب 2×1."
+        },
+        {
+          "text": "8",
+          "why_wrong": "حسبت 2³/1."
+        },
+        {
+          "text": "1",
+          "why_wrong": "نسيت الحدود."
+        }
+      ],
+      "answer": 0,
+      "explain": "[x²]₀²=4."
+    },
+    {
+      "id": "qm-u7-06",
+      "unitId": "u7",
+      "lessonId": "math-u7-l6",
+      "page": 249,
+      "difficulty": "hard",
+      "skillId": "calculation",
+      "q": "ما نص مبرهنة التحليل الأساسية للتكامل المحدد؟",
+      "options": [
+        {
+          "text": "F(a) − F(b)",
+          "why_wrong": "عكست الإشارة."
+        },
+        {
+          "text": "F(a) + F(b)",
+          "why_wrong": "ال طرح هو الصحيح."
+        },
+        {
+          "text": "f(b) − f(a)",
+          "why_wrong": "نستخدم المضاد F لا الدالة f."
+        },
+        {
+          "text": "∫ₐᵇf(x)dx = F(b) − F(a)"
+        }
+      ],
+      "answer": 3,
+      "explain": "التكامل المحدد = الفرق بين قيم المضاد عند الحدين."
+    },
+    {
+      "id": "qm-u7-07",
+      "unitId": "u7",
+      "lessonId": "math-u7-l7",
+      "page": 253,
+      "difficulty": "easy",
+      "skillId": "analysis",
+      "q": "لماذا لا يظهر ثابت التكامل C في التكامل المحدد؟",
+      "options": [
+        {
+          "text": "لأن التكامل المحدد لا يملك مضاداً",
+          "why_wrong": "له مضاد، لكن الطرح يُلغي C."
+        },
+        {
+          "text": "لأن الحدود تجعله 1",
+          "why_wrong": "لا علاقة لهذا."
+        },
+        {
+          "text": "لأنه يُلغى عند الطرح"
+        },
+        {
+          "text": "لأنه يساوي صفراً دائماً",
+          "why_wrong": "C اختياري وليس صفراً بالضرورة."
+        }
+      ],
+      "answer": 2,
+      "explain": "(F(b)+C)−(F(a)+C)=F(b)−F(a)."
+    },
+    {
+      "id": "qm-u7-08",
+      "unitId": "u7",
+      "lessonId": "math-u7-l1",
+      "page": 217,
+      "difficulty": "medium",
+      "skillId": "application",
+      "q": "ما المساحة تحت y=x من 0 إلى 2؟",
+      "options": [
+        {
+          "text": "8",
+          "why_wrong": "حسبت تكامل 2x."
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "4",
+          "why_wrong": "هذا مربع الحد الأعلى."
+        },
+        {
+          "text": "1",
+          "why_wrong": "هذا نصف الحد الأعلى فقط."
+        }
+      ],
+      "answer": 1,
+      "explain": "∫₀²x dx=[x²/2]₀²=2."
+    },
+    {
+      "id": "qm-u7-09",
+      "unitId": "u7",
+      "lessonId": "math-u7-l2",
+      "page": 230,
+      "difficulty": "hard",
+      "skillId": "recall",
+      "q": "ما ∫₀¹ x²dx؟",
+      "options": [
+        {
+          "text": "1/3"
+        },
+        {
+          "text": "1",
+          "why_wrong": "نسيت القسمة على 3."
+        },
+        {
+          "text": "3",
+          "why_wrong": "عكست القسمة."
+        },
+        {
+          "text": "2/3",
+          "why_wrong": "حسبت حداً آخر."
+        }
+      ],
+      "answer": 0,
+      "explain": "[x³/3]₀¹=1/3."
+    },
+    {
+      "id": "qm-u7-10",
+      "unitId": "u7",
+      "lessonId": "math-u7-l3",
+      "page": 239,
+      "difficulty": "easy",
+      "skillId": "calculation",
+      "q": "ما ∫(x²+3x)dx؟",
+      "options": [
+        {
+          "text": "x³/3 + 3x² + C",
+          "why_wrong": "∫3x = 3x²/2."
+        },
+        {
+          "text": "x³ + 3x²/2 + C",
+          "why_wrong": "∫x² = x³/3."
+        },
+        {
+          "text": "2x + 3 + C",
+          "why_wrong": "هذا لا علاقة له بالتكامل."
+        },
+        {
+          "text": "x³/3 + 3x²/2 + C"
+        }
+      ],
+      "answer": 3,
+      "explain": "نطبق خطية التكامل وقاعدة القوة."
+    },
+    {
+      "id": "qm-u7-11",
+      "unitId": "u7",
+      "lessonId": "math-u7-l4",
+      "page": 242,
+      "difficulty": "medium",
+      "skillId": "analysis",
+      "q": "ما صيغة حجم مجسم الدوران حول محور x؟",
+      "options": [
+        {
+          "text": "V = π∫ₐᵇf(x)dx",
+          "why_wrong": "يجب تربيع f(x)."
+        },
+        {
+          "text": "V = 2π∫ₐᵇf(x)dx",
+          "why_wrong": "هذه صيغة أخرى غير صحيحة هنا."
+        },
+        {
+          "text": "V = π∫ₐᵇ[f(x)]²dx"
+        },
+        {
+          "text": "V = ∫ₐᵇf(x)dx",
+          "why_wrong": "ينقص مربع نصف القطر وπ."
+        }
+      ],
+      "answer": 2,
+      "explain": "كل قرص حجمه π[f(x)]²dx."
+    },
+    {
+      "id": "qm-u7-12",
+      "unitId": "u7",
+      "lessonId": "math-u7-l5",
+      "page": 247,
+      "difficulty": "hard",
+      "skillId": "application",
+      "q": "ما حجم دوران y=x حول محور x من 0 إلى 1؟",
+      "options": [
+        {
+          "text": "3π",
+          "why_wrong": "عكست القسمة."
+        },
+        {
+          "text": "π/3"
+        },
+        {
+          "text": "π",
+          "why_wrong": "نسيت التكامل الصحيح."
+        },
+        {
+          "text": "π/2",
+          "why_wrong": "حسبت ∫x بدل ∫x²."
+        }
+      ],
+      "answer": 1,
+      "explain": "π∫₀¹x²dx=π/3."
+    },
+    {
+      "id": "qm-u7-13",
+      "unitId": "u7",
+      "lessonId": "math-u7-l6",
+      "page": 248,
+      "difficulty": "easy",
+      "skillId": "recall",
+      "q": "ما قيمة ∫ₐᵇf(x)dx + ∫ᵇₐf(x)dx؟",
+      "options": [
+        {
+          "text": "0"
+        },
+        {
+          "text": "2∫ₐᵇf(x)dx",
+          "why_wrong": "الحدود المعكوسة تعطي الإشارة المعاكسة."
+        },
+        {
+          "text": "F(a)",
+          "why_wrong": "ليس طرفاً واحداً."
+        },
+        {
+          "text": "غير معرفة",
+          "why_wrong": "العلاقة معرفة."
+        }
+      ],
+      "answer": 0,
+      "explain": "تبديل الحدود يغير إشارة التكامل."
+    },
+    {
+      "id": "qm-u7-14",
+      "unitId": "u7",
+      "lessonId": "math-u7-l7",
+      "page": 255,
+      "difficulty": "medium",
+      "skillId": "calculation",
+      "q": "ما المساحة بين f(x)=2 و g(x)=x/2 من 0 إلى 2؟",
+      "options": [
+        {
+          "text": "2",
+          "why_wrong": "حسبت مستطيلاً فقط."
+        },
+        {
+          "text": "4",
+          "why_wrong": "حسبت f(2)×2 دون طرح المثلث."
+        },
+        {
+          "text": "1",
+          "why_wrong": "هذا نصف المساحة."
+        },
+        {
+          "text": "3"
+        }
+      ],
+      "answer": 3,
+      "explain": "∫₀²(2−x/2)dx=3."
+    },
+    {
+      "id": "qm-u7-15",
+      "unitId": "u7",
+      "lessonId": "math-u7-l1",
+      "page": 212,
+      "difficulty": "hard",
+      "skillId": "analysis",
+      "q": "إذا كانت f فردية على [−a،a]، فما ∫₋ₐᵃf(x)dx؟",
+      "options": [
+        {
+          "text": "مساحة موجبة دائماً",
+          "why_wrong": "السالب والموجب يلغيان."
+        },
+        {
+          "text": "يعتمد على a",
+          "why_wrong": "النتيجة صفر لأي a."
+        },
+        {
+          "text": "0"
+        },
+        {
+          "text": "2∫₀ᵃf(x)dx",
+          "why_wrong": "هذه صحيحة للدوال الزوجية."
+        }
+      ],
+      "answer": 2,
+      "explain": "تكامل الدالة الفردية على فترة متماثلة يساوي صفراً."
+    }
+  ]
+}

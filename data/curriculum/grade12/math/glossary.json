@@ -1,0 +1,233 @@
+{
+  "v-complex": {
+    "id": "v-complex",
+    "term": "العدد المركب",
+    "definition": "عدد على الصورة a + bi حيث a و b حقيقيان و i² = −1.",
+    "unit_id": "u1",
+    "page": 7
+  },
+  "v-imaginary": {
+    "id": "v-imaginary",
+    "term": "الوحدة التخيلية",
+    "definition": "العدد i الذي يحقق i² = −1.",
+    "unit_id": "u1",
+    "page": 7
+  },
+  "v-argand": {
+    "id": "v-argand",
+    "term": "مستوى أرغاند",
+    "definition": "مستوى إحداثيات يمثل فيه العدد المركب a + bi بالنقطة (a، b).",
+    "unit_id": "u1",
+    "page": 16
+  },
+  "v-modulus": {
+    "id": "v-modulus",
+    "term": "القيمة المطلقة",
+    "definition": "طول متجه العدد المركب من مبدأ الإحداثيات: |z| = √(a²+b²).",
+    "unit_id": "u1",
+    "page": 19
+  },
+  "v-argument": {
+    "id": "v-argument",
+    "term": "سعة العدد المركب",
+    "definition": "الزاوية بين متجه العدد المركب والمحور الحقيقي الموجب.",
+    "unit_id": "u1",
+    "page": 23
+  },
+  "v-polar": {
+    "id": "v-polar",
+    "term": "الصيغة القطبية",
+    "definition": "كتابة العدد المركب على الصورة r(cosθ + i sinθ).",
+    "unit_id": "u1",
+    "page": 33
+  },
+  "v-demoivre": {
+    "id": "v-demoivre",
+    "term": "مبرهنة دي موافر",
+    "definition": "قاعدة لرفع الأعداد المركبة المكتوبة بالصيغة القطبية إلى قوة n.",
+    "unit_id": "u2",
+    "page": 45
+  },
+  "v-root": {
+    "id": "v-root",
+    "term": "الجذر النوني",
+    "definition": "أي عدد مركب w يحقق wⁿ = z.",
+    "unit_id": "u2",
+    "page": 49
+  },
+  "v-binomial": {
+    "id": "v-binomial",
+    "term": "التوسعة ذات الحدين",
+    "definition": "صيغة لتوسيع (a+b)ⁿ باستخدام المعاملات C(n,k).",
+    "unit_id": "u2",
+    "page": 55
+  },
+  "v-conic": {
+    "id": "v-conic",
+    "term": "القطع المخروطي",
+    "definition": "منحنى ينشأ من تقاطع مستوى مع مخروط دائري، أو بمجموع/فرق/nسبة بعدين ثابتة.",
+    "unit_id": "u3",
+    "page": 104
+  },
+  "v-focus": {
+    "id": "v-focus",
+    "term": "البؤرة",
+    "definition": "نقطة ثابتة تستخدم في تعريف القطع المخروطي.",
+    "unit_id": "u3",
+    "page": 104
+  },
+  "v-directrix": {
+    "id": "v-directrix",
+    "term": "الدليل",
+    "definition": "مستقيم ثابت يستخدم في تعريف القطع المخروطي.",
+    "unit_id": "u3",
+    "page": 104
+  },
+  "v-eccentricity": {
+    "id": "v-eccentricity",
+    "term": "الانحراف",
+    "definition": "النسبة e = PF/PD، وتحدد نوع القطع المخروطي.",
+    "unit_id": "u3",
+    "page": 104
+  },
+  "v-ellipse": {
+    "id": "v-ellipse",
+    "term": "القطع الناقص",
+    "definition": "مجموع بعدي أي نقطة فيه عن بؤرتين ثابت.",
+    "unit_id": "u3",
+    "page": 110
+  },
+  "v-hyperbola": {
+    "id": "v-hyperbola",
+    "term": "القطع الزائد",
+    "definition": "الفرق المطلق لبعدي أي نقطة فيه عن بؤرتين ثابت.",
+    "unit_id": "u3",
+    "page": 118
+  },
+  "v-parabola": {
+    "id": "v-parabola",
+    "term": "القطع المكافئ",
+    "definition": "مجموعة نقاط متساوية البعد عن بؤرة ودليل ثابتين.",
+    "unit_id": "u3",
+    "page": 124
+  },
+  "v-asymptote": {
+    "id": "v-asymptote",
+    "term": "الخط المقارب",
+    "definition": "خط يقترب منه منحنى القطع الزائد دون أن يلمسه.",
+    "unit_id": "u3",
+    "page": 118
+  },
+  "v-plane": {
+    "id": "v-plane",
+    "term": "المستوى",
+    "definition": "مجموعة نقاط تحقق معادلة خطية Ax + By + Cz + D = 0 في الفراغ.",
+    "unit_id": "u4",
+    "page": 133
+  },
+  "v-normal": {
+    "id": "v-normal",
+    "term": "المتجه الطبيعي",
+    "definition": "متجه عمودي على المستوى ومعاملاته (A، B، C).",
+    "unit_id": "u4",
+    "page": 133
+  },
+  "v-space-diagonal": {
+    "id": "v-space-diagonal",
+    "term": "القطر الفراغي",
+    "definition": "القط الواصل بين رأسين متقابلين في مكعب وطوله a√3.",
+    "unit_id": "u4",
+    "page": 136
+  },
+  "v-dihedral": {
+    "id": "v-dihedral",
+    "term": "الزاوية ثنائية الوجه",
+    "definition": "الزاوية بين مستويين تقاس من متجهيهما الطبيعيين.",
+    "unit_id": "u4",
+    "page": 147
+  },
+  "v-probability": {
+    "id": "v-probability",
+    "term": "الاحتمال",
+    "definition": "مقياس حدوث حدث عشوائي بين 0 و 1.",
+    "unit_id": "u5",
+    "page": 74
+  },
+  "v-sample-space": {
+    "id": "v-sample-space",
+    "term": "فضاء العينة",
+    "definition": "مجموعة كل النتجات الممكنة للتجربة العشوائية.",
+    "unit_id": "u5",
+    "page": 74
+  },
+  "v-union": {
+    "id": "v-union",
+    "term": "اتحاد الحدثين",
+    "definition": "حدث يحدث إذا تحقق A أو B أو كلاهما.",
+    "unit_id": "u5",
+    "page": 79
+  },
+  "v-intersection": {
+    "id": "v-intersection",
+    "term": "تقاطع الحدثين",
+    "definition": "حدث يحدث إذا تحقق A و B معاً.",
+    "unit_id": "u5",
+    "page": 79
+  },
+  "v-conditional": {
+    "id": "v-conditional",
+    "term": "الاحتمال الشرطي",
+    "definition": "احتمال حدوث A بشرط حدوث B ويُكتب P(A|B)=P(A∩B)/P(B).",
+    "unit_id": "u5",
+    "page": 86
+  },
+  "v-independent": {
+    "id": "v-independent",
+    "term": "حدثان مستقلان",
+    "definition": "حدثان لا يؤثر أحدهما في احتمال الآخر، أي P(A|B)=P(A).",
+    "unit_id": "u5",
+    "page": 86
+  },
+  "v-derivative": {
+    "id": "v-derivative",
+    "term": "المشتقة",
+    "definition": "معدل التغير اللحظي للدالة وميل مماس منحناها.",
+    "unit_id": "u6",
+    "page": 154
+  },
+  "v-chain": {
+    "id": "v-chain",
+    "term": "قاعدة السلسلة",
+    "definition": "قاعدة اشتقاق الدوال المركبة: (f∘g)′=f′(g)g′.",
+    "unit_id": "u6",
+    "page": 166
+  },
+  "v-extremum": {
+    "id": "v-extremum",
+    "term": "القيمة القصوى",
+    "definition": "أكبر أو أصغر قيمة للدالة على فترة أو عند نقطة حرجة.",
+    "unit_id": "u6",
+    "page": 187
+  },
+  "v-integral": {
+    "id": "v-integral",
+    "term": "التكامل",
+    "definition": "عملية عكس الاشتقاق وتستخدم أيضاً لحساب المساحات والحجوم.",
+    "unit_id": "u7",
+    "page": 210
+  },
+  "v-definite": {
+    "id": "v-definite",
+    "term": "التكامل المحدد",
+    "definition": "تكامل بين حدين يعطي قيمة عددية F(b)−F(a).",
+    "unit_id": "u7",
+    "page": 235
+  },
+  "v-revolution": {
+    "id": "v-revolution",
+    "term": "مجسم الدوران",
+    "definition": "مجسم ناتج عن دوران منحنى حول محور، وحجمه π∫f²dx.",
+    "unit_id": "u7",
+    "page": 248
+  }
+}

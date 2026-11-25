@@ -1,0 +1,349 @@
+{
+  "diag-math-complex": {
+    "id": "diag-math-complex",
+    "lab_exp": "lab-math-complex",
+    "title": "مستوى أرغاند والعدد المركب",
+    "sim_key": "math_complex",
+    "formula": "z = a + bi، |z| = √(a²+b²)",
+    "slider_label": "زاوية العدد المركب:",
+    "slider_min": 0,
+    "slider_max": 360,
+    "slider_val": 45,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "real",
+        "name": "المحور الحقيقي",
+        "role": "يمثل الجزء الحقيقي a."
+      },
+      {
+        "id": "imag",
+        "name": "المحور التخيلي",
+        "role": "يمثل الجزء التخيلي b."
+      },
+      {
+        "id": "point",
+        "name": "النقطة z",
+        "role": "تتحرك بدلالة الزاوية، وطولها هو القيمة المطلقة."
+      }
+    ]
+  },
+  "diag-math-cone": {
+    "id": "diag-math-cone",
+    "lab_exp": "lab-math-cone",
+    "title": "القطوع الناتجة من قطع المخروط",
+    "sim_key": "math_cone_sections",
+    "formula": "e = PF / PD",
+    "slider_label": "ميل مستوى القطع:",
+    "slider_min": 0,
+    "slider_max": 90,
+    "slider_val": 35,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "cone",
+        "name": "المخروط",
+        "role": "السطح الذي يُقطع بمستوى."
+      },
+      {
+        "id": "plane",
+        "name": "مستوى القطع",
+        "role": "ميله يحدد نوع القطع."
+      },
+      {
+        "id": "curve",
+        "name": "منحنى القطع",
+        "role": "ناقص أو مكافئ أو زائد حسب زاوية المستوى."
+      }
+    ]
+  },
+  "diag-math-ellipse": {
+    "id": "diag-math-ellipse",
+    "lab_exp": "lab-math-ellipse",
+    "title": "القطع الناقص وبؤرتاه",
+    "sim_key": "math_ellipse",
+    "formula": "x²/a² + y²/b² = 1",
+    "slider_label": "الانحراف e:",
+    "slider_min": 10,
+    "slider_max": 90,
+    "slider_val": 55,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "f1",
+        "name": "البؤرة الأولى",
+        "role": "أحد نقطتي تعريف القطع الناقص."
+      },
+      {
+        "id": "f2",
+        "name": "البؤرة الثانية",
+        "role": "مجموع البعدين عن البؤرتين يساوي 2a."
+      },
+      {
+        "id": "curve",
+        "name": "المنحنى",
+        "role": "يصبح دائرة عندما يقترب الانحراف من الصفر."
+      }
+    ]
+  },
+  "diag-math-hyperbola": {
+    "id": "diag-math-hyperbola",
+    "lab_exp": "lab-math-hyperbola",
+    "title": "القطع الزائد وخطاه المقاربان",
+    "sim_key": "math_hyperbola",
+    "formula": "x²/a² − y²/b² = 1",
+    "slider_label": "المعلمة a:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "branches",
+        "name": "الفرعان",
+        "role": "ينفصلان على جانبي المحورين."
+      },
+      {
+        "id": "asymptote",
+        "name": "الخطان المقاربان",
+        "role": "يقترب منهما المنحنى دون أن يلمسهما."
+      }
+    ]
+  },
+  "diag-math-parabola": {
+    "id": "diag-math-parabola",
+    "lab_exp": "lab-math-parabola",
+    "title": "القطع المكافئ والبؤرة والدليل",
+    "sim_key": "math_parabola",
+    "formula": "y² = 4px",
+    "slider_label": "المعلمة p:",
+    "slider_min": 1,
+    "slider_max": 6,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "focus",
+        "name": "البؤرة",
+        "role": "النقطة (p، 0)."
+      },
+      {
+        "id": "directrix",
+        "name": "الدليل",
+        "role": "المستقيم x = −p."
+      },
+      {
+        "id": "curve",
+        "name": "المنحنى",
+        "role": "كل نقطة عليه متساوية البعد عن البؤرة والدليل."
+      }
+    ]
+  },
+  "diag-math-space": {
+    "id": "diag-math-space",
+    "lab_exp": "lab-math-space",
+    "title": "القطر الفراغي للمكعب",
+    "sim_key": "math_3d_pythagoras",
+    "formula": "d = a√3",
+    "slider_label": "طول ضلع المكعب:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 3,
+    "slider_unit": " وحدة",
+    "components": [
+      {
+        "id": "cube",
+        "name": "المكعب",
+        "role": "نموذج ثلاثي الأبعاد يمكن دورانه."
+      },
+      {
+        "id": "diagonal",
+        "name": "القطر الفراغي",
+        "role": "يصل بين رأسين متقابلين وطوله a√3."
+      }
+    ]
+  },
+  "diag-math-line-plane": {
+    "id": "diag-math-line-plane",
+    "lab_exp": "lab-math-line-plane",
+    "title": "الزاوية بين مستقيم ومستوى",
+    "sim_key": "math_line_plane",
+    "formula": "sin θ = |u·n|/(|u||n|)",
+    "slider_label": "زاوية المستقيم:",
+    "slider_min": 0,
+    "slider_max": 90,
+    "slider_val": 35,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "plane",
+        "name": "المستوى",
+        "role": "سطح أفقي يمثل المعادلة Ax+By+Cz+D=0."
+      },
+      {
+        "id": "line",
+        "name": "المستقيم",
+        "role": "اتجاهه u يحدد الزاوية مع المستوى."
+      },
+      {
+        "id": "normal",
+        "name": "المتجه الطبيعي",
+        "role": "العمود على المستوى."
+      }
+    ]
+  },
+  "diag-math-dihedral": {
+    "id": "diag-math-dihedral",
+    "lab_exp": "lab-math-dihedral",
+    "title": "الزاوية بين مستويين",
+    "sim_key": "math_dihedral",
+    "formula": "cos φ = |n₁·n₂|/(|n₁||n₂|)",
+    "slider_label": "زاوية المستوى الثاني:",
+    "slider_min": 0,
+    "slider_max": 120,
+    "slider_val": 60,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "plane1",
+        "name": "المستوى الأول",
+        "role": "متجهه الطبيعي n₁."
+      },
+      {
+        "id": "plane2",
+        "name": "المستوى الثاني",
+        "role": "متجهه الطبيعي n₂."
+      },
+      {
+        "id": "edge",
+        "name": "خط التقاطع",
+        "role": "منه تُقاس الزاوية ثنائية الوجه."
+      }
+    ]
+  },
+  "diag-math-probability": {
+    "id": "diag-math-probability",
+    "lab_exp": "lab-math-probability",
+    "title": "فضاء العينة والاحتمالات",
+    "sim_key": "math_probability_space",
+    "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)",
+    "slider_label": "احتمال الحدث A:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 55,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "space",
+        "name": "فضاء العينة",
+        "role": "كل النتجات الممكنة."
+      },
+      {
+        "id": "eventA",
+        "name": "الحدث A",
+        "role": "مجموعة نتجات جزئية."
+      },
+      {
+        "id": "eventB",
+        "name": "الحدث B",
+        "role": "يتداخل مع A في بعض المسائل."
+      }
+    ]
+  },
+  "diag-math-derivative": {
+    "id": "diag-math-derivative",
+    "lab_exp": "lab-math-derivative",
+    "title": "مماس المنحنى والمشتقة",
+    "sim_key": "math_derivative",
+    "formula": "f′(x)=lim[f(x+h)−f(x)]/h",
+    "slider_label": "موضع نقطة المماس:",
+    "slider_min": 1,
+    "slider_max": 9,
+    "slider_val": 4,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "curve",
+        "name": "المنحنى",
+        "role": "الدالة f(x)."
+      },
+      {
+        "id": "tangent",
+        "name": "المماس",
+        "role": "ميله يساوي f′(x)."
+      }
+    ]
+  },
+  "diag-math-integral": {
+    "id": "diag-math-integral",
+    "lab_exp": "lab-math-integral",
+    "title": "التكامل والمساحة تحت المنحنى",
+    "sim_key": "math_integral",
+    "formula": "∫ₐᵇf(x)dx=F(b)−F(a)",
+    "slider_label": "حد التكامل العلوي:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 6,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "area",
+        "name": "المساحة",
+        "role": "تتراكم تحت المنحنى."
+      },
+      {
+        "id": "curve",
+        "name": "الدالة",
+        "role": "حدود التكامل تحدد الفترة."
+      }
+    ]
+  },
+  "diag-math-area": {
+    "id": "diag-math-area",
+    "lab_exp": "lab-math-area",
+    "title": "المساحة بين منحنيين",
+    "sim_key": "math_area_between",
+    "formula": "A=∫ₐᵇ|f(x)−g(x)|dx",
+    "slider_label": "الحد العلوي:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 5,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "upper",
+        "name": "المنحنى العلوي",
+        "role": "f(x)."
+      },
+      {
+        "id": "lower",
+        "name": "المنحنى السفلي",
+        "role": "g(x)."
+      }
+    ]
+  },
+  "diag-math-revolution": {
+    "id": "diag-math-revolution",
+    "lab_exp": "lab-math-revolution",
+    "title": "حجم مجسم الدوران",
+    "sim_key": "math_revolution",
+    "formula": "V=π∫ₐᵇ[f(x)]²dx",
+    "slider_label": "عدد الأقراص:",
+    "slider_min": 4,
+    "slider_max": 20,
+    "slider_val": 10,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "discs",
+        "name": "الأقراص",
+        "role": "نصف القطر f(x) والسمك dx."
+      },
+      {
+        "id": "axis",
+        "name": "محور الدوران",
+        "role": "محور x غالباً."
+      }
+    ]
+  }
+}

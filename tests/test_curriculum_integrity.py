@@ -192,5 +192,195 @@ class TestCurriculumIntegrity(unittest.TestCase):
                 f"Sync mismatch for {fname}: source size {s_size} != asset size {d_size}"
             )
 
+    def test_07_math_assessments_coverage(self):
+        """Verify Math has 15 questions per unit with complete Schema v2.0 metadata."""
+        base = os.path.join(ROOT_DIR, "data/curriculum/grade12/math")
+        with open(os.path.join(base, "assessments.json"), "r", encoding="utf-8") as f:
+            assessments = json.load(f)
+        with open(os.path.join(base, "units.json"), "r", encoding="utf-8") as f:
+            units = json.load(f)
+        with open(os.path.join(base, "lessons.json"), "r", encoding="utf-8") as f:
+            lessons = json.load(f)
+
+        unit_ids = {u["id"] for u in units}
+        lesson_ids = {l["id"] for l in lessons}
+        unit_by_id = {u["id"]: u for u in units}
+
+        self.assertEqual(len(units), 7, "Math must cover all 7 units")
+        self.assertEqual(set(assessments), {f"quiz-math-{uid}" for uid in unit_ids})
+
+        seen_ids = set()
+        for quiz_id, questions in assessments.items():
+            uid = quiz_id.replace("quiz-math-", "")
+            self.assertEqual(len(questions), 15, f"{quiz_id} must have exactly 15 questions")
+            unit = unit_by_id[uid]
+
+            for q in questions:
+                qid = q.get("id")
+                self.assertIsNotNone(qid, "Math question missing id")
+                self.assertNotIn(qid, seen_ids, f"Duplicate Math question ID: {qid}")
+                seen_ids.add(qid)
+
+                self.assertEqual(q.get("unitId"), uid, f"{qid} has wrong unitId")
+                self.assertIn(q.get("lessonId"), lesson_ids, f"{qid} has invalid lessonId")
+                self.assertIsInstance(q.get("page"), int, f"{qid} missing integer page")
+                self.assertGreaterEqual(q["page"], unit["page_start"], f"{qid} page before unit range")
+                self.assertLessEqual(q["page"], unit["page_end"], f"{qid} page after unit range")
+                self.assertIn(q.get("difficulty"), ["easy", "medium", "hard"], f"{qid} invalid difficulty")
+                self.assertIn(
+                    q.get("skillId"),
+                    ["recall", "analysis", "calculation", "application"],
+                    f"{qid} invalid skillId"
+                )
+
+                options = q.get("options", [])
+                self.assertGreaterEqual(len(options), 3, f"{qid} must have at least 3 options")
+                ans = q.get("answer")
+                self.assertIsInstance(ans, int, f"{qid} answer must be an integer index")
+                self.assertTrue(0 <= ans < len(options), f"{qid} answer index out of range")
+
+                for idx, opt in enumerate(options):
+                    self.assertTrue(opt.get("text"), f"{qid} option {idx} missing text")
+                    if idx != ans:
+                        self.assertTrue(
+                            opt.get("why_wrong"),
+                            f"{qid} wrong option {idx} must have 'why_wrong'"
+                        )
+
+                self.assertTrue(q.get("explain"), f"{qid} missing explanation")
+
+        self.assertEqual(len(seen_ids), 105, "Math question bank must contain 105 unique questions")
+
+    def test_08_math_hotspots_quality(self):
+        """Verify Math hotspots cover all 5 interaction types with valid bounds and refs."""
+        base = os.path.join(ROOT_DIR, "data/curriculum/grade12/math")
+        names = ["explanations", "solution_steps", "activities", "diagrams", "assessments"]
+        refs = {}
+        for name in names:
+            with open(os.path.join(base, f"{name}.json"), "r", encoding="utf-8") as f:
+                refs[name] = json.load(f)
+        with open(os.path.join(base, "interactions.json"), "r", encoding="utf-8") as f:
+            interactions = json.load(f)
+
+        required_types = {
+            "explainable_text",
+            "step_by_step_equation",
+            "activity",
+            "interactive_3d",
+            "assessment"
+        }
+        for page_id, spots in interactions.items():
+            self.assertTrue(spots, f"{page_id} has no hotspots")
+            types = {s["type"] for s in spots}
+            self.assertTrue(required_types.issubset(types), f"{page_id} missing interaction types")
+
+            for spot in spots:
+                bounds = spot.get("bounds", {})
+                x = bounds.get("x", 0)
+                y = bounds.get("y", 0)
+                w = bounds.get("w", 0)
+                h = bounds.get("h", 0)
+                self.assertTrue(0 <= x <= 1.0, f"{spot.get('id')} x bound out of [0, 1]")
+                self.assertTrue(0 <= y <= 1.0, f"{spot.get('id')} y bound out of [0, 1]")
+                self.assertTrue(0 < w <= 1.0, f"{spot.get('id')} invalid w bound")
+                self.assertTrue(0 < h <= 1.0, f"{spot.get('id')} invalid h bound")
+                self.assertLessEqual(x + w, 1.05, f"{spot.get('id')} exceeds page width")
+                self.assertLessEqual(y + h, 1.05, f"{spot.get('id')} exceeds page height")
+
+                ref_checks = [
+                    ("explanation_ref", refs["explanations"]),
+                    ("solution_ref", refs["solution_steps"]),
+                    ("activity_ref", refs["activities"]),
+                    ("diagram_ref", refs["diagrams"]),
+                    ("assessment_ref", refs["assessments"])
+                ]
+                for key, collection in ref_checks:
+                    if key in spot:
+                        self.assertIn(spot[key], collection, f"{spot.get('id')} invalid {key}")
+
+    def test_09_math_data_and_lab_integrity(self):
+        """Verify Math data bundle, page images, solutions, activities and geometry lab scenes."""
+        base = os.path.join(ROOT_DIR, "data/curriculum/grade12/math")
+        names = [
+            "manifest", "units", "pages", "workbook_pages", "lessons", "interactions",
+            "explanations", "diagrams", "activities", "assessments", "glossary",
+            "solution_steps", "geometry_lab"
+        ]
+        data = {}
+        for name in names:
+            with open(os.path.join(base, f"{name}.json"), "r", encoding="utf-8") as f:
+                data[name] = json.load(f)
+
+        with open(os.path.join(base, "data_bundle.js"), "r", encoding="utf-8") as f:
+            bundle_text = f.read()
+        bundle_payload = bundle_text.split("=", 1)[1].strip().rstrip(";").strip()
+        self.assertEqual(json.loads(bundle_payload), data, "Math data_bundle.js is out of sync")
+
+        self.assertEqual(len(data["pages"]), 250, "Math book must contain 250 rendered pages")
+        self.assertEqual(len(data["workbook_pages"]), 75, "Math workbook must contain 75 rendered pages")
+        self.assertEqual(data["manifest"]["schema_version"], "2.0.0")
+        self.assertEqual(data["manifest"]["edition"]["page_offset"], "book_page = pdf_page - 2")
+
+        for page in data["pages"] + data["workbook_pages"]:
+            self.assertTrue(
+                os.path.exists(os.path.join(ROOT_DIR, page["image"])),
+                f"Missing rendered page image: {page['image']}"
+            )
+        self.assertNotIn("http://", bundle_text)
+        self.assertNotIn("https://", bundle_text)
+
+        scene_ids = {scene["id"] for scene in data["geometry_lab"]["scenes"]}
+        self.assertEqual(len(scene_ids), 13, "Math geometry lab must contain 13 scenes")
+        for diagram in data["diagrams"].values():
+            self.assertIn(diagram["lab_exp"], scene_ids, f"Diagram {diagram['id']} has invalid lab_exp")
+
+        for scene in data["geometry_lab"]["scenes"]:
+            self.assertTrue(scene["formula"], f"Scene {scene['id']} missing formula")
+            self.assertTrue(scene["controls"], f"Scene {scene['id']} missing controls")
+            self.assertGreaterEqual(len(scene["steps"]), 3, f"Scene {scene['id']} needs 3 steps")
+            for control in scene["controls"]:
+                self.assertLessEqual(control["min"], control["default"])
+                self.assertLessEqual(control["default"], control["max"])
+
+        self.assertEqual(len(data["solution_steps"]), 22)
+        for sol_id, solution in data["solution_steps"].items():
+            self.assertTrue(solution["prompt"], f"Solution {sol_id} missing prompt")
+            self.assertTrue(solution["answer"], f"Solution {sol_id} missing answer")
+            self.assertGreaterEqual(len(solution["steps"]), 2, f"Solution {sol_id} needs steps")
+
+        self.assertEqual(len(data["activities"]), 25)
+        for act_id, activity in data["activities"].items():
+            self.assertTrue(activity["controls"], f"Activity {act_id} missing controls")
+            for control in activity["controls"]:
+                self.assertLessEqual(control["min"], control["default"])
+                self.assertLessEqual(control["default"], control["max"])
+
+    def test_10_math_html_and_android_assets(self):
+        """Verify Math HTML outputs are offline and mirrored with their data files."""
+        html_books = ["math-12th-book.html", "math-12th-lab.html"]
+        cdn_re = re.compile(r'<(?:script|link)[^>]*(?:src|href)=["\']https?://', re.IGNORECASE)
+
+        for bname in html_books:
+            bpath = os.path.join(ROOT_DIR, bname)
+            asset_path = os.path.join(ROOT_DIR, "thaker-android-src/assets", bname)
+            self.assertTrue(os.path.exists(bpath), f"Math HTML {bname} does not exist")
+            self.assertTrue(os.path.exists(asset_path), f"Math HTML {bname} was not mirrored")
+
+            with open(bpath, "r", encoding="utf-8") as f:
+                content = f.read()
+            self.assertEqual(cdn_re.findall(content), [], f"{bname} contains external CDN links")
+
+        src_dir = os.path.join(ROOT_DIR, "data/curriculum/grade12/math")
+        dst_dir = os.path.join(ROOT_DIR, "thaker-android-src/assets/data/curriculum/grade12/math")
+        files_to_check = ["manifest.json", "assessments.json", "interactions.json", "data_bundle.js"]
+        for fname in files_to_check:
+            self.assertTrue(os.path.exists(os.path.join(src_dir, fname)), f"Math source {fname} missing")
+            self.assertTrue(os.path.exists(os.path.join(dst_dir, fname)), f"Math asset {fname} missing")
+            self.assertEqual(
+                os.path.getsize(os.path.join(src_dir, fname)),
+                os.path.getsize(os.path.join(dst_dir, fname)),
+                f"Math sync mismatch for {fname}"
+            )
+
 if __name__ == "__main__":
     unittest.main()

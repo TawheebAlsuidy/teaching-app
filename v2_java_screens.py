@@ -232,7 +232,7 @@ public class MainActivity extends Activity {
             row2.setPadding(0, (int) (10 * dp), 0, 0);
             row2.addView(makeSubjectTile("الأحياء 3D", "منهج تفاعلي", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
             row2.addView(makeSpace(10));
-            row2.addView(makeSubjectTile("التاسع (العلوم)", "استعراض الإعدادية", R.drawable.ic_subj_science, R.drawable.card_white_rounded, "science", true));
+            row2.addView(makeSubjectTile("الرياضيات 3D", "250 صفحة + 13 مجسماً", R.drawable.ic_subj_math, R.drawable.card_white_rounded, "math12", true));
             homeSubjectsContainer.addView(row2);
         }
     }
@@ -259,6 +259,8 @@ public class MainActivity extends Activity {
         LinearLayout r3 = makeRow();
         r3.setPadding(0, (int) (10 * dp), 0, 0);
         r3.addView(makeSubjectTile("الأحياء 3D", "219 صفحة + معمل 18 تجربة", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
+        r3.addView(makeSpace(10));
+        r3.addView(makeSubjectTile("الرياضيات 3D", "250 صفحة + معمل 13 مجسماً", R.drawable.ic_subj_math, R.drawable.card_white_rounded, "math12", true));
         allSubjectsContainer.addView(r3);
     }
 
@@ -280,6 +282,8 @@ public class MainActivity extends Activity {
         addHtmlBookItem("🔬 معمل الفيزياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الفيزياء 1–9", "physics-12th-lab.html");
         addHtmlBookItem("🧬 الأحياء 12 التفاعلي (219 صفحة)", "الجهاز العصبي، الوراثة، DNA والتقانة الحيوية", "biology-12th-book.html");
         addHtmlBookItem("🧪 معمل الأحياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الأحياء 1–8", "biology-12th-lab.html");
+        addHtmlBookItem("📐 الرياضيات 12 التفاعلي (250 صفحة + حلول)", "الأعداد المركبة، القطوع، الهندسة الفضائية، الاحتمالات، المشتقات والتكامل", "math-12th-book.html");
+        addHtmlBookItem("🧊 معمل الرياضيات التفاعلي 3D (13 مجسماً)", "مستوى أرغاند، القطوع، المجسمات، الاحتمالات، المشتقات والتكامل", "math-12th-lab.html");
         addHtmlBookItem("⚗️ مختبر الكيمياء 3D (10 تجارب تفاعلية)", "معمل كيمياء ثلاثي الأبعاد مربوط مباشرة بكتاب الكيمياء", "chem-lab-book.html");
         addHtmlBookItem("🔬 المعمل التفاعلي 3D لعلوم التاسع", "13 درساً وتجربة علمية ثلاثية الأبعاد", "science-9th-book.html");
         addHtmlBookItem("📐 كتاب الرياضيات التفاعلي 3D (التاسع)", "نماذج هندسية تفاعلية للمبرهنات والدائرة", "math-9th-book.html");
@@ -623,6 +627,17 @@ public class SubjectActivity extends Activity {
                 ThakerStore.getBookPct(this, "sci_p2", 38), "148 صفحة تفاعلية", "أنشطة 3D وشروحات ذكية",
                 "📖 افتح الكتاب التفاعلي", "html", "thaker-interactive-book.html",
                 "📄 عرض الكتاب الرسمي PDF", "pdf:sci_p2");
+        } else if ("math12".equals(subjectKey)) {
+            tvTitle.setText("الرياضيات 3D");
+            tvMeta.setText("7 وحدات · 250 صفحة · 13 مجسماً تفاعلياً");
+            tvGradePill.setText("الثالث الثانوي");
+            ivIcon.setImageResource(R.drawable.ic_subj_math);
+            quizKey = "math_12";
+
+            addPartCard("الكتاب التفاعلي الشامل ومعمل الرياضيات 3D", "الأعداد المركبة، ذات الحدين، القطوع، الهندسة الفضائية، الاحتمالات، المشتقات والتكامل",
+                ThakerStore.getBookPct(this, "math_12", 20), "250 صفحة تفاعلية", "22 حلاً خطوة بخطوة + 13 مجسماً",
+                "📐 افتح كتاب الرياضيات التفاعلي", "html", "math-12th-book.html",
+                "🧊 افتح معمل الرياضيات 3D (13 مجسماً)", "math-12th-lab.html");
         } else if ("math".equals(subjectKey)) {
             tvTitle.setText("الرياضيات");
             tvMeta.setText("جزءان · 8 وحدات · جبر وهندسة ومثلثات");
@@ -1110,6 +1125,7 @@ public class SummaryActivity extends Activity {
     private String mapSummaryToQuiz(String s) {
         if ("math".equals(s) || "math_p1".equals(s)) return "math_p1";
         if ("math_p2".equals(s)) return "math_p2";
+        if ("math12".equals(s)) return "math_12";
         if ("physics".equals(s)) return "phys_12";
         if ("biology".equals(s)) return "bio_12";
         if ("chemistry".equals(s)) return "chem_12";
@@ -1140,6 +1156,29 @@ public class SummaryActivity extends Activity {
                 "📐 المتطابقة الأساسية", "جا² هـ + جتا² هـ = 1   |   ظا هـ = جا هـ / جتا هـ", "جا 30° = ½  |  جا 60° = √3/2  |  ظا 45° = 1", "ص 54",
                 "🧪 علاقة الزاويتين المتتامتين", "• جا(90° − هـ) = جتا هـ ، مثل: جا 30° = جتا 60° = ½.", "ص 60",
                 "⚠️ خطأ شائع", "التبديل بين المقابل والمجاور عند تغيير الزاوية الحادة داخل المثلث القائم."
+            ));
+        } else if ("math12".equals(subject)) {
+            tvTitle.setText("الرياضيات 3D · الثالث الثانوي");
+            groups.add(new SummaryGroup(
+                "الأعداد المركبة", "الوحدتان 1 و2: الأعداد المركبة ودي موافر والتوسعة ذات الحدين",
+                "💡 الشكل القطبي والقيمة المطلقة", "• z = a + bi = r(cosθ + i sinθ)\n• |z| = √(a²+b²) و arg(z) = θ.", "ص 7",
+                "📐 دي موافر والتوسعة", "zⁿ = rⁿ(cos nθ + i sin nθ)\n(a + bi)ⁿ = Σ C(n,k) aⁿ⁻ᵏ (bi)ᵏ", "تحوّل دي موافر القوى إلى ضرب في الزاوية، والتوسعة توزّع الحدود حسب معاملات ذات الحدين.", "ص 45",
+                "🧪 جمع الأعداد المركبة", "• تُجمع الأجزاء الحقيقية معاً والتخيلية معاً: (a+bi)+(c+di)=(a+c)+(b+d)i.", "ص 13",
+                "⚠️ خطأ شائع", "اعتبار i² = +1 — الصحيح i² = −1، ولذلك (3+4i)(3−4i)=25 لا −7."
+            ));
+            groups.add(new SummaryGroup(
+                "القطوع والهندسة الفضائية", "الوحدتان 3 و4: القطوع المخروطية والهندسة في فضاء ثلاثي الأبعاد",
+                "💡 معادلات القطوع", "• y² = 4px: بؤرتها (p,0) ودليلها x = −p.\n• x² = 4py: بؤرتها (0,p) ودليلها y = −p.", "ص 104",
+                "📐 القطع الناقص والزائد", "x²/a² + y²/b² = 1  |  x²/a² − y²/b² = 1\ne = c/a، وفي الزائد c² = a² + b².", "الفارق الجوهري: في الناقص e < 1 وفي الزائد e > 1.", "ص 113",
+                "🧪 قطر صندوق وعلاقة مستقيم بمستوى", "• قطر متوازي المستطيلات = √(ط² + ع² + ار²).", "ص 133",
+                "⚠️ خطأ شائع", "تطبيق علاقة e < 1 على القطع الزائد — الصحيح أن e > 1."
+            ));
+            groups.add(new SummaryGroup(
+                "الاحتمالات والتحليل", "الوحدات 5–7: الاحتمالات، المشتقات، التكامل",
+                "💡 قواعد الاحتمال", "• P(A∪B) = P(A) + P(B) − P(A∩B)\n• P(A|B) = P(A∩B) / P(B)، بشرط P(B) ≠ 0.", "ص 74",
+                "📐 المشتقة والتكامل", "f′(x) = limₕ→₀ [f(x+h)−f(x)]/h\n(xⁿ)′ = nxⁿ⁻¹  |  ∫xⁿdx = xⁿ⁺¹/(n+1) + C", "قاعدة التكامل تستثنى n = −1؛ ونتيجة التكامل المحدد F(b) − F(a).", "ص 154",
+                "🧪 حجم مجسم الدوران", "• V = π∫ₐᵇ [f(x)]² dx عند الدوران حول محور x.", "ص 210",
+                "⚠️ خطأ شائع", "نسيان ثابت التكامل C في التكامل غير المحدد، أو استخدام F(a)−F(b) بدل F(b)−F(a)."
             ));
         } else if ("physics".equals(subject)) {
             tvTitle.setText("الفيزياء 3D · الثالث الثانوي");
@@ -1490,6 +1529,26 @@ public class QuizActivity extends Activity {
             new String[]{"½", "1", "√3", "2"}, 1,
             "بما أن جا 30° = ½ وجتا 60° = ½، فإن مجموعهما = ½ + ½ = 1.", "math-9th-book.html", 1));
 
+        bank.add(new Question("m12_1", "سهل · الأعداد المركبة 12",
+            "القيمة المطلقة للعدد المركب 3 + 4i تساوي:",
+            new String[]{"5", "7", "√7", "25"}, 0,
+            "|3 + 4i| = √(3² + 4²) = √25 = 5، وهي طول المتجه في مستوى أرغاند.", "math-12th-book.html", 18));
+        bank.add(new Question("m12_2", "متوسط · مبرهنة دي موافر",
+            "إذا كان z = cosθ + i sinθ فإن z⁵ يساوي:",
+            new String[]{"cos5θ − i sin5θ", "5cosθ + 5i sinθ", "cos5θ + i sin5θ", "cosθ⁵ + i sinθ⁵"}, 2,
+            "تنص مبرهنة دي موافر على (cosθ + i sinθ)ⁿ = cos nθ + i sin nθ، إذن z⁵ = cos5θ + i sin5θ.", "math-12th-book.html", 67));
+        bank.add(new Question("m12_3", "متوسط · القطوع المخروطية",
+            "بؤرة القطع المكافئ y² = 20x تقع عند النقطة:",
+            new String[]{"(5, 0)", "(10, 0)", "(0, 5)", "(−5, 0)"}, 0,
+            "بمقارنة y² = 20x مع y² = 4px نجد 4p = 20 إذن p = 5، فالبؤرة (p,0) = (5,0).", "math-12th-book.html", 117));
+        bank.add(new Question("m12_4", "سهل · المشتقات",
+            "مشتقة الدالة f(x) = xⁿ بالنسبة إلى x هي:",
+            new String[]{"nxⁿ", "nxⁿ⁻¹", "xⁿ⁻¹", "n⁻¹xⁿ⁺¹"}, 1,
+            "قاعدة القوة تنص على أن (xⁿ)′ = nxⁿ⁻¹ لأي أس n ثابت.", "math-12th-book.html", 156));
+        bank.add(new Question("m12_5", "متوسط · التكامل المحدد",
+            "قيمة التكامل ∫₀² (2 − x/2) dx تساوي:",
+            new String[]{"2", "3", "4", "5"}, 1,
+            "المضاد هو 2x − x²/4، وبالتعويض: (4 − 1) − 0 = 3.", "math-12th-book.html", 246));
         bank.add(new Question("p12_1", "متوسط · الفيزياء 12",
             "عند إطلاق مقذوف بنفس السرعة الابتدائية، فإنه يبلغ أقصى مدى أفقي عندما تكون زاوية الإطلاق:",
             new String[]{"30°", "45°", "60°", "90°"}, 1,
@@ -1552,6 +1611,7 @@ public class QuizActivity extends Activity {
             if ("sci_p2".equals(quizSubject)) prefix = "sp2_";
             else if ("sci_p1".equals(quizSubject)) prefix = "sp1_";
             else if ("math_p1".equals(quizSubject) || "math_p2".equals(quizSubject)) prefix = "mp";
+            else if ("math_12".equals(quizSubject)) prefix = "m12_";
             else if ("phys_12".equals(quizSubject)) prefix = "p12_";
             else if ("bio_12".equals(quizSubject)) prefix = "b12_";
             else if ("chem_12".equals(quizSubject)) prefix = "c12_";

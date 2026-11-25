@@ -1,0 +1,566 @@
+{
+  "sol-math-complex-add": {
+    "id": "sol-math-complex-add",
+    "title": "جمع عددين مركبين",
+    "source_page": 13,
+    "prompt": "إذا كان z₁ = 2 + 3i و z₂ = −1 + 2i فاحسب z₁ + z₂.",
+    "given": "z₁ = 2 + 3i، z₂ = −1 + 2i",
+    "answer": "1 + 5i",
+    "tolerance": 0.01,
+    "hint": "اجمع الأجزاء الحقيقية معاً والتخيلية معاً.",
+    "steps": [
+      {
+        "title": "اجمع الأجزاء الحقيقية",
+        "detail": "2 + (−1) = 1",
+        "formula": "Re(z₁+z₂)=Re(z₁)+Re(z₂)"
+      },
+      {
+        "title": "اجمع الأجزاء التخيلية",
+        "detail": "3 + 2 = 5",
+        "formula": "Im(z₁+z₂)=Im(z₁)+Im(z₂)"
+      },
+      {
+        "title": "اكتب النتيجة",
+        "detail": "العدد المركب الناتج هو 1 + 5i.",
+        "formula": "z₁+z₂=1+5i"
+      }
+    ]
+  },
+  "sol-math-complex-modulus": {
+    "id": "sol-math-complex-modulus",
+    "title": "القيمة المطلقة لعدد مركب",
+    "source_page": 19,
+    "prompt": "احسب |3 + 4i|.",
+    "given": "z = 3 + 4i",
+    "answer": "5",
+    "tolerance": 0.01,
+    "hint": "استخدم نظرية فيثاغورس على مكوّنات العدد.",
+    "steps": [
+      {
+        "title": "طبّق الصيغة",
+        "detail": "|z| = √(3² + 4²)",
+        "formula": "|a+bi|=√(a²+b²)"
+      },
+      {
+        "title": "احسب المجموع",
+        "detail": "9 + 16 = 25",
+        "formula": "|z|=√25"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "القيمة المطلقة تساوي 5.",
+        "formula": "|3+4i|=5"
+      }
+    ]
+  },
+  "sol-math-polar": {
+    "id": "sol-math-polar",
+    "title": "التحويل إلى الصيغة القطبية",
+    "source_page": 38,
+    "prompt": "اكتب z = 1 + √3 i بالصيغة القطبية.",
+    "given": "a = 1، b = √3",
+    "answer": "2(cos60° + i sin60°)",
+    "tolerance": 0.01,
+    "hint": "احسب r أولاً ثم الزاوية في الربع الصحيح.",
+    "steps": [
+      {
+        "title": "القيمة المطلقة",
+        "detail": "r = √(1 + 3) = 2",
+        "formula": "r=√(a²+b²)"
+      },
+      {
+        "title": "الزاوية",
+        "detail": "tan θ = √3/1، إذن θ = 60° لأن النقطة في الربع الأول.",
+        "formula": "θ=tan⁻¹(b/a)"
+      },
+      {
+        "title": "الصيغة القطبية",
+        "detail": "z = 2(cos60° + i sin60°).",
+        "formula": "z=r(cosθ+i sinθ)"
+      }
+    ]
+  },
+  "sol-math-demoivre": {
+    "id": "sol-math-demoivre",
+    "title": "تطبيق مبرهنة دي موافر",
+    "source_page": 46,
+    "prompt": "احسب (cos30° + i sin30°)³.",
+    "given": "r = 1، θ = 30°، n = 3",
+    "answer": "cos90° + i sin90° = i",
+    "tolerance": 0.01,
+    "hint": "اضرب الزاوية في الأس.",
+    "steps": [
+      {
+        "title": "القيمة المطلقة",
+        "detail": "1³ = 1",
+        "formula": "rⁿ"
+      },
+      {
+        "title": "الزاوية",
+        "detail": "3 × 30° = 90°",
+        "formula": "nθ"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "cos90° + i sin90° = i.",
+        "formula": "(cosθ+i sinθ)ⁿ=cos nθ+i sin nθ"
+      }
+    ]
+  },
+  "sol-math-binomial": {
+    "id": "sol-math-binomial",
+    "title": "معامل في التوسعة ذات الحدين",
+    "source_page": 58,
+    "prompt": "احسب معامل الحد الذي يحتوي على b² في (a+b)⁶.",
+    "given": "n = 6، k = 2",
+    "answer": "15",
+    "tolerance": 0.01,
+    "hint": "استخدم C(n,k) = n! / (k!(n−k)!).",
+    "steps": [
+      {
+        "title": "اكتب الصيغة",
+        "detail": "C(6,2) = 6! / (2!4!)",
+        "formula": "C(n,k)=n!/(k!(n−k)!)"
+      },
+      {
+        "title": "بسّط",
+        "detail": "C(6,2) = (6×5)/(2×1) = 15",
+        "formula": "C(6,2)=15"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "معامل الحد هو 15.",
+        "formula": "15a⁴b²"
+      }
+    ]
+  },
+  "sol-math-ellipse": {
+    "id": "sol-math-ellipse",
+    "title": "بؤرتا قطع ناقص",
+    "source_page": 112,
+    "prompt": "للقطع x²/25 + y²/9 = 1، أوجد البؤرتين.",
+    "given": "a² = 25، b² = 9",
+    "answer": "(−4، 0) و (4، 0)",
+    "tolerance": 0.01,
+    "hint": "a هي أكبر مقام، و c² = a² − b².",
+    "steps": [
+      {
+        "title": "حدد a و b",
+        "detail": "a = 5، b = 3 لأن 25 > 9.",
+        "formula": "a>b"
+      },
+      {
+        "title": "احسب c",
+        "detail": "c² = 25 − 9 = 16 إذن c = 4.",
+        "formula": "c²=a²−b²"
+      },
+      {
+        "title": "البؤرتان",
+        "detail": "تقعان على المحور x: (−4،0) و (4،0).",
+        "formula": "(±c،0)"
+      }
+    ]
+  },
+  "sol-math-hyperbola": {
+    "id": "sol-math-hyperbola",
+    "title": "خطا القطع الزائد المقاربان",
+    "source_page": 120,
+    "prompt": "أوجد خطي المقاربة للقطع x²/4 − y²/9 = 1.",
+    "given": "a = 2، b = 3",
+    "answer": "y = ±(3/2)x",
+    "tolerance": 0.01,
+    "hint": "خطا المقاربة يمران بنقطة الأصل.",
+    "steps": [
+      {
+        "title": "حدد a و b",
+        "detail": "a² = 4 إذن a = 2، b² = 9 إذن b = 3.",
+        "formula": "x²/a²−y²/b²=1"
+      },
+      {
+        "title": "طبّق معادلة المقاربة",
+        "detail": "y = ±(b/a)x",
+        "formula": "y=±(b/a)x"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "y = ±(3/2)x.",
+        "formula": "y=±1.5x"
+      }
+    ]
+  },
+  "sol-math-parabola": {
+    "id": "sol-math-parabola",
+    "title": "بؤرة مكافئ",
+    "source_page": 126,
+    "prompt": "أوجد بؤرة القطع y² = 12x.",
+    "given": "4p = 12",
+    "answer": "(3، 0)",
+    "tolerance": 0.01,
+    "hint": "قارن المعادلة بصيغة y² = 4px.",
+    "steps": [
+      {
+        "title": "احسب p",
+        "detail": "4p = 12 إذن p = 3.",
+        "formula": "y²=4px"
+      },
+      {
+        "title": "موضع البؤرة",
+        "detail": "البؤرة هي (p، 0).",
+        "formula": "F=(p،0)"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "F = (3، 0).",
+        "formula": "F=(3،0)"
+      }
+    ]
+  },
+  "sol-math-space-diagonal": {
+    "id": "sol-math-space-diagonal",
+    "title": "القطر الفراغي لمكعب",
+    "source_page": 136,
+    "prompt": "مكعب ضلعه 4، احسب قطره الفراغي.",
+    "given": "a = 4",
+    "answer": "4√3 ≈ 6.928",
+    "tolerance": 0.01,
+    "hint": "استخدم فيثاغورس مرتين.",
+    "steps": [
+      {
+        "title": "قطر الوجه",
+        "detail": "d_face = √(a²+a²) = a√2",
+        "formula": "d_face=a√2"
+      },
+      {
+        "title": "القطر الفراغي",
+        "detail": "d = √(d_face² + a²) = √(2a²+a²)",
+        "formula": "d=a√3"
+      },
+      {
+        "title": "التعويض",
+        "detail": "d = 4√3 ≈ 6.928.",
+        "formula": "d≈6.928"
+      }
+    ]
+  },
+  "sol-math-line-plane": {
+    "id": "sol-math-line-plane",
+    "title": "زاوية مستقيم مع مستوى",
+    "source_page": 144,
+    "prompt": "إذا كانت زاوية مستقيم مع المتجه الطبيعي لمستوى 40°، فما زاويته مع المستوى؟",
+    "given": "α = 40°",
+    "answer": "50°",
+    "tolerance": 0.01,
+    "hint": "الزاويتان مكمّلتان.",
+    "steps": [
+      {
+        "title": "العلاقة",
+        "detail": "θ = 90° − α",
+        "formula": "θ=90°−α"
+      },
+      {
+        "title": "التعويض",
+        "detail": "θ = 90° − 40° = 50°.",
+        "formula": "θ=50°"
+      }
+    ]
+  },
+  "sol-math-dihedral": {
+    "id": "sol-math-dihedral",
+    "title": "الزاوية بين مستويين",
+    "source_page": 149,
+    "prompt": "إذا كان المتجهان الطبيعيان متعامدين، فما الزاوية بين المستويين؟",
+    "given": "n₁·n₂ = 0",
+    "answer": "90°",
+    "tolerance": 0.01,
+    "hint": "استخدم جيب تمام الزاوية بين المتجهين.",
+    "steps": [
+      {
+        "title": "حالة التعامد",
+        "detail": "ناتج الجداء النقطة صفر يعني المتجهين متعامدين.",
+        "formula": "n₁·n₂=0"
+      },
+      {
+        "title": "الزاوية",
+        "detail": "إذن الزاوية بين المستويين 90°.",
+        "formula": "φ=90°"
+      }
+    ]
+  },
+  "sol-math-prob-union": {
+    "id": "sol-math-prob-union",
+    "title": "احتمال اتحاد حدثين",
+    "source_page": 82,
+    "prompt": "إذا كان P(A)=0.55 و P(B)=0.40 و P(A∩B)=0.20، فاحسب P(A∪B).",
+    "given": "P(A)=0.55، P(B)=0.40، P(A∩B)=0.20",
+    "answer": "0.75",
+    "tolerance": 0.001,
+    "hint": "اطرح التداخل حتى لا تحسبه مرتين.",
+    "steps": [
+      {
+        "title": "قاعدة الجمع",
+        "detail": "P(A∪B)=P(A)+P(B)−P(A∩B)",
+        "formula": "P(A∪B)=P(A)+P(B)−P(A∩B)"
+      },
+      {
+        "title": "التعويض",
+        "detail": "0.55 + 0.40 − 0.20 = 0.75",
+        "formula": "=0.75"
+      }
+    ]
+  },
+  "sol-math-prob-conditional": {
+    "id": "sol-math-prob-conditional",
+    "title": "احتمال شرطي",
+    "source_page": 89,
+    "prompt": "إذا كان P(A∩B)=0.25 و P(B)=0.50، فاحسب P(A|B).",
+    "given": "P(A∩B)=0.25، P(B)=0.50",
+    "answer": "0.5",
+    "tolerance": 0.001,
+    "hint": "قسّم على احتمال الشرط.",
+    "steps": [
+      {
+        "title": "الصيغة",
+        "detail": "P(A|B)=P(A∩B)/P(B)",
+        "formula": "P(A|B)=P(A∩B)/P(B)"
+      },
+      {
+        "title": "التعويض",
+        "detail": "0.25 / 0.50 = 0.5",
+        "formula": "=0.5"
+      }
+    ]
+  },
+  "sol-math-prob-binomial": {
+    "id": "sol-math-prob-binomial",
+    "title": "احتمال ذو حدين",
+    "source_page": 96,
+    "prompt": "في 10 تجارب احتمال النجاح 0.5، احتمال 4 نجاحات؟",
+    "given": "n=10، p=0.5، k=4",
+    "answer": "0.2051",
+    "tolerance": 0.001,
+    "hint": "استخدم C(n,k)pᵏ(1−p)ⁿ⁻ᵏ.",
+    "steps": [
+      {
+        "title": "المعامل",
+        "detail": "C(10,4)=210",
+        "formula": "C(n,k)=n!/(k!(n−k)!)"
+      },
+      {
+        "title": "التعويض",
+        "detail": "210(0.5)⁴(0.5)⁶ = 210/1024",
+        "formula": "P(X=4)=210/1024"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "≈ 0.2051",
+        "formula": "≈0.2051"
+      }
+    ]
+  },
+  "sol-math-power": {
+    "id": "sol-math-power",
+    "title": "مشتقة دالة قوة",
+    "source_page": 162,
+    "prompt": "إذا كان f(x)=x³، احسب f′(2).",
+    "given": "f(x)=x³، x=2",
+    "answer": "12",
+    "tolerance": 0.01,
+    "hint": "انقص الأس بمقدار 1 ثم عوّض.",
+    "steps": [
+      {
+        "title": "القاعدة",
+        "detail": "(xⁿ)′=nxⁿ⁻¹",
+        "formula": "(xⁿ)′=nxⁿ⁻¹"
+      },
+      {
+        "title": "المشتقة",
+        "detail": "f′(x)=3x²",
+        "formula": "f′(x)=3x²"
+      },
+      {
+        "title": "التعويض",
+        "detail": "f′(2)=3×4=12",
+        "formula": "12"
+      }
+    ]
+  },
+  "sol-math-chain": {
+    "id": "sol-math-chain",
+    "title": "قاعدة السلسلة",
+    "source_page": 169,
+    "prompt": "اشتق f(x)=(2x+1)³.",
+    "given": "g(x)=2x+1، n=3",
+    "answer": "6(2x+1)²",
+    "tolerance": 0.01,
+    "hint": "اضرب مشتقة الخارج في مشتقة الداخل.",
+    "steps": [
+      {
+        "title": "الخارج",
+        "detail": "3(2x+1)²",
+        "formula": "n[g(x)]ⁿ⁻¹"
+      },
+      {
+        "title": "الداخل",
+        "detail": "(2x+1)′=2",
+        "formula": "g′(x)=2"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "f′(x)=6(2x+1)²",
+        "formula": "f′(x)=f′(g(x))g′(x)"
+      }
+    ]
+  },
+  "sol-math-extrema": {
+    "id": "sol-math-extrema",
+    "title": "قيمة صغرى لدالة تربيعية",
+    "source_page": 192,
+    "prompt": "للدالة f(x)=x²−4x+3، أوجد النقطة الحرجة.",
+    "given": "a=1، b=−4",
+    "answer": "2",
+    "tolerance": 0.01,
+    "hint": "احل f′(x)=0.",
+    "steps": [
+      {
+        "title": "المشتقة",
+        "detail": "f′(x)=2x−4",
+        "formula": "f′(x)=2ax+b"
+      },
+      {
+        "title": "المعادلة",
+        "detail": "2x−4=0 إذن x=2",
+        "formula": "x=−b/(2a)"
+      },
+      {
+        "title": "النوع",
+        "detail": "لأن a>0 فالنقطة قيمة صغرى.",
+        "formula": "f″(x)=2>0"
+      }
+    ]
+  },
+  "sol-math-mvt": {
+    "id": "sol-math-mvt",
+    "title": "نظرية القيمة المتوسطة",
+    "source_page": 203,
+    "prompt": "للدالة f(x)=x² على [1،5]، أوجد c الذي يحقق المبرهنة.",
+    "given": "f(x)=x²، a=1، b=5",
+    "answer": "3",
+    "tolerance": 0.01,
+    "hint": "ميل القطرة = (f(b)−f(a))/(b−a).",
+    "steps": [
+      {
+        "title": "ميل القطرة",
+        "detail": "(25−1)/(5−1)=6",
+        "formula": "[f(b)−f(a)]/(b−a)"
+      },
+      {
+        "title": "المشتقة",
+        "detail": "f′(c)=2c",
+        "formula": "2c=6"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "c=3 وهو داخل الفترة.",
+        "formula": "c=3"
+      }
+    ]
+  },
+  "sol-math-indefinite": {
+    "id": "sol-math-indefinite",
+    "title": "تكامل قوة",
+    "source_page": 214,
+    "prompt": "احسب ∫x³dx.",
+    "given": "n=3",
+    "answer": "x⁴/4 + C",
+    "tolerance": 0.01,
+    "hint": "زد الأس بمقدار 1 ثم اقسم على الأس الجديد.",
+    "steps": [
+      {
+        "title": "القاعدة",
+        "detail": "∫xⁿdx=xⁿ⁺¹/(n+1)+C",
+        "formula": "n≠−1"
+      },
+      {
+        "title": "التعويض",
+        "detail": "∫x³dx=x⁴/4+C",
+        "formula": "=x⁴/4+C"
+      }
+    ]
+  },
+  "sol-math-definite": {
+    "id": "sol-math-definite",
+    "title": "تكامل محدد",
+    "source_page": 237,
+    "prompt": "احسب ∫₁⁴ x² dx.",
+    "given": "a=1، b=4، n=2",
+    "answer": "21",
+    "tolerance": 0.01,
+    "hint": "استخدم F(b)−F(a).",
+    "steps": [
+      {
+        "title": "المضاد",
+        "detail": "F(x)=x³/3",
+        "formula": "F(x)=x³/3"
+      },
+      {
+        "title": "التعويض",
+        "detail": "64/3 − 1/3 = 63/3",
+        "formula": "F(4)−F(1)"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "21",
+        "formula": "=21"
+      }
+    ]
+  },
+  "sol-math-area": {
+    "id": "sol-math-area",
+    "title": "مساحة تحت منحنى",
+    "source_page": 246,
+    "prompt": "احسب المساحة تحت y=x² من 0 إلى 3.",
+    "given": "a=0، b=3، f(x)=x²",
+    "answer": "9",
+    "tolerance": 0.01,
+    "hint": "المساحة هي التكامل المحدد للدالة.",
+    "steps": [
+      {
+        "title": "التكامل",
+        "detail": "A=∫₀³x²dx",
+        "formula": "A=∫ₐᵇf(x)dx"
+      },
+      {
+        "title": "المضاد",
+        "detail": "[x³/3]₀³=27/3",
+        "formula": "=9"
+      }
+    ]
+  },
+  "sol-math-revolution": {
+    "id": "sol-math-revolution",
+    "title": "حجم مجسم دوران",
+    "source_page": 250,
+    "prompt": "احسب حجم دوران y=x حول محور x من 0 إلى 2.",
+    "given": "f(x)=x، a=0، b=2",
+    "answer": "8π/3 ≈ 8.378",
+    "tolerance": 0.01,
+    "hint": "استخدم طريقة الأقراص V=π∫f²dx.",
+    "steps": [
+      {
+        "title": "الصيغة",
+        "detail": "V=π∫₀²x²dx",
+        "formula": "V=π∫ₐᵇ[f(x)]²dx"
+      },
+      {
+        "title": "التكامل",
+        "detail": "π[x³/3]₀²=8π/3",
+        "formula": "=8π/3"
+      },
+      {
+        "title": "النتيجة",
+        "detail": "≈ 8.378 وحدة مكعبة.",
+        "formula": "≈8.378"
+      }
+    ]
+  }
+}

@@ -10,7 +10,7 @@ help:
 	@echo "الاستخدام:"
 	@echo "  make all         بناء كل شيء (بيانات + كتب + مزامنة الأصول + اختبارات)"
 	@echo "  make data        توليد والتحقق من حزم بيانات المنهج (JSON & data_bundle.js)"
-	@echo "  make books       بناء وتحديث الكتب التفاعلية HTML ومعمل الكيمياء 3D"
+	@echo "  make books       بناء وتحديث الكتب التفاعلية HTML ومعامل الكيمياء والرياضيات 3D"
 	@echo "  make sync-assets مزامنة المصدر الموحد للبيانات إلى أصول الأندرويد"
 	@echo "  make test        تشغيل جناح الاختبارات الآلية الشاملة"
 	@echo "  make apk         بناء حزمة أندرويد النهائية Thaker.apk"
@@ -24,6 +24,10 @@ all: data books sync-assets test
 data:
 	@echo "[*] Generating curriculum data packs..."
 	python3 merge_and_save_chemistry_assessments.py
+	@echo "[*] Rendering Grade 12 Math high-resolution page images..."
+	python3 render_math_hq.py
+	@echo "[*] Building Grade 12 Math data pack..."
+	python3 build_math_curriculum_pack.py
 
 books:
 	@echo "[*] Building interactive HTML books..."
@@ -32,6 +36,8 @@ books:
 	python3 chem-lab/build.py
 	cp -f chem-lab/dist/chem-lab-book.html chem-lab-book.html
 	cp -f chem-lab/dist/chem-lab-book.html thaker-android-src/assets/chem-lab-book.html
+	@echo "[*] Building 3D Math Lab standalone bundle..."
+	python3 build_math_lab_html.py
 
 sync-assets:
 	@echo "[*] Synchronizing Single Source of Truth to Android Assets..."
