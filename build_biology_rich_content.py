@@ -7,7 +7,7 @@ activities, ministerial question banks, and glossary for Grade 12 Biology.
 import os
 import json
 
-BASE_DIR = "/media/tawheeb/New Volume2/ذاكر/teaching-app"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BIOLOGY_DATA_DIR = f"{BASE_DIR}/data/curriculum/grade12/biology"
 os.makedirs(BIOLOGY_DATA_DIR, exist_ok=True)
 

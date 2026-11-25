@@ -7,7 +7,7 @@ Generates all 11 standardized JSON/JS datasets for Thaker Interactive Textbook E
 import os
 import json
 
-BASE_DIR = "/media/tawheeb/New Volume2/ذاكر/teaching-app"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PHYSICS_DATA_DIR = f"{BASE_DIR}/data/curriculum/grade12/physics"
 os.makedirs(PHYSICS_DATA_DIR, exist_ok=True)
 

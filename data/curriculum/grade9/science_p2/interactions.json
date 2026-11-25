@@ -1,251 +1,2367 @@
 {
-  "sci9-p2-p010": [
-    {
-      "id": "elem-p10-def-oxidation",
-      "type": "explainable_text",
-      "title": "مفهوم الأكسدة وتكوين الأكاسيد",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.24,
-        "w": 0.77,
-        "h": 0.18
-      },
-      "explanation_ref": "exp-oxidation-metals",
-      "highlight_color": "rgba(16, 185, 129, 0.22)",
-      "indicator_label": "📌 مفهوم علمي"
-    },
-    {
-      "id": "elem-p10-trans-q",
-      "type": "explainable_text",
-      "title": "سؤال استكشافي: أكسدة العناصر اللافلزية",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.44,
-        "w": 0.77,
-        "h": 0.08
-      },
-      "explanation_ref": "exp-nonmetals-inquiry",
-      "highlight_color": "rgba(56, 189, 248, 0.22)",
-      "indicator_label": "❓ سؤال استكشافي"
-    },
-    {
-      "id": "elem-p10-act2-btn",
-      "type": "activity",
-      "title": "نشاط (2): أكسدة اللافلزات (حرق الكبريت)",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.54,
-        "w": 0.77,
-        "h": 0.06
-      },
-      "activity_ref": "act-sulfur-combustion",
-      "highlight_color": "rgba(245, 158, 11, 0.22)",
-      "indicator_label": "🧪 نشاط عملي تفاعلي"
-    },
-    {
-      "id": "elem-p10-fig2-3d",
-      "type": "interactive_3d",
-      "title": "شكل (2): حرق الكبريت في لهب موقد بنزين",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.63,
-        "w": 0.26,
-        "h": 0.23
-      },
-      "diagram_ref": "diag-sulfur-burner",
-      "highlight_color": "rgba(139, 92, 246, 0.25)",
-      "indicator_label": "🔍 استكشاف 3D"
-    }
-  ],
-  "sci9-p2-p020": [
-    {
-      "id": "elem-p20-lesson-header",
-      "type": "explainable_text",
-      "title": "الدرس الرابع: غاز ثاني أكسيد الكربون",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.07,
-        "w": 0.77,
-        "h": 0.09
-      },
-      "explanation_ref": "exp-co2-intro",
-      "highlight_color": "rgba(56, 189, 248, 0.2)",
-      "indicator_label": "📖 عنوان الدرس"
-    },
-    {
-      "id": "elem-p20-intro-text",
-      "type": "explainable_text",
-      "title": "نسبة CO2 في الهواء ومصادره الطبيعية",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.2,
-        "w": 0.77,
-        "h": 0.26
-      },
-      "explanation_ref": "exp-co2-occurrence",
-      "highlight_color": "rgba(16, 185, 129, 0.2)",
-      "indicator_label": "📌 حقائق علمية"
-    },
-    {
-      "id": "elem-p20-act1-header",
-      "type": "activity",
-      "title": "نشاط (1): تحضير CO2 في المختبر",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.48,
-        "w": 0.77,
-        "h": 0.06
-      },
-      "activity_ref": "act-co2-prep-procedure",
-      "highlight_color": "rgba(245, 158, 11, 0.22)",
-      "indicator_label": "🧪 نشاط المختبر"
-    },
-    {
-      "id": "elem-p20-fig1-apparatus",
-      "type": "interactive_3d",
-      "title": "شكل (1): جهاز تحضير غاز ثاني أكسيد الكربون",
-      "bounds": {
-        "x": 0.11,
-        "y": 0.69,
-        "w": 0.32,
-        "h": 0.185
-      },
-      "diagram_ref": "diag-co2-apparatus-3d",
-      "highlight_color": "rgba(239, 68, 68, 0.28)",
-      "indicator_label": "🔬 معمل ثلاثي الأبعاد 3D"
-    }
-  ],
-  "sci9-p2-p029": [
-    {
-      "id": "elem-p29-q1",
-      "type": "assessment",
-      "title": "سؤال 1: مقارنة أكسدة الفلزات واللافلزات",
-      "bounds": {
-        "x": 0.12,
-        "y": 0.2,
-        "w": 0.75,
-        "h": 0.045
-      },
-      "assessment_ref": "q-book-p29-01",
-      "highlight_color": "rgba(56, 189, 248, 0.22)",
-      "indicator_label": "✍️ تمرين تفاعلي"
-    },
-    {
-      "id": "elem-p29-q2",
-      "type": "assessment",
-      "title": "سؤال 2: علل ما يأتي (تفسيرات علمية)",
-      "bounds": {
-        "x": 0.12,
-        "y": 0.245,
-        "w": 0.75,
-        "h": 0.14
-      },
-      "assessment_ref": "q-book-p29-02",
-      "highlight_color": "rgba(16, 185, 129, 0.22)",
-      "indicator_label": "🧠 علل علمياً"
-    },
-    {
-      "id": "elem-p29-q3",
-      "type": "assessment",
-      "title": "سؤال 3: حماية الأدوات والآلات من التأكسد",
-      "bounds": {
-        "x": 0.12,
-        "y": 0.39,
-        "w": 0.75,
-        "h": 0.055
-      },
-      "assessment_ref": "q-book-p29-03",
-      "highlight_color": "rgba(245, 158, 11, 0.22)",
-      "indicator_label": "🛠️ تطبيق عملي"
-    },
-    {
-      "id": "elem-p29-q4",
-      "type": "assessment",
-      "title": "سؤال 4: صح أم خطأ (التآصل والكربون والماس)",
-      "bounds": {
-        "x": 0.12,
-        "y": 0.45,
-        "w": 0.75,
-        "h": 0.235
-      },
-      "assessment_ref": "q-book-p29-04",
-      "highlight_color": "rgba(239, 68, 68, 0.22)",
-      "indicator_label": "✅ صح أم خطأ ❌"
-    }
-  ],
   "sci9-p2-p008": [
+    {
+      "id": "int-p008-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.15,
+        "y": 0.075,
+        "w": 0.7,
+        "h": 0.07
+      },
+      "indicator_label": "📖 عنوان الدرس: أكاسيد العناصر",
+      "title": "الدرس الأول: أكاسيد العناصر وتفاعلها مع الأكسجين",
+      "explanation_ref": "exp-oxidation-metals"
+    },
     {
       "id": "int-p008-magnesium-act",
       "type": "activity",
       "bounds": {
-        "x": 0.1,
-        "y": 0.28,
-        "w": 0.8,
+        "x": 0.08,
+        "y": 0.6,
+        "w": 0.84,
         "h": 0.32
       },
-      "indicator_label": "🔬 نشاط احتراق الماغنسيوم",
-      "title": "نشاط احتراق شريط الماغنسيوم في الهواء",
+      "indicator_label": "🧪 نشاط (1): احتراق شريط الماغنسيوم (قبل وبعد)",
+      "title": "نشاط (1): خطوات احتراق شريط الماغنيسيوم ومقارنة قبل وبعد التفاعل",
+      "diagram_ref": "diag-sulfur-combustion",
+      "activity_ref": "act-magnesium-combustion"
+    }
+  ],
+  "sci9-p2-p010": [
+    {
+      "id": "int-p010-oxidation-def",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.23,
+        "w": 0.8,
+        "h": 0.18
+      },
+      "indicator_label": "💡 مفهوم الأكسدة وتكوين الأكاسيد",
+      "title": "مفهوم الأكسدة وتكوين الأكاسيد الفلزية",
       "explanation_ref": "exp-oxidation-metals"
+    },
+    {
+      "id": "int-p010-sulfur-act",
+      "type": "activity",
+      "activity_ref": "act-sulfur-combustion",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.52,
+        "w": 0.84,
+        "h": 0.38
+      },
+      "indicator_label": "🧪 نشاط (2): احتراق الكبريت واختبار دوار الشمس",
+      "title": "نشاط (2): أكسدة اللافلزات (احتراق الكبريت واختبار دوار الشمس)",
+      "diagram_ref": "diag-sulfur-combustion"
     }
   ],
   "sci9-p2-p013": [
     {
-      "id": "int-p013-rust-concept",
-      "type": "explainable_text",
+      "id": "int-p013-lesson-title",
+      "type": "title",
       "bounds": {
         "x": 0.12,
-        "y": 0.25,
+        "y": 0.075,
         "w": 0.76,
-        "h": 0.3
+        "h": 0.075
       },
-      "indicator_label": "💡 صدأ الحديد",
-      "title": "مفهوم صدأ الحديد وشروط تكونه",
+      "indicator_label": "📖 عنوان الدرس: صدأ وتآكل الحديد",
+      "title": "الدرس الثاني: تفاعلات بطيئة - صدأ وتآكل الحديد",
       "explanation_ref": "exp-rusting-iron"
+    },
+    {
+      "id": "int-p013-rust-act",
+      "type": "activity",
+      "activity_ref": "act-rusting-conditions",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.54,
+        "w": 0.84,
+        "h": 0.38
+      },
+      "indicator_label": "🧪 نشاط (1): شروط صدأ الحديد (4 أنابيب)",
+      "title": "نشاط (1): استقصاء شروط صدأ وتآكل الحديد في 4 أنابيب اختبار",
+      "diagram_ref": "diag-rust-experiment"
     }
   ],
   "sci9-p2-p017": [
     {
-      "id": "int-p017-carbon-allotropy",
-      "type": "explainable_text",
+      "id": "int-p017-lesson-title",
+      "type": "title",
       "bounds": {
         "x": 0.12,
-        "y": 0.3,
+        "y": 0.075,
         "w": 0.76,
-        "h": 0.32
+        "h": 0.075
       },
-      "indicator_label": "💎 تآصل الكربون",
-      "title": "ظاهرة التآصل وصور الكربون في الطبيعة",
+      "indicator_label": "📖 عنوان الدرس: صور الكربون وتآصله",
+      "title": "الدرس الثالث: صور الكربون وظاهرة التآصل",
       "explanation_ref": "exp-carbon-allotropy"
+    },
+    {
+      "id": "int-p017-carbon-act",
+      "type": "activity",
+      "activity_ref": "act-carbon-allotropy",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.62,
+        "w": 0.84,
+        "h": 0.3
+      },
+      "indicator_label": "🧪 نشاط (1): صور الكربون والتوصيل الكهربائي",
+      "title": "نشاط (1): تآصل الكربون ومقارنة الماس والجرافيت في الصلابة والتوصيل",
+      "diagram_ref": "diag-carbon-allotropes"
+    }
+  ],
+  "sci9-p2-p020": [
+    {
+      "id": "int-p020-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.075,
+        "w": 0.78,
+        "h": 0.085
+      },
+      "indicator_label": "📖 عنوان الدرس: غاز ثاني أكسيد الكربون",
+      "title": "الدرس الرابع: غاز ثاني أكسيد الكربون (CO2)",
+      "explanation_ref": "exp-co2-intro"
+    },
+    {
+      "id": "int-p020-co2-occurrence",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.3,
+        "w": 0.8,
+        "h": 0.16
+      },
+      "indicator_label": "💡 وجود غاز CO2 في الطبيعة ومصادره",
+      "title": "وجود غاز ثاني أكسيد الكربون في الهواء والصخور ومصادره",
+      "explanation_ref": "exp-co2-occurrence"
+    },
+    {
+      "id": "int-p020-co2-prep-act",
+      "type": "activity",
+      "activity_ref": "act-co2-prep-procedure",
+      "bounds": {
+        "x": 0.06,
+        "y": 0.63,
+        "w": 0.4,
+        "h": 0.28
+      },
+      "indicator_label": "🧪 نشاط (1): تحضير CO2 مخبرياً (خطوة بخطوة)",
+      "title": "نشاط (1): تحضير غاز ثاني أكسيد الكربون مخبرياً في زجاجة وف",
+      "diagram_ref": "diag-co2-prep"
+    }
+  ],
+  "sci9-p2-p023": [
+    {
+      "id": "int-p023-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.15,
+        "y": 0.075,
+        "w": 0.7,
+        "h": 0.075
+      },
+      "indicator_label": "📖 عنوان الدرس: النفط وتكريره",
+      "title": "الدرس الخامس: النفط وتكريره ومشتقاته",
+      "explanation_ref": "exp-petroleum-refining"
     }
   ],
   "sci9-p2-p024": [
     {
-      "id": "int-p024-petroleum-distillation",
+      "id": "int-p024-petroleum-act",
       "type": "activity",
+      "activity_ref": "act-petroleum-refining",
       "bounds": {
-        "x": 0.1,
-        "y": 0.26,
-        "w": 0.8,
-        "h": 0.38
+        "x": 0.08,
+        "y": 0.44,
+        "w": 0.84,
+        "h": 0.46
       },
-      "indicator_label": "🛢️ برج التقطير التجزيئي",
-      "title": "عملية تكرير النفط وفصل مشتقاته بالحرارة",
-      "explanation_ref": "exp-petroleum-refining"
+      "indicator_label": "🧪 نشاط (1): التقطير التجزيئي للنفط الخام",
+      "title": "نشاط (1): فصل مكونات النفط الخام بالتقطير التجزيئي",
+      "diagram_ref": "diag-petroleum-fractionation"
     }
   ],
   "sci9-p2-p027": [
     {
+      "id": "int-p027-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.06,
+        "w": 0.76,
+        "h": 0.095
+      },
+      "indicator_label": "📖 عنوان الدرس: التلوث الكيميائي",
+      "title": "الدرس السادس: التلوث الناتج عن الصناعات الكيميائية",
+      "explanation_ref": "exp-chemical-pollution"
+    },
+    {
       "id": "int-p027-chemical-pollution",
       "type": "explainable_text",
       "bounds": {
-        "x": 0.12,
-        "y": 0.25,
-        "w": 0.76,
-        "h": 0.3
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.32
       },
-      "indicator_label": "⚠️ التلوث الكيميائي",
+      "indicator_label": "⚠️ مخاطر التلوث الصناعي",
       "title": "مخاطر التلوث الناتج عن الصناعات الكيميائية",
       "explanation_ref": "exp-chemical-pollution"
+    }
+  ],
+  "sci9-p2-p029": [
+    {
+      "id": "int-p029-assessment",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.16,
+        "w": 0.84,
+        "h": 0.72
+      },
+      "indicator_label": "📝 حل تدريبات تقويم الوحدة التاسعة",
+      "title": "تقويم الوحدة التاسعة الشامل مع تبرير المشتتات",
+      "assessment_ref": "assess-u9-comprehensive"
+    }
+  ],
+  "sci9-p2-p009": [
+    {
+      "id": "int-p009-magnesium-steps",
+      "type": "activity",
+      "activity_ref": "act-magnesium-combustion",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.1,
+        "w": 0.84,
+        "h": 0.45
+      },
+      "indicator_label": "🧪 خطوات نشاط الماغنسيوم ومقارنة قبل وبعد",
+      "title": "نشاط (1) تابع: اشتعال الماغنيسيوم والمقارنة الدقيقة قبل وبعد التفاعل والمعادلة الموزونة"
+    },
+    {
+      "id": "int-p009-metals-table",
+      "type": "explainable_text",
+      "explanation_ref": "exp-oxidation-metals",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.62,
+        "w": 0.84,
+        "h": 0.28
+      },
+      "indicator_label": "📊 جدول (1): مقارنة احتراق الفلزات",
+      "title": "جدول (1): ملاحظات احتراق الكالسيوم والصوديوم والحديد في الهواء"
+    }
+  ],
+  "sci9-p2-p021": [
+    {
+      "id": "int-p021-co2-props-act",
+      "type": "activity",
+      "activity_ref": "act-co2-properties",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.45,
+        "w": 0.84,
+        "h": 0.45
+      },
+      "indicator_label": "🧪 نشاط (2): خواص CO2 وإطفاء الشموع وتعكير ماء الجير",
+      "title": "نشاط (2): استقصاء خواص غاز ثاني أكسيد الكربون وإطفاء الشموع وتعكير ماء الجير"
+    }
+  ],
+  "sci9-p2-p030": [
+    {
+      "id": "int-p030-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 10: الهالوجينات",
+      "title": "ملخص الوحدة 10: الهالوجينات",
+      "explanation_ref": "exp-p030"
+    },
+    {
+      "id": "int-p030-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.715,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 10 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 10",
+      "explanation_ref": "exp-p030"
+    }
+  ],
+  "sci9-p2-p031": [
+    {
+      "id": "int-p031-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.062,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 خصائص الهالوجينات",
+      "title": "خصائص الهالوجينات",
+      "explanation_ref": "exp-p031"
+    }
+  ],
+  "sci9-p2-p032": [
+    {
+      "id": "int-p032-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.377,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تدرج الخواص الفيزيائية والنشاط الكيميائي ل",
+      "title": "تدرج الخواص الفيزيائية والنشاط الكيميائي للهالوجينات",
+      "explanation_ref": "exp-p032"
+    }
+  ],
+  "sci9-p2-p033": [
+    {
+      "id": "int-p033-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.068,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الهالوجينات في حياتنا",
+      "title": "الهالوجينات في حياتنا",
+      "explanation_ref": "exp-p033"
+    }
+  ],
+  "sci9-p2-p034": [
+    {
+      "id": "int-p034-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.531,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الفريون وتطبيقات الهالوجينات في الأجهزة وا",
+      "title": "الفريون وتطبيقات الهالوجينات في الأجهزة والصناعة",
+      "explanation_ref": "exp-p034"
+    }
+  ],
+  "sci9-p2-p035": [
+    {
+      "id": "int-p035-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.238,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 مقارنة عناصر الهالوجينات وتقرير استخداماته",
+      "title": "مقارنة عناصر الهالوجينات وتقرير استخداماتها",
+      "explanation_ref": "exp-p035"
+    }
+  ],
+  "sci9-p2-p036": [
+    {
+      "id": "int-p036-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.061,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الكلور",
+      "title": "الكلور",
+      "explanation_ref": "exp-p036"
+    },
+    {
+      "id": "int-p036-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22699999999999998,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: تحضير غاز الكلور ومشاهدة تبييض الألوان",
+      "title": "🧪 نشاط: تحضير غاز الكلور ومشاهدة تبييض الألوان",
+      "activity_ref": "act-chlorine-prep"
+    },
+    {
+      "id": "int-p036-diagram3d",
+      "type": "interactive_3d",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.56,
+        "w": 0.8,
+        "h": 0.24
+      },
+      "indicator_label": "🔬 مجسم 3D: جهاز تحضير غاز الكلور (شكل 1)",
+      "title": "🔬 مجسم 3D: جهاز تحضير غاز الكلور (شكل 1)",
+      "diagram_ref": "diag-chlorine-prep"
+    }
+  ],
+  "sci9-p2-p037": [
+    {
+      "id": "int-p037-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.36,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 خطوات نشاط تحضير الكلور في المختبر",
+      "title": "🧪 خطوات نشاط تحضير الكلور في المختبر",
+      "activity_ref": "act-chlorine-prep"
+    },
+    {
+      "id": "int-p037-diagram3d",
+      "type": "interactive_3d",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.56,
+        "w": 0.8,
+        "h": 0.24
+      },
+      "indicator_label": "🔬 مجسم 3D: تنقية وتجفيف وجمع الكلور",
+      "title": "🔬 مجسم 3D: تنقية وتجفيف وجمع الكلور",
+      "diagram_ref": "diag-chlorine-prep"
+    },
+    {
+      "id": "int-p037-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.663,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الخواص الفيزيائية والكيميائية للكلور وتفاع",
+      "title": "الخواص الفيزيائية والكيميائية للكلور وتفاعل Cl₂ + H₂O",
+      "explanation_ref": "exp-p037"
+    }
+  ],
+  "sci9-p2-p038": [
+    {
+      "id": "int-p038-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تفاعلات الكلور مع الصوديوم والفوسفور والتح",
+      "title": "تفاعلات الكلور مع الصوديوم والفوسفور والتحليل الكهربائي",
+      "explanation_ref": "exp-p038"
+    }
+  ],
+  "sci9-p2-p039": [
+    {
+      "id": "int-p039-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 10 (سؤال الهالوجينات)",
+      "title": "📝 تقويم الوحدة 10 (سؤال الهالوجينات)",
+      "assessment_ref": "q-u10-01"
+    },
+    {
+      "id": "int-p039-assess-2",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.52,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 10 (اليود والغدة الدرقية)",
+      "title": "📝 تقويم الوحدة 10 (اليود والغدة الدرقية)",
+      "assessment_ref": "q-u10-02"
+    }
+  ],
+  "sci9-p2-p040": [
+    {
+      "id": "int-p040-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 11: خواص الأجسام",
+      "title": "ملخص الوحدة 11: خواص الأجسام",
+      "explanation_ref": "exp-p040"
+    },
+    {
+      "id": "int-p040-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.589,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 11 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 11",
+      "explanation_ref": "exp-p040"
+    }
+  ],
+  "sci9-p2-p041": [
+    {
+      "id": "int-p041-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.137,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 بعض خواص الأجسام الصلبة",
+      "title": "بعض خواص الأجسام الصلبة",
+      "explanation_ref": "exp-p041"
+    },
+    {
+      "id": "int-p041-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.36,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: استكشاف المرونة واللدونة",
+      "title": "🧪 نشاط: استكشاف المرونة واللدونة",
+      "activity_ref": "act-elasticity-solids"
+    }
+  ],
+  "sci9-p2-p042": [
+    {
+      "id": "int-p042-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 مقارنة الأجسام المرنة واللدنة",
+      "title": "🧪 مقارنة الأجسام المرنة واللدنة",
+      "activity_ref": "act-elasticity-solids"
+    }
+  ],
+  "sci9-p2-p043": [
+    {
+      "id": "int-p043-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 اختبار المرونة في المسطرة البلاستيكية والن",
+      "title": "اختبار المرونة في المسطرة البلاستيكية والنابض",
+      "explanation_ref": "exp-p043"
+    }
+  ],
+  "sci9-p2-p044": [
+    {
+      "id": "int-p044-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 المقارنة الكمية لاستطالة الأسلاك والخيوط",
+      "title": "المقارنة الكمية لاستطالة الأسلاك والخيوط",
+      "explanation_ref": "exp-p044"
+    }
+  ],
+  "sci9-p2-p045": [
+    {
+      "id": "int-p045-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تأثير الأثقال على المواد الصلبة (قانون هوك",
+      "title": "تأثير الأثقال على المواد الصلبة (قانون هوك)",
+      "explanation_ref": "exp-p045"
+    }
+  ],
+  "sci9-p2-p046": [
+    {
+      "id": "int-p046-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.237,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 مقارنة متانة الخيوط وتحملها للأثقال",
+      "title": "مقارنة متانة الخيوط وتحملها للأثقال",
+      "explanation_ref": "exp-p046"
+    }
+  ],
+  "sci9-p2-p047": [
+    {
+      "id": "int-p047-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 بعض خواص الأجسام الصلبة (ص 47)",
+      "title": "بعض خواص الأجسام الصلبة (ص 47)",
+      "explanation_ref": "exp-p047"
+    }
+  ],
+  "sci9-p2-p048": [
+    {
+      "id": "int-p048-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 التوصيل الحراري والكهربائي للمعادن الصلبة",
+      "title": "التوصيل الحراري والكهربائي للمعادن الصلبة",
+      "explanation_ref": "exp-p048"
+    }
+  ],
+  "sci9-p2-p049": [
+    {
+      "id": "int-p049-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 اختبار الصلادة ومقاومة الخدش (الزجاج والحد",
+      "title": "اختبار الصلادة ومقاومة الخدش (الزجاج والحديد)",
+      "explanation_ref": "exp-p049"
+    }
+  ],
+  "sci9-p2-p050": [
+    {
+      "id": "int-p050-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 قابلية المعادن للطرق والسحب والتشكيل",
+      "title": "قابلية المعادن للطرق والسحب والتشكيل",
+      "explanation_ref": "exp-p050"
+    }
+  ],
+  "sci9-p2-p051": [
+    {
+      "id": "int-p051-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 بعض خواص الأجسام الصلبة (ص 51)",
+      "title": "بعض خواص الأجسام الصلبة (ص 51)",
+      "explanation_ref": "exp-p051"
+    }
+  ],
+  "sci9-p2-p052": [
+    {
+      "id": "int-p052-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 بعض خواص الأجسام الصلبة (ص 52)",
+      "title": "بعض خواص الأجسام الصلبة (ص 52)",
+      "explanation_ref": "exp-p052"
+    }
+  ],
+  "sci9-p2-p053": [
+    {
+      "id": "int-p053-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.078,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الغشاء المشدود لسطوح السوائل (التوتر السطحي)",
+      "title": "الغشاء المشدود لسطوح السوائل (التوتر السطحي)",
+      "explanation_ref": "exp-p053"
+    },
+    {
+      "id": "int-p053-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.609,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: طفو الإبرة والتوتر السطحي",
+      "title": "🧪 نشاط: طفو الإبرة والتوتر السطحي",
+      "activity_ref": "act-surface-tension"
+    }
+  ],
+  "sci9-p2-p054": [
+    {
+      "id": "int-p054-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.51,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 تجربة التوتر السطحي وتأثير الصابون",
+      "title": "🧪 تجربة التوتر السطحي وتأثير الصابون",
+      "activity_ref": "act-surface-tension"
+    }
+  ],
+  "sci9-p2-p055": [
+    {
+      "id": "int-p055-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تجربة حلقة الخيط وغشاء الصابون",
+      "title": "تجربة حلقة الخيط وغشاء الصابون",
+      "explanation_ref": "exp-p055"
+    }
+  ],
+  "sci9-p2-p056": [
+    {
+      "id": "int-p056-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 قياس قوة التوتر السطحي باستخدام السلك المن",
+      "title": "قياس قوة التوتر السطحي باستخدام السلك المنزلق",
+      "explanation_ref": "exp-p056"
+    }
+  ],
+  "sci9-p2-p057": [
+    {
+      "id": "int-p057-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تطبيقات التوتر السطحي وحساب طول الغشاء",
+      "title": "تطبيقات التوتر السطحي وحساب طول الغشاء",
+      "explanation_ref": "exp-p057"
+    }
+  ],
+  "sci9-p2-p058": [
+    {
+      "id": "int-p058-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الغشاء المشدود لسطوح السوائل (التوتر السطح",
+      "title": "الغشاء المشدود لسطوح السوائل (التوتر السطحي) (ص 58)",
+      "explanation_ref": "exp-p058"
+    }
+  ],
+  "sci9-p2-p059": [
+    {
+      "id": "int-p059-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.073,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 قوى التماسك والتلاصق بين جزيئات السائل",
+      "title": "قوى التماسك والتلاصق بين جزيئات السائل",
+      "explanation_ref": "exp-p059"
+    }
+  ],
+  "sci9-p2-p060": [
+    {
+      "id": "int-p060-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الفرق بين قوى التماسك وقوى التلاصق",
+      "title": "الفرق بين قوى التماسك وقوى التلاصق",
+      "explanation_ref": "exp-p060"
+    }
+  ],
+  "sci9-p2-p061": [
+    {
+      "id": "int-p061-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 قوى التماسك والتلاصق بين جزيئات السائل (ص ",
+      "title": "قوى التماسك والتلاصق بين جزيئات السائل (ص 61)",
+      "explanation_ref": "exp-p061"
+    }
+  ],
+  "sci9-p2-p062": [
+    {
+      "id": "int-p062-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.06,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 ارتفاع الماء في الأنابيب الضيقة (الخاصية الشعرية)",
+      "title": "ارتفاع الماء في الأنابيب الضيقة (الخاصية الشعرية)",
+      "explanation_ref": "exp-p062"
+    },
+    {
+      "id": "int-p062-diagram3d",
+      "type": "interactive_3d",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.426,
+        "w": 0.8,
+        "h": 0.24
+      },
+      "indicator_label": "🔬 مجسم 3D: ارتفاع الماء في الأنابيب الشعرية",
+      "title": "🔬 مجسم 3D: ارتفاع الماء في الأنابيب الشعرية",
+      "diagram_ref": "diag-capillarity-tubes"
+    }
+  ],
+  "sci9-p2-p063": [
+    {
+      "id": "int-p063-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تطبيقات الخاصية الشعرية في التربة والنبات",
+      "title": "تطبيقات الخاصية الشعرية في التربة والنبات",
+      "explanation_ref": "exp-p063"
+    }
+  ],
+  "sci9-p2-p064": [
+    {
+      "id": "int-p064-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 ارتفاع الماء في الأنابيب الضيقة (الخاصية ا",
+      "title": "ارتفاع الماء في الأنابيب الضيقة (الخاصية الشعرية) (ص 64)",
+      "explanation_ref": "exp-p064"
+    }
+  ],
+  "sci9-p2-p065": [
+    {
+      "id": "int-p065-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.092,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الجريان الانسيابي المنتظم للسوائل خلال الأنابيب",
+      "title": "الجريان الانسيابي المنتظم للسوائل خلال الأنابيب",
+      "explanation_ref": "exp-p065"
+    }
+  ],
+  "sci9-p2-p066": [
+    {
+      "id": "int-p066-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الجريان الانسيابي المنتظم للسوائل في الأنا",
+      "title": "الجريان الانسيابي المنتظم للسوائل في الأنابيب",
+      "explanation_ref": "exp-p066"
+    }
+  ],
+  "sci9-p2-p067": [
+    {
+      "id": "int-p067-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الجريان الانسيابي المنتظم للسوائل خلال الأ",
+      "title": "الجريان الانسيابي المنتظم للسوائل خلال الأنابيب (ص 67)",
+      "explanation_ref": "exp-p067"
+    }
+  ],
+  "sci9-p2-p068": [
+    {
+      "id": "int-p068-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.15400000000000003,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 للسائل خاصية لزوجة",
+      "title": "للسائل خاصية لزوجة",
+      "explanation_ref": "exp-p068"
+    },
+    {
+      "id": "int-p068-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.382,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: مقارنة لزوجة الماء والزيت والعسل",
+      "title": "🧪 نشاط: مقارنة لزوجة الماء والزيت والعسل",
+      "activity_ref": "act-viscosity-liquids"
+    }
+  ],
+  "sci9-p2-p069": [
+    {
+      "id": "int-p069-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.447,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 تجربة سقوط الكرات في السوائل اللزجة",
+      "title": "🧪 تجربة سقوط الكرات في السوائل اللزجة",
+      "activity_ref": "act-viscosity-liquids"
+    }
+  ],
+  "sci9-p2-p070": [
+    {
+      "id": "int-p070-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 للسائل خاصية لزوجة (ص 70)",
+      "title": "للسائل خاصية لزوجة (ص 70)",
+      "explanation_ref": "exp-p070"
+    }
+  ],
+  "sci9-p2-p071": [
+    {
+      "id": "int-p071-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 للسائل خاصية لزوجة (ص 71)",
+      "title": "للسائل خاصية لزوجة (ص 71)",
+      "explanation_ref": "exp-p071"
+    }
+  ],
+  "sci9-p2-p072": [
+    {
+      "id": "int-p072-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.056999999999999995,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الانتشار في السوائل",
+      "title": "الانتشار في السوائل",
+      "explanation_ref": "exp-p072"
+    }
+  ],
+  "sci9-p2-p073": [
+    {
+      "id": "int-p073-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الانتشار في السوائل (ص 73)",
+      "title": "الانتشار في السوائل (ص 73)",
+      "explanation_ref": "exp-p073"
+    }
+  ],
+  "sci9-p2-p074": [
+    {
+      "id": "int-p074-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 11 (التوتر السطحي)",
+      "title": "📝 تقويم الوحدة 11 (التوتر السطحي)",
+      "assessment_ref": "q-u11-01"
+    }
+  ],
+  "sci9-p2-p075": [
+    {
+      "id": "int-p075-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 11 (اللزوجة والحرارة)",
+      "title": "📝 تقويم الوحدة 11 (اللزوجة والحرارة)",
+      "assessment_ref": "q-u11-02"
+    }
+  ],
+  "sci9-p2-p076": [
+    {
+      "id": "int-p076-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 12: الضغط في المواد الصلبة والموائع",
+      "title": "ملخص الوحدة 12: الضغط في المواد الصلبة والموائع",
+      "explanation_ref": "exp-p076"
+    },
+    {
+      "id": "int-p076-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.67,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 12 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 12",
+      "explanation_ref": "exp-p076"
+    }
+  ],
+  "sci9-p2-p077": [
+    {
+      "id": "int-p077-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.15899999999999997,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الضغط في الأجسام الصلبة",
+      "title": "الضغط في الأجسام الصلبة",
+      "explanation_ref": "exp-p077"
+    }
+  ],
+  "sci9-p2-p078": [
+    {
+      "id": "int-p078-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تجربة الضغط في الأجسام الصلبة وتأثير المسا",
+      "title": "تجربة الضغط في الأجسام الصلبة وتأثير المساحة",
+      "explanation_ref": "exp-p078"
+    }
+  ],
+  "sci9-p2-p079": [
+    {
+      "id": "int-p079-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.377,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الضغط في الأجسام الصلبة (ص 79)",
+      "title": "الضغط في الأجسام الصلبة (ص 79)",
+      "explanation_ref": "exp-p079"
+    }
+  ],
+  "sci9-p2-p080": [
+    {
+      "id": "int-p080-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الضغط في الأجسام الصلبة (ص 80)",
+      "title": "الضغط في الأجسام الصلبة (ص 80)",
+      "explanation_ref": "exp-p080"
+    }
+  ],
+  "sci9-p2-p081": [
+    {
+      "id": "int-p081-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الضغط في الأجسام الصلبة (ص 81)",
+      "title": "الضغط في الأجسام الصلبة (ص 81)",
+      "explanation_ref": "exp-p081"
+    }
+  ],
+  "sci9-p2-p082": [
+    {
+      "id": "int-p082-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.137,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 للسوائل ضغط",
+      "title": "للسوائل ضغط",
+      "explanation_ref": "exp-p082"
+    },
+    {
+      "id": "int-p082-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.351,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: تجربة ضغط السائل والعمق",
+      "title": "🧪 نشاط: تجربة ضغط السائل والعمق",
+      "activity_ref": "act-liquid-pressure-depth"
+    }
+  ],
+  "sci9-p2-p083": [
+    {
+      "id": "int-p083-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.33599999999999997,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 خطوات تجربة الثقوب والضغط",
+      "title": "🧪 خطوات تجربة الثقوب والضغط",
+      "activity_ref": "act-liquid-pressure-depth"
+    }
+  ],
+  "sci9-p2-p084": [
+    {
+      "id": "int-p084-diagram3d",
+      "type": "interactive_3d",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.22799999999999998,
+        "w": 0.8,
+        "h": 0.24
+      },
+      "indicator_label": "🔬 مجسم 3D: مبدأ باسكال والمكبس الهيدروليكي",
+      "title": "🔬 مجسم 3D: مبدأ باسكال والمكبس الهيدروليكي",
+      "diagram_ref": "diag-hydraulic-press"
+    }
+  ],
+  "sci9-p2-p085": [
+    {
+      "id": "int-p085-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 للسوائل ضغط (ص 85)",
+      "title": "للسوائل ضغط (ص 85)",
+      "explanation_ref": "exp-p085"
+    }
+  ],
+  "sci9-p2-p086": [
+    {
+      "id": "int-p086-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.063,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الضغط الجوي",
+      "title": "الضغط الجوي",
+      "explanation_ref": "exp-p086"
+    },
+    {
+      "id": "int-p086-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.39,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: تجربة الكأس المقلوب والضغط الجوي",
+      "title": "🧪 نشاط: تجربة الكأس المقلوب والضغط الجوي",
+      "activity_ref": "act-atmospheric-cup"
+    }
+  ],
+  "sci9-p2-p087": [
+    {
+      "id": "int-p087-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.293,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 إثبات قوة الضغط الجوي للأعلى",
+      "title": "🧪 إثبات قوة الضغط الجوي للأعلى",
+      "activity_ref": "act-atmospheric-cup"
+    }
+  ],
+  "sci9-p2-p088": [
+    {
+      "id": "int-p088-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الضغط الجوي (ص 88)",
+      "title": "الضغط الجوي (ص 88)",
+      "explanation_ref": "exp-p088"
+    }
+  ],
+  "sci9-p2-p089": [
+    {
+      "id": "int-p089-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.26799999999999996,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 قياس الضغط الجوي وتجربة تورشيللي (البارومت",
+      "title": "قياس الضغط الجوي وتجربة تورشيللي (البارومتر)",
+      "explanation_ref": "exp-p089"
+    }
+  ],
+  "sci9-p2-p090": [
+    {
+      "id": "int-p090-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الضغط الجوي (ص 90)",
+      "title": "الضغط الجوي (ص 90)",
+      "explanation_ref": "exp-p090"
+    }
+  ],
+  "sci9-p2-p091": [
+    {
+      "id": "int-p091-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الضغط الجوي (ص 91)",
+      "title": "الضغط الجوي (ص 91)",
+      "explanation_ref": "exp-p091"
+    }
+  ],
+  "sci9-p2-p092": [
+    {
+      "id": "int-p092-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 12 (تصميم السدود وضغط السوائل)",
+      "title": "📝 تقويم الوحدة 12 (تصميم السدود وضغط السوائل)",
+      "assessment_ref": "q-u12-01"
+    }
+  ],
+  "sci9-p2-p093": [
+    {
+      "id": "int-p093-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 12 (البارومتر والضغط الجوي)",
+      "title": "📝 تقويم الوحدة 12 (البارومتر والضغط الجوي)",
+      "assessment_ref": "q-u12-02"
+    }
+  ],
+  "sci9-p2-p094": [
+    {
+      "id": "int-p094-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 13: الطاقة الشمسية واستغلالها",
+      "title": "ملخص الوحدة 13: الطاقة الشمسية واستغلالها",
+      "explanation_ref": "exp-p094"
+    },
+    {
+      "id": "int-p094-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.719,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 13 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 13",
+      "explanation_ref": "exp-p094"
+    }
+  ],
+  "sci9-p2-p095": [
+    {
+      "id": "int-p095-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.178,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الطاقة الشمسية (الإشعاع الشمسي)",
+      "title": "الطاقة الشمسية (الإشعاع الشمسي)",
+      "explanation_ref": "exp-p095"
+    }
+  ],
+  "sci9-p2-p096": [
+    {
+      "id": "int-p096-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الإشعاع الشمسي ومميزاته كمصدر طاقة نظيف",
+      "title": "الإشعاع الشمسي ومميزاته كمصدر طاقة نظيف",
+      "explanation_ref": "exp-p096"
+    }
+  ],
+  "sci9-p2-p097": [
+    {
+      "id": "int-p097-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الطاقة الشمسية (الإشعاع الشمسي) (ص 97)",
+      "title": "الطاقة الشمسية (الإشعاع الشمسي) (ص 97)",
+      "explanation_ref": "exp-p097"
+    }
+  ],
+  "sci9-p2-p098": [
+    {
+      "id": "int-p098-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الطاقة الشمسية (الإشعاع الشمسي) (ص 98)",
+      "title": "الطاقة الشمسية (الإشعاع الشمسي) (ص 98)",
+      "explanation_ref": "exp-p098"
+    }
+  ],
+  "sci9-p2-p099": [
+    {
+      "id": "int-p099-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.101,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 التحويل الحراري للطاقة الشمسية",
+      "title": "التحويل الحراري للطاقة الشمسية",
+      "explanation_ref": "exp-p099"
+    },
+    {
+      "id": "int-p099-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.36,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: تركيز الطاقة الشمسية بالعدسة",
+      "title": "🧪 نشاط: تركيز الطاقة الشمسية بالعدسة",
+      "activity_ref": "act-solar-concentration"
+    }
+  ],
+  "sci9-p2-p100": [
+    {
+      "id": "int-p100-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.252,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 التحويل الحراري للطاقة الشمسية",
+      "title": "🧪 التحويل الحراري للطاقة الشمسية",
+      "activity_ref": "act-solar-concentration"
+    }
+  ],
+  "sci9-p2-p101": [
+    {
+      "id": "int-p101-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 التحويل الحراري للطاقة الشمسية (ص 101)",
+      "title": "التحويل الحراري للطاقة الشمسية (ص 101)",
+      "explanation_ref": "exp-p101"
+    }
+  ],
+  "sci9-p2-p102": [
+    {
+      "id": "int-p102-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 التحويل الحراري للطاقة الشمسية (ص 102)",
+      "title": "التحويل الحراري للطاقة الشمسية (ص 102)",
+      "explanation_ref": "exp-p102"
+    }
+  ],
+  "sci9-p2-p103": [
+    {
+      "id": "int-p103-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.096,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 تحويل الطاقة الشمسية إلى طاقة كهربائية",
+      "title": "تحويل الطاقة الشمسية إلى طاقة كهربائية",
+      "explanation_ref": "exp-p103"
+    }
+  ],
+  "sci9-p2-p104": [
+    {
+      "id": "int-p104-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تحويل الطاقة الشمسية إلى طاقة كهربائية (ص ",
+      "title": "تحويل الطاقة الشمسية إلى طاقة كهربائية (ص 104)",
+      "explanation_ref": "exp-p104"
+    }
+  ],
+  "sci9-p2-p105": [
+    {
+      "id": "int-p105-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تحويل الطاقة الشمسية إلى طاقة كهربائية (ص ",
+      "title": "تحويل الطاقة الشمسية إلى طاقة كهربائية (ص 105)",
+      "explanation_ref": "exp-p105"
+    }
+  ],
+  "sci9-p2-p106": [
+    {
+      "id": "int-p106-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 13 (الطاقة الشمسية)",
+      "title": "📝 تقويم الوحدة 13 (الطاقة الشمسية)",
+      "assessment_ref": "q-u13-01"
+    }
+  ],
+  "sci9-p2-p107": [
+    {
+      "id": "int-p107-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 14: الإنسان يستثمر موارد البيئة الحية",
+      "title": "ملخص الوحدة 14: الإنسان يستثمر موارد البيئة الحية",
+      "explanation_ref": "exp-p107"
+    },
+    {
+      "id": "int-p107-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.715,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 14 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 14",
+      "explanation_ref": "exp-p107"
+    }
+  ],
+  "sci9-p2-p108": [
+    {
+      "id": "int-p108-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.12300000000000001,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 وسائل تنمية الثروة النباتية والحيوانية",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية",
+      "explanation_ref": "exp-p108"
+    }
+  ],
+  "sci9-p2-p109": [
+    {
+      "id": "int-p109-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.288,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 وسائل تنمية الثروة النباتية والحيوانية (ص ",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية (ص 109)",
+      "explanation_ref": "exp-p109"
+    }
+  ],
+  "sci9-p2-p110": [
+    {
+      "id": "int-p110-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.202,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تحسين الإنتاج النباتي (الري الحديث والتسمي",
+      "title": "تحسين الإنتاج النباتي (الري الحديث والتسميد والتهجين)",
+      "explanation_ref": "exp-p110"
+    }
+  ],
+  "sci9-p2-p111": [
+    {
+      "id": "int-p111-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.27099999999999996,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 وسائل تنمية الثروة النباتية والحيوانية (ص ",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية (ص 111)",
+      "explanation_ref": "exp-p111"
+    }
+  ],
+  "sci9-p2-p112": [
+    {
+      "id": "int-p112-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.296,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 وسائل تنمية الثروة النباتية والحيوانية (ص ",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية (ص 112)",
+      "explanation_ref": "exp-p112"
+    }
+  ],
+  "sci9-p2-p113": [
+    {
+      "id": "int-p113-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.622,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 وسائل تنمية الثروة النباتية والحيوانية (ص ",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية (ص 113)",
+      "explanation_ref": "exp-p113"
+    }
+  ],
+  "sci9-p2-p114": [
+    {
+      "id": "int-p114-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 التطعيم والعناية بالثروة الحيوانية",
+      "title": "التطعيم والعناية بالثروة الحيوانية",
+      "explanation_ref": "exp-p114"
+    }
+  ],
+  "sci9-p2-p115": [
+    {
+      "id": "int-p115-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 وسائل تنمية الثروة النباتية والحيوانية (ص ",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية (ص 115)",
+      "explanation_ref": "exp-p115"
+    }
+  ],
+  "sci9-p2-p116": [
+    {
+      "id": "int-p116-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 وسائل تنمية الثروة النباتية والحيوانية (ص ",
+      "title": "وسائل تنمية الثروة النباتية والحيوانية (ص 116)",
+      "explanation_ref": "exp-p116"
+    }
+  ],
+  "sci9-p2-p117": [
+    {
+      "id": "int-p117-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.195,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 صناعات تعتمد على الثروة النباتية والحيوانية",
+      "title": "صناعات تعتمد على الثروة النباتية والحيوانية",
+      "explanation_ref": "exp-p117"
+    }
+  ],
+  "sci9-p2-p118": [
+    {
+      "id": "int-p118-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.255,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعة الألبان والأجبان والتخمر اللبني",
+      "title": "صناعة الألبان والأجبان والتخمر اللبني",
+      "explanation_ref": "exp-p118"
+    }
+  ],
+  "sci9-p2-p119": [
+    {
+      "id": "int-p119-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعات تعتمد على الثروة النباتية والحيواني",
+      "title": "صناعات تعتمد على الثروة النباتية والحيوانية (ص 119)",
+      "explanation_ref": "exp-p119"
+    }
+  ],
+  "sci9-p2-p120": [
+    {
+      "id": "int-p120-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعات تعتمد على الثروة النباتية والحيواني",
+      "title": "صناعات تعتمد على الثروة النباتية والحيوانية (ص 120)",
+      "explanation_ref": "exp-p120"
+    }
+  ],
+  "sci9-p2-p121": [
+    {
+      "id": "int-p121-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.302,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعة الجلود والنسيج وتعليب الأغذية",
+      "title": "صناعة الجلود والنسيج وتعليب الأغذية",
+      "explanation_ref": "exp-p121"
+    }
+  ],
+  "sci9-p2-p122": [
+    {
+      "id": "int-p122-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22399999999999998,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعات تعتمد على الثروة النباتية والحيواني",
+      "title": "صناعات تعتمد على الثروة النباتية والحيوانية (ص 122)",
+      "explanation_ref": "exp-p122"
+    }
+  ],
+  "sci9-p2-p123": [
+    {
+      "id": "int-p123-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.408,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعات تعتمد على الثروة النباتية والحيواني",
+      "title": "صناعات تعتمد على الثروة النباتية والحيوانية (ص 123)",
+      "explanation_ref": "exp-p123"
+    }
+  ],
+  "sci9-p2-p124": [
+    {
+      "id": "int-p124-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 صناعات تعتمد على الثروة النباتية والحيواني",
+      "title": "صناعات تعتمد على الثروة النباتية والحيوانية (ص 124)",
+      "explanation_ref": "exp-p124"
+    }
+  ],
+  "sci9-p2-p125": [
+    {
+      "id": "int-p125-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 14 (تنمية الموارد الحية)",
+      "title": "📝 تقويم الوحدة 14 (تنمية الموارد الحية)",
+      "assessment_ref": "q-u14-01"
+    }
+  ],
+  "sci9-p2-p126": [
+    {
+      "id": "int-p126-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 15: رعاية الأمومة والطفولة",
+      "title": "ملخص الوحدة 15: رعاية الأمومة والطفولة",
+      "explanation_ref": "exp-p126"
+    },
+    {
+      "id": "int-p126-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.723,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 15 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 15",
+      "explanation_ref": "exp-p126"
+    }
+  ],
+  "sci9-p2-p127": [
+    {
+      "id": "int-p127-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.17099999999999999,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 العناية بالأم الحامل والجنين",
+      "title": "العناية بالأم الحامل والجنين",
+      "explanation_ref": "exp-p127"
+    }
+  ],
+  "sci9-p2-p128": [
+    {
+      "id": "int-p128-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.3,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 تغذية الأم الحامل والعناية الصحية أثناء ال",
+      "title": "تغذية الأم الحامل والعناية الصحية أثناء الحمل",
+      "explanation_ref": "exp-p128"
+    }
+  ],
+  "sci9-p2-p129": [
+    {
+      "id": "int-p129-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.298,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 العناية بالأم الحامل والجنين (ص 129)",
+      "title": "العناية بالأم الحامل والجنين (ص 129)",
+      "explanation_ref": "exp-p129"
+    }
+  ],
+  "sci9-p2-p130": [
+    {
+      "id": "int-p130-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.078,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الرضاعة الطبيعية",
+      "title": "الرضاعة الطبيعية",
+      "explanation_ref": "exp-p130"
+    }
+  ],
+  "sci9-p2-p131": [
+    {
+      "id": "int-p131-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 فوائد الرضاعة الطبيعية ومكونات حليب الأم",
+      "title": "فوائد الرضاعة الطبيعية ومكونات حليب الأم",
+      "explanation_ref": "exp-p131"
+    }
+  ],
+  "sci9-p2-p132": [
+    {
+      "id": "int-p132-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الرضاعة الطبيعية (ص 132)",
+      "title": "الرضاعة الطبيعية (ص 132)",
+      "explanation_ref": "exp-p132"
+    }
+  ],
+  "sci9-p2-p133": [
+    {
+      "id": "int-p133-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.077,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 تنظيم الأسرة",
+      "title": "تنظيم الأسرة",
+      "explanation_ref": "exp-p133"
+    }
+  ],
+  "sci9-p2-p134": [
+    {
+      "id": "int-p134-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 15 (رعاية الأمومة والطفولة)",
+      "title": "📝 تقويم الوحدة 15 (رعاية الأمومة والطفولة)",
+      "assessment_ref": "q-u15-01"
+    }
+  ],
+  "sci9-p2-p135": [
+    {
+      "id": "int-p135-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 15 (أسئلة الرضاعة الطبيعية)",
+      "title": "📝 تقويم الوحدة 15 (أسئلة الرضاعة الطبيعية)",
+      "assessment_ref": "q-u15-01"
+    }
+  ],
+  "sci9-p2-p136": [
+    {
+      "id": "int-p136-unit-overview",
+      "type": "title",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.11,
+        "w": 0.8,
+        "h": 0.1
+      },
+      "indicator_label": "📚 الوحدة 16: الوراثة في الكائنات الحية",
+      "title": "ملخص الوحدة 16: الوراثة في الكائنات الحية",
+      "explanation_ref": "exp-p136"
+    },
+    {
+      "id": "int-p136-unit-goals",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.631,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "indicator_label": "💡 أهداف الوحدة 16 ومحاورها",
+      "title": "مقدمة وأهداف الوحدة 16",
+      "explanation_ref": "exp-p136"
+    }
+  ],
+  "sci9-p2-p137": [
+    {
+      "id": "int-p137-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.14100000000000001,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 ما الوراثة؟",
+      "title": "ما الوراثة؟",
+      "explanation_ref": "exp-p137"
+    }
+  ],
+  "sci9-p2-p138": [
+    {
+      "id": "int-p138-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.36,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 نشاط: تجارب مندل والصفات السائدة والمتنحية",
+      "title": "🧪 نشاط: تجارب مندل والصفات السائدة والمتنحية",
+      "activity_ref": "act-mendel-punnett"
+    }
+  ],
+  "sci9-p2-p139": [
+    {
+      "id": "int-p139-activity",
+      "type": "activity",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.359,
+        "w": 0.84,
+        "h": 0.24
+      },
+      "indicator_label": "🧪 تتبع توارث الصفات عبر الأجيال",
+      "title": "🧪 تتبع توارث الصفات عبر الأجيال",
+      "activity_ref": "act-mendel-punnett"
+    }
+  ],
+  "sci9-p2-p140": [
+    {
+      "id": "int-p140-diagram3d",
+      "type": "interactive_3d",
+      "bounds": {
+        "x": 0.1,
+        "y": 0.48000000000000004,
+        "w": 0.8,
+        "h": 0.24
+      },
+      "indicator_label": "🔬 مجسم 3D: تركيب الحمض النووي DNA والكروموسومات",
+      "title": "🔬 مجسم 3D: تركيب الحمض النووي DNA والكروموسومات",
+      "diagram_ref": "diag-dna-double-helix"
+    }
+  ],
+  "sci9-p2-p141": [
+    {
+      "id": "int-p141-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 ما الوراثة؟ (ص 141)",
+      "title": "ما الوراثة؟ (ص 141)",
+      "explanation_ref": "exp-p141"
+    }
+  ],
+  "sci9-p2-p142": [
+    {
+      "id": "int-p142-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.094,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 زواج الأقارب وما ينجم عنه",
+      "title": "زواج الأقارب وما ينجم عنه",
+      "explanation_ref": "exp-p142"
+    }
+  ],
+  "sci9-p2-p143": [
+    {
+      "id": "int-p143-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 زواج الأقارب وما ينجم عنه (ص 143)",
+      "title": "زواج الأقارب وما ينجم عنه (ص 143)",
+      "explanation_ref": "exp-p143"
+    }
+  ],
+  "sci9-p2-p144": [
+    {
+      "id": "int-p144-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.16099999999999998,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الطفرات الوراثية",
+      "title": "الطفرات الوراثية",
+      "explanation_ref": "exp-p144"
+    }
+  ],
+  "sci9-p2-p145": [
+    {
+      "id": "int-p145-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الطفرات الوراثية والتركيب الكروموسومي للإن",
+      "title": "الطفرات الوراثية والتركيب الكروموسومي للإنسان (46)",
+      "explanation_ref": "exp-p145"
+    }
+  ],
+  "sci9-p2-p146": [
+    {
+      "id": "int-p146-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الطفرات الوراثية (ص 146)",
+      "title": "الطفرات الوراثية (ص 146)",
+      "explanation_ref": "exp-p146"
+    }
+  ],
+  "sci9-p2-p147": [
+    {
+      "id": "int-p147-lesson-title",
+      "type": "title",
+      "bounds": {
+        "x": 0.12,
+        "y": 0.15600000000000003,
+        "w": 0.76,
+        "h": 0.075
+      },
+      "indicator_label": "📖 الأمراض الوراثية",
+      "title": "الأمراض الوراثية",
+      "explanation_ref": "exp-p147"
+    }
+  ],
+  "sci9-p2-p148": [
+    {
+      "id": "int-p148-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الأمراض الوراثية: التقزم وعمى الألوان ومتل",
+      "title": "الأمراض الوراثية: التقزم وعمى الألوان ومتلازمة داون",
+      "explanation_ref": "exp-p148"
+    }
+  ],
+  "sci9-p2-p149": [
+    {
+      "id": "int-p149-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.22,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 حالة الألبينو (انعدام صبغة الميلانين) واله",
+      "title": "حالة الألبينو (انعدام صبغة الميلانين) والهيموفيليا",
+      "explanation_ref": "exp-p149"
+    }
+  ],
+  "sci9-p2-p150": [
+    {
+      "id": "int-p150-explain",
+      "type": "explainable_text",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.46399999999999997,
+        "w": 0.84,
+        "h": 0.2
+      },
+      "indicator_label": "💡 الأمراض الوراثية (ص 150)",
+      "title": "الأمراض الوراثية (ص 150)",
+      "explanation_ref": "exp-p150"
+    }
+  ],
+  "sci9-p2-p151": [
+    {
+      "id": "int-p151-assess-1",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.2,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 16 (زواج الأقارب والوراثة)",
+      "title": "📝 تقويم الوحدة 16 (زواج الأقارب والوراثة)",
+      "assessment_ref": "q-u16-01"
+    },
+    {
+      "id": "int-p151-assess-2",
+      "type": "assessment",
+      "bounds": {
+        "x": 0.08,
+        "y": 0.52,
+        "w": 0.84,
+        "h": 0.26
+      },
+      "indicator_label": "📝 تقويم الوحدة 16 (اختبار صح أم خطأ الشامل)",
+      "title": "📝 تقويم الوحدة 16 (اختبار صح أم خطأ الشامل)",
+      "assessment_ref": "q-u16-02"
     }
   ]
 }

@@ -11,7 +11,7 @@ import subprocess
 import time
 from PIL import Image
 
-BASE_DIR = "/media/tawheeb/New Volume2/ذاكر/teaching-app"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 BOOKS = [
     {

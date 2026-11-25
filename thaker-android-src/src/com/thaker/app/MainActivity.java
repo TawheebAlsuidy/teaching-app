@@ -257,9 +257,10 @@ public class MainActivity extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.library_title);
         builder.setItems(new CharSequence[]{
-                getString(R.string.chem_card_title),
+                getString(R.string.book_sci_interactive),
                 getString(R.string.book_physics_3d),
                 getString(R.string.book_biology_3d),
+                getString(R.string.chem_card_title),
                 getString(R.string.book_science_3d),
                 getString(R.string.book_math_3d)
         }, new DialogInterface.OnClickListener() {
@@ -267,14 +268,16 @@ public class MainActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 String asset = null;
                 if (which == 0) {
-                    asset = "chem-lab-book.html";
+                    asset = "thaker-interactive-book.html";
                 } else if (which == 1) {
                     asset = "physics-12th-book.html";
                 } else if (which == 2) {
                     asset = "biology-12th-book.html";
                 } else if (which == 3) {
-                    asset = "science-9th-book.html";
+                    asset = "chem-lab-book.html";
                 } else if (which == 4) {
+                    asset = "science-9th-book.html";
+                } else if (which == 5) {
                     asset = "math-9th-book.html";
                 }
                 Intent intent = new Intent(MainActivity.this, LabActivity.class);

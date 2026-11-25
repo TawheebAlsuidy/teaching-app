@@ -95,5 +95,259 @@
         "z": 2.5
       }
     }
+  },
+  "diag-co2-prep": {
+    "id": "diag-co2-prep",
+    "title": "جهاز تحضير غاز ثاني أكسيد الكربون (CO2) في المختبر",
+    "book_page": 20,
+    "figure_num": 1,
+    "equation": "CaCO3 + 2HCl -> CaCl2 + H2O + CO2↑",
+    "components": [
+      {
+        "id": "woulfe_bottle",
+        "name": "قارورة وف (Woulfe Bottle)",
+        "description": "قارورة زجاجية ثنائية العنق توضع فيها قطع الرخام CaCO3."
+      },
+      {
+        "id": "thistle_funnel",
+        "name": "قمع الإضافة ذو الأنبوب الطويل",
+        "description": "يصل طرفه لأسفل السائل لمنع تسرب غاز CO2 للخارج."
+      },
+      {
+        "id": "delivery_tube",
+        "name": "أنبوبة التوصيل الزجاجية",
+        "description": "تنقل الغاز المتصاعد من قارورة التفاعل إلى مخبار التجميع."
+      },
+      {
+        "id": "gas_jar",
+        "name": "مخبار جمع الغاز",
+        "description": "يجمع الغاز بإزاحة الهواء إلى أعلى لأنه أثقل من الهواء."
+      }
+    ]
+  },
+  "diag-sulfur-combustion": {
+    "id": "diag-sulfur-combustion",
+    "title": "تجربة احتراق الكبريت والماغنسيوم وموقد بنسن",
+    "book_page": 8,
+    "figure_num": 2,
+    "equation": "S + O2 -> SO2 | 2Mg + O2 -> 2MgO",
+    "components": [
+      {
+        "id": "bunsen_burner",
+        "name": "موقد بنسن (Bunsen Burner)",
+        "description": "مصدر حراري مع صمام ضبط للهواء لتوفير حرارة الاشتعال."
+      },
+      {
+        "id": "spoon",
+        "name": "ملعقة الاحتراق",
+        "description": "ملعقة ذات يد طويلة لوضع مسحوق الكبريت داخل المخبار."
+      },
+      {
+        "id": "cylinder",
+        "name": "مخبار الغاز والغطاء الزجاجي",
+        "description": "لحبس غاز ثاني أكسيد الكبريت المتكون واختبار حمضيته بورقة تباع الشمس."
+      }
+    ]
+  },
+  "diag-rust-experiment": {
+    "id": "diag-rust-experiment",
+    "title": "تجربة أنابيب اختبار صدأ الحديد وشروط التآكل",
+    "book_page": 13,
+    "figure_num": 3,
+    "equation": "4Fe + 3O2 + 2xH2O -> 2Fe2O3.xH2O",
+    "components": [
+      {
+        "id": "tube1",
+        "name": "الأنبوبة (1): ماء وهواء",
+        "description": "يتكون صدأ كثيف لوجود الأكسجين والرطوبة معاً."
+      },
+      {
+        "id": "tube2",
+        "name": "الأنبوبة (2): ماء مغلي + زيت",
+        "description": "لا يحدث صدأ لغياب الأكسجين المطرود بالغليان والمحجوب بالزيت."
+      },
+      {
+        "id": "tube3",
+        "name": "الأنبوبة (3): كلوريد كالسيوم جاف",
+        "description": "لا يحدث صدأ لغياب الرطوبة (هواء جاف تماماً)."
+      },
+      {
+        "id": "tube4",
+        "name": "الأنبوبة (4): ماء مالح",
+        "description": "صدأ شديد متسارع بسبب زيادة التوصيل الأيوني للأملاح."
+      }
+    ]
+  },
+  "diag-carbon-allotropes": {
+    "id": "diag-carbon-allotropes",
+    "title": "النموذج البلوري الفراغي للماس والجرافيت",
+    "book_page": 17,
+    "figure_num": 4,
+    "equation": "C (الماس الصلد) vs C (الجرافيت الناعم)",
+    "components": [
+      {
+        "id": "diamond_lattice",
+        "name": "بنية الماس الفراغية (sp3)",
+        "description": "ارتباط تساهمي صلب جداً في الأبعاد الثلاثية يعطيه أعلى درجات الصلادة."
+      },
+      {
+        "id": "graphite_sheets",
+        "name": "طبقات الجرافيت السداسية (sp2)",
+        "description": "طبقات تنزلق بينها روابط ضعيفة مما يجعله ناعماً وموصلاً للتيار."
+      }
+    ]
+  },
+  "diag-petroleum-fractionation": {
+    "id": "diag-petroleum-fractionation",
+    "title": "برج التقطير التجزيئي لفصل النفط ومشتقاته",
+    "book_page": 24,
+    "figure_num": 5,
+    "equation": "النفط الخام -> قطفات غازية وخفيفة ومتوسطة وثقيلة بالحرارة",
+    "components": [
+      {
+        "id": "tower_column",
+        "name": "برج التجزئة والأطباق",
+        "description": "برج أسطواني تتدرج حرارته من 400°م في القاع إلى أقل من 20°م في القمة."
+      },
+      {
+        "id": "condenser_trays",
+        "name": "مخارج القطفات البترولية",
+        "description": "فصل غاز الطبخ، الجازولين، الكيروسين، الديزل، والمازوت والأسفلت."
+      }
+    ]
+  },
+  "diag-chlorine-prep": {
+    "id": "diag-chlorine-prep",
+    "title": "جهاز تحضير وتجفيف غاز الكلور (Cl₂) في المختبر",
+    "page_id": "sci9-p2-p036",
+    "book_figure": "شكل (1) ص 36",
+    "scientific_equation": "MnO₂ + 4HCl ➔ MnCl₂ + 2H₂O + Cl₂ ↑",
+    "components": [
+      {
+        "id": "flask",
+        "name": "دورق التفاعل مع التسخين",
+        "role": "يحتوي على مسحوق ثاني أكسيد المنجنيز MnO₂ وحمض HCl المركز."
+      },
+      {
+        "id": "water-wash",
+        "name": "قنينة الغسيل بالماء",
+        "role": "تخليص غاز الكلور من أبخرة حمض الهيدروكلوريك العالقة."
+      },
+      {
+        "id": "h2so4-dry",
+        "name": "قنينة حمض الكبريتيك المركز",
+        "role": "تجفيف غاز الكلور من بخار الماء."
+      },
+      {
+        "id": "gas-jar",
+        "name": "مخبار جمع الغاز",
+        "role": "جمع غاز الكلور الأصفر المخضر بإزاحة الهواء إلى أعلى."
+      }
+    ],
+    "three_scene_preset": {
+      "type": "chemical_apparatus",
+      "camera": {
+        "x": 0,
+        "y": 1.2,
+        "z": 3.4
+      },
+      "reaction_active": true
+    }
+  },
+  "diag-capillarity-tubes": {
+    "id": "diag-capillarity-tubes",
+    "title": "ارتفاع السوائل في الأنابيب الشعرية (الخاصية الشعرية)",
+    "page_id": "sci9-p2-p062",
+    "book_figure": "شكل (1) ص 62",
+    "scientific_equation": "كلما قلّ نصف قطر الأنبوب الشعري زاد ارتفاع عمود السائل",
+    "components": [
+      {
+        "id": "wide-tube",
+        "name": "أنبوب زجاجي واسع",
+        "role": "يرتفع فيه الماء بمقدار ضئيل جداً."
+      },
+      {
+        "id": "medium-tube",
+        "name": "أنبوب متوسط الضيق",
+        "role": "يرتفع فيه الماء لمستوى متوسط بسطح مقعر."
+      },
+      {
+        "id": "capillary-tube",
+        "name": "أنبوب شعري ضيق جداً",
+        "role": "يرتفع فيه الماء لأعلى مستوى بسبب غلبة قوى التلاصق."
+      }
+    ],
+    "three_scene_preset": {
+      "type": "chemical_apparatus",
+      "camera": {
+        "x": 0,
+        "y": 1.2,
+        "z": 3.2
+      }
+    }
+  },
+  "diag-hydraulic-press": {
+    "id": "diag-hydraulic-press",
+    "title": "مبدأ باسكال والمكبس الهيدروليكي",
+    "page_id": "sci9-p2-p084",
+    "book_figure": "مبدأ باسكال ص 84",
+    "scientific_equation": "F₁ / A₁ = F₂ / A₂",
+    "components": [
+      {
+        "id": "small-piston",
+        "name": "المكبس الصغير (مساحة A₁)",
+        "role": "تؤثر عليه قوة دفع صغيرة F₁ فينتقل الضغط للسائل."
+      },
+      {
+        "id": "oil-fluid",
+        "name": "السائل الهيدروليكي المحصور",
+        "role": "ينقل الضغط الإضافي بالتساوي في جميع الاتجاهات."
+      },
+      {
+        "id": "large-piston",
+        "name": "المكبس الكبير (مساحة A₂)",
+        "role": "يولّد قوة رفع كبيرة جداً F₂ قادرة على رفع السيارات."
+      }
+    ],
+    "three_scene_preset": {
+      "type": "chemical_apparatus",
+      "camera": {
+        "x": 0,
+        "y": 1.2,
+        "z": 3.4
+      }
+    }
+  },
+  "diag-dna-double-helix": {
+    "id": "diag-dna-double-helix",
+    "title": "نموذج الحمض النووي (DNA) والكروموسومات",
+    "page_id": "sci9-p2-p140",
+    "book_figure": "شكل (6) ص 140",
+    "scientific_equation": "الكروموسوم = DNA ملتف حول بروتينات (يحمل المورثات/الجينات)",
+    "components": [
+      {
+        "id": "sugar-phosphate",
+        "name": "العمود الفقري (سكر + فوسفات)",
+        "role": "يشكل جانبي السلم اللولبي المزدوج للـ DNA."
+      },
+      {
+        "id": "nitrogen-bases",
+        "name": "القواعد النيتروجينية (A-T, C-G)",
+        "role": "تشكل درجات السلم وتحمل الشيفرة الوراثية."
+      },
+      {
+        "id": "chromosome",
+        "name": "الكروموسوم المتماثل",
+        "role": "ينقل الصفات الوراثية أثناء الانقسام الخلوي."
+      }
+    ],
+    "three_scene_preset": {
+      "type": "crystal_lattice",
+      "camera": {
+        "x": 0,
+        "y": 1.1,
+        "z": 3.2
+      }
+    }
   }
 }
