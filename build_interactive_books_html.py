@@ -12,22 +12,56 @@ import json
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 ACTIVITY_MODAL_HTML = """
-<!-- Grade 12 Interactive Activity Simulator Modal -->
-<div id="g12ActivityModal" style="display:none; position:fixed; inset:0; background:#0B151C; z-index:960; padding:16px; overflow-y:auto; color:#f8fafc;">
-  <div style="max-width:680px; margin:14px auto; display:flex; flex-direction:column; gap:12px;">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <button class="act-circle-btn" onclick="closeActivityModal()">✕</button>
-      <div style="text-align:center; flex:1;">
-        <div style="font-size:11.5px; font-weight:800; color:#38bdf8;">🧪 المختبر والنشاط التفاعلي</div>
-        <h3 id="actModalTitle" style="margin:2px 0 0; font-size:16.5px; color:#FFFFFF;">عنوان النشاط</h3>
+<!-- Grade 12 Guided Interactive Simulator Modal (Dark-Navy Design Matching تصاميم التجارب) -->
+<div id="g12ActivityModal" style="display:none; position:fixed; inset:0; background:radial-gradient(circle at 50% 22%, #13283E 0%, #091522 60%, #060E17 100%); z-index:960; color:#F8FAFC; overflow-y:auto;">
+  <div style="max-width:580px; min-height:100%; margin:0 auto; display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 16px 6px; gap:10px;">
+        <button class="act-circle-btn" style="width:42px; height:42px; border-radius:13px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); color:#fff; font-size:18px; cursor:pointer;" onclick="closeActivityModal()">✕</button>
+        <div style="text-align:center; flex:1; min-width:0;">
+          <div id="actModalTitle" style="font-size:17px; font-weight:800; color:#FFFFFF; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">المختبر التفاعلي</div>
+          <div id="g12ActSubTitle" style="font-size:12px; color:#94A3B8; margin-top:2px;">محاكاة علمية · التفاعل المباشر</div>
+        </div>
+        <button class="act-circle-btn" style="width:42px; height:42px; border-radius:13px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); color:#fff; font-size:18px; cursor:pointer;" onclick="toggleG12MoreMenu(true)">···</button>
       </div>
-      <div style="width:40px;"></div>
+      <div style="display:flex; align-items:center; gap:6px; padding:6px 16px 4px;">
+        <div style="flex:1; display:flex; gap:6px;">
+          <div id="g12Seg1" onclick="setG12Step(1)" style="flex:1; height:4.5px; border-radius:99px; background:#0EA5E9; cursor:pointer;"></div>
+          <div id="g12Seg2" onclick="setG12Step(2)" style="flex:1; height:4.5px; border-radius:99px; background:rgba(255,255,255,0.14); cursor:pointer;"></div>
+          <div id="g12Seg3" onclick="setG12Step(3)" style="flex:1; height:4.5px; border-radius:99px; background:rgba(255,255,255,0.14); cursor:pointer;"></div>
+        </div>
+        <span id="g12StepCounter" style="font-size:12px; font-weight:700; color:#94A3B8;">1/3</span>
+      </div>
     </div>
-    <p id="actModalDesc" style="font-size:13px; color:#94a3b8; line-height:1.6; text-align:center;"></p>
-    <div id="actVisualStage" style="background:radial-gradient(circle at 50% 45%, #163044 0%, #0B151C 100%); border:1px solid rgba(56,189,248,0.25); border-radius:20px; padding:16px; color:#f8fafc; min-height:160px;"></div>
-    <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:10px;"></div>
-    <div id="actReadoutBox" style="background:rgba(0,168,89,0.14); border:1px solid var(--primary); border-radius:16px; padding:12px 14px; font-size:13.5px; line-height:1.7; color:#f8fafc;"></div>
-    <button class="btn-nav" onclick="closeActivityModal()" style="background:var(--primary); color:#fff; border-color:var(--primary); border-radius:999px; padding:12px; width:100%;">إغلاق والعودة للكتاب</button>
+
+    <div style="position:relative; flex:1; min-height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:12px 16px;">
+      <div id="actVisualStage" style="width:100%; color:#f8fafc; text-align:center;"></div>
+      <div id="g12DoneCheckBadge" style="display:none; width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#10B981,#059669); box-shadow:0 0 0 10px rgba(16,185,129,0.16); align-items:center; justify-content:center; font-size:30px; color:#fff; font-weight:900; margin-top:12px;">✓</div>
+      <div style="position:absolute; left:0; right:0; bottom:0; height:26px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(6,14,23,0.4)); border-top:1px solid rgba(255,255,255,0.08); pointer-events:none;"></div>
+    </div>
+
+    <div style="background:#0F1D2E; border-top:1px solid rgba(255,255,255,0.08); border-radius:28px 28px 0 0; padding:18px 18px 20px; display:flex; flex-direction:column; gap:11px; box-shadow:0 -10px 30px rgba(0,0,0,0.35);">
+      <h4 id="g12BottomStepTitle" style="margin:0; font-size:19px; font-weight:800; color:#FFFFFF;">اضبط المتغيرات ولاحظ النتيجة</h4>
+      <p id="actModalDesc" style="margin:0; font-size:13px; color:#94A3B8; line-height:1.6;"></p>
+      <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
+      <div id="actReadoutBox" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:12px 14px; font-size:13px; line-height:1.7; color:#E2E8F0; display:none;"></div>
+      <div id="g12DualBtns" style="display:none; gap:10px;">
+        <button onclick="setG12Step(1)" style="flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:#F1F5F9; border-radius:999px; padding:10px; font-weight:700; cursor:pointer; font-family:inherit;">🔁 تعديل القيم</button>
+        <button onclick="closeActivityModal()" style="flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:#F1F5F9; border-radius:999px; padding:10px; font-weight:700; cursor:pointer; font-family:inherit;">📖 إلى صفحة الكتاب</button>
+      </div>
+      <button id="g12MainCtaBtn" onclick="advanceG12Step()" style="width:100%; height:50px; border-radius:999px; border:none; background:linear-gradient(135deg,#10B981,#059669); color:#fff; font-size:15.5px; font-weight:800; cursor:pointer; box-shadow:0 8px 20px rgba(5,150,105,0.35); font-family:inherit;">شغّل المحاكاة &nbsp;‹</button>
+    </div>
+  </div>
+</div>
+
+<div id="g12MoreBackdrop" style="display:none; position:fixed; inset:0; background:rgba(3,8,15,0.68); z-index:980; align-items:flex-end; justify-content:center;" onclick="if(event.target===this)toggleG12MoreMenu(false)">
+  <div style="width:100%; max-width:580px; max-height:75vh; overflow-y:auto; background:#0F1D2E; border-top:1px solid rgba(255,255,255,0.1); border-radius:28px 28px 0 0; padding:10px 18px 24px; color:#F8FAFC;">
+    <div style="width:42px; height:4px; border-radius:99px; background:rgba(255,255,255,0.22); margin:0 auto 10px;"></div>
+    <div style="font-size:12.5px; font-weight:700; color:#94A3B8; padding:6px 4px;">أنشطة الكتاب</div>
+    <div id="g12MoreActivitiesList"></div>
+    <div style="height:1px; background:rgba(255,255,255,0.1); margin:8px 0;"></div>
+    <button onclick="toggleG12MoreMenu(false); setG12Step(1);" style="width:100%; background:transparent; border:none; color:#F8FAFC; padding:12px 4px; font-size:14.5px; font-weight:700; text-align:right; cursor:pointer; font-family:inherit;">↺ إعادة الضبط للخطوة الأولى</button>
+    <button onclick="toggleG12MoreMenu(false); closeActivityModal();" style="width:100%; background:transparent; border:none; color:#F8FAFC; padding:12px 4px; font-size:14.5px; font-weight:700; text-align:right; cursor:pointer; font-family:inherit;">📖 العودة لصفحة الكتاب</button>
   </div>
 </div>
 """
@@ -102,37 +136,112 @@ handleHotspotClick = function(item) {
 // --------------------------------------------------------
 let curActivity = null;
 let curActValues = {};
+let curG12Step = 1;
 
 function openActivityModal(actRef) {
+  const keys = Object.keys(ACTIVITIES);
   const data = ACTIVITIES[actRef] || Object.values(ACTIVITIES)[0];
   if (!data) { showToast('النشاط غير متاح حالياً'); return; }
   curActivity = data;
   curActValues = {};
   document.getElementById('actModalTitle').textContent = data.title;
+  const idx = Math.max(1, keys.indexOf(data.id || actRef) + 1);
+  const sub = document.getElementById('g12ActSubTitle');
+  if (sub) sub.textContent = `${data.unit_id ? data.unit_id.toUpperCase() : 'مختبر'} · نشاط ${idx} من ${keys.length}`;
   document.getElementById('actModalDesc').textContent = data.description;
 
   const ctrlBox = document.getElementById('actControlsContainer');
   ctrlBox.innerHTML = (data.controls || []).map(c => {
     curActValues[c.id] = c.default;
     return `
-      <div style="background:rgba(148,163,184,0.08); border:1px solid var(--border-light); border-radius:10px; padding:10px 12px;">
-        <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:700; margin-bottom:6px;">
+      <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:10px 12px;">
+        <div style="display:flex; justify-content:space-between; font-size:12.5px; font-weight:700; margin-bottom:6px; color:#E2E8F0;">
           <span>${c.label}</span>
-          <span id="actVal_${c.id}" style="color:var(--primary); font-family:monospace; font-size:14px;">${c.default}</span>
+          <span id="actVal_${c.id}" style="color:#10B981; font-family:monospace; font-size:13.5px;">${c.default}</span>
         </div>
         <input type="range" min="${c.min}" max="${c.max}" step="${c.step}" value="${c.default}"
-          style="width:100%; accent-color:var(--primary); cursor:pointer;"
+          style="width:100%; accent-color:#10B981; cursor:pointer;"
           oninput="onActivityControlChange('${c.id}', parseFloat(this.value))">
       </div>
     `;
   }).join('');
 
+  const listEl = document.getElementById('g12MoreActivitiesList');
+  if (listEl) {
+    listEl.innerHTML = keys.map(k => {
+      const a = ACTIVITIES[k];
+      const active = (a === data);
+      return `<button onclick="toggleG12MoreMenu(false); openActivityModal('${k}');" style="width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,0.06); color:#F8FAFC; padding:11px 4px; font-size:13.5px; font-weight:700; text-align:right; display:flex; justify-content:space-between; cursor:pointer; font-family:inherit;">
+        <span>🧪 &nbsp; ${a.title}</span><span style="color:#10B981;">${active ? '✓' : ''}</span>
+      </button>`;
+    }).join('');
+  }
+
   document.getElementById('g12ActivityModal').style.display = 'block';
+  setG12Step(1);
   updateActivitySimulation();
+}
+
+function setG12Step(stepNum) {
+  curG12Step = Math.max(1, Math.min(3, stepNum));
+  const counter = document.getElementById('g12StepCounter');
+  if (counter) counter.textContent = `${curG12Step}/3`;
+  for (let i = 1; i <= 3; i++) {
+    const seg = document.getElementById('g12Seg' + i);
+    if (seg) seg.style.background = i < curG12Step ? '#10B981' : (i === curG12Step ? '#0EA5E9' : 'rgba(255,255,255,0.14)');
+  }
+  const h = document.getElementById('g12BottomStepTitle');
+  const desc = document.getElementById('actModalDesc');
+  const ctrls = document.getElementById('actControlsContainer');
+  const readout = document.getElementById('actReadoutBox');
+  const dual = document.getElementById('g12DualBtns');
+  const badge = document.getElementById('g12DoneCheckBadge');
+  const cta = document.getElementById('g12MainCtaBtn');
+
+  if (curG12Step === 1) {
+    if (h) h.textContent = '1. اضبط المتغيرات قبل التشغيل';
+    if (desc) desc.style.display = 'block';
+    if (ctrls) ctrls.style.display = 'flex';
+    if (readout) readout.style.display = 'none';
+    if (dual) dual.style.display = 'none';
+    if (badge) badge.style.display = 'none';
+    if (cta) cta.innerHTML = 'تشغيل المحاكاة ومشاهدة النتائج &nbsp;‹';
+  } else if (curG12Step === 2) {
+    if (h) h.textContent = '2. النتائج الحية والتفاعل المباشر';
+    if (desc) desc.style.display = 'none';
+    if (ctrls) ctrls.style.display = 'flex';
+    if (readout) readout.style.display = 'block';
+    if (dual) dual.style.display = 'none';
+    if (badge) badge.style.display = 'none';
+    if (cta) cta.innerHTML = 'الاستنتاج والربط بالمنهج &nbsp;‹';
+  } else {
+    if (h) h.textContent = 'أحسنت! أتممت المحاكاة بنجاح';
+    if (desc) desc.style.display = 'none';
+    if (ctrls) ctrls.style.display = 'none';
+    if (readout) readout.style.display = 'block';
+    if (dual) dual.style.display = 'flex';
+    if (badge) badge.style.display = 'flex';
+    if (cta) cta.innerHTML = 'اختبر نفسك في الدرس &nbsp;‹';
+  }
+}
+
+function advanceG12Step() {
+  if (curG12Step < 3) {
+    setG12Step(curG12Step + 1);
+  } else {
+    closeActivityModal();
+    openCurrentPageQuiz();
+  }
+}
+
+function toggleG12MoreMenu(show) {
+  const m = document.getElementById('g12MoreBackdrop');
+  if (m) m.style.display = show ? 'flex' : 'none';
 }
 
 function closeActivityModal() {
   document.getElementById('g12ActivityModal').style.display = 'none';
+  toggleG12MoreMenu(false);
 }
 
 function onActivityControlChange(id, val) {
