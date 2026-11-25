@@ -1,0 +1,378 @@
+{
+  "act-chem-1-1": {
+    "id": "act-chem-1-1",
+    "title": "نشاط (1-1): الكشف عن الحديد في أملاحه ⚗️",
+    "unit_id": "u1",
+    "book_page": 21,
+    "has_lab": true,
+    "lab_exp": "exp-1",
+    "lab_url": "chem-lab-book.html#exp=exp-1&from=book&page=21",
+    "sim_type": "chem_lab_bridge",
+    "description": "تنفيذ تجربة التمييز بين أيوني Fe²⁺ (أخضر باهت) و Fe³⁺ (أصفر) باستخدام هيدروكسيد الصوديوم NaOH وكاشف الثيوسيانات KSCN مباشرة في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-2-1": {
+    "id": "act-chem-2-1",
+    "title": "نشاط (2-1): حرارة الذوبان (طارد وماص) ⚗️",
+    "unit_id": "u2",
+    "book_page": 31,
+    "has_lab": true,
+    "lab_exp": "exp-2",
+    "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31",
+    "sim_type": "chem_lab_bridge",
+    "description": "قارن بين ذوبان نترات الأمونيوم NH₄NO₃ الماص للحرارة وذوبان هيدروكسيد الصوديوم NaOH الطارد للحرارة بالميزان الحراري 3D في المعمل.",
+    "controls": []
+  },
+  "act-chem-3-1": {
+    "id": "act-chem-3-1",
+    "title": "نشاط (3-1): الأكسدة والاختزال التلقائي ⚗️",
+    "unit_id": "u3",
+    "book_page": 48,
+    "has_lab": true,
+    "lab_exp": "exp-3",
+    "lab_url": "chem-lab-book.html#exp=exp-3&from=book&page=48",
+    "sim_type": "chem_lab_bridge",
+    "description": "اغمس شريحة الخارصين Zn في محلول كبريتات النحاس CuSO₄ الأزرق وراقب الأكسدة والاختزال التلقائي وتغير اللون في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-3-2": {
+    "id": "act-chem-3-2",
+    "title": "نشاط (3-2): تركيب خلية جلفانية وقياس جهدها ⚗️",
+    "unit_id": "u3",
+    "book_page": 50,
+    "has_lab": true,
+    "lab_exp": "exp-4",
+    "lab_url": "chem-lab-book.html#exp=exp-4&from=book&page=50",
+    "sim_type": "chem_lab_bridge",
+    "description": "ركّب نصفي خلية الخارصين والنحاس والقنطرة الملحية واقرأ فرق الجهد القياسي (1.10V) على الفولتميتر مباشرة في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-3-3": {
+    "id": "act-chem-3-3",
+    "title": "نشاط (3-3): فحص صلاحية المركم الرصاصي ⚗️",
+    "unit_id": "u3",
+    "book_page": 56,
+    "has_lab": true,
+    "lab_exp": "exp-5",
+    "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56",
+    "sim_type": "chem_lab_bridge",
+    "description": "قِس كثافة حمض الكبريتيك بالهيدروميتر بين حالة الشحن الكامل (1.28) والتفريغ (1.15) لبطارية السيارة في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-3-4": {
+    "id": "act-chem-3-4",
+    "title": "نشاط (3-4): التحليل الكهربي للماء ⚗️",
+    "unit_id": "u3",
+    "book_page": 60,
+    "has_lab": true,
+    "lab_exp": "exp-6",
+    "lab_url": "chem-lab-book.html#exp=exp-6&from=book&page=60",
+    "sim_type": "chem_lab_bridge",
+    "description": "شغّل جهاز هوفمان للماء المحمض، ولاحظ نسبة تصاعد غاز H₂ إلى O₂ (2:1) واكشف عن الغازين بالشظية في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-3-plate": {
+    "id": "act-chem-3-plate",
+    "title": "شكل (3-12): الطلاء الكهربي بالفضة ⚗️",
+    "unit_id": "u3",
+    "book_page": 63,
+    "has_lab": true,
+    "lab_exp": "exp-7",
+    "lab_url": "chem-lab-book.html#exp=exp-7&from=book&page=63",
+    "sim_type": "chem_lab_bridge",
+    "description": "نفّذ تجربة الطلاء الكهربي لملعقة نحاسية كمهبط بفلز الفضة في محلول AgNO₃ مباشرة في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-6-1": {
+    "id": "act-chem-6-1",
+    "title": "نشاط (6-1): الكشف عن السكر في البول بفهلنج ⚗️",
+    "unit_id": "u6",
+    "book_page": 110,
+    "has_lab": true,
+    "lab_exp": "exp-8",
+    "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=110",
+    "sim_type": "chem_lab_bridge",
+    "description": "اختبر وجود السكر المختزل (الجلوكوز) باستخدام محلول فهلنج الأزرق مع التسخين حتى تكون راسب أحمر طوبي (Cu₂O) في المعمل 3D.",
+    "controls": []
+  },
+  "act-chem-6-3": {
+    "id": "act-chem-6-3",
+    "title": "نشاط (6-3): التمييز بين المالتوز والسكروز ⚗️",
+    "unit_id": "u6",
+    "book_page": 111,
+    "has_lab": true,
+    "lab_exp": "exp-8",
+    "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111",
+    "sim_type": "chem_lab_bridge",
+    "description": "المالتوز سكر ثنائي مختزل يتفاعل مع فهلنج معطياً راسباً أحمر طوبياً Cu₂O، بينما السكروز لا يختزله؛ جرّب كاشف فهلنج الآن في المعمل 3D.",
+    "controls": []
+  },
+  "act-chem-6-4": {
+    "id": "act-chem-6-4",
+    "title": "نشاط (6-4): الكشف عن النشا بمحلول اليود ⚗️",
+    "unit_id": "u6",
+    "book_page": 112,
+    "has_lab": true,
+    "lab_exp": "exp-8",
+    "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=112",
+    "sim_type": "chem_lab_bridge",
+    "description": "أضف قطرات من كاشف اليود I₂ إلى محلول النشا لمشاهدة اللون الأزرق الداكن المسود المميز مباشرة في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-7-tower": {
+    "id": "act-chem-7-tower",
+    "title": "شكل (7-3): التقطير التجزيئي للنفط الخام ⚗️",
+    "unit_id": "u7",
+    "book_page": 131,
+    "has_lab": true,
+    "lab_exp": "exp-10",
+    "lab_url": "chem-lab-book.html#exp=exp-10&from=book&page=131",
+    "sim_type": "chem_lab_bridge",
+    "description": "استكشف تسخين النفط وصعود الأبخرة في برج التقطير وفصل الغازات والجازولين والكيروسين والديزل والإسفلت في المعمل 3D.",
+    "controls": []
+  },
+  "act-chem-8-2": {
+    "id": "act-chem-8-2",
+    "title": "نشاط (8-2): تحضير الصابون في المعمل (التصبّن) ⚗️",
+    "unit_id": "u8",
+    "book_page": 158,
+    "has_lab": true,
+    "lab_exp": "exp-9",
+    "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=158",
+    "sim_type": "chem_lab_bridge",
+    "description": "سخّن الزيت النباتي مع هيدروكسيد الصوديوم ثم أضف محلول الملح المركز NaCl للتمليح وفصل الصابون الصلب في معمل الكيمياء 3D.",
+    "controls": []
+  },
+  "act-chem-4-1": {
+    "id": "act-chem-4-1",
+    "title": "نشاط (4-1): الحماية من الإشعاع النووي وقانون التربيع العكسي",
+    "unit_id": "u4",
+    "book_page": 88,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_radiation_safety_sim",
+    "description": "تحقق حسابياً وعملياً كيف تنخفض شدة الإشعاع الخارجي بمربع المسافة عن المصدر المشع وبنوع الدرع الواقي (ورق/ألومنيوم/رصاص).",
+    "controls": [
+      {
+        "id": "dist",
+        "label": "المسافة عن المصدر (d) متر",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "shield",
+        "label": "نوع الدرع الواقي (1 ورق · 2 ألومنيوم · 3 رصاص)",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  },
+  "act-chem-6-2": {
+    "id": "act-chem-6-2",
+    "title": "نشاط (6-2): التمييز العملي بين الجلوكوز والفركتوز",
+    "unit_id": "u6",
+    "book_page": 110,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_seliwanoff_sim",
+    "description": "اختبر كلاً من الجلوكوز (ألدهيدي) والفركتوز (كيتوني) مع محلول فهلنج وكاشف سليفانوف (ريزورسينول + HCl مركز) واكتشف الفرق المخبري.",
+    "controls": [
+      {
+        "id": "reagent",
+        "label": "الكاشف (1 فهلنج · 2 سليفانوف)",
+        "min": 1,
+        "max": 2,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "heat_min",
+        "label": "زمن التسخين في حمام مائي (دقائق)",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-chem-6-5": {
+    "id": "act-chem-6-5",
+    "title": "نشاط (6-5): الكشف المخبري عن الزلال (الألبومين) في البول",
+    "unit_id": "u6",
+    "book_page": 115,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_albumin_sim",
+    "description": "نفذ طريقتي الكشف المخبري عن وجود البروتين (الزلال) في البول: اختبار التسخين + حمض الخليك، واختبار الحلقة البيضاء بحمض النيتريك المركز.",
+    "controls": [
+      {
+        "id": "method",
+        "label": "طريقة الكشف (1 تسخين وحمض خليك · 2 حلقة حمض النيتريك)",
+        "min": 1,
+        "max": 2,
+        "step": 1,
+        "default": 1
+      },
+      {
+        "id": "sample",
+        "label": "نوع العينة (1 عينة سليمة · 2 عينة بها زلال)",
+        "min": 1,
+        "max": 2,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-chem-7-1": {
+    "id": "act-chem-7-1",
+    "title": "نشاط (7-1): مسح المنتجات المشتقة من البترول",
+    "unit_id": "u7",
+    "book_page": 124,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_petro_list_sim",
+    "description": "استعرض وصنّف مشتقات البترول التي تستخدمها يومياً في الملابس والأواني والأدوية والمذيبات واللدائن.",
+    "controls": [
+      {
+        "id": "cat",
+        "label": "القطاع (1 لدائن وبلاستيك · 2 ألياف وكساء · 3 أدوية وعطور)",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "default": 1
+      }
+    ]
+  },
+  "act-chem-7-2": {
+    "id": "act-chem-7-2",
+    "title": "نشاط (7-2): مقارنة نظريات أصل النفط الخام",
+    "unit_id": "u7",
+    "book_page": 128,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_oil_origin_sim",
+    "description": "قارن بين نظرية الأصل الحي ونظرية الكربيد غير العضوية من حيث الأدلة الجيولوجية والكيميائية.",
+    "controls": [
+      {
+        "id": "theory",
+        "label": "النظرية (1 الأصل الحي الراجحة · 2 نظرية الكربيد)",
+        "min": 1,
+        "max": 2,
+        "step": 1,
+        "default": 1
+      }
+    ]
+  },
+  "act-chem-7-3": {
+    "id": "act-chem-7-3",
+    "title": "نشاط (7-3): إنتاج وتكرير النفط في اليمن والعالم العربي",
+    "unit_id": "u7",
+    "book_page": 131,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_yemen_oil_sim",
+    "description": "استعرض أحواض الإنتاج والمصافي الرئيسية في اليمن والعالم العربي وكيفية تكرير الخام إلى مشتقات عالية القيمة.",
+    "controls": [
+      {
+        "id": "basin",
+        "label": "الحوض / المصفاة (1 مأرب · 2 المسيلة حضرموت · 3 مصفاة عدن)",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "default": 1
+      }
+    ]
+  },
+  "act-chem-7-4": {
+    "id": "act-chem-7-4",
+    "title": "نشاط (7-4): استخدامات النفط وقيمته الاقتصادية",
+    "unit_id": "u7",
+    "book_page": 136,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_petro_value_sim",
+    "description": "احسب وقارن القيمة المضافة للبرميل الواحد عند حرقه كوقود مقابل تحويله إلى بتروكيماويات وأدوية ولدائن.",
+    "controls": [
+      {
+        "id": "mode",
+        "label": "الاستخدام (1 حرق كوقود · 2 صناعة بتروكيماويات)",
+        "min": 1,
+        "max": 2,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-chem-8-1": {
+    "id": "act-chem-8-1",
+    "title": "نشاط (8-1): تحضير بوليمر النايلون 6,6 بالتكاثف البيني",
+    "unit_id": "u8",
+    "book_page": 154,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_nylon_sim",
+    "description": "اضبط تركيز كلوريد الأديبويل مع هكساميثيلين ثنائي الأمين وراقب سحب خيط النايلون 6,6 وتأثير الشد الميكانيكي على متانته.",
+    "controls": [
+      {
+        "id": "stretch",
+        "label": "معدل الشد بعد التكثف (×الطول الأصلي)",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 4
+      },
+      {
+        "id": "monomer",
+        "label": "توازن المونومرات (%)",
+        "min": 50,
+        "max": 100,
+        "step": 10,
+        "default": 100
+      }
+    ]
+  },
+  "act-chem-9-1": {
+    "id": "act-chem-9-1",
+    "title": "نشاط (9-1): قضية سوء استخدام المبيدات في اليمن",
+    "unit_id": "u9",
+    "book_page": 180,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_pesticide_safety_sim",
+    "description": "حلّل الآثار الصحية والبيئية للإفراط في المبيدات على المزارع والتربة وقارنها ببدائل المكافحة المتكاملة الآمنة.",
+    "controls": [
+      {
+        "id": "practice",
+        "label": "أسلوب الزراعة (1 رش عشوائي · 2 استخدام آمن ومتوازن)",
+        "min": 1,
+        "max": 2,
+        "step": 1,
+        "default": 2
+      }
+    ]
+  },
+  "act-chem-9-2": {
+    "id": "act-chem-9-2",
+    "title": "نشاط (9-2): رصد التلوث البيئي المحلي واقتراح الحلول",
+    "unit_id": "u9",
+    "book_page": 182,
+    "has_lab": false,
+    "lab_exp": null,
+    "sim_type": "chem_local_env_sim",
+    "description": "شخّص نوع التلوث (هواء، ماء، تربة) واختر الحل الكيميائي والوقائي الأنسب من المنهج المدرسي.",
+    "controls": [
+      {
+        "id": "env_type",
+        "label": "الوسط المتأثر (1 الهواء والعوادم · 2 المياه والبيارات · 3 التربة)",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "default": 1
+      }
+    ]
+  }
+}

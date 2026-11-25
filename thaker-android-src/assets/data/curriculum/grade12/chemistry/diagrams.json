@@ -1,0 +1,390 @@
+{
+  "diag-chem-iron-blast": {
+    "id": "diag-chem-iron-blast",
+    "lab_exp": null,
+    "title": "الفرن العالي (اللافح) واختزال خامات الحديد (ص 18)",
+    "sim_key": "chem_blast_furnace",
+    "formula": "FeO + CO → Fe + CO₂",
+    "slider_label": "حرارة المنطقة:",
+    "slider_min": 400,
+    "slider_max": 1900,
+    "slider_val": 1100,
+    "slider_unit": " °C",
+    "components": [
+      {
+        "id": "charge",
+        "name": "الشحنة (هيماتيت + كوك + حجر جيري)",
+        "role": "تلقم من أعلى الفرن لإتمام الاختزال والتخلص من الشوائب كخبث."
+      },
+      {
+        "id": "hotblast",
+        "name": "منطقة الاحتراق السفلى (1900°C)",
+        "role": "تنتج أول أكسيد الكربون CO اللازم لاختزال الأكاسيد وينصهر الحديد في القاع."
+      }
+    ]
+  },
+  "diag-chem-iron-test": {
+    "id": "diag-chem-iron-test",
+    "lab_exp": "exp-1",
+    "lab_url": "chem-lab-book.html#exp=exp-1&from=book&page=21",
+    "title": "الكشف عن أيونات الحديد Fe²⁺ و Fe³⁺ 3D (ص 21)",
+    "sim_key": "chem_iron_ions",
+    "formula": "Fe³⁺ + 3SCN⁻ → [Fe(SCN)₃] (أحمر دموي)",
+    "slider_label": "تركيز الكاشف:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 70,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "fe2",
+        "name": "أنبوبة الحديد الثنائي Fe²⁺",
+        "role": "تعطي مع NaOH راسباً أخضر باهتاً Fe(OH)₂."
+      },
+      {
+        "id": "fe3",
+        "name": "أنبوبة الحديد الثلاثي Fe³⁺",
+        "role": "تعطي راسباً بنياً محمراً مع NaOH وأحمر دموياً مع KSCN."
+      }
+    ]
+  },
+  "diag-chem-thermo": {
+    "id": "diag-chem-thermo",
+    "lab_exp": "exp-2",
+    "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31",
+    "title": "التغيرات الحرارية والطارد والماص للحرارة 3D (ص 23–34)",
+    "sim_key": "chem_calorimetry",
+    "formula": "q = m · c · ΔT  |  ΔH = H(N) − H(R)",
+    "slider_label": "كمية المذاب:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 4,
+    "slider_unit": " mol",
+    "components": [
+      {
+        "id": "endo",
+        "name": "نظام ماص (NH₄NO₃)",
+        "role": "يمتص الحرارة من الماء والوسط فتبرد الكأس (ΔH > 0)."
+      },
+      {
+        "id": "exo",
+        "name": "نظام طارد (NaOH)",
+        "role": "يطلق حرارة قوية للماء فيرتفع الترمومتر (ΔH < 0)."
+      }
+    ]
+  },
+  "diag-chem-galvanic": {
+    "id": "diag-chem-galvanic",
+    "lab_exp": "exp-4",
+    "lab_url": "chem-lab-book.html#exp=exp-4&from=book&page=49",
+    "title": "الخلية الجلفانية وخلية دانيال Zn/Cu 3D (ص 47–50)",
+    "sim_key": "chem_daniell_cell",
+    "formula": "Zn + Cu²⁺ → Zn²⁺ + Cu   (E° = 1.10 V)",
+    "slider_label": "فرق الجهد المقاس:",
+    "slider_min": 0,
+    "slider_max": 150,
+    "slider_val": 110,
+    "slider_unit": " ×0.01 V",
+    "components": [
+      {
+        "id": "zn",
+        "name": "مصعد الخارصين Zn (−)",
+        "role": "يتأكسد فيه الخارصين وتنطلق منه الإلكترونات عبر السلك."
+      },
+      {
+        "id": "cu",
+        "name": "مهبط النحاس Cu (+)",
+        "role": "تختزل عليه أيونات النحاس وتترسب بطبقة نحاسية حمراء."
+      },
+      {
+        "id": "bridge",
+        "name": "القنطرة الملحية",
+        "role": "تعادل الشحنات وتغلق الدائرة الأيونية لاستمرار التيار."
+      }
+    ]
+  },
+  "diag-chem-battery": {
+    "id": "diag-chem-battery",
+    "lab_exp": "exp-5",
+    "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56",
+    "title": "المركم الرصاصي وبطارية السيارة 3D (ص 55–56)",
+    "sim_key": "chem_lead_battery",
+    "formula": "Pb + PbO₂ + 2H₂SO₄ ⇌ 2PbSO₄ + 2H₂O",
+    "slider_label": "نسبة الشحن:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 90,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "pb",
+        "name": "أقطاب Pb و PbO₂",
+        "role": "تغمران في حمض الكبريتيك المخفف (6 خلايا متوالية تعطي 12 فولت)."
+      },
+      {
+        "id": "hydrometer",
+        "name": "كثافة الحمض (الهيدروميتر)",
+        "role": "1.28 g/cm³ تعني شحناً كاملاً وتنخفض عند التفريغ إلى 1.15."
+      }
+    ]
+  },
+  "diag-chem-electrolysis": {
+    "id": "diag-chem-electrolysis",
+    "lab_exp": "exp-6",
+    "lab_url": "chem-lab-book.html#exp=exp-6&from=book&page=60",
+    "title": "خلية التحليل الكهربي وجهاز هوفمان 3D (ص 59–61)",
+    "sim_key": "chem_electrolysis",
+    "formula": "2H₂O(l) → 2H₂(g)↑ + O₂(g)↑",
+    "slider_label": "تيار التحليل:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 5,
+    "slider_unit": " A",
+    "components": [
+      {
+        "id": "cath",
+        "name": "المهبط (−) H₂",
+        "role": "يتصاعد عنده غاز الهيدروجين بضعف حجم الأكسجين ويشتعل بفرقعة."
+      },
+      {
+        "id": "anod",
+        "name": "المصعد (+) O₂",
+        "role": "يتصاعد عنده غاز الأكسجين الذي يلهب شظية متقدة."
+      }
+    ]
+  },
+  "diag-chem-electroplating": {
+    "id": "diag-chem-electroplating",
+    "lab_exp": "exp-7",
+    "lab_url": "chem-lab-book.html#exp=exp-7&from=book&page=63",
+    "title": "خلية الطلاء الكهربي بالفضة 3D (شكل 3-12 · ص 63)",
+    "sim_key": "chem_electroplating",
+    "formula": "Ag⁺(aq) + e⁻ → Ag(s) (عند المهبط)",
+    "slider_label": "زمن الإمرار:",
+    "slider_min": 5,
+    "slider_max": 60,
+    "slider_val": 25,
+    "slider_unit": " min",
+    "components": [
+      {
+        "id": "anode_ag",
+        "name": "صفيحة الفضة (المصعد +)",
+        "role": "تذوب ذراتها كأيونات Ag⁺ لتعويض المحلول."
+      },
+      {
+        "id": "fork",
+        "name": "الشوكة/الملعقة (المهبط −)",
+        "role": "تترسب عليها طبقة فضية لامعة متماسكة من محلول AgNO₃."
+      }
+    ]
+  },
+  "diag-chem-nuclear": {
+    "id": "diag-chem-nuclear",
+    "lab_exp": null,
+    "title": "استقرار النواة والتفاعلات النووية 3D (الوحدة 4)",
+    "sim_key": "phys_bohr",
+    "formula": "ΔE = Δm · 931.5 MeV",
+    "slider_label": "النيوكليونات:",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "belt",
+        "name": "حزام الاستقرار",
+        "role": "الأنوية خارجه تطلق ألفا أو بيتا أو بوزيتروناً للوصول للاستقرار."
+      },
+      {
+        "id": "shield",
+        "name": "قدرة النفاذ",
+        "role": "ألفا تتوقف بالورق، وبيتا بالألومنيوم، وجاما بالرصاص السميك."
+      }
+    ]
+  },
+  "diag-chem-nitrogen": {
+    "id": "diag-chem-nitrogen",
+    "lab_exp": null,
+    "title": "مركبات النيتروجين العضوية والأحماض الأمينية 3D (الوحدة 5)",
+    "sim_key": "chem_organic_n",
+    "formula": "R–NH₂  |  R–CONH₂  |  H₂N–CH(R)–COOH",
+    "slider_label": "استبدال المجموعة:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "amine",
+        "name": "المجموعة الأمينية (–NH₂)",
+        "role": "تمنح المركب صفات قاعدية لاستقبال البروتون H⁺."
+      },
+      {
+        "id": "amide",
+        "name": "رابطة الأميد (–CO–NH₂)",
+        "role": "تمنح الثبات وتتكسر في تفاعل خسف هوفمان."
+      }
+    ]
+  },
+  "diag-chem-biochem": {
+    "id": "diag-chem-biochem",
+    "lab_exp": null,
+    "title": "البنية الحلقية للسكريات والإنزيمات 3D (الوحدة 6)",
+    "sim_key": "chem_biochem",
+    "formula": "جلوكوز + فركتوز → سكروز + H₂O",
+    "slider_label": "درجة الحرارة:",
+    "slider_min": 10,
+    "slider_max": 80,
+    "slider_val": 37,
+    "slider_unit": " °C",
+    "components": [
+      {
+        "id": "sugars",
+        "name": "السكريات الأحادية والثنائية",
+        "role": "المختزلة تعطي راسب Cu₂O أحمر طوبياً مع فهلنج."
+      },
+      {
+        "id": "enzyme",
+        "name": "الإنزيم ومادة التفاعل",
+        "role": "ترتبط بالموقع الفعال كالقفل والمفتاح عند pH وحرارة مثالية."
+      }
+    ]
+  },
+  "diag-chem-biochem-test": {
+    "id": "diag-chem-biochem-test",
+    "lab_exp": "exp-8",
+    "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111",
+    "title": "الكشف عن النشا والسكريات المختزلة 3D (ص 110–113)",
+    "sim_key": "chem_biochem",
+    "formula": "نشا + I₂ (أزرق داكن)  |  سكر مختزل + فهلنج → Cu₂O↓",
+    "slider_label": "التسخين / التركيز:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 75,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "iodine",
+        "name": "كاشف اليود I₂ للنشا",
+        "role": "يلوّن النشا بالأزرق الداكن على البارد."
+      },
+      {
+        "id": "fehling",
+        "name": "كاشف فهلنج للسكريات المختزلة",
+        "role": "يتحول لأحمر طوبي Cu₂O بالتسخين مع الجلوكوز والمالتوز."
+      }
+    ]
+  },
+  "diag-chem-distillation": {
+    "id": "diag-chem-distillation",
+    "lab_exp": "exp-10",
+    "lab_url": "chem-lab-book.html#exp=exp-10&from=book&page=131",
+    "title": "برج التقطير التجزيئي للنفط الخام 3D (شكل 7-3 · ص 131)",
+    "sim_key": "chem_distillation_tower",
+    "formula": "غازات (<40°C) ← جازولين ← كيروسين ← ديزل ← إسفلت",
+    "slider_label": "ارتفاع الصينية:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "furnace",
+        "name": "الفرن (400–500°C)",
+        "role": "يبخر خام النفط ليدخل قاعدة برج التقطير."
+      },
+      {
+        "id": "trays",
+        "name": "صواني التكثف",
+        "role": "تفصل المشتقات حسب اختلاف درجات غليانها."
+      }
+    ]
+  },
+  "diag-chem-petro": {
+    "id": "diag-chem-petro",
+    "lab_exp": null,
+    "title": "الصناعات البتروكيماوية والهيدروكربونات 3D (الوحدة 7)",
+    "sim_key": "chem_distillation_tower",
+    "formula": "نفط خام → وقود + لدائن + ألياف + مذيبات",
+    "slider_label": "نسبة التكسير:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 60,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "cracking",
+        "name": "التكسير الحفزي والحراري",
+        "role": "يحوّل الجزيئات الثقيلة إلى جازولين وألكينات."
+      }
+    ]
+  },
+  "diag-chem-nylon": {
+    "id": "diag-chem-nylon",
+    "lab_exp": null,
+    "title": "الأسمدة وبوليمر النايلون 6,6 3D (ص 140–156)",
+    "sim_key": "chem_soap_polymer",
+    "formula": "حمض أديبيك + هكساميثيلين ثنائي الأمين → نايلون 6,6",
+    "slider_label": "درجة البلمرة:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 75,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "nylon",
+        "name": "رابطة البولي أميد (–CO–NH–)",
+        "role": "تمنح ألياف النايلون 6,6 متانة تشبه الصلب عند شدها."
+      }
+    ]
+  },
+  "diag-chem-industry": {
+    "id": "diag-chem-industry",
+    "lab_exp": "exp-9",
+    "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=158",
+    "title": "تحضير الصابون وإزالة الأوساخ 3D (ص 157–164)",
+    "sim_key": "chem_soap_polymer",
+    "formula": "دهن + 3NaOH → صابون + جلسرين",
+    "slider_label": "نسبة القلوي/الملح:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 60,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "tail",
+        "name": "الذيل الكاره للماء (C₁₇H₃₅–)",
+        "role": "يغوص في قطيرة الزيت أو الدهن المراد إزالته."
+      },
+      {
+        "id": "head",
+        "name": "الرأس المحب للماء (–COO⁻Na⁺)",
+        "role": "يرتبط بجزيئات الماء فيستحلب الدهون وتزول بالغسيل."
+      }
+    ]
+  },
+  "diag-chem-environment": {
+    "id": "diag-chem-environment",
+    "lab_exp": null,
+    "title": "دورة الكربون والاحتباس الحراري والمطر الحمضي 3D (الوحدة 9)",
+    "sim_key": "chem_env_cycle",
+    "formula": "SO₃ + H₂O → H₂SO₄  |  2CO + 2NO → 2CO₂ + N₂",
+    "slider_label": "تركيز CO₂ / SO₂:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 45,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "greenhouse",
+        "name": "الدفيئة والاحتباس الحراري",
+        "role": "يحبس CO₂ الأشعة تحت الحمراء فترتفع حرارة الأرض."
+      },
+      {
+        "id": "acidrain",
+        "name": "الأمطار الحمضية",
+        "role": "تتلف الغابات والمحاصيل وتؤكل مباني الحجر الجيري."
+      }
+    ]
+  }
+}

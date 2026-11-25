@@ -3614,24 +3614,83 @@ loadVoices();
 StorageManager.init();
 QualityManager.init();
 
-// Restore saved progress if available
-const savedProg = StorageManager.getProgress();
-let initExpIdx = 0;
-let initStepIdx = 0;
-if (savedProg && savedProg.expId) {
-  const foundIdx = EXPERIMENTS.findIndex(e => e.id === savedProg.expId);
-  if (foundIdx !== -1) {
-    initExpIdx = foundIdx;
-    if (typeof savedProg.stepIdx === 'number' && savedProg.stepIdx < EXPERIMENTS[foundIdx].st.length) {
-      initStepIdx = savedProg.stepIdx;
+// Parse URL search & hash deep-link parameters (?exp=exp-1&from=book&page=21 or #exp=exp-1&from=book&page=21)
+function parseLabLaunchParams() {
+  const out = {};
+  const collect = (raw) => {
+    if (!raw) return;
+    const cleaned = raw.replace(/^[?#]/, '');
+    if (!cleaned) return;
+    cleaned.split('&').forEach((part) => {
+      const eq = part.indexOf('=');
+      if (eq === -1) return;
+      const k = decodeURIComponent(part.slice(0, eq).trim());
+      const val = decodeURIComponent(part.slice(eq + 1).trim());
+      if (k) out[k] = val;
+    });
+  };
+  try { collect(window.location.search); } catch (e) {}
+  try { collect(window.location.hash); } catch (e) {}
+  return out;
+}
+
+const LAUNCH_CONTEXT = {
+  from: null,
+  book: 'chemistry-12th-book.html',
+  page: null
+};
+
+function applyLaunchNavigation(isInitial) {
+  const params = parseLabLaunchParams();
+  if (params.from) LAUNCH_CONTEXT.from = params.from;
+  if (params.book) LAUNCH_CONTEXT.book = params.book;
+  if (params.page && /^\d+$/.test(params.page)) LAUNCH_CONTEXT.page = parseInt(params.page, 10);
+
+  if (LAUNCH_CONTEXT.from === 'book') {
+    const backBtn = document.querySelector('#expInfo .btn-transparent-back');
+    if (backBtn) {
+      const label = LAUNCH_CONTEXT.page
+        ? `العودة إلى الكتاب التفاعلي (ص ${LAUNCH_CONTEXT.page})`
+        : 'العودة إلى الكتاب التفاعلي';
+      backBtn.title = label;
+      backBtn.setAttribute('aria-label', label);
+    }
+  }
+
+  let handledExp = false;
+  if (params.exp) {
+    const foundIdx = EXPERIMENTS.findIndex(e => e.id === params.exp);
+    if (foundIdx !== -1) {
+      loadExperiment(foundIdx);
+      view(params.view || 'lab');
+      handledExp = true;
+      setTimeout(() => {
+        showToast(`⚗️ تم فتح تجربة: ${EXPERIMENTS[foundIdx].n}`);
+      }, 250);
+    }
+  }
+  if (!handledExp && isInitial) {
+    const savedProg = StorageManager.getProgress();
+    let initExpIdx = 0;
+    let initStepIdx = 0;
+    if (savedProg && savedProg.expId) {
+      const foundIdx = EXPERIMENTS.findIndex(e => e.id === savedProg.expId);
+      if (foundIdx !== -1) {
+        initExpIdx = foundIdx;
+        if (typeof savedProg.stepIdx === 'number' && savedProg.stepIdx < EXPERIMENTS[foundIdx].st.length) {
+          initStepIdx = savedProg.stepIdx;
+        }
+      }
+    }
+    loadExperiment(initExpIdx);
+    if (initStepIdx > 0) {
+      setStep(initStepIdx);
     }
   }
 }
 
-loadExperiment(initExpIdx);
-if (initStepIdx > 0) {
-  setStep(initStepIdx);
-}
+applyLaunchNavigation(true);
+window.addEventListener('hashchange', () => applyLaunchNavigation(false));
 requestAnimationFrame(mainLoop);
 
 // Auto-fade touch hint after 6s
@@ -3643,8 +3702,13 @@ setTimeout(() => {
   }
 }, 6000);
 
-// Exit to Home Hub Navigation
+// Exit to Home Hub or Return Directly to Linked Textbook Page
 function exitToHome() {
+  if (LAUNCH_CONTEXT.from === 'book') {
+    const pageHash = LAUNCH_CONTEXT.page ? `#page=${LAUNCH_CONTEXT.page}` : '';
+    window.location.href = (LAUNCH_CONTEXT.book || 'chemistry-12th-book.html') + pageHash;
+    return;
+  }
   if (window.ThakerBridge && window.ThakerBridge.returnToHome) {
     window.ThakerBridge.returnToHome();
   } else {

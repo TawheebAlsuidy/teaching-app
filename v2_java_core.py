@@ -690,17 +690,21 @@ public class OnboardingActivity extends Activity {
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import java.util.Locale;
 
 public class LabActivity extends Activity {
 
     private WebView webView;
     private String htmlAsset = "thaker-interactive-book.html";
+    private TextToSpeech tts;
+    private volatile boolean ttsReady = false;
 
     @SuppressLint({"SetJavaScriptEnabled", "JavascriptInterface"})
     @Override
@@ -708,6 +712,13 @@ public class LabActivity extends Activity {
         ThemeUtil.apply(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab);
+
+        tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                ttsReady = (status == TextToSpeech.SUCCESS);
+            }
+        });
 
         String requested = getIntent().getStringExtra("html_asset");
         if (requested != null && !requested.trim().isEmpty()) {
@@ -754,6 +765,31 @@ public class LabActivity extends Activity {
                     ThakerStore.setUnitMastery(LabActivity.this, unitId.trim(), Math.max(lvl, ThakerStore.getUnitMastery(LabActivity.this, unitId.trim(), 0)));
                 }
             }
+
+            @JavascriptInterface
+            public boolean isTtsAvailable() {
+                return ttsReady && tts != null;
+            }
+
+            @JavascriptInterface
+            public boolean speak(final String text, final String lang) {
+                if (!ttsReady || tts == null || text == null || text.trim().isEmpty()) {
+                    return false;
+                }
+                final String tag = (lang == null || lang.trim().isEmpty()) ? "en-GB" : lang.trim();
+                final Locale loc = Locale.forLanguageTag(tag.replace('_', '-'));
+                int res = tts.setLanguage(loc);
+                if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    if (tag.toLowerCase(Locale.US).startsWith("en")) {
+                        res = tts.setLanguage(Locale.US);
+                    }
+                }
+                if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    return false;
+                }
+                tts.speak(text.trim(), TextToSpeech.QUEUE_FLUSH, null, "thaker_tts");
+                return true;
+            }
         }, "ThakerBridge");
 
         webView.setWebViewClient(new WebViewClient());
@@ -781,6 +817,7 @@ public class LabActivity extends Activity {
         if (asset.contains("math-9th")) return "math_lab";
         if (asset.contains("physics-12th")) return "phys_12";
         if (asset.contains("biology-12th")) return "bio_12";
+        if (asset.contains("chemistry-12th") || asset.contains("chem-lab")) return "chem_12";
         return "chem_12";
     }
 
@@ -790,6 +827,7 @@ public class LabActivity extends Activity {
         if (asset.contains("math-9th")) return "الرياضيات 3D - الصف التاسع";
         if (asset.contains("physics-12th")) return "الفيزياء - الثالث الثانوي";
         if (asset.contains("biology-12th")) return "الأحياء - الثالث الثانوي";
+        if (asset.contains("chem-lab")) return "مختبر الكيمياء 3D - الثالث الثانوي";
         return "الكيمياء - الثالث الثانوي";
     }
 
@@ -800,6 +838,29 @@ public class LabActivity extends Activity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (tts != null) tts.stop();
+        if (webView != null) webView.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (webView != null) webView.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        if (webView != null) webView.destroy();
+        super.onDestroy();
     }
 }
 """)

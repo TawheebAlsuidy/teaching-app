@@ -848,7 +848,7 @@ body.dark-theme .soft-mistake-box { background: rgba(239,68,68,0.15); color: #fe
       <span id="labEquationBadge">⚖️ المبدأ العلمي: <b>—</b></span>
       <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>
     </div>
-    <button onclick="openActiveDiagInDedicatedLab()" style="width:100%; background:linear-gradient(135deg,#10B981,#059669); color:#fff; border:none; border-radius:999px; padding:9px 14px; font-size:12.5px; font-weight:800; cursor:pointer; font-family:inherit;">🔬 افتح النشاط بالخطوات الكاملة في المعمل 3D ‹</button>
+    <button id="btnLab3dOpenDedicated" onclick="openActiveDiagInDedicatedLab()" style="width:100%; background:linear-gradient(135deg,#10B981,#059669); color:#fff; border:none; border-radius:999px; padding:9px 14px; font-size:12.5px; font-weight:800; cursor:pointer; font-family:inherit;">🔬 افتح النشاط بالخطوات الكاملة في المعمل 3D ‹</button>
   </div>
 </div>
 
@@ -4103,9 +4103,19 @@ handleHotspotClick = function(item) {
 function getUnitDefaultExpForPage(p) {
   const spots = INTERACTIONS[p?.page_id] || [];
   const actSpot = spots.find(s => s.type === 'activity' && s.activity_ref);
-  if (actSpot) return actSpot.activity_ref;
-  const diagSpot = spots.find(s => s.type === 'interactive_3d' && s.diagram_ref && DIAGRAMS[s.diagram_ref]?.lab_exp);
-  if (diagSpot) return DIAGRAMS[diagSpot.diagram_ref].lab_exp;
+  if (actSpot) {
+    if (actSpot.lab_exp) return actSpot.lab_exp;
+    const actObj = ACTIVITIES[actSpot.activity_ref];
+    if (actObj && actObj.lab_exp) return actObj.lab_exp;
+    if (BOOK_SUBJECT_KEY !== 'chemistry') return actSpot.activity_ref;
+  }
+  const diagSpot = spots.find(s => s.type === 'interactive_3d' && (s.lab_exp || (s.diagram_ref && DIAGRAMS[s.diagram_ref]?.lab_exp)));
+  if (diagSpot) return diagSpot.lab_exp || DIAGRAMS[diagSpot.diagram_ref].lab_exp;
+  if (BOOK_SUBJECT_KEY === 'chemistry') {
+    const uObj = (UNITS || []).find(u => u.id === p?.unit_id);
+    if (uObj && uObj.lab_id) return uObj.lab_id;
+    return '';
+  }
   const uid = p?.unit_id || 'u1';
   const unitDiag = Object.values(DIAGRAMS).find(d => d.lab_exp && (d.id.includes(uid) || d.lab_exp.includes(uid)));
   if (unitDiag) return unitDiag.lab_exp;
@@ -4117,6 +4127,13 @@ function openDedicatedLabForPage(explicitExpId) {
   const p = PAGES[state.curPageIdx] || PAGES[0] || {};
   const expId = explicitExpId || getUnitDefaultExpForPage(p);
   const bp = p.book_page || '';
+  if (BOOK_LAB_HTML === 'chem-lab-book.html') {
+    let hashParts = ['from=book'];
+    if (expId) hashParts.push('exp=' + encodeURIComponent(expId));
+    if (bp) hashParts.push('page=' + encodeURIComponent(bp));
+    window.location.href = `${BOOK_LAB_HTML}#${hashParts.join('&')}`;
+    return;
+  }
   let url = `${BOOK_LAB_HTML}?from=book`;
   if (expId) url += `&exp=${encodeURIComponent(expId)}`;
   if (bp) url += `&page=${encodeURIComponent(bp)}`;
@@ -4149,15 +4166,24 @@ let curG12Step = 1;
 function openActivityModal(actRef) {
   const p = PAGES[state.curPageIdx] || PAGES[0] || {};
   const candidate = ACTIVITIES[actRef];
-  if (candidate && candidate.lab_url) {
+  if (candidate && candidate.lab_url && candidate.has_lab !== false) {
     const bp = p.book_page || candidate.book_page || '';
-    const sep = candidate.lab_url.includes('?') ? '&' : '?';
-    window.location.href = bp ? `${candidate.lab_url}${sep}page=${encodeURIComponent(bp)}` : candidate.lab_url;
+    if (candidate.lab_url.includes('#')) {
+      const cleaned = candidate.lab_url.replace(/&?page=\d+/g, '').replace(/[?&]$/, '');
+      window.location.href = bp ? `${cleaned}&page=${encodeURIComponent(bp)}` : cleaned;
+    } else {
+      const sep = candidate.lab_url.includes('?') ? '&' : '?';
+      window.location.href = bp ? `${candidate.lab_url}${sep}page=${encodeURIComponent(bp)}` : candidate.lab_url;
+    }
     return;
   }
 
-  const simKeys = Object.keys(ACTIVITIES).filter(k => ACTIVITIES[k] && ACTIVITIES[k].sim_type);
-  const fallback = (candidate && candidate.sim_type) ? candidate : (ACTIVITIES[`act-${BOOK_SUBJECT_KEY === 'physics' ? 'phys' : 'bio'}-${p.unit_id || 'u1'}`] || ACTIVITIES[simKeys[0]] || Object.values(ACTIVITIES)[0]);
+  const simKeys = Object.keys(ACTIVITIES).filter(k => ACTIVITIES[k] && ACTIVITIES[k].sim_type && ACTIVITIES[k].has_lab !== true);
+  const unitMatchAct = Object.values(ACTIVITIES).find(a => a && a.unit_id === (p.unit_id || 'u1') && a.sim_type && a.controls && a.controls.length);
+  const subjFallback = BOOK_SUBJECT_KEY === 'chemistry'
+    ? unitMatchAct
+    : ACTIVITIES[`act-${BOOK_SUBJECT_KEY === 'physics' ? 'phys' : 'bio'}-${p.unit_id || 'u1'}`];
+  const fallback = (candidate && candidate.sim_type) ? candidate : (subjFallback || ACTIVITIES[simKeys[0]] || Object.values(ACTIVITIES)[0]);
   if (!fallback) {
     openDedicatedLabForPage(actRef);
     return;
@@ -4497,6 +4523,74 @@ function updateActivitySimulation() {
     const eras = {1: 'حقبة الحياة القديمة (الأسماك والبرمائيات وثلاثيات الفصوص)', 2: 'حقبة الحياة المتوسطة (الديناصورات والزواحف العملاقة)', 3: 'حقبة الحياة الحديثة (الثدييات والإنسان)'};
     stage.innerHTML = `<div style="text-align:center; padding:12px;"><div style="font-size:18px; font-weight:bold; color:#fbbf24;">العمر التقديري بالكربون-14: ~${age.toFixed(0)} سنة</div><div style="font-size:13px; margin-top:8px;">${eras[era]}</div></div>`;
     readout.innerHTML = `<b>🪨 التأريخ الإشعاعي:</b><br>• عمر النصف للكربون-14 = <b>5,730 سنة</b> (يُستخدم للأحافير الحديثة)، أما الصخور القديمة بملايين السنين فتؤرخ باليورانيوم-238.`;
+  } else if (st === 'chem_radiation_safety_sim') {
+    const d = v.dist || 2, sh = v.shield || 3;
+    const relInt = (100 / (d * d)).toFixed(1);
+    const shInfo = {1: 'ورق مقوى (يوقف أشعة ألفا α فقط وتمر بيتا وجاما)', 2: 'لوح ألومنيوم (يوقف ألفا وبيتا β بينما تنفذ جاما)', 3: 'درع رصاص سميك Pb (يمتص ألفا وبيتا ويضعف أشعة جاما γ)'}[sh];
+    stage.innerHTML = `<div style="padding:12px; text-align:center;"><div style="font-size:20px; font-weight:800; color:#38bdf8;">شدة الإشعاع النسبية عند ${d} م: ${relInt}%</div><div style="font-size:13px; margin-top:8px; color:#cbd5e1;">🛡️ الحماية: ${shInfo}</div></div>`;
+    readout.innerHTML = `<b>☢️ قانون التربيع العكسي:</b><br>• مضاعفة المسافة تقلل التعرض الإشعاعي إلى الربع.<br>• مع تغطية أسطح العمل بالرصاص وارتداء البدل الواقية تتحقق الوقاية الآمنة (نشاط 4-1 ص 88).`;
+  } else if (st === 'chem_seliwanoff_sim') {
+    const rg = v.reagent || 2, hm = v.heat_min || 2;
+    if (rg === 1) {
+      stage.innerHTML = `<div style="display:flex; justify-content:space-around; padding:10px;"><div style="padding:10px; border-radius:10px; background:rgba(239,68,68,0.2);">الجلوكوز + فهلنج<br>🔴 راسب أحمر طوبي Cu₂O</div><div style="padding:10px; border-radius:10px; background:rgba(239,68,68,0.2);">الفركتوز + فهلنج<br>🔴 راسب أحمر طوبي Cu₂O</div></div>`;
+      readout.innerHTML = `<b>⚠️ ملاحظة هامة:</b> كلاً من الجلوكوز والفركتوز يختزلان فهلنج القلوي، لذا نحتاج إلى <b>كاشف سليفانوف (الخيار 2)</b> للتمييز الحاسم بينهما!`;
+    } else {
+      const fCol = hm >= 2 ? '#dc2626' : '#f87171';
+      stage.innerHTML = `<div style="display:flex; justify-content:space-around; padding:10px;"><div style="padding:10px; border-radius:10px; background:rgba(148,163,184,0.15);">الجلوكوز (ألدوهكسوز)<br>⚪ لون باهت بطيء جداً</div><div style="padding:10px; border-radius:10px; background:${fCol}; color:#fff;">الفركتوز (كيتوهكسوز)<br>🩸 لون أحمر كرزي سريع (${hm} د)</div></div>`;
+      readout.innerHTML = `<b>🧪 اختبار سليفانوف (نشاط 6-2 ص 110):</b> يتفاعل الفركتوز الكيتوني سريعاً مع الريزورسينول + HCl المركز معطياً لوناً أحمر كرزياً، بينما يتأخر الجلوكوز الألدهيدي.`;
+    }
+  } else if (st === 'chem_albumin_sim') {
+    const m = v.method || 1, smp = v.sample || 2;
+    const pos = smp === 2;
+    const resTxt = m === 1
+      ? (pos ? '☁️ تكون عكارة وراسب أبيض متخثر لا يذوب بإضافة حمض الخليك ← يوجد زلال بالبول!' : '💧 يبقى المحلول رائقاً تماماً ← عينة سليمة خالية من الزلال ✅')
+      : (pos ? '💍 تتكون حلقة بيضاء عند السطح الفاصل مع HNO₃ المركز ← يوجد زلال!' : '💧 عدم تكون حلقة بيضاء ← عينة خالية من الزلال ✅');
+    stage.innerHTML = `<div style="padding:14px; text-align:center;"><div style="font-size:28px;">${pos ? '🧪☁️' : '🧪💧'}</div><div style="font-size:14px; font-weight:700; margin-top:8px;">${resTxt}</div></div>`;
+    readout.innerHTML = `<b>🔬 الكشف عن الزلال (نشاط 6-5 ص 115):</b><br>• يتخثر البروتين (الزلال) بالحرارة ولا يذوب في حمض الخليك المخفف، بينما يترسب الفوسفات يذوب بالحمض.`;
+  } else if (st === 'chem_petro_list_sim') {
+    const c = v.cat || 1;
+    const dataMap = {
+      1: ['اللدائن والبلاستيك', 'أواني منزلية، مواسير، عوازل أسلاك، حقائب وتغليف (البولي إيثيلين و PVC).'],
+      2: ['الألياف الصناعية والكساء', 'البولي أميد (نايلون 6,6)، البوليستر (الداكرون)، والجلود الصناعية.'],
+      3: ['الأدوية والعطور والمذيبات', 'الأسبرين، المضادات الحيوية، الأصباغ، المنظفات الأنيونية والمذيبات العضوية.']
+    };
+    const [t, d] = dataMap[c];
+    stage.innerHTML = `<div style="padding:12px;"><div style="font-size:17px; font-weight:800; color:#fbbf24;">🛢️ ${t}</div><div style="font-size:13px; margin-top:8px; color:#e2e8f0;">${d}</div></div>`;
+    readout.innerHTML = `<b>📋 نشاط (7-1) ص 124:</b> تمتاز مشتقات البترول بتنوع استخداماتها الصناعية في كل بيت وسوق تجاري.`;
+  } else if (st === 'chem_oil_origin_sim') {
+    const th = v.theory || 1;
+    stage.innerHTML = `<div style="padding:12px;"><div style="font-size:16px; font-weight:800; color:${th===1?'#4ade80':'#f59e0b'};">${th===1?'🐚 نظرية الأصل الحي (الراجحة علمياً)':'⛏️ نظرية الكربيد غير العضوية'}</div><div style="font-size:13px; margin-top:8px;">${th===1?'تحلل بقايا الكائنات البحرية والنباتية الدقيقة تحت طبقات الرسوب والضغط والحرارة عبر ملايين السنين.':'تفاعل كربيدات الفلزات مثل CaC₂ مع الماء منتجة أسيتيلين يتبلمر بالحرارة والضغط.'}</div></div>`;
+    readout.innerHTML = `<b>🔍 الأدلة العلمية (نشاط 7-2 ص 128):</b> وجود مركبات النيتروجين والفوسفور والنشاط الضوئي والحفريات البحرية بالصخور الرسوبية يرجّح <b>نظرية الأصل الحي</b>.`;
+  } else if (st === 'chem_yemen_oil_sim') {
+    const b = v.basin || 1;
+    const bMap = {1: 'حوض مأرب – الجوف (صافر): أول حقل تجاري منتج للنفط والغاز باليمن وتصفيته محلياً.', 2: 'حوض المسيلة – شبوة: من أكبر أحواض التصدير النفطية في حضرموت وشبوة.', 3: 'مصفاة عدن: مصفاة ساحلية تاريخية للتكرير بالتقطير التجزيئي وفصل المشتقات.'};
+    stage.innerHTML = `<div style="padding:12px; font-size:14px; font-weight:700; color:#38bdf8;">🗺️ ${bMap[b]}</div>`;
+    readout.innerHTML = `<b>📘 نشاط (7-3) ص 131:</b> بعد استخراج النفط الخام بالضغط الطبيعي والمضخات يُكرَّر بالتقطير التجزيئي — ويمكنك تجربة برج التقطير 3D بالضغط على شكل (7-3)!`;
+  } else if (st === 'chem_petro_value_sim') {
+    const md = v.mode || 2;
+    stage.innerHTML = `<div style="padding:12px; text-align:center;"><div style="font-size:24px;">${md===1?'🔥 احتراق مباشر (طاقة فقط)':'🏭 صناعات بتروكيماوية (+10 أضعاف قيمة)'}</div></div>`;
+    readout.innerHTML = md === 1
+      ? '<b>⛽ الحرق كوقود:</b> يوفر طاقة حرارية وميكانيكية سريعة لكنه يستهلك الخام دون منتجات باقية.'
+      : '<b>🧪 البتروكيماويات (نشاط 7-4 ص 136):</b> تحويل نسبة صغيرة من النفط لللدائن والأدوية والأسمدة يضاعف القيمة الاقتصادية عشرات المرات.';
+  } else if (st === 'chem_nylon_sim') {
+    const stch = v.stretch || 4, mbal = v.monomer || 100;
+    const strPct = Math.round((stch / 4) * (mbal / 100) * 100);
+    stage.innerHTML = `<div style="padding:12px; text-align:center;"><div style="font-size:18px; font-weight:800; color:#a78bfa;">🧵 سحب خيط نايلون 6,6: ${stch}× الطول الأصلي</div><div style="margin:10px auto; width:85%; height:14px; background:#334155; border-radius:9px; overflow:hidden;"><div style="width:${strPct}%; height:100%; background:linear-gradient(90deg,#8b5cf6,#10b981);"></div></div><div style="font-size:13px;">متانة الشد: <b>${strPct}%</b></div></div>`;
+    readout.innerHTML = `<b>🔬 نشاط (8-1) ص 154:</b> يتكاثف حمض الأديبيك (6 كربون) مع هكساميثيلين ثنائي الأمين (6 كربون) مكوّناً خيط بولي أميد متوازٍ السلاسل تتضاعف متانته بالشد 4 أضعاف.`;
+  } else if (st === 'chem_pesticide_safety_sim') {
+    const pr = v.practice || 2;
+    stage.innerHTML = `<div style="padding:12px; font-size:14px; font-weight:700; color:${pr===1?'#fca5a5':'#4ade80'};">${pr===1?'⚠️ خطر الرش العشوائي والمركبات المكلورة (DDT): تسمم التربة والمياه الجوفية وتراكم حيوي بالثمار!':'✅ المكافحة الآمنة: استخدام مبيدات قابلة للتحلل والالتزام بفترات الأمان والكمامات الواقية.'}</div>`;
+    readout.innerHTML = `<b>🌱 نشاط (9-1) ص 180:</b> سوء استخدام المبيدات الزراعية في اليمن يهدد صحة المزارع والمستهلك وتوازن النحل والتربة.`;
+  } else if (st === 'chem_local_env_sim') {
+    const et = v.env_type || 1;
+    const eMap = {
+      1: ['تلوث الهواء وعوادم المركبات', 'تركيب المحولات الحفزية بالشكمات، نزع الكبريت بـ CaO، وفلاتر المداخن والتشجير.'],
+      2: ['تلوث المياه والبيارات والمصانع', 'معالجة ثلاثية (ترسيب + هضم حيوي + كربون نشط) ومنع صرف المصانع لمجاري المياه.'],
+      3: ['تلوث التربة الزراعية والمخلفات الصلبة', 'ترشيد الأسمدة والمبيدات، تقليب التربة، وإعادة تدوير الزجاج والورق والبلاستيك.']
+    };
+    const [hTitle, hSol] = eMap[et];
+    stage.innerHTML = `<div style="padding:12px;"><div style="font-size:16px; font-weight:800; color:#34d399;">🌍 ${hTitle}</div><div style="font-size:13px; margin-top:8px; color:#e2e8f0;">${hSol}</div></div>`;
+    readout.innerHTML = `<b>♻️ نشاط (9-2) ص 182:</b> الحلول الكيميائية والوقائية تعمل معاً لحماية الهواء والماء والتربة في البيئة المحلية.`;
   }
 }
 
@@ -4762,6 +4856,33 @@ function buildSubject3dScene(diagRef) {
     }
     labApparatusGroup.add(dnaGroup);
     labDynamicMeshes.push({ type: 'spin', mesh: dnaGroup });
+  } else if (sk === 'chem_blast_furnace') {
+    addMesh(new THREE.CylinderGeometry(0.45, 0.72, 1.85, 24), 0x475569, 0, 0.1, 0);
+    addMesh(new THREE.CylinderGeometry(0.55, 0.55, 0.35, 24), 0xf97316, 0, -0.65, 0);
+    const molten = addMesh(new THREE.CylinderGeometry(0.48, 0.48, 0.18, 24), 0xfef08a, 0, -0.82, 0);
+    labDynamicMeshes.push({ type: 'bob', mesh: molten, amp: 0.04 });
+  } else if (sk === 'chem_iron_ions' || sk === 'chem_calorimetry' || sk === 'chem_biochem') {
+    const col1 = sk === 'chem_iron_ions' ? 0x4ade80 : (sk === 'chem_biochem' ? 0x1e3a8a : 0x38bdf8);
+    const col2 = sk === 'chem_iron_ions' ? 0x991b1b : (sk === 'chem_biochem' ? 0xc2410c : 0xf97316);
+    addMesh(new THREE.CylinderGeometry(0.26, 0.26, 1.35, 20), col1, -0.58, -0.1, 0, 0, 0, 0, 0.85);
+    addMesh(new THREE.CylinderGeometry(0.26, 0.26, 1.35, 20), col2, 0.58, -0.1, 0, 0, 0, 0, 0.85);
+    const stir = addMesh(new THREE.CylinderGeometry(0.04, 0.04, 1.4, 12), 0xe2e8f0, 0, 0.35, 0);
+    labDynamicMeshes.push({ type: 'bob', mesh: stir, amp: 0.08 });
+  } else if (sk === 'chem_daniell_cell' || sk === 'chem_lead_battery' || sk === 'chem_electrolysis' || sk === 'chem_electroplating') {
+    addMesh(new THREE.BoxGeometry(0.75, 0.85, 0.7), 0x0284c7, -0.68, -0.35, 0, 0, 0, 0, 0.55);
+    addMesh(new THREE.BoxGeometry(0.75, 0.85, 0.7), 0x38bdf8, 0.68, -0.35, 0, 0, 0, 0, 0.55);
+    addMesh(new THREE.BoxGeometry(0.14, 0.95, 0.14), 0x94a3b8, -0.68, 0, 0);
+    addMesh(new THREE.BoxGeometry(0.14, 0.95, 0.14), sk === 'chem_electroplating' ? 0xf8fafc : 0xd97706, 0.68, 0, 0);
+    addMesh(new THREE.CylinderGeometry(0.06, 0.06, 1.38, 12), 0xfde047, 0, 0.55, 0, 0, 0, Math.PI/2);
+    const ePulse = addMesh(new THREE.SphereGeometry(0.09, 12, 12), 0x4ade80, -0.6, 0.55, 0);
+    labDynamicMeshes.push({ type: 'pulse', mesh: ePulse });
+  } else if (sk === 'chem_distillation_tower') {
+    addMesh(new THREE.CylinderGeometry(0.42, 0.42, 2.0, 24), 0x94a3b8, 0, 0.1, 0, 0, 0, 0, 0.42);
+    [0x1e293b, 0x92400e, 0xd97706, 0xfacc15, 0x38bdf8].forEach((c, idx) => {
+      addMesh(new THREE.CylinderGeometry(0.4, 0.4, 0.06, 20), c, 0, -0.65 + idx * 0.36, 0);
+    });
+    const vap = addMesh(new THREE.SphereGeometry(0.1, 14, 14), 0xfef08a, 0, -0.6, 0);
+    labDynamicMeshes.push({ type: 'bob', mesh: vap, amp: 0.45 });
   } else {
     const grp = new THREE.Group();
     grp.add(new THREE.Mesh(new THREE.SphereGeometry(0.58, 24, 24), new THREE.MeshPhongMaterial({ color: 0x10b981 })));
@@ -4794,6 +4915,11 @@ window.addEventListener('orientationchange', function() { setTimeout(resizeLab3d
 function renderDiagramPartsBadges(data) {
   const badgesContainer = document.getElementById('labPartsBadges');
   if (!badgesContainer) return;
+  const dedBtn = document.getElementById('btnLab3dOpenDedicated');
+  if (dedBtn) {
+    const showDed = (BOOK_SUBJECT_KEY !== 'chemistry') || Boolean(data && (data.lab_exp || data.lab_url));
+    dedBtn.style.display = showDed ? 'block' : 'none';
+  }
   if (data && data.components && data.components.length) {
     badgesContainer.innerHTML = data.components.map((c, i) => `
       <span class="part-badge" onclick="highlightLabPart('${c.id}', '${c.name}', '${c.role}')">${c.name}</span>

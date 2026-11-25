@@ -2328,6 +2328,12 @@ def write_v2_resources(base_dir):
 
     <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

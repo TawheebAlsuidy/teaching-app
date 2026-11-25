@@ -113,14 +113,15 @@ public class SubjectActivity extends Activity {
                 "🧪 معمل الأحياء التفاعلي 3D (18 تجربة)", "biology-12th-lab.html");
         } else {
             tvTitle.setText("الكيمياء 3D");
-            tvMeta.setText("مختبر العناصر والتفاعلات · الثالث الثانوي");
+            tvMeta.setText("9 وحدات · 187 صفحة · 10 تجارب 3D في المعمل");
             tvGradePill.setText("الثالث الثانوي");
             ivIcon.setImageResource(R.drawable.ic_subj_chem);
             quizKey = "chem_12";
 
-            addPartCard("معمل الكيمياء ثلاثي الأبعاد", "جدول مندليف، العناصر الانتقالية، الكيمياء الحرارية والعضوية",
-                ThakerStore.getBookPct(this, "chem_12", 30), "معمل 3D شامل", "محاكاة تفاعلية",
-                "⚗️ افتح مختبر الكيمياء 3D", "html", "chem-lab-book.html", null, null);
+            addPartCard("الكتاب التفاعلي الشامل ومعمل الكيمياء", "العناصر الانتقالية، الكيمياء الحرارية والكهربية، النووية والعضوية والبيئة",
+                ThakerStore.getBookPct(this, "chem_12", 25), "187 صفحة تفاعلية", "ربط مباشر بالمعمل 3D",
+                "⚗️ افتح كتاب الكيمياء التفاعلي", "html", "chemistry-12th-book.html",
+                "🔬 افتح مختبر الكيمياء 3D (10 تجارب)", "chem-lab-book.html");
         }
 
         final String finalQuizKey = quizKey;

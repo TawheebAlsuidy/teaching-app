@@ -32,6 +32,7 @@ APKSIGNER = f"{BUILD_TOOLS_DIR}/apksigner"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = SCRIPT_DIR if os.path.exists(f"{SCRIPT_DIR}/chem-lab-book.html") else "/mnt/sdcard/projects/teaching-app"
 SOURCE_HTML = f"{WORKSPACE}/chem-lab-book.html"
+SOURCE_CHEM_BOOK_HTML = f"{WORKSPACE}/chemistry-12th-book.html"
 SOURCE_PHYS_HTML = f"{WORKSPACE}/physics-12th-book.html"
 SOURCE_PHYS_LAB = f"{WORKSPACE}/physics-12th-lab.html"
 SOURCE_BIO_HTML = f"{WORKSPACE}/biology-12th-book.html"
@@ -4596,6 +4597,9 @@ def copy_assets(base_dir):
     
     # 1. Interactive books
     shutil.copy2(SOURCE_HTML, f"{assets_dir}/chem-lab-book.html")
+    if os.path.exists(SOURCE_CHEM_BOOK_HTML):
+        shutil.copy2(SOURCE_CHEM_BOOK_HTML, f"{assets_dir}/chemistry-12th-book.html")
+        print(f"  ✓ Bundled 3D Chemistry Book: chemistry-12th-book.html ({os.path.getsize(SOURCE_CHEM_BOOK_HTML) / 1024:.0f} KB)")
     if os.path.exists(SOURCE_PHYS_HTML):
         shutil.copy2(SOURCE_PHYS_HTML, f"{assets_dir}/physics-12th-book.html")
         print(f"  ✓ Bundled 3D Physics Book: physics-12th-book.html ({os.path.getsize(SOURCE_PHYS_HTML) / 1024:.0f} KB)")
