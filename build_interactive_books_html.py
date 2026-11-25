@@ -75,9 +75,10 @@ ACTIVITY_MODAL_HTML = """
       <p id="actModalDesc" style="margin:0; font-size:13px; color:#94A3B8; line-height:1.6;"></p>
       <div id="actControlsContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
       <div id="actReadoutBox" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:12px 14px; font-size:13px; line-height:1.7; color:#E2E8F0; display:none;"></div>
-      <div id="g12DualBtns" style="display:none; gap:10px;">
-        <button onclick="setG12Step(1)" style="flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:#F1F5F9; border-radius:999px; padding:10px; font-weight:700; cursor:pointer; font-family:inherit;">🔁 تعديل القيم</button>
-        <button onclick="closeActivityModal()" style="flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:#F1F5F9; border-radius:999px; padding:10px; font-weight:700; cursor:pointer; font-family:inherit;">📖 إلى صفحة الكتاب</button>
+      <div id="g12DualBtns" style="display:none; gap:8px; flex-wrap:wrap;">
+        <button onclick="setG12Step(1)" style="flex:1; min-width:110px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:#F1F5F9; border-radius:999px; padding:10px; font-weight:700; cursor:pointer; font-family:inherit;">🔁 تعديل القيم</button>
+        <button onclick="openDedicatedLabForPage()" style="flex:1.2; min-width:140px; background:rgba(14,165,233,0.18); border:1px solid rgba(56,189,248,0.45); color:#7DD3FC; border-radius:999px; padding:10px; font-weight:800; cursor:pointer; font-family:inherit;">🔬 المعمل الكامل (خطوات)</button>
+        <button onclick="closeActivityModal()" style="flex:1; min-width:110px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:#F1F5F9; border-radius:999px; padding:10px; font-weight:700; cursor:pointer; font-family:inherit;">📖 إلى صفحة الكتاب</button>
       </div>
       <button id="g12MainCtaBtn" onclick="advanceG12Step()" style="width:100%; height:50px; border-radius:999px; border:none; background:linear-gradient(135deg,#10B981,#059669); color:#fff; font-size:15.5px; font-weight:800; cursor:pointer; box-shadow:0 8px 20px rgba(5,150,105,0.35); font-family:inherit;">شغّل المحاكاة &nbsp;‹</button>
     </div>
@@ -87,9 +88,10 @@ ACTIVITY_MODAL_HTML = """
 <div id="g12MoreBackdrop" style="display:none; position:fixed; inset:0; background:rgba(3,8,15,0.68); z-index:980; align-items:flex-end; justify-content:center;" onclick="if(event.target===this)toggleG12MoreMenu(false)">
   <div style="width:100%; max-width:580px; max-height:75vh; overflow-y:auto; background:#0F1D2E; border-top:1px solid rgba(255,255,255,0.1); border-radius:28px 28px 0 0; padding:10px 18px 24px; color:#F8FAFC;">
     <div style="width:42px; height:4px; border-radius:99px; background:rgba(255,255,255,0.22); margin:0 auto 10px;"></div>
-    <div style="font-size:12.5px; font-weight:700; color:#94A3B8; padding:6px 4px;">أنشطة الكتاب</div>
+    <div style="font-size:12.5px; font-weight:700; color:#94A3B8; padding:6px 4px;">أنشطة المحاكاة التفاعلية</div>
     <div id="g12MoreActivitiesList"></div>
     <div style="height:1px; background:rgba(255,255,255,0.1); margin:8px 0;"></div>
+    <button onclick="toggleG12MoreMenu(false); openDedicatedLabForPage();" style="width:100%; background:rgba(16,185,129,0.14); border:1px solid rgba(16,185,129,0.35); border-radius:12px; color:#34D399; padding:11px 12px; font-size:14px; font-weight:800; text-align:right; cursor:pointer; font-family:inherit; margin-bottom:6px;">🔬 فتح معمل الأنشطة والخطوات الكامل 3D ‹</button>
     <button onclick="toggleG12MoreMenu(false); setG12Step(1);" style="width:100%; background:transparent; border:none; color:#F8FAFC; padding:12px 4px; font-size:14.5px; font-weight:700; text-align:right; cursor:pointer; font-family:inherit;">↺ إعادة الضبط للخطوة الأولى</button>
     <button onclick="toggleG12MoreMenu(false); closeActivityModal();" style="width:100%; background:transparent; border:none; color:#F8FAFC; padding:12px 4px; font-size:14.5px; font-weight:700; text-align:right; cursor:pointer; font-family:inherit;">📖 العودة لصفحة الكتاب</button>
   </div>
@@ -161,27 +163,82 @@ handleHotspotClick = function(item) {
   }
 };
 
+function getUnitDefaultExpForPage(p) {
+  const spots = INTERACTIONS[p?.page_id] || [];
+  const actSpot = spots.find(s => s.type === 'activity' && s.activity_ref);
+  if (actSpot) return actSpot.activity_ref;
+  const diagSpot = spots.find(s => s.type === 'interactive_3d' && s.diagram_ref && DIAGRAMS[s.diagram_ref]?.lab_exp);
+  if (diagSpot) return DIAGRAMS[diagSpot.diagram_ref].lab_exp;
+  const uid = p?.unit_id || 'u1';
+  const unitDiag = Object.values(DIAGRAMS).find(d => d.lab_exp && (d.id.includes(uid) || d.lab_exp.includes(uid)));
+  if (unitDiag) return unitDiag.lab_exp;
+  const labAct = Object.values(ACTIVITIES).find(a => a.lab_url && a.id.includes(uid));
+  return labAct ? labAct.id : '';
+}
+
+function openDedicatedLabForPage(explicitExpId) {
+  const p = PAGES[state.curPageIdx] || PAGES[0] || {};
+  const expId = explicitExpId || getUnitDefaultExpForPage(p);
+  const bp = p.book_page || '';
+  let url = `${BOOK_LAB_HTML}?from=book`;
+  if (expId) url += `&exp=${encodeURIComponent(expId)}`;
+  if (bp) url += `&page=${encodeURIComponent(bp)}`;
+  window.location.href = url;
+}
+
+function openActiveDiagInDedicatedLab() {
+  const expId = curLabDiag?.lab_exp || getUnitDefaultExpForPage(PAGES[state.curPageIdx]);
+  closeLab3d();
+  openDedicatedLabForPage(expId);
+}
+
+openRelatedActivityFromSheet = function() {
+  closeTextSheet();
+  const ctx = getCurrentPageContext();
+  if (ctx.actRef && ACTIVITIES[ctx.actRef]) {
+    openActivityModal(ctx.actRef);
+  } else {
+    openDedicatedLabForPage();
+  }
+};
+
 // --------------------------------------------------------
-// INTERACTIVE ACTIVITY SIMULATOR MODAL
+// INTERACTIVE ACTIVITY SIMULATOR MODAL & LAB ROUTER
 // --------------------------------------------------------
 let curActivity = null;
 let curActValues = {};
 let curG12Step = 1;
 
 function openActivityModal(actRef) {
-  const keys = Object.keys(ACTIVITIES);
-  const data = ACTIVITIES[actRef] || Object.values(ACTIVITIES)[0];
-  if (!data) { showToast('النشاط غير متاح حالياً'); return; }
-  curActivity = data;
+  const p = PAGES[state.curPageIdx] || PAGES[0] || {};
+  const candidate = ACTIVITIES[actRef];
+  if (candidate && candidate.lab_url) {
+    const bp = p.book_page || candidate.book_page || '';
+    const sep = candidate.lab_url.includes('?') ? '&' : '?';
+    window.location.href = bp ? `${candidate.lab_url}${sep}page=${encodeURIComponent(bp)}` : candidate.lab_url;
+    return;
+  }
+
+  const simKeys = Object.keys(ACTIVITIES).filter(k => ACTIVITIES[k] && ACTIVITIES[k].sim_type);
+  const fallback = (candidate && candidate.sim_type) ? candidate : (ACTIVITIES[`act-${BOOK_SUBJECT_KEY === 'physics' ? 'phys' : 'bio'}-${p.unit_id || 'u1'}`] || ACTIVITIES[simKeys[0]] || Object.values(ACTIVITIES)[0]);
+  if (!fallback) {
+    openDedicatedLabForPage(actRef);
+    return;
+  }
+  if (!fallback.controls || fallback.controls.length === 0) {
+    openDedicatedLabForPage(fallback.id || actRef);
+    return;
+  }
+  curActivity = fallback;
   curActValues = {};
-  document.getElementById('actModalTitle').textContent = data.title;
-  const idx = Math.max(1, keys.indexOf(data.id || actRef) + 1);
+  document.getElementById('actModalTitle').textContent = fallback.title;
+  const idx = Math.max(1, simKeys.indexOf(fallback.id) + 1);
   const sub = document.getElementById('g12ActSubTitle');
-  if (sub) sub.textContent = `${data.unit_id ? data.unit_id.toUpperCase() : 'مختبر'} · نشاط ${idx} من ${keys.length}`;
-  document.getElementById('actModalDesc').textContent = data.description;
+  if (sub) sub.textContent = `${(fallback.unit_id || p.unit_id || 'u1').toUpperCase()} · مختبر حسابي ${idx} من ${Math.max(1, simKeys.length)}`;
+  document.getElementById('actModalDesc').textContent = fallback.description || '';
 
   const ctrlBox = document.getElementById('actControlsContainer');
-  ctrlBox.innerHTML = (data.controls || []).map(c => {
+  ctrlBox.innerHTML = (fallback.controls || []).map(c => {
     curActValues[c.id] = c.default;
     return `
       <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:10px 12px;">
@@ -198,11 +255,13 @@ function openActivityModal(actRef) {
 
   const listEl = document.getElementById('g12MoreActivitiesList');
   if (listEl) {
-    listEl.innerHTML = keys.map(k => {
+    listEl.innerHTML = Object.keys(ACTIVITIES).map(k => {
       const a = ACTIVITIES[k];
-      const active = (a === data);
-      return `<button onclick="toggleG12MoreMenu(false); openActivityModal('${k}');" style="width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,0.06); color:#F8FAFC; padding:11px 4px; font-size:13.5px; font-weight:700; text-align:right; display:flex; justify-content:space-between; cursor:pointer; font-family:inherit;">
-        <span>🧪 &nbsp; ${a.title}</span><span style="color:#10B981;">${active ? '✓' : ''}</span>
+      const active = (a === fallback);
+      const badge = a.lab_url ? '🔬 معمل' : '🎛️ فوري';
+      return `<button onclick="toggleG12MoreMenu(false); openActivityModal('${k}');" style="width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,0.06); color:#F8FAFC; padding:11px 4px; font-size:13px; font-weight:700; text-align:right; display:flex; justify-content:space-between; align-items:center; gap:8px; cursor:pointer; font-family:inherit;">
+        <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${a.title}</span>
+        <span style="color:${active ? '#10B981' : '#38BDF8'}; font-size:11px; flex-shrink:0;">${active ? '✓ نشط' : badge}</span>
       </button>`;
     }).join('');
   }
@@ -509,37 +568,120 @@ function updateActivitySimulation() {
 // --------------------------------------------------------
 let curLabDiag = null;
 let labDynamicMeshes = [];
+let labFallbackCanvas = null;
+
+function renderSubjectLabDiagTabs(activeRef) {
+  const tabsEl = document.getElementById('labDiagTabs');
+  if (!tabsEl) return;
+  const list = Object.values(DIAGRAMS || {});
+  tabsEl.innerHTML = list.map(d => {
+    const isAct = d.id === activeRef;
+    return `<button class="diag-tab-btn ${isAct ? 'active' : ''}" data-diag="${d.id}" onclick="loadDiagramModel('${d.id}')">${d.title}</button>`;
+  }).join('');
+  const activeBtn = tabsEl.querySelector('.diag-tab-btn.active');
+  if (activeBtn && activeBtn.scrollIntoView) {
+    try { activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }); } catch (e) {}
+  }
+}
+
+function drawLab2DFallback(data, sliderVal) {
+  const container = document.getElementById('labCanvasContainer');
+  if (!container) return;
+  if (!labFallbackCanvas) {
+    labFallbackCanvas = document.createElement('canvas');
+    labFallbackCanvas.id = 'labFallbackCanvas2D';
+    labFallbackCanvas.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:4;';
+    container.appendChild(labFallbackCanvas);
+  }
+  const w = Math.max(280, container.clientWidth);
+  const h = Math.max(220, container.clientHeight);
+  labFallbackCanvas.width = w;
+  labFallbackCanvas.height = h;
+  const ctx = labFallbackCanvas.getContext('2d');
+  if (!ctx) return;
+  ctx.clearRect(0, 0, w, h);
+
+  // Only draw 2D canvas schematic when WebGL renderer is unavailable
+  if (labRenderer) return;
+
+  // Pure 2D fallback visualization when WebGL is unavailable
+  ctx.fillStyle = '#091522';
+  ctx.fillRect(0, 0, w, h);
+  ctx.strokeStyle = '#38bdf8';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  for (let x = 20; x < w - 20; x += 6) {
+    const t = (x - 20) / Math.max(1, w - 40);
+    const y = h * 0.52 + Math.sin(t * Math.PI * (2 + (sliderVal || 50) * 0.05)) * (h * 0.18);
+    if (x === 20) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+  ctx.fillStyle = '#e2e8f0';
+  ctx.font = 'bold 15px Tajawal, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(data ? data.title : 'محاكاة علمية تفاعلية', w / 2, h * 0.24);
+  if (data && data.formula) {
+    ctx.fillStyle = '#34d399';
+    ctx.font = 'bold 13px Tajawal, sans-serif';
+    ctx.fillText(data.formula, w / 2, h * 0.82);
+  }
+}
 
 function buildSubject3dScene(diagRef) {
-  if (!labScene || !labApparatusGroup) return;
+  const ref = (diagRef && DIAGRAMS[diagRef]) ? diagRef : (DEFAULT_DIAG_REF && DIAGRAMS[DEFAULT_DIAG_REF] ? DEFAULT_DIAG_REF : Object.keys(DIAGRAMS)[0]);
+  const data = DIAGRAMS[ref] || Object.values(DIAGRAMS)[0];
+  curLabDiag = data;
+  const sk = data ? (data.sim_key || '') : '';
+  const did = data ? (data.id || '') : '';
+
+  renderSubjectLabDiagTabs(ref);
+
+  const titleEl = document.getElementById('labModalTitle') || document.querySelector('#lab3dModal .lab-title');
+  if (titleEl && data) titleEl.textContent = '🔬 ' + data.title;
+  const sliderEl = document.getElementById('sliderAcidRate') || document.querySelector('#lab3dModal input[type="range"]');
+  const sliderValEl = document.getElementById('sliderAcidVal');
+  const rateTextEl = document.getElementById('labLiveRateText');
+  const labelSpan = document.getElementById('labControlLabel') || (sliderEl ? sliderEl.previousElementSibling : null);
+  const eqBadgeEl = document.getElementById('labEquationBadge');
+  if (sliderEl && data) {
+    sliderEl.min = data.slider_min ?? 0;
+    sliderEl.max = data.slider_max ?? 100;
+    sliderEl.step = (data.slider_max - data.slider_min) <= 10 ? 0.5 : 1;
+    sliderEl.value = data.slider_val ?? 50;
+    if (sliderValEl) sliderValEl.textContent = (data.slider_val ?? 50) + (data.slider_unit || '');
+    if (labelSpan) labelSpan.textContent = (data.slider_label || 'تحكم بالمحاكاة:').replace(/:?\s*$/, ':');
+  }
+  if (eqBadgeEl && data) {
+    eqBadgeEl.innerHTML = `⚖️ المبدأ: <b>${data.formula || data.title}</b>`;
+  }
+  if (rateTextEl) rateTextEl.textContent = 'اسحب للدوران 360° واضغط على أجزاء النموذج';
+
+  if (!labScene) {
+    try { initLabThree(); } catch (e) { labRenderer = null; }
+  }
+  if (labScene && !labApparatusGroup) {
+    labApparatusGroup = new THREE.Group();
+    labScene.add(labApparatusGroup);
+  }
+  if (labCamera) {
+    labCamera.position.set(0, 0.85, 3.8);
+    labCamera.lookAt(0, 0, 0);
+  }
+  if (!labScene || !labApparatusGroup) {
+    drawLab2DFallback(data, sliderEl ? parseFloat(sliderEl.value) : 50);
+    return;
+  }
+  if (!labApparatusGroup.parent) labScene.add(labApparatusGroup);
   while (labApparatusGroup.children.length > 0) {
     labApparatusGroup.remove(labApparatusGroup.children[0]);
   }
   labDynamicMeshes = [];
   bubbles = [];
-
-  const data = DIAGRAMS[diagRef] || Object.values(DIAGRAMS)[0];
-  curLabDiag = data;
-  const sk = data ? data.sim_key : 'phys_bohr';
-
-  // Update Modal Title & Slider UI cleanly
-  const titleEl = document.querySelector('#lab3dModal h3');
-  if (titleEl && data) titleEl.textContent = '🧊 ' + data.title;
-  const sliderEl = document.querySelector('#lab3dModal input[type="range"]');
-  const sliderValEl = document.getElementById('sliderAcidVal');
-  const rateTextEl = document.getElementById('labLiveRateText');
-  const labelSpan = sliderEl ? sliderEl.previousElementSibling : null;
-  if (sliderEl && data) {
-    sliderEl.min = data.slider_min ?? 0;
-    sliderEl.max = data.slider_max ?? 100;
-    sliderEl.value = data.slider_val ?? 50;
-    if (sliderValEl) sliderValEl.textContent = (data.slider_val ?? 50) + (data.slider_unit || '');
-    if (labelSpan && labelSpan.firstChild) labelSpan.firstChild.textContent = (data.slider_label || 'تحكم بالمحاكاة: ') + ' ';
-  }
-  if (rateTextEl) rateTextEl.textContent = 'اسحب المجسم بلمسك للدوران 360° واضغط على الأجزاء للتفصيل';
+  flameMesh = null;
 
   const addMesh = (geo, color, x=0, y=0, z=0, rx=0, ry=0, rz=0, opacity=1) => {
-    const mat = new THREE.MeshPhongMaterial({ color, transparent: opacity < 1, opacity, shininess: 80 });
+    const mat = new THREE.MeshPhongMaterial({ color, transparent: opacity < 1, opacity, shininess: 85 });
     const m = new THREE.Mesh(geo, mat);
     m.position.set(x, y, z);
     m.rotation.set(rx, ry, rz);
@@ -547,122 +689,198 @@ function buildSubject3dScene(diagRef) {
     return m;
   };
 
-  if (sk === 'phys_projectiles') {
-    addMesh(new THREE.BoxGeometry(3.2, 0.1, 1.4), 0x334155, 0, -0.7, 0);
-    const cannon = addMesh(new THREE.CylinderGeometry(0.14, 0.18, 0.9, 16), 0x94a3b8, -1.1, -0.4, 0, 0, 0, -Math.PI/4);
+  // Bench base
+  addMesh(new THREE.BoxGeometry(3.5, 0.08, 1.6), 0x1e293b, 0, -0.92, 0);
+
+  if (sk === 'phys_collision1d' || sk === 'phys_collision2d') {
+    addMesh(new THREE.BoxGeometry(3.1, 0.06, 0.55), 0x334155, 0, -0.78, 0);
+    const b1 = addMesh(new THREE.SphereGeometry(0.26, 24, 24), 0xef4444, -1.0, -0.5, 0);
+    const b2 = addMesh(new THREE.SphereGeometry(0.26, 24, 24), 0x38bdf8, 0.2, -0.5, 0);
+    labDynamicMeshes.push({ type: sk, b1, b2 });
+  } else if (sk === 'phys_rocket') {
+    const rkt = new THREE.Group();
+    rkt.add(new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.26, 1.15, 24), new THREE.MeshPhongMaterial({ color: 0xe2e8f0 })));
+    const cone = new THREE.Mesh(new THREE.ConeGeometry(0.22, 0.45, 24), new THREE.MeshPhongMaterial({ color: 0xef4444 }));
+    cone.position.y = 0.8; rkt.add(cone);
+    const flm = new THREE.Mesh(new THREE.ConeGeometry(0.18, 0.55, 16), new THREE.MeshBasicMaterial({ color: 0xf59e0b }));
+    flm.position.y = -0.82; flm.rotation.x = Math.PI; rkt.add(flm);
+    labApparatusGroup.add(rkt);
+    flameMesh = flm;
+    labDynamicMeshes.push({ type: 'bob', mesh: rkt, amp: 0.08 });
+  } else if (sk === 'phys_satellite') {
+    addMesh(new THREE.SphereGeometry(0.68, 28, 28), 0x0284c7, 0, 0, 0);
+    addMesh(new THREE.TorusGeometry(1.38, 0.018, 12, 64), 0x38bdf8, 0, 0, 0, Math.PI/2, 0, 0, 0.65);
+    const sat = addMesh(new THREE.BoxGeometry(0.22, 0.16, 0.22), 0xfbbf24, 1.38, 0, 0);
+    labDynamicMeshes.push({ type: 'orbit', mesh: sat, radius: 1.38, speed: 0.025, angle: 0 });
+  } else if (sk === 'phys_angular') {
+    const wheel = new THREE.Group();
+    wheel.add(new THREE.Mesh(new THREE.TorusGeometry(0.8, 0.08, 16, 48), new THREE.MeshPhongMaterial({ color: 0x94a3b8 })));
+    wheel.add(new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.55, 12), new THREE.MeshPhongMaterial({ color: 0x38bdf8 })));
+    wheel.rotation.x = Math.PI / 6;
+    labApparatusGroup.add(wheel);
+    labDynamicMeshes.push({ type: 'spin_z', mesh: wheel });
+  } else if (sk === 'phys_projectiles') {
+    const cannon = addMesh(new THREE.CylinderGeometry(0.14, 0.18, 0.85, 16), 0x94a3b8, -1.2, -0.5, 0, 0, 0, -Math.PI/4);
     labDynamicMeshes.push({ type: 'cannon', mesh: cannon });
     for (let i = 0; i <= 14; i++) {
       const t = i / 14;
-      const px = -1.0 + t * 2.2;
-      const py = -0.35 + Math.sin(t * Math.PI) * 1.1;
-      addMesh(new THREE.SphereGeometry(0.06, 12, 12), i === 7 ? 0x10b981 : 0x38bdf8, px, py, 0);
+      addMesh(new THREE.SphereGeometry(0.055, 12, 12), i === 7 ? 0x10b981 : 0x38bdf8, -1.05 + t * 2.2, -0.45 + Math.sin(t * Math.PI) * 1.15, 0);
     }
   } else if (sk === 'phys_dynamo') {
-    addMesh(new THREE.BoxGeometry(0.5, 1.2, 1.0), 0xef4444, -1.2, 0, 0);
-    addMesh(new THREE.BoxGeometry(0.5, 1.2, 1.0), 0x3b82f6, 1.2, 0, 0);
+    addMesh(new THREE.BoxGeometry(0.5, 1.2, 0.9), 0xef4444, -1.2, 0, 0);
+    addMesh(new THREE.BoxGeometry(0.5, 1.2, 0.9), 0x3b82f6, 1.2, 0, 0);
     const coil = new THREE.Group();
-    const c1 = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.06, 12, 24), new THREE.MeshPhongMaterial({color: 0xf59e0b}));
-    coil.add(c1);
+    coil.add(new THREE.Mesh(new THREE.BoxGeometry(0.95, 0.65, 0.08), new THREE.MeshPhongMaterial({ color: 0xf59e0b })));
     labApparatusGroup.add(coil);
     labDynamicMeshes.push({ type: 'spin', mesh: coil });
-    addMesh(new THREE.TorusGeometry(0.22, 0.04, 10, 20), 0xcbd5e1, 0, -0.85, 0, Math.PI/2, 0, 0);
+    addMesh(new THREE.TorusGeometry(0.22, 0.04, 10, 20), 0xcbd5e1, 0, -0.82, 0, Math.PI/2, 0, 0);
+  } else if (sk === 'phys_capacitor') {
+    const p1 = addMesh(new THREE.BoxGeometry(0.12, 1.0, 0.85), 0x38bdf8, -0.45, 0, 0);
+    const p2 = addMesh(new THREE.BoxGeometry(0.12, 1.0, 0.85), 0x10b981, 0.45, 0, 0);
+    addMesh(new THREE.BoxGeometry(0.18, 0.92, 0.78), 0xfbbf24, 0, 0, 0, 0, 0, 0, 0.45);
+    labDynamicMeshes.push({ type: 'cap_plates', p1, p2 });
   } else if (sk === 'phys_rlc') {
-    addMesh(new THREE.BoxGeometry(0.6, 0.25, 0.25), 0xf59e0b, -1.0, 0.3, 0);
-    for (let i = -2; i <= 2; i++) addMesh(new THREE.TorusGeometry(0.18, 0.05, 10, 20), 0x38bdf8, i * 0.1, 0.3, 0, 0, Math.PI/2, 0);
-    addMesh(new THREE.BoxGeometry(0.08, 0.7, 0.6), 0x10b981, 0.9, 0.3, 0);
-    addMesh(new THREE.BoxGeometry(0.08, 0.7, 0.6), 0x10b981, 1.15, 0.3, 0);
+    addMesh(new THREE.BoxGeometry(0.55, 0.24, 0.24), 0xf59e0b, -1.05, 0.25, 0);
+    for (let i = -2; i <= 2; i++) addMesh(new THREE.TorusGeometry(0.18, 0.05, 10, 20), 0x38bdf8, i * 0.1, 0.25, 0, 0, Math.PI/2, 0);
+    addMesh(new THREE.BoxGeometry(0.08, 0.7, 0.6), 0x10b981, 0.88, 0.25, 0);
+    addMesh(new THREE.BoxGeometry(0.08, 0.7, 0.6), 0x10b981, 1.12, 0.25, 0);
     addMesh(new THREE.BoxGeometry(2.6, 0.06, 0.06), 0x94a3b8, 0, -0.45, 0);
+  } else if (sk === 'phys_diode') {
+    addMesh(new THREE.BoxGeometry(0.95, 0.85, 0.75), 0x3b82f6, -0.58, 0, 0, 0, 0, 0, 0.85);
+    addMesh(new THREE.BoxGeometry(0.22, 0.85, 0.75), 0xfbbf24, 0, 0, 0, 0, 0, 0, 0.65);
+    addMesh(new THREE.BoxGeometry(0.95, 0.85, 0.75), 0x10b981, 0.58, 0, 0, 0, 0, 0, 0.85);
+    const orb = addMesh(new THREE.SphereGeometry(0.12, 16, 16), 0x38bdf8, -0.8, 0, 0.5);
+    labDynamicMeshes.push({ type: 'pulse', mesh: orb });
+  } else if (sk === 'phys_cro') {
+    addMesh(new THREE.CylinderGeometry(0.55, 0.22, 1.7, 24), 0x38bdf8, 0, 0, 0, 0, 0, Math.PI/2, 0.35);
+    addMesh(new THREE.BoxGeometry(0.08, 0.9, 0.9), 0x064e3b, 0.88, 0, 0);
+    const beam = addMesh(new THREE.SphereGeometry(0.09, 14, 14), 0x4ade80, -0.7, 0, 0);
+    labDynamicMeshes.push({ type: 'pulse', mesh: beam });
   } else if (sk === 'phys_bohr') {
     addMesh(new THREE.SphereGeometry(0.24, 24, 24), 0xef4444, 0, 0, 0);
-    [0.65, 1.05, 1.45].forEach((r, idx) => {
+    [0.58, 0.95, 1.32].forEach((r, idx) => {
       addMesh(new THREE.TorusGeometry(r, 0.015, 10, 48), 0x38bdf8, 0, 0, 0, Math.PI/2, 0, 0, 0.6);
       const elec = addMesh(new THREE.SphereGeometry(0.08, 16, 16), 0x4ade80, r, 0, 0);
-      labDynamicMeshes.push({ type: 'orbit', mesh: elec, radius: r, speed: 0.03 / (idx + 1), angle: idx * 2 });
+      labDynamicMeshes.push({ type: 'orbit', mesh: elec, radius: r, speed: 0.032 / (idx + 1), angle: idx * 2.1 });
     });
-  } else if (sk === 'phys_diode' || sk === 'phys_cro' || sk === 'phys_photoelectric' || sk === 'phys_nuclear' || sk === 'phys_solar') {
-    addMesh(new THREE.BoxGeometry(1.0, 0.9, 0.8), 0x3b82f6, -0.55, 0, 0, 0, 0, 0, 0.85);
-    addMesh(new THREE.BoxGeometry(0.2, 0.9, 0.8), 0xfbbf24, 0, 0, 0, 0, 0, 0, 0.7);
-    addMesh(new THREE.BoxGeometry(1.0, 0.9, 0.8), 0x10b981, 0.55, 0, 0, 0, 0, 0, 0.85);
-    const orb = addMesh(new THREE.SphereGeometry(0.12, 16, 16), 0x38bdf8, 0, 0.75, 0);
-    labDynamicMeshes.push({ type: 'spin', mesh: orb });
-  } else if (sk === 'bio_neuron') {
+  } else if (sk === 'phys_photoelectric') {
+    addMesh(new THREE.BoxGeometry(0.16, 1.0, 0.85), 0x94a3b8, -0.9, 0.2, 0);
+    addMesh(new THREE.CylinderGeometry(0.06, 0.06, 0.9, 12), 0xfbbf24, 0.9, 0, 0);
+    const photon = addMesh(new THREE.SphereGeometry(0.09, 14, 14), 0xa855f7, 0.2, 0.85, 0);
+    const pe = addMesh(new THREE.SphereGeometry(0.08, 14, 14), 0x4ade80, -0.7, 0.2, 0);
+    labDynamicMeshes.push({ type: 'pulse', mesh: pe }, { type: 'bob', mesh: photon, amp: 0.22 });
+  } else if (sk === 'phys_nuclear') {
+    addMesh(new THREE.BoxGeometry(0.55, 0.55, 0.55), 0x64748b, 0, -0.55, 0);
+    addMesh(new THREE.BoxGeometry(0.32, 0.55, 0.45), 0xef4444, -0.9, 0.25, 0);
+    addMesh(new THREE.BoxGeometry(0.32, 0.55, 0.45), 0x3b82f6, 0.9, 0.25, 0);
+    const a = addMesh(new THREE.SphereGeometry(0.1, 14, 14), 0xf97316, -0.25, 0.45, 0);
+    const b = addMesh(new THREE.SphereGeometry(0.07, 12, 12), 0x38bdf8, 0.45, 0.55, 0);
+    const g = addMesh(new THREE.SphereGeometry(0.07, 12, 12), 0xfde047, 0, 0.72, 0);
+    labDynamicMeshes.push({ type: 'bob', mesh: a, amp: 0.14 }, { type: 'bob', mesh: b, amp: 0.2 }, { type: 'bob', mesh: g, amp: 0.24 });
+  } else if (sk === 'phys_solar') {
+    addMesh(new THREE.ConeGeometry(0.6, 1.0, 3), 0x38bdf8, -0.2, 0.25, 0, 0, 0, 0, 0.65);
+    addMesh(new THREE.BoxGeometry(1.45, 0.09, 0.95), 0x1d4ed8, 0.2, -0.55, 0, 0.28, 0, 0);
+  } else if (sk === 'phys_cosmos') {
+    const star = addMesh(new THREE.SphereGeometry(0.62, 28, 28), 0xfbbf24, 0, 0, 0);
+    addMesh(new THREE.TorusGeometry(1.22, 0.08, 12, 48), 0x818cf8, 0, 0, 0, Math.PI/2.4, 0, 0, 0.55);
+    labDynamicMeshes.push({ type: 'spin', mesh: star });
+  } else if (did === 'diag-bio-hydra' || did === 'diag-bio-neuron' || sk === 'bio_neuron') {
     addMesh(new THREE.SphereGeometry(0.42, 24, 24), 0xa855f7, -1.0, 0, 0);
     addMesh(new THREE.SphereGeometry(0.18, 16, 16), 0xec4899, -1.0, 0, 0.28);
     addMesh(new THREE.CylinderGeometry(0.07, 0.07, 2.2, 16), 0x38bdf8, 0.2, 0, 0, 0, 0, Math.PI/2);
     [-0.3, 0.25, 0.8].forEach(px => addMesh(new THREE.CylinderGeometry(0.14, 0.14, 0.38, 16), 0xfbbf24, px, 0, 0, 0, 0, Math.PI/2));
     const pulse = addMesh(new THREE.SphereGeometry(0.13, 16, 16), 0x4ade80, -0.6, 0, 0);
     labDynamicMeshes.push({ type: 'pulse', mesh: pulse });
-  } else if (sk === 'bio_eye') {
-    addMesh(new THREE.SphereGeometry(0.9, 28, 28), 0xf8fafc, 0, 0, 0, 0, 0, 0, 0.45);
-    addMesh(new THREE.SphereGeometry(0.45, 24, 24), 0x0284c7, 0, 0, 0.65);
-    addMesh(new THREE.SphereGeometry(0.22, 20, 20), 0x0f172a, 0, 0, 0.88);
-    addMesh(new THREE.CylinderGeometry(0.14, 0.14, 0.9, 16), 0xf59e0b, 0, 0, -1.1, Math.PI/2, 0, 0);
-  } else if (sk === 'bio_ear') {
-    addMesh(new THREE.TorusGeometry(0.55, 0.12, 14, 28, Math.PI * 1.5), 0xfdba74, -1.1, 0, 0);
-    addMesh(new THREE.CylinderGeometry(0.15, 0.15, 0.9, 16), 0xfb923c, -0.45, 0, 0, 0, 0, Math.PI/2);
-    addMesh(new THREE.TorusKnotGeometry(0.42, 0.1, 64, 12, 2, 3), 0x38bdf8, 0.75, 0, 0);
-  } else if (sk === 'bio_dna') {
+  } else if (did === 'diag-bio-eye-ear') {
+    addMesh(new THREE.SphereGeometry(0.88, 28, 28), 0xf8fafc, 0, 0, 0, 0, 0, 0, 0.45);
+    addMesh(new THREE.SphereGeometry(0.45, 24, 24), 0x0284c7, 0, 0, 0.62);
+    addMesh(new THREE.SphereGeometry(0.22, 20, 20), 0x0f172a, 0, 0, 0.86);
+    addMesh(new THREE.CylinderGeometry(0.14, 0.14, 0.85, 16), 0xf59e0b, 0, 0, -1.05, Math.PI/2, 0, 0);
+  } else if (did === 'diag-bio-flower') {
+    addMesh(new THREE.CylinderGeometry(0.12, 0.16, 0.7, 16), 0x22c55e, 0, -0.45, 0);
+    addMesh(new THREE.SphereGeometry(0.32, 20, 20), 0x10b981, 0, 0, 0);
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2;
+      addMesh(new THREE.SphereGeometry(0.24, 16, 12), 0xec4899, Math.cos(a)*0.55, 0.1, Math.sin(a)*0.55);
+    }
+  } else if (did === 'diag-bio-fossils' || did === 'diag-bio-radiometric' || did === 'diag-bio-yemen-geo') {
+    addMesh(new THREE.BoxGeometry(2.4, 0.35, 1.1), 0x78350f, 0, -0.65, 0);
+    addMesh(new THREE.BoxGeometry(2.4, 0.35, 1.1), 0x92400e, 0, -0.28, 0);
+    addMesh(new THREE.BoxGeometry(2.4, 0.32, 1.1), 0xb45309, 0, 0.08, 0);
+    const fossil = addMesh(new THREE.TorusKnotGeometry(0.25, 0.07, 48, 8), 0xfde047, 0, 0.45, 0);
+    labDynamicMeshes.push({ type: 'spin', mesh: fossil });
+  } else if (sk === 'bio_dna' || did.includes('dna') || did.includes('mendel') || did.includes('biotech')) {
     const dnaGroup = new THREE.Group();
     for (let i = -5; i <= 5; i++) {
-      const y = i * 0.22;
+      const y = i * 0.21;
       const a = i * 0.55;
       const x1 = Math.cos(a) * 0.55, z1 = Math.sin(a) * 0.55;
-      const x2 = -x1, z2 = -z1;
-      const m1 = new THREE.Mesh(new THREE.SphereGeometry(0.1, 12, 12), new THREE.MeshPhongMaterial({color: 0x38bdf8}));
+      const m1 = new THREE.Mesh(new THREE.SphereGeometry(0.1, 12, 12), new THREE.MeshPhongMaterial({ color: 0x38bdf8 }));
       m1.position.set(x1, y, z1);
-      const m2 = new THREE.Mesh(new THREE.SphereGeometry(0.1, 12, 12), new THREE.MeshPhongMaterial({color: 0x10b981}));
-      m2.position.set(x2, y, z2);
-      const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.1, 8), new THREE.MeshPhongMaterial({color: i%2===0?0xf59e0b:0xec4899}));
-      bar.position.set(0, y, 0);
-      bar.rotation.z = Math.PI/2;
-      bar.rotation.y = -a;
+      const m2 = new THREE.Mesh(new THREE.SphereGeometry(0.1, 12, 12), new THREE.MeshPhongMaterial({ color: 0x10b981 }));
+      m2.position.set(-x1, y, -z1);
+      const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.1, 8), new THREE.MeshPhongMaterial({ color: i % 2 === 0 ? 0xf59e0b : 0xec4899 }));
+      bar.position.set(0, y, 0); bar.rotation.z = Math.PI / 2; bar.rotation.y = -a;
       dnaGroup.add(m1, m2, bar);
     }
     labApparatusGroup.add(dnaGroup);
     labDynamicMeshes.push({ type: 'spin', mesh: dnaGroup });
   } else {
-    // Endocrine / Flower / Chromosome / Earth 3D
     const grp = new THREE.Group();
-    const core = new THREE.Mesh(new THREE.SphereGeometry(0.6, 24, 24), new THREE.MeshPhongMaterial({color: 0x10b981}));
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(0.95, 0.08, 12, 32), new THREE.MeshPhongMaterial({color: 0x38bdf8}));
-    ring.rotation.x = Math.PI / 3;
-    grp.add(core, ring);
+    grp.add(new THREE.Mesh(new THREE.SphereGeometry(0.58, 24, 24), new THREE.MeshPhongMaterial({ color: 0x10b981 })));
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(0.95, 0.08, 12, 32), new THREE.MeshPhongMaterial({ color: 0x38bdf8 }));
+    ring.rotation.x = Math.PI / 3; grp.add(ring);
     labApparatusGroup.add(grp);
     labDynamicMeshes.push({ type: 'spin', mesh: grp });
   }
+  drawLab2DFallback(data, sliderEl ? parseFloat(sliderEl.value) : 50);
 }
 
 function resizeLab3d() {
   const container = document.getElementById('labCanvasContainer');
-  if (!container || !labRenderer || !labCamera || !labScene) return;
+  if (!container) return;
   const w = Math.max(1, container.clientWidth);
   const h = Math.max(1, container.clientHeight);
-  labRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  labRenderer.setSize(w, h);
-  labCamera.aspect = w / h;
-  labCamera.updateProjectionMatrix();
-  labRenderer.render(labScene, labCamera);
+  if (labRenderer && labCamera && labScene) {
+    labRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    labRenderer.setSize(w, h);
+    labCamera.aspect = w / h;
+    labCamera.updateProjectionMatrix();
+    labRenderer.render(labScene, labCamera);
+  }
+  const sliderEl = document.getElementById('sliderAcidRate');
+  drawLab2DFallback(curLabDiag, sliderEl ? parseFloat(sliderEl.value) : 50);
 }
 window.addEventListener('resize', resizeLab3d);
 window.addEventListener('orientationchange', function() { setTimeout(resizeLab3d, 120); });
 
+function renderDiagramPartsBadges(data) {
+  const badgesContainer = document.getElementById('labPartsBadges');
+  if (!badgesContainer) return;
+  if (data && data.components && data.components.length) {
+    badgesContainer.innerHTML = data.components.map((c, i) => `
+      <span class="part-badge" onclick="highlightLabPart('${c.id}', '${c.name}', '${c.role}')">${c.name}</span>
+    `).join('') + `<div id="labPartInfoBox" style="width:100%; margin-top:8px; padding:10px; border-radius:10px; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); color:#e2e8f0; font-size:12.5px; display:none;"></div>`;
+  } else {
+    badgesContainer.innerHTML = '';
+  }
+}
+
+loadDiagramModel = function(diagRef) {
+  buildSubject3dScene(diagRef);
+  renderDiagramPartsBadges(curLabDiag);
+  if (labRenderer && labScene && labCamera) labRenderer.render(labScene, labCamera);
+};
+
 openLab3d = function(diagRef) {
   const modal = document.getElementById('lab3dModal');
   modal.classList.add('open');
-  if (!labRenderer) initLabThree();
-  resizeLab3d();
-
-  buildSubject3dScene(diagRef);
-  requestAnimationFrame(resizeLab3d);
-
-  const data = DIAGRAMS[diagRef] || Object.values(DIAGRAMS)[0];
-  const badgesContainer = document.getElementById('labPartsBadges');
-  if (data && data.components) {
-    badgesContainer.innerHTML = data.components.map(c => `
-      <span class="part-badge" onclick="highlightLabPart('${c.id}', '${c.name}', '${c.role}')">${c.name}</span>
-    `).join('') + `<div id="labPartInfoBox" style="width:100%; margin-top:8px; padding:10px; border-radius:10px; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); color:#e2e8f0; font-size:12.5px; display:none;"></div>`;
+  if (!labRenderer) {
+    try { initLabThree(); } catch (e) { labRenderer = null; }
   }
-
+  loadDiagramModel(diagRef || DEFAULT_DIAG_REF);
+  resizeLab3d();
+  requestAnimationFrame(resizeLab3d);
   if (!labAnimId) animateLab();
 };
 
@@ -678,31 +896,63 @@ onAcidSliderChange = function(val) {
   const u = (curLabDiag && curLabDiag.slider_unit) || '';
   const el = document.getElementById('sliderAcidVal');
   if (el) el.textContent = val + u;
+  const f = parseFloat(val) || 0;
   labDynamicMeshes.forEach(item => {
-    if (item.type === 'cannon') item.mesh.rotation.z = -(val * Math.PI / 180);
+    if (item.type === 'cannon') item.mesh.rotation.z = -(f * Math.PI / 180);
+    if (item.type === 'cap_plates') {
+      const gap = Math.max(0.18, 0.9 - (f / 1000));
+      item.p1.position.x = -gap; item.p2.position.x = gap;
+    }
   });
+  drawLab2DFallback(curLabDiag, f);
 };
 
 animateLab = function() {
   const modal = document.getElementById('lab3dModal');
   if (!modal || !modal.classList.contains('open')) { labAnimId = 0; return; }
   labAnimId = requestAnimationFrame(animateLab);
-  const sliderEl = document.querySelector('#lab3dModal input[type="range"]');
-  const speedMul = sliderEl ? (parseFloat(sliderEl.value) || 4) * 0.004 : 0.015;
+  const sliderEl = document.getElementById('sliderAcidRate');
+  const sVal = sliderEl ? (parseFloat(sliderEl.value) || 4) : 4;
+  const speedMul = Math.max(0.006, sVal * 0.0005);
+  const t = performance.now() * 0.002;
 
   labDynamicMeshes.forEach(item => {
-    if (item.type === 'spin') {
-      item.mesh.rotation.y += speedMul;
-    } else if (item.type === 'orbit') {
+    if (item.type === 'spin') item.mesh.rotation.y += speedMul;
+    else if (item.type === 'spin_z') item.mesh.rotation.z += speedMul;
+    else if (item.type === 'orbit') {
       item.angle += item.speed;
       item.mesh.position.x = Math.cos(item.angle) * item.radius;
       item.mesh.position.z = Math.sin(item.angle) * item.radius;
     } else if (item.type === 'pulse') {
       item.mesh.position.x += 0.025;
-      if (item.mesh.position.x > 1.25) item.mesh.position.x = -0.65;
+      if (item.mesh.position.x > 1.2) item.mesh.position.x = -0.8;
+    } else if (item.type === 'bob') {
+      item.mesh.position.y = Math.sin(t * 2) * (item.amp || 0.12);
+    } else if (item.type === 'phys_collision1d') {
+      const u = (t * 0.5) % 2;
+      if (u < 1) {
+        item.b1.position.x = -1.1 + u * 1.1; item.b2.position.x = 0.0;
+      } else {
+        const v = u - 1;
+        if (sVal < 0.4) { item.b1.position.x = v * 0.65; item.b2.position.x = v * 0.65 + 0.35; }
+        else { item.b1.position.x = 0.0; item.b2.position.x = v * 1.1; }
+      }
+    } else if (item.type === 'phys_collision2d') {
+      const u = (t * 0.5) % 2;
+      if (u < 1) {
+        item.b1.position.set(-1.1 + u * 1.1, -0.5, 0);
+        item.b2.position.set(0.0, -0.5, 0);
+      } else {
+        const v = u - 1;
+        item.b1.position.set(v * 0.9, -0.5 + v * 0.65, 0);
+        item.b2.position.set(v * 0.9, -0.5 - v * 0.35, 0);
+      }
     }
   });
 
+  if (flameMesh) {
+    flameMesh.scale.y = 0.9 + Math.random() * 0.25;
+  }
   if (labRenderer && labScene && labCamera) {
     labRenderer.render(labScene, labCamera);
   }
@@ -810,9 +1060,358 @@ nextAssessmentExercise = function() {
     renderAssessmentContent();
   }
 };
+
+// --------------------------------------------------------
+// V2 READER CONSISTENCY OVERRIDES (240 DPI, SCOPED STORAGE, TABS)
+// --------------------------------------------------------
+getVisitedPagesSet = function() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem('thaker_visited_' + BOOK_SUBJECT_KEY) || '[]'));
+  } catch (e) { return new Set(); }
+};
+markPageVisited = function(bookPage) {
+  try {
+    const s = getVisitedPagesSet();
+    s.add(bookPage);
+    localStorage.setItem('thaker_visited_' + BOOK_SUBJECT_KEY, JSON.stringify([...s]));
+  } catch (e) {}
+};
+toggleBookmarkPage = function() {
+  const p = PAGES[state.curPageIdx];
+  if (!p) return;
+  try {
+    const key = 'thaker_bookmarks_' + BOOK_SUBJECT_KEY;
+    const bms = JSON.parse(localStorage.getItem(key) || '[]');
+    const existsIdx = bms.findIndex(b => b.page_id === p.page_id);
+    if (existsIdx >= 0) {
+      bms.splice(existsIdx, 1);
+      showToast('تمت الإزالة من المفضلة');
+    } else {
+      bms.push({ page_id: p.page_id, book_page: p.book_page, title: p.title });
+      showToast('تم حفظ الصفحة في المفضلة ⭐');
+    }
+    localStorage.setItem(key, JSON.stringify(bms));
+    updateBookmarkButtonUI(p.page_id);
+  } catch (e) {}
+};
+updateBookmarkButtonUI = function(pageId) {
+  try {
+    const bms = JSON.parse(localStorage.getItem('thaker_bookmarks_' + BOOK_SUBJECT_KEY) || '[]');
+    const marked = bms.some(b => b.page_id === pageId);
+    const btn = document.getElementById('btnBookmarkPage');
+    if (btn) btn.classList.toggle('bookmarked', marked);
+  } catch (e) {}
+};
+saveStudentProgress = function() {
+  try {
+    const key = 'thaker_student_' + BOOK_SUBJECT_KEY;
+    const cur = JSON.parse(localStorage.getItem(key) || '{}');
+    cur.lastPage = PAGES[state.curPageIdx]?.book_page || PAGES[0]?.book_page || 4;
+    cur.updatedAt = new Date().toISOString();
+    localStorage.setItem(key, JSON.stringify(cur));
+  } catch (e) {}
+};
+
+// High-DPI 240 DPI Loader (image_full priority + exact aspect fit)
+loadPage = function(pageIdx, direction = 0) {
+  if (pageIdx < 0 || pageIdx >= PAGES.length) return;
+  state.curPageIdx = pageIdx;
+  const p = PAGES[pageIdx];
+  resetPageZoom();
+
+  const container = document.getElementById('pageContainer');
+  if (container && direction !== 0) {
+    container.style.transition = 'transform 0.15s ease-out, opacity 0.15s ease-out';
+    container.style.opacity = '0.45';
+    container.style.transform = direction > 0 ? 'translateX(-22px)' : 'translateX(22px)';
+    setTimeout(() => {
+      container.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease';
+      container.style.opacity = '1';
+      container.style.transform = 'none';
+    }, 25);
+  }
+
+  const imgEl = document.getElementById('pageImg');
+  imgEl._retriedOpt = false;
+  imgEl._retriedPath = false;
+  imgEl.onerror = function() {
+    if (!this._retriedOpt && p.image && this.src !== p.image) {
+      this._retriedOpt = true;
+      this.src = p.image;
+    } else if (this.src.indexOf('assets/curriculum') !== -1 && !this._retriedPath) {
+      this._retriedPath = true;
+      this.src = this.src.replace('assets/curriculum', 'curriculum');
+    }
+  };
+  imgEl.onload = function() {
+    if (this.naturalWidth && this.naturalHeight) {
+      const vp = document.getElementById('bookViewport');
+      const pc = document.getElementById('pageContainer');
+      if (vp && pc) {
+        const aspect = this.naturalWidth / this.naturalHeight;
+        const availW = Math.max(100, vp.clientWidth - 16);
+        const availH = Math.max(100, vp.clientHeight - 16);
+        let tw, th;
+        if (availW / availH > aspect) { th = availH; tw = Math.round(th * aspect); }
+        else { tw = availW; th = Math.round(tw / aspect); }
+        pc.style.width = tw + 'px';
+        pc.style.height = th + 'px';
+      }
+    }
+  };
+  imgEl.src = p.image_full || p.image;
+  updatePageContainerDimensions();
+
+  const totalBook = PAGES[PAGES.length - 1]?.book_page || PAGES.length;
+  const ind = document.getElementById('pageIndicatorText');
+  if (ind) ind.textContent = `صفحة ${p.book_page} من ${totalBook}`;
+  const secTitle = document.getElementById('currentSectionTitle');
+  if (secTitle) secTitle.textContent = p.title || BOOK_TITLE_MAIN;
+
+  const slider = document.getElementById('pageRangeSlider');
+  if (slider) {
+    slider.max = Math.max(0, PAGES.length - 1);
+    slider.value = pageIdx;
+  }
+  const minLbl = document.getElementById('sliderMinLabel');
+  const maxLbl = document.getElementById('sliderMaxLabel');
+  if (minLbl) minLbl.textContent = PAGES[0]?.book_page || 1;
+  if (maxLbl) maxLbl.textContent = totalBook;
+
+  const hsCount = (INTERACTIONS[p.page_id] || []).length;
+  const hsText = document.getElementById('hotspotCountText');
+  if (hsText) hsText.textContent = `✨ النقاط التفاعلية · ${hsCount}`;
+
+  renderInteractionsOverlay(p.page_id);
+  updateBookmarkButtonUI(p.page_id);
+  markPageVisited(p.book_page);
+  saveStudentProgress();
+
+  if (window.ThakerBridge && window.ThakerBridge.updateProgress) {
+    try {
+      const pct = Math.max(1, Math.round(((pageIdx + 1) / PAGES.length) * 100));
+      window.ThakerBridge.updateProgress(document.title, p.book_page, pct, p.unit_id || 'u1', p.title || '');
+    } catch (e) {}
+  }
+};
+
+renderIndexView = function() {
+  const container = document.getElementById('indexUnitsContainer');
+  if (!container) return;
+  const query = (document.getElementById('indexSearchInput')?.value || '').trim();
+  const visited = getVisitedPagesSet();
+
+  container.innerHTML = (UNITS || []).map((u, idx) => {
+    const allULessons = (LESSONS || []).filter(l => l.unitId === u.id || l.unit_id === u.id);
+    const filtered = allULessons.filter(l => !query || (l.title || '').includes(query) || (u.title || '').includes(query));
+    if (query && filtered.length === 0) return '';
+    let doneCount = 0;
+    allULessons.forEach(l => {
+      const lp = l.pages || [];
+      if (lp.some(pg => visited.has(pg))) doneCount++;
+    });
+    const pct = allULessons.length ? Math.round((doneCount / allULessons.length) * 100) : 0;
+    return `
+      <div class="index-unit-card">
+        <div class="index-unit-head" onclick="jumpFromIndex(${u.page_start})">
+          <div class="unit-ring-badge">${u.order || idx + 1}</div>
+          <div style="flex:1;">
+            <div style="font-size:15px; font-weight:800; color:var(--text-main);">${u.title || ('الوحدة ' + (idx + 1))}</div>
+            <div style="font-size:11.5px; color:var(--text-muted);">${pct}% مكتمل · ${allULessons.length} دروس · ص ${u.page_start}–${u.page_end}</div>
+          </div>
+          <span class="page-chip-soft">افتح الوحدة</span>
+        </div>
+        ${filtered.map(l => {
+          const lp = l.pages || [];
+          const pT = lp.length ? lp[0] : (l.p_start || u.page_start || 1);
+          const done = lp.some(pg => visited.has(pg)) || visited.has(pT);
+          return `
+            <div class="index-lesson-row" onclick="jumpFromIndex(${pT})">
+              <div class="lesson-check-dot ${done ? 'done' : ''}">${done ? '✓' : ''}</div>
+              <div style="flex:1; font-size:13.5px; font-weight:700; color:var(--text-main);">${l.title}</div>
+              <span class="page-chip-soft">ص ${pT}</span>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }).join('');
+};
+
+renderSummaryView = function() {
+  const container = document.getElementById('summaryCardsContainer');
+  if (!container) return;
+  const p = PAGES[state.curPageIdx] || PAGES[0] || {};
+  const bp = p.book_page || 10;
+  const unit = UNITS.find(u => u.id === p.unit_id)
+    || UNITS.find(u => bp >= u.page_start && bp <= u.page_end)
+    || UNITS[0]
+    || {};
+  const uId = unit.id || 'u1';
+  const ints = INTERACTIONS[p.page_id] || [];
+  const expRef = ints.find(i => i.explanation_ref)?.explanation_ref;
+  const expObj = (expRef && EXPLANATIONS[expRef])
+    || Object.values(EXPLANATIONS).find(e => e.id && e.id.includes(uId))
+    || Object.values(EXPLANATIONS)[0];
+
+  const subEl = document.getElementById('summaryUnitSub');
+  if (subEl) subEl.textContent = `${unit.title || p.title || ''} · ملخص مفاهيم وقوانين الدرس`;
+
+  let cards = [];
+  const vocabIds = (expObj?.vocabulary_ids && expObj.vocabulary_ids.length)
+    ? expObj.vocabulary_ids
+    : Object.keys(GLOSSARY).filter(k => (GLOSSARY[k]?.unit_id === uId) || k.includes(uId)).slice(0, 4);
+  const vList = (vocabIds.length ? vocabIds : Object.keys(GLOSSARY).slice(0, 3)).map(vid => GLOSSARY[vid]).filter(Boolean);
+  if (vList.length) {
+    cards.push(`
+      <div class="summary-stripe-card purple">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#7C3AED;">💡 تعريفات ومصطلحات</span>
+          <span class="page-chip-soft">ص ${bp}</span>
+        </div>
+        ${vList.map(v => `<div style="font-size:13.5px; line-height:1.6;"><b style="color:var(--text-main);">${v.term}:</b> <span style="color:var(--text-muted);">${v.definition}</span></div>`).join('')}
+      </div>
+    `);
+  }
+
+  const eqs = expObj?.chemical_equations || [];
+  const laws = unit.key_laws || [];
+  if (eqs.length > 0 || laws.length > 0 || expObj) {
+    const eqBlock = eqs.length
+      ? eqs.map(e => `<div class="formula-highlight-box">${e.label}: <span style="direction:ltr;display:inline-block;">${e.eq}</span></div>`).join('')
+      : (laws.length
+          ? laws.map(l => `<div class="formula-highlight-box">${l}</div>`).join('')
+          : `<div class="formula-highlight-box">${expObj?.levels?.basic || expObj?.original_text || ''}</div>`);
+    cards.push(`
+      <div class="summary-stripe-card blue">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#0284C7;">📐 القوانين والمفاهيم الأساسية</span>
+          <span class="page-chip-soft">${unit.title?.split(':')[0] || uId.toUpperCase()}</span>
+        </div>
+        ${eqBlock}
+      </div>
+    `);
+  }
+
+  const apps = unit.real_world_apps || [];
+  const interTxt = expObj?.levels?.intermediate || unit.short_desc || '';
+  if (interTxt || apps.length) {
+    cards.push(`
+      <div class="summary-stripe-card amber">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:15px; font-weight:800; color:#D97706;">🧪 الشرح التطبيقي والحياتي</span>
+          <span class="page-chip-soft">ص ${unit.page_start || bp}–${unit.page_end || bp}</span>
+        </div>
+        ${interTxt ? `<div style="font-size:13.5px; line-height:1.7; color:var(--text-main);">${interTxt}</div>` : ''}
+        ${apps.map(a => `<div style="font-size:12.5px; line-height:1.6; color:var(--text-muted);">• ${a}</div>`).join('')}
+      </div>
+    `);
+  }
+
+  const advTxt = expObj?.levels?.advanced || unit.short_desc || 'راجع القوانين والأشكال التوضيحية ونفّذ النشاط العملي لترسيخ الفهم.';
+  cards.push(`
+    <div class="summary-stripe-card red">
+      <div style="font-size:15px; font-weight:800; color:#DC2626;">⚠️ تعمق وتطبيق عملي</div>
+      <div style="font-size:13.5px; line-height:1.6; color:var(--text-main);">${advTxt}</div>
+      <button onclick="openDedicatedLabForPage()" style="margin-top:4px; background:var(--primary); color:#fff; border:none; border-radius:999px; padding:10px 14px; font-size:13px; font-weight:800; cursor:pointer; font-family:inherit;">🔬 جرّب أنشطة الوحدة في المعمل 3D ‹</button>
+    </div>
+  `);
+  container.innerHTML = cards.join('');
+};
+
+let quizFilterByUnit = true;
+renderQuizView = function() {
+  const container = document.getElementById('quizTabContainer');
+  if (!container) return;
+  const p = PAGES[state.curPageIdx] || PAGES[0] || {};
+  const uId = p.unit_id || UNITS[0]?.id || 'u1';
+  const rawEntries = Object.entries(ASSESSMENTS || {});
+  const qList = [];
+  rawEntries.forEach(([k, val]) => {
+    if (quizFilterByUnit && !k.includes(uId)) return;
+    if (Array.isArray(val)) val.forEach(sub => qList.push(sub));
+    else if (val) qList.push(val);
+  });
+  if (qList.length === 0) {
+    rawEntries.forEach(([, val]) => {
+      if (Array.isArray(val)) val.forEach(sub => qList.push(sub));
+      else if (val) qList.push(val);
+    });
+  }
+  window._flatQuizList = qList;
+  if (qList.length === 0) {
+    container.innerHTML = '<div class="quiz-question-card">لا توجد تمارين متاحة حالياً.</div>';
+    return;
+  }
+  if (quizTabIdx >= qList.length) quizTabIdx = 0;
+  const q = qList[quizTabIdx];
+  document.getElementById('quizTabCounter').textContent = `${quizTabIdx + 1} / ${qList.length}`;
+  document.getElementById('quizTabProgressBar').style.width = `${Math.round(((quizTabIdx + 1) / qList.length) * 100)}%`;
+
+  const filterBar = `
+    <div style="display:flex; gap:6px; margin-bottom:2px;">
+      <button onclick="quizFilterByUnit=true; quizTabIdx=0; renderQuizView();" class="scrubber-nav-btn" style="flex:1; padding:6px; ${quizFilterByUnit ? 'background:var(--primary); color:#fff;' : ''}">أسئلة الوحدة (${uId.toUpperCase()})</button>
+      <button onclick="quizFilterByUnit=false; quizTabIdx=0; renderQuizView();" class="scrubber-nav-btn" style="flex:1; padding:6px; ${!quizFilterByUnit ? 'background:var(--primary); color:#fff;' : ''}">كل أسئلة الكتاب</button>
+    </div>
+  `;
+  const opts = q.options || [];
+  const jumpPg = q.page || p.book_page;
+  container.innerHTML = `
+    ${filterBar}
+    <div class="quiz-question-card">
+      <span class="amber-tag-pill">تمرين كتاب الوزارة ${q.page ? `· ص ${q.page}` : ''}</span>
+      <div style="font-size:16px; font-weight:800; line-height:1.6;">${q.prompt || q.q || q.question}</div>
+    </div>
+    ${opts.map((o, i) => `
+      <button class="quiz-opt" id="qtOpt${i}" onclick="answerTabQuiz(${i})">
+        <span>${['أ','ب','ج','د'][i] || (i+1)}. ${o.text || o}</span>
+        <span>⚪</span>
+      </button>
+    `).join('')}
+    <div id="quizTabFeedback" class="why-wrong-box" style="display:none;"></div>
+    <div style="display:flex; gap:8px;">
+      <button onclick="jumpFromIndex(${jumpPg})" class="btn-nav" style="flex:1; border-radius:999px;">📖 راجع الصفحة ${q.page ? `(ص ${q.page})` : ''}</button>
+      <button onclick="quizTabIdx = (quizTabIdx + 1) % ${qList.length}; renderQuizView();" style="flex:1.3; background:var(--primary); color:#fff; border:none; border-radius:999px; padding:13px; font-size:14.5px; font-weight:800; cursor:pointer; font-family:inherit;">السؤال التالي ‹</button>
+    </div>
+  `;
+};
+
+initApp = function() {
+  state.isDark = false;
+  window.addEventListener('resize', updatePageContainerDimensions);
+  window.addEventListener('orientationchange', function() { setTimeout(updatePageContainerDimensions, 100); });
+  updatePageContainerDimensions();
+  initTouchGestures();
+
+  let startIdx = Math.min(5, Math.max(0, PAGES.length - 1));
+  let startTab = 'reader';
+  try {
+    const raw = (window.location.search || '') + '&' + (window.location.hash || '');
+    const pm = raw.match(/page=(\d+)/);
+    if (pm) {
+      const targetBp = parseInt(pm[1], 10);
+      const foundIdx = PAGES.findIndex(pg => pg.book_page === targetBp);
+      if (foundIdx !== -1) startIdx = foundIdx;
+    } else if (raw.includes('restore=1')) {
+      const saved = JSON.parse(localStorage.getItem('thaker_student_' + BOOK_SUBJECT_KEY) || '{}');
+      if (saved.lastPage) {
+        const savedIdx = PAGES.findIndex(pg => pg.book_page === saved.lastPage);
+        if (savedIdx !== -1) startIdx = savedIdx;
+      }
+    }
+    const tm = raw.match(/tab=(reader|index|summary|quiz)/);
+    if (tm) startTab = tm[1];
+  } catch (e) {}
+
+  loadPage(startIdx);
+  if (startTab !== 'reader') switchBookTab(startTab);
+};
+if (document.readyState !== 'loading') {
+  initApp();
+}
 """
 
-def build_book(subject_key, title_main, title_sub, primary_color, accent_color, bundle_js_var, bundle_file, out_filename, eq_label):
+def build_book(subject_key, title_main, title_sub, primary_color, primary_dark, primary_light, accent_color, bundle_js_var, bundle_file, out_filename, eq_label, lab_html_file, lab_btn_label, default_diag):
     print(f"[*] Building interactive HTML for {subject_key} -> {out_filename}...")
 
     with open(f"{BASE_DIR}/thaker-interactive-book.html", "r", encoding="utf-8") as f:
@@ -834,6 +1433,10 @@ def build_book(subject_key, title_main, title_sub, primary_color, accent_color, 
 {bundle_content}
 
 const CURR_DATA = {bundle_js_var};
+const BOOK_SUBJECT_KEY = {json.dumps(subject_key)};
+const BOOK_TITLE_MAIN = {json.dumps(title_main, ensure_ascii=False)};
+const BOOK_LAB_HTML = {json.dumps(lab_html_file)};
+const DEFAULT_DIAG_REF = {json.dumps(default_diag)};
 const PAGES = CURR_DATA?.pages || [];
 const INTERACTIONS = CURR_DATA?.interactions || {{}};
 const EXPLANATIONS = CURR_DATA?.explanations || {{}};
@@ -847,19 +1450,59 @@ const UNITS = CURR_DATA?.units || [];
 
     html_new = html[:idx_start] + new_data_header + html[idx_end + len(end_tag):]
 
-    # Customize titles and colors
-    html_new = html_new.replace("<title>ذاكر — كتاب العلوم التفاعلي الذكي (الصف التاسع - الجزء الثاني)</title>", f"<title>{title_main}</title>")
+    # Customize titles, metadata, floating lab pill, and #lab3dModal Grade-9 removal
+    html_new = html_new.replace("<title>ذاكر — كتاب العلوم التفاعلي الذكي (الصف التاسع - الجزء الثاني)</title>", f"<title>{title_main} — {title_sub}</title>")
     html_new = html_new.replace('<span class="title-main" id="currentSectionTitle">كتاب العلوم التفاعلي الذكي</span>', f'<span class="title-main" id="currentSectionTitle">{title_main}</span>')
     html_new = html_new.replace('<span class="title-main">كتاب العلوم التفاعلي الذكي</span>', f'<span class="title-main">{title_main}</span>')
-    html_new = html_new.replace('<span class="title-sub" id="currentSectionTitle">الصف التاسع الأساسي · الجزء الثاني</span>', f'<span class="title-sub" id="currentSectionTitle">{title_sub}</span>')
     html_new = html_new.replace('id="indexBookSub">كتاب العلوم · الجزء الثاني', f'id="indexBookSub">{title_main} · {title_sub}')
     html_new = html_new.replace("فهرس وحدات الجزء الثاني", f"فهرس وحدات {title_sub}")
     html_new = html_new.replace("المعادلات الكيميائية المرتبطة:", eq_label)
 
+    # Replace single hotspot pill with dual reader pills (Hotspots + Dedicated Lab)
+    old_pill = """    <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()">
+      <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
+    </button>"""
+    new_pill = f"""    <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; pointer-events:auto;">
+      <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()">
+        <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
+      </button>
+      <button class="hotspot-summary-pill" id="btnOpenDedicatedLab" onclick="openDedicatedLabForPage()" style="background:linear-gradient(135deg,{primary_color},{primary_dark});">
+        <span>{lab_btn_label}</span>
+      </button>
+    </div>"""
+    html_new = html_new.replace(old_pill, new_pill)
+
+    # Purge hardcoded Science 9th CO2/Cl2/Allotropes tabs & labels inside #lab3dModal
+    import re
+    html_new = re.sub(
+        r'<div class="diag-tabs-bar" id="labDiagTabs">.*?</div>',
+        '<div class="diag-tabs-bar" id="labDiagTabs"></div>',
+        html_new,
+        count=1,
+        flags=re.S,
+    )
+    html_new = html_new.replace('id="labControlLabel">معدل سكب حمض HCl:', 'id="labControlLabel">متغير المحاكاة:')
+    html_new = html_new.replace('<span id="labEquationBadge">⚖️ المعادلة: <b>CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂ ↑</b></span>', '<span id="labEquationBadge">⚖️ المبدأ العلمي: <b>—</b></span>')
+    html_new = html_new.replace('id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تصاعد الغاز: نشط', 'id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°')
+
+    # Inject a direct link inside #lab3dModal to open the full step-by-step dedicated lab
+    lab_full_btn = """      <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>
+    </div>
+    <button onclick="openActiveDiagInDedicatedLab()" style="width:100%; background:linear-gradient(135deg,#10B981,#059669); color:#fff; border:none; border-radius:999px; padding:9px 14px; font-size:12.5px; font-weight:800; cursor:pointer; font-family:inherit;">🔬 افتح النشاط بالخطوات الكاملة في المعمل 3D ‹</button>"""
+    html_new = html_new.replace('      <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>\n    </div>', lab_full_btn, 1)
+
     if primary_color != "#00a859":
         html_new = html_new.replace("--primary: #00a859;", f"--primary: {primary_color};")
-        html_new = html_new.replace("--primary-dark: #008f4c;", f"--primary-dark: {primary_color};")
+        html_new = html_new.replace("--primary-dark: #008f4c;", f"--primary-dark: {primary_dark};")
+        html_new = html_new.replace("--primary-light: #E8F8F0;", f"--primary-light: {primary_light};")
+        html_new = html_new.replace("--border-primary: rgba(0, 168, 89, 0.25);", f"--border-primary: {primary_color}40;")
         html_new = html_new.replace("border-color: #00a859;", f"border-color: {primary_color};")
+
+    # Ensure DOMContentLoaded invokes the overridden initApp (not captured origInitApp ref)
+    html_new = html_new.replace(
+        "document.addEventListener('DOMContentLoaded', initApp);",
+        "document.addEventListener('DOMContentLoaded', function() { initApp(); });",
+    )
 
     # Inject Activity Modal + Full Interactive JS Engine before </body>
     injection = f"""
@@ -886,11 +1529,16 @@ def main():
         title_main="كتاب ومعمل الفيزياء التفاعلي الذكي",
         title_sub="الصف الثالث الثانوي · القسم العلمي",
         primary_color="#0284c7",
+        primary_dark="#0369a1",
+        primary_light="#E0F2FE",
         accent_color="#38bdf8",
         bundle_js_var="window.THAKER_CURRICULUM_G12_PHYSICS",
         bundle_file="data/curriculum/grade12/physics/data_bundle.js",
         out_filename="physics-12th-book.html",
-        eq_label="القوانين والمعادلات المرتبطة:"
+        eq_label="القوانين والمعادلات المرتبطة:",
+        lab_html_file="physics-12th-lab.html",
+        lab_btn_label="⚡ معمل الفيزياء 3D",
+        default_diag="diag-u1-collision1d"
     )
 
     build_book(
@@ -898,11 +1546,16 @@ def main():
         title_main="كتاب ومعمل الأحياء التفاعلي الذكي",
         title_sub="الصف الثالث الثانوي · القسم العلمي",
         primary_color="#00a859",
+        primary_dark="#008f4c",
+        primary_light="#E8F8F0",
         accent_color="#10b981",
         bundle_js_var="window.THAKER_CURRICULUM_G12_BIOLOGY",
         bundle_file="data/curriculum/grade12/biology/data_bundle.js",
         out_filename="biology-12th-book.html",
-        eq_label="التفاعلات والنسب الحيوية المرتبطة:"
+        eq_label="التفاعلات والنسب الحيوية المرتبطة:",
+        lab_html_file="biology-12th-lab.html",
+        lab_btn_label="🧬 معمل الأحياء 3D",
+        default_diag="diag-bio-hydra"
     )
 
 if __name__ == "__main__":

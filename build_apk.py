@@ -33,7 +33,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 WORKSPACE = SCRIPT_DIR if os.path.exists(f"{SCRIPT_DIR}/chem-lab-book.html") else "/mnt/sdcard/projects/teaching-app"
 SOURCE_HTML = f"{WORKSPACE}/chem-lab-book.html"
 SOURCE_PHYS_HTML = f"{WORKSPACE}/physics-12th-book.html"
+SOURCE_PHYS_LAB = f"{WORKSPACE}/physics-12th-lab.html"
 SOURCE_BIO_HTML = f"{WORKSPACE}/biology-12th-book.html"
+SOURCE_BIO_LAB = f"{WORKSPACE}/biology-12th-lab.html"
 SOURCE_SCI9_HTML = f"{WORKSPACE}/science9-interactive.html"
 SOURCE_SCI9_3D = f"{WORKSPACE}/science-9th-book.html"
 SOURCE_MATH9_3D = f"{WORKSPACE}/math-9th-book.html"
@@ -4597,9 +4599,15 @@ def copy_assets(base_dir):
     if os.path.exists(SOURCE_PHYS_HTML):
         shutil.copy2(SOURCE_PHYS_HTML, f"{assets_dir}/physics-12th-book.html")
         print(f"  ✓ Bundled 3D Physics Book: physics-12th-book.html ({os.path.getsize(SOURCE_PHYS_HTML) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_PHYS_LAB):
+        shutil.copy2(SOURCE_PHYS_LAB, f"{assets_dir}/physics-12th-lab.html")
+        print(f"  ✓ Bundled 3D Physics Lab: physics-12th-lab.html ({os.path.getsize(SOURCE_PHYS_LAB) / 1024:.0f} KB)")
     if os.path.exists(SOURCE_BIO_HTML):
         shutil.copy2(SOURCE_BIO_HTML, f"{assets_dir}/biology-12th-book.html")
         print(f"  ✓ Bundled 3D Biology Book: biology-12th-book.html ({os.path.getsize(SOURCE_BIO_HTML) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_BIO_LAB):
+        shutil.copy2(SOURCE_BIO_LAB, f"{assets_dir}/biology-12th-lab.html")
+        print(f"  ✓ Bundled 3D Biology Lab: biology-12th-lab.html ({os.path.getsize(SOURCE_BIO_LAB) / 1024:.0f} KB)")
     if os.path.exists(SOURCE_SCI9_3D):
         shutil.copy2(SOURCE_SCI9_3D, f"{assets_dir}/science-9th-book.html")
         shutil.copy2(SOURCE_SCI9_3D, f"{assets_dir}/science9-interactive.html")

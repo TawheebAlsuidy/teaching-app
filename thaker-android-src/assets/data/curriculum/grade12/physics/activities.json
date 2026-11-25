@@ -239,5 +239,83 @@
         "default": 5800
       }
     ]
+  },
+  "lab-u1-balloon-rocket": {
+    "id": "lab-u1-balloon-rocket",
+    "title": "🧪 نشاط (1): البالونة ودفع الصواريخ",
+    "book_page": 15,
+    "lab_url": "physics-12th-lab.html?exp=lab-u1-balloon-rocket&from=book"
+  },
+  "lab-u1-satellite": {
+    "id": "lab-u1-satellite",
+    "title": "🧪 نشاط (2): حركة الأقمار الصناعية",
+    "book_page": 19,
+    "lab_url": "physics-12th-lab.html?exp=lab-u1-satellite&from=book"
+  },
+  "lab-u1-angular": {
+    "id": "lab-u1-angular",
+    "title": "🧪 نشاط (3): القصور الذاتي الدوراني",
+    "book_page": 22,
+    "lab_url": "physics-12th-lab.html?exp=lab-u1-angular&from=book"
+  },
+  "lab-u2-faraday-wire": {
+    "id": "lab-u2-faraday-wire",
+    "title": "🧪 نشاط (1): الحث الكهرومغناطيسي",
+    "book_page": 32,
+    "lab_url": "physics-12th-lab.html?exp=lab-u2-faraday-wire&from=book"
+  },
+  "lab-u2-dynamo": {
+    "id": "lab-u2-dynamo",
+    "title": "🧪 نشاط (2): مولد الدينامو",
+    "book_page": 34,
+    "lab_url": "physics-12th-lab.html?exp=lab-u2-dynamo&from=book"
+  },
+  "lab-u2-hotwire": {
+    "id": "lab-u2-hotwire",
+    "title": "🧪 نشاط (3): الأميتر الحراري",
+    "book_page": 38,
+    "lab_url": "physics-12th-lab.html?exp=lab-u2-hotwire&from=book"
+  },
+  "lab-u2-capacitor": {
+    "id": "lab-u2-capacitor",
+    "title": "🧪 نشاط (6): سعة المكثف والتيار",
+    "book_page": 42,
+    "lab_url": "physics-12th-lab.html?exp=lab-u2-capacitor&from=book"
+  },
+  "lab-u2-rlc": {
+    "id": "lab-u2-rlc",
+    "title": "🧪 نشاط (7): توصيل الملفات",
+    "book_page": 54,
+    "lab_url": "physics-12th-lab.html?exp=lab-u2-rlc&from=book"
+  },
+  "lab-u4-gas-cro-radar": {
+    "id": "lab-u4-gas-cro-radar",
+    "title": "🧪 نشاط (1): تأين الغازات والكشاف",
+    "book_page": 86,
+    "lab_url": "physics-12th-lab.html?exp=lab-u4-gas-cro-radar&from=book"
+  },
+  "lab-u6-photoelectric": {
+    "id": "lab-u6-photoelectric",
+    "title": "🔬 تجربة مليكان الكهروضوئية",
+    "book_page": 147,
+    "lab_url": "physics-12th-lab.html?exp=lab-u6-photoelectric&from=book"
+  },
+  "lab-u7-nuclear": {
+    "id": "lab-u7-nuclear",
+    "title": "🧪 نشاط: الإشعاع النووي وأضراره",
+    "book_page": 178,
+    "lab_url": "physics-12th-lab.html?exp=lab-u7-nuclear&from=book"
+  },
+  "lab-u8-solar-prism": {
+    "id": "lab-u8-solar-prism",
+    "title": "🔬 تجربة: تحليل الطيف بالمنشور",
+    "book_page": 189,
+    "lab_url": "physics-12th-lab.html?exp=lab-u8-solar-prism&from=book"
+  },
+  "lab-u9-cosmos": {
+    "id": "lab-u9-cosmos",
+    "title": "🧪 نشاط (3): مجرة درب التبانة",
+    "book_page": 203,
+    "lab_url": "physics-12th-lab.html?exp=lab-u9-cosmos&from=book"
   }
 }

@@ -91,24 +91,26 @@ public class SubjectActivity extends Activity {
                 "📐 استكشاف الأشكال الهندسية 3D", "math-9th-book.html");
         } else if ("physics".equals(subjectKey)) {
             tvTitle.setText("الفيزياء 3D");
-            tvMeta.setText("كتاب تفاعلي كامل · الثالث الثانوي");
+            tvMeta.setText("9 وحدات · 213 صفحة · 18 مختبراً تفاعلياً");
             tvGradePill.setText("الثالث الثانوي");
             ivIcon.setImageResource(R.drawable.ic_subj_physics);
             quizKey = "phys_12";
 
             addPartCard("الكتاب التفاعلي الشامل", "كمية التحرك، التيار المتردد، الإلكترونيات، الفيزياء الذرية والنووية",
-                ThakerStore.getBookPct(this, "phys_12", 25), "214 صفحة تفاعلية", "فهرس ذكي + مختبرات",
-                "⚡ افتح كتاب الفيزياء التفاعلي", "html", "physics-12th-book.html", null, null);
+                ThakerStore.getBookPct(this, "phys_12", 25), "213 صفحة تفاعلية", "18 تجربة + فهرس ذكي",
+                "⚡ افتح كتاب الفيزياء التفاعلي", "html", "physics-12th-book.html",
+                "🔬 معمل الفيزياء التفاعلي 3D (18 تجربة)", "physics-12th-lab.html");
         } else if ("biology".equals(subjectKey)) {
             tvTitle.setText("الأحياء 3D");
-            tvMeta.setText("كتاب تفاعلي كامل · الثالث الثانوي");
+            tvMeta.setText("8 وحدات · 219 صفحة · 18 مختبراً تفاعلياً");
             tvGradePill.setText("الثالث الثانوي");
             ivIcon.setImageResource(R.drawable.ic_subj_bio);
             quizKey = "bio_12";
 
-            addPartCard("الكتاب التفاعلي الشامل", "التنظيم العصبي، الهرمونات، التكاثر، الوراثة والحمض النووي DNA",
-                ThakerStore.getBookPct(this, "bio_12", 20), "218 صفحة تفاعلية", "رسومات تفاعلية + اختبارات",
-                "🧬 افتح كتاب الأحياء التفاعلي", "html", "biology-12th-book.html", null, null);
+            addPartCard("الكتاب التفاعلي الشامل", "التنظيم العصبي، الهرمونات، التكاثر، الوراثة وDNA والتقانة الحيوية والأرض",
+                ThakerStore.getBookPct(this, "bio_12", 20), "219 صفحة تفاعلية", "18 تجربة + رسومات 3D",
+                "🧬 افتح كتاب الأحياء التفاعلي", "html", "biology-12th-book.html",
+                "🧪 معمل الأحياء التفاعلي 3D (18 تجربة)", "biology-12th-lab.html");
         } else {
             tvTitle.setText("الكيمياء 3D");
             tvMeta.setText("مختبر العناصر والتفاعلات · الثالث الثانوي");

@@ -1,9 +1,35 @@
 {
-  "diag-bio-neuron-3d": {
-    "id": "diag-bio-neuron-3d",
-    "title": "مجسم الخلية العصبية (العصبون) 3D (الوحدة 1)",
+  "diag-bio-hydra": {
+    "id": "diag-bio-hydra",
+    "lab_exp": "bio-u1-hydra-worm",
+    "title": "الشبكة العصبية في الهيدرا ودودة الأرض (ص 10)",
     "sim_key": "bio_neuron",
-    "slider_label": "شدة المنبه العصبي:",
+    "formula": "تنظيم عصبي أولي بالشبكة (الهيدرا) ➔ عقدة وحبل بطني (دودة الأرض)",
+    "slider_label": "شدة المنبه:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 70,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "net",
+        "name": "شبكة الهيدرا",
+        "role": "تنقل التنبيه في جميع الاتجاهات."
+      },
+      {
+        "id": "worm",
+        "name": "دودة الأرض",
+        "role": "تنفر من الضوء الساطع بحبلها العصبي البطني."
+      }
+    ]
+  },
+  "diag-bio-neuron": {
+    "id": "diag-bio-neuron",
+    "lab_exp": "bio-u1-neuron-impulse",
+    "title": "الخلية العصبية وانتقال السيال 3D (ص 12 - 25)",
+    "sim_key": "bio_neuron",
+    "formula": "الراحة = -70 mV | العتبة = -55 mV | الفعل = +40 mV",
+    "slider_label": "شدة المنبه:",
     "slider_min": 0,
     "slider_max": 100,
     "slider_val": 70,
@@ -11,207 +37,397 @@
     "components": [
       {
         "id": "soma",
-        "name": "جسم الخلية والنواة",
-        "role": "المركز الأيضي للعصبون، يحتوي على النواة وأجسام نسل."
+        "name": "جسم الخلية والزوائد",
+        "role": "استقبال التنبيهات العصبية."
       },
       {
-        "id": "dendrites",
-        "name": "الزوائد الشجيرية",
-        "role": "استقبال التنبيهات العصبية من المستقبلات أو من عصبونات أخرى."
-      },
-      {
-        "id": "myelin",
+        "id": "axon",
         "name": "المحور وغمد المايلين",
-        "role": "نقل السيال العصبي بسرعة فائقة بالقفز عبر اختناقات رانفييه."
+        "role": "ينقل السيال بالقفز السريع عبر اختناقات رانفييه."
       }
     ]
   },
-  "diag-bio-eye-3d": {
-    "id": "diag-bio-eye-3d",
-    "title": "تشريح العين البشرية 3D (الوحدة 1)",
+  "diag-bio-eye-ear": {
+    "id": "diag-bio-eye-ear",
+    "lab_exp": "bio-u1-eye-ear",
+    "title": "المستقبلات الضوئية والسمعية 3D (ص 26 - 36)",
     "sim_key": "bio_eye",
-    "slider_label": "تحدب العدسة (التكيف):",
+    "formula": "تكيّف العدسة بالعين | القوقعة وعضو كورتي بالسمع",
+    "slider_label": "تحدب العدسة:",
     "slider_min": 1,
     "slider_max": 10,
     "slider_val": 5,
     "slider_unit": " D",
     "components": [
       {
-        "id": "cornea",
-        "name": "القرنية والعدسة",
-        "role": "كسر الأشعة الضوئية وتجميعها بدقة على الشبكية."
-      },
-      {
-        "id": "iris",
-        "name": "القزحية والبؤبؤ",
-        "role": "التحكم في كمية الضوء الداخلة للعين حسب شدة الإضاءة."
-      },
-      {
         "id": "retina",
-        "name": "الشبكية والعصب البصري",
-        "role": "تحتوي على العصي والمخاريط لتحويل الضوء إلى سيال عصبي للدماغ."
-      }
-    ]
-  },
-  "diag-bio-ear-3d": {
-    "id": "diag-bio-ear-3d",
-    "title": "تشريح الأذن والسمع والتوازن 3D (الوحدة 1)",
-    "sim_key": "bio_ear",
-    "slider_label": "شدة الموجة الصوتية:",
-    "slider_min": 1,
-    "slider_max": 10,
-    "slider_val": 6,
-    "slider_unit": "x",
-    "components": [
-      {
-        "id": "eardrum",
-        "name": "طبلة الأذن وعظيمات السمع",
-        "role": "نقل وتضخيم الاهتزازات الصوتية عبر المطرقة والسندان والركاب."
+        "name": "الشبكية",
+        "role": "تحتوي العصي والمخاريط للرؤية."
       },
       {
         "id": "cochlea",
-        "name": "القوقعة (عضو كورتي)",
-        "role": "تحويل الاهتزازات الميكانيكية في السائل الليمفي إلى إشارات سمعية."
-      },
-      {
-        "id": "canals",
-        "name": "القنوات الهلالية الثلاث",
-        "role": "الحفاظ على التوازن الحركي وموضع الرأس في الفراغ."
+        "name": "القوقعة والقنوات الهلالية",
+        "role": "السمع وتوازن الجسم."
       }
     ]
   },
-  "diag-bio-endocrine-3d": {
-    "id": "diag-bio-endocrine-3d",
-    "title": "جهاز الغدد الصماء والتنظيم الهرموني 3D (الوحدة 2)",
-    "sim_key": "bio_endocrine",
-    "slider_label": "مستوى تركيز الجلوكوز:",
+  "diag-bio-auxin": {
+    "id": "diag-bio-auxin",
+    "lab_exp": "bio-u2-auxins",
+    "title": "الأوكسينات والانتحاء النباتي 3D (ص 41 - 45)",
+    "sim_key": "bio_dna",
+    "formula": "تجمع IAA في الجانب المظلم ➔ استطالة خلاياه",
+    "slider_label": "زاوية الضوء:",
+    "slider_min": -60,
+    "slider_max": 60,
+    "slider_val": 40,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "tip",
+        "name": "القمة النامية",
+        "role": "تُفرز الأوكسين IAA."
+      },
+      {
+        "id": "shade",
+        "name": "الجانب المظلم",
+        "role": "تتركز به الأوكسينات فيطول أكثر وينتحي الساق."
+      }
+    ]
+  },
+  "diag-bio-endocrine": {
+    "id": "diag-bio-endocrine",
+    "lab_exp": "bio-u2-endocrine",
+    "title": "الغدد الصماء والإنسولين والجلوكاجون 3D (ص 46 - 59)",
+    "sim_key": "bio_neuron",
+    "formula": "ارتفاع السكر ➔ إنسولين | انخفاض السكر ➔ جلوكاجون",
+    "slider_label": "سكر الدم:",
     "slider_min": 50,
-    "slider_max": 200,
-    "slider_val": 100,
-    "slider_unit": " mg/dL",
+    "slider_max": 220,
+    "slider_val": 110,
+    "slider_unit": " mg",
     "components": [
       {
         "id": "pituitary",
         "name": "الغدة النخامية",
-        "role": "تفرز هرمون النمو والهرمونات المنشطة للدرقية والكظرية والتناسلية."
-      },
-      {
-        "id": "thyroid",
-        "name": "الغدة الدرقية",
-        "role": "تفرز الثايروكسين المنظم للأيض والكالسيتونين المنظم للكالسيوم."
+        "role": "تفرز هرمونات تنظم بقية الغدد الصماء."
       },
       {
         "id": "pancreas",
-        "name": "البنكرياس (جزر لانجرهانز)",
-        "role": "تفرز الإنسولين لخفض سكر الدم والجلوكاجون لرفعه."
+        "name": "جزر لانجرهانس",
+        "role": "تضبط اتزان سكر الدم."
       }
     ]
   },
-  "diag-bio-flower-3d": {
-    "id": "diag-bio-flower-3d",
-    "title": "تركيب الزهرة والتكاثر النباتي 3D (الوحدة 3)",
-    "sim_key": "bio_flower",
-    "slider_label": "تفتح البتلات والتلقيح:",
-    "slider_min": 0,
+  "diag-bio-asexual": {
+    "id": "diag-bio-asexual",
+    "lab_exp": "bio-u3-budding-spores",
+    "title": "التكاثر اللاجنسي (التبرعم والتبوغ والخضري) 3D (ص 62 - 68)",
+    "sim_key": "bio_dna",
+    "formula": "تكاثر ميتوزي ينتج أفراداً مطابقة للأم 100%",
+    "slider_label": "معدل الانقسام:",
+    "slider_min": 20,
     "slider_max": 100,
-    "slider_val": 75,
+    "slider_val": 80,
     "slider_unit": "%",
     "components": [
       {
-        "id": "stamen",
-        "name": "الطلع (السداة: متك وخيط)",
-        "role": "عضو التذكير؛ يُنتج حبوب اللقاح داخل المتك."
+        "id": "bud",
+        "name": "البرعم / الأبواغ",
+        "role": "طرق تكاثر لاجنسي سريع في الخميرة والفطريات."
       },
       {
-        "id": "carpel",
-        "name": "المتاع (ميسم، قلم، مبيض)",
-        "role": "عضو التأنيث؛ يحتوي على البويضات ويحدث فيه الإخصاب المزدوج."
-      },
-      {
-        "id": "petals",
-        "name": "التويج والكأس",
-        "role": "السبلات تحمي البرعم، والبتلات الملونة تجذب الحشرات الملقحة."
+        "id": "graft",
+        "name": "التطعيم والتعقيل",
+        "role": "يحافظ على الصفات النباتية المرغوبة."
       }
     ]
   },
-  "diag-bio-chromosome-3d": {
-    "id": "diag-bio-chromosome-3d",
-    "title": "الكروموسوم وتوارث الصفات 3D (الوحدة 4)",
-    "sim_key": "bio_chromosome",
-    "slider_label": "درجة تكثف الكروماتين:",
+  "diag-bio-flower": {
+    "id": "diag-bio-flower",
+    "lab_exp": "bio-u3-flower-seed",
+    "title": "الزهرة والإخصاب المزدوج 3D (ص 72 - 78)",
+    "sim_key": "bio_eye",
+    "formula": "زيجوت (2n) + إندوسبيرم (3n)",
+    "slider_label": "مراحل التلقيح:",
     "slider_min": 1,
-    "slider_max": 10,
-    "slider_val": 6,
-    "slider_unit": "x",
-    "components": [
-      {
-        "id": "chromatids",
-        "name": "الكروماتيدان الشقيقان",
-        "role": "يحمل كل منهما نسخة متطابقة من الحمض النووي والجينات."
-      },
-      {
-        "id": "centromere",
-        "name": "السنترومير",
-        "role": "نقطة اتصال الكروماتيدين وارتباط خيوط المغزل أثناء الانقسام."
-      },
-      {
-        "id": "locus",
-        "name": "المواقع الجينية (الأليلات)",
-        "role": "مواضع محددة تحمل الجينات السائدة والمتنحية للصفات الوراثية."
-      }
-    ]
-  },
-  "diag-bio-dna-helix-3d": {
-    "id": "diag-bio-dna-helix-3d",
-    "title": "الحلزون المزدوج لجزيء DNA 3D (الوحدة 5)",
-    "sim_key": "bio_dna",
-    "slider_label": "سرعة دوران الحلزون المزدوج:",
-    "slider_min": 0,
-    "slider_max": 10,
-    "slider_val": 4,
-    "slider_unit": "x",
-    "components": [
-      {
-        "id": "backbone",
-        "name": "هيكل السكر والفوسفات",
-        "role": "شريطان متعاكسا الاتجاه (5'→3' و 3'→5') يمثلان جانبي السلم."
-      },
-      {
-        "id": "at_pair",
-        "name": "القاعدتان الأدنين والثايمين (A=T)",
-        "role": "ترتبطان معاً برابطتين هيدروجينيتين في منتصف اللولب."
-      },
-      {
-        "id": "gc_pair",
-        "name": "القاعدتان الجوانين والسيتوزين (G≡C)",
-        "role": "ترتبطان معاً بثلاث روابط هيدروجينية وتمنحان الثبات."
-      }
-    ]
-  },
-  "diag-bio-ecology-earth-3d": {
-    "id": "diag-bio-ecology-earth-3d",
-    "title": "الغلاف الحيوي وطبقات الأرض 3D (الوحدة 6-8)",
-    "sim_key": "bio_earth",
-    "slider_label": "دوران الكوكب والطبقات:",
-    "slider_min": 1,
-    "slider_max": 10,
+    "slider_max": 3,
     "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "stamen",
+        "name": "السداة والمتك",
+        "role": "إنتاج حبوب اللقاح."
+      },
+      {
+        "id": "ovary",
+        "name": "المبيض والكيس الجنيني",
+        "role": "تكوين البذرة والثمار."
+      }
+    ]
+  },
+  "diag-bio-cycle": {
+    "id": "diag-bio-cycle",
+    "lab_exp": "bio-u3-repro-cycle",
+    "title": "التكاثر ودورة الطمث الهرمونية 3D (ص 79 - 92)",
+    "sim_key": "bio_neuron",
+    "formula": "يوم 14: ذروة هرمون LH وحدوث الإباضة",
+    "slider_label": "اليوم بالدورة:",
+    "slider_min": 1,
+    "slider_max": 28,
+    "slider_val": 14,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "fsh",
+        "name": "FSH والإستروجين",
+        "role": "إنضاج الحويصلة وبناء البطانة."
+      },
+      {
+        "id": "lh",
+        "name": "LH والجسم الأصفر",
+        "role": "الإباضة وإفراز البروجستيرون."
+      }
+    ]
+  },
+  "diag-bio-mendel": {
+    "id": "diag-bio-mendel",
+    "lab_exp": "bio-u4-mendel",
+    "title": "وراثة مندل ومربع بانيت 3D (ص 98 - 110)",
+    "sim_key": "bio_dna",
+    "formula": "Tt × Tt ➔ 3 طويل : 1 قصير",
+    "slider_label": "نوع التهجين:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "dom",
+        "name": "الأليل السائد T",
+        "role": "يظهر أثره في الهجين Tt والنقي TT."
+      },
+      {
+        "id": "rec",
+        "name": "الأليل المتنحي t",
+        "role": "يظهر فقط عند اجتماعه tt."
+      }
+    ]
+  },
+  "diag-bio-blood": {
+    "id": "diag-bio-blood",
+    "lab_exp": "bio-u4-codominance",
+    "title": "فصائل الدم ABO والوراثة بالجنس 3D (ص 111 - 128)",
+    "sim_key": "bio_dna",
+    "formula": "فصائل Iᴬ و Iᴮ سيادة مشتركة | صفات X تنتقل للأبناء من الأم",
+    "slider_label": "الحالة الوراثية:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "abo",
+        "name": "فصائل ABO",
+        "role": "مثال على تعدد البدائل والسيادة المشتركة."
+      },
+      {
+        "id": "sexchr",
+        "name": "X و Y",
+        "role": "تحديد الجنس وحمل الجينات المرتبطة به."
+      }
+    ]
+  },
+  "diag-bio-dna": {
+    "id": "diag-bio-dna",
+    "lab_exp": "bio-u5-dna-protein",
+    "title": "لولب DNA وبناء البروتين 3D (ص 131 - 142)",
+    "sim_key": "bio_dna",
+    "formula": "DNA ➔ نسخ mRNA (U بدل T) ➔ ترجمة البروتين",
+    "slider_label": "سرعة النسخ:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 5,
     "slider_unit": "x",
     "components": [
       {
-        "id": "biosphere",
-        "name": "النظام البيئي وتدفق الطاقة",
-        "role": "تنتقل الطاقة من المنتجات إلى المستهلكات بنسبة 10% في كل مستوى."
+        "id": "bases",
+        "name": "القواعد النيتروجينية",
+        "role": "A=T و G≡C في DNA."
       },
+      {
+        "id": "ribosome",
+        "name": "الرايبوسوم و tRNA",
+        "role": "ترجمة الكودونات لسلسلة ببتيد."
+      }
+    ]
+  },
+  "diag-bio-biotech-food": {
+    "id": "diag-bio-biotech-food",
+    "lab_exp": "bio-u6-fermentation",
+    "title": "التقانة الحيوية في الغذاء (الألبان والجبن) 3D (ص 145 - 151)",
+    "sim_key": "bio_dna",
+    "formula": "التخمر اللاكتيكي للزبادي + الإنفحة لصنع الجبن",
+    "slider_label": "الحرارة (°C):",
+    "slider_min": 10,
+    "slider_max": 70,
+    "slider_val": 42,
+    "slider_unit": "°C",
+    "components": [
+      {
+        "id": "lacto",
+        "name": "بكتيريا حمض اللاكتيك",
+        "role": "تحول اللاكتوز إلى حمض لاكتيك."
+      },
+      {
+        "id": "rennet",
+        "name": "إنزيم الكيموزين",
+        "role": "يخثر الكازين لصنع الجبن."
+      }
+    ]
+  },
+  "diag-bio-biotech-tech": {
+    "id": "diag-bio-biotech-tech",
+    "lab_exp": "bio-u6-biotech-insulin",
+    "title": "الهندسة الوراثية للإنسولين ومعالجة الملوثات 3D (ص 152 - 160)",
+    "sim_key": "bio_dna",
+    "formula": "بلازميد E.coli + جين بشري ➔ إنسولين | ميثان من المخلفات",
+    "slider_label": "التطبيق:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "plasmid",
+        "name": "البلازميد البكتيري",
+        "role": "ناقل للجين البشري."
+      },
+      {
+        "id": "biogas",
+        "name": "غاز الميثان",
+        "role": "ينتج من المعالجة الحيوية للصرف الصحي."
+      }
+    ]
+  },
+  "diag-bio-pollution": {
+    "id": "diag-bio-pollution",
+    "lab_exp": "bio-u7-pollution",
+    "title": "الملوثات البيئية والمطر الحمضي 3D (ص 163 - 180)",
+    "sim_key": "bio_eye",
+    "formula": "أكاسيد الكبريت والنيتروجين + بخار الماء ➔ مطر حمضي",
+    "slider_label": "الانبعاثات:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 60,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "air",
+        "name": "ملوثات الهواء",
+        "role": "تسبب أمطاراً حمضية واحتباساً حرارياً."
+      },
+      {
+        "id": "water",
+        "name": "تلوث الماء والضجيج",
+        "role": "أضرار على الأسماك والأعصاب."
+      }
+    ]
+  },
+  "diag-bio-conservation": {
+    "id": "diag-bio-conservation",
+    "lab_exp": "bio-u7-conservation",
+    "title": "استنزاف الموارد ومحميات اليمن 3D (ص 181 - 185)",
+    "sim_key": "bio_eye",
+    "formula": "ترشيد المياه الجوفية + حماية سقطرى وعتمة",
+    "slider_label": "الترشيد:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 80,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "water",
+        "name": "الحوض الجوفي",
+        "role": "يحمى بالري الحديث والحواجز المائية."
+      },
+      {
+        "id": "socotra",
+        "name": "أرخبيل سقطرى",
+        "role": "محمية للنباتات المستوطنة النادرة."
+      }
+    ]
+  },
+  "diag-bio-fossils": {
+    "id": "diag-bio-fossils",
+    "lab_exp": "bio-u8-fossils",
+    "title": "الصخور الرسوبية وتكون الأحافير 3D (ص 188 - 201)",
+    "sim_key": "bio_dna",
+    "formula": "هيكل صلب + دفن سريع بمعزل عن الأكسجين = أحفورة",
+    "slider_label": "سرعة الدفن:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 85,
+    "slider_unit": "%",
+    "components": [
       {
         "id": "strata",
-        "name": "الطبقات الرسوبية والأحافير",
-        "role": "تحفظ سجل تطور الكائنات عبر الأحقاب الجيولوجية المتعاقبة."
+        "name": "الطبقات الرسوبية",
+        "role": "تحفظ السجل الزمني للأحافير."
       },
       {
-        "id": "yemen_geo",
-        "name": "التنوع الحيوي والجيولوجي باليمن",
-        "role": "محمية سقطرى الفريدة وطبقات الصخور الحاملة للثروات في اليمن."
+        "id": "fossil",
+        "name": "التمعدن والإحلال",
+        "role": "طرق تحفر الخشب والأصداف."
+      }
+    ]
+  },
+  "diag-bio-radiometric": {
+    "id": "diag-bio-radiometric",
+    "lab_exp": "bio-u8-radiometric",
+    "title": "التأريخ الإشعاعي للصخور 3D (ص 202 - 206)",
+    "sim_key": "bio_dna",
+    "formula": "N = N₀ · (½)^(t / T₁/₂) | عمر الأرض ≈ 4600 مليون سنة",
+    "slider_label": "فترات النصف:",
+    "slider_min": 0,
+    "slider_max": 5,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "c14",
+        "name": "الكربون-14",
+        "role": "تأريخ الأحافير العضوية (T₁/₂ = 5730 سنة)."
+      },
+      {
+        "id": "u238",
+        "name": "اليورانيوم-238",
+        "role": "تأريخ الصخور الجيولوجية السحيقة."
+      }
+    ]
+  },
+  "diag-bio-yemen-geo": {
+    "id": "diag-bio-yemen-geo",
+    "lab_exp": "bio-u8-geology-yemen",
+    "title": "السجل الجيولوجي وجيولوجيا اليمن 3D (ص 207 - 219)",
+    "sim_key": "bio_eye",
+    "formula": "القديمة (الترايلوبيت) ➔ الوسطى (الديناصورات) ➔ الحديثة (الثدييات)",
+    "slider_label": "الحقبة:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "trilo",
+        "name": "الترايلوبيت",
+        "role": "أحفورة مرشدة للكمبري بالحياة القديمة."
+      },
+      {
+        "id": "yemen",
+        "name": "جيولوجيا اليمن",
+        "role": "طبقات جوراسية رسوبية وهضاب بركانية ثلاثية."
       }
     ]
   }

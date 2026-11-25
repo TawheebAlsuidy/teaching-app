@@ -1,117 +1,251 @@
 {
-  "diag-phys-projectiles-3d": {
-    "id": "diag-phys-projectiles-3d",
-    "title": "محاكي المقذوفات ثلاثي الأبعاد (الوحدة 1)",
+  "diag-u1-collision1d": {
+    "id": "diag-u1-collision1d",
+    "lab_exp": "lab-u1-collision1d",
+    "title": "التصادم في بُعد واحد (شكل 1 - ص 10)",
+    "sim_key": "phys_collision1d",
+    "formula": "ك₁·ع₁ + ك₂·ع₂ = ك₁·ع₁' + ك₂·ع₂'",
+    "slider_label": "مرونة التصادم:",
+    "slider_min": 0,
+    "slider_max": 1,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "elastic",
+        "name": "تصادم مرن",
+        "role": "تُحفظ كمية التحرك والطاقة الحركية معاً."
+      },
+      {
+        "id": "inelastic",
+        "name": "تصادم غير مرن",
+        "role": "تُحفظ كمية التحرك ويلتحم الجسمان مع فقد في الطاقة الحركية."
+      }
+    ]
+  },
+  "diag-u1-collision2d": {
+    "id": "diag-u1-collision2d",
+    "lab_exp": "lab-u1-collision2d",
+    "title": "التصادم في بُعدين وتحليل المتجهات (شكل 2 - ص 11)",
+    "sim_key": "phys_collision2d",
+    "formula": "ك₁ع₁ = ك₁ع₁' جتا هـ₁ + ك₂ع₂' جتا هـ₂",
+    "slider_label": "زاوية الانحراف:",
+    "slider_min": 15,
+    "slider_max": 75,
+    "slider_val": 30,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "vx",
+        "name": "المحور السيني",
+        "role": "ك₁ع₁ = ك₁ع₁' جتا هـ₁ + ك₂ع₂' جتا هـ₂"
+      },
+      {
+        "id": "vy",
+        "name": "المحور الصادي",
+        "role": "ك₁ع₁' جا هـ₁ = ك₂ع₂' جا هـ₂"
+      }
+    ]
+  },
+  "diag-u1-rocket": {
+    "id": "diag-u1-rocket",
+    "lab_exp": "lab-u1-balloon-rocket",
+    "title": "الصواريخ ذاتية الدفع ومبدأ الفعل ورد الفعل (ص 15 - 16)",
+    "sim_key": "phys_rocket",
+    "formula": "قوة دفع الصاروخ = -(Δك / Δز) · ع_غاز",
+    "slider_label": "اندفاع الغازات:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 80,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "fuel",
+        "name": "الغازات المندفعة",
+        "role": "تندفع للخلف بكمية تحرك عكسية."
+      },
+      {
+        "id": "thrust",
+        "name": "دفع الصاروخ",
+        "role": "قوة رد فعل تدفع الصاروخ للأمام حتى في الفراغ."
+      }
+    ]
+  },
+  "diag-u1-satellite": {
+    "id": "diag-u1-satellite",
+    "lab_exp": "lab-u1-satellite",
+    "title": "حركة القمر الصناعي والمدار الدائري (شكل 7 و8 - ص 19 - 20)",
+    "sim_key": "phys_satellite",
+    "formula": "ع_م = جذر(G · ك_أرض / نق)",
+    "slider_label": "السرعة المدارية:",
+    "slider_min": 4,
+    "slider_max": 12,
+    "slider_val": 8,
+    "slider_unit": " km/s",
+    "components": [
+      {
+        "id": "fg",
+        "name": "قوة الجذب المركزي",
+        "role": "عمودية على مسار القمر فتغير اتجاهه فقط."
+      },
+      {
+        "id": "vo",
+        "name": "السرعة المدارية (~8 km/s)",
+        "role": "تحفظ بقاء القمر في مداره المستقر."
+      }
+    ]
+  },
+  "diag-u1-angular": {
+    "id": "diag-u1-angular",
+    "lab_exp": "lab-u1-angular",
+    "title": "القصور الذاتي الدوراني وكمية التحرك الزاوي (شكل 10 - ص 23)",
+    "sim_key": "phys_angular",
+    "formula": "L = I · ω  (محفوظة عند انعدام العزوم)",
+    "slider_label": "السرعة الزاوية:",
+    "slider_min": 1,
+    "slider_max": 12,
+    "slider_val": 5,
+    "slider_unit": " rad/s",
+    "components": [
+      {
+        "id": "inertia",
+        "name": "عزم القصور الذاتي I",
+        "role": "مقاومة الجسم لتغيير حالته الدورانية (I = ك·نق²)."
+      },
+      {
+        "id": "angL",
+        "name": "كمية التحرك الزاوي",
+        "role": "L = I·ω تظل محفوظة عند غياب العزوم الخارجية."
+      }
+    ]
+  },
+  "diag-u1-projectiles": {
+    "id": "diag-u1-projectiles",
+    "lab_exp": "lab-u1-projectiles",
+    "title": "حركة المقذوفات في مجال الجاذبية (ص 23 - 26)",
     "sim_key": "phys_projectiles",
-    "slider_label": "زاوية الإطلاق (θ):",
+    "formula": "ف_أفقي R = (ع₀² · جا 2θ) / د",
+    "slider_label": "زاوية الإطلاق:",
     "slider_min": 15,
     "slider_max": 75,
     "slider_val": 45,
     "slider_unit": "°",
     "components": [
       {
-        "id": "launcher",
-        "name": "منصة الإطلاق",
-        "role": "تحديد زاوية الإطلاق θ والسرعة الابتدائية v₀ للمقذوف."
-      },
-      {
         "id": "apex",
-        "name": "ذروة المسار (H)",
-        "role": "أعلى نقطة يصلها المقذوف وتنعدم عندها المركبة الرأسية للسرعة (vy = 0)."
+        "name": "الذروة H",
+        "role": "تنعدم عندها المركبة الرأسية للسرعة."
       },
       {
         "id": "range",
-        "name": "المدى الأفقي (R)",
-        "role": "أقصى مسافة أفقية يقطعها المقذوف، وتبلغ ذروتها عند زاوية 45 درجة."
+        "name": "المدى الأفقي R",
+        "role": "يبلغ أقصى قيمة عند زاوية 45°."
       }
     ]
   },
-  "diag-phys-dynamo-3d": {
-    "id": "diag-phys-dynamo-3d",
-    "title": "مولد التيار المتردد — الدينامو 3D (الوحدة 2)",
+  "diag-u2-dynamo": {
+    "id": "diag-u2-dynamo",
+    "lab_exp": "lab-u2-dynamo",
+    "title": "مولد التيار المتردد — الدينامو 3D (ص 32 - 36)",
     "sim_key": "phys_dynamo",
-    "slider_label": "سرعة دوران الملف (ω):",
+    "formula": "ق.د.ك = ن · س · ب · ω · جا(ω ز)",
+    "slider_label": "سرعة الدوران:",
     "slider_min": 1,
     "slider_max": 10,
     "slider_val": 4,
     "slider_unit": "x",
     "components": [
       {
-        "id": "magnets",
-        "name": "القطبان المغناطيسيان (N / S)",
-        "role": "توليد مجال مغناطيسي منتظم يخترق ملف النواة."
-      },
-      {
         "id": "coil",
-        "name": "ملف الدوران",
-        "role": "يقطع خطوط الفيض فتتولد فيه قوة دافعة حثية جيبية ε = NBAω sin(ωt)."
+        "name": "ملف الدينامو",
+        "role": "يقطع خطوط الفيض لتوليد ق.د.ك جيبية."
       },
       {
         "id": "rings",
-        "name": "حلقتا الانزلاق والفرشتان",
-        "role": "نقل التيار المتردد من الملف الدوار إلى الدائرة الخارجية."
+        "name": "حلقتا الانزلاق",
+        "role": "تنقل التيار المتردد إلى الدائرة الخارجية."
       }
     ]
   },
-  "diag-phys-rlc-circuit": {
-    "id": "diag-phys-rlc-circuit",
-    "title": "دائرة التوالي RLC والرنين 3D (الوحدة 2)",
-    "sim_key": "phys_rlc",
-    "slider_label": "تردد المصدر (f):",
+  "diag-u2-capacitor": {
+    "id": "diag-u2-capacitor",
+    "lab_exp": "lab-u2-capacitor",
+    "title": "المكثف والمفاعلة السعوية 3D (ص 39 - 45)",
+    "sim_key": "phys_capacitor",
+    "formula": "م_سعوية Xc = 1 / (2 · π · f · C)",
+    "slider_label": "التردد (Hz):",
     "slider_min": 10,
     "slider_max": 100,
     "slider_val": 50,
     "slider_unit": " Hz",
     "components": [
       {
-        "id": "resistor",
-        "name": "المقاومة الأومية (R)",
-        "role": "تستهلك الطاقة الكهربائية ولا تُحدث فرق طور بين الجهد والتيار."
+        "id": "plates",
+        "name": "لوحا المكثف",
+        "role": "يخزنان الطاقة الكهربائية في مجال كهربائي."
       },
       {
-        "id": "inductor",
-        "name": "الملف الحثي (L)",
-        "role": "يقدم الجهد على التيار بزاوية 90° ومفاعلته XL = 2πfL."
-      },
-      {
-        "id": "capacitor",
-        "name": "المكثف (C)",
-        "role": "يؤخر الجهد عن التيار بزاوية 90° ومفاعلته Xc = 1/(2πfC)."
+        "id": "dielectric",
+        "name": "المادة العازلة",
+        "role": "تحدد سعة المكثف وتمنع التيار المستمر بعد تمام الشحن."
       }
     ]
   },
-  "diag-phys-semiconductor-3d": {
-    "id": "diag-phys-semiconductor-3d",
-    "title": "الوصلة الثنائية والترانزستور 3D (الوحدة 3)",
+  "diag-u2-rlc": {
+    "id": "diag-u2-rlc",
+    "lab_exp": "lab-u2-rlc",
+    "title": "دوائر التيار المتردد والرنين RLC (ص 47 - 56)",
+    "sim_key": "phys_rlc",
+    "formula": "Z = جذر(R² + (XL - Xc)²)",
+    "slider_label": "التردد (Hz):",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 50,
+    "slider_unit": " Hz",
+    "components": [
+      {
+        "id": "xl",
+        "name": "الملف الحثي (XL)",
+        "role": "يقدم الجهد على التيار بربع دورة."
+      },
+      {
+        "id": "xc",
+        "name": "المكثف (Xc)",
+        "role": "يؤخر الجهد عن التيار بربع دورة."
+      }
+    ]
+  },
+  "diag-u3-semiconductors": {
+    "id": "diag-u3-semiconductors",
+    "lab_exp": "lab-u3-diode-transistor",
+    "title": "الوصلة الثنائية والترانزستور 3D (ص 62 - 78)",
     "sim_key": "phys_diode",
-    "slider_label": "جهد الانحياز الأمامي:",
+    "formula": "ت_باعث = ت_قاعدة + ت_مجمع | β = ت_ع / ت_ق",
+    "slider_label": "جهد الانحياز:",
     "slider_min": 0,
     "slider_max": 100,
-    "slider_val": 60,
+    "slider_val": 70,
     "slider_unit": "%",
     "components": [
       {
-        "id": "ptype",
-        "name": "البلورة الموجبة (p-type)",
-        "role": "مطعمّة بذرات ثلاثية التكافؤ وتغلب فيها الفجوات الموجبة."
+        "id": "diode",
+        "name": "الوصلة الثنائية p-n",
+        "role": "تمرر التيار بالانحياز الأمامي وتقوّم المتردد."
       },
       {
-        "id": "depletion",
-        "name": "منطقة النضوب (جهد الحاجز)",
-        "role": "يضيق سمكها في الانحياز الأمامي ويتسع في الانحياز العكسي."
-      },
-      {
-        "id": "ntype",
-        "name": "البلورة السالبة (n-type)",
-        "role": "مطعمّة بذرات خماسية التكافؤ وتغلب فيها الإلكترونات الحرة."
+        "id": "transistor",
+        "name": "الترانزستور",
+        "role": "يعمل كمكبر (IC = β·IB) وكمفتاح إلكتروني."
       }
     ]
   },
-  "diag-phys-cro-3d": {
-    "id": "diag-phys-cro-3d",
-    "title": "أنبوبة أشعة المهبط والأوسيلوسكوب 3D (الوحدة 4)",
+  "diag-u4-cro-radar": {
+    "id": "diag-u4-cro-radar",
+    "lab_exp": "lab-u4-gas-cro-radar",
+    "title": "أنبوبة أشعة الكاثود والأوسيلوسكوب والرادار (ص 86 - 106)",
     "sim_key": "phys_cro",
-    "slider_label": "تردد المسح الأفقي:",
+    "formula": "بعد الهدف بالرادار d = (c · Δt) / 2",
+    "slider_label": "تردد المسح:",
     "slider_min": 1,
     "slider_max": 10,
     "slider_val": 5,
@@ -120,25 +254,22 @@
       {
         "id": "gun",
         "name": "المدفع الإلكتروني",
-        "role": "يسخن الفتيل المهبط لتنبعث الإلكترونات وتُعجّل نحو المصعد."
-      },
-      {
-        "id": "plates",
-        "name": "ألواح الانحراف (X, Y)",
-        "role": "توجيه الشعاع الإلكتروني رأسياً وأفقياً لرسم الموجة."
+        "role": "يُطلق ويعجل حزمة الإلكترونات نحو الشاشة."
       },
       {
         "id": "screen",
         "name": "الشاشة الفلورية",
-        "role": "تتوهج عند اصطدام الإلكترونات بها وتُظهر شكل الإشارة."
+        "role": "ترسم الإشارة الكهربائية أو موقع هدف الرادار."
       }
     ]
   },
-  "diag-phys-bohr-atom-3d": {
-    "id": "diag-phys-bohr-atom-3d",
-    "title": "ذرة الهيدروجين لبور 3D (الوحدة 5)",
+  "diag-u5-bohr": {
+    "id": "diag-u5-bohr",
+    "lab_exp": "lab-u5-bohr-spectrum",
+    "title": "ذرة الهيدروجين لنظرية بور والأطياف 3D (ص 119 - 140)",
     "sim_key": "phys_bohr",
-    "slider_label": "رقم المدار الكمي (n):",
+    "formula": "ط_ن = -13.6 / ن² eV | Δط = هـ·ν",
+    "slider_label": "المدار الكمي:",
     "slider_min": 1,
     "slider_max": 4,
     "slider_val": 2,
@@ -146,99 +277,109 @@
     "components": [
       {
         "id": "nucleus",
-        "name": "النواة (البروتون الموجب)",
-        "role": "تتركز فيها كتلة الذرة وشحنتها الموجبة وتجذب الإلكترون."
+        "name": "النواة الموجبة",
+        "role": "تجذب الإلكترون بقوة كولوم."
       },
       {
         "id": "orbit",
-        "name": "المدارات الكمية المستقرة",
-        "role": "يدور الإلكترون فيها دون إشعاع طاقة، ونصف قطرها rₙ = n² r₁."
-      },
-      {
-        "id": "photon",
-        "name": "الفوتون المنبعث",
-        "role": "ينبعث عند هبوط الإلكترون من مدار أعلى إلى أدنى بطاقة hν = ΔE."
+        "name": "المدارات الكمية",
+        "role": "rₙ = n²·r₁ و Eₙ = -13.6/n² eV."
       }
     ]
   },
-  "diag-phys-photoelectric-lab": {
-    "id": "diag-phys-photoelectric-lab",
-    "title": "الخلية الكهروضوئية 3D (الوحدة 6)",
+  "diag-u6-photoelectric": {
+    "id": "diag-u6-photoelectric",
+    "lab_exp": "lab-u6-photoelectric",
+    "title": "الخلية الكهروضوئية والأشعة السينية والليزر 3D (ص 145 - 170)",
     "sim_key": "phys_photoelectric",
-    "slider_label": "تردد الضوء الساقط (ν):",
+    "formula": "هـ·ν = φ + ط_ح(العظمى)",
+    "slider_label": "تردد الضوء:",
     "slider_min": 1,
-    "slider_max": 10,
-    "slider_val": 7,
+    "slider_max": 14,
+    "slider_val": 10,
     "slider_unit": "×10¹⁴ Hz",
     "components": [
       {
-        "id": "beam",
-        "name": "حزمة الفوتونات الساقطة",
-        "role": "تحمل طاقة E = hν وتصطدم بإلكترونات المهبط."
-      },
-      {
         "id": "cathode",
-        "name": "المهبط الحساس للضوء",
-        "role": "يتحرر منه الإلكترون إذا كان تردد الضوء أكبر من تردد العتبة ν₀."
+        "name": "المهبط الحساس",
+        "role": "يحرر الإلكترونات إذا كانت ν ≥ ν₀."
       },
       {
-        "id": "anode",
-        "name": "المصعد الجامع",
-        "role": "يجذب الإلكترونات الضوئية المتحررة ليُحدث تياراً كهربائياً."
+        "id": "laser",
+        "name": "الليزر وكولدج",
+        "role": "إنتاج فوتونات متماسكة أو أشعة سينية."
       }
     ]
   },
-  "diag-phys-nuclear-3d": {
-    "id": "diag-phys-nuclear-3d",
-    "title": "الانشطار النووي والنشاط الإشعاعي 3D (الوحدة 7)",
+  "diag-u7-nuclear": {
+    "id": "diag-u7-nuclear",
+    "lab_exp": "lab-u7-nuclear",
+    "title": "انحراف الإشعاع النووي والمفاعل 3D (ص 175 - 182)",
     "sim_key": "phys_nuclear",
-    "slider_label": "طاقة النيوترون القاذف:",
-    "slider_min": 1,
-    "slider_max": 10,
-    "slider_val": 5,
-    "slider_unit": " MeV",
-    "components": [
-      {
-        "id": "u235",
-        "name": "نواة اليورانيوم-235",
-        "role": "نواة ثقيلة غير مستقرة تمتص نيوتروناً بطيئاً وتنشطر."
-      },
-      {
-        "id": "neutrons",
-        "name": "النيوترونات الناتجة (2-3)",
-        "role": "تُحدث تفاعلاً متسلسلاً مضبوطاً داخل المفاعل النووي."
-      },
-      {
-        "id": "energy",
-        "name": "الطاقة النووية الهائلة",
-        "role": "تنتج عن تحول فرق الكتلة إلى طاقة وفق معادلة أينشتاين ΔE = Δm·c²."
-      }
-    ]
-  },
-  "diag-phys-solar-stars-3d": {
-    "id": "diag-phys-solar-stars-3d",
-    "title": "الخلية الشمسية والنظام الكوني 3D (الوحدة 8-9)",
-    "sim_key": "phys_solar",
-    "slider_label": "شدة الإشعاع الشمسي:",
-    "slider_min": 10,
+    "formula": "ط = Δك · 931.5 MeV | ك = ك₀·(½)^(ز/عمر النصف)",
+    "slider_label": "المجال المغناطيسي:",
+    "slider_min": 0,
     "slider_max": 100,
-    "slider_val": 80,
+    "slider_val": 70,
     "slider_unit": "%",
     "components": [
       {
-        "id": "sun",
-        "name": "المصدر الإشعاعي (الشمس/النجم)",
-        "role": "يُنتج طاقة هائلة بالاندماج النووي وتعتمد ألوان النجوم على حرارتها."
+        "id": "alpha_beta_gamma",
+        "name": "ألفا وبيتا وجاما",
+        "role": "تتميز بمسارات مختلفة في المجال المغناطيسي."
       },
       {
-        "id": "panel",
-        "name": "اللوح الفوتوفولتي السيليكوني",
-        "role": "يحول الفوتونات الساقطة مباشرة إلى تيار مستمر."
+        "id": "fission",
+        "name": "الانشطار النووي",
+        "role": "يحرر طاقة ΔE = Δm·c²."
+      }
+    ]
+  },
+  "diag-u8-solar": {
+    "id": "diag-u8-solar",
+    "lab_exp": "lab-u8-solar-prism",
+    "title": "تحليل الطيف الشمسي والخلية الفوتوفولتية (ص 188 - 196)",
+    "sim_key": "phys_solar",
+    "formula": "القدرة الشمسية الصافية = الإشعاع × المساحة × الكفاءة",
+    "slider_label": "الإشعاع الشمسي:",
+    "slider_min": 20,
+    "slider_max": 100,
+    "slider_val": 85,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "prism",
+        "name": "المنشور الزجاجي",
+        "role": "يحلل الضوء الأبيض لألوان الطيف السبعة."
       },
       {
-        "id": "grid",
-        "name": "الشبكة والمحول (Inverter)",
-        "role": "تحويل التيار المستمر إلى متردد لتغذية المنازل والمزارع في اليمن."
+        "id": "pv",
+        "name": "الخلية الشمسية",
+        "role": "تحول ضوء الشمس لتيار مستمر."
+      }
+    ]
+  },
+  "diag-u9-cosmos": {
+    "id": "diag-u9-cosmos",
+    "lab_exp": "lab-u9-cosmos",
+    "title": "المجرات وتطور النجوم 3D (ص 199 - 209)",
+    "sim_key": "phys_cosmos",
+    "formula": "λ_max · T = 2.898 × 10⁻³ m·K",
+    "slider_label": "حرارة النجم:",
+    "slider_min": 3000,
+    "slider_max": 25000,
+    "slider_val": 5800,
+    "slider_unit": " K",
+    "components": [
+      {
+        "id": "milky",
+        "name": "مجرة درب التبانة",
+        "role": "مجرة حلزونية قطرها 100,000 سنة ضوئية."
+      },
+      {
+        "id": "stars",
+        "name": "ألوان النجوم",
+        "role": "النجم الأزرق أسخن والنجوم الحمراء أبرد."
       }
     ]
   }

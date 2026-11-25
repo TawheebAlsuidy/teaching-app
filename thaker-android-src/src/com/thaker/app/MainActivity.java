@@ -231,12 +231,12 @@ public class MainActivity extends Activity {
         LinearLayout r2 = makeRow();
         r2.addView(makeSubjectTile("الكيمياء 3D", "مختبر العناصر والتفاعلات", R.drawable.ic_subj_chem, R.drawable.card_mint_tint, "chemistry", true));
         r2.addView(makeSpace(10));
-        r2.addView(makeSubjectTile("الفيزياء 3D", "214 صفحة تفاعلية", R.drawable.ic_subj_physics, R.drawable.card_cream_tint, "physics", true));
+        r2.addView(makeSubjectTile("الفيزياء 3D", "213 صفحة + معمل 18 تجربة", R.drawable.ic_subj_physics, R.drawable.card_cream_tint, "physics", true));
         allSubjectsContainer.addView(r2);
 
         LinearLayout r3 = makeRow();
         r3.setPadding(0, (int) (10 * dp), 0, 0);
-        r3.addView(makeSubjectTile("الأحياء 3D", "218 صفحة تفاعلية", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
+        r3.addView(makeSubjectTile("الأحياء 3D", "219 صفحة + معمل 18 تجربة", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
         allSubjectsContainer.addView(r3);
     }
 
@@ -253,8 +253,10 @@ public class MainActivity extends Activity {
 
         addSubSectionLabel(libraryContainer, "الكتب التفاعلية المطوّرة 3D (إصدار 2.0)");
         addHtmlBookItem("🧪 العلوم 9 - الجزء الثاني التفاعلي (148 صفحة)", "شروح مفصلة، تجارب 3D متحركة، ملخصات واختبارات", "thaker-interactive-book.html");
-        addHtmlBookItem("⚡ الفيزياء 12 التفاعلي (214 صفحة)", "كمية التحرك، التيار المتردد، الذرة والفيزياء النووية", "physics-12th-book.html");
-        addHtmlBookItem("🧬 الأحياء 12 التفاعلي (218 صفحة)", "الجهاز العصبي، الهرمونات، الوراثة وتضاعف DNA", "biology-12th-book.html");
+        addHtmlBookItem("⚡ الفيزياء 12 التفاعلي (213 صفحة)", "كمية التحرك، التيار المتردد، الذرة والفيزياء النووية", "physics-12th-book.html");
+        addHtmlBookItem("🔬 معمل الفيزياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الفيزياء 1–9", "physics-12th-lab.html");
+        addHtmlBookItem("🧬 الأحياء 12 التفاعلي (219 صفحة)", "الجهاز العصبي، الوراثة، DNA والتقانة الحيوية", "biology-12th-book.html");
+        addHtmlBookItem("🧪 معمل الأحياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الأحياء 1–8", "biology-12th-lab.html");
         addHtmlBookItem("⚗️ مختبر الكيمياء 3D - الثالث الثانوي", "معمل كيمياء ثلاثي الأبعاد بالكامل", "chem-lab-book.html");
         addHtmlBookItem("🔬 المعمل التفاعلي 3D لعلوم التاسع", "13 درساً وتجربة علمية ثلاثية الأبعاد", "science-9th-book.html");
         addHtmlBookItem("📐 كتاب الرياضيات التفاعلي 3D (التاسع)", "نماذج هندسية تفاعلية للمبرهنات والدائرة", "math-9th-book.html");
