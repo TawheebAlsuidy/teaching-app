@@ -97,7 +97,7 @@
   - [x] `6.3` Accident at Jebel Kebir (PB p. 43 / WB pp. 73–74)
   - [x] `6.4` Saving Anwar: listening & vocabulary (PB p. 44 / WB pp. 74–75)
   - [x] `6.5` Saving Anwar: retelling the story (PB p. 44 / WB p. 75)
-  - [ ] `6.6` How a hospital works (PB p. 45 / WB p. 75)
+  - [x] `6.6` How a hospital works (PB p. 45 / WB p. 75)
   - [ ] `6.7` Working in public service (PB p. 46 / WB p. 76)
   - [ ] `6.8` Huge changes in Libyan health care: reading (PB p. 47)
   - [ ] `6.9` Huge changes in Libyan health care: comprehension & vocabulary (PB p. 47 / WB pp. 77–78)

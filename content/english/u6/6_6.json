@@ -1,0 +1,184 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_6",
+    "code": "6.6",
+    "title": "How a hospital works",
+    "title_ar": "كيف يعمل قسم الطوارئ في المستشفى: وصف العمليات المتكررة بالمضارع البسيط والمبني للمجهول",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 47, "book_page": 45 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 76, "book_page": 75 }
+    ],
+    "reference_images": {
+      "pb_45": "assets/ref/pb_p045.webp",
+      "wb_75": "assets/ref/wb_p075.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_6-present-rule",
+      "origin": "from_book",
+      "type": "grammar",
+      "source": { "book": "PB", "page": 45 },
+      "dir": "ltr",
+      "recall_words": ["two-track", "fast-track", "slow-track", "priority", "receptionist", "register", "registration form", "examination room", "turn", "unit"],
+      "content": {
+        "lines": [
+          "How a hospital works 6.6",
+          "You wrote about the process of saving Anwar in the Past simple. However many processes always happen in the same way. We can then write about them in the Present simple.",
+          "Dialogue bubble: Tell me about patient treatment in Casualty at your hospital in Britain.",
+          "Read what Dr Shakir's visitor says. Do you think the process is the same in a casualty unit at a big hospital in Yemen?"
+        ],
+        "image": "assets/media/pb45_casualty.webp",
+        "caption": "Dr Shakir and visitor in the casualty ward (PB page 45)"
+      }
+    },
+    {
+      "id": "u6-6_6-casualty-process",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 45 },
+      "dir": "ltr",
+      "recall_words": ["receptionist", "register", "priority", "registration form", "examination room", "unit"],
+      "content": {
+        "lines": [
+          "Well, the process probably isn't very different from what you do here. We have a two-track system. [We put people with really bad injuries in the 'fast track'.] They're patients who come in by ambulance from a bad car crash, for example, or people like Anwar. They're the highest priorities, of course, and they get immediate treatment.",
+          "But most people aren't so badly injured. And [we put patients like these through a longer process.] In fact, if there has been a bad road accident, for example, they may just have to wait because all the doctors are busy with the high-priority patients.",
+          "So what happens is this. [Receptionist register the personal details of the slow-track patients.] From there, patients go and wait to see [the reception nurse, who quickly examines each patient and gives them a priority] - red for bad injuries and also for young children and old people, and blue for people with less serious injuries. [She adds her notes to the registration form and sends it through to the team of doctors.] Patients then usually have to wait again before their turn comes to see a doctor. The doctors call patients into the examination rooms and examine them carefully. The doctors may give all the treatment that is necessary. But they may send a patient for treatment by another unit - the X-ray unit for a broken bone, for example.",
+          "Read the underlined parts again. These are important steps in the process of treatment. Find and underlined three more steps",
+          "Then do activity A in the Workbook."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي (<bdi dir='ltr'>PB p. 45 &amp; WB p. 75</bdi>):</strong><br>1) حُصرت الأجزاء المسطّرة بخطٍّ تحتها في الطباعة بين <span dir='ltr'><code>[...]</code></span> للتمييز الواضح مع الإبقاء على صورتها الأصلية في <span dir='ltr'>pb_p045.webp</span>.<br>2) طُبعت عبارة <span dir='ltr'><code>Receptionist register</code></span> بصيغة المفرد مع فعل الجمع (<span dir='ltr'><code>register</code></span> بدل <span dir='ltr'><code>Receptionists register</code></span>)، وطُبع السطر أسفل النص: <span dir='ltr'><code>Find and underlined three more steps</code></span> (<span dir='ltr'><code>underlined</code></span> بدل <span dir='ltr'><code>underline</code></span>، وبدون نقطة ختامية).<br>3) في <span dir='ltr'>WB 6.6 A</span> طُبعت مسافة زائدة داخل رمز الدرس: <span dir='ltr'><code>from 6. 5C</code></span>، وحُفظت حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الخطوات الثلاث غير المسطّرة (PB ص 45) والتحويل إلى المضارع المبني للمجهول",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 45,
+            "html": "<ol><li><b>الخطوات الثلاث الباقية التي طُلب استخراجها:</b><br>أ) <span dir='ltr'>Patients wait again before their turn comes to see a doctor → doctors call patients into the examination rooms and examine them carefully.</span><br>ب) <span dir='ltr'>The doctors may give all the treatment that is necessary.</span><br>ج) <span dir='ltr'>They may send a patient for treatment by another unit (e.g. the X-ray unit).</span></li><li><b>قاعدة التحويل للمجهول في المضارع البسيط:</b> <span dir='ltr'>am / is / are + Past Participle</span> (ومع <span dir='ltr'>may</span> تصبح <span dir='ltr'>may be + P.P.</span>). مثال: <span dir='ltr'>They send a patient → A patient <b>is sent</b> / <b>may be sent</b></span>.</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 45,
+            "caption": "نظام المسارين (Two-track system) في قسم الطوارئ",
+            "svg": "<svg viewBox='0 0 600 130' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='130' rx='10' fill='#F8FAFC'/><rect x='14' y='20' width='265' height='42' rx='8' fill='#FEE2E2' stroke='#DC2626'/><text x='146' y='45' text-anchor='middle' font-size='11' font-weight='700'>Fast Track: Immediate treatment</text><rect x='14' y='74' width='572' height='42' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='300' y='99' text-anchor='middle' font-size='10.5' font-weight='700'>Slow Track: 1 Registered → 2 Nurse priority (red/blue) → 3 Doctor exam → 4 Treatment / X-ray unit</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 75,
+            "html": "<p dir='ltr'><b>Active → Present Passive:</b> <i>The reception nurse quickly examines each patient</i> → <i>Each patient <b>is</b> quickly <b>examined</b> by the reception nurse.</i></p>"
+          },
+          "self_check_ref": "chk-6_6-a",
+          "page_ref": { "book": "PB", "page": 45, "pdf_page": 47, "image": "assets/ref/pb_p045.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "two-track": { "pos": "adj", "ar": "ذو مسارين", "in_book_wordlist": true, "wb_page": 113 },
+    "fast-track": { "pos": "adj/n", "ar": "المسار السريع للحالات الحرجة", "in_book_wordlist": true, "wb_page": 113 },
+    "slow-track": { "pos": "adj/n", "ar": "المسار العادي ذو الخطوات المتتابعة", "in_book_wordlist": true, "wb_page": 113 },
+    "priority": { "pos": "n", "ar": "أولوية", "in_book_wordlist": true, "wb_page": 113 },
+    "receptionist": { "pos": "n", "ar": "موظف/ة الاستقبال", "in_book_wordlist": true, "wb_page": 113 },
+    "register": { "pos": "v", "ar": "يسجّل البيانات", "in_book_wordlist": true, "wb_page": 113 },
+    "registration form": { "pos": "n", "ar": "استمارة التسجيل", "in_book_wordlist": true, "wb_page": 113 },
+    "turn": { "pos": "n", "ar": "الدور (عند الانتظار)", "in_book_wordlist": true, "wb_page": 113 },
+    "examination room": { "pos": "n", "ar": "غرفة الفحص", "in_book_wordlist": true, "wb_page": 113 },
+    "unit": { "pos": "n", "ar": "وحدة / قسم طبي (مثل X-ray unit)", "in_book_wordlist": true, "wb_page": 113 }
+  },
+  "activities": [
+    {
+      "id": "pb-6_6-steps",
+      "origin": "from_book",
+      "source": { "book": "PB", "page": 45 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "Read the underlined parts again. These are important steps in the process of treatment. Find and underlined three more steps",
+      "prompt_ar": "استخرج الخطوات الثلاث الإضافية من آخر الفقرة الثالثة في PB ص 45:",
+      "items": [
+        { "num": 1, "question": "Step 1 (after the registration form goes to doctors):", "model_answer": "The doctors call patients into the examination rooms and examine them carefully.", "explain_ar": "فحص الطبيب في غرفة الكشف بعد انتظار المريض لدوره." },
+        { "num": 2, "question": "Step 2 (doctor's own treatment):", "model_answer": "The doctors may give all the treatment that is necessary.", "explain_ar": "تقديم العلاج الكامل إن أمكن داخل الطوارئ." },
+        { "num": 3, "question": "Step 3 (specialist referral):", "model_answer": "They may send a patient for treatment by another unit - the X-ray unit for a broken bone, for example.", "explain_ar": "الإحالة إلى وحدة متخصصة كقسم الأشعة." }
+      ],
+      "hints": [
+        "ابدأ القراءة من الجمل الثلاث الأخيرة للفقرة الثالثة بعد الجملة المسطّرة team of doctors."
+      ]
+    },
+    {
+      "id": "wb-6_6-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 75 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.6 A You are a medical student writing about the process of patient treatment in Casualty. Re-read the underlined parts on PB page 45. Then write a paragraph in your copybooks. Use time expressions from 6. 5C, and the Passive. Start like this: People with really bad injuries are put in the fast track. People who ...",
+      "prompt_ar": "نموذج إعادة كتابة خطوات قسم الطوارئ بالمضارع المبني للمجهول وروابط التتابع من 6.5 C (WB ص 75):",
+      "guidance_literal": "Present simple Passive (is/are + P.P. and may be + P.P.) + First, / Then / After that, / Next, / Finally,",
+      "steps": [
+        { "label_ar": "1) الجملة الافتتاحية المقررة وتفصيل المسارين", "placeholder": "People with really bad injuries are put in the fast track. People who are not so badly injured are put through a longer process." },
+        { "label_ar": "2) التسجيل والفرز التمريضي بالمضارع المبني للمجهول (First, / Then / After that,)", "placeholder": "First, the personal details of slow-track patients are registered. Then each patient is quickly examined by the reception nurse and is given a red or blue priority. After that, her notes are added to the registration form and it is sent through to the team of doctors." },
+        { "label_ar": "3) فحص الطبيب والعلاج أو الإحالة (Next, / Finally,)", "placeholder": "Next, patients are called into the examination rooms and are examined carefully. Finally, all necessary treatment may be given by the doctors, or a patient may be sent to another unit such as the X-ray unit." }
+      ],
+      "hints": [
+        "احرص على تحويل كل فعل مضارع في الأجزاء المسطّرة (register, examines, gives, adds, sends, call, examine, may give, may send) إلى is/are/may be + P.P."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_6-a",
+      "origin": "educational_addition",
+      "page_ref": 45,
+      "questions": [
+        {
+          "id": "q-6_6-1",
+          "type": "mcq",
+          "stem": "In PB page 45, why do slow-track patients sometimes get a RED priority from the reception nurse?",
+          "evidence_block_id": "u6-6_6-casualty-process",
+          "options": [
+            { "text": "Because red is given for bad injuries, and also for young children and old people.", "is_correct": true, "why_wrong": null },
+            { "text": "Because red means the patient must go directly to the X-ray unit without registration.", "is_correct": false, "why_wrong": "يُحال المريض لوحدة الأشعة لاحقاً بعد فحص الطبيب في غرفة الكشف لا قبل التسجيل." },
+            { "text": "Because blue is given for young children and red for less serious injuries.", "is_correct": false, "why_wrong": "العكس صحيح: الأحمر للإصابات الشديدة والأطفال الصغار وكبار السن، والأزرق للإصابات الأقل خطورة." },
+            { "text": "Because red means the patient has already recovered and can go home.", "is_correct": false, "why_wrong": "اللون الأحمر يدل على أولوية الفحص العاجلة قبل غيرها." }
+          ],
+          "hints": [
+            "انظر الجملة بعد gives them a priority في الفقرة الثالثة."
+          ],
+          "explain": "تعطي ممرضة الاستقبال البطاقة الحمراء للإصابات الشديدة والأطفال الصغار وكبار السن، والزرقاء للإصابات الأقل خطورة."
+        },
+        {
+          "id": "q-6_6-2",
+          "type": "mcq",
+          "stem": "How is 'She adds her notes to the registration form and sends it through to the team of doctors' rewritten in the Present simple Passive (WB 6.6 A)?",
+          "evidence_block_id": "u6-6_6-casualty-process",
+          "options": [
+            { "text": "Her notes are added to the registration form and it is sent through to the team of doctors.", "is_correct": true, "why_wrong": null },
+            { "text": "Her notes were added to the registration form and it was sent through.", "is_correct": false, "why_wrong": "هذه صيغة ماضٍ بسيط؛ بينما وصف الإجراء المتكرر هنا يتطلب المضارع البسيط (are/is)." },
+            { "text": "Her notes is add to the registration form and it are sent through.", "is_correct": false, "why_wrong": "التصريف الثالث يجب أن يكون added، والجمع notes يأخذ are لا is بينما المفرد it يأخذ is." },
+            { "text": "She is added her notes to the registration form.", "is_correct": false, "why_wrong": "نائب الفاعل هنا هو المفعول به (her notes) وليس الفاعل (She)." }
+          ],
+          "hints": [
+            "استخدم are مع الجمع notes وis مع المفرد it."
+          ],
+          "explain": "في المبني للمجهول في المضارع البسيط: المفعول الجمع notes يأخذ are added والمفرد it يأخذ is sent."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_6-priority", "origin": "from_book", "page_ref": 113, "front": "priority (n)", "back": "أولوية (red / blue priority in Casualty)", "tag": "Unit 6 · 6.6" },
+    { "id": "fc-6_6-register", "origin": "from_book", "page_ref": 113, "front": "register (v) / registration form", "back": "يسجّل البيانات / استمارة التسجيل", "tag": "Unit 6 · 6.6" },
+    { "id": "fc-6_6-examroom", "origin": "from_book", "page_ref": 113, "front": "examination room", "back": "غرفة الفحص الطبي", "tag": "Unit 6 · 6.6" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 45 مع pb-47.png: حُدّدت الأجزاء المسطّرة الخمسة وحُفظت الصيغ الحرفية 'Receptionist register' و'Find and underlined three more steps' بلا نقطة.",
+    "wb_ocr_vs_image": "طُوبقت WB 6.6 A (ص 75) مع wb-076.png وحُفظت مسافة 'from 6. 5C' وحُلّت فقرة المبني للمجهول."
+  }
+}
