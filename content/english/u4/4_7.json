@@ -1,0 +1,218 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_7",
+    "code": "4.7",
+    "title": "Words and more words",
+    "title_ar": "تكوين المفردات الإنجليزية: الاقتراض والسوابق واللواحق والمركّبات والتحويل الوظيفي",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 31, "book_page": 29 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 47, "book_page": 46 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 48, "book_page": 47 }
+    ],
+    "reference_images": {
+      "pb_29": "assets/ref/pb_p029.webp",
+      "wb_46": "assets/ref/wb_p046.webp",
+      "wb_47": "assets/ref/wb_p047.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_7-intro",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 29 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "4.7 Words and more words",
+          "Read this extract from a reference book about the English language and do Workbook activity A.",
+          "New words are coming into the English language almost every day. Where do these new words come from?"
+        ]
+      }
+    },
+    {
+      "id": "u4-4_7-text",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 29 },
+      "dir": "ltr",
+      "recall_words": ["borrow", "Eskimo", "icy", "algebra", "trade", "forming", "compound", "converted", "spare"],
+      "content": {
+        "lines": [
+          "[Paragraph 1] One way of creating new words to borrow or take them from other languages. English has been taking words from Latin, Greek and French for hundreds of years. French, for example, has given us some very common words, such as table, dinner and medicine. But English has borrowed from many other languages also; the list is endless.",
+          "[Paragraph 2] Kayak, a kind of boat, and igloo, a house made of snow, come directly from the Eskimo language because these two objects are found only among the Eskimos, who live in the icy cold of the Arctic. Many years ago contact or meetings with Arab mathematicians brought the Arabic words algebra and zero into English. Trade with the Arab world has given English words like sugar, cotton and coffee.",
+          "[Paragraph 3] Another way of forming new words is to add a prefix or suffix to the stem of a word that already exists. The stem of a word is the part that is common to all forms of that word, such as walk, walk (ing), walk(ed). A prefix is a group of letters that goes in front of the stem. Some common examples of prefixes are re-(remake), un- (unhappy) and mis-(misunderstand). A suffix is added to the end of a word. Examples are -able (comfortable) and -less (careless). A prefix usually changes the meaning of a word. A suffix usually changes the word into a different part of speech.",
+          "[Paragraph 4] A third way of making new words is to combine or join together two different words to make another word. The words blue and berrycan be combined to get the word blueberry. There are many berries that are blue in colour, but there is only one berry that is known as a blueberry. Other examples of words joined together are farmhouse, handbag and newspaper. Sometimes the combined word, which is called a compound, has a hyphen in it, as in air-conditioner. Sometimes it is written as two words, as in seat belt, cassette recorder and word processor.",
+          "[Paragraph 5] A fourth method of creating new words is to change the way a word is used. For example, a noun can be used as a verb, so that as well as buying some milk (noun) we can milk (verb) a cow. Other parts of speech can also be converted or changed. For example, an adjective can be used as a noun, as when a spare wheel is called a spare. Prepositions are sometimes used as verbs, as in to up the price which, of course, means to raise or increase the price.",
+          "Now do activities B to F in the Workbook."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي ومطابقة (<bdi dir='ltr'>PB p. 29</bdi> و<bdi dir='ltr'>WB p. 46</bdi>):</strong><br>1) وردت في بداية الفقرة 1 عبارة <span dir='ltr'><code>One way of creating new words to borrow...</code></span> بسقوط الفعل <span dir='ltr'>is</span> (<span dir='ltr'>words is to borrow</span>)، واتصلت كلمتا <span dir='ltr'><code>berrycan</code></span> في الفقرة 4 و<span dir='ltr'><code>walk (ing)</code></span> في الفقرة 3؛ وحُفظت جميعها حرفياً.<br>2) في <bdi dir='ltr'>WB 4.7 B</bdi> يطلب السؤال استخراج <b>6 لغات (<span dir='ltr'>six languages</span>)</b> من الفقرتين 1 و2؛ ولغات المصدر المقترض منها المذكورة خمس (<span dir='ltr'>Latin, Greek, French, Eskimo, Arabic</span>) ومعها اللغة السادسة المذكورة في النص (<span dir='ltr'>English</span>) وسُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الطرائق الأربع لتوليد المفردات في اللغة الإنجليزية (PB ص 29)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 29,
+            "html": "<ol><li><b>الاقتراض (<span dir='ltr'>Borrowing</span>):</b> استعارة كلمات من لغات أخرى (الفرنسية: <span dir='ltr'>table, dinner, medicine</span>؛ الإسكيمو: <span dir='ltr'>kayak, igloo</span>؛ العربية: <span dir='ltr'>algebra, zero, sugar, cotton, coffee</span>).</li><li><b>السوابق واللواحق (<span dir='ltr'>Prefixes &amp; Suffixes</span>):</b> السابقة (<span dir='ltr'>re-, un-, mis-</span>) تغيّر <b>المعنى</b> عادةً، واللاحقة (<span dir='ltr'>-able, -less</span>) تغيّر <b>نوع الكلمة / قسم الكلام</b> عادةً.</li><li><b>المركّبات (<span dir='ltr'>Compounds</span>):</b> جمع كلمتين مستقلتين؛ إما متصلتين (<span dir='ltr'>blueberry, farmhouse, handbag, newspaper</span>)، أو بشرطة (<span dir='ltr'>air-conditioner</span>)، أو منفصلتين (<span dir='ltr'>seat belt, word processor</span>).</li><li><b>تحويل قسم الكلام (<span dir='ltr'>Conversion</span>):</b> استعمال الاسم فعلاً (<span dir='ltr'>milk a cow</span>)، أو الصفة اسماً (<span dir='ltr'>a spare</span>)، أو حرف الجر فعلاً (<span dir='ltr'>to up the price = raise</span>).</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 29,
+            "caption": "ملخص الطرائق الأربع لتكوين الكلمات الجديدة",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='12' y='18' width='136' height='84' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='80' y='44' text-anchor='middle' font-size='11' font-weight='700'>1 Borrowing</text><text x='80' y='66' text-anchor='middle' font-size='10'>algebra, zero, kayak</text><text x='80' y='84' text-anchor='middle' font-size='10'>coffee, cotton, table</text><rect x='158' y='18' width='136' height='84' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='226' y='44' text-anchor='middle' font-size='11' font-weight='700'>2 Affixes</text><text x='226' y='66' text-anchor='middle' font-size='10'>Prefix → meaning</text><text x='226' y='84' text-anchor='middle' font-size='10'>Suffix → part of speech</text><rect x='304' y='18' width='136' height='84' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='372' y='44' text-anchor='middle' font-size='11' font-weight='700'>3 Compounds</text><text x='372' y='66' text-anchor='middle' font-size='10'>blueberry, armchair</text><text x='372' y='84' text-anchor='middle' font-size='10'>air-conditioner, seat belt</text><rect x='450' y='18' width='138' height='84' rx='8' fill='#F3E8FF' stroke='#9333EA'/><text x='519' y='44' text-anchor='middle' font-size='11' font-weight='700'>4 Conversion</text><text x='519' y='66' text-anchor='middle' font-size='10'>milk (n/v), a spare</text><text x='519' y='84' text-anchor='middle' font-size='10'>to up (raise) the price</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 47,
+            "html": "<p dir='ltr'><b>Compound vs Affix (4.7 D):</b> <i>armchair</i> (arm + chair = compound), whereas <i>rename</i> (prefix re- + name) &amp; <i>beautiful</i> (beauty + suffix -ful).</p>"
+          },
+          "self_check_ref": "chk-4_7-a",
+          "page_ref": { "book": "PB", "page": 29, "pdf_page": 31, "image": "assets/ref/pb_p029.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "reference book": { "pos": "n", "ar": "كتاب مرجعي / موسوعة", "in_book_wordlist": true, "wb_page": 113 },
+    "borrow": { "pos": "v", "ar": "يستعير / يقتبس كلمة", "in_book_wordlist": true, "wb_page": 112 },
+    "icy": { "pos": "adj", "ar": "جليدي / شديد البرودة", "in_book_wordlist": true, "wb_page": 112 },
+    "mathematician": { "pos": "n", "ar": "عالم رياضيات", "in_book_wordlist": true, "wb_page": 113 },
+    "algebra": { "pos": "n", "ar": "علم الجبر (مقترضة من العربية)", "in_book_wordlist": true, "wb_page": 112 },
+    "forming": { "pos": "n/part", "ar": "تشكيل / تكوين", "in_book_wordlist": true, "wb_page": 112 },
+    "farmhouse": { "pos": "n", "ar": "منزل المزرعة (كلمة مركّبة)", "in_book_wordlist": true, "wb_page": 112 },
+    "handbag": { "pos": "n", "ar": "حقيبة يد", "in_book_wordlist": true, "wb_page": 112 },
+    "spare": { "pos": "n/adj", "ar": "عجلة احتياطية / إضافي", "in_book_wordlist": true, "wb_page": 113 },
+    "up": { "pos": "v/prep", "ar": "يرفع (كفعل: to up the price = raise)", "in_book_wordlist": true, "wb_page": 113 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_7-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 46 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.7 A Number the main points of the text in order.",
+      "prompt_ar": "رتّب الأفكار الرئيسية الأربع بالترتيب الوارد في مقال PB ص 29 (من 1 إلى 4):",
+      "word_bank": ["1", "2", "3", "4"],
+      "items": [
+        { "num": 1, "prompt": "[__] Making compound words → Order in text: ______", "answers": ["3"] },
+        { "num": 2, "prompt": "[__] Using prefixes and suffixes → Order in text: ______", "answers": ["2"] },
+        { "num": 3, "prompt": "[__] Taking words from other languages → Order in text: ______", "answers": ["1"] },
+        { "num": 4, "prompt": "[__] Changing parts of speech → Order in text: ______", "answers": ["4"] }
+      ],
+      "hints": [
+        "1: الفقرتان 1–2 (الاقتراض)، 2: الفقرة 3 (السوابق واللواحق)، 3: الفقرة 4 (المركّبات)، 4: الفقرة 5 (تحويل قسم الكلام)."
+      ]
+    },
+    {
+      "id": "wb-4_7-bcde",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 46 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.7 B Find languages, borrowed words, prefixes, suffixes & converted words; C Prefixes/suffixes; D Compounds; E Verb or noun?",
+      "prompt_ar": "إجابات التحليل الصرفي الكاملة لتمارين B وC وD وE (WB ص 46–47):",
+      "items": [
+        { "num": 1, "question": "B — Paragraphs 1 and 2: six languages", "model_answer": "Latin, Greek, French, Eskimo, Arabic (the 5 source languages mentioned) plus English (the receiving language mentioned 4 times).", "explain_ar": "اللغات المقتبَس منها في النص خمس (اللاتينية واليونانية والفرنسية والإسكيمو والعربية)، والإنجليزية تكتمل بها اللغات الست المذكورة في الفقرتين." },
+        { "num": 2, "question": "B — Paragraphs 1 and 2: ten borrowed words", "model_answer": "table, dinner, medicine, kayak, igloo, algebra, zero, sugar, cotton, coffee", "explain_ar": "عشر كلمات بالضبط مأخوذة من الفرنسية والإسكيمو والعربية." },
+        { "num": 3, "question": "B — Paragraph 3: three prefixes / two suffixes", "model_answer": "Prefixes: re-, un-, mis- | Suffixes: -able, -less", "explain_ar": "أمثلة الكتاب الصريحة: remake, unhappy, misunderstand, comfortable, careless." },
+        { "num": 4, "question": "B (WB p. 47) — Paragraph 5: noun→verb, adj→noun, prep→verb", "model_answer": "noun→verb: milk | adjective→noun: spare | preposition→verb: up", "explain_ar": "milk a cow / a spare / to up the price." },
+        { "num": 5, "question": "C — Underline prefixes and suffixes: reporter, enjoyment, impolite, unusual, retake, unbelievable", "model_answer": "report+er (suffix -er) | enjoy+ment (suffix -ment) | im+polite (prefix im-) | un+usual (prefix un-) | re+take (prefix re-) | un+believ(e)+able (prefix un- AND suffix -able)", "explain_ar": "انتبه إلى أن unbelievable تجمع سابقة un- ولاحقة -able معاً حول الجذر believe." },
+        { "num": 6, "question": "D — Circle the compounds: beautiful, armchair, rename, housework, magnificent", "model_answer": "armchair (arm + chair) and housework (house + work)", "explain_ar": "الكلمتان المركبتان تتكونان من كلمتين مستقلتين؛ أما البقية فجذور مع لواحق/سوابق." },
+        { "num": 7, "question": "E — Verb or noun in a)–f)?", "model_answer": "a) cut: verb (can cut you) | b) cut: noun (the cut) | c) ride: noun (a ride) | d) ride: verb (to ride) | e) drink: verb (make it drink) | f) drink: noun (a soft drink)", "explain_ar": "التمييز يكون من موقع الكلمة: بعد a/the/صفة تكون اسماً، وبعد can/to/make تكون فعلاً." }
+      ],
+      "hints": [
+        "راجع أسلوب التمييز السريع في 4.7 E: وجود أداة تنكير/تعريف (a/the) يحسم أن الكلمة اسم (Noun)."
+      ]
+    },
+    {
+      "id": "wb-4_7-f",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 47 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.7 F Complete the two word-formation tables (Verb ↔ Noun; Noun ↔ Adjective).",
+      "prompt_ar": "أكمل جدول الاشتقاقات الصرفية (أفعال ↔ أسماء، وأسماء ↔ صفات) في 4.7 F:",
+      "word_bank": ["greeting", "movement", "collect", "advertisement", "enjoy", "explain", "discover", "suggestion", "electric / electrical", "shade", "necessary", "dirty", "careful / careless", "success", "dark", "length"],
+      "items": [
+        { "num": 1, "prompt": "1 Verb 'greet' → Noun: ______", "answers": ["greeting"] },
+        { "num": 2, "prompt": "2 Verb 'move' → Noun: ______", "answers": ["movement"] },
+        { "num": 3, "prompt": "3 Noun 'collection' ← Verb: ______", "answers": ["collect"] },
+        { "num": 4, "prompt": "4 Verb 'advertise' → Noun: ______", "answers": ["advertisement"] },
+        { "num": 5, "prompt": "5 Noun 'enjoyment' ← Verb: ______", "answers": ["enjoy"] },
+        { "num": 6, "prompt": "6 Noun 'explanation' ← Verb: ______", "answers": ["explain"] },
+        { "num": 7, "prompt": "7 Noun 'discovery' ← Verb: ______", "answers": ["discover"] },
+        { "num": 8, "prompt": "8 Verb 'suggest' → Noun: ______", "answers": ["suggestion"] },
+        { "num": 9, "prompt": "9 Noun 'electricity' → Adjective: ______", "answers": ["electric", "electrical", "electric / electrical"] },
+        { "num": 10, "prompt": "10 Adjective 'shady' ← Noun: ______", "answers": ["shade"] },
+        { "num": 11, "prompt": "11 Noun 'necessity' → Adjective: ______", "answers": ["necessary"] },
+        { "num": 12, "prompt": "12 Noun 'dirt' → Adjective: ______", "answers": ["dirty"] },
+        { "num": 13, "prompt": "13 Noun 'care' → Adjective: ______", "answers": ["careful", "careless", "careful / careless"] },
+        { "num": 14, "prompt": "14 Adjective 'successful' ← Noun: ______", "answers": ["success"] },
+        { "num": 15, "prompt": "15 Noun 'darkness' → Adjective: ______", "answers": ["dark"] },
+        { "num": 16, "prompt": "16 Adjective 'long' ← Noun: ______", "answers": ["length"] }
+      ],
+      "hints": [
+        "انتبه للإملاء الدقيق في explain → explanation (تُسقط i)، وshade → shady (تُسقط e)، وlong → length."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_7-a",
+      "origin": "educational_addition",
+      "page_ref": 29,
+      "questions": [
+        {
+          "id": "q-4_7-1",
+          "type": "mcq",
+          "stem": "According to PB page 29, what is the usual difference between a prefix and a suffix?",
+          "evidence_block_id": "u4-4_7-text",
+          "options": [
+            { "text": "A prefix goes in front and usually changes the meaning; a suffix goes at the end and usually changes the part of speech.", "is_correct": true, "why_wrong": null },
+            { "text": "A prefix always turns verbs into nouns; a suffix always turns nouns into verbs.", "is_correct": false, "why_wrong": "تغيير قسم الكلام (part of speech) هو وظيفة اللاحقة (suffix) غالباً كما نص الكتاب." },
+            { "text": "Both prefixes and suffixes are only borrowed from Arabic and Eskimo.", "is_correct": false, "why_wrong": "الاقتراض هو الطريقة الأولى، أما السوابق واللواحق فتُضاف لجذر كلمة إنجليزية قائمة." },
+            { "text": "A prefix can only be used as a separate word.", "is_correct": false, "why_wrong": "الكلمات المنفصلة تدخل في المركبات (compounds مثل seat belt) لا السوابق." }
+          ],
+          "hints": [
+            "اقرأ الجملتين الأخيرتين في الفقرة الثالثة من PB ص 29."
+          ],
+          "explain": "نص كتاب الطالب ص 29 على أن السابقة غالباً تغيّر المعنى، واللاحقة غالباً تنقل الكلمة إلى قسم كلام مختلف."
+        },
+        {
+          "id": "q-4_7-2",
+          "type": "mcq",
+          "stem": "Which words from PB page 29 entered English through Arabic Arab mathematicians or Arab trade?",
+          "evidence_block_id": "u4-4_7-text",
+          "options": [
+            { "text": "algebra, zero, sugar, cotton, coffee", "is_correct": true, "why_wrong": null },
+            { "text": "kayak and igloo", "is_correct": false, "why_wrong": "هاتان الكلمتان مأخوذتان من لغة الإسكيمو (Eskimo language)." },
+            { "text": "table, dinner and medicine", "is_correct": false, "why_wrong": "أشار الكتاب في الفقرة 1 إلى اقتراض هذه الثلاث من اللغة الفرنسية." },
+            { "text": "blueberry, farmhouse and seat belt", "is_correct": false, "why_wrong": "هذه أمثلة على الكلمات المركّبة (compounds) لا الاقتراض العربي." }
+          ],
+          "hints": [
+            "انظر النصف الثاني من الفقرة 2 في PB ص 29."
+          ],
+          "explain": "أسهم التقاء علماء الرياضيات العرب في نقل algebra وzero، كما أدخلت التجارة العربية words like sugar, cotton and coffee."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_7-up", "origin": "from_book", "page_ref": 29, "front": "to up the price (preposition used as verb)", "back": "to raise or increase the price (يرفع السعر)", "tag": "Unit 4 · 4.7" },
+    { "id": "fc-4_7-affix", "origin": "from_book", "page_ref": 29, "front": "Prefix vs Suffix (PB p. 29)", "back": "Prefix → changes meaning | Suffix → changes part of speech", "tag": "Unit 4 · 4.7" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت الفقرات الخمس في PB ص 29 كاملة مع pb-31.png، وحُفظت الصيغ الحرفية المطبوعة ('words to borrow', 'walk (ing)', 'berrycan').",
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 46–47 مع wb-047.png وwb-048.png: استُعيد جدولا 4.7 F (16 بنداً لكل من Verb↔Noun وNoun↔Adjective) بالكامل بعد فراغ خلايا الجدول في OCR، كما صُحّح التعرّف الضوئي على علامات المربعات والـ ¢)."
+  }
+}
