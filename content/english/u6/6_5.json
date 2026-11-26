@@ -1,0 +1,190 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_5",
+    "code": "6.5",
+    "title": "Saving Anwar: retelling the story",
+    "title_ar": "إنقاذ أنور (2): ترتيب الملاحظات السبعة، المبني للمعلوم والمجهول في الماضي، والكتابة المترابطة",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 46, "book_page": 44 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 76, "book_page": 75 }
+    ],
+    "reference_images": {
+      "pb_44": "assets/ref/pb_p044.webp",
+      "wb_75": "assets/ref/wb_p075.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_5-process-notes",
+      "origin": "from_book",
+      "type": "grammar",
+      "source": { "book": "WB", "page": 75 },
+      "dir": "ltr",
+      "recall_words": ["first-aid", "specialist", "ambulance", "heart surgeon", "operate", "recover", "passive"],
+      "content": {
+        "lines": [
+          "6.5 Saving Anwar (Grammar & Writing — PB p. 44 / WB p. 75)",
+          "6.5 A The medical system helped Anwar in several ways. Number the notes below, 1 to 7, using the pictures on PB page 44 to help you.",
+          "• ___ (take) / Sana'a / ambulance",
+          "• ___ (recover) / hospital / the next three weeks",
+          "• ___ (examine) him and (decide) he (need) specialist treatment",
+          "• ___ Anwar (give) first-aid / village clinic by /",
+          "• ___ very good heart surgeon (operate) on Anwar and (save) / life",
+          "• ___ parents (come) to take / home",
+          "• ___ She (rush) Anwar / hospital / Hajjah /car",
+          "6.5 B Think about whether the verbs are regular or irregular, active or passive.",
+          "6.5 C Time expressions: First,  Then  After that,  Next,  Finally,"
+        ],
+        "image": "assets/media/pb44_saving_anwar.webp",
+        "caption": "Picture sequence D → B → A → C → E → G used for 6.5 A–C (PB page 44)"
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي (<bdi dir='ltr'>WB p. 75</bdi>):</strong> في البند الأخير من التمرين <span dir='ltr'>6.5 A</span> طُبع السطر بدون مسافة بعد الشرطة المائلة الأخيرة: <span dir='ltr'><code>She (rush) Anwar / hospital / Hajjah /car</code></span>، كما وردت علامتا التوقف المختصرتان <span dir='ltr'><code>by /</code></span> و<span dir='ltr'><code>save / life</code></span> و<span dir='ltr'><code>take / home</code></span> كما هما.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "قاعدة اختيار Active أو Passive في جمل الماضي 6.5 B",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 75,
+            "html": "<ul><li><b>المبني للمجهول في الماضي (<span dir='ltr'>was / were + P.P.</span>):</b> عندما نبدأ بالمفعول به (أنور / <span dir='ltr'>He</span>) كما في خطوة 1 (<span dir='ltr'>Anwar <b>was given</b> first-aid... by...</span>) وخطوة 4 (<span dir='ltr'>He <b>was taken</b> to Sana'a by ambulance</span>).</li><li><b>المبني للمعلوم في الماضي (<span dir='ltr'>V-ed</span> أو الشاذ):</b> عندما تبدأ الجملة بالفاعل الذي قام بالفعل: <span dir='ltr'>She <b>rushed</b>...</span>، <span dir='ltr'>The doctor <b>examined</b>... and <b>decided</b> he <b>needed</b>...</span>، <span dir='ltr'>A... surgeon <b>operated</b>... and <b>saved</b>...</span>، <span dir='ltr'>He <b>recovered</b>...</span>، <span dir='ltr'>His parents <b>came</b>...</span> (فعل شاذ <span dir='ltr'>come → came</span>).</li><li><b>تقسيم الفقرتين (<span dir='ltr'>6.5 C</span>):</b> الفقرة 1 تغطي الإسعاف والنقل من القرية إلى حجة ثم صنعاء (الخطوات 1–4)؛ الفقرة 2 تغطي العملية والتعافي والعودة للبيت (الخطوات 5–7).</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 75,
+            "caption": "خطوات القصة السبع (1–7) بالأزمنة والمبني للمجهول والمعلوم",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#F8FAFC'/><rect x='10' y='16' width='140' height='86' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='80' y='40' text-anchor='middle' font-size='11' font-weight='700'>1 Passive / 2 Active</text><text x='80' y='62' text-anchor='middle' font-size='10'>1 was given (clinic)</text><text x='80' y='80' text-anchor='middle' font-size='10'>2 rushed (Hajjah)</text><rect x='160' y='16' width='140' height='86' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='230' y='40' text-anchor='middle' font-size='11' font-weight='700'>3 Active / 4 Passive</text><text x='230' y='62' text-anchor='middle' font-size='10'>3 examined, decided</text><text x='230' y='80' text-anchor='middle' font-size='10'>4 was taken (Sana'a)</text><rect x='310' y='16' width='140' height='86' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='380' y='40' text-anchor='middle' font-size='11' font-weight='700'>5–6 Active Regular</text><text x='380' y='62' text-anchor='middle' font-size='10'>5 operated, saved</text><text x='380' y='80' text-anchor='middle' font-size='10'>6 recovered (3 weeks)</text><rect x='460' y='16' width='130' height='86' rx='8' fill='#F3E8FF' stroke='#9333EA'/><text x='525' y='40' text-anchor='middle' font-size='11' font-weight='700'>7 Active Irregular</text><text x='525' y='66' text-anchor='middle' font-size='10'>7 came to take home</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 75,
+            "html": "<p dir='ltr'><b>Active vs Passive contrast:</b> <i>Nurse Salwa gave Anwar first-aid</i> (Active) → <i>Anwar <b>was given</b> first-aid... by Nurse Salwa</i> (Passive).</p>"
+          },
+          "self_check_ref": "chk-6_5-a",
+          "page_ref": { "book": "WB", "page": 75, "pdf_page": 76, "image": "assets/ref/wb_p075.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "system": { "pos": "n", "ar": "نظام (مثل النظام الطبي)", "in_book_wordlist": true, "wb_page": 113 },
+    "specialist": { "pos": "n/adj", "ar": "اختصاصي / طبيب متخصص", "in_book_wordlist": false },
+    "passive": { "pos": "n/adj", "ar": "صيغة المبني للمجهول", "in_book_wordlist": false }
+  },
+  "activities": [
+    {
+      "id": "wb-6_5-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 75 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.5 A The medical system helped Anwar in several ways. Number the notes below, 1 to 7, using the pictures on PB page 44 to help you.",
+      "prompt_ar": "رتّب الملاحظات السبع بالأرقام من 1 إلى 7 حسب التسلسل الزمني لإنقاذ أنور (WB ص 75):",
+      "word_bank": ["1", "2", "3", "4", "5", "6", "7"],
+      "items": [
+        { "num": 1, "prompt": "______ (take) / Sana'a / ambulance", "answers": ["4"] },
+        { "num": 2, "prompt": "______ (recover) / hospital / the next three weeks", "answers": ["6"] },
+        { "num": 3, "prompt": "______ (examine) him and (decide) he (need) specialist treatment", "answers": ["3"] },
+        { "num": 4, "prompt": "______ Anwar (give) first-aid / village clinic by /", "answers": ["1"] },
+        { "num": 5, "prompt": "______ very good heart surgeon (operate) on Anwar and (save) / life", "answers": ["5"] },
+        { "num": 6, "prompt": "______ parents (come) to take / home", "answers": ["7"] },
+        { "num": 7, "prompt": "______ She (rush) Anwar / hospital / Hajjah /car", "answers": ["2"] }
+      ],
+      "hints": [
+        "1: الإسعافات الأولية في عيادة القرية ← 2: سلوى تسرع به إلى حجة بالسيارة ← 3: الفحص ← 4: النقل لصنعاء ← 5: الجراحة ← 6: التعافي 3 أسابيع ← 7: عودة الوالدين."
+      ]
+    },
+    {
+      "id": "wb-6_5-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 75 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.5 B Use the notes in A to write sentences about what happened. Add the missing words and put the verbs in the right forms. Think about whether the verbs are regular or irregular, active or passive.",
+      "prompt_ar": "الجمل السبع الكاملة بالأفعال الصحيحة (معلوم/مجهول، قياسي/شاذ) لفقرة 6.5 B (WB ص 75):",
+      "items": [
+        { "num": 1, "question": "Step 1: Anwar (give) first-aid / village clinic by /", "model_answer": "Anwar was given first-aid at the village clinic by District Nurse Salwa Mafouz.", "explain_ar": "مبني للمجهول ماضٍ (give → was given)، وحرف الجر at/in." },
+        { "num": 2, "question": "Step 2: She (rush) Anwar / hospital / Hajjah /car", "model_answer": "She rushed Anwar to hospital in Hajjah by car.", "explain_ar": "معلوم قياسي ماضٍ (rush → rushed) + to hospital in Hajjah by car." },
+        { "num": 3, "question": "Step 3: (examine) him and (decide) he (need) specialist treatment", "model_answer": "The doctor examined him and decided he needed specialist treatment.", "explain_ar": "أفعال ماضية قياسية مبنية للمعلوم (examined, decided, needed)." },
+        { "num": 4, "question": "Step 4: (take) / Sana'a / ambulance", "model_answer": "He was taken to Sana'a by ambulance.", "explain_ar": "مبني للمجهول شاذ ماضٍ (take → was taken)." },
+        { "num": 5, "question": "Step 5: very good heart surgeon (operate) on Anwar and (save) / life", "model_answer": "A very good heart surgeon operated on Anwar and saved his life.", "explain_ar": "أفعال ماضية قياسية (operated, saved) + صفة الملكية his." },
+        { "num": 6, "question": "Step 6: (recover) / hospital / the next three weeks", "model_answer": "He recovered in hospital for / over the next three weeks.", "explain_ar": "فعل ماضٍ قياسي (recover → recovered) + for/over." },
+        { "num": 7, "question": "Step 7: parents (come) to take / home", "model_answer": "His parents came to take him home.", "explain_ar": "فعل ماضٍ شاذ (come → came) + مفعول به him." }
+      ],
+      "hints": [
+        "فقط الخطوتان 1 و4 بصيغة المبني للمجهول (was given / was taken)، والباقي مبني للمعلوم."
+      ]
+    },
+    {
+      "id": "wb-6_5-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 75 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.5 C Add the following time expressions. Then write the complete story as two paragraphs in your copybooks. (First, / Then / After that, / Next, / Finally,)",
+      "prompt_ar": "نموذج كتابة القصة كاملةً في فقرتين بإدخال روابط التتابع الزمني الخمسة (6.5 C ص 75):",
+      "guidance_literal": "Paragraph 1 (Steps 1–4: Village clinic → Hajjah → Sana'a ambulance) | Paragraph 2 (Steps 5–7: Heart surgery → Recovery → Home)",
+      "steps": [
+        { "label_ar": "Paragraph 1 — الإسعاف الأولي ونقل أنور حتى وصول سيارة الإسعاف إلى صنعاء", "placeholder": "First, Anwar was given first-aid at the village clinic by Nurse Salwa Mafouz. Then she rushed Anwar to hospital in Hajjah by car. The doctor examined him and decided he needed specialist treatment. After that, he was taken to Sana'a by ambulance." },
+        { "label_ar": "Paragraph 2 — العملية الجراحية والتعافي والعودة للبيت", "placeholder": "Next, a very good heart surgeon operated on Anwar and saved his life. He recovered in hospital for the next three weeks. Finally, his parents came to take him home." }
+      ],
+      "hints": [
+        "انتبه إلى عدم وضع فاصلة بعد Then في كتابة المنهج، مع وضع فاصلة بعد First, وAfter that, وNext, وFinally,."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_5-a",
+      "origin": "educational_addition",
+      "page_ref": 75,
+      "questions": [
+        {
+          "id": "q-6_5-1",
+          "type": "mcq",
+          "stem": "In WB 6.5 B, which sentence requires the Past simple PASSIVE form because its grammatical subject received the action?",
+          "evidence_block_id": "u6-6_5-process-notes",
+          "options": [
+            { "text": "Anwar (give) first-aid / village clinic → Anwar was given first-aid at the village clinic.", "is_correct": true, "why_wrong": null },
+            { "text": "She (rush) Anwar / hospital → She was rushed Anwar to hospital.", "is_correct": false, "why_wrong": "الفاعل She (سلوى) هو من قام بالإسراع فالصحيح المعلوم: She rushed Anwar." },
+            { "text": "parents (come) to take / home → His parents were come to take him home.", "is_correct": false, "why_wrong": "الفعل come لازم والآباء هم الفاعلون فالصحيح: His parents came." },
+            { "text": "very good heart surgeon (operate) → A surgeon was operated on Anwar.", "is_correct": false, "why_wrong": "الجراح هو الفاعل الذي أجرى العملية فالصحيح المعلوم: operated on Anwar." }
+          ],
+          "hints": [
+            "أنور لم يُعطِ الإسعافات بل تَلقّاها، فالجملة مبنية للمجهول (was + P.P.)."
+          ],
+          "explain": "لأن الجملة بدأت بـ Anwar (متلقّي الفعل)، نستخدم الماضي المبني للمجهول: was given (وهكذا He was taken)."
+        },
+        {
+          "id": "q-6_5-2",
+          "type": "mcq",
+          "stem": "In WB 6.5 A, what comes immediately after note 2 ('She rushed Anwar to hospital in Hajjah by car')?",
+          "evidence_block_id": "u6-6_5-process-notes",
+          "options": [
+            { "text": "3: The doctor examined him and decided he needed specialist treatment.", "is_correct": true, "why_wrong": null },
+            { "text": "Anwar was taken to Sana'a by ambulance before anyone examined him.", "is_correct": false, "why_wrong": "نقلُه بالإسعاف لصنعاء جاء في الخطوة 4 بعد قرار الطبيب في حجة بالخطوة 3." },
+            { "text": "The heart surgeon operated on Anwar in the village clinic.", "is_correct": false, "why_wrong": "العملية الجراحية تمت في الخطوة 5 بعد نقله إلى صنعاء." },
+            { "text": "His parents came to take him home.", "is_correct": false, "why_wrong": "عودة والديه لأخذه هي الخطوة الختامية رقم 7." }
+          ],
+          "hints": [
+            "انظر اللوحة B في PB ص 44 مباشرة بعد وصول السيارة D."
+          ],
+          "explain": "بعد نقله لمستشفى حجة (2) فحصه الطبيب وقرر حاجته لعلاج متخصص (3) قبل نقله بالإسعاف لصنعاء (4)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_5-system", "origin": "from_book", "page_ref": 113, "front": "system (n)", "back": "نظام (مثل النظام الطبي أو نظام المسارين)", "tag": "Unit 6 · 6.5" },
+    { "id": "fc-6_5-wasgiven", "origin": "from_book", "page_ref": 75, "front": "Anwar was given first-aid", "back": "صيغة الماضي المبني للمجهول: أُعطي أنور الإسعافات الأولية", "tag": "Unit 6 · 6.5" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "طُوبقت WB ص 75 مع wb-076.png: حُفظت الصيغ المختصرة الحرفية مثل '/car' و'by /' في 6.5 A وتم ترتيب 1–7 مع حل 6.5 B و6.5 C."
+  }
+}
