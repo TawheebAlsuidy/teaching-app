@@ -117,15 +117,18 @@
       "number": 6,
       "title": "Looking back",
       "lessons": [
-        { "id": "eng-u6-6_1", "code": "6.1", "title": "Emergencies in the news", "pb_page": 41 },
-        { "id": "eng-u6-6_2", "code": "6.2", "title": "A lucky escape", "pb_page": 42 },
-        { "id": "eng-u6-6_3", "code": "6.3", "title": "Accident at Jebel Kebir", "pb_page": 43 },
-        { "id": "eng-u6-6_4", "code": "6.4", "title": "Saving Anwar", "pb_page": 44 },
-        { "id": "eng-u6-6_5", "code": "6.5", "title": "How a hospital works", "pb_page": 45 },
-        { "id": "eng-u6-6_6", "code": "6.6", "title": "Working in public service", "pb_page": 46 },
-        { "id": "eng-u6-6_7", "code": "6.7", "title": "Huge changes in Libyan health care", "pb_page": 47 },
-        { "id": "eng-u6-6_8", "code": "6.8", "title": "Discovering Yemen", "pb_page": 48 },
-        { "id": "eng-u6-6_9", "code": "6.9", "title": "Tourism and the future", "pb_page": 49 }
+        { "id": "eng-u6-6_1", "code": "6.1", "title": "Emergencies in the news", "pb_page": 41, "wb_page": 71 },
+        { "id": "eng-u6-6_2", "code": "6.2", "title": "A lucky escape", "pb_page": 42, "wb_page": 72 },
+        { "id": "eng-u6-6_3", "code": "6.3", "title": "Accident at Jebel Kebir", "pb_page": 43, "wb_page": 73 },
+        { "id": "eng-u6-6_4", "code": "6.4", "title": "Saving Anwar: listening & vocabulary", "pb_page": 44, "wb_page": 74 },
+        { "id": "eng-u6-6_5", "code": "6.5", "title": "Saving Anwar: retelling the story", "pb_page": 44, "wb_page": 75 },
+        { "id": "eng-u6-6_6", "code": "6.6", "title": "How a hospital works", "pb_page": 45, "wb_page": 75 },
+        { "id": "eng-u6-6_7", "code": "6.7", "title": "Working in public service", "pb_page": 46, "wb_page": 76 },
+        { "id": "eng-u6-6_8", "code": "6.8", "title": "Huge changes in Libyan health care: reading", "pb_page": 47, "wb_page": null },
+        { "id": "eng-u6-6_9", "code": "6.9", "title": "Huge changes in Libyan health care: comprehension & vocabulary", "pb_page": 47, "wb_page": 77 },
+        { "id": "eng-u6-6_10", "code": "6.10", "title": "Discovering Yemen", "pb_page": 48, "wb_page": 78 },
+        { "id": "eng-u6-6_11", "code": "6.11", "title": "Tourism and the future: reading", "pb_page": 49, "wb_page": 78 },
+        { "id": "eng-u6-6_12", "code": "6.12", "title": "Tourism and the future: writing about your future", "pb_page": 49, "wb_page": 79 }
       ]
     },
     {

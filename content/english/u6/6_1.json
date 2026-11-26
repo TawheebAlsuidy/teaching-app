@@ -1,0 +1,168 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_1",
+    "code": "6.1",
+    "title": "Emergencies in the news",
+    "title_ar": "حالات الطوارئ في الصحافة: قراءة أخبار الحوادث وبناء شبكة المفردات",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 43, "book_page": 41 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 72, "book_page": 71 }
+    ],
+    "reference_images": {
+      "pb_41": "assets/ref/pb_p041.webp",
+      "wb_71": "assets/ref/wb_p071.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_1-headlines-news",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 41 },
+      "dir": "ltr",
+      "recall_words": ["burning", "highway patrol", "hit-and-run", "horrific", "husband", "mobile", "paramedics", "vehicle"],
+      "content": {
+        "lines": [
+          "UNIT 6 LOOKING BACK",
+          "6.1 Emergencies in the news",
+          "Read the newspaper articles below and match them to two of these headlines.",
+          "1) FAMILY SAVED FROM BURNING HOME",
+          "2) DRIVERS INJURED IN HIGHWAY CRASH AND FIRE",
+          "3) HIT-AND-RUN DRIVER INJURES STUDENT",
+          "Article 1: Alia Nawaz, 18, was badly injured yesterday in a horrific accident in Harib Street. Walking home from school at 1.30, she was hit by a blue Suzuki jeep which drove straight on. Police Officer Ali Aziz, on his way back to 22 May Street Police Station form highway patrol, arrived first on the scene. He immediately called an ambulance for Alia, who had a broken leg and a back injury. Aziz says, ‘ This man must be caught. If you saw the incident, please phone 08 111111 immediately.’",
+          "Article 2: Mother of two Mrs Khalifa Al-Yamani, her son Amri, 5, and daughter Shareefa, 2, were rescued yesterday from a fire at their flat in Medina Road. The fire was seen by husband Mustapha when he was returning from work at 2.00. After calling the fire service on his mobile, he rushed to the rescue. He was soon joined by two fire engines from Medina Road Fire Station. Mustapha, helped by Fire Officer Nasser Badawi, quickly carried his wife and children to safety. They were taken by ambulance to hospital, where Mrs Yamani was treated for burns on her arms.",
+          "Now do activities A and B in the Workbook."
+        ],
+        "image": "assets/media/pb41_news.webp",
+        "caption": "Newspaper headlines and clippings (PB page 41)"
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي ومعاينة (<bdi dir='ltr'>PB p. 41</bdi>):</strong><br>1) الخبر الأول: طُبعت عبارة <span dir='ltr'><code>Station form highway patrol</code></span> (<span dir='ltr'><code>form</code></span> خطأً مطبعياً بدل <span dir='ltr'><code>from</code></span>)، ووُجدت مسافة زائدة بعد علامة التنصيص في <span dir='ltr'><code>‘ This man</code></span>، وقد حُفظ النص المطبوع حرفياً.<br>2) الخبر الثاني: ورد مدمجاً كصورة داخل ملف <span dir='ltr'>PDF</span> الرسمي، وجرى استخراجه والتحقق منه حرفاً بحرف عبر تكبير <span dir='ltr'>600 DPI</span>.<br>3) العنوان الأوسط الزائد (<span dir='ltr'>DRIVERS INJURED IN HIGHWAY CRASH AND FIRE</span>) يخص حادث الدرس التالي <bdi dir='ltr'>6.2</bdi>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "مطابقة العناوين وتفكيك مفردات خدمات الطوارئ (PB ص 41)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 41,
+            "html": "<ul><li><b>الخبر الأول ←</b> <span dir='ltr'>HIT-AND-RUN DRIVER INJURES STUDENT</span> (<span dir='ltr'>hit-and-run</span>: حادث صدم وهروب السائق دون توقف).</li><li><b>الخبر الثاني ←</b> <span dir='ltr'>FAMILY SAVED FROM BURNING HOME</span> (إنقاذ الأم وطفليها من حريق الشقة في شارع المدينة).</li><li><b>ملاحظة اسمية في الخبر الثاني:</b> بدأ الخبر بـ <span dir='ltr'>Mrs Khalifa Al-Yamani</span> ثم اختصر في الجملة الأخيرة إلى <span dir='ltr'>Mrs Yamani</span>.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 41,
+            "html": "<p dir='ltr'><b>Word clue:</b> <i>mobile (= mobile phone)</i>, <i>highway patrol</i> (دورية الطرق السريعة), and <i>paramedics</i> (مسعفو الطوارئ) appear in this unit's Wordlist (WB p. 113).</p>"
+          },
+          "self_check_ref": "chk-6_1-a",
+          "page_ref": { "book": "PB", "page": 41, "pdf_page": 43, "image": "assets/ref/pb_p041.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "burning": { "pos": "adj", "ar": "مشتعل / محترق", "in_book_wordlist": true, "wb_page": 113 },
+    "highway patrol": { "pos": "n", "ar": "دورية الطرق السريعة", "in_book_wordlist": true, "wb_page": 113 },
+    "hit-and-run": { "pos": "adj", "ar": "حادث صدم وهروب السائق", "in_book_wordlist": true, "wb_page": 113 },
+    "horrific": { "pos": "adj", "ar": "مروّع / فظيع", "in_book_wordlist": true, "wb_page": 113 },
+    "husband": { "pos": "n", "ar": "زوج", "in_book_wordlist": true, "wb_page": 113 },
+    "mobile": { "pos": "n", "ar": "هاتف محمول (mobile phone)", "in_book_wordlist": true, "wb_page": 113 },
+    "paramedics": { "pos": "n pl", "ar": "مسعفون (المفرد في القائمة: paramedic)", "in_book_wordlist": true, "wb_page": 113 }
+  },
+  "activities": [
+    {
+      "id": "wb-6_1-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 71 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.1 A Read the two newspaper stories on PB page 41 and write short answers to these questions.",
+      "prompt_ar": "اقرأ خبري الصحيفة في PB ص 41 وأجب بإجابات قصيرة عن الأسئلة الخمسة (WB ص 71):",
+      "items": [
+        { "num": 1, "question": "1 When did each incident happen?", "model_answer": "Story 1 (car accident): yesterday at 1.30. Story 2 (flat fire): yesterday at 2.00.", "explain_ar": "ورد التوقيت (yesterday at 1.30 / at 2.00) في كل خبر." },
+        { "num": 2, "question": "2 Which emergency services came to each emergency?", "model_answer": "Story 1: Police Force (Police Officer Ali Aziz) and ambulance / medical services. Story 2: Fire Service (two fire engines & Fire Officer Nasser Badawi) and ambulance / medical services.", "explain_ar": "الشرطة والإسعاف في الأول، والإطفاء والإسعاف في الثاني." },
+        { "num": 3, "question": "3 What do you know about the people who were helped?", "model_answer": "Story 1: Alia Nawaz, an 18-year-old student walking home from school in Harib Street. Story 2: Mother of two Mrs Khalifa Al-Yamani, her son Amri (aged 5), and her daughter Shareefa (aged 2), living in a flat in Medina Road.", "explain_ar": "الأسماء والأعمار والصفة كما وردت في الخبرين." },
+        { "num": 4, "question": "4 Which of them were injured and how badly?", "model_answer": "Alia Nawaz was badly injured (broken leg and a back injury). Mrs Yamani was treated in hospital for burns on her arms (her two children were unhurt).", "explain_ar": "إصابات عالية بالغة، وإصابة السيدة اليماني بحروق في ذراعيها." },
+        { "num": 5, "question": "5 What do you know about the people who helped them?", "model_answer": "Story 1: Police Officer Ali Aziz from 22 May Street Police Station, who was returning from highway patrol and first arrived on the scene. Story 2: Husband Mustapha (who was returning from work, called the fire service on his mobile, and helped carry his family out) and Fire Officer Nasser Badawi from Medina Road Fire Station.", "explain_ar": "صفات المنقذين ومقرات عملهم من النص." }
+      ],
+      "hints": [
+        "افصل دائماً بين تفاصيل الخبر الأول (عالية نواز) والخبر الثاني (أسرة اليماني)."
+      ]
+    },
+    {
+      "id": "wb-6_1-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 71 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.1 B Networks can help you collect and learn vocabulary. Add words from the newspaper stories to this network. Add other words you know.",
+      "prompt_ar": "أكمل شبكة مفردات خدمات الطوارئ الثلاث من الخبرين وما تعرفه (WB ص 71):",
+      "word_bank": ["ambulance", "hospital", "Fire Officer / firefighters", "fire station", "Police Officer", "police car / patrol car"],
+      "items": [
+        { "num": 1, "prompt": "EMERGENCY SERVICES → medical services → person/people: paramedics (printed); extra: doctors, nurses · vehicle(s): ______", "answers": ["ambulance", "ambulances"] },
+        { "num": 2, "prompt": "EMERGENCY SERVICES → medical services → place(s): ______ (also: clinic)", "answers": ["hospital", "hospitals"] },
+        { "num": 3, "prompt": "EMERGENCY SERVICES → fire service (middle branch; vehicle printed: fire engine) → person/people: ______", "answers": ["Fire Officer", "fire officer", "firefighter", "firefighters", "fireman", "firemen"] },
+        { "num": 4, "prompt": "EMERGENCY SERVICES → fire service (middle branch) → place(s): ______", "answers": ["fire station", "Fire Station", "Medina Road Fire Station"] },
+        { "num": 5, "prompt": "EMERGENCY SERVICES → police force → person/people: ______", "answers": ["Police Officer", "police officer", "policewoman", "policeman"] },
+        { "num": 6, "prompt": "EMERGENCY SERVICES → police force (place printed: police station) → vehicle(s): ______", "answers": ["police car", "patrol car", "jeep", "police cars"] }
+      ],
+      "hints": [
+        "المطبوع أصلاً في المخطط: paramedics وfire engine وpolice station؛ أما الفرع الأوسط فغير معنون فوقه بكلمة 'fire service' في الطباعة."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_1-a",
+      "origin": "educational_addition",
+      "page_ref": 41,
+      "questions": [
+        {
+          "id": "q-6_1-1",
+          "type": "mcq",
+          "stem": "Which headline from PB page 41 matches the first newspaper clipping about Alia Nawaz?",
+          "evidence_block_id": "u6-6_1-headlines-news",
+          "options": [
+            { "text": "HIT-AND-RUN DRIVER INJURES STUDENT", "is_correct": true, "why_wrong": null },
+            { "text": "FAMILY SAVED FROM BURNING HOME", "is_correct": false, "why_wrong": "هذا العنوان يطابق الخبر الثاني عن أسرة السيدة خليفة اليماني." },
+            { "text": "DRIVERS INJURED IN HIGHWAY CRASH AND FIRE", "is_correct": false, "why_wrong": "هذا العنوان الإضافي يعود لحادث النفق في الدرس 6.2." },
+            { "text": "FLAT BURNS DOWN IN HARIB STREET", "is_correct": false, "why_wrong": "هذا العنوان غير موجود أصلاً في الصفحة؛ والحريق وقع في Medina Road." }
+          ],
+          "hints": [
+            "كانت عالية تمشي عائدةً من المدرسة فصدمتها سيارة جيب لم تتوقف."
+          ],
+          "explain": "المصطلح hit-and-run يعني صدم الضحية والفرار، وعالية طالبة عائدة من المدرسة."
+        },
+        {
+          "id": "q-6_1-2",
+          "type": "mcq",
+          "stem": "In the second clipping on PB page 41, who first spotted the fire and called the fire service?",
+          "evidence_block_id": "u6-6_1-headlines-news",
+          "options": [
+            { "text": "Husband Mustapha, when he was returning from work at 2.00.", "is_correct": true, "why_wrong": null },
+            { "text": "Police Officer Ali Aziz, on his way back from highway patrol.", "is_correct": false, "why_wrong": "الضابط علي عزيز هو من باشر حادث دهس عالية في شارع حريب." },
+            { "text": "Fire Officer Nasser Badawi from inside the burning flat.", "is_correct": false, "why_wrong": "رجل الإطفاء ناصر بدوي وصل بسيارتي الإطفاء من محطة شارع المدينة وساعد في الإنقاذ." },
+            { "text": "Son Amri, aged 5.", "is_correct": false, "why_wrong": "عمري طفل في الخامسة من عمره أُنقذ مع والدته وأخته." }
+          ],
+          "hints": [
+            "انظر جملة: The fire was seen by husband Mustapha..."
+          ],
+          "explain": "الزوج مصطفى شاهد الحريق أثناء عودته من العمل الساعة الثانية فاتصل بالإطفاء بهاتفه المحمول."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_1-hitrun", "origin": "from_book", "page_ref": 113, "front": "hit-and-run (adj)", "back": "حادث صدم يفرّ فيه السائق دون توقف", "tag": "Unit 6 · 6.1" },
+    { "id": "fc-6_1-paramedic", "origin": "from_book", "page_ref": 113, "front": "paramedic (n)", "back": "مسعف مدرّب في سيارات الإسعاف والطوارئ", "tag": "Unit 6 · 6.1" },
+    { "id": "fc-6_1-patrol", "origin": "from_book", "page_ref": 113, "front": "highway patrol", "back": "دورية الشرطة على الطرق السريعة", "tag": "Unit 6 · 6.1" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 41 مع pb-43.png وتكبير 600 DPI لقصاصة الحريق السفلية المضمّنة كصورة (pb43_clip_bottom.webp)، وحُفظ خطأ 'form highway patrol' و'‘ This man' حرفياً.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 71 مع wb-072.png وتأكّد هيكل شبكة المفردات الثلاثية في 6.1 B."
+  }
+}
