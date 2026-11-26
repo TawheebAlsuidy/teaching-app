@@ -27,6 +27,7 @@ def sync():
         "physics-12th-book.html",
         "biology-12th-book.html",
         "math-12th-book.html",
+        "arabic-literature-12th-book.html",
         "chem-lab-book.html",
         "math-12th-lab.html",
     ]

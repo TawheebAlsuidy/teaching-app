@@ -1,0 +1,706 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": {
+    "id": "u1",
+    "number": 1,
+    "title": "Describing things"
+  },
+  "lesson": {
+    "id": "eng-u1-1_4",
+    "code": "1.4",
+    "title": "An unusual animal",
+    "title_ar": "حيوان غير مألوف (راما — الكاما)",
+    "direction": "ltr",
+    "source_refs": [
+      {
+        "book": "PB",
+        "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf",
+        "pdf_page": 5,
+        "book_page": 3
+      },
+      {
+        "book": "WB",
+        "pdf": "english_work_12th (1).pdf",
+        "pdf_page": 5,
+        "book_page": 4
+      }
+    ],
+    "reference_images": {
+      "pb_3": "assets/ref/pb_p003.webp",
+      "wb_4": "assets/ref/wb_p004.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_4-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": {
+        "book": "PB",
+        "page": 3
+      },
+      "dir": "ltr",
+      "audio_src": null,
+      "content": {
+        "lines": [
+          "1.4 An unusual animal",
+          "Look at the pictures and the title of the magazine article. What do you think the article is about? What or who is Rama?"
+        ]
+      }
+    },
+    {
+      "id": "u1-1_4-article-header",
+      "origin": "from_book",
+      "type": "image_figure",
+      "source": {
+        "book": "PB",
+        "page": 3
+      },
+      "dir": "ltr",
+      "audio_src": null,
+      "speech_text": "Rama - the cama. The cat family: tiger, lion. The dog family: wolf, jackal. The most well-known crossbreed.",
+      "content": {
+        "lines": [
+          "Rama – the cama",
+          "The cat family: TIGER | LION",
+          "The dog family: WOLF | JACKAL",
+          "The most well-known crossbreed"
+        ],
+        "image": "assets/media/pb3_rama_spread.webp",
+        "caption": "Rama – the cama (magazine spread from PB page 3)"
+      },
+      "edu_note_html": "<strong>ملاحظة استخراجية:</strong> في النص المائل بالصفحة 3 تبعثر مستخرج النصوص الآلي (مثل <span dir='ltr'><code>e ca m a</code></span>) ولم يقرأ العناوين المدمجة في الصور (<span dir='ltr'>TIGER, LION, WOLF, JACKAL, The most well-known crossbreed</span>)، فاستُعيدت جميعها بصرياً من شرائح 250–400 DPI."
+    },
+    {
+      "id": "u1-1_4-p1",
+      "origin": "from_book",
+      "type": "paragraph",
+      "source": {
+        "book": "PB",
+        "page": 3
+      },
+      "dir": "ltr",
+      "audio_src": null,
+      "recall_words": [
+        "families",
+        "crossbreed",
+        "crossbred",
+        "liger",
+        "cama"
+      ],
+      "content": {
+        "text": "Animals are divided into families. The house-cat is of the same family as its much bigger cousins, the lions of Africa and the tigers of India. The dog, the wolf and the jackal are part of the dog family. If animals are part of the same family, it is sometimes possible to crossbreed them to make a new animal. This was done several years ago when a lion was crossbred with a tiger, giving us a new animal called a ‘liger’. Now, it has been done again. The new animal is called a ‘cama’, and has been given the name Rama."
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "comprehension",
+        "label": "العائلات الحيوانية والتهجين",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "html": "<p>تقسم الفقرة الأولى الحيوانات إلى عائلات متقاربة: <b>عائلة القطط</b> (القط المنزلي، الأسد، النمر) و<b>عائلة الكلاب</b> (الكلب، الذئب، ابن آوى). ويمكن أحياناً التهجين (<span dir='ltr'>crossbreed</span>) بين أفراد العائلة الواحدة فقط: فنتج <span dir='ltr'><b>liger</b></span> (أسد + نمر)، ونتج <span dir='ltr'><b>cama</b></span> واسمه <b>راما</b>.</p>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "caption": "مخطط العائلات والتهجين كما شرحته الفقرة الأولى من PB ص 3",
+            "svg": "<svg viewBox='0 0 580 150' xmlns='http://www.w3.org/2000/svg'><rect width='580' height='150' rx='10' fill='#F8FAFC'/><rect x='20' y='20' width='240' height='110' rx='8' fill='#FEE2E2' stroke='#DC2626'/><text x='140' y='45' text-anchor='middle' font-size='13' font-weight='700'>The cat family</text><text x='140' y='70' text-anchor='middle' font-size='12'>lion + tiger → liger</text><text x='140' y='95' text-anchor='middle' font-size='11' fill='#475569'>+ house-cat (cousins)</text><rect x='320' y='20' width='240' height='110' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='440' y='45' text-anchor='middle' font-size='13' font-weight='700'>The camel family</text><text x='440' y='70' text-anchor='middle' font-size='12'>male camel + female llama → cama</text><text x='440' y='95' text-anchor='middle' font-size='11' fill='#475569'>Name: Rama (Dubai, Jan 1998)</text></svg>"
+          },
+          "simulation": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "type": "cama_comparator"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "html": "<p dir='ltr'>Can you crossbreed a cat and a dog? <b>No</b>, because they are not in the same animal family.</p>"
+          },
+          "self_check_ref": "chk-1_4-a",
+          "page_ref": {
+            "book": "PB",
+            "page": 3,
+            "pdf_page": 5,
+            "image": "assets/ref/pb_p003.webp"
+          }
+        }
+      }
+    },
+    {
+      "id": "u1-1_4-p2",
+      "origin": "from_book",
+      "type": "paragraph",
+      "source": {
+        "book": "PB",
+        "page": 3
+      },
+      "dir": "ltr",
+      "audio_src": null,
+      "speech_text": "Rama the cama was born in Dubai in January, 1998. It is a cross between a male camel and a female llama. Although they are from the same family of animals, they are very different. Camels live mainly in hot countries like Arabia, whereas llamas live in mountainous parts of South America where it gets very, very cold. Because of the intense cold at heights of 8,000 metres, llamas have coats of long, heavy wool.",
+      "recall_words": [
+        "Dubai",
+        "male",
+        "female",
+        "whereas",
+        "intense",
+        "wool"
+      ],
+      "content": {
+        "text": "Rama the cama was born in Dubai in January, 1998. It is a cross between a male camel and a female IIama. Although they are from the same family of animals, they are very different. Camels live mainly in hot countries like Arabia, whereas llamas live in mountainous parts of South America where it gets very, very cold. Because of the intense cold at heights of 8,000 metres, llamas have coats of long, heavy wool."
+      },
+      "edu_note_html": "<strong>ملاحظة مطابقة النص:</strong> كُتبت كلمة اللاما في السطر الثالث من هذه الفقرة في طبعة الكتاب الرسمية بصورة <span dir='ltr'><code>IIama</code></span> (بحرفي I كبيرين سهواً) ثم كُتبت <span dir='ltr'><code>llamas</code></span> بصورتها الصحيحة في السطر الخامس. أُبقينا نص الكتاب حرفياً في الفقرة وسُجّلت الحالة في <span dir='ltr'>REVIEW_NEEDED.md</span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "أدوات الربط والتضاد (although / whereas)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "html": "<p>تبرز الفقرة الفرق المناخي بين الجمل واللاما باستعمال أداتي التضاد:</p><ul><li><span dir='ltr'><b>Although</b></span> (على الرغم من): تربط حقيقتين متناقضتين غير متوقعتين.</li><li><span dir='ltr'><b>whereas</b></span> (بينما): تُقارن بين شيئين متقابلين في الصفة أو المكان (الجمل في الحر ↔ اللاما في الجبال شديدة البرد).</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "caption": "مقارنة البيئة والغطاء بين الجمل واللاما في PB ص 3",
+            "svg": "<svg viewBox='0 0 580 120' xmlns='http://www.w3.org/2000/svg'><rect width='580' height='120' rx='10' fill='#ECFDF5'/><rect x='20' y='16' width='250' height='88' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='145' y='42' text-anchor='middle' font-size='13' font-weight='700'>Camels</text><text x='145' y='66' text-anchor='middle' font-size='12'>Hot Arabia · little-value hair coat</text><rect x='310' y='16' width='250' height='88' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='435' y='42' text-anchor='middle' font-size='13' font-weight='700'>Llamas (whereas)</text><text x='435' y='66' text-anchor='middle' font-size='12'>Cold South America · long heavy wool</text></svg>"
+          },
+          "simulation": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "type": "cama_comparator"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "html": "<p dir='ltr'>Camels live in hot countries, <b>whereas</b> llamas live in cold mountainous areas.</p>"
+          },
+          "self_check_ref": "chk-1_4-a",
+          "page_ref": {
+            "book": "PB",
+            "page": 3,
+            "pdf_page": 5,
+            "image": "assets/ref/pb_p003.webp"
+          }
+        }
+      }
+    },
+    {
+      "id": "u1-1_4-p3",
+      "origin": "from_book",
+      "type": "paragraph",
+      "source": {
+        "book": "PB",
+        "page": 3
+      },
+      "dir": "ltr",
+      "audio_src": null,
+      "recall_words": [
+        "unlike",
+        "like",
+        "hump",
+        "short",
+        "valuable",
+        "hair"
+      ],
+      "content": {
+        "text": "So what does Rama look like? Unlike its father, it has no hump on its back. Like its father, it has the short ears and the long tail of the camel. It is bigger than a llama but not as big as a camel. However, the wool coat of the llama, which is very valuable, unlike the hair coat of the camel, which has little value."
+      },
+      "edu_note_html": "<strong>تنبيه لغوي حرفي:</strong> الجملة الأخيرة في النص المطبوع وردت ناقصة الفعل الرئيسي (<span dir='ltr'>However, the wool coat of the llama...</span> بدلاً من <span dir='ltr'>However, it has the wool coat of the llama...</span>)، ونُقلت حرفياً كما هي في الكتاب؛ والمعنى المستفاد أن الكاما ورث معطف الصوف الثمين من اللاما على عكس شعر الجمل قليل القيمة.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "comprehension",
+        "label": "مقارنة صفات راما الكاما التفاعلية",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "html": "<p>صفات راما الكاما مقارنة بأبويه:</p><ul><li><b>بالمخالفة لأبيه الجمل (<span dir='ltr'>Unlike its father</span>):</b> ليس له سنام على ظهره.</li><li><b>مشابهاً لأبيه الجمل (<span dir='ltr'>Like its father</span>):</b> له أذنان قصيرتان وذيل طويل.</li><li><b>الحجم:</b> أكبر من اللاما وأصغر من الجمل (<span dir='ltr'>not as big as a camel</span>).</li><li><b>الغطاء:</b> يجمع بين الصوف الثمين كاللاما (<span dir='ltr'>valuable wool coat</span>).</li></ul>"
+          },
+          "simulation": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "type": "cama_comparator"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 3,
+            "html": "<p dir='ltr'><b>Unlike</b> its father, Rama has no hump.<br><b>Like</b> its father, it has short ears and a long tail.</p>"
+          },
+          "self_check_ref": "chk-1_4-b",
+          "page_ref": {
+            "book": "PB",
+            "page": 3,
+            "pdf_page": 5,
+            "image": "assets/ref/pb_p003.webp"
+          }
+        }
+      }
+    },
+    {
+      "id": "u1-1_4-pb-questions",
+      "origin": "from_book",
+      "type": "activity",
+      "source": {
+        "book": "PB",
+        "page": 3
+      },
+      "dir": "ltr",
+      "audio_src": null,
+      "content": {
+        "lines": [
+          "Read the article. Then answer these questions.",
+          "Is it possible to crossbreed a cat and a dog?",
+          "Why would camas like Rama find it hard to live in the wild in Arabia?",
+          "Is it right to crossbreed animals to make new animals? What do you think?",
+          "Now do activities A and B in the Workbook."
+        ]
+      },
+      "edu_note_html": "<strong>مقترح للإجابة عن أسئلة الكتاب ص 3:</strong><br>1) <span dir='ltr'>No, because they belong to different animal families.</span><br>2) <span dir='ltr'>Because it has a heavy wool coat meant for intense cold, so it would suffer in Arabia's hot climate.</span><br>3) سؤال نقاش مفتوح لرأي الطالب."
+    }
+  ],
+  "word_glossary_map": {
+    "divided": {
+      "pos": "adj",
+      "ar": "مُقسَّم",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "male": {
+      "pos": "adj/n",
+      "ar": "ذَكَر",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "female": {
+      "pos": "adj/n",
+      "ar": "أنثى",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "whereas": {
+      "pos": "conj",
+      "ar": "بينما (للتضاد والمقابلة)",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "intense": {
+      "pos": "adj",
+      "ar": "شديد / قاسٍ",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "unlike": {
+      "pos": "prep",
+      "ar": "على عكس / بخلاف",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "back": {
+      "pos": "n",
+      "ar": "ظَهْر",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "coat": {
+      "pos": "n",
+      "ar": "غطاء جسم الحيوان",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "title": {
+      "pos": "n",
+      "ar": "عنوان",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "wool": {
+      "pos": "n",
+      "ar": "صوف",
+      "in_book_wordlist": true,
+      "wb_page": 112,
+      "audio_src": null
+    },
+    "crossbreed": {
+      "pos": "v/n",
+      "ar": "يُهجّن / حيوان مُهجّن",
+      "in_book_wordlist": false,
+      "wb_page": 3,
+      "audio_src": null
+    },
+    "hump": {
+      "pos": "n",
+      "ar": "سَنام (الجمل)",
+      "in_book_wordlist": false,
+      "wb_page": 3,
+      "audio_src": null
+    },
+    "valuable": {
+      "pos": "adj",
+      "ar": "ثمين / ذو قيمة عالية",
+      "in_book_wordlist": false,
+      "wb_page": 3,
+      "audio_src": null
+    },
+    "llama": {
+      "pos": "n",
+      "ar": "حيوان اللاما (تعيش في جبال أمريكا الجنوبية)",
+      "in_book_wordlist": false,
+      "wb_page": 3,
+      "audio_src": null
+    },
+    "iiama": {
+      "pos": "n",
+      "ar": "اللاما (خطأ مطبعي في طبعة الكتاب ص 3 لـ llama)",
+      "in_book_wordlist": false,
+      "wb_page": 3,
+      "audio_src": null
+    },
+    "family": {
+      "pos": "n",
+      "ar": "فصيلة / عائلة",
+      "in_book_wordlist": false,
+      "wb_page": 3,
+      "audio_src": null
+    }
+  },
+  "activities": [
+    {
+      "id": "wb-1_4-a",
+      "origin": "from_book",
+      "source": {
+        "book": "WB",
+        "page": 4
+      },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.4 A Read the article on PB page 3 again. Then answer these questions.",
+      "prompt_ar": "اقرأ مقال PB ص 3 مرة أخرى ثم أجب عن الأسئلة العشرة التالية:",
+      "items": [
+        {
+          "num": 1,
+          "question": "In which country or countries can you find tigers?",
+          "model_answer": "India.",
+          "explain_ar": "ورد في السطر الثالث: the tigers of India."
+        },
+        {
+          "num": 2,
+          "question": "What animals are in the same family as the dog?",
+          "model_answer": "The wolf and the jackal.",
+          "explain_ar": "ورد في المقال والصور التوضيحية: The dog, the wolf and the jackal."
+        },
+        {
+          "num": 3,
+          "question": "When was Rama born?",
+          "model_answer": "In January, 1998.",
+          "explain_ar": "من الفقرة الثانية: Rama the cama was born in Dubai in January, 1998."
+        },
+        {
+          "num": 4,
+          "question": "What kind of animal was Rama's father?",
+          "model_answer": "A male camel.",
+          "explain_ar": "من الفقرة الثانية: a cross between a male camel and a female llama."
+        },
+        {
+          "num": 5,
+          "question": "Which is bigger, a camel or a llama?",
+          "model_answer": "A camel is bigger.",
+          "explain_ar": "من الفقرة الثالثة: It is bigger than a llama but not as big as a camel."
+        },
+        {
+          "num": 6,
+          "question": "Which part of Rama is valuable?",
+          "model_answer": "Its wool coat.",
+          "explain_ar": "من الفقرة الثالثة: the wool coat of the llama, which is very valuable."
+        },
+        {
+          "num": 7,
+          "question": "Why was it possible to crossbreed a lion and a tiger?",
+          "model_answer": "Because they are part of the same family (the cat family).",
+          "explain_ar": "تشرح الفقرة الأولى أن التهجين ممكن أحياناً إذا كان الحيوانان من العائلة نفسها."
+        },
+        {
+          "num": 8,
+          "question": "Why do llamas have heavy wool coats?",
+          "model_answer": "Because of the intense cold in the mountainous parts of South America (at heights of 8,000 metres).",
+          "explain_ar": "من نهاية الفقرة الثانية."
+        },
+        {
+          "num": 9,
+          "question": "Why would it be difficult for camels to live where llamas come from?",
+          "model_answer": "Because camels live mainly in hot countries like Arabia, whereas where llamas come from it gets very, very cold.",
+          "explain_ar": "بسبب البرد القارس في المرتفعات مقارنة بالبيئة الحارة للجمال."
+        },
+        {
+          "num": 10,
+          "question": "In what way is the cama like a camel?",
+          "model_answer": "Like its father (the camel), it has short ears and a long tail.",
+          "explain_ar": "من الفقرة الثالثة: Like its father, it has the short ears and the long tail of the camel."
+        }
+      ],
+      "hints": [
+        "ابدأ بتحديد موقع كل سؤال في الفقرات الثلاث (الأسئلة 1–2 و7 في الفقرة 1، 3–4 و8–9 في الفقرة 2، 5–6 و10 في الفقرة 3).",
+        "استخدم تراكيب المقارنة مثل Because of... وLike its father... عند الإجابة الكاملة.",
+        "راجع جميع الإجابات النموذجية بالضغط على زر «عرض الإجابة النموذجية المقترحة» أسفل كل سؤال."
+      ]
+    },
+    {
+      "id": "wb-1_4-b",
+      "origin": "from_book",
+      "source": {
+        "book": "WB",
+        "page": 4
+      },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Describe the cama to your partner using the following plan.",
+      "prompt_ar": "درّب نفسك على كتابة وصف مترابط للكاما ثم حيوان آخر مستخدماً الخطة:",
+      "guidance_literal": "Begin by describing its colour and covering. Then describe the head, body, legs and tail. The description does not have to be complete, but should describe interesting things about the animal, such as the size and shape of its tail. Choose another animal and describe it to your partner. Do not give the name. Can he or she guess which animal you are describing?",
+      "sample_audio_src": null,
+      "steps": [
+        {
+          "label_ar": "1) اللون والغطاء (Colour & covering)",
+          "placeholder": "The cama has a coat of long, heavy brown wool."
+        },
+        {
+          "label_ar": "2) الرأس والأذنان (Head & ears)",
+          "placeholder": "Like its father the camel, it has short ears."
+        },
+        {
+          "label_ar": "3) الجسم والسنام (Body & hump)",
+          "placeholder": "Unlike a camel, it has no hump on its back and is not as big as a camel."
+        },
+        {
+          "label_ar": "4) الذيل (Tail)",
+          "placeholder": "It also has the long tail of the camel."
+        }
+      ],
+      "hints": [
+        "اتبع ترتيب الخطة من الكتاب: الغطاء واللون ← الرأس ← الجسم ← الذيل.",
+        "وظّف أداتي Like وUnlike للربط كما في الفقرة الثالثة.",
+        "يمكنك الضغط على الزر لتجميع الجمل وسماعها نطقاً بالإنجليزية."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_4-a",
+      "origin": "educational_addition",
+      "page_ref": 3,
+      "questions": [
+        {
+          "id": "q-1_4-1",
+          "type": "mcq",
+          "stem": "According to the article, why are lions and tigers able to crossbreed to produce a liger?",
+          "evidence_block_id": "u1-1_4-p1",
+          "options": [
+            {
+              "text": "They belong to the same animal family (the cat family).",
+              "is_correct": true,
+              "why_wrong": null
+            },
+            {
+              "text": "They both live only in Dubai.",
+              "is_correct": false,
+              "why_wrong": "لم يذكر النص ذلك؛ فالنص ينسب الأسود إلى أفريقيا والنمور إلى الهند، بينما دُبي مكان ولادة راما."
+            },
+            {
+              "text": "They are part of the dog family alongside jackals.",
+              "is_correct": false,
+              "why_wrong": "الثعلب/ابن آوى (jackal) والذئب ينتميان إلى عائلة الكلاب، أما الأسد والنمر فمن عائلة القطط."
+            },
+            {
+              "text": "Both of them have thick wool coats.",
+              "is_correct": false,
+              "why_wrong": "الغطاء الصوفي الكثيف ذُكر للاما وليس للأسود والنمور."
+            }
+          ],
+          "hints": [
+            "ابحث عن جملة If animals are part of... في الفقرة الأولى.",
+            "قارن بين عنواني الصور: The cat family وThe dog family.",
+            "لأن الأسود والنمور من عائلة واحدة هي عائلة القطط (the cat family)."
+          ],
+          "explain": "يشترط النص للتهجين أن ينتمي الحيوانان إلى العائلة نفسها، والأسد والنمر كلاهما في عائلة القطط."
+        }
+      ]
+    },
+    {
+      "id": "chk-1_4-b",
+      "origin": "educational_addition",
+      "page_ref": 3,
+      "questions": [
+        {
+          "id": "q-1_4-2",
+          "type": "mcq",
+          "stem": "Which statement accurately describes Rama the cama compared to its parents?",
+          "evidence_block_id": "u1-1_4-p3",
+          "options": [
+            {
+              "text": "It has no hump, has short ears and a long tail, and is smaller than a camel.",
+              "is_correct": true,
+              "why_wrong": null
+            },
+            {
+              "text": "It is bigger than a camel and has a large hump on its back.",
+              "is_correct": false,
+              "why_wrong": "النص يقول صراحة: not as big as a camel وUnlike its father, it has no hump."
+            },
+            {
+              "text": "It has long ears and a short tail like a camel.",
+              "is_correct": false,
+              "why_wrong": "العكس تماماً؛ فالجمل وراما لهما أذنان قصيرتان (short ears) وذيل طويل (long tail)."
+            },
+            {
+              "text": "It was born in South America in January, 1998.",
+              "is_correct": false,
+              "why_wrong": "راما وُلد في دبي (Dubai)؛ أما أمريكا الجنوبية فهي موطن اللاما."
+            }
+          ],
+          "hints": [
+            "ركّز على أول أربع جمل في الفقرة الثالثة: So what does Rama look like?",
+            "انتبه لكلمة Unlike (بلا سنام) مقابل Like (أذنان قصيرتان وذيل طويل).",
+            "الإجابة الأولى هي المطابقة حرفياً للفقرة الثالثة."
+          ],
+          "explain": "راما أصغر من الجمل وأكبر من اللاما، وليس له سنام، ولكنه يملك أذنين قصيرتين وذيلاً طويلاً مثل الجمل."
+        },
+        {
+          "id": "q-1_4-3",
+          "type": "mcq",
+          "stem": "Which contrast word in paragraph 2 compares camels in hot Arabia with llamas in cold South America?",
+          "evidence_block_id": "u1-1_4-p2",
+          "options": [
+            {
+              "text": "whereas",
+              "is_correct": true,
+              "why_wrong": null
+            },
+            {
+              "text": "because of",
+              "is_correct": false,
+              "why_wrong": "because of تفيد السبب (بسبب البرد الشديد) وليست للمقابلة والتضاد."
+            },
+            {
+              "text": "between",
+              "is_correct": false,
+              "why_wrong": "between حرف جر يعني «بين» (تزاوج بين جمل ولاما) ولا يربط جملتي تضاد."
+            },
+            {
+              "text": "mainly",
+              "is_correct": false,
+              "why_wrong": "mainly ظرف يعني «غالباً/بصورة رئيسية» وليس أداة ربط للمقارنة."
+            }
+          ],
+          "hints": [
+            "ابحث في الفقرة الثانية عن الجملة التي تقابل Arabia بـ South America.",
+            "راجع قائمة مفردات الوحدة 1 ص 112: whereas = بينما.",
+            "الجواب: whereas."
+          ],
+          "explain": "تُستعمل whereas للمقابلة بين طرفين متضادين في الصفات أو الظروف."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "fc-1_4-whereas",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "whereas (conj)",
+      "back": "بينما (للمقابلة والتضاد)",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-unlike",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "unlike (prep)",
+      "back": "على عكس / بخلاف",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-intense",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "intense (adj)",
+      "back": "شديد / قاسٍ",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-male",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "male (adj/n)",
+      "back": "ذَكَر",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-female",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "female (adj/n)",
+      "back": "أنثى",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-divided",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "divided (adj)",
+      "back": "مُقسَّم",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-coat",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "coat (of an animal)",
+      "back": "غطاء جسم الحيوان",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    },
+    {
+      "id": "fc-1_4-crossbreed",
+      "origin": "from_book",
+      "page_ref": 3,
+      "front": "crossbreed (v/n)",
+      "back": "يُهجّن / حيوان مهجّن",
+      "tag": "Unit 1 · 1.4",
+      "audio_src": null
+    }
+  ],
+  "extensions": [
+    {
+      "id": "ext-1_4-grammar-preview",
+      "origin": "for_enrichment",
+      "page_ref": 3,
+      "title": "تمهيد للدرس 1.5: التفرقة بين although وwhereas وunlike",
+      "html": "<p>ستُشرح هذه الروابط بالتفصيل في الدرس <bdi dir='ltr'>1.5 Language review 1</bdi> ص 4: <bdi dir='ltr'><b>whereas</b></bdi> تربط بين صفتين متقابلتين، و<bdi dir='ltr'><b>although</b></bdi> تبدأ بجملة التناقض غير المتوقع، و<bdi dir='ltr'><b>unlike / like</b></bdi> يتلوها اسم (<bdi dir='ltr'>its father</bdi>) وتُفصل بفاصلة.</p>"
+    }
+  ],
+  "extraction_audit": {
+    "pdftotext_failures": [
+      "الصفحة مائلة ومبنية على عمودين؛ فأخرج pdftotext مقاطع مبعثرة من نوع: 'e c a m a w a s born in Dubai in' و'A is of / the lions / the / of / sa / Af / m / ric / e / a / fa m / an d / ily / the tigers of India'.",
+      "سقط العنوان الكبير (Rama – the cama) وعناوين الصور النقطية (TIGER, LION, WOLF, JACKAL, The most well-known crossbreed) كلياً من مستخرج pdftotext.",
+      "ظهرت كلمة اللاما في السطر الثالث من الفقرة الثانية بحرفين كبيرين 'female IIama' في الطبعة الرسمية المطبوعة (مؤكد بصرياً عند 400 DPI)."
+    ],
+    "verification_method": "تصدير PDF ص 5 إلى PNG بدقة 250 و400 DPI + تقطيع بصري أفقي وقراءة تمريرتين مستقلتين + مطابقة أسئلة WB ص 4 (PDF ص 5) مع مخرجات tesseract.js eng."
+  }
+}

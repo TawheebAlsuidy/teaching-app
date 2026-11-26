@@ -234,6 +234,11 @@ public class MainActivity extends Activity {
             row2.addView(makeSpace(10));
             row2.addView(makeSubjectTile("الرياضيات 3D", "250 صفحة + 13 مجسماً", R.drawable.ic_subj_math, R.drawable.card_white_rounded, "math12", true));
             homeSubjectsContainer.addView(row2);
+
+            LinearLayout row3 = makeRow();
+            row3.setPadding(0, (int) (10 * dp), 0, 0);
+            row3.addView(makeSubjectTile("الأدب والنصوص", "212 صفحة + تحليل جمالي", R.drawable.ic_subj_literature, R.drawable.card_cream_tint, "arabic_lit", true));
+            homeSubjectsContainer.addView(row3);
         }
     }
 
@@ -262,6 +267,11 @@ public class MainActivity extends Activity {
         r3.addView(makeSpace(10));
         r3.addView(makeSubjectTile("الرياضيات 3D", "250 صفحة + معمل 13 مجسماً", R.drawable.ic_subj_math, R.drawable.card_white_rounded, "math12", true));
         allSubjectsContainer.addView(r3);
+
+        LinearLayout r4 = makeRow();
+        r4.setPadding(0, (int) (10 * dp), 0, 0);
+        r4.addView(makeSubjectTile("الأدب والنصوص", "212 صفحة + 36 تحليلاً جمالياً", R.drawable.ic_subj_literature, R.drawable.card_cream_tint, "arabic_lit", true));
+        allSubjectsContainer.addView(r4);
     }
 
     private void buildLibraryTab() {
@@ -284,6 +294,7 @@ public class MainActivity extends Activity {
         addHtmlBookItem("🧪 معمل الأحياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الأحياء 1–8", "biology-12th-lab.html");
         addHtmlBookItem("📐 الرياضيات 12 التفاعلي (250 صفحة + حلول)", "الأعداد المركبة، القطوع، الهندسة الفضائية، الاحتمالات، المشتقات والتكامل", "math-12th-book.html");
         addHtmlBookItem("🧊 معمل الرياضيات التفاعلي 3D (13 مجسماً)", "مستوى أرغاند، القطوع، المجسمات، الاحتمالات، المشتقات والتكامل", "math-12th-lab.html");
+        addHtmlBookItem("الأدب والنصوص 12 التفاعلي (212 صفحة)", "36 موضوعاً، تحليل جمالي، بطاقات نصوص، وفهرس النقد الأدبي", "arabic-literature-12th-book.html");
         addHtmlBookItem("⚗️ مختبر الكيمياء 3D (10 تجارب تفاعلية)", "معمل كيمياء ثلاثي الأبعاد مربوط مباشرة بكتاب الكيمياء", "chem-lab-book.html");
         addHtmlBookItem("🔬 المعمل التفاعلي 3D لعلوم التاسع", "13 درساً وتجربة علمية ثلاثية الأبعاد", "science-9th-book.html");
         addHtmlBookItem("📐 كتاب الرياضيات التفاعلي 3D (التاسع)", "نماذج هندسية تفاعلية للمبرهنات والدائرة", "math-9th-book.html");
@@ -638,6 +649,17 @@ public class SubjectActivity extends Activity {
                 ThakerStore.getBookPct(this, "math_12", 20), "250 صفحة تفاعلية", "22 حلاً خطوة بخطوة + 13 مجسماً",
                 "📐 افتح كتاب الرياضيات التفاعلي", "html", "math-12th-book.html",
                 "🧊 افتح معمل الرياضيات 3D (13 مجسماً)", "math-12th-lab.html");
+        } else if ("arabic_lit".equals(subjectKey)) {
+            tvTitle.setText("الأدب والنصوص");
+            tvMeta.setText("قسمان · 36 موضوعاً · 212 صفحة");
+            tvGradePill.setText("الثالث الثانوي");
+            ivIcon.setImageResource(R.drawable.ic_subj_literature);
+            quizKey = "arabic_lit";
+
+            addPartCard("الكتاب التفاعلي للأدب والنصوص والنقد", "الأدب في العصرين المملوكي والعثماني، النهضة، المدارس الأدبية، والنقد الأدبي",
+                ThakerStore.getBookPct(this, "arabic_lit", 20), "212 صفحة تفاعلية", "36 تحليلاً جمالياً + بطاقات نصوص",
+                "افتح كتاب الأدب والنصوص التفاعلي", "html", "arabic-literature-12th-book.html",
+                "تصفح قسم النقد الأدبي", "arabic-literature-12th-book.html");
         } else if ("math".equals(subjectKey)) {
             tvTitle.setText("الرياضيات");
             tvMeta.setText("جزءان · 8 وحدات · جبر وهندسة ومثلثات");
@@ -1126,6 +1148,7 @@ public class SummaryActivity extends Activity {
         if ("math".equals(s) || "math_p1".equals(s)) return "math_p1";
         if ("math_p2".equals(s)) return "math_p2";
         if ("math12".equals(s)) return "math_12";
+        if ("arabic_lit".equals(s)) return "arabic_lit";
         if ("physics".equals(s)) return "phys_12";
         if ("biology".equals(s)) return "bio_12";
         if ("chemistry".equals(s)) return "chem_12";
@@ -1179,6 +1202,22 @@ public class SummaryActivity extends Activity {
                 "📐 المشتقة والتكامل", "f′(x) = limₕ→₀ [f(x+h)−f(x)]/h\n(xⁿ)′ = nxⁿ⁻¹  |  ∫xⁿdx = xⁿ⁺¹/(n+1) + C", "قاعدة التكامل تستثنى n = −1؛ ونتيجة التكامل المحدد F(b) − F(a).", "ص 154",
                 "🧪 حجم مجسم الدوران", "• V = π∫ₐᵇ [f(x)]² dx عند الدوران حول محور x.", "ص 210",
                 "⚠️ خطأ شائع", "نسيان ثابت التكامل C في التكامل غير المحدد، أو استخدام F(a)−F(b) بدل F(b)−F(a)."
+            ));
+        } else if ("arabic_lit".equals(subject)) {
+            tvTitle.setText("الأدب والنصوص · الثالث الثانوي");
+            groups.add(new SummaryGroup(
+                "الأدب والنصوص", "القسم الأول: من ص 9 إلى ص 171",
+                "الموضوعات الأدبية", "• الأدب في العصرين المملوكي والعثماني يبدأ ص 9.\n• النهضة الأدبية في العصر الحديث تبدأ ص 23.\n• المدرسة الرومنسية تبدأ ص 82، والواقعية تبدأ ص 121.", "ص 9",
+                "الشعر والنثر", "• شعر: في رثاء بغداد، فراق وشوق، ثمن الحرية، أمتي.\n• نثر: وصف السفينة، الإسراء والمعراج، الرجولة، مسمار جحا.", "ص 14",
+                "بطاقات النصوص", "اربط كل عنوان بصاحبه ونوعه وصفحة بدايته من الفهرس الرسمي.",
+                "خطأ شائع", "خلط عنوان النص بنوعه؛ راجع الفهرس قبل تحديد الشعر أو النثر."
+            ));
+            groups.add(new SummaryGroup(
+                "النقد الأدبي", "القسم الثاني: من ص 173 إلى ص 217",
+                "مفاهيم النقد", "• النقد الأدبي يبدأ ص 173.\n• الأسلوب يبدأ ص 180، والشكل والمضمون يبدأ ص 184.", "ص 173",
+                "التطبيقات النقدية", "• التجربة الشعرية ص 189.\n• القصة ص 198، والنص المسرحي ص 200، والمقالة ص 202.", "ص 189",
+                "طريقة التطبيق", "طبّق المفهوم النقدي على نص من الكتاب، واربط الحكم بالشاهد النصي.",
+                "خطأ شائع", "اعتبار القصة والنص المسرحي والمقالة نوعاً واحداً؛ لكل منها خصائصه الخاصة."
             ));
         } else if ("physics".equals(subject)) {
             tvTitle.setText("الفيزياء 3D · الثالث الثانوي");
@@ -1549,6 +1588,26 @@ public class QuizActivity extends Activity {
             "قيمة التكامل ∫₀² (2 − x/2) dx تساوي:",
             new String[]{"2", "3", "4", "5"}, 1,
             "المضاد هو 2x − x²/4، وبالتعويض: (4 − 1) − 0 = 3.", "math-12th-book.html", 246));
+        bank.add(new Question("lit_1", "سهل · الأدب والنصوص",
+            "أي عنوان نص شعري ارتبط بالشاعر شمس الدين الكوفي في الفهرس؟",
+            new String[]{"في رثاء بغداد", "وصف السفينة", "الرجولة", "مسمار جحا"}, 0,
+            "الفهرس يذكر «في رثاء بغداد / شمس الدين الكوفي / شعر» في ص 14.", "arabic-literature-12th-book.html", 14));
+        bank.add(new Question("lit_2", "سهل · الأدب والنصوص",
+            "ما نوع نص «وصف السفينة» كما ورد في الفهرس؟",
+            new String[]{"شعر", "نثر", "مسرحية", "مقالة"}, 1,
+            "الفهرس يصنّف «وصف السفينة / ابن حبيب الحلبي» ضمن النثر في ص 17.", "arabic-literature-12th-book.html", 17));
+        bank.add(new Question("lit_3", "متوسط · النقد الأدبي",
+            "أي موضوع يبدأ في الصفحة 173 من كتاب الأدب والنصوص؟",
+            new String[]{"الأسلوب", "النقد الأدبي", "القصة", "المقالة"}, 1,
+            "الفهرس يثبت أن «النقد الأدبي» يبدأ في ص 173.", "arabic-literature-12th-book.html", 173));
+        bank.add(new Question("lit_4", "متوسط · النقد الأدبي",
+            "ما الموضوع الذي يلي «الأسلوب» مباشرة في فهرس النقد الأدبي؟",
+            new String[]{"الشكل والمضمون", "التجربة الشعرية", "النص المسرحي", "النقد الأدبي"}, 0,
+            "الفهرس يرتب الموضوعات: النقد الأدبي ص 173، الأسلوب ص 180، ثم الشكل والمضمون ص 184.", "arabic-literature-12th-book.html", 184));
+        bank.add(new Question("lit_5", "متوسط · الأدب والنصوص",
+            "بمن ارتبط عنوان «مسمار جحا» في فهرس الكتاب؟",
+            new String[]{"نجيب الكيلاني", "فدوى طوقان", "علي أحمد باكثير", "ميخائيل نعيمة"}, 2,
+            "الفهرس يذكر «مسمار جحا / علي أحمد باكثير / نثر» في ص 164.", "arabic-literature-12th-book.html", 164));
         bank.add(new Question("p12_1", "متوسط · الفيزياء 12",
             "عند إطلاق مقذوف بنفس السرعة الابتدائية، فإنه يبلغ أقصى مدى أفقي عندما تكون زاوية الإطلاق:",
             new String[]{"30°", "45°", "60°", "90°"}, 1,
@@ -1612,6 +1671,7 @@ public class QuizActivity extends Activity {
             else if ("sci_p1".equals(quizSubject)) prefix = "sp1_";
             else if ("math_p1".equals(quizSubject) || "math_p2".equals(quizSubject)) prefix = "mp";
             else if ("math_12".equals(quizSubject)) prefix = "m12_";
+            else if ("arabic_lit".equals(quizSubject)) prefix = "lit_";
             else if ("phys_12".equals(quizSubject)) prefix = "p12_";
             else if ("bio_12".equals(quizSubject)) prefix = "b12_";
             else if ("chem_12".equals(quizSubject)) prefix = "c12_";

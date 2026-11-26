@@ -1,0 +1,50 @@
+{
+  "schema_version": "2.0.0",
+  "pack_id": "arabic-lit-g12-interactive-2026",
+  "subject": "arabic_lit",
+  "grade": 12,
+  "edition": {
+    "title": "الأدب والنصوص والنقد - الصف الثالث الثانوي",
+    "ministry": "الجمهورية اليمنية - وزارة التربية والتعليم - قطاع المناهج",
+    "curriculum_version": "1447هـ - 2026م",
+    "official_pdf": "الأدب-والنصوص-والنقد-للصف-الثالث-الثانوي.pdf",
+    "total_pdf_pages": 218,
+    "start_pdf_page": 7,
+    "end_pdf_page": 218,
+    "total_book_pages": 212,
+    "page_offset": "book_page = pdf_page - 1",
+    "toc_pdf_pages": [
+      7,
+      8
+    ],
+    "toc_book_pages": [
+      6,
+      7
+    ]
+  },
+  "features": {
+    "original_page_rendering": true,
+    "interactive_overlays": true,
+    "smart_text_bottom_sheet": true,
+    "literary_analysis_panels": true,
+    "author_and_text_cards": true,
+    "rhetorical_focus_prompts": true,
+    "offline_audio_synthesis": true,
+    "yemeni_companion_prompts": true,
+    "multi_student_profiles": true
+  },
+  "data_files": [
+    "manifest.json",
+    "sections.json",
+    "pages.json",
+    "topics.json",
+    "lessons.json",
+    "interactions.json",
+    "explanations.json",
+    "literary_analyses.json",
+    "author_cards.json",
+    "assessments.json",
+    "glossary.json",
+    "data_bundle.js"
+  ]
+}

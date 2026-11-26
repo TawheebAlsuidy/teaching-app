@@ -19,7 +19,7 @@ PLACEHOLDER_PATTERNS = [
 ]
 
 BAD_CHAR_RE = re.compile(r"[\uFFFD\uFB50-\uFDFF\uFE70-\uFEFF]")
-MOJIBAKE_RE = re.compile(r"[≤≥ƒ†‡•‰‹›™œžŸ¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÃÂâ€]")
+MOJIBAKE_RE = re.compile(r"(?:â€|[≤≥ƒ†‡‰‹›™œžŸ¢¤¥¦§¨©ª¬®¯ÃÂ])")
 
 # Strip allowed LTR islands / LaTeX before checking unexpected Latin chars in RTL Arabic blocks
 STRIP_LATEX_RE = re.compile(r"\$\$[\s\S]*?\$\$|\$[^$\n]+\$")

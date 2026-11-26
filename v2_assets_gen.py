@@ -256,6 +256,12 @@ def _make_badge_icon(out_path, bg_rgba, kind):
         d.chord([68, 70, 188, 190], start=30, end=210, fill=(5, 150, 105, 255))
         d.line([(86, 170), (170, 86)], fill=(255, 255, 255, 240), width=8)
         d.ellipse([106, 98, 126, 118], fill=(254, 243, 199, 255))
+    elif kind == "literature":
+        d.polygon([(52, 76), (116, 66), (128, 82), (128, 190), (116, 174), (52, 184)], fill=(180, 83, 9, 255))
+        d.polygon([(204, 76), (140, 66), (128, 82), (128, 190), (140, 174), (204, 184)], fill=(217, 119, 6, 255))
+        d.line([(128, 82), (128, 190)], fill=(146, 64, 14, 255), width=7)
+        d.line([(160, 150), (196, 82)], fill=(146, 64, 14, 255), width=9)
+        d.ellipse([188, 62, 206, 80], fill=(255, 251, 235, 255))
 
     _antialias_save(img, out_path, (192, 192))
 
@@ -275,3 +281,4 @@ def generate_v2_artwork(res_dir):
     _make_badge_icon(f"{nodpi}/ic_subj_physics.png", (224, 242, 254, 255), "physics")
     _make_badge_icon(f"{nodpi}/ic_subj_chem.png", (204, 251, 241, 255), "chem")
     _make_badge_icon(f"{nodpi}/ic_subj_bio.png", (220, 252, 231, 255), "bio")
+    _make_badge_icon(f"{nodpi}/ic_subj_literature.png", (255, 251, 235, 255), "literature")

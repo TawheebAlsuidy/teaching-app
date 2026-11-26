@@ -382,5 +382,100 @@ class TestCurriculumIntegrity(unittest.TestCase):
                 f"Math sync mismatch for {fname}"
             )
 
+    def test_11_arabic_literature_data_and_html_integrity(self):
+        base = os.path.join(ROOT_DIR, "data/curriculum/grade12/arabic_lit")
+        names = [
+            "manifest", "sections", "pages", "topics", "lessons", "interactions",
+            "explanations", "literary_analyses", "author_cards", "assessments", "glossary"
+        ]
+        data = {}
+        for name in names:
+            with open(os.path.join(base, f"{name}.json"), "r", encoding="utf-8") as f:
+                data[name] = json.load(f)
+
+        with open(os.path.join(base, "data_bundle.js"), "r", encoding="utf-8") as f:
+            bundle_text = f.read()
+        bundle_payload = bundle_text.split("=", 1)[1].strip().rstrip(";").strip()
+        self.assertEqual(json.loads(bundle_payload), data, "Arabic literature data_bundle.js is out of sync")
+
+        self.assertEqual(len(data["pages"]), 212)
+        self.assertEqual(len(data["topics"]), 36)
+        self.assertEqual(len(data["sections"]), 2)
+        self.assertEqual(data["manifest"]["schema_version"], "2.0.0")
+        self.assertEqual(data["manifest"]["edition"]["page_offset"], "book_page = pdf_page - 1")
+        expected_starts = [
+            9, 14, 17, 23, 29, 34, 41, 46, 50, 55, 61, 68, 77, 82, 87, 93, 99, 104,
+            111, 113, 121, 125, 129, 133, 137, 143, 150, 156, 164, 173, 180, 184,
+            189, 198, 200, 202
+        ]
+        self.assertEqual([topic["page_start"] for topic in data["topics"]], expected_starts)
+
+        for page in data["pages"]:
+            self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, page["image"])))
+            self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, page["image_full"])))
+
+        refs = {
+            "explanations": set(data["explanations"]),
+            "assessments": set(data["assessments"]),
+            "literary_analyses": set(data["literary_analyses"]),
+            "author_cards": set(data["author_cards"])
+        }
+        allowed_types = {"explainable_text", "literary_analysis", "author_card", "assessment"}
+        for page_id, spots in data["interactions"].items():
+            self.assertTrue(spots, f"{page_id} has no hotspots")
+            for spot in spots:
+                self.assertIn(spot["type"], allowed_types)
+                bounds = spot["bounds"]
+                for key in ("x", "y", "w", "h"):
+                    self.assertGreaterEqual(bounds[key], 0.0)
+                    self.assertLessEqual(bounds[key], 1.0)
+                if spot["type"] == "explainable_text":
+                    self.assertIn(spot["explanation_ref"], refs["explanations"])
+                elif spot["type"] == "literary_analysis":
+                    self.assertIn(spot["analysis_ref"], refs["literary_analyses"])
+                elif spot["type"] == "author_card":
+                    self.assertIn(spot["card_ref"], refs["author_cards"])
+                else:
+                    self.assertIn(spot["assessment_ref"], refs["assessments"])
+
+        self.assertEqual(len(data["literary_analyses"]), 36)
+        for analysis in data["literary_analyses"].values():
+            self.assertGreaterEqual(len(analysis["axes"]), 4)
+            self.assertTrue(analysis["educational_note"])
+
+        total_questions = 0
+        expected_quiz_sizes = {"quiz-lit-s1": 29, "quiz-lit-s2": 7}
+        for quiz_key, questions in data["assessments"].items():
+            self.assertEqual(len(questions), expected_quiz_sizes[quiz_key])
+            for question in questions:
+                total_questions += 1
+                self.assertTrue(question["explain"])
+                correct_option = question["options"][question["answer"]]
+                for option in question["options"]:
+                    if option is not correct_option:
+                        self.assertTrue(option.get("why_wrong"), f"{question['id']} missing why_wrong")
+        self.assertEqual(total_questions, 36)
+
+        html_name = "arabic-literature-12th-book.html"
+        html_path = os.path.join(ROOT_DIR, html_name)
+        asset_path = os.path.join(ROOT_DIR, "thaker-android-src/assets", html_name)
+        self.assertTrue(os.path.exists(html_path))
+        self.assertTrue(os.path.exists(asset_path))
+        with open(html_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        cdn_re = re.compile(r'<(?:script|link)[^>]*(?:src|href)=["\']https?://', re.IGNORECASE)
+        self.assertEqual(cdn_re.findall(content), [])
+        self.assertIn("g12LiteraryModal", content)
+        self.assertIn("engine/vendor/fonts/fonts.css", content)
+
+        src_dir = base
+        dst_dir = os.path.join(ROOT_DIR, "thaker-android-src/assets/data/curriculum/grade12/arabic_lit")
+        for fname in ["manifest.json", "assessments.json", "interactions.json", "data_bundle.js"]:
+            src_file = os.path.join(src_dir, fname)
+            dst_file = os.path.join(dst_dir, fname)
+            self.assertTrue(os.path.exists(src_file))
+            self.assertTrue(os.path.exists(dst_file))
+            self.assertEqual(os.path.getsize(src_file), os.path.getsize(dst_file))
+
 if __name__ == "__main__":
     unittest.main()

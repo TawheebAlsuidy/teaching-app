@@ -134,6 +134,163 @@ MATH_SOLUTION_MODAL_HTML = """
 </div>
 """
 
+LITERARY_MODAL_HTML = """
+<style id="arabic-lit-modal-responsive">
+#g12LiteraryModal { height: 100dvh; max-height: 100dvh; overflow: hidden; }
+#g12LiteraryModal .lit-sheet { max-height: min(78dvh, 700px); overflow-y: auto; -webkit-overflow-scrolling: touch; font-family: 'Amiri', 'Tajawal', serif; }
+@media (max-width: 480px) {
+  #g12LiteraryModal .lit-sheet { max-height: 84dvh; padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px)); }
+}
+</style>
+<div id="g12LiteraryModal" style="display:none; position:fixed; inset:0; background:rgba(28,25,23,0.72); z-index:975; align-items:flex-end; justify-content:center;" onclick="if(event.target===this) closeLiteraryModal()">
+  <div class="lit-sheet" style="width:100%; max-width:690px; background:linear-gradient(180deg,#FFFBEB 0%,#FFFFFF 46%,#FFF7ED 100%); border-top:1px solid rgba(180,83,9,0.22); border-radius:26px 26px 0 0; padding:16px 16px calc(20px + env(safe-area-inset-bottom,0px)); color:#1F2937; box-shadow:0 -14px 46px rgba(0,0,0,0.38);">
+    <div style="width:44px; height:4px; border-radius:99px; background:#D97706; margin:0 auto 12px; opacity:0.7;"></div>
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px;">
+      <div style="min-width:0;">
+        <div id="litModalTitle" style="font-size:19px; font-weight:800; color:#92400E; line-height:1.5;">تحليل جمالي</div>
+        <div id="litModalMeta" style="font-size:12.5px; color:#B45309; margin-top:2px; font-family:'Tajawal',sans-serif; font-weight:700;"></div>
+      </div>
+      <button onclick="closeLiteraryModal()" style="width:40px; height:40px; border-radius:12px; background:#FFFBEB; border:1px solid rgba(180,83,9,0.22); color:#92400E; font-size:18px; cursor:pointer; flex-shrink:0;">✕</button>
+    </div>
+    <div id="litSourceLine" style="margin-top:12px; padding:11px 13px; border-radius:14px; background:#FFFBEB; border-right:3px solid #D97706; font-size:14px; line-height:1.8;"></div>
+    <div id="litAxes" style="margin-top:12px; display:flex; flex-direction:column; gap:8px;"></div>
+    <div id="litNote" style="display:none; margin-top:10px; font-size:12px; line-height:1.7; color:#92400E; font-family:'Tajawal',sans-serif;"></div>
+    <div style="display:flex; gap:8px; margin-top:14px; flex-wrap:wrap;">
+      <button id="litNextBtn" onclick="revealNextLitAxis()" style="flex:1; min-width:150px; background:linear-gradient(135deg,#D97706,#B45309); color:#fff; border:none; border-radius:999px; padding:12px; font-size:14px; font-weight:800; cursor:pointer; font-family:'Tajawal',sans-serif;">اكشف المحور التالي ‹</button>
+      <button onclick="speakLiteraryText()" style="flex:0.6; min-width:110px; background:#FFFBEB; border:1px solid rgba(180,83,9,0.25); color:#92400E; border-radius:999px; padding:12px; font-size:13.5px; font-weight:800; cursor:pointer; font-family:'Tajawal',sans-serif;">استمع</button>
+      <button onclick="closeLiteraryModal()" style="flex:0.5; min-width:90px; background:transparent; border:1px solid rgba(180,83,9,0.25); color:#92400E; border-radius:999px; padding:12px; font-size:13.5px; font-weight:800; cursor:pointer; font-family:'Tajawal',sans-serif;">إغلاق</button>
+    </div>
+  </div>
+</div>
+"""
+
+LITERARY_ENGINE_JS = """
+const LITERARY_ANALYSES = CURR_DATA?.literary_analyses || {};
+const AUTHOR_CARDS = CURR_DATA?.author_cards || {};
+const baseGetCurrentPageContextForLit = getCurrentPageContext;
+getCurrentPageContext = function() {
+  const ctx = baseGetCurrentPageContextForLit();
+  const spots = INTERACTIONS[ctx.page?.page_id] || [];
+  const litSpot = spots.find(s => s.type === 'literary_analysis');
+  const cardSpot = spots.find(s => s.type === 'author_card');
+  ctx.litRef = (litSpot && litSpot.analysis_ref) || Object.keys(LITERARY_ANALYSES)[0];
+  ctx.cardRef = (cardSpot && cardSpot.card_ref) || Object.keys(AUTHOR_CARDS)[0];
+  return ctx;
+};
+
+const litState = { mode: 'analysis', ref: '', revealed: 0, speakText: '' };
+
+function openLiteraryAnalysis(ref) {
+  const item = LITERARY_ANALYSES[ref];
+  if (!item) { showToast('لا يوجد تحليل جمالي لهذا الموضوع'); return; }
+  playClickSound();
+  litState.mode = 'analysis';
+  litState.ref = ref;
+  litState.revealed = 0;
+  litState.speakText = item.tts_text || item.original_text || '';
+  document.getElementById('litModalTitle').textContent = item.title || 'تحليل جمالي';
+  document.getElementById('litModalMeta').textContent = [item.genre, item.author, 'ص ' + item.page].filter(Boolean).join(' · ');
+  document.getElementById('litSourceLine').textContent = item.original_text || '';
+  document.getElementById('litNote').textContent = item.educational_note || '';
+  document.getElementById('litNote').style.display = item.educational_note ? 'block' : 'none';
+  document.getElementById('litAxes').innerHTML = '';
+  (item.axes || []).forEach((axis, idx) => {
+    const box = document.createElement('div');
+    box.className = 'lit-axis';
+    box.style.cssText = 'display:none; padding:11px 13px; border-radius:14px; background:#FFFBEB; border:1px solid rgba(180,83,9,0.18);';
+    box.innerHTML = '<div style="font-family:Tajawal,sans-serif; font-size:12.5px; font-weight:800; color:#B45309;">' + (idx + 1) + '. ' + (axis.label || '') + '</div><div style="font-size:14px; line-height:1.85; margin-top:4px;">' + (axis.prompt || '') + '</div>';
+    document.getElementById('litAxes').appendChild(box);
+  });
+  document.getElementById('litNextBtn').style.display = (item.axes || []).length ? 'block' : 'none';
+  document.getElementById('litNextBtn').textContent = 'اكشف المحور التالي ‹';
+  document.getElementById('g12LiteraryModal').style.display = 'flex';
+  revealNextLitAxis();
+}
+
+function openAuthorCard(ref) {
+  const item = AUTHOR_CARDS[ref];
+  if (!item) { showToast('لا توجد بطاقة نص لهذا الموضوع'); return; }
+  playClickSound();
+  litState.mode = 'card';
+  litState.ref = ref;
+  litState.revealed = 0;
+  litState.speakText = item.source_line || '';
+  document.getElementById('litModalTitle').textContent = item.title || 'بطاقة النص';
+  document.getElementById('litModalMeta').textContent = [item.genre, item.author, 'ص ' + item.page].filter(Boolean).join(' · ');
+  document.getElementById('litSourceLine').textContent = item.source_line || '';
+  document.getElementById('litNote').textContent = item.note || '';
+  document.getElementById('litNote').style.display = item.note ? 'block' : 'none';
+  document.getElementById('litAxes').innerHTML = '';
+  const fields = [['العنوان', item.work], ['الكاتب', item.author], ['نوع النص', item.genre], ['صفحة البداية', item.page ? 'ص ' + item.page : '']];
+  fields.filter(f => f[1]).forEach((field, idx) => {
+    const box = document.createElement('div');
+    box.className = 'lit-axis';
+    box.style.cssText = 'display:none; padding:11px 13px; border-radius:14px; background:#FFFBEB; border:1px solid rgba(180,83,9,0.18);';
+    box.innerHTML = '<div style="font-family:Tajawal,sans-serif; font-size:12.5px; font-weight:800; color:#B45309;">' + field[0] + '</div><div style="font-size:14px; line-height:1.85; margin-top:4px;">' + field[1] + '</div>';
+    document.getElementById('litAxes').appendChild(box);
+  });
+  document.getElementById('litNextBtn').style.display = 'block';
+  document.getElementById('litNextBtn').textContent = 'اكشف التفصيل التالي ‹';
+  document.getElementById('g12LiteraryModal').style.display = 'flex';
+  revealNextLitAxis();
+}
+
+function revealNextLitAxis() {
+  const boxes = document.getElementById('litAxes').querySelectorAll('.lit-axis');
+  if (litState.revealed >= boxes.length) {
+    showToast('اكتملت كل المحاور، ارجع للصفحة الأصلية وطبّقها على النص');
+    return;
+  }
+  boxes[litState.revealed].style.display = 'block';
+  litState.revealed += 1;
+  if (litState.revealed === boxes.length) document.getElementById('litNextBtn').style.display = 'none';
+}
+
+function closeLiteraryModal() {
+  document.getElementById('g12LiteraryModal').style.display = 'none';
+  if ('speechSynthesis' in window) { try { window.speechSynthesis.cancel(); } catch (e) {} }
+}
+
+function speakLiteraryText() {
+  if (!litState.speakText || !('speechSynthesis' in window)) { showToast('القراءة الصوتية غير متاحة هنا'); return; }
+  try {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(litState.speakText);
+    utterance.lang = 'ar';
+    utterance.rate = 0.95;
+    window.speechSynthesis.speak(utterance);
+    showToast('جاري القراءة الصوتية...');
+  } catch (e) {}
+}
+
+function openCurrentPageLiteraryAnalysis() {
+  const ctx = getCurrentPageContext();
+  if (ctx.litRef && LITERARY_ANALYSES[ctx.litRef]) openLiteraryAnalysis(ctx.litRef);
+  else showToast('لا يوجد تحليل جمالي لهذه الصفحة');
+}
+
+function openCurrentPageAuthorCard() {
+  const ctx = getCurrentPageContext();
+  if (ctx.cardRef && AUTHOR_CARDS[ctx.cardRef]) openAuthorCard(ctx.cardRef);
+  else showToast('لا يوجد كاتب مرتبط بهذه الصفحة في الفهرس');
+}
+
+const baseHandleHotspotClickForLit = handleHotspotClick;
+handleHotspotClick = function(item) {
+  if (item.type === 'literary_analysis') {
+    playClickSound();
+    openLiteraryAnalysis(item.analysis_ref);
+    return;
+  }
+  if (item.type === 'author_card') {
+    playClickSound();
+    openAuthorCard(item.card_ref);
+    return;
+  }
+  baseHandleHotspotClickForLit(item);
+};
+"""
+
 INTERACTIVE_ENGINE_JS = """
 // ========================================================
 // GRADE 12 FULL INTERACTIVE ENGINE (ACTIVITIES, 3D & QUIZZES)
@@ -2202,16 +2359,29 @@ const UNITS = CURR_DATA?.units || [];
     html_new = html_new.replace("فهرس وحدات الجزء الثاني", f"فهرس وحدات {title_sub}")
     html_new = html_new.replace("المعادلات الكيميائية المرتبطة:", eq_label)
 
-    # Replace single hotspot pill with dual reader pills (Hotspots + Dedicated Lab)
+    if subject_key == "arabic_lit":
+        html_new = html_new.replace(
+            "</head>",
+            '<link rel="stylesheet" href="engine/vendor/fonts/fonts.css">\n<style id="arabic-lit-reader-theme">:root{--font-base:\'Amiri\',\'Tajawal\',serif} body{font-family:\'Amiri\',\'Tajawal\',serif} .title-main{font-family:\'Amiri\',\'Tajawal\',serif}</style>\n</head>',
+            1,
+        )
+
     old_pill = """    <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()">
       <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
     </button>"""
-    new_pill = f"""    <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; pointer-events:auto;">
+    if lab_html_file:
+        new_pill = f"""    <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; pointer-events:auto;">
       <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()">
         <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
       </button>
       <button class="hotspot-summary-pill" id="btnOpenDedicatedLab" onclick="openDedicatedLabForPage()" style="background:linear-gradient(135deg,{primary_color},{primary_dark});">
         <span>{lab_btn_label}</span>
+      </button>
+    </div>"""
+    else:
+        new_pill = f"""    <div style="display:flex; align-items:center; justify-content:center; pointer-events:auto;">
+      <button class="hotspot-summary-pill" id="hotspotSummaryPill" onclick="cyclePageHotspot()" style="background:linear-gradient(135deg,{primary_color},{primary_dark});">
+        <span id="hotspotCountText">✨ النقاط التفاعلية · 0</span>
       </button>
     </div>"""
     html_new = html_new.replace(old_pill, new_pill)
@@ -2229,11 +2399,11 @@ const UNITS = CURR_DATA?.units || [];
     html_new = html_new.replace('<span id="labEquationBadge">⚖️ المعادلة: <b>CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂ ↑</b></span>', '<span id="labEquationBadge">⚖️ المبدأ العلمي: <b>—</b></span>')
     html_new = html_new.replace('id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تصاعد الغاز: نشط', 'id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°')
 
-    # Inject a direct link inside #lab3dModal to open the full step-by-step dedicated lab
-    lab_full_btn = """      <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>
+    if lab_html_file:
+        lab_full_btn = """      <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>
     </div>
     <button id="btnLab3dOpenDedicated" onclick="openActiveDiagInDedicatedLab()" style="width:100%; background:linear-gradient(135deg,#10B981,#059669); color:#fff; border:none; border-radius:999px; padding:9px 14px; font-size:12.5px; font-weight:800; cursor:pointer; font-family:inherit;">🔬 افتح النشاط بالخطوات الكاملة في المعمل 3D ‹</button>"""
-    html_new = html_new.replace('      <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>\n    </div>', lab_full_btn, 1)
+        html_new = html_new.replace('      <span id="labLiveRateText" style="color:#4ade80; font-weight:bold;">تفاعل حي 360°</span>\n    </div>', lab_full_btn, 1)
 
     if primary_color != "#00a859":
         html_new = html_new.replace("--primary: #00a859;", f"--primary: {primary_color};")
@@ -2248,16 +2418,20 @@ const UNITS = CURR_DATA?.units || [];
         "document.addEventListener('DOMContentLoaded', function() { initApp(); });",
     )
 
-    # Inject Activity Modal + Full Interactive JS Engine before </body>
+    literary_modal = f"{LITERARY_MODAL_HTML}\n" if subject_key == "arabic_lit" else ""
+    literary_engine = f"\n{LITERARY_ENGINE_JS}" if subject_key == "arabic_lit" else ""
     injection = f"""
 {ACTIVITY_MODAL_HTML}
 {MATH_SOLUTION_MODAL_HTML}
-<script>
-{INTERACTIVE_ENGINE_JS}
+{literary_modal}<script>
+{INTERACTIVE_ENGINE_JS}{literary_engine}
 </script>
 </body>
 """
     html_new = html_new.replace("</body>", injection)
+
+    if subject_key == "arabic_lit":
+        html_new = "\n".join(line.rstrip() for line in html_new.splitlines()) + "\n"
 
     # Save to workspace root and mirror to android assets
     with open(f"{BASE_DIR}/{out_filename}", "w", encoding="utf-8") as f:
@@ -2335,6 +2509,23 @@ def main():
         lab_html_file="math-12th-lab.html",
         lab_btn_label="📐 معمل الرياضيات 3D",
         default_diag="diag-math-complex"
+    )
+
+    build_book(
+        subject_key="arabic_lit",
+        title_main="كتاب الأدب والنصوص التفاعلي الذكي",
+        title_sub="الصف الثالث الثانوي",
+        primary_color="#B45309",
+        primary_dark="#92400E",
+        primary_light="#FFFBEB",
+        accent_color="#D97706",
+        bundle_js_var="window.THAKER_CURRICULUM_G12_ARABIC_LIT",
+        bundle_file="data/curriculum/grade12/arabic_lit/data_bundle.js",
+        out_filename="arabic-literature-12th-book.html",
+        eq_label="المحاور الأدبية والبلاغية المرتبطة:",
+        lab_html_file="",
+        lab_btn_label="",
+        default_diag=""
     )
 
 if __name__ == "__main__":

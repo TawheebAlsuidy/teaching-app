@@ -1,0 +1,543 @@
+{
+  "activity": {
+    "pos": "n",
+    "ar": "نشاط / تمرين",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "adjective": {
+    "pos": "n",
+    "ar": "صفة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "adverb": {
+    "pos": "n",
+    "ar": "ظرف / حال",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "awake": {
+    "pos": "adj",
+    "ar": "مستيقظ",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "back": {
+    "pos": "n",
+    "ar": "ظَهْر",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "beak": {
+    "pos": "n",
+    "ar": "منقار",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "calm down": {
+    "pos": "phr",
+    "ar": "اهدأ",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "claw": {
+    "pos": "n",
+    "ar": "مخلب",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "close": {
+    "pos": "adj/adv",
+    "ar": "قريب (close/closer)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "cloud": {
+    "pos": "n",
+    "ar": "سحابة / غيمة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "coast": {
+    "pos": "n",
+    "ar": "ساحل",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "coat": {
+    "pos": "n",
+    "ar": "غطاء جسم الحيوان / فراء أو وبر (coat of an animal)",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "come along": {
+    "pos": "phr v",
+    "ar": "تعالَ معي / رافِقني",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "comma": {
+    "pos": "n",
+    "ar": "فاصلة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "contrast": {
+    "pos": "n",
+    "ar": "تبايُن / تناقض",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "countryside": {
+    "pos": "n",
+    "ar": "الريف",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "coverings": {
+    "pos": "n pl",
+    "ar": "أغطية الجسم (للحيوانات)",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "curved": {
+    "pos": "adj",
+    "ar": "مُنحنٍ / مقوَّس",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "divided": {
+    "pos": "adj",
+    "ar": "مُقسَّم",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "drive": {
+    "pos": "n",
+    "ar": "جولة / رحلة بالسيارة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "dust": {
+    "pos": "n",
+    "ar": "غبار / تراب",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "end": {
+    "pos": "v",
+    "ar": "ينتهي",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "equal": {
+    "pos": "adj",
+    "ar": "متساوٍ",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "farmland": {
+    "pos": "n",
+    "ar": "أرض زراعية",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "female": {
+    "pos": "adj/n",
+    "ar": "أنثى",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "foal": {
+    "pos": "n",
+    "ar": "مُهر",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "focus": {
+    "pos": "n/v",
+    "ar": "يركّز / بؤرة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "fur": {
+    "pos": "n",
+    "ar": "فراء (القطط والأرانب وغيرها)",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "further": {
+    "pos": "adv/adj",
+    "ar": "أبعد",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "graze": {
+    "pos": "v",
+    "ar": "يرعى (العشب)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "half-eaten": {
+    "pos": "adj",
+    "ar": "نصف مأكول",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "horizon": {
+    "pos": "n",
+    "ar": "الأفق",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "intense": {
+    "pos": "adj",
+    "ar": "شديد / قاسٍ",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "last": {
+    "pos": "adv/adj",
+    "ar": "آخر مرة (last ~ saw her)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "make out": {
+    "pos": "phr v",
+    "ar": "يُميّز بالرؤية (= see)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "male": {
+    "pos": "adj/n",
+    "ar": "ذَكَر",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "mare": {
+    "pos": "n",
+    "ar": "فَرَس (أنثى الحصان)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "materials": {
+    "pos": "n pl",
+    "ar": "مواد (خامات تُصنع منها الأشياء)",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "meaning": {
+    "pos": "n",
+    "ar": "معنى",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "mind": {
+    "pos": "n",
+    "ar": "عقل / بال",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "miss": {
+    "pos": "n",
+    "ar": "آنسة (صيغة مخاطبة)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "mist": {
+    "pos": "n",
+    "ar": "ضباب خفيف",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "misty": {
+    "pos": "adj",
+    "ar": "ضبابي",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "narrow": {
+    "pos": "adj",
+    "ar": "ضيّق (narrow/narrower)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "newly": {
+    "pos": "adv",
+    "ar": "حديثاً",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "noisily": {
+    "pos": "adv",
+    "ar": "بضجيج / بصوت عالٍ",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "not really": {
+    "pos": "phr",
+    "ar": "ليس تماماً",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "noun": {
+    "pos": "n",
+    "ar": "اسم",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "officer": {
+    "pos": "n",
+    "ar": "ضابط / شرطي",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "organize": {
+    "pos": "v",
+    "ar": "ينظّم",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "peak": {
+    "pos": "n",
+    "ar": "قمة (جبل)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "phrase": {
+    "pos": "n",
+    "ar": "عبارة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "plough": {
+    "pos": "n/v",
+    "ar": "محراث / يحرث",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "positive": {
+    "pos": "adj",
+    "ar": "مثبت / إيجابي",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "rainy": {
+    "pos": "adj",
+    "ar": "ماطر",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "repeat": {
+    "pos": "v",
+    "ar": "يكرّر / يردّد",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "rich": {
+    "pos": "adj",
+    "ar": "دَسِم / غني (rich ~ milk)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "rocky": {
+    "pos": "adj",
+    "ar": "صخري",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "round": {
+    "pos": "adj",
+    "ar": "دائري / كروي",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "scales": {
+    "pos": "n pl",
+    "ar": "قشور / حراشف (السمك)",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "scratch": {
+    "pos": "v/n",
+    "ar": "يخدش / خدش",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "side": {
+    "pos": "n",
+    "ar": "جانب / ضلع",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "similar": {
+    "pos": "adj",
+    "ar": "مشابه",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "sir": {
+    "pos": "n",
+    "ar": "سيدي",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "skin": {
+    "pos": "n",
+    "ar": "جلد",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "song": {
+    "pos": "n",
+    "ar": "أغنية",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "spend": {
+    "pos": "v",
+    "ar": "يقضي (spend ~ a holiday)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "square-looking": {
+    "pos": "adj",
+    "ar": "يبدو مربع الشكل",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "steep": {
+    "pos": "adj",
+    "ar": "شديد الانحدار (steep/steeper)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "style": {
+    "pos": "n",
+    "ar": "أسلوب",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "subject": {
+    "pos": "n",
+    "ar": "موضوع / فاعل",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "tags": {
+    "pos": "n pl",
+    "ar": "بطاقات الأمتعة",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "take turns": {
+    "pos": "phr",
+    "ar": "يتناوب الأدوار",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "there's no point": {
+    "pos": "phr",
+    "ar": "لا جدوى من",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "title": {
+    "pos": "n",
+    "ar": "عنوان",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "triangular": {
+    "pos": "adj",
+    "ar": "مثلّث الشكل",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "turn off": {
+    "pos": "phr v",
+    "ar": "ينعطف جانباً (= leave a road)",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "twin": {
+    "pos": "n/adj",
+    "ar": "توأم",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "underlined": {
+    "pos": "adj",
+    "ar": "تحته خط",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "unlike": {
+    "pos": "prep",
+    "ar": "على عكس / بخلاف",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "upset": {
+    "pos": "adj",
+    "ar": "منزعج / مضطرب",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "valley": {
+    "pos": "n",
+    "ar": "وادٍ",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "verb": {
+    "pos": "n",
+    "ar": "فعل",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "warm": {
+    "pos": "v",
+    "ar": "يُدفئ",
+    "in_book_wordlist": true,
+    "wb_page": 112
+  },
+  "whereas": {
+    "pos": "conj",
+    "ar": "بينما (للمقابلة والتضاد)",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "wood": {
+    "pos": "n",
+    "ar": "خشب",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  },
+  "wool": {
+    "pos": "n",
+    "ar": "صوف",
+    "in_book_wordlist": true,
+    "wb_page": 112,
+    "audio_src": null
+  }
+}

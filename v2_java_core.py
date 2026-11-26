@@ -816,6 +816,7 @@ public class LabActivity extends Activity {
         if (asset.contains("science-9th")) return "sci_p1_lab";
         if (asset.contains("math-9th")) return "math_lab";
         if (asset.contains("math-12th")) return "math_12";
+        if (asset.contains("arabic-literature-12th")) return "arabic_lit";
         if (asset.contains("physics-12th")) return "phys_12";
         if (asset.contains("biology-12th")) return "bio_12";
         if (asset.contains("chemistry-12th") || asset.contains("chem-lab")) return "chem_12";
@@ -827,6 +828,7 @@ public class LabActivity extends Activity {
         if (asset.contains("science-9th")) return "العلوم 3D - الصف التاسع";
         if (asset.contains("math-9th")) return "الرياضيات 3D - الصف التاسع";
         if (asset.contains("math-12th")) return "الرياضيات - الثالث الثانوي";
+        if (asset.contains("arabic-literature-12th")) return "الأدب والنصوص - الثالث الثانوي";
         if (asset.contains("physics-12th")) return "الفيزياء - الثالث الثانوي";
         if (asset.contains("biology-12th")) return "الأحياء - الثالث الثانوي";
         if (asset.contains("chem-lab")) return "مختبر الكيمياء 3D - الثالث الثانوي";

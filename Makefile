@@ -10,7 +10,7 @@ help:
 	@echo "الاستخدام:"
 	@echo "  make all         بناء كل شيء (بيانات + كتب + مزامنة الأصول + اختبارات)"
 	@echo "  make data        توليد والتحقق من حزم بيانات المنهج (JSON & data_bundle.js)"
-	@echo "  make books       بناء وتحديث الكتب التفاعلية HTML ومعامل الكيمياء والرياضيات 3D"
+	@echo "  make books       بناء وتحديث الكتب التفاعلية HTML ومعامل الكيمياء والرياضيات 3D والأدب"
 	@echo "  make sync-assets مزامنة المصدر الموحد للبيانات إلى أصول الأندرويد"
 	@echo "  make test        تشغيل جناح الاختبارات الآلية الشاملة"
 	@echo "  make apk         بناء حزمة أندرويد النهائية Thaker.apk"
@@ -28,6 +28,10 @@ data:
 	python3 render_math_hq.py
 	@echo "[*] Building Grade 12 Math data pack..."
 	python3 build_math_curriculum_pack.py
+	@echo "[*] Rendering Grade 12 Arabic Literature high-resolution page images..."
+	python3 render_arabic_lit_hq.py
+	@echo "[*] Building Grade 12 Arabic Literature data pack..."
+	python3 build_arabic_lit_pack.py
 
 books:
 	@echo "[*] Building interactive HTML books..."

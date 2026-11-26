@@ -101,6 +101,14 @@ def main():
                 total_bytes += encode_piper_ogg(txt, out_path, force=args.force)
                 total_files += 1
 
+        for act in data.get("activities", []):
+            if act.get("sample_audio_src") and act.get("steps"):
+                txt = " ".join(st.get("placeholder", "") for st in act["steps"] if st.get("placeholder")).strip()
+                if txt:
+                    out_path = os.path.join("books", args.subject, act["sample_audio_src"])
+                    total_bytes += encode_piper_ogg(txt, out_path, force=args.force)
+                    total_files += 1
+
     print(f"Audio ready for {args.subject}: {total_files} OGG/Opus files ({total_bytes/1024:.1f} KB)")
 
 

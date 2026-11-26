@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+<title>اللغة الإنجليزية — الصف الثالث الثانوي (كتاب الطالب والتمارين) — ذاكر</title>
+<link rel="stylesheet" href="../../engine/vendor/fonts/fonts.css">
+<link rel="stylesheet" href="../../engine/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="../../engine/styles/engine.css">
+</head>
+<body data-mode="study">
+<header class="tk-header">
+  <div class="tk-header-top">
+    <button type="button" class="tk-icon-btn" id="tkBackBtn" aria-label="رجوع">↩</button>
+    <div class="tk-title-wrap">
+      <div class="tk-book-kicker" id="tkBookKicker">اللغة الإنجليزية — الصف الثالث الثانوي (كتاب الطالب والتمارين)</div>
+      <div class="tk-lesson-title" id="tkHeaderTitle">جاري التحميل...</div>
+    </div>
+    <button type="button" class="tk-icon-btn" data-nav-view="toc" aria-label="الفهرس">☰</button>
+  </div>
+  <div class="tk-progress-bar"><div class="tk-progress-fill" id="tkProgressFill"></div></div>
+  <div class="tk-mode-bar">
+    <div class="tk-seg-group" role="tablist" aria-label="أوضاع القراءة">
+      <button type="button" class="tk-seg-btn" data-set-mode="read">قراءة</button>
+      <button type="button" class="tk-seg-btn active" data-set-mode="study">دراسة</button>
+      <button type="button" class="tk-seg-btn" data-set-mode="practice">تدريب</button>
+    </div>
+    <div class="tk-tool-row">
+      <button type="button" class="tk-mini-btn" id="tkFontMinus" aria-label="تصغير الخط">A-</button>
+      <button type="button" class="tk-mini-btn" id="tkFontPlus" aria-label="تكبير الخط">A+</button>
+      <button type="button" class="tk-mini-btn" id="tkThemeBtn">نهار</button>
+    </div>
+  </div>
+</header>
+
+<main class="tk-main">
+  <section id="view-lesson"><div id="tkLessonContent"></div></section>
+  <section id="view-practice" style="display:none;"><div id="tkPracticeContent"></div></section>
+  <section id="view-flashcards" style="display:none;"><div id="tkFlashcardsContent"></div></section>
+  <section id="view-search" style="display:none;"><div id="tkSearchContent"></div></section>
+  <section id="view-toc" style="display:none;"><div id="tkTocContent"></div></section>
+</main>
+
+<div id="tkWordPop" class="tk-word-pop" role="dialog" aria-label="معنى الكلمة"></div>
+<div id="tkToast" class="tk-toast" role="status" aria-live="polite"></div>
+
+<div id="tkBackdrop" class="tk-backdrop"></div>
+<section id="tkSheet" class="tk-sheet" role="dialog" aria-label="التفاصيل التفاعلية">
+  <div class="tk-sheet-head">
+    <strong id="tkSheetTitle">تفاصيل</strong>
+    <button type="button" class="tk-act-mini" id="tkSheetClose" aria-label="إغلاق">✕</button>
+  </div>
+  <div class="tk-sheet-tabs" id="tkSheetTabs"></div>
+  <div class="tk-sheet-body" id="tkSheetBody"></div>
+</section>
+
+<nav class="tk-bottom-bar" aria-label="التنقل السريع">
+  <button type="button" class="tk-nav-item active" data-nav-view="lesson">📖<span>الدرس</span></button>
+  <button type="button" class="tk-nav-item" data-nav-view="practice">📝<span>التمارين والاختبار</span></button>
+  <button type="button" class="tk-nav-item" data-nav-view="flashcards">🗂️<span>البطاقات</span></button>
+  <button type="button" class="tk-nav-item" data-nav-view="search">🔍<span>بحث وملاحظات</span></button>
+  <button type="button" class="tk-nav-item" data-nav-view="toc">📚<span>الفهرس</span></button>
+</nav>
+
+<script src="../../engine/vendor/katex/katex.min.js"></script>
+<script src="../../engine/vendor/katex/contrib/auto-render.min.js"></script>
+<script src="../../engine/js/storage.js"></script>
+<script src="../../engine/js/speech.js"></script>
+<script src="../../engine/js/mode-controller.js"></script>
+<script src="../../engine/js/quiz-engine.js"></script>
+<script src="../../engine/js/bottom-sheet.js"></script>
+<script src="../../engine/js/flashcards-leitner.js"></script>
+<script src="../../engine/js/search-notes.js"></script>
+<script src="../../engine/js/subjects/english.js"></script>
+<script src="book.js"></script>
+<script src="../../engine/js/app-shell.js"></script>
+</body>
+</html>

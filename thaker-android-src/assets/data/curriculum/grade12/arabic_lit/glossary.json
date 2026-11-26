@@ -1,0 +1,92 @@
+[
+  {
+    "id": "term-lit-01",
+    "term": "الأدب",
+    "definition": "تعبير جمالي عن الحياة والفكر بصيغة لغوية مؤثرة.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-02",
+    "term": "الشعر",
+    "definition": "كلام موزون مقفى يحمل تجربة شاعرية وصوراً فنية.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-03",
+    "term": "النثر",
+    "definition": "كتابة غير موزونة تهدف إلى الإفهام أو الإقناع أو الإمتاع.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-04",
+    "term": "الرثاء",
+    "definition": "شعر أو نثر يعبّر عن الحزن على فقدان شخص أو مكان أو رمز.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-05",
+    "term": "الوصف",
+    "definition": "تصوير المكان أو الشيء أو الحالة بلغة حسية واضحة.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-06",
+    "term": "النهضة الأدبية",
+    "definition": "حركة تجديد في الموضوعات والأساليب الأدبية في العصر الحديث.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-07",
+    "term": "الرومنسية",
+    "definition": "اتجاه أدبي يميل إلى العاطفة والخيال والتجربة الذاتية.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-08",
+    "term": "الواقعية",
+    "definition": "اتجاه أدبي يميل إلى تصوير الحياة الاجتماعية بصدق وتفصيل.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-09",
+    "term": "النقد الأدبي",
+    "definition": "قراءة تحليلية للنص لبيان قيمته الفنية ومحاسنه ومآخذه.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-10",
+    "term": "الأسلوب",
+    "definition": "الطريقة الخاصة التي يستخدمها الكاتب في اختيار الألفاظ والتراكيب والصور.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-11",
+    "term": "الشكل والمضمون",
+    "definition": "العلاقة بين البناء الفني للنص والأفكار والمعاني التي يحملها.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-12",
+    "term": "التجربة الشعرية",
+    "definition": "ما يعيشه الشاعر ويصوغه شعراً من إحساس وفكر وصورة.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-13",
+    "term": "القصة",
+    "definition": "سرد أدبي يعتمد على الحدث والشخصية والحبكة والزمان والمكان.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-14",
+    "term": "النص المسرحي",
+    "definition": "نص مكتوب ليُؤدّى على خشبة المسرح عبر الحوار والحدث والمشهد.",
+    "source": "educational_addition"
+  },
+  {
+    "id": "term-lit-15",
+    "term": "المقالة",
+    "definition": "نثر قصير يعرض فكرة أو رأياً أو تأملاً بأسلوب منظم.",
+    "source": "educational_addition"
+  }
+]
