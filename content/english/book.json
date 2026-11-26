@@ -60,14 +60,18 @@
       "number": 3,
       "title": "Looking for a job",
       "lessons": [
-        { "id": "eng-u3-3_1", "code": "3.1", "title": "Getting work experience", "pb_page": 17 },
-        { "id": "eng-u3-3_2", "code": "3.2", "title": "Thinking about the future", "pb_page": 18 },
-        { "id": "eng-u3-3_3", "code": "3.3", "title": "Getting careers advice", "pb_page": 19 },
-        { "id": "eng-u3-3_4", "code": "3.4", "title": "Language review 5", "pb_page": 20 },
-        { "id": "eng-u3-3_5", "code": "3.5", "title": "Jobs and qualities", "pb_page": 21 },
-        { "id": "eng-u3-3_6", "code": "3.6", "title": "Applying for a job", "pb_page": 22 },
-        { "id": "eng-u3-3_7", "code": "3.7", "title": "Language review 6", "pb_page": 23 },
-        { "id": "eng-u3-3_8", "code": "3.8", "title": "A business letter", "pb_page": 24 }
+        { "id": "eng-u3-3_1", "code": "3.1", "title": "Getting work experience", "pb_page": 17, "wb_page": 29 },
+        { "id": "eng-u3-3_2", "code": "3.2", "title": "Listening: worthwhile jobs & interview", "pb_page": null, "wb_page": 30 },
+        { "id": "eng-u3-3_3", "code": "3.3", "title": "Thinking about the future", "pb_page": 18, "wb_page": 31 },
+        { "id": "eng-u3-3_4", "code": "3.4", "title": "Getting careers advice", "pb_page": 19, "wb_page": 32 },
+        { "id": "eng-u3-3_5", "code": "3.5", "title": "Language review 5", "pb_page": 20, "wb_page": 32 },
+        { "id": "eng-u3-3_6", "code": "3.6", "title": "Job and qualities", "pb_page": 21, "wb_page": 34 },
+        { "id": "eng-u3-3_7", "code": "3.7", "title": "Listening: job advertisements", "pb_page": null, "wb_page": 35 },
+        { "id": "eng-u3-3_8", "code": "3.8", "title": "Applying for a job", "pb_page": 22, "wb_page": 36 },
+        { "id": "eng-u3-3_9", "code": "3.9", "title": "Intonation and job interview roleplay", "pb_page": null, "wb_page": 38 },
+        { "id": "eng-u3-3_10", "code": "3.10", "title": "Language review 6", "pb_page": 23, "wb_page": 39 },
+        { "id": "eng-u3-3_11", "code": "3.11", "title": "A business letter: layout and vocabulary", "pb_page": 24, "wb_page": 40 },
+        { "id": "eng-u3-3_12", "code": "3.12", "title": "Writing a letter of application", "pb_page": 24, "wb_page": 40 }
       ]
     },
     {
