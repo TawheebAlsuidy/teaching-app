@@ -1,0 +1,211 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_2",
+    "code": "6.2",
+    "title": "A lucky escape",
+    "title_ar": "نجاة محظوظة: وصف موقع الحادث، مهارات الحوار السردي، وإعادة سرد موقف",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 44, "book_page": 42 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 73, "book_page": 72 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 74, "book_page": 73 }
+    ],
+    "reference_images": {
+      "pb_42": "assets/ref/pb_p042.webp",
+      "wb_72": "assets/ref/wb_p072.webp",
+      "wb_73": "assets/ref/wb_p073.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_2-picture-describe",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "PB", "page": 42 },
+      "dir": "ltr",
+      "recall_words": ["in the distance", "nearer us", "in the foreground", "tunnel", "rock-fall", "brakes"],
+      "content": {
+        "lines": [
+          "6.2 A lucky escape",
+          "Look at the picture. Then describe it using words that you collected in your Workbook in the last lesson and the language below. Start with the things furthest away.",
+          "In the distance,   you can see ...",
+          "Nearer us,         there's ...",
+          "In the foreground, there are ...",
+          "Now think about the accident. First choose and read out the correct headline from page 41. Then discuss these questions:",
+          "• What must have/may have happened?",
+          "• What is happening now?",
+          "• What is probably going to happen next?",
+          "Now do activities A and D in the Workbook."
+        ],
+        "image": "assets/media/pb42_escape.webp",
+        "caption": "Road accident outside a mountain tunnel (PB page 42)"
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي (<bdi dir='ltr'>PB p. 42 &amp; WB p. 72</bdi>):</strong><br>1) طُبعت في أسفل <span dir='ltr'>PB ص 42</span> عبارة <span dir='ltr'><code>Now do activities A and D in the Workbook.</code></span> بحذف الحرفين الوسطيين (<span dir='ltr'>B, C</span>) أو بمعنى <span dir='ltr'>A to D</span>، وحُفظت حرفياً.<br>2) في <span dir='ltr'>WB 6.2 A (ص 72)</span> بدأ العنوان بـ <span dir='ltr'><code>A reporter interviewed...</code></span> ووُسم المتحدث بـ <span dir='ltr'><code>Reporter:</code></span> ثم طُبع تحته <span dir='ltr'><code>The conversation was between the officer and</code></span> (<span dir='ltr'><code>officer</code></span> بدل <span dir='ltr'><code>reporter</code></span>)، وحُفظ النص المطبوع حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "ترتيب وصف الصورة من البعيد إلى القريب وحل أسئلة PB ص 42",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 42,
+            "html": "<ol><li><b>العنوان الصحيح من ص 41:</b> <span dir='ltr'>DRIVERS INJURED IN HIGHWAY CRASH AND FIRE</span>.</li><li><b>الأبعد ← الأقرب:</b> <span dir='ltr'>In the distance, you can see mountains, trees, a town, and a tunnel. Nearer us, a green car and a lorry/truck have crashed near the bend (someone is calling the police/ambulance). In the foreground, there are rocks on the road, a motorbike rider sitting on the curb holding his helmet, a man with an injured arm in a sling talking to a police officer by a patrol car.</span></li><li><b>ترابط الوحدة 5:</b> توظّف <span dir='ltr'>must have / may have + P.P.</span> للاستنتاج (<span dir='ltr'>The rocks must have fallen onto the bend</span>).</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 42,
+            "caption": "طبقات وصف المشهد الثلاث (من البعيد إلى المقدّمة)",
+            "svg": "<svg viewBox='0 0 600 115' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='115' rx='10' fill='#F8FAFC'/><rect x='14' y='16' width='178' height='82' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='103' y='44' text-anchor='middle' font-size='12' font-weight='700'>1 In the distance,</text><text x='103' y='72' text-anchor='middle' font-size='10.5'>you can see mountains, tunnel</text><rect x='211' y='16' width='178' height='82' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='300' y='44' text-anchor='middle' font-size='12' font-weight='700'>2 Nearer us,</text><text x='300' y='72' text-anchor='middle' font-size='10.5'>there's the truck &amp; green car</text><rect x='408' y='16' width='178' height='82' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='497' y='44' text-anchor='middle' font-size='12' font-weight='700'>3 In the foreground,</text><text x='497' y='72' text-anchor='middle' font-size='10.5'>there are rocks, rider, officer</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 42,
+            "html": "<p dir='ltr'><b>Deduction from evidence:</b> The motorbike rider <i>must have had</i> a lucky escape because he pulled off the road just before the car and truck hit each other.</p>"
+          },
+          "self_check_ref": "chk-6_2-a",
+          "page_ref": { "book": "PB", "page": 42, "pdf_page": 44, "image": "assets/ref/pb_p042.webp" }
+        }
+      }
+    },
+    {
+      "id": "u6-6_2-interview-dialogue",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "WB", "page": 72 },
+      "dir": "ltr",
+      "recall_words": ["tunnel", "rock-fall", "bend", "brakes"],
+      "content": {
+        "lines": [
+          "Reporter: Well, I've heard the other people's stories. Now I'd really like to hear yours.",
+          "Man: Well, I was coming to the end of the tunnel, out into the sun. It was so bright.",
+          "Reporter: Go on.",
+          "Man: Well, then I saw the bend to the right, and the next thing, just on the bend, I saw rocks on the road - a rock-fall. I had to move out fast into the middle of the road.",
+          "Reporter: Didn't you look in your mirror first?",
+          "Man: No, there was no time. And next I saw the truck, coming round the bend.",
+          "Reporter: And didn't you hear the car?",
+          "Man: Yes, just then. It was trying to get past me. But there was no room. I heard his brakes scream, just as I pulled to the right, off the road, just after the rocks.",
+          "Reporter: OK, so then...",
+          "Man: Well, the rest happened in a second. The two of them hit each other, and the fire started. That's all. That's what happened."
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "in the foreground": { "pos": "phr", "ar": "في مقدّمة الصورة (أقرب جزء للمشاهد)", "in_book_wordlist": false },
+    "in the distance": { "pos": "phr", "ar": "في الأفق البعيد", "in_book_wordlist": false },
+    "rock-fall": { "pos": "n", "ar": "انهيار صخري على الطريق", "in_book_wordlist": false },
+    "tunnel": { "pos": "n", "ar": "نفق", "in_book_wordlist": false },
+    "brakes": { "pos": "n pl", "ar": "فرامل / مكابح المركبة", "in_book_wordlist": false }
+  },
+  "activities": [
+    {
+      "id": "wb-6_2-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 72 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.2 A A reporter interviewed all the people in the accident shown on PB page 42. Read the conversation below and decide who he was interviewing. The conversation was between the officer and a) the truck driver / b) the car driver / c) the motorbike rider. Say how you know.",
+      "prompt_ar": "حدّد هوية السائق الذي يُجري معه الصحفي المقابلة في 6.2 A مع تعليل الإجابة من الحوار والصورة (WB ص 72):",
+      "items": [
+        { "num": 1, "question": "The conversation was between the officer [Reporter] and: a) the truck driver  b) the car driver  c) the motorbike rider.", "model_answer": "c) the motorbike rider.", "explain_ar": "ملاحظة: وردت كلمة officer مطبوعةً بدل reporter في هذا السطر." },
+        { "num": 2, "question": "Say how you know.", "model_answer": "He first noticed the rock-fall on the bend and moved out fast; next he saw the truck coming round the bend and heard the car trying to overtake him ('trying to get past me'); then he pulled off the road and 'the two of them' (the car and the truck) hit each other — which matches PB page 42 where the motorbike rider sits uninjured near the rocks while the car and truck crashed.", "explain_ar": "استبعد الشاحنة والسيارة بذكره أنهما اصطدمتا معاً ('The two of them hit each other') بينما ابتعد هو عن الطريق." }
+      ],
+      "hints": [
+        "راقب الضمائر: رأى الشاحنة قادمة، والسيارة تحاول تجاوزه، ثم اصطدمت الاثنتان ببعضهما!"
+      ]
+    },
+    {
+      "id": "wb-6_2-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 72 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.2 B When telling/listening to a story, people often do the things set out below. Listen and label the conversation above to show what the speaker is doing in each case.",
+      "prompt_ar": "ضع لكل فقرة من الحوار تسمية الوظيفة التخاطبية المناسبة من الصندوق (WB ص 72):",
+      "word_bank": ["Ask a question", "Ask the speaker to continue", "Finish the story", "Set the scene", "Show interest", "Tell the story"],
+      "items": [
+        { "num": 1, "prompt": "1 Reporter: Well, I've heard the other people's stories. Now I'd really like to hear yours. ______", "answers": ["Show interest"] },
+        { "num": 2, "prompt": "2 Man: Well, I was coming to the end of the tunnel, out into the sun. It was so bright. ______", "answers": ["Set the scene"] },
+        { "num": 3, "prompt": "3 Reporter: Go on. ______", "answers": ["Ask the speaker to continue"] },
+        { "num": 4, "prompt": "4 Man: Well, then I saw the bend to the right, and the next thing... I had to move out fast into the middle of the road. ______", "answers": ["Tell the story"] },
+        { "num": 5, "prompt": "5 Reporter: Didn't you look in your mirror first? ______", "answers": ["Ask a question"] },
+        { "num": 6, "prompt": "6 Man: Well, the rest happened in a second... That's all. That's what happened. ______", "answers": ["Finish the story"] }
+      ],
+      "hints": [
+        "الفراغات الستة المطبوعة في الحوار تتطابق واحداً بواحد مع العبارات الست في المستطيل."
+      ]
+    },
+    {
+      "id": "wb-6_2-cd",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 73 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.2 C Work with a partner and practise the conversation together. D Talk about another lucky escape - something that happened to you or somebody you know. Use these questions to guide your story (1-5).",
+      "prompt_ar": "خطة التدرب الشفهي (6.2 C) وبناء قصة نجاة محظوظة باستعمال الأسئلة الخمسة (6.2 D ص 73):",
+      "guidance_literal": "1 Who/when -> 2 What was happening (Set the scene) -> 3 Then what happened -> 4 How it felt -> 5 What happened after that",
+      "steps": [
+        { "label_ar": "1 و2) من، ومتى، وماذا كان يحدث (Set the scene - Past continuous)", "placeholder": "Last winter, my cousin Tariq was driving slowly down a mountain road in the mist near Taiz." },
+        { "label_ar": "3 و4) ماذا حدث فجأة، وكيف كان الشعور؟ (Tell the story)", "placeholder": "Suddenly, a heavy stone rolled across the wet road right in front of his car. His heart beat fast as he turned the wheel just in time." },
+        { "label_ar": "5) ماذا حدث بعد ذلك وخاتمة القصة (Finish the story)", "placeholder": "The car stopped safely on the grass beside the road. Nobody was hurt. That's what happened — he had a very lucky escape!" }
+      ],
+      "hints": [
+        "استعمل عبارات الانتقال من 6.2 B: 'Well, ...', 'the next thing', 'That's all. That's what happened.'"
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_2-a",
+      "origin": "educational_addition",
+      "page_ref": 72,
+      "questions": [
+        {
+          "id": "q-6_2-1",
+          "type": "mcq",
+          "stem": "In WB 6.2 A, why must the speaker ('Man') be the motorbike rider rather than the car or truck driver?",
+          "evidence_block_id": "u6-6_2-interview-dialogue",
+          "options": [
+            { "text": "He says he saw the truck coming and heard the car trying to pass him before the two of them hit each other.", "is_correct": true, "why_wrong": null },
+            { "text": "Because he says he was driving a blue jeep in Harib Street.", "is_correct": false, "why_wrong": "السيارة الجيب الزرقاء وردت في حادث الدرس 6.1 لا هنا." },
+            { "text": "Because he says he injured his arm and wore a white sling.", "is_correct": false, "why_wrong": "المصاب بذراعه في الصورة يتحدث مع الضابط، لا السائق الذي خرج سالماً بجانب دراجته." },
+            { "text": "Because the headline mentions only a fire at a flat.", "is_correct": false, "why_wrong": "العنوان المطابق لهذا الدرس هو DRIVERS INJURED IN HIGHWAY CRASH AND FIRE." }
+          ],
+          "hints": [
+            "انظر جملة: The two of them hit each other."
+          ],
+          "explain": "ذكر الراوي الشاحنة والسيارة بضمير الغائب وقال إنهما اصطدمتا معاً بعد أن خرج هو يمين الطريق، ما يثبت أنه راكب الدراجة النارية."
+        },
+        {
+          "id": "q-6_2-2",
+          "type": "mcq",
+          "stem": "Which discourse function in WB 6.2 B matches the line: 'Well, I was coming to the end of the tunnel, out into the sun. It was so bright.'?",
+          "evidence_block_id": "u6-6_2-interview-dialogue",
+          "options": [
+            { "text": "Set the scene", "is_correct": true, "why_wrong": null },
+            { "text": "Show interest", "is_correct": false, "why_wrong": "تُقال Show interest على لسان المستمع لإبداء الرغبة في سماع القصة ('Now I'd really like to hear yours')." },
+            { "text": "Finish the story", "is_correct": false, "why_wrong": "تقع Finish the story في الجملة الختامية: 'That's all. That's what happened.'" },
+            { "text": "Ask the speaker to continue", "is_correct": false, "why_wrong": "تُطابق عبارة 'Go on.' في السطر الثالث." }
+          ],
+          "hints": [
+            "يستعمل المتكلم الماضي المستمر لوصف المكان والظروف قبل الحادث."
+          ],
+          "explain": "جملة الماضي المستمر عند مخرج النفق وسطوع الشمس تمهّد للمشهد (Set the scene) قبل بدء ذروة الحدث."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_2-scene", "origin": "from_book", "page_ref": 72, "front": "set the scene", "back": "تمهيد المشهد (الزمان والمكان والظروف) قبل سرد الحدث", "tag": "Unit 6 · 6.2" },
+    { "id": "fc-6_2-fg", "origin": "from_book", "page_ref": 42, "front": "in the foreground / in the distance", "back": "في مقدمة المشهد / في الأفق البعيد", "tag": "Unit 6 · 6.2" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 42 مع pb-44.png، وحُفظت الصيغة المطبوعة 'Now do activities A and D in the Workbook.' مع التوضيح.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 72–73 مع wb-073.png وwb-074.png، وحُفظ تضارب reporter/officer المطبوع مع تأكيد الخطوط الستة لوظائف الحوار في 6.2 B."
+  }
+}

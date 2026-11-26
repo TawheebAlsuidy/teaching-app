@@ -93,7 +93,7 @@
   - [x] `5.12` Tracks in the sand: writing the ending (PB p. 40, WB p. 70)
 - **Unit 6: Looking back (PB pp. 41–49 / WB pp. 71–80)**
   - [x] `6.1` Emergencies in the news (PB p. 41 / WB p. 71)
-  - [ ] `6.2` A lucky escape (PB p. 42 / WB pp. 72–73)
+  - [x] `6.2` A lucky escape (PB p. 42 / WB pp. 72–73)
   - [ ] `6.3` Accident at Jebel Kebir (PB p. 43 / WB pp. 73–74)
   - [ ] `6.4` Saving Anwar: listening & vocabulary (PB p. 44 / WB pp. 74–75)
   - [ ] `6.5` Saving Anwar: retelling the story (PB p. 44 / WB p. 75)
