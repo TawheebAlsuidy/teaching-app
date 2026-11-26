@@ -1,0 +1,225 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "science", "number": 8, "title": "Science Reader (Scientific Section)" },
+  "lesson": {
+    "id": "eng-sci-6",
+    "code": "SR6",
+    "title": "Vaccinations",
+    "title_ar": "القسم العلمي (6): التطعيم واللقاحات (جينر وباستور والأبحاث الحديثة)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 72, "book_page": 70 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 103, "book_page": 102 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 104, "book_page": 103 }
+    ],
+    "reference_images": {
+      "pb_70": "assets/ref/pb_p070.webp",
+      "wb_102": "assets/ref/wb_p102.webp",
+      "wb_103": "assets/ref/wb_p103.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "sci-6-vaccinations-text",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 70 },
+      "dir": "ltr",
+      "recall_words": ["smallpox", "breakthrough", "vaccine", "immunize", "immunization", "germ", "immunity", "rabid", "commonplace", "diagnose", "transmission"],
+      "content": {
+        "lines": [
+          "SCIENCE 6   Vaccinations",
+          "Introduction: Before the late 18th century, thousands of people died every year from such diseases as smallpox, typhoid and cholera. Doctors tried unsuccessfully to treat patients with these diseases while scientists struggled to find suitable cures. The big breakthrough came from an unexpected source: an unknown country doctor in England.",
+          "Box 1 (left — Dr Edward Jenner): Dr Edward Jenner was experimenting with ways of vaccinating against smallpox when he noticed that people working with cows did not suffer the disease. On May 14th, 1796, Jenner successfully used the first vaccine against smallpox to immunize a patient. The word vaccine comes from the Latin cow, because Jenner's vaccine was developed from cowpox, a disease similar to smallpox but only found in cattle. Jenner's work with a cowpox vaccine was the first scientific attempt to control a disease by immunization.",
+          "Box 1 (right — Dr Louis Pasteur): A century later, the next significant development was made by a French chemist, Dr Louis Pasteur. He developed Jenner's work and showed that diseases are spread by germs. He also proved that vaccination using a very weak form of the disease could lead to immunity. Pasteur's breakthrough came in 1885 when he treated a boy who had been bitten by a rabid dog. Although Pasteur was successful, many other doctors were against the idea of vaccination. They felt that it was dangerous. They were soon proved wrong, and by the 20th century vaccines were commonplace.",
+          "Box 2 (AIDS research): AIDS is one of the most feared diseases in history. Millions of dollars are being spent on research into developing a vaccine against AIDS. Scientists think that AIDS developed from the blood of monkeys in Central Africa. The first cases of AIDS in humans were diagnosed in the early 1970s. Once AIDS had infected people, transmission around the world was rapid. Modern drugs have helped with some aspects of the illness, but they do not provide a cure. The only long-term hope is in the development of a vaccine.",
+          "We need the modern-day equivalents of scientists like Jenner and Pasteur.",
+          "Discussion: Is it right to introduce a disease - even a weak form - into a person's body?"
+        ],
+        "image": "assets/media/sci6_jenner_pasteur.webp",
+        "caption": "Portraits of Dr Edward Jenner (1796) and Dr Louis Pasteur (1885) (PB page 70)"
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الفرق الاشتقاقي في جدول 6 D وتطور مفهوم التطعيم والمناعة",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 103,
+            "html": "<ul><li><b>الاسمان المشتقان في جدول 6 D:</b> للفعلين الأولين اسمان في النص:<br>• <span dir='ltr'>immunize</span> ← <span dir='ltr'><b>immunity</b></span> (المناعة المكتسبة) و<span dir='ltr'><b>immunization</b></span> (عملية التمنيع/التلقيح).<br>• <span dir='ltr'>vaccinate</span> ← <span dir='ltr'><b>vaccine</b></span> (اللقاح نفسه) و<span dir='ltr'><b>vaccination</b></span> (التطعيم باللقاح).</li><li><b>مناقشة أخلاقية (PB ص 70):</b> إدخال صورة ضعيفة أو آمنة من الميكروب يُدرّب جهاز المناعة لتكوين وقاية طويلة الأمد، وهو صحيح طبياً متى ثبت أمان اللقاح مخبرياً وسريرياً وبموافقة المريض/أسرته.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 70,
+            "caption": "التسلسل التاريخي لعلم اللقاحات والمناعة (WB 6 B)",
+            "svg": "<svg viewBox='0 0 600 115' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='115' rx='10' fill='#FDF4FF'/><rect x='14' y='18' width='134' height='80' rx='8' fill='#FEE2E2' stroke='#DC2626'/><text x='81' y='44' text-anchor='middle' font-size='11' font-weight='700'>Before late 1700s</text><text x='81' y='66' text-anchor='middle' font-size='9.5'>Thousands died from</text><text x='81' y='80' text-anchor='middle' font-size='9.5'>smallpox, cholera, typhoid</text><rect x='160' y='18' width='134' height='80' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='227' y='44' text-anchor='middle' font-size='11' font-weight='700'>1796: Jenner</text><text x='227' y='66' text-anchor='middle' font-size='9.5'>Cowpox vaccine against</text><text x='227' y='80' text-anchor='middle' font-size='9.5'>deadly smallpox</text><rect x='306' y='18' width='134' height='80' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='373' y='44' text-anchor='middle' font-size='11' font-weight='700'>1885: Pasteur</text><text x='373' y='66' text-anchor='middle' font-size='9.5'>Germ theory · Weak form</text><text x='373' y='80' text-anchor='middle' font-size='9.5'>rabies treatment</text><rect x='452' y='18' width='134' height='80' rx='8' fill='#DBEAFE' stroke='#2563EB'/><text x='519' y='44' text-anchor='middle' font-size='11' font-weight='700'>1970s–Now: AIDS</text><text x='519' y='66' text-anchor='middle' font-size='9.5'>Modern drugs control;</text><text x='519' y='80' text-anchor='middle' font-size='9.5'>vaccine search continues</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 102,
+            "html": "<p dir='ltr'><b>Etymology fact:</b> The word <i>vaccine</i> derives from Latin <i>vacca</i> (= cow), because Jenner used mild <i>cowpox</i> to protect humans from deadly <i>smallpox</i>.</p>"
+          },
+          "self_check_ref": "chk-sci_6-a",
+          "page_ref": { "book": "PB", "page": 70, "pdf_page": 72, "image": "assets/ref/pb_p070.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "vaccine": { "pos": "n", "ar": "لَقاح", "in_book_wordlist": true, "wb_page": 116 },
+    "vaccination": { "pos": "n", "ar": "تطعيم / تلقيح", "in_book_wordlist": true, "wb_page": 116 },
+    "immunity": { "pos": "n", "ar": "مناعة", "in_book_wordlist": true, "wb_page": 116 },
+    "immunization": { "pos": "n", "ar": "تمنيع / تحصين طبي", "in_book_wordlist": true, "wb_page": 116 },
+    "immunize": { "pos": "v", "ar": "يُحصّن / يمنح مناعة", "in_book_wordlist": true, "wb_page": 116 },
+    "breakthrough": { "pos": "n", "ar": "اختراق علمي كبير", "in_book_wordlist": true, "wb_page": 116 },
+    "germ": { "pos": "n", "ar": "جرثومة / ميكروب مسبّب للمرض", "in_book_wordlist": true, "wb_page": 116 },
+    "diagnose": { "pos": "v", "ar": "يشخّص المرض", "in_book_wordlist": true, "wb_page": 116 },
+    "transmission": { "pos": "n", "ar": "انتقال العدوى / تفشّي المرض", "in_book_wordlist": true, "wb_page": 116 },
+    "smallpox": { "pos": "n", "ar": "مرض الجدري", "in_book_wordlist": true, "wb_page": 116 }
+  },
+  "activities": [
+    {
+      "id": "wb-sci_6-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 102 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "SCIENCE 6 A Read the texts and choose the best heading for each.",
+      "prompt_ar": "اختر الحرف الدال على أنسب عنوان (a أو b أو c) لكل قسم من الأقسام الأربعة (WB ص 102):",
+      "word_bank": ["a", "b", "c"],
+      "items": [
+        { "num": 1, "prompt": "Introduction [a Vaccination in history / b The need for vaccines / c Diseases that kill]: ______", "answers": ["b"] },
+        { "num": 2, "prompt": "Box 1 (left) [a A vaccine for smallpox / b The life of Jenner / c Smallpox and cowpox]: ______", "answers": ["a"] },
+        { "num": 3, "prompt": "Box 1 (right) [a The cause of disease / b Giving disease to prevent disease / c The life of Pasteur]: ______", "answers": ["b"] },
+        { "num": 4, "prompt": "Box 2 [a The rise of AIDS / b Modern drugs and AIDS / c The search for an AIDS vaccine]: ______", "answers": ["c"] }
+      ],
+      "hints": [
+        "Introduction: b (الحاجة الماسة للقاحات) · Box 1 left: a · Box 1 right: b (التحصين بنسخة ضعيفة من المرض) · Box 2: c."
+      ]
+    },
+    {
+      "id": "wb-sci_6-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 102 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Number these stages in the history of vaccination in order. (1–9)",
+      "prompt_ar": "رقّم المراحل التسع في تاريخ التطعيم من 1 إلى 9 حسب الترتيب الزمني (WB ص 102):",
+      "word_bank": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      "items": [
+        { "num": 1, "prompt": "______ AIDS was diagnosed in humans.", "answers": ["7"] },
+        { "num": 2, "prompt": "______ Jenner noticed that people working with cows did not suffer from smallpox.", "answers": ["2"] },
+        { "num": 3, "prompt": "______ Jenner successfully vaccinated a patient.", "answers": ["3"] },
+        { "num": 4, "prompt": "______ AIDS developed from the blood of Central African monkeys.", "answers": ["6"] },
+        { "num": 5, "prompt": "______ Modern drugs help to control AIDS.", "answers": ["9"] },
+        { "num": 6, "prompt": "______ Pasteur showed that diseases were spread by germs.", "answers": ["4"] },
+        { "num": 7, "prompt": "______ AIDS spread around the world.", "answers": ["8"] },
+        { "num": 8, "prompt": "______ Pasteur successfully treated a boy who had been bitten by a rabid dog.", "answers": ["5"] },
+        { "num": 9, "prompt": "______ Thousands of people died every year from smallpox.", "answers": ["1"] }
+      ],
+      "hints": [
+        "قبل القرن 18 (1) ← ملاحظة جينر وتطعيمه 1796 (2–3) ← أبحاث باستور وعلاجه 1885 (4–5) ← نشأة الإيدز في القرود ثم تشخيصه بالسبعينيات وانتشاره ثم الأدوية الحديثة (6–9)."
+      ]
+    },
+    {
+      "id": "wb-sci_6-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 102 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C These words from the texts are related in meaning. Explain the differences. (1 doctors / scientists printed; solve 2–8)",
+      "prompt_ar": "وضّح الفرق الدلالي بين كل زوجين من المصطلحات الطبية 2–8 (WB ص 102–103):",
+      "items": [
+        { "num": 2, "question": "2 treat vs cure", "model_answer": "Treat means give medical care/medicine to try to help an ill patient (not always successfully); cure means heal completely and remove the disease.", "explain_ar": "العلاج محاولة تخفيف المرض أو مداواته، أما الشفاء فهو القضاء التام على العلة." },
+        { "num": 3, "question": "3 cowpox vs smallpox", "model_answer": "Smallpox is a deadly human disease; cowpox is a similar mild disease found only in cattle (cows), used by Jenner to make a smallpox vaccine.", "explain_ar": "جدري البشر القاتل مقابل جدري البقر الخفيف." },
+        { "num": 4, "question": "4 disease vs germ", "model_answer": "A germ is the tiny living cause/organism that spreads illness; a disease is the illness itself suffered by the body.", "explain_ar": "الجرثومة سبب والمرض هو الأثر والحالة." },
+        { "num": 5, "question": "5 infection vs transmission", "model_answer": "Infection happens when germs enter a body and make it sick; transmission is the spreading/passing of a disease from person to person across places.", "explain_ar": "العدوى إصابة الفرد، والانتقال انتشارها بين الناس." },
+        { "num": 6, "question": "6 vaccine vs disease", "model_answer": "A disease harms or kills a patient; a vaccine is a mild/weak preventive substance given beforehand to build immunity against that disease.", "explain_ar": "اللقاح وقاية مسبقة مضادة للمرض." },
+        { "num": 7, "question": "7 diagnose vs treat", "model_answer": "Diagnose means identify what illness a patient has; treat means give medical care/medicine afterwards for that illness.", "explain_ar": "التشخيص هو تحديد الداء ثم يتلوه العلاج." },
+        { "num": 8, "question": "8 breakthrough vs development", "model_answer": "A breakthrough is a sudden major discovery solving a difficult barrier; a development is a step-by-step improvement or progress building on existing work.", "explain_ar": "الاكتشاف الفارق المفاجئ مقابل التطوير التدريجي المتراكم." }
+      ],
+      "hints": [
+        "اعتمد على السياق الطبي لكل كلمة في فقرتها داخل PB ص 70."
+      ]
+    },
+    {
+      "id": "wb-sci_6-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 103 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Complete the table with words from the texts. (noun 1 | noun 2 | verb)",
+      "prompt_ar": "أكمل جدول المشتقات اللغوية (noun 1 | noun 2 | verb) في 6 D من النص (WB ص 103):",
+      "word_bank": ["immunity", "immunization", "vaccine", "vaccination", "experiment", "develop", "transmission", "treat", "diagnose", "infect"],
+      "items": [
+        { "num": 1, "prompt": "1 verb = immunize → noun 1: ______", "answers": ["immunity", "immunization"] },
+        { "num": 2, "prompt": "1 verb = immunize → noun 2: ______", "answers": ["immunization", "immunity"] },
+        { "num": 3, "prompt": "2 verb = vaccinate → noun 1: ______", "answers": ["vaccine", "vaccination"] },
+        { "num": 4, "prompt": "2 verb = vaccinate → noun 2: ______", "answers": ["vaccination", "vaccine"] },
+        { "num": 5, "prompt": "3 verb = experiment → noun 1: ______ (noun 2 shaded)", "answers": ["experiment"] },
+        { "num": 6, "prompt": "4 noun 1 = development → verb: ______ (noun 2 shaded)", "answers": ["develop"] },
+        { "num": 7, "prompt": "5 verb = transmit → noun 1: ______ (noun 2 shaded)", "answers": ["transmission"] },
+        { "num": 8, "prompt": "6 noun 1 = treatment → verb: ______ (noun 2 shaded)", "answers": ["treat"] },
+        { "num": 9, "prompt": "7 noun 1 = diagnosis → verb: ______ (noun 2 shaded)", "answers": ["diagnose"] },
+        { "num": 10, "prompt": "8 noun 1 = infection → verb: ______ (noun 2 shaded)", "answers": ["infect"] }
+      ],
+      "hints": [
+        "فقط الصفان 1 و2 يملكان عمود noun 2 مفتوحاً في الطباعة (immunity + immunization، وvaccine + vaccination)، وبقية الصفوف تكتفي باسم واحد وفعل واحد."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-sci_6-a",
+      "origin": "educational_addition",
+      "page_ref": 70,
+      "questions": [
+        {
+          "id": "q-sci_6-1",
+          "type": "mcq",
+          "stem": "Where does the word 'vaccine' come from, and why (PB page 70)?",
+          "evidence_block_id": "sci-6-vaccinations-text",
+          "options": [
+            { "text": "From the Latin word for cow, because Jenner developed the first vaccine from cowpox.", "is_correct": true, "why_wrong": null },
+            { "text": "From the Greek word for vacuum, because germs live in outer space.", "is_correct": false, "why_wrong": "vacuum كلمة من درس الضوء والصوت بمعنى الفراغ ولا صلة لها بالتطعيم." },
+            { "text": "From Arabic meaning 'ashes of a plant'.", "is_correct": false, "why_wrong": "معنى أشنان/رماد النبات يخص كلمة alkali في الدرس الأول." },
+            { "text": "From Pasteur's laboratory in 1972.", "is_correct": false, "why_wrong": "جينر هو من استعمل لقاح جدري البقر عام 1796، وعمل باستور كان بعده بقرن (1885)." }
+          ],
+          "hints": [
+            "انظر المربع الأوسط الأيسر: The word vaccine comes from the Latin..."
+          ],
+          "explain": "أُخذت الكلمة vaccine من الكلمة اللاتينية التي تعني البقرة لأن جينر صنع لقاح الجدري من مرض جدري البقر الخفيف."
+        },
+        {
+          "id": "q-sci_6-2",
+          "type": "mcq",
+          "stem": "According to WB Science 6 D, which noun-verb set matches 'transmission' and 'diagnosis' correctly?",
+          "evidence_block_id": "sci-6-vaccinations-text",
+          "options": [
+            { "text": "transmit → transmission; diagnose → diagnosis", "is_correct": true, "why_wrong": null },
+            { "text": "transmit → transmitment; diagnose → diagnosation", "is_correct": false, "why_wrong": "هاتان صيغتان خطأ غير موجودتين في الإنجليزية." },
+            { "text": "infect → infection; treat → treatable", "is_correct": false, "why_wrong": "treatable صفة وليست الاسم المطلوب في الجدول (treatment)." },
+            { "text": "develop → developer; experiment → experimental", "is_correct": false, "why_wrong": "experimental صفة وليست اسم/فعل جدول 6 D." }
+          ],
+          "hints": [
+            "راجع الأفعال التي تأخذ -ssion و-sis في الجدول 6 D."
+          ],
+          "explain": "الفعل transmit اسمه transmission، والفعل diagnose اسمه diagnosis."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-sr6-immunity", "origin": "from_book", "page_ref": 116, "front": "immunize / immunity / immunization", "back": "يُحصّن / مناعة / التمنيع والتحصين", "tag": "Science · SR6" },
+    { "id": "fc-sr6-breakthrough", "origin": "from_book", "page_ref": 116, "front": "breakthrough / germ / rabid", "back": "اختراق علمي مفاجئ / جرثومة / مسعور (داء الكلب)", "tag": "Science · SR6" },
+    { "id": "fc-sr6-diagnose", "origin": "from_book", "page_ref": 116, "front": "diagnose / transmission / treat", "back": "يشخّص / انتقال العدوى / يعالج", "tag": "Science · SR6" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 70 مع pb-72.png وصورتَي إدوارد جينر ولويس باستور، واستُخرج النص كاملاً.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 102–103 مع wb_tail-103.png وwb_tail-104.png لتحديد الخلايا الرمادية والمفتوحة في جدول 6 D وحل A–D."
+  }
+}
