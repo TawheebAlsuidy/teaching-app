@@ -1,0 +1,232 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_6",
+    "code": "4.6",
+    "title": "Language review 7",
+    "title_ar": "مراجعة القواعد 7: كلمات التسلسل، والمبني للمجهول (Present Passive)، وwhile + المضارع المستمر",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 30, "book_page": 28 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 46, "book_page": 45 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 47, "book_page": 46 }
+    ],
+    "reference_images": {
+      "pb_28": "assets/ref/pb_p028.webp",
+      "wb_45": "assets/ref/wb_p045.webp",
+      "wb_46": "assets/ref/wb_p046.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_6-seq-passive",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 28 },
+      "dir": "ltr",
+      "recall_words": ["first", "next", "after that", "finally", "passive", "object"],
+      "content": {
+        "lines": [
+          "4.6 Language review 7",
+          "1 Use of sequence words and phrases (first, then, next, after that, finally)",
+          "You use these words to introduce each stage of a process.",
+          "Examples: First you fry the onions and garlic. | Then you add the spices. | Next you add the tomatoes. | After that you cover the mixture. | Finally you simmer for fifteen minutes.",
+          "Note: some writers put a comma after each of these sequence words/phrases. Example: First, put some water in a pan.",
+          "2 Use of the Passive",
+          "You use the Passive when you want to make the object more important than the subject.",
+          "Example: subject: People | object: grow coffee in Yemen. → Coffee is grown in Yemen.",
+          "Example: subject: We can find | object: fruit trees in some wadis. → Fruit trees can be found in some wadis",
+          "Note: We often omit the original subject in the passive sentence, particularly when it is not important, as in the above examples 'people' and 'we'."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي (<bdi dir='ltr'>PB p. 28</bdi> و<bdi dir='ltr'>WB p. 46</bdi>):</strong> سقطت النقطة في آخر مثال <span dir='ltr'><code>Fruit trees can be found in some wadis</code></span> بـ <bdi dir='ltr'>PB p. 28</bdi>؛ كما وردت في <bdi dir='ltr'>WB 4.6 D</bdi> مسافة قبل القوس في <span dir='ltr'><code>( wait)</code></span> وغياب المسافة قبل <span dir='ltr'><code>(heat)</code></span>، وحُفظت جميعها حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "خطوات التحويل للمبني للمجهول المضارع (Present Passive) في العمليات",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 28,
+            "html": "<ol><li><b>متى نختار المجهول؟</b> في أدلّة العمل والمصانع (مثل <bdi dir='ltr'>4.6 B</bdi> و<bdi dir='ltr'>4.11</bdi>) لأن <b>المواد والمنتج (المفعول به)</b> أهم من الشخص الذي ينفذ العمل (<span dir='ltr'>you / people / we</span>).</li><li><b>خطوات التحويل الثلاث:</b><br>(1) نحذف الفاعل العام (<span dir='ltr'>you / people / we</span>).<br>(2) نقدّم المفعول به لبداية الجملة بعد أداة التسلسل.<br>(3) نحوّل الفعل المضارع إلى <span dir='ltr'><b>is / are + التصريف الثالث (V3)</b></span> (أو مع الفعل الناقص: <span dir='ltr'><b>can be + V3</b></span>).</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 28,
+            "caption": "معادلة المبني للمجهول في المضارع البسيط",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='16' y='20' width='250' height='80' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='141' y='48' text-anchor='middle' font-size='12' font-weight='700'>Active</text><text x='141' y='74' text-anchor='middle' font-size='11'>Then you add the spices.</text><text x='295' y='66' text-anchor='middle' font-size='20' font-weight='700'>→</text><rect x='324' y='20' width='260' height='80' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='454' y='48' text-anchor='middle' font-size='12' font-weight='700'>Passive (Object first)</text><text x='454' y='74' text-anchor='middle' font-size='11'>Then the spices are added.</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 28,
+            "html": "<p dir='ltr'><b>Singular vs Plural:</b> The mixture <b>is</b> covered. / The onions and garlic <b>are</b> fried.</p>"
+          },
+          "self_check_ref": "chk-4_6-a",
+          "page_ref": { "book": "PB", "page": 28, "pdf_page": 30, "image": "assets/ref/pb_p028.webp" }
+        }
+      }
+    },
+    {
+      "id": "u4-4_6-while",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 28 },
+      "dir": "ltr",
+      "recall_words": ["while", "boiling gently", "simmer"],
+      "content": {
+        "lines": [
+          "3 Use of while + Present continuous with Present simple",
+          "You use while + Present continuous with the Present simple when you want to show that two actions happen at the same time.",
+          "Example: First action: While the mixture is boiling gently, | Second action: you fry the pieces of fish.",
+          "Find examples of the above language in the texts.",
+          "Now do activities A to D in the Workbook."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "قاعدة while لتزامن فعلين أثناء وصف الخطوات",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 28,
+            "html": "<ul><li><b>القاعدة الثابتة:</b> جملة <span dir='ltr'><b>while</b></span> (سواءً جاءت أول الجملة أو وسطها!) تأخذ زمن <b>المضارع المستمر</b> (<span dir='ltr'><b>am / is / are + V-ing</b></span>) لأنها الحدث الخلفي المستمر، والجملة الأخرى تأخذ <b>المضارع البسيط</b> (<span dir='ltr'>V1</span>).</li><li>انتبه لموضع <span dir='ltr'>while</span> في <bdi dir='ltr'>WB 4.6 D #3–#4</bdi>: هنا جاءت <span dir='ltr'>while</span> في وسط الجملة؛ فالشق الأول يصبح مضارعاً بسيطاً والشق الذي يلي <span dir='ltr'>while</span> يصبح مضارعاً مستمراً!</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 46,
+            "html": "<p dir='ltr'>You <b>stir</b> (Present simple) the soup <b>while</b> it <b>is simmering</b> (Present continuous).</p>"
+          },
+          "self_check_ref": "chk-4_6-a",
+          "page_ref": { "book": "WB", "page": 46, "pdf_page": 47, "image": "assets/ref/wb_p046.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "while": { "pos": "conj", "ar": "بينما / في أثناء", "in_book_wordlist": true, "wb_page": 113 },
+    "simmer": { "pos": "v", "ar": "يغلي برفق", "in_book_wordlist": true, "wb_page": 113 },
+    "omit": { "pos": "v", "ar": "يحذف / يُسقط", "in_book_wordlist": false, "wb_page": 28 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_6-ac-coffee",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 45 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.6 A Give instructions for making coffee. Use sequence words and phrases. | C (WB p. 46) Re-write your instructions for making coffee in the same way (using the Present passive).",
+      "prompt_ar": "اكتب طريقة صنع القهوة بالمبني للمعلوم أولاً (A ص 45) ثم حوّلها للمبني للمجهول (C ص 46):",
+      "guidance_literal": "First → Next → Then → After that → Finally (Active 4.6 A → Present Passive 4.6 C)",
+      "steps": [
+        { "label_ar": "4.6 A (المبني للمعلوم بضمير you أو فعل الأمر)", "placeholder": "First, put some water in a pot. Next, heat the water until it boils. Then add a spoonful of coffee and some sugar. After that, stir the mixture gently. Finally, pour the coffee into cups." },
+        { "label_ar": "4.6 C (التحويل إلى المبني للمجهول Present passive)", "placeholder": "First, some water is put in a pot. Next, the water is heated until it boils. Then a spoonful of coffee and some sugar are added. After that, the mixture is stirred gently. Finally, the coffee is poured into cups." }
+      ],
+      "hints": [
+        "راقب مطابقة is (للمفرد أو غير المعدود كـ water/coffee) وare (للجمع مثل coffee and sugar)."
+      ]
+    },
+    {
+      "id": "wb-4_6-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 45 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.6 B Your supervisor is telling you how to make the sauce for frozen pizzas produced at your factory. You are going to write the process in an instruction manual. Use the Present passive, as your focus is on the ingredients.",
+      "prompt_ar": "حوّل تعليمات المشرف لصنع صلصة البيتزا إلى دليل المصنع بصيغة المبني للمجهول (الجملة 1 مبدوءة كمثال):",
+      "word_bank": [
+        "are fried",
+        "the spices are added",
+        "the tomatoes are added",
+        "the mixture is covered",
+        "it is simmered for fifteen minutes"
+      ],
+      "items": [
+        { "num": 1, "prompt": "1 First, you fry the onions and garlic. → First the onions and garlic ______.", "answers": ["are fried"] },
+        { "num": 2, "prompt": "2 Then you add the spices. → Then ______.", "answers": ["the spices are added"] },
+        { "num": 3, "prompt": "3 Next you add the tomatoes. → Next ______.", "answers": ["the tomatoes are added"] },
+        { "num": 4, "prompt": "4 After that, you cover the mixture. → After that, ______.", "answers": ["the mixture is covered"] },
+        { "num": 5, "prompt": "5 Finally you simmer for fifteen minutes. → Finally, ______.", "answers": ["it is simmered for fifteen minutes", "the mixture is simmered for fifteen minutes"] }
+      ],
+      "hints": [
+        "لاحظ الجمع في spices وtomatoes (are added) والمفرد في mixture (is covered / is simmered)."
+      ]
+    },
+    {
+      "id": "wb-4_6-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 46 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.6 D Put each verb in brackets into the correct tense. Example: While the mixture is boiling (boil) gently, you fry (fry) the pieces of fish.",
+      "prompt_ar": "أكمل الفراغات بالمضارع المستمر مع جملة while وبالمضارع البسيط في الجملة الأخرى (الجملة 1 و2 تبدآن بـ while، و3 و4 وسطيتان):",
+      "word_bank": ["are waiting", "put", "is heating", "prepare", "make", "is cooking", "stir", "is simmering"],
+      "items": [
+        { "num": 1, "prompt": "1 While you ______ ( wait) for the water to boil, you ______(1b) (put) the coffee in the pot.", "answers": ["are waiting"] },
+        { "num": 2, "prompt": "1 (second blank — you): ______ (put) the coffee in the pot.", "answers": ["put"] },
+        { "num": 3, "prompt": "2 While the oven ______(heat) up, you prepare (2b) the ingredients. (first blank)", "answers": ["is heating"] },
+        { "num": 4, "prompt": "2 (second blank — you): you ______ (prepare) the ingredients.", "answers": ["prepare"] },
+        { "num": 5, "prompt": "3 You ______ (make) the sauce while the food is cooking (3b).", "answers": ["make"] },
+        { "num": 6, "prompt": "3 (second blank — after while): while the food ______ (cook).", "answers": ["is cooking"] },
+        { "num": 7, "prompt": "4 You ______ (stir) the soup while it is simmering (4b).", "answers": ["stir"] },
+        { "num": 8, "prompt": "4 (second blank — after while): while it ______ (simmer).", "answers": ["is simmering"] }
+      ],
+      "hints": [
+        "اتبع قاعدة: أينما وقعت كلمة while جاء بعدها مضارع مستمر (is/are + V-ing)، وفي الطرف الآخر مضارع بسيط!"
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_6-a",
+      "origin": "educational_addition",
+      "page_ref": 28,
+      "questions": [
+        {
+          "id": "q-4_6-1",
+          "type": "mcq",
+          "stem": "In WB 4.6 B, what is the correct Present passive conversion of 'Next you add the tomatoes.'?",
+          "evidence_block_id": "u4-4_6-seq-passive",
+          "options": [
+            { "text": "Next the tomatoes are added.", "is_correct": true, "why_wrong": null },
+            { "text": "Next the tomatoes is added.", "is_correct": false, "why_wrong": "كلمة tomatoes جمع فتلزم الفعل المساعد are وليس is." },
+            { "text": "Next the tomatoes are adding.", "is_correct": false, "why_wrong": "المبني للمجهول يحتاج التصريف الثالث added وليس صيغة -ing." },
+            { "text": "Next you are added the tomatoes.", "is_correct": false, "why_wrong": "في المجهول نحذف الفاعل you ونقدّم المفعول به (the tomatoes)." }
+          ],
+          "hints": [
+            "اجعل the tomatoes أول الجملة واختر are + التصريف الثالث من add."
+          ],
+          "explain": "المفعول به tomatoes جمع، فنستعمل are + التصريف الثالث added ونحذف الفاعل you."
+        },
+        {
+          "id": "q-4_6-2",
+          "type": "mcq",
+          "stem": "Choose the correct verb forms for WB 4.6 D #3: 'You ______ (make) the sauce while the food ______ (cook).'",
+          "evidence_block_id": "u4-4_6-while",
+          "options": [
+            { "text": "make ... is cooking", "is_correct": true, "why_wrong": null },
+            { "text": "are making ... cooks", "is_correct": false, "why_wrong": "قاعدة PB ص 28 تربط while نفسها بالمضارع المستمر (while the food is cooking)، والفعل الآخر بالبسيط (You make)." },
+            { "text": "make ... cook", "is_correct": false, "why_wrong": "الجملة التي تلي while تستلزم المضارع المستمر (is cooking)." },
+            { "text": "made ... cooked", "is_correct": false, "why_wrong": "وصف الخطوات العامة هنا يعتمد على المضارع المستمر والبسيط وفق قاعدة 3 في PB ص 28." }
+          ],
+          "hints": [
+            "انظر موقع كلمة while: تقع قبل الفراغ الثاني (while the food ...)."
+          ],
+          "explain": "لأن while جاءت قبل الفراغ الثاني، يلزم بعدها is cooking، ويأتي الفراغ الأول بصيغة المضارع البسيط make."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_6-passive", "origin": "from_book", "page_ref": 28, "front": "People grow coffee in Yemen → Passive", "back": "Coffee is grown in Yemen.", "tag": "Unit 4 · 4.6" },
+    { "id": "fc-4_6-while", "origin": "from_book", "page_ref": 28, "front": "while + Present continuous + Present simple", "back": "While the mixture is boiling gently, you fry the pieces of fish.", "tag": "Unit 4 · 4.6" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت النقاط الثلاث وصناديقها في PB ص 28 مع صورة pb-30.png وحُفظ سقوط النقطة آخر مثال wadis حرفياً.",
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 45–46 مع tesseract.js eng: صُحّحت قراءة OCR لكلمة 'fy (fry)' ← 'fry (fry)' والمسافات/الأقواس عبر wb-046.png وwb-047.png."
+  }
+}
