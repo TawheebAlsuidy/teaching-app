@@ -114,7 +114,7 @@
   - [x] `arts-7` Telford Hall Episode 3 (PB pp. 58–59 / WB pp. 90–92)
   - [x] `arts-8` Calligraphy (PB p. 60 / WB pp. 92–93)
   - [x] `arts-9` A poem (PB p. 61 / WB pp. 93–94)
-  - [ ] `arts-10` Strange happenings (p. 62)
+  - [x] `arts-10` Strange happenings (PB p. 62 / WB pp. 94–95)
 - **Science Reader (PB pp. 64–74)**
   - [ ] `sci-1` Acids and alkalis (p. 65)
   - [ ] `sci-2` States of matter (p. 66)
