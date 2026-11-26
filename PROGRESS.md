@@ -127,7 +127,7 @@
   - [x] `sci-9` The Moon (p. 73)
   - [x] `sci-10` Radioactivity (p. 74)
 - **QA & التغطية الكاملة للإنجليزي**
-  - [ ] مطابقة صفحة بصفحة مع PB (77 ص) وWB (120 ص) وقوائم المفردات (ص 112–118) + تقرير `QA/english/COVERAGE_REPORT.md`
+  - [x] مطابقة صفحة بصفحة مع PB (77 ص) وWB (120 ص) وقوائم المفردات (ص 112–118) + تقرير `QA/english/COVERAGE_REPORT.md`
 
 ---
 
