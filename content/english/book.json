@@ -79,14 +79,18 @@
       "number": 4,
       "title": "Tables, flow charts and diagrams",
       "lessons": [
-        { "id": "eng-u4-4_1", "code": "4.1", "title": "Food", "pb_page": 25 },
-        { "id": "eng-u4-4_2", "code": "4.2", "title": "Learning to cook", "pb_page": 26 },
-        { "id": "eng-u4-4_3", "code": "4.3", "title": "Agriculture in Yemen", "pb_page": 27 },
-        { "id": "eng-u4-4_4", "code": "4.4", "title": "Language review 7", "pb_page": 28 },
-        { "id": "eng-u4-4_5", "code": "4.5", "title": "Words and more words", "pb_page": 29 },
-        { "id": "eng-u4-4_6", "code": "4.6", "title": "Investigating the world around us", "pb_page": 30 },
-        { "id": "eng-u4-4_7", "code": "4.7", "title": "Language review 8", "pb_page": 31 },
-        { "id": "eng-u4-4_8", "code": "4.8", "title": "Frozen peas", "pb_page": 32 }
+        { "id": "eng-u4-4_1", "code": "4.1", "title": "Food", "pb_page": 25, "wb_page": 41 },
+        { "id": "eng-u4-4_2", "code": "4.2", "title": "Flow charts", "pb_page": null, "wb_page": 41 },
+        { "id": "eng-u4-4_3", "code": "4.3", "title": "Learning to cook", "pb_page": 26, "wb_page": 43 },
+        { "id": "eng-u4-4_4", "code": "4.4", "title": "Agriculture in Yemen", "pb_page": 27, "wb_page": 44 },
+        { "id": "eng-u4-4_5", "code": "4.5", "title": "Tables and cooking conversations", "pb_page": null, "wb_page": 44 },
+        { "id": "eng-u4-4_6", "code": "4.6", "title": "Language review 7", "pb_page": 28, "wb_page": 45 },
+        { "id": "eng-u4-4_7", "code": "4.7", "title": "Words and more words", "pb_page": 29, "wb_page": 46 },
+        { "id": "eng-u4-4_8", "code": "4.8", "title": "Investigating the world around us", "pb_page": 30, "wb_page": 48 },
+        { "id": "eng-u4-4_9", "code": "4.9", "title": "Water displacement and Ahmed's experiment", "pb_page": null, "wb_page": 49 },
+        { "id": "eng-u4-4_10", "code": "4.10", "title": "Language review 8", "pb_page": 31, "wb_page": 51 },
+        { "id": "eng-u4-4_11", "code": "4.11", "title": "Frozen peas", "pb_page": 32, "wb_page": 52 },
+        { "id": "eng-u4-4_12", "code": "4.12", "title": "Stuffed olives: flow chart and process", "pb_page": 32, "wb_page": 53 }
       ]
     },
     {
