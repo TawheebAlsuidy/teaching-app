@@ -47,9 +47,9 @@
   - [x] `2.5` Language review 3 (PB p. 12, WB pp. 17–18)
   - [x] `2.6` Natural disasters (PB p. 13, WB pp. 18–19)
   - [x] `2.7` A newspaper report (PB p. 14, WB pp. 19–20)
-  - [ ] `2.8` Listening to the radio news (WB pp. 21–22)
-  - [ ] `2.9` Questions, intonation and interviewing (WB pp. 22–24)
-  - [ ] `2.10` Language review 4 (PB p. 15, WB pp. 24–25)
+  - [x] `2.8` Listening to the radio news (WB pp. 21–22)
+  - [x] `2.9` Questions, intonation and interviewing (WB pp. 22–24)
+  - [x] `2.10` Language review 4 (PB p. 15, WB pp. 24–26)
   - [ ] `2.11` Armenia - 7, December 1988 (PB p. 16, WB pp. 26–27)
   - [ ] `2.12` Planning and writing a newspaper report (WB pp. 27–28)
 - **Unit 3: Looking for a job (PB pp. 17–24)**

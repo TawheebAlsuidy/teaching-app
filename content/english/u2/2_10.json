@@ -1,0 +1,243 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u2", "number": 2, "title": "Reporting events" },
+  "lesson": {
+    "id": "eng-u2-2_10",
+    "code": "2.10",
+    "title": "Language review 4",
+    "title_ar": "مراجعة القواعد 4: المضارع التام مقابل الماضي البسيط، وحروف الجر في جمل الوصل، والظروف",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 17, "book_page": 15 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 25, "book_page": 24 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 26, "book_page": 25 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 27, "book_page": 26 }
+    ],
+    "reference_images": {
+      "pb_15": "assets/ref/pb_p015.webp",
+      "wb_24": "assets/ref/wb_p024.webp",
+      "wb_25": "assets/ref/wb_p025.webp",
+      "wb_26": "assets/ref/wb_p026.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u2-2_10-tenses",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 15 },
+      "dir": "ltr",
+      "recall_words": ["Present perfect", "Past simple", "adverb", "during"],
+      "content": {
+        "lines": [
+          "2.10 Language review 4",
+          "1 Use of the Present perfect tense",
+          "Use the Present perfect tense to describe the present situation.",
+          "Example: The worst hurricane in living memory has caused terrible damage.",
+          "2 Use of the Past simple tense",
+          "Use the Past simple tense to describe something that happened at a known time. Use adverbs to say when the event happened.",
+          "Example: The storm hit the area late on Tuesday evening."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "متى نستعمل المضارع التام ومتى الماضي البسيط؟",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 15,
+            "html": "<ul><li><b>Present perfect (<span dir='ltr'>has/have + V3</span>):</b> يصف وضعاً حاضراً ناتجاً عن حدث ماضٍ غير محدَّد بوقت ماضٍ منقضٍ. علاماته في التمارين: <span dir='ltr'>over the years / so far / recently</span> أو أثر واضح الآن.</li><li><b>Past simple (<span dir='ltr'>V2</span> / <span dir='ltr'>was/were + V3</span>):</b> يصف حدثاً تمّ في <b>وقت ماضٍ معلوم أو منقضٍ</b> مثل: <span dir='ltr'>in 1883 / two days ago / last Thursday / yesterday morning / before the plane crashed</span>.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 15,
+            "html": "<p dir='ltr'><b>So far</b> rescue teams <b>have found</b> no survivors. (Present perfect)<br>The plane <b>took off</b> from London <b>two days ago</b>. (Past simple)</p>"
+          },
+          "self_check_ref": "chk-2_10-a",
+          "page_ref": { "book": "PB", "page": 15, "pdf_page": 17, "image": "assets/ref/pb_p015.webp" }
+        }
+      }
+    },
+    {
+      "id": "u2-2_10-relative-adverbs",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 15 },
+      "dir": "ltr",
+      "recall_words": ["relative", "preposition", "necessary", "additional"],
+      "content": {
+        "lines": [
+          "3 Prepositions in relative clauses",
+          "• Relative clauses giving necessary information",
+          "Example: The house is very old. I used to live in it. → The house I used to live in is very old.",
+          "Note: The preposition is at the end of the relative clause.",
+          "• Relative clauses giving additional information.",
+          "Example: Sana’a Secondary School is one of the biggest schools in the country. I went to it when I was younger. → Sana’a Secondary School, to which I went when I was younger, is one of the biggest schools in the country.",
+          "Note: The preposition is at the beginning of the relative clause. The clause is written between commas.",
+          "4 Adverbs and adverbial phrases",
+          "These tell us more about actions.",
+          "Examples: (How) People stood around silently. | (Where) In the countryside whole villages have disappeared. | (When) The storm hit the area late on Tuesday evening.",
+          "Find other examples of the above language points in the texts.",
+          "Now do activities A, B and C in the Workbook."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "جدول المقارنة: جمل الوصل الضرورية مقابل الإضافية",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 15,
+            "html": "<p><strong>أهم قاعدة امتحانية في الوحدة الثانية:</strong></p><ol><li><b>معلومة ضرورية لتحديد الاسم (<span dir='ltr'>necessary / defining</span>):</b> مثل <span dir='ltr'>The bus / The man</span> (بلا تعريف مسبق) ← <b>لا فاصلات</b>، ويُحذف <span dir='ltr'>it/him</span> ويبقى <b>حرف الجر في نهاية عبارة الوصل</b>: <span dir='ltr'><i>The bus I come to school <b>on</b>...</i></span></li><li><b>معلومة إضافية لاسم معروف ومحدّد أصلاً (<span dir='ltr'>additional / non-defining</span>):</b> مثل <span dir='ltr'>Sana'a Secondary School / The Great Fire of London / The flood of 1953 / The American earthquake</span> ← نضع العبارة <b>بين فاصلتين</b>، ويُقدَّم <b>حرف الجر قبل <span dir='ltr'>which</span></b>: <span dir='ltr'><i>..., <b>in which</b> thousands of buildings were destroyed, ...</i></span></li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 15,
+            "caption": "موضع حرف الجر والفواصل في جمل الوصل",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='15' y='18' width='275' height='84' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='152' y='44' text-anchor='middle' font-size='12' font-weight='700'>Necessary Info (No commas)</text><text x='152' y='68' text-anchor='middle' font-size='11'>Preposition stays at the END</text><text x='152' y='88' text-anchor='middle' font-size='10'>The bus I come to school ON</text><rect x='310' y='18' width='275' height='84' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='447' y='44' text-anchor='middle' font-size='12' font-weight='700'>Additional Info (Between commas)</text><text x='447' y='68' text-anchor='middle' font-size='11'>Preposition + which at BEGINNING</text><text x='447' y='88' text-anchor='middle' font-size='10'>, IN WHICH ...,</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 15,
+            "html": "<p dir='ltr'><b>Necessary:</b> The man <u>I was talking to</u> yesterday has disappeared.<br><b>Additional:</b> The Great Fire of London, <u>in which</u> thousands of buildings were destroyed, happened in 1666.</p>"
+          },
+          "self_check_ref": "chk-2_10-a",
+          "page_ref": { "book": "PB", "page": 15, "pdf_page": 17, "image": "assets/ref/pb_p015.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "Present perfect": { "pos": "grammar", "ar": "زمن المضارع التام (has/have + V3)", "in_book_wordlist": true, "wb_page": 111 },
+    "Past simple": { "pos": "grammar", "ar": "زمن الماضي البسيط", "in_book_wordlist": true, "wb_page": 111 },
+    "preposition": { "pos": "n", "ar": "حرف جر (in, on, to, about, after...)", "in_book_wordlist": true, "wb_page": 111 },
+    "relative": { "pos": "adj/grammar", "ar": "وصولي (جملة الوصل)", "in_book_wordlist": true, "wb_page": 111 },
+    "during": { "pos": "prep", "ar": "أثناء / خلال", "in_book_wordlist": true, "wb_page": 111 }
+  },
+  "activities": [
+    {
+      "id": "wb-2_10-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 24 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "2.10 A Complete these sentences with the correct tense of the verb in brackets.",
+      "prompt_ar": "صرّف الأفعال بين الأقواس إلى المضارع التام أو الماضي البسيط (لاحظ الجمل 1–9 في ص 24 والجملة 10 في ص 25):",
+      "word_bank": ["have been", "took place", "lost", "has crashed", "have found", "took off", "contacted", "crashed", "have died", "were", "went", "drove"],
+      "items": [
+        { "num": 1, "prompt": "1 Over the years there (to be) ______ many disastrous volcanic eruptions.", "answers": ["have been"] },
+        { "num": 2, "prompt": "2 The worst (to take place) ______ in Krakatoa in 1883.", "answers": ["took place"] },
+        { "num": 3, "prompt": "3 Over 36,000 people (to lose) ______ their lives.", "answers": ["lost"] },
+        { "num": 4, "prompt": "4 A large passenger plane (to crash) ______ in the mountains.", "answers": ["has crashed"] },
+        { "num": 5, "prompt": "5 So far rescue teams (to find) ______ no survivors.", "answers": ["have found"] },
+        { "num": 6, "prompt": "6 The plane (to take off) ______ from London two days ago.", "answers": ["took off"] },
+        { "num": 7, "prompt": "7 The pilot (to contact) ______ Jeddah airport one hour before the plane (to crash) ______.", "answers": ["contacted", "crashed"] },
+        { "num": 8, "prompt": "8 Several people (to die) ______ recently as a result of traffic accidents.", "answers": ["have died"] },
+        { "num": 9, "prompt": "9 Last Thursday two small children (to be) ______ killed by a speeding car.", "answers": ["were"] },
+        { "num": 10, "prompt": "10 (WB p. 25) Only yesterday morning a lorry (to go) ______ out of control and (to drive) ______ into a crowded market place, killing six people and injuring over 20.", "answers": ["went", "drove"] }
+      ],
+      "hints": [
+        "أدلة المضارع التام هنا: Over the years (1)، الوضع الراهن في بداية خبر عاجل (4)، So far (5)، recently (8).",
+        "أدلة الماضي البسيط: in 1883 (2–3)، two days ago (6)، one hour before (7)، Last Thursday (9)، yesterday morning (10)."
+      ]
+    },
+    {
+      "id": "wb-2_10-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 25 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Look at these sentences. Think about whether the second sentence in each pair gives additional or necessary information. Then join each pair to make single sentences.",
+      "prompt_ar": "حدّد أولاً نوع المعلومة (ضرورية أو إضافية) ثم اربط كل زوج بقاعدة جمل الوصل في PB ص 15:",
+      "items": [
+        { "num": 1, "question": "The bus has had an accident. I come to school on it.", "model_answer": "[Necessary] The bus I come to school on has had an accident.", "explain_ar": "معلومة ضرورية لتحديد أي حافلة (بلا فواصل، وحرف الجر on في نهاية عبارة الوصل)." },
+        { "num": 2, "question": "The Great Fire of London happened in 1666. Thousands of buildings were destroyed in it.", "model_answer": "[Additional] The Great Fire of London, in which thousands of buildings were destroyed, happened in 1666.", "explain_ar": "معلومة إضافية لحدث تاريخي معروف بعينه (بين فاصلتين مع تقديم in which)." },
+        { "num": 3, "question": "The man has mysteriously disappeared. I was talking to him yesterday.", "model_answer": "[Necessary] The man I was talking to yesterday has mysteriously disappeared.", "explain_ar": "معلومة ضرورية لتعريف الرجل (بلا فواصل، وحرف الجر to بعد talking)." },
+        { "num": 4, "question": "The American earthquake killed over 25,000 people. I have to write about it in the next lesson.", "model_answer": "[Additional] The American earthquake, about which I have to write in the next lesson, killed over 25,000 people.", "explain_ar": "الحدث محدَّد من قبل فيُدرج الشرح الإضافي بين فاصلتين مع تقديم about which." },
+        { "num": 5, "question": "The flood of 1953 is still the worst in living memory for the people of The Netherlands. New dams were built after it.", "model_answer": "[Additional] The flood of 1953, after which new dams were built, is still the worst in living memory for the people of The Netherlands.", "explain_ar": "فيضان عام 1953 محدد بالاسم والتاريخ، لذا تأتي جملة الوصل إضافيةً بين فاصلتين مبدوءةً بـ after which." }
+      ],
+      "hints": [
+        "1 و3: اسمان عامان (The bus / The man) يحتاجان التحديد → ضرورية وحرف الجر في النهاية.",
+        "2 و4 و5: مسمّيات معرفة بتاريخ أو وصف → إضافية بين فاصلتين مع (حرف الجر + which)."
+      ]
+    },
+    {
+      "id": "wb-2_10-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 25 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Complete these sentences with a suitable adverb or adverbial phrase in answer to the questions.",
+      "prompt_ar": "أكمل الجمل الأربع بظروف أو أشباه جمل ظرفية ملائمة (When / Where / How / How long) مع أمثلة نموذجية:",
+      "items": [
+        { "num": 1, "question": "(When?) ______ (Where?) ______ a terrible famine killed thousands of people.", "model_answer": "Last year, in East Africa, a terrible famine killed thousands of people.", "explain_ar": "ظرف زمان مناسب (When?) يليه جار ومجرور للمكان (Where?)." },
+        { "num": 2, "question": "After the heavy rain, water rushed down the wadi (How?) ______ and demolished tens of houses (Where?) ______.", "model_answer": "After the heavy rain, water rushed down the wadi violently / quickly and demolished tens of houses in the valley / near the river.", "explain_ar": "ظرف كيفية (-ly مثل violently/quickly) ثم ظرف مكان." },
+        { "num": 3, "question": "During the drought (Where?) ______ people queued (How?) ______ (How long?) ______ for just a litre of water.", "model_answer": "During the drought in that region, people queued patiently for hours for just a litre of water.", "explain_ar": "تحديد المكان (Where?) ← الكيفية (How? مثل patiently/quietly) ← المدة الزمنية (How long? مثل for hours)." },
+        { "num": 4, "question": "(WB p. 26) (Where?) ______ (When?) ______ a forest fire destroyed over 100 hectares of woodland in (How long?) ______.", "model_answer": "In California, last summer, a forest fire destroyed over 100 hectares of woodland in three hours.", "explain_ar": "تحديد المكان ← الزمان ← المدة بعد حرف الجر in." }
+      ],
+      "hints": [
+        "لاحظ ما بعد كل فراغ: (How?) تطلب غالباً ظرفاً منتهياً بـ -ly أو عبارة كيفية، و(Where?) حرف جر + مكان، و(When?) وقتاً محدداً."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-2_10-a",
+      "origin": "educational_addition",
+      "page_ref": 15,
+      "questions": [
+        {
+          "id": "q-2_10-1",
+          "type": "mcq",
+          "stem": "According to PB page 15 rule 3, which is the correct way to join: 'The Great Fire of London happened in 1666. Thousands of buildings were destroyed in it.'?",
+          "evidence_block_id": "u2-2_10-relative-adverbs",
+          "options": [
+            { "text": "The Great Fire of London, in which thousands of buildings were destroyed, happened in 1666.", "is_correct": true, "why_wrong": null },
+            { "text": "The Great Fire of London which thousands of buildings were destroyed in it happened in 1666.", "is_correct": false, "why_wrong": "يبقى الضمير العائد it زائداً لا يجوز بقاءه في جملة الوصل، كما أن الجملة إضافية تحتاج فاصلتين." },
+            { "text": "The Great Fire of London I thousands of buildings were destroyed in happened in 1666.", "is_correct": false, "why_wrong": "مع المعلومات الإضافية يجب ذكر أداة الوصل (which) مسبوقة بحرف الجر بين فاصلتين." },
+            { "text": "The Great Fire of London happened in 1666 in which.", "is_correct": false, "why_wrong": "موضع عبارة الوصل الإضافية هو بعد الاسم المعرّف مباشرةً بين فاصلتين." }
+          ],
+          "hints": [
+            "قارن هذه الجملة بمثال Sana'a Secondary School في PB ص 15.",
+            "ضع عبارة الوصل بين فاصلتين وابدأها بحرف الجر + which.",
+            "الصحيح: ..., in which thousands of buildings were destroyed, ..."
+          ],
+          "explain": "لأن الحدث (The Great Fire of London) معرّف بذاته، فالمعلومة إضافية توضع بين فاصلتين مبدوءةً بـ in which."
+        },
+        {
+          "id": "q-2_10-2",
+          "type": "mcq",
+          "stem": "Why do we write 'took off' (Past simple) in 'The plane ______ from London two days ago' instead of 'has taken off'?",
+          "evidence_block_id": "u2-2_10-tenses",
+          "options": [
+            { "text": "Because 'two days ago' names a known finished time in the past.", "is_correct": true, "why_wrong": null },
+            { "text": "Because 'two days ago' describes the present situation with no known time.", "is_correct": false, "why_wrong": "العكس صحيح: العبارة two days ago تحدد وقتاً ماضياً معلوماً منتهياً، وهذا مجال الماضي البسيط وفق قاعدة 2 في PB ص 15." },
+            { "text": "Because 'take off' never exists in Past simple.", "is_correct": false, "why_wrong": "took off هو الماضي البسيط القياسي غير المنتظم من take off." },
+            { "text": "Because Present perfect is never used in news reports.", "is_correct": false, "why_wrong": "المضارع التام يُستعمل في بداية الأخبار لوصف الوضع الراهن قبل تحديد الزمن كما في الفقرة 1 من 2.7." }
+          ],
+          "hints": [
+            "اقرأ قاعدة 2 في PB ص 15 حول Past simple tense.",
+            "ابحث عن ظرف الزمان المحدد two days ago.",
+            "الصحيح: لأن two days ago تحدد زمناً ماضياً معلوماً."
+          ],
+          "explain": "تقرّر قاعدة PB ص 15 استخدام الماضي البسيط عندما يكون وقت الحدوث معلوماً بظرف زماني مثل two days ago."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-2_10-presentperf", "origin": "from_book", "page_ref": 15, "front": "Present perfect use", "back": "وصف الوضع الراهن الناتج عن الحدث (has/have + V3)", "tag": "Unit 2 · 2.10" },
+    { "id": "fc-2_10-pastsimple", "origin": "from_book", "page_ref": 15, "front": "Past simple use", "back": "حدث وقع في زمن ماضٍ معلوم (ago / in 1883 / last...)", "tag": "Unit 2 · 2.10" },
+    { "id": "fc-2_10-reladd", "origin": "from_book", "page_ref": 15, "front": "Additional relative + prep", "back": "معلومة إضافية: بين فاصلتين + (حرف الجر + which)", "tag": "Unit 2 · 2.10" },
+    { "id": "fc-2_10-relnec", "origin": "from_book", "page_ref": 15, "front": "Necessary relative + prep", "back": "معلومة ضرورية: بلا فواصل + حرف الجر في نهاية العبارة", "tag": "Unit 2 · 2.10" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت البنود 1–4 وأمثلتها في PB ص 15 مع صورة pb-17.png بدقة 100%.",
+    "wb_ocr_vs_image": "قُورنت صفحات WB ص 24–26 مع tesseract.js eng: أخرجت OCR رقم '210 A' و'NO Survivors' بالأحرف الكبيرة و'| was talking' و'Oy'، وصُحّحت جميعها بصرياً عبر wb-025.png وwb-026.png وwb-027.png إلى '2.10 A' و'no survivors.' و'I was talking'."
+  }
+}
