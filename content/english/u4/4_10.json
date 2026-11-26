@@ -1,0 +1,220 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_10",
+    "code": "4.10",
+    "title": "Language review 8",
+    "title_ar": "مراجعة القواعد 8: السببية بـ have/get، والتغير بـ get، والتناسب بمقارنتين، وأقسام الكلام",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 33, "book_page": 31 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 52, "book_page": 51 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 53, "book_page": 52 }
+    ],
+    "reference_images": {
+      "pb_31": "assets/ref/pb_p031.webp",
+      "wb_51": "assets/ref/wb_p051.webp",
+      "wb_52": "assets/ref/wb_p052.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_10-have-get",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 31 },
+      "dir": "ltr",
+      "recall_words": ["have", "get", "infinitive", "the deeper", "the greater"],
+      "content": {
+        "lines": [
+          "4.10 Language review 8",
+          "1 Use of have/get + infinitive",
+          "You use these verbs to replace other instruction words such as ask, tell or order. Using have or get focuses on the instruction itself rather than the way it is given.",
+          "Example: Ask the boy to put away his bag. | Have the boy put away his bag. | Get the boy to put away his bag.",
+          "Note: With have, the infinitive is without to.",
+          "2 Use of get to show change of state",
+          "Get is commonly used to replace the more formal become.",
+          "Example: He got wet when he went out in the boat.",
+          "3 Use of two comparatives",
+          "You use a comparative in each half of a sentence to show how one action causes the other or is related to the other.",
+          "Examples: The deeper the water, the greater the pressure. | The further you go down, the more your ears hurt.",
+          "Note: These kinds of sentences are often different from simple comparative sentences. For example, words omitted and word order change. In the first example, words are omitted - in fact, there is no active verb: The deeper (that) the water (becomes), the greater (that) the pressure (becomes).",
+          "In the second example there are omitted words and a change in word order. Notice also that the comparative words further, more have become nouns the further, the more: (As) you go down further, your ears hurt more."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "الفرق بين have + V1 وget + to + V1 وصيغة (The + صيغة مقارنة)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 31,
+            "html": "<ul><li><b>السببية (1):</b> <span dir='ltr'>Have + person + <b>V1 (بدون to)</b></span> مقابل <span dir='ltr'>Get + person + <b>to + V1</b></span> (مثال <bdi dir='ltr'>4.8</bdi>: <span dir='ltr'><i>have a friend fill the bottle</i></span>).</li><li><b>تغيّر الحالة (2):</b> <span dir='ltr'>get + صفة = become + صفة</span> (مثل <span dir='ltr'>gets hungry / gets colder / got wet</span>).</li><li><b>التناسب التلازمي (3):</b> <span dir='ltr'><b>The + صفة/ظرف مقارنة</b> ... <b>, the + صفة/ظرف مقارنة</b></span> — لاحظ تحول <span dir='ltr'>good/well → <b>the better</b></span> في <bdi dir='ltr'>4.10 B #3</bdi> (<span dir='ltr'>The better you read, the more you will enjoy reading.</span>).</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 31,
+            "caption": "قوالب have و get والمقارنة التلازمية",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='14' y='18' width='276' height='84' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='152' y='44' text-anchor='middle' font-size='12' font-weight='700'>Causative (have vs get)</text><text x='152' y='66' text-anchor='middle' font-size='11'>Have somebody HELP (bare inf.)</text><text x='152' y='86' text-anchor='middle' font-size='11'>Get somebody TO help (with to)</text><rect x='310' y='18' width='276' height='84' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='448' y='44' text-anchor='middle' font-size='12' font-weight='700'>Double Comparative</text><text x='448' y='66' text-anchor='middle' font-size='11'>The + comp..., the + comp...</text><text x='448' y='86' text-anchor='middle' font-size='11'>The deeper..., the greater...</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 31,
+            "html": "<p dir='ltr'><b>Good/Well → Better:</b> If you read well → <b>The better</b> you read, <b>the more</b> you will enjoy reading.</p>"
+          },
+          "self_check_ref": "chk-4_10-a",
+          "page_ref": { "book": "PB", "page": 31, "pdf_page": 33, "image": "assets/ref/pb_p031.webp" }
+        }
+      }
+    },
+    {
+      "id": "u4-4_10-pos",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 31 },
+      "dir": "ltr",
+      "recall_words": ["adverb", "preposition", "well", "water", "up", "since", "like"],
+      "content": {
+        "lines": [
+          "4 Parts of speech (nouns, verbs, adjectives, adverbs, prepositions)",
+          "It is important to identify what part of speech a word is in a sentence. This helps you guess the meaning of the word if it is new.",
+          "Example (printed column alignment in PB p. 31): [adverb: Carefully] | [verb: cut] | [preposition: the top] | [adjective: off] | [noun: the plastic bottle.]",
+          "Many words can be different parts of speech. Sometimes the meaning is related, sometimes it is completely different.",
+          "Examples: water (noun = liquid | verb = give water to) | up (preposition = movement upwards | verb = raise) | well (noun = hole which you can get water from | adjective = not ill | adverb = in a good way)",
+          "Find other examples of the above language points in the texts.",
+          "Now do activities A to D in the Workbook."
+        ]
+      },
+      "edu_note_html": "<strong>تنبيه مهم لخطأ مطبعي صريح في <bdi dir='ltr'>PB p. 31</bdi> (قسم 4):</strong><br>في الصندوق الأصفر الأول تحت قسم <span dir='ltr'>4</span>، طُبعت عناوين أقسام الكلام أعلى الكلمات بانزياح/تبادل مطبعي حرفي بحيث وُضعت كلمة <span dir='ltr'><code>preposition</code></span> فوق <span dir='ltr'><code>the top</code></span> (عبارة اسمية)، ووُضعت كلمة <span dir='ltr'><code>adjective</code></span> فوق <span dir='ltr'><code>off</code></span> (حرف جر/ظرف مكاني)، بينما تحوي <span dir='ltr'><code>the plastic bottle</code></span> الاسم <span dir='ltr'>bottle</span> مسبوقاً بالصفة/الاسم المخصِّص <span dir='ltr'>plastic</span>. قد حُفظت المحاذاة المطبوعة حرفياً في «من الكتاب» مع توثيق هذا التبادل في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi>."
+    }
+  ],
+  "word_glossary_map": {
+    "up": { "pos": "v/prep", "ar": "يرفع (فعل) / باتجاه الأعلى (حرف جر)", "in_book_wordlist": true, "wb_page": 113 },
+    "since": { "pos": "conj/prep", "ar": "بما أن / لأن (ربط) · منذ (جرّ)", "in_book_wordlist": false, "wb_page": 52 },
+    "like": { "pos": "v/prep", "ar": "يحب (فعل) · مثل / يشبه (حرف جر)", "in_book_wordlist": false, "wb_page": 52 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_10-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 51 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.10 A Write sentences using have or get. Use the correct tense.",
+      "prompt_ar": "أعد كتابة الجمل 1–4 باستخدام have (مصدر بدون to) أو get (مصدر مع to، أو مفعول اسم في 4):",
+      "word_bank": [
+        "Have somebody help you with your homework.",
+        "Get the garage to fix your car.",
+        "Have your daughter do your shopping for you.",
+        "Get advice about your career."
+      ],
+      "items": [
+        { "num": 1, "prompt": "1 You need somebody to help you with your homework. (have) → ______", "answers": ["Have somebody help you with your homework."] },
+        { "num": 2, "prompt": "2 You need the garage to fix your car. (get) → ______", "answers": ["Get the garage to fix your car."] },
+        { "num": 3, "prompt": "3 You need your daughter to do your shopping for you. (have) → ______", "answers": ["Have your daughter do your shopping for you."] },
+        { "num": 4, "prompt": "4 You need advice about your career. (get) → ______", "answers": ["Get advice about your career.", "Get somebody to give you advice about your career."] }
+      ],
+      "hints": [
+        "1 و3 مع have بدون to؛ و2 مع get يتطلب to fix؛ و4 تقبل Get advice مباشرة (بمعنى احصل على نصيحة)."
+      ]
+    },
+    {
+      "id": "wb-4_10-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 51 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Write these sentences in another way (using The + comparative..., the + comparative...).",
+      "prompt_ar": "أعد صياغة الجمل الشرطية 1–4 باستعمال صيغة المقارنة التلازمية (The + comp..., the + comp...):",
+      "word_bank": [
+        "The hungrier a fish gets, the easier it will be to catch.",
+        "The cheaper food gets, the more you can buy.",
+        "The better you read, the more you will enjoy reading.",
+        "The colder it gets, the warmer the clothes you'll need."
+      ],
+      "items": [
+        { "num": 1, "prompt": "1 If a fish gets hungry, it will be easier to catch. → ______", "answers": ["The hungrier a fish gets, the easier it will be to catch."] },
+        { "num": 2, "prompt": "2 If food gets cheaper, you can buy more. → ______", "answers": ["The cheaper food gets, the more you can buy."] },
+        { "num": 3, "prompt": "3 If you read well, you will enjoy reading more. → ______", "answers": ["The better you read, the more you will enjoy reading."] },
+        { "num": 4, "prompt": "4 If it gets colder, you'll need warmer clothes. → ______", "answers": ["The colder it gets, the warmer the clothes you'll need.", "The colder it gets, the warmer clothes you'll need."] }
+      ],
+      "hints": [
+        "في 3 لا تنس تحويل well إلى صيغة المقارنة better (The better you read...)."
+      ]
+    },
+    {
+      "id": "wb-4_10-cd",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 51 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.10 C Write one sentence of each part of speech (noun & verb) for 1–6; D (WB p. 52) Identify parts of speech and synonyms for the italicized words.",
+      "prompt_ar": "أمثلة التمرينين C (توظيف الكلمة كاسم وكفعل) وD (تحديد أقسام الكلام ومعانيها البديلة في السياق):",
+      "items": [
+        { "num": 1, "question": "C #1 heat (given example)", "model_answer": "If you heat metal, it expands. (verb) | I don't like heat. (noun)", "explain_ar": "المثال المحلول في الكتاب." },
+        { "num": 2, "question": "C #2–#6: fish, cut, saw, milk, fly (as verb and noun)", "model_answer": "• fish: My brother likes to fish (v). | We cooked fresh fish (n).\n• cut: Knives can cut you (v). | The cut on his hand hurt (n).\n• saw: Builders saw wood (v). / Yesterday I saw Ali (v). | Use a sharp saw (n).\n• milk: Farmers milk cows (v). | Drink warm milk (n).\n• fly: Birds fly south (v). | There is a fly on the window (n).", "explain_ar": "للمستخدم حرية تنويع الجمل مع الحفاظ على صحة الموقع النحوي." },
+        { "num": 3, "question": "D #1 a) I like chocolate... / He is like me in many ways.", "model_answer": "First 'like': verb (= enjoy / am fond of) | Second 'like': preposition (= similar to)", "explain_ar": "الأولى فعل بمعنى يحب، والثانية حرف جر بمعنى مثل/يشبه." },
+        { "num": 4, "question": "D #1 b) Since he's late... / waiting for him since 10 o'clock.", "model_answer": "First 'Since': conjunction (= because / as) | Second 'since': preposition (= from / starting at)", "explain_ar": "الأولى أداة ربط تعليلية بمعنى لأن، والثانية حرف جر زماني بمعنى منذ." },
+        { "num": 5, "question": "D #1 c) My sister is well and I am as well.", "model_answer": "First 'well': adjective (= healthy / not ill) | Second 'well' ('as well'): adverb (or adverbial phrase = too / also)", "explain_ar": "الأولى صفة للصحة (healthy)، والثانية ضمن عبارة ظرفية بمعنى أيضاً (too)." },
+        { "num": 6, "question": "D #1 d) I left the town and turned left at the first junction.", "model_answer": "First 'left': verb (past of leave = departed from / went out of) | Second 'left': adverb of direction (= to the left side / opposite of right)", "explain_ar": "الأولى فعل ماضٍ بمعنى غادرتُ، والثانية ظرف مكان/اتجاه بمعنى يساراً." }
+      ],
+      "hints": [
+        "راجع بند D #2 باستبدال الكلمة المائلة بكلمة أو عبارة مرادفة: enjoy / similar to ، because / from ، healthy / too ، departed / to the left."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_10-a",
+      "origin": "educational_addition",
+      "page_ref": 31,
+      "questions": [
+        {
+          "id": "q-4_10-1",
+          "type": "mcq",
+          "stem": "According to PB page 31, which sentence uses 'have' correctly instead of 'Ask'?",
+          "evidence_block_id": "u4-4_10-have-get",
+          "options": [
+            { "text": "Have your daughter do your shopping for you.", "is_correct": true, "why_wrong": null },
+            { "text": "Have your daughter to do your shopping for you.", "is_correct": false, "why_wrong": "تنص ملاحظة PB ص 31 صراحةً: With have, the infinitive is without to." },
+            { "text": "Get your daughter do your shopping for you.", "is_correct": false, "why_wrong": "الفعل get يتطلب وجود to قبل المصدر (Get ... to do)." },
+            { "text": "Have your daughter doing your shopping for you.", "is_correct": false, "why_wrong": "السببية بالأمر في الدرس تستعمل المصدر المجرد (do)." }
+          ],
+          "hints": [
+            "اقرأ الملاحظة أسفل الصندوق الأصفر الأول في PB ص 31."
+          ],
+          "explain": "الفعل السببي have يتبعه المصدر مجرداً من to (do)، بينما يتطلب get استعمال to + المصدر."
+        },
+        {
+          "id": "q-4_10-2",
+          "type": "mcq",
+          "stem": "In WB 4.10 D #1 c) 'My sister is well and I am as well', what parts of speech are the two uses of 'well'?",
+          "evidence_block_id": "u4-4_10-pos",
+          "options": [
+            { "text": "First 'well': adjective (= not ill) | Second 'as well': adverb/phrase (= too / also)", "is_correct": true, "why_wrong": null },
+            { "text": "First 'well': noun (= water hole) | Second 'well': verb", "is_correct": false, "why_wrong": "لا يصف أي منهما بئر الماء هنا، فالأول يصف صحة الأخت (healthy/not ill)." },
+            { "text": "Both are verbs.", "is_correct": false, "why_wrong": "well لا تأتي فعلاً في هذه الجملة؛ الفعل هنا هو is وam." },
+            { "text": "First 'well': adverb | Second 'as well': noun", "is_correct": false, "why_wrong": "بعد فعل الكون is تصف حالة الشخص الصحية فهي adjective (وفق تعريف PB ص 31 نفسه: well adjective = not ill)." }
+          ],
+          "hints": [
+            "طابق تعريفات كلمة well في جدول PB ص 31 ومعنى as well في 3.10."
+          ],
+          "explain": "في هذا السياق تعني well الأولى (بصحة جيدة — صفة adjective)، وتؤدي as well معنى (أيضاً — ظرف/عبارة ربط)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_10-caus", "origin": "from_book", "page_ref": 31, "front": "have vs get (causative instructions)", "back": "Have somebody + V1 (no 'to') | Get somebody + TO + V1", "tag": "Unit 4 · 4.10" },
+    { "id": "fc-4_10-like", "origin": "from_book", "page_ref": 52, "front": "like (v) vs like (prep)", "back": "I like (v = enjoy) chocolate | He is like (prep = similar to) me", "tag": "Unit 4 · 4.10" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت النقاط 1–4 في PB ص 31 مع pb-33.png؛ واكتُشف خطأ محاذاة أعمدة 'preposition / adjective / noun' فوق 'the top / off / the plastic bottle.' وحُفظ مع توثيقه.",
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 51–52 مع wb-052.png وwb-053.png وصُحّحت قراءة OCR ('(/4ave)' ← '(have)', '(ge)' ← '(get)', 'wa)' ← 'way', 'Jeff' ← 'left', 'I like')."
+  }
+}
