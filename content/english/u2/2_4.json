@@ -1,0 +1,269 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u2", "number": 2, "title": "Reporting events" },
+  "lesson": {
+    "id": "eng-u2-2_4",
+    "code": "2.4",
+    "title": "Don and Debbie: dreamers",
+    "title_ar": "دون وديبي: الحالمون (استراتيجيات سرد القصص والمحادثة)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 13, "book_page": 11 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 17, "book_page": 16 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 18, "book_page": 17 }
+    ],
+    "reference_images": {
+      "pb_11": "assets/ref/pb_p011.webp",
+      "wb_16": "assets/ref/wb_p016.webp",
+      "wb_17": "assets/ref/wb_p017.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u2-2_4-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 11 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "2.4 Don and Debbie: dreamers",
+          "Listen to the conversation. What does Jim think of Don's dream?",
+          "Do activities A and B in the Workbook.",
+          "Listen and repeat the conversation."
+        ]
+      }
+    },
+    {
+      "id": "u2-2_4-don-dialogue",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "PB", "page": 11 },
+      "dir": "ltr",
+      "recall_words": ["nightmare", "actually", "awful", "terrified", "scary", "calm down", "just a minute", "slow down"],
+      "content": {
+        "lines": [
+          "[Show interest] Don: I had a dream last night. Well , a nightmare, actually.",
+          "Jim: Really! What about?",
+          "Don: It was awful. I was terrified. There were men with horrible faces and...",
+          "[Ask for clarification] Jim: Just a minute. Calm down. Begin at the beginning. Now ... Where were you?",
+          "[Set the scene] Don: I dreamt that we were working in the fields and ...",
+          "Jim: Who was? Who were you with?",
+          "Don: My brother. My elder brother. We were planting seed for next year. And I was driving the tractor. And it was brilliant weather. Then suddenly ...",
+          "Jim: Slow down. Slow down. What happened?",
+          "[Tell the story] Don: I heard somebody shouting. Then I saw two men running towards us.",
+          "[Ask for clarification] Jim: Who were they?",
+          "Don: I don't know. But they were really scary. One was holding a gun. My brother and I wanted to run but we couldn't move. It was terrible.",
+          "Jim: So how did you escape?",
+          "Don: I woke up."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة مطابقة حرفية:</strong> وردت في طبعة الكتاب ص 11 مسافة قبل الفاصلة في <span dir='ltr'><code>Well , a nightmare</code></span> وحُفظت حرفياً؛ كما تشير الهوامش الحمراء المرفقة إلى وظائف المحادثة الأربع: <span dir='ltr'>Show interest / Ask for clarification / Set the scene / Tell the story</span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "dialogue_roleplay",
+        "label": "عناصر سرد القصة وتمهيد الماضي المستمر وأفعال الحواس",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 11,
+            "html": "<ul><li><b>التمهيد للمشهد (<span dir='ltr'>Set the scene</span>):</b> يستخدم الماضي المستمر: <span dir='ltr'><code>we were working in the fields / We were planting seed / I was driving</code></span>.</li><li><b>وقوع الحدث المفاجئ (<span dir='ltr'>Past simple</span>):</b> <span dir='ltr'><code>I heard somebody shouting / I saw two men running</code></span> ← وهذا يمهّد مباشرةً لقاعدة أفعال الحواس (<span dir='ltr'>hear/see + object + V-ing</span>) في <bdi dir='ltr'>2.5</bdi>.</li><li><b>شعور المستمع (<span dir='ltr'>Jim</span>):</b> يبدي الاهتمام والترقّب والجدية ويساعد دون على التهدئة وترتيب الأحداث (<span dir='ltr'>Really! What about? / Calm down / Begin at the beginning</span>).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 11,
+            "html": "<p dir='ltr'><b>Scene:</b> We <u>were working</u> in the fields.<br><b>Sudden event + sense verb:</b> I <u>heard</u> somebody <u>shouting</u>.</p>"
+          },
+          "self_check_ref": "chk-2_4-a",
+          "page_ref": { "book": "PB", "page": 11, "pdf_page": 13, "image": "assets/ref/pb_p011.webp" }
+        }
+      }
+    },
+    {
+      "id": "u2-2_4-debbie-dialogue",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "PB", "page": 11 },
+      "dir": "ltr",
+      "recall_words": ["brilliant", "dreamer", "balloon", "spaceship", "hold", "survive"],
+      "content": {
+        "lines": [
+          "Listen to the conversation. What does Jennie think of Debbie's dream?",
+          "Do activities C and D in the Workbook.",
+          "Listen and repeat the conversation.",
+          "Debbie: I had a brilliant dream last night. It was wonderful. I didn't want to wake up.",
+          "Jennie: Oh, no. Not again. Well, what was this one about?",
+          "Debbie: I dreamt that I was flying in a balloon. The moon was shining and the stars were ...",
+          "Jennie: Just a minute. You were flying in a balloon at night!",
+          "Debbie: Yes. It was beautiful. I was flying high above the clouds. And then suddenly ...",
+          "Jennie: You saw a spaceship.",
+          "Debbie: No. I heard a bird talking to me.",
+          "Jennie: You heard a bird talking to you!",
+          "Debbie: Yes. It told me to get out of the balloon and climb onto its back.",
+          "Jennie: And you got out, of course.",
+          "Debbie: Of course. We flew over the mountains and over the sea. I could see lots of small boats about a kilometre below me. It was wonderful. But then it ended.",
+          "Jennie: Why? What happened?",
+          "Debbie: I lost my hold on the bird’s feathers and fell off.",
+          "Jennie: And how did you survive this one-kilometre fall?",
+          "Debbie: I woke up.",
+          "Ask questions about one of your partner's dreams and answer questions about one of your own."
+        ]
+      },
+      "edu_note_html": "<strong>موقف المستمعة (<bdi dir='ltr'>Jennie</bdi>):</strong> بخلاف تفاعل جيم مع كابوس دون، تبدي جيني تضجراً وسخرية لطيفة لأن ديبي تكرر أحلامها الخيالية (<span dir='ltr'>Oh, no. Not again!</span> / <span dir='ltr'>And you got out, of course.</span>)."
+    }
+  ],
+  "word_glossary_map": {
+    "dreamer": { "pos": "n", "ar": "حالم (كثير الأحلام)", "in_book_wordlist": true, "wb_page": 111 },
+    "actually": { "pos": "adv", "ar": "في الواقع / في الحقيقة", "in_book_wordlist": true, "wb_page": 111 },
+    "awful": { "pos": "adj", "ar": "فظيع / سيّئ جداً", "in_book_wordlist": true, "wb_page": 111 },
+    "Just a minute.": { "pos": "phr", "ar": "انتظر لحظة", "in_book_wordlist": true, "wb_page": 111 },
+    "Calm down!": { "pos": "phr v", "ar": "اهدأ", "in_book_wordlist": true, "wb_page": 111 },
+    "Slow down": { "pos": "phr v", "ar": "تمهّل / أبطئ في الكلام", "in_book_wordlist": true, "wb_page": 112 },
+    "scary": { "pos": "adj", "ar": "مخيف", "in_book_wordlist": true, "wb_page": 111 },
+    "brilliant": { "pos": "adj", "ar": "رائع / مبهر (= very good)", "in_book_wordlist": true, "wb_page": 111 },
+    "spaceship": { "pos": "n", "ar": "مركبة فضائية", "in_book_wordlist": true, "wb_page": 112 },
+    "nightmare": { "pos": "n", "ar": "كابوس / حلم مزعج مخيف", "in_book_wordlist": false, "wb_page": 16 }
+  },
+  "activities": [
+    {
+      "id": "wb-2_4-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 16 },
+      "type": "matching",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "2.4 A These are words from the first text on PB page 11. Choose the best meaning.",
+      "prompt_ar": "اختر المعنى الأقرب لكل كلمة أو عبارة من الحوار الأول (WB ص 16):",
+      "choices": [
+        { "value": "1-b", "label": "b) a frightening dream" },
+        { "value": "2-b", "label": "b) very bad" },
+        { "value": "3-b", "label": "b) stop being excited" }
+      ],
+      "items": [
+        { "letter": "1", "word": "nightmare (a bad night's sleep / a frightening dream / a pleasant dream)", "ar": "كابوس (حلم مزعج ومخيف)", "answer": "1-b" },
+        { "letter": "2", "word": "awful (very long / very bad / very good)", "ar": "فظيع / سيّئ للغاية", "answer": "2-b" },
+        { "letter": "3", "word": "calm down (talk more clearly / stop being excited / stop being sad)", "ar": "اهدأ / تخلّ عن الانفعال", "answer": "3-b" }
+      ],
+      "hints": [
+        "1: قال دون بعدها مباشرة I was terrified. 2: It was awful. 3: طلب جيم من دون أن يهدأ ليستطيع الحكاية.",
+        "الحل: 1 → b، 2 → b، 3 → b."
+      ]
+    },
+    {
+      "id": "wb-2_4-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 17 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "A Answer these questions about Don's dream. [printed 'A' in WB p. 17 for activity B]",
+      "prompt_ar": "أجب عن أسئلة حلم دون الخمسة (تنبيه: طُبع الحرف A خطأً في الكتاب بدل B رغم أن PB ص 11 أحال إلى activities A and B):",
+      "items": [
+        { "num": 1, "question": "Who was in the fields?", "model_answer": "Don and his elder brother.", "explain_ar": "في الحوار: I dreamt that we were working in the fields... My brother. My elder brother." },
+        { "num": 2, "question": "Who was driving the tractor?", "model_answer": "Don.", "explain_ar": "قال دون: And I was driving the tractor." },
+        { "num": 3, "question": "Who was holding a gun?", "model_answer": "One of the two men (who were running towards Don and his brother).", "explain_ar": "قال دون: I saw two men running towards us ... One was holding a gun." },
+        { "num": 4, "question": "Why didn't they run away?", "model_answer": "Because they couldn't move (they wanted to run but couldn't move).", "explain_ar": "العبارة الحرفية: My brother and I wanted to run but we couldn't move." },
+        { "num": 5, "question": "Which words or phrases tell you that the dream was unpleasant?", "model_answer": "nightmare, awful, terrified, horrible faces, really scary, terrible.", "explain_ar": "مجموعة الأوصاف السلبية الدالة على الرعب والضيق." }
+      ],
+      "hints": [
+        "ارجع إلى حوار Don and Jim أعلى PB ص 11.",
+        "في 5 اجمع الصفات والأسماء الدالة على الفزع."
+      ]
+    },
+    {
+      "id": "wb-2_4-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 17 },
+      "type": "matching",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C These are words from the second text on PB page 11. Choose the best meaning. [Note: item 1 literally prints 'a) very dark  d) very cold  c) very good']",
+      "prompt_ar": "اختر المعنى الأقرب لكل عبارة من حوار ديبي وجيني (لاحظ الخطأ المطبعي 'd)' بدلاً من 'b)' في البند 1 بالكتاب):",
+      "choices": [
+        { "value": "1-c", "label": "c) very good" },
+        { "value": "2-a", "label": "a) could no longer hold" }
+      ],
+      "items": [
+        { "letter": "1", "word": "brilliant — a) very dark / d) very cold / c) very good", "ar": "مبهر / ممتاز للغاية", "answer": "1-c" },
+        { "letter": "2", "word": "lost my hold on — a) could no longer hold / b) held tighter / c) pulled out", "ar": "أفلتُّ قبضتي من", "answer": "2-a" }
+      ],
+      "hints": [
+        "1: أردفت ديبي بعدها مباشرة: It was wonderful. 2: فقدت قبضتها على ريش الطائر وسقطت.",
+        "الحل: 1 → c) very good ، 2 → a) could no longer hold."
+      ]
+    },
+    {
+      "id": "wb-2_4-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 17 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Answer these questions about Debbie's dream.",
+      "prompt_ar": "أجب عن أسئلة حلم ديبي الأربعة في كتاب التمارين ص 17:",
+      "items": [
+        { "num": 1, "question": "What was she flying in at the beginning of her dream?", "model_answer": "A balloon.", "explain_ar": "قالت: I dreamt that I was flying in a balloon." },
+        { "num": 2, "question": "How did she fly over the mountains?", "model_answer": "On a bird's back (holding on to its feathers).", "explain_ar": "تسلقت إلى ظهر الطائر المتكلم وحلّقت فوق الجبال والبحر." },
+        { "num": 3, "question": "How high did she fly?", "model_answer": "High above the clouds (and about a kilometre above the small boats / sea).", "explain_ar": "ذكرت عبارتين: high above the clouds وabout a kilometre below me (وsurvive this one-kilometre fall)." },
+        { "num": 4, "question": "Which words or phrases tell you that the dream was very pleasant?", "model_answer": "brilliant dream, wonderful, I didn't want to wake up, beautiful.", "explain_ar": "تعابير السعادة والإعجاب طوال حوار ديبي." }
+      ],
+      "hints": [
+        "تأكد في السؤال 3 من ذكر عبارة ارتفاع السقوط/الطيران (above the clouds / about a kilometre)."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-2_4-a",
+      "origin": "educational_addition",
+      "page_ref": 11,
+      "questions": [
+        {
+          "id": "q-2_4-1",
+          "type": "mcq",
+          "stem": "In Don's dialogue on PB page 11, what conversational function is illustrated by Jim's lines 'Just a minute. Calm down... Where were you?' and 'Who were they?'",
+          "evidence_block_id": "u2-2_4-don-dialogue",
+          "options": [
+            { "text": "Ask for clarification", "is_correct": true, "why_wrong": null },
+            { "text": "Set the scene", "is_correct": false, "why_wrong": "Set the scene هي وظيفة دون عند وصف خلفية الحدث بالماضي المستمر: I dreamt that we were working in the fields." },
+            { "text": "Tell the story", "is_correct": false, "why_wrong": "Tell the story تصف لحظة سرد الحدث المفاجئ: I heard somebody shouting." },
+            { "text": "Show interest", "is_correct": false, "why_wrong": "Show interest وُضعت في الهامش عند سطر البداية واستجابة جيم الأولى (Really! What about?)." }
+          ],
+          "hints": [
+            "انظر إلى الوسوم الحمراء على يسار حوار دون وجيم في PB ص 11.",
+            "قارن وظيفة أسئلة التوضيح التي يطرحها جيم.",
+            "الصحيح: Ask for clarification."
+          ],
+          "explain": "يساعد المستمع في الحوار على توضيح التفاصيل بطرح أسئلة استيضاحية (Ask for clarification) مثل Where were you? وWho were they?."
+        },
+        {
+          "id": "q-2_4-2",
+          "type": "mcq",
+          "stem": "How did Don and Debbie both survive / escape the frightening endings of their dreams?",
+          "evidence_block_id": "u2-2_4-debbie-dialogue",
+          "options": [
+            { "text": "They both woke up.", "is_correct": true, "why_wrong": null },
+            { "text": "Don drove away on the tractor and Debbie landed in a boat.", "is_correct": false, "why_wrong": "لم يستطع دون التحرك مع أخيه، وهوت ديبي من ظهر الطائر؛ وكلاهما أجاب آخر الحوار: I woke up." },
+            { "text": "The police arrested the men and a spaceship rescued Debbie.", "is_correct": false, "why_wrong": "ذكرت جيني كلمة spaceship تخميناً فقط فنفتها ديبي بقولها No." },
+            { "text": "They ran away together into the fields.", "is_correct": false, "why_wrong": "لكل منهما حلم مستقل: دون في الحقل وديبي في المنطاد وعلى ظهر طائر." }
+          ],
+          "hints": [
+            "اقرأ السطر الأخير من كلا الحوارين في PB ص 11.",
+            "Jim: So how did you escape? / Jennie: And how did you survive...?",
+            "الصحيح: They both woke up."
+          ],
+          "explain": "انتهى كلا الحوارين بالجملة نفسها تماماً: I woke up."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-2_4-nightmare", "origin": "from_book", "page_ref": 16, "front": "nightmare (n)", "back": "كابوس (حلم مزعج ومخيف)", "tag": "Unit 2 · 2.4" },
+    { "id": "fc-2_4-scary", "origin": "from_book", "page_ref": 11, "front": "scary (adj)", "back": "مخيف / مرعب", "tag": "Unit 2 · 2.4" },
+    { "id": "fc-2_4-brilliant", "origin": "from_book", "page_ref": 17, "front": "brilliant (adj)", "back": "رائع / ممتاز جداً (= very good)", "tag": "Unit 2 · 2.4" },
+    { "id": "fc-2_4-losthold", "origin": "from_book", "page_ref": 17, "front": "lose one's hold on", "back": "يفلت قبضته على (يعجز عن التمسك بـ)", "tag": "Unit 2 · 2.4" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبق النصان الكاملان في PB ص 11 مع صورة pb-13.png والهوامش الحمراء المرفقة: حُفظت المسافة الطباعية 'Well , a nightmare' حرفياً.",
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 16–17 مع tesseract.js eng: أخرجت OCR رقم التمرين 'A' المطبوع خطأً بدلاً من 'B' في WB ص 17 (وتأكدت طباعته A في wb-018.png)، كما وردت المطبوعة 'd) very cold' بدلاً من 'b)' في C #1؛ وحُفظتا حرفياً مع التوضيح في REVIEW_NEEDED.md، وصُحّحت قراءات OCR مثل 'Ow)' و'Ceo' و'Jost' بصرياً."
+  }
+}
