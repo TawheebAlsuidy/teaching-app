@@ -1,0 +1,250 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "arts", "number": 7, "title": "Arts Reader (Literary Section)" },
+  "lesson": {
+    "id": "eng-arts-7",
+    "code": "AR7",
+    "title": "Telford Hall Episode 3",
+    "title_ar": "القسم الأدبي (7): قصة تيلفورد هول — الحلقة 3: الامتحانات النهائية، نتائج النجاح، والعودة للوطن",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 60, "book_page": 58 },
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 61, "book_page": 59 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 91, "book_page": 90 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 92, "book_page": 91 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 93, "book_page": 92 }
+    ],
+    "reference_images": {
+      "pb_58": "assets/ref/pb_p058.webp",
+      "pb_59": "assets/ref/pb_p059.webp",
+      "wb_90": "assets/ref/wb_p090.webp",
+      "wb_91": "assets/ref/wb_p091.webp",
+      "wb_92": "assets/ref/wb_p092.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "arts-7-episode3-p58",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 58 },
+      "dir": "ltr",
+      "recall_words": ["hold", "pour into", "name card", "disturb", "sand dunes", "roast meat", "delicious", "Many hands make light work.", "call in", "fall asleep"],
+      "content": {
+        "lines": [
+          "ARTS 7   Telford Hall Episode 3 — Part 1 (PB p. 58)",
+          "[Complete story pages available offline in assets/ref/pb_p058.webp & pb_p059.webp; structured column-line anchors below matching WB Arts 7 A–F:]",
+          "Col. 1 (Exam morning & hall, PB p. 58): On a brightly sunny examination morning ('Lovely day,' — 'It always is when there's an examination'), Ahmed and Bob walked through college gardens to the main hall. At 9.45 doors opened, students poured into rows of desks with name cards and face-down exam papers. An unfamiliar lecturer supervised the three-hour exams. By Friday afternoon Ahmed's arm ached but he felt happy exams were over.",
+          "Col. 2 (Sunday weekend with Bob's family, PB p. 58): Waiting for results the following week ('until then'), Ahmed drove Bob home in his black London taxi after Bob's parents phoned ('They would like you to come home'). On Sunday morning, Ahmed, Bob and Bob's mother walked along the beach while Bob's father stayed home cooking Sunday roast beef ('He always cooks Sunday lunch... doesn't like being disturbed'). Seeing high sand dunes beside the beach reminded Ahmed of home ('They remind me of home'). Back home, lunch tasted delicious ('It tasted delicious as well'). Afterwards everyone washed up together ('Many hands make light work,' said Bob's mother). Bob's sister and family called in to say 'hello'; when they had gone ('When they had gone'), the men played a word game and all watched an old film. Just before falling asleep, Ahmed thought how much he enjoyed spending 'a quite Sunday' in Bob's home — 'It made him miss his own family.'",
+          "Results Board transition: They returned to Norton the day the examination results were posted on the main building notice board."
+        ],
+        "image": "assets/media/arts7_exam_hall.webp",
+        "caption": "A large exam hall (PB page 58)"
+      }
+    },
+    {
+      "id": "arts-7-episode3-p59",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 59 },
+      "dir": "ltr",
+      "recall_words": ["come out", "hospitality", "kindness", "one of the family", "disappear", "perfectly"],
+      "content": {
+        "lines": [
+          "ARTS 7   Telford Hall Episode 3 — Part 2 (PB p. 59)",
+          "Exam Results: Bob worried because he could not see their names among the B and C grades; another student pointed to the top under grade A: Robert Wilson and Ahmed Hassan Al-Hadrami! Ahmed said he was going home 'The day after tomorrow.'",
+          "Ahmed's Thank-you Letter (Telford Hall, Norton. Friday.): 'Dear Mr and Mrs Wilson, Thank you very much for having me to stay for the past few days. I had a wonderful time and you really made me feel like one of the family. I hope one day that I will be able to repay your kindness and hospitality. Thank you again. Best wishes, Ahmed'",
+          "Departure from Norton: At rainy Norton Central station, Ahmed asked Bob to look after the taxi ('Of course, 'said Bob. 'Don't worry about a thing.'). Boarding the London train, Ahmed opened the window and shouted 'See you in October ...' as Bob waved. Watching countryside that had seemed strange nine months earlier, Ahmed reached Euston station and four hours later looked out of his plane over London before heading home ten hours away ('through the clouds Ten hours later...').",
+          "Discussion: 1 Does your family spend Fridays in a traditional way? 2 Compare your Fridays with English Saturdays."
+        ],
+        "image": "assets/media/arts7_london.webp",
+        "caption": "Looking down on London from the plane (PB page 59)"
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي ودقة الأسطر (<bdi dir='ltr'>PB pp. 58–59 &amp; WB 7 D</bdi>):</strong><br>1) جرى التحقق من كل سطر من مراجع الضمائر السبعة في <bdi dir='ltr'>WB 7 D (ص 91)</bdi> بالعدّ الفعلي على صورة <span dir='ltr'>pb-60.png</span> (<span dir='ltr'>col. 1 line 4</span> و<span dir='ltr'>col. 2 lines 1, 5, 18, 23, 33, 39</span>) وتطابقت جميعاً 100%.<br>2) طُبعت في <span dir='ltr'>PB ص 58–59</span> صيغ حرفية حُفظت كما وردت: <span dir='ltr'><code>a quite Sunday</code></span> بدل <span dir='ltr'>quiet</span>، وعلامة الاقتباس المعكوسة <span dir='ltr'><code>‘said Bob</code></span>، وسقوط النقطة بعد <span dir='ltr'><code>through the clouds Ten hours later</code></span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "مفاتيح الإحالة الضميرية السبعة (WB 7 D ص 91) وعبارات الرسالة",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 91,
+            "html": "<ul><li><b>1) <span dir='ltr'>It (col. 1 l.4)</span>:</b> الصباح المشمس / الطقس الجميل يوم الامتحان.</li><li><b>2) <span dir='ltr'>then (col. 2 l.1)</span>:</b> الأسبوع التالي موعد صدور النتائج.</li><li><b>3) <span dir='ltr'>They (col. 2 l.5)</span>:</b> والدا بوب (<span dir='ltr'>Bob's parents</span>).</li><li><b>4) <span dir='ltr'>They (col. 2 l.18)</span>:</b> الكثبان الرملية العالية قرب الشاطئ (<span dir='ltr'>high sand dunes</span>).</li><li><b>5) <span dir='ltr'>It (col. 2 l.23)</span>:</b> غداء الأحد (اللحم المشوي مع الخضار).</li><li><b>6) <span dir='ltr'>they (col. 2 l.33)</span>:</b> أخت بوب وعائلتها.</li><li><b>7) <span dir='ltr'>It (col. 2 l.39)</span>:</b> قضاء يوم الأحد الهادئ في بيت عائلة بوب.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 59,
+            "html": "<p dir='ltr'><b>Thank-you letter expressions:</b> <i>Thank you very much for having me to stay...</i> / <i>you really made me feel like one of the family</i> / <i>repay your kindness and hospitality</i>.</p>"
+          },
+          "self_check_ref": "chk-arts_7-a",
+          "page_ref": { "book": "PB", "page": 58, "pdf_page": 60, "image": "assets/ref/pb_p058.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "hold (~ an exam)": { "pos": "v", "ar": "يعقد / يُجري امتحاناً", "in_book_wordlist": true, "wb_page": 114 },
+    "pour into": { "pos": "phr v", "ar": "يتدفق بكثرة إلى داخل القاعة", "in_book_wordlist": true, "wb_page": 114 },
+    "call in": { "pos": "phr v", "ar": "يزور زيارةً عابرة قصيرة (= visit)", "in_book_wordlist": true, "wb_page": 114 },
+    "come out": { "pos": "phr v", "ar": "تَصدر / تُعلَن (نتائج الامتحان)", "in_book_wordlist": true, "wb_page": 114 },
+    "hospitality": { "pos": "n", "ar": "كرم الضيافة وحسن الاستقبال", "in_book_wordlist": true, "wb_page": 114 },
+    "kindness": { "pos": "n", "ar": "طِيبة / لُطف", "in_book_wordlist": true, "wb_page": 114 },
+    "one of the family": { "pos": "phr", "ar": "فردٌ من العائلة", "in_book_wordlist": true, "wb_page": 114 },
+    "sand dunes": { "pos": "n pl", "ar": "كثبان رملية", "in_book_wordlist": true, "wb_page": 114 },
+    "Thank you for having me.": { "pos": "phr", "ar": "شكراً لاستضافتي عندكم", "in_book_wordlist": true, "wb_page": 114 },
+    "Many hands make light work.": { "pos": "prov", "ar": "الأيادي الكثيرة تخفّف مشقّة العمل", "in_book_wordlist": true, "wb_page": 114 }
+  },
+  "activities": [
+    {
+      "id": "wb-arts_7-ab",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 90 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "ARTS 7 A–B Read the story on PB pages 58 and 59 and check your answers to questions 1–5:",
+      "prompt_ar": "إجابات أسئلة القراءة الخمسة حول الحلقة الأخيرة في 7 A–B (WB ص 90):",
+      "items": [
+        { "num": 1, "question": "1 What was the weather like on the day of the final examination?", "model_answer": "Sunny — the sun was shining brightly ('Lovely day').", "explain_ar": "السطران الأولان في PB ص 58." },
+        { "num": 2, "question": "2 How long did Ahmed have to wait for his results?", "model_answer": "About one week ('The examination results would come out the following week').", "explain_ar": "أسبوعاً واحداً بعد الجمعة." },
+        { "num": 3, "question": "3 What did he do while he was waiting?", "model_answer": "He drove to Bob's parents' home in his taxi and stayed a few days (walked along the beach, enjoyed Sunday lunch, helped wash up, met Bob's sister, played a word game, watched an old film and wrote a thank-you letter).", "explain_ar": "قضى عطلة نهاية الأسبوع وأياماً هادئة مع أسرة بوب." },
+        { "num": 4, "question": "4 How did Ahmed get on in the examination?", "model_answer": "He did excellently and got an A grade (alongside Bob / Robert Wilson).", "explain_ar": "تصدّر اسماهما قائمة درجة التميّز A." },
+        { "num": 5, "question": "5 What did Ahmed do after the results were announced?", "model_answer": "Two days later he asked Bob to look after the taxi, took the train from Norton Central to London Euston station, and flew home.", "explain_ar": "سافر إلى وطنه في عطلة الصيف على أن يعود في أكتوبر." }
+      ],
+      "hints": [
+        "راجع تفاصيل نهاية ص 58 وكامل ص 59 للتحقق."
+      ]
+    },
+    {
+      "id": "wb-arts_7-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 91 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Answer the questions. (Who...? 1–5)",
+      "prompt_ar": "حدّد الأشخاص المذكورين في الأسئلة الخمسة (WB 7 C ص 91):",
+      "word_bank": ["A lecturer Ahmed had never seen", "Bob's father", "Everybody", "Bob's sister and her family", "Robert Wilson and Ahmed Hassan Al-Hadrami"],
+      "items": [
+        { "num": 1, "prompt": "1 Who was supervising the examination? ______", "answers": ["A lecturer Ahmed had never seen", "a lecturer Ahmed had never seen"] },
+        { "num": 2, "prompt": "2 Who always cooks Sunday lunch at Bob's house? ______", "answers": ["Bob's father"] },
+        { "num": 3, "prompt": "3 Who helped with the washing up? ______", "answers": ["Everybody", "everybody"] },
+        { "num": 4, "prompt": "4 Who called in to say 'hello'? ______", "answers": ["Bob's sister and her family"] },
+        { "num": 5, "prompt": "5 Who got A grades in the examination? ______", "answers": ["Robert Wilson and Ahmed Hassan Al-Hadrami", "Bob and Ahmed", "Ahmed and Bob"] }
+      ],
+      "hints": [
+        "كل الأسماء الخمسة منصوص عليها حرفياً في PB ص 58–59."
+      ]
+    },
+    {
+      "id": "wb-arts_7-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 91 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Read PB page 58 again. What do these words refer to?",
+      "prompt_ar": "بيّن علامَ يعود كل ضمير أو ظرف من السبعة على PB ص 58 (WB ص 91):",
+      "word_bank": ["the morning / sunny weather", "the following week", "Bob's parents", "high sand dunes", "Sunday lunch", "Bob's sister and her family", "spending Sunday in Bob's home"],
+      "items": [
+        { "num": 1, "prompt": "1 It (col. 1 line 4) → ______", "answers": ["the day", "the morning", "sunny weather", "the weather", "the morning of the final examinations"] },
+        { "num": 2, "prompt": "2 then (col. 2 line 1) → ______", "answers": ["the following week", "when the examination results come out"] },
+        { "num": 3, "prompt": "3 They (col. 2 line 5) → ______", "answers": ["Bob's parents"] },
+        { "num": 4, "prompt": "4 They (col. 2 line 18) → ______", "answers": ["high sand dunes", "the high sand dunes", "the sand dunes"] },
+        { "num": 5, "prompt": "5 It (col. 2 line 23) → ______", "answers": ["Sunday lunch", "the Sunday lunch", "roast beef", "the lunch"] },
+        { "num": 6, "prompt": "6 they (col. 2 line 33) → ______", "answers": ["Bob's sister and her family"] },
+        { "num": 7, "prompt": "7 It (col. 2 line 39) → ______", "answers": ["spending a quiet Sunday in Bob's home", "spending Sunday in Bob's home", "Sunday in Bob's home"] }
+      ],
+      "hints": [
+        "راجع أرقام السطور العمودية المطابقة لصفحة PB ص 58."
+      ]
+    },
+    {
+      "id": "wb-arts_7-e",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 91 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "E Read PB page 59 again. Answer the questions. (1–6)",
+      "prompt_ar": "أجب عن الأسئلة الستة بالرجوع إلى PB ص 59 (WB ص 91):",
+      "items": [
+        { "num": 1, "question": "1 Why was Bob worried?", "model_answer": "Because he could not find his and Ahmed's names on the examination results list.", "explain_ar": "السطران 1–2 من PB ص 59." },
+        { "num": 2, "question": "2 Why couldn't Bob find their names on the list?", "model_answer": "Because he was looking among the B and C grades instead of looking at the top under grade A.", "explain_ar": "نبّههم طالب آخر للنظر في أعلى اللوحة." },
+        { "num": 3, "question": "3 Why did Bob tell Ahmed not to worry?", "model_answer": "Because Ahmed asked him to look after the London taxi while Ahmed was away in Yemen ('Of course... Don't worry about a thing').", "explain_ar": "وعده بالعناية بالتاكسي طوال الصيف." },
+        { "num": 4, "question": "4 Why did Ahmed open the window of the train?", "model_answer": "To shout goodbye ('See you in October ...') to Bob as the train left Norton Central station.", "explain_ar": "توديع صديقه بوب على رصيف المحطة." },
+        { "num": 5, "question": "5 Why would Ahmed see Bob in October?", "model_answer": "Because the new college academic year starts in October after the summer vacation (Ahmed is on a three-year course).", "explain_ar": "عودة الدراسة للسنة الجامعية الثانية في أكتوبر." },
+        { "num": 6, "question": "6 Why had the countryside seemed strange to Ahmed nine months ago?", "model_answer": "Because England's green, wet landscape and grey rainy weather were completely different from Yemen when he first arrived.", "explain_ar": "التأقلم التدريجي بعد تسعة أشهر من الإقامة." }
+      ],
+      "hints": [
+        "السؤال 3 مرتبط بوصية أحمد على التاكسي لا بنتائج الامتحان!"
+      ]
+    },
+    {
+      "id": "wb-arts_7-f",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 92 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "F 'Many hands make light work' is an English proverb. 1 Explain what it means. 2 Translate three Arabic proverbs into English.",
+      "prompt_ar": "شرح المثل الإنجليزي وترجمة ثلاثة أمثال عربية إلى الإنجليزية (7 F ص 92):",
+      "guidance_literal": "1 Meaning of proverb · 2 Three translated Arabic proverbs",
+      "steps": [
+        { "label_ar": "1) شرح معنى 'Many hands make light work'", "placeholder": "It means that when a lot of people share a job or help each other, the work becomes easy and finishes quickly." },
+        { "label_ar": "2) أمثلة ترجمة لثلاثة أمثال عربية (إضافة تعليمية)", "placeholder": "1. الصبر مفتاح الفرج → Patience is the key to relief.  2. يدٌ واحدة لا تصفّق → One hand cannot clap alone.  3. عصفور في اليد خير من عشرة على الشجرة → A bird in the hand is worth two (lit. ten) in the bush." }
+      ],
+      "hints": [
+        "استشهد بقصة غسل الصحون الجماعي في مطبخ أسرة بوب لشرح معنى المثل."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-arts_7-a",
+      "origin": "educational_addition",
+      "page_ref": 91,
+      "questions": [
+        {
+          "id": "q-arts_7-1",
+          "type": "mcq",
+          "stem": "In PB page 58 (WB Arts 7 D #4), what does 'They' refer to in: \"'They remind me of home,' said Ahmed.\" (col. 2 line 18)?",
+          "evidence_block_id": "arts-7-episode3-p58",
+          "options": [
+            { "text": "The high sand dunes next to the beach.", "is_correct": true, "why_wrong": null },
+            { "text": "Bob's parents.", "is_correct": false, "why_wrong": "والدا بوب ذُكرا في ضمير They في السطر 5، أما السطر 18 فعند المشي على الشاطئ." },
+            { "text": "Bob's sister and her family.", "is_correct": false, "why_wrong": "أخت بوب وعائلتها جاءت في السطر 33 لاحقاً بعد الغداء." },
+            { "text": "Four different vegetables.", "is_correct": false, "why_wrong": "الخضار وردت مع اللحم المشوي في السطور 23–25." }
+          ],
+          "hints": [
+            "اقرأ الجملة التي تسبقها مباشرة: Next to the beach there were high sand dunes."
+          ],
+          "explain": "الكثبان الرملية المرتفعة بجانب البحر ذكّرت أحمد بصحراء وطنه وشواطئه."
+        },
+        {
+          "id": "q-arts_7-2",
+          "type": "mcq",
+          "stem": "Why did Bob miss his and Ahmed's names on the exam results notice board at first (PB p. 59 / WB 7 E #2)?",
+          "evidence_block_id": "arts-7-episode3-p59",
+          "options": [
+            { "text": "He was looking among the B and C grades, while both names were at the top under grade A.", "is_correct": true, "why_wrong": null },
+            { "text": "The names were written in Arabic calligraphy.", "is_correct": false, "why_wrong": "القائمة كانت مكتوبة بالإنجليزية: Robert Wilson وAhmed Hassan Al-Hadrami." },
+            { "text": "They had failed the three-hour papers.", "is_correct": false, "why_wrong": "بل نال كلاهما أعلى تقدير (grade A)!" },
+            { "text": "Ahmed had already flown to London before the results came out.", "is_correct": false, "why_wrong": "انتظر أحمد أسبوعاً حتى إعلان النتائج ثم سافر بعدها بيومين." }
+          ],
+          "hints": [
+            "قال له طالب آخر: You're looking in the wrong place. Look at the top of the list."
+          ],
+          "explain": "بحث بوب تواضعاً في تقديرَي B وC، ولم يتوقع أن يجد اسميهما متصدّرَين تحت تقدير الامتياز A."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-ar7-hospitality", "origin": "from_book", "page_ref": 114, "front": "hospitality / kindness", "back": "كرم الضيافة / اللطف والطِّيبة", "tag": "Arts · AR7" },
+    { "id": "fc-ar7-comeout", "origin": "from_book", "page_ref": 114, "front": "exam results come out / call in", "back": "تصدر نتائج الامتحان / يزور زيارةً قصيرة", "tag": "Arts · AR7" },
+    { "id": "fc-ar7-havingme", "origin": "from_book", "page_ref": 114, "front": "Thank you for having me.", "back": "شكراً لاستضافتي عندكم", "tag": "Arts · AR7" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 58–59 مع pb-60.png وpb-61.png: عُدّت أسطر العمودين 1 و2 بصرياً للتحقق من جميع إحالات 7 D السبعة، وحُفظت صيغ 'quite Sunday' و'‘said Bob' وغياب النقطة بعد clouds.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 90–92 مع wb-091.png وwb-092.png وwb-093.png وحُلّت A–F بالكامل."
+  }
+}
