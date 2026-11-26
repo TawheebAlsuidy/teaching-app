@@ -1,0 +1,216 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u3", "number": 3, "title": "Looking for a job" },
+  "lesson": {
+    "id": "eng-u3-3_3",
+    "code": "3.3",
+    "title": "Thinking about the future",
+    "title_ar": "التفكير في المستقبل (مطابقة المهارات والاهتمامات بفرص العمل)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 20, "book_page": 18 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 32, "book_page": 31 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 33, "book_page": 32 }
+    ],
+    "reference_images": {
+      "pb_18": "assets/ref/pb_p018.webp",
+      "wb_31": "assets/ref/wb_p031.webp",
+      "wb_32": "assets/ref/wb_p032.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u3-3_3-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 18 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "3.3 Thinking about the future",
+          "Read about six people in their last year at school. What are they good at? What are their interests? What are they like? Fill in the table in Workbook activity A."
+        ]
+      }
+    },
+    {
+      "id": "u3-3_3-profiles",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 18 },
+      "dir": "ltr",
+      "recall_words": ["efficient", "popular", "hobby", "CD", "drama", "college", "final examination", "get on with", "put on"],
+      "content": {
+        "lines": [
+          "Patrick's ambition after leaving school is to become a doctor. However, he is not very good at Chemistry or Biology. His best subject is Mathematics. For the past year he has been going to evening classes in first-aid. He is adventurous and when he can, he goes underwater swimming.",
+          "Diana is very efficient and likes organizing things. Since the beginning of the year she has been planning all the class trips and activities. She writes all the letters and notices on her computer. Her best subject is English, but she enjoys Mathematics more. At the weekend she goes sailing and she is the secretary of the local sailing club. She would like to go into Government Administration.",
+          "Andrew is not very good at any subjects at school although he will probably pass his final examinations. He has a driving licence and every weekend he drives out into the country and then walks for hours. He is very interested in nature and has been reading about trees, plants and flowers for almost two years. He would like to work in the country. He is very hard-working and gets on well with people.",
+          "Justin has two very different hobbies: driving his four-wheel-drive car in the country, and cooking. He spends most Saturdays driving along muddy roads. On Sundays he cooks all the meals for the whole family. He has been doing this since he was 12. His best subjects are Mathematics and Sport. Both his parents are teachers, but he would like to go into business.",
+          "Clare has been collecting folk-music CDs for three years. She now has 150. She has lots of friends and she likes playing her music to them. One day she would like to work in radio or television. At school her best subjects are History and Music. She has a good speaking voice and often acts in the plays put on by the school drama group.",
+          "Fareeda is a very helpful young woman and is very popular with the others in her class. She has been driving for six months and at the weekend she takes old people shopping in her parents' car. At school she is excellent at History, but she does not want to go to college. She wants to help other people in some way, perhaps as social worker.",
+          "Match the six people with the work experience opportunities described on page 17.",
+          "Now do activity B in the Workbook."
+        ],
+        "image": "assets/media/pb18_six_people.webp",
+        "caption": "Profiles of Patrick, Diana, Andrew, Justin, Clare and Fareeda (PB page 18)"
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي وتمهيد قواعد <bdi dir='ltr'>3.5</bdi>:</strong> وردت عبارة <span dir='ltr'><code>as social worker</code></span> دون أداة تنكير <span dir='ltr'>a</span> آخر فقرة فريدة في الطبعة الرسمية وحُفظت حرفياً؛ كما تتضمن البطاقات أمثلة المضارع التام المستمر (<span dir='ltr'>has been going / planning / reading / collecting / driving</span>) المقررة في <bdi dir='ltr'>3.5</bdi>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "مطابقة الطلبة الستة بإعلانات WEO ص 17",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 18,
+            "html": "<ul><li><b>Patrick → WEO 2</b> (Central Hospital: لديه دروس إسعاف أولي <span dir='ltr'>first-aid</span> ويطمح للطب).</li><li><b>Diana → WEO 8</b> (Ministry of Health Administration: منظّمة، ماهرة بالكمبيوتر وتريد الإدارة الحكومية).</li><li><b>Andrew → WEO 6</b> (Ministry of the Environment: يهتم بالطبيعة والنباتات والأزهار ويفضل العمل خارج المدينة).</li><li><b>Justin → WEO 3</b> (Tiger Ice-Cream Company: يريد مجال الأعمال، يقود دفعاً رباعياً ومرتبط بالطبخ والطعام).</li><li><b>Clare → WEO 5</b> (City TV Station: تحب الإذاعة والتلفزيون والموسيقى والمسرح).</li><li><b>Fareeda → WEO 7</b> (Society for the Handicapped: تقود سيارة منذ 6 أشهر، تحب العمل الاجتماعي وتساعد المسنين).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 18,
+            "html": "<p dir='ltr'><b>Diana</b> is efficient and organizes trips → fits <b>WEO 8</b> (Administration Department).</p>"
+          },
+          "self_check_ref": "chk-3_3-a",
+          "page_ref": { "book": "PB", "page": 18, "pdf_page": 20, "image": "assets/ref/pb_p018.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "efficient": { "pos": "adj", "ar": "كفؤ / ينجز العمل دون هدر وقت أو جهد", "in_book_wordlist": true, "wb_page": 112 },
+    "final examination": { "pos": "n", "ar": "امتحان نهائي", "in_book_wordlist": true, "wb_page": 112 },
+    "get on with": { "pos": "phr v", "ar": "ينسجم مع (الآخرين)", "in_book_wordlist": true, "wb_page": 112 },
+    "CD": { "pos": "n", "ar": "قرص مضغوط", "in_book_wordlist": true, "wb_page": 112 },
+    "drama": { "pos": "n", "ar": "دراما / مسرح", "in_book_wordlist": true, "wb_page": 112 },
+    "hobby": { "pos": "n", "ar": "هواية (spare-time interest)", "in_book_wordlist": true, "wb_page": 112 },
+    "college": { "pos": "n", "ar": "كلية جامعية", "in_book_wordlist": true, "wb_page": 112 },
+    "pass": { "pos": "v", "ar": "ينجح في (امتحان)", "in_book_wordlist": true, "wb_page": 112 },
+    "popular": { "pos": "adj", "ar": "محبوب من الآخرين / ذو شعبية", "in_book_wordlist": false, "wb_page": 32 },
+    "excellent": { "pos": "adj", "ar": "ممتاز (= very, very good)", "in_book_wordlist": true, "wb_page": 112 }
+  },
+  "activities": [
+    {
+      "id": "wb-3_3-match-weo",
+      "origin": "from_book",
+      "source": { "book": "PB", "page": 18 },
+      "type": "matching",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "PB p. 18: Match the six people with the work experience opportunities described on page 17.",
+      "prompt_ar": "طابق كل طالب وطالبة (PB ص 18) بفرصة العمل الأنسب من إعلانات PB ص 17:",
+      "choices": [
+        { "value": "WEO 2", "label": "WEO 2 — Central Hospital (first-aid)" },
+        { "value": "WEO 3", "label": "WEO 3 — Tiger Ice-Cream (sales & delivery)" },
+        { "value": "WEO 5", "label": "WEO 5 — City TV Station (news/theatre/music)" },
+        { "value": "WEO 6", "label": "WEO 6 — Ministry of Environment (plants/coast)" },
+        { "value": "WEO 7", "label": "WEO 7 — Society for Handicapped (driving/social)" },
+        { "value": "WEO 8", "label": "WEO 8 — Ministry of Health (office/administration)" }
+      ],
+      "items": [
+        { "letter": "1", "word": "Patrick (first-aid classes, wants to be a doctor)", "ar": "باتريك", "answer": "WEO 2" },
+        { "letter": "2", "word": "Andrew (loves nature, trees, plants; driving licence)", "ar": "أندرو", "answer": "WEO 6" },
+        { "letter": "3", "word": "Clare (radio/TV, 150 CDs, school drama group)", "ar": "كلير", "answer": "WEO 5" },
+        { "letter": "4", "word": "Diana (organizing, computer notices, Govt Administration)", "ar": "ديانا", "answer": "WEO 8" },
+        { "letter": "5", "word": "Justin (4WD driving, cooking, go into business)", "ar": "جاستن", "answer": "WEO 3" },
+        { "letter": "6", "word": "Fareeda (driving 6 months, helps old people, social worker)", "ar": "فريدة", "answer": "WEO 7" }
+      ],
+      "hints": [
+        "اربط الطموح والكلمة الدلالية لكل طالب بما ورد في إعلانات WEO الستة في ص 17."
+      ]
+    },
+    {
+      "id": "wb-3_3-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 31 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "3.3 A Read the descriptions of people on PB page 18 and fill in this table. (Ambition | Best subjects | Interests/activities | Character)",
+      "prompt_ar": "مقارنة جدول البيانات الأربع لكل طالب في تمرين 3.3 A (WB ص 31):",
+      "items": [
+        { "num": 1, "question": "Patrick", "model_answer": "Ambition: to become a doctor | Best subjects: Mathematics (not good at Chemistry/Biology) | Interests/activities: first-aid evening classes, underwater swimming | Character: adventurous", "explain_ar": "مأخوذ مباشرة من بطاقة باتريك الأولى في ص 18." },
+        { "num": 2, "question": "Andrew", "model_answer": "Ambition: to work in the country | Best subjects: not very good at any subjects (will probably pass finals) | Interests/activities: driving out into country, walking for hours, reading about trees/plants/flowers | Character: very hard-working, gets on well with people", "explain_ar": "من بطاقة أندرو في الصف الأوسط يساراً." },
+        { "num": 3, "question": "Clare", "model_answer": "Ambition: to work in radio or television | Best subjects: History and Music | Interests/activities: collecting folk-music CDs (150), playing music to friends, acting in drama group | Character: friendly (lots of friends), good speaking voice", "explain_ar": "من بطاقة كلير أسفل اليسار." },
+        { "num": 4, "question": "Diana", "model_answer": "Ambition: to go into Government Administration | Best subjects: English (and enjoys Mathematics more) | Interests/activities: organizing class trips/activities, typing letters on computer, sailing (club secretary) | Character: very efficient", "explain_ar": "من بطاقة ديانا أعلى اليمين." },
+        { "num": 5, "question": "Justin", "model_answer": "Ambition: to go into business | Best subjects: Mathematics and Sport | Interests/activities: driving four-wheel-drive car along muddy roads, cooking family meals on Sundays | Character: varied hobbies, independent/practical", "explain_ar": "من بطاقة جاستن في الصف الأوسط يميناً." },
+        { "num": 6, "question": "Fareeda", "model_answer": "Ambition: help other people, perhaps as social worker | Best subjects: excellent at History | Interests/activities: driving, taking old people shopping at the weekend | Character: very helpful, very popular", "explain_ar": "من بطاقة فريدة أسفل اليمين." }
+      ],
+      "hints": [
+        "راجع أعمدة الجدول الأربعة في WB ص 31 وقارن مع بطاقات PB ص 18."
+      ]
+    },
+    {
+      "id": "wb-3_3-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 32 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Find words that mean the following:",
+      "prompt_ar": "استخرج الكلمات والعبارات من PB ص 18 التي توافق المعاني 1–6 (WB ص 32):",
+      "word_bank": ["popular", "efficient", "excellent", "hobbies", "put on", "pass"],
+      "items": [
+        { "num": 1, "prompt": "1 to be liked by other people: ______", "answers": ["popular"] },
+        { "num": 2, "prompt": "2 works well, without wasting time or energy: ______", "answers": ["efficient"] },
+        { "num": 3, "prompt": "3 very, very good: ______", "answers": ["excellent"] },
+        { "num": 4, "prompt": "4 spare-time interests: ______", "answers": ["hobbies"] },
+        { "num": 5, "prompt": "5 to organize and perform a play: ______", "answers": ["put on"] },
+        { "num": 6, "prompt": "6 to be successful in a test: ______", "answers": ["pass"] }
+      ],
+      "hints": [
+        "1: Fareeda (popular)، 2: Diana (efficient)، 3: Fareeda (excellent at History)، 4: Justin (hobbies)، 5: Clare (plays put on)، 6: Andrew (pass his final examinations)."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-3_3-a",
+      "origin": "educational_addition",
+      "page_ref": 18,
+      "questions": [
+        {
+          "id": "q-3_3-1",
+          "type": "mcq",
+          "stem": "Which person on PB page 18 best matches WEO 7 (Society for the Handicapped — driving licence, social work)?",
+          "evidence_block_id": "u3-3_3-profiles",
+          "options": [
+            { "text": "Fareeda", "is_correct": true, "why_wrong": null },
+            { "text": "Diana", "is_correct": false, "why_wrong": "ديانا تطمح للعمل في الإدارة الحكومية (Government Administration → WEO 8)." },
+            { "text": "Clare", "is_correct": false, "why_wrong": "كلير تحب الموسيقى والدراما وتطمح للعمل في الإذاعة والتلفزيون (WEO 5)." },
+            { "text": "Justin", "is_correct": false, "why_wrong": "جاستن يهوى قيادة الدفع الرباعي والطبخ ويريد مجال التجارة والأعمال (WEO 3)." }
+          ],
+          "hints": [
+            "اقرأ البطاقة الأخيرة (Fareeda): driving, old people shopping, social worker.",
+            "الصحيح: Fareeda."
+          ],
+          "explain": "فريدة تقود منذ 6 أشهر، تساعد كبار السن، وتطمح للعمل في مجال العمل الاجتماعي؛ لذا تطابق تماماً WEO 7."
+        },
+        {
+          "id": "q-3_3-2",
+          "type": "mcq",
+          "stem": "Which word on PB page 18 means 'works well, without wasting time or energy' (WB 3.3 B #2)?",
+          "evidence_block_id": "u3-3_3-profiles",
+          "options": [
+            { "text": "efficient", "is_correct": true, "why_wrong": null },
+            { "text": "popular", "is_correct": false, "why_wrong": "popular تعني محبوب من الناس (to be liked by other people — بند 1)." },
+            { "text": "adventurous", "is_correct": false, "why_wrong": "adventurous تعني مغامر (صفة باتريك الذي يمارس الغطس)." },
+            { "text": "muddy", "is_correct": false, "why_wrong": "muddy تعني موحل / مليء بالطين (وصف الطرق في هواية جاستن)." }
+          ],
+          "hints": [
+            "انظر الجملة الأولى في وصف ديانا: Diana is very ... and likes organizing things.",
+            "الصحيح: efficient."
+          ],
+          "explain": "تُعرّف كلمة efficient في WB ص 32 بأنها العمل بإتقان ودون إهدار للوقت أو الجهد."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-3_3-efficient", "origin": "from_book", "page_ref": 32, "front": "efficient (adj)", "back": "كفؤ / منظّم دون إهدار الوقت والجهد", "tag": "Unit 3 · 3.3" },
+    { "id": "fc-3_3-geton", "origin": "from_book", "page_ref": 18, "front": "get on with", "back": "ينسجم أو يحسن العلاقة مع الآخرين", "tag": "Unit 3 · 3.3" },
+    { "id": "fc-3_3-pass", "origin": "from_book", "page_ref": 32, "front": "pass (an examination)", "back": "يجتاز / ينجح في الاختبار", "tag": "Unit 3 · 3.3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت البطاقات الست في PB ص 18 مع صورة pb-20.png: أُصلح تقطّع الأسطر التي خلّفها pdftotext بين الأعمدة المائلة لكل شخصية، وحُفظت الصيغة المطبوعة 'as social worker' دون أداة تنكير حرفياً.",
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 31–32 مع tesseract.js eng: أخرجت OCR رقم '33 A'، وصُحّح إلى '3.3 A' بصرياً من wb-032.png وwb-033.png."
+  }
+}
