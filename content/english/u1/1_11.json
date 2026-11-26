@@ -1,0 +1,276 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_11",
+    "code": "1.11",
+    "title": "A view from a window",
+    "title_ar": "منظر من نافذة (وصف المشهد من البعيد إلى القريب)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 10, "book_page": 8 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 12, "book_page": 11 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 13, "book_page": 12 }
+    ],
+    "reference_images": {
+      "pb_8": "assets/ref/pb_p008.webp",
+      "wb_11": "assets/ref/wb_p011.webp",
+      "wb_12": "assets/ref/wb_p012.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_11-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 8 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.11 A view from a window",
+          "Look at the four paragraphs. Decide what part of the view the girl is describing in each."
+        ]
+      }
+    },
+    {
+      "id": "u1-1_11-scene-guide",
+      "origin": "educational_addition",
+      "type": "diagram",
+      "source": { "book": "PB", "page": 8 },
+      "dir": "ltr",
+      "recall_words": ["curtains", "horizon", "wood", "cud", "mare", "foal", "suckle", "cackling", "claws", "beaks"],
+      "content": {
+        "lines": [
+          "Reference summary of the four paragraphs in PB page 8 (full scanned page available offline in Reference Image PB p. 8):",
+          "Paragraph 1 (6 a.m., curtains opened): Describes the most distant layer — a wall of white mist on the horizon.",
+          "Paragraph 2 (A little bit nearer): Describes the wood with hundreds of trees and birds singing early morning songs.",
+          "Paragraph 3 (Jane looked to her left — nearby fields): Describes over twenty cows lying down chewing the cud, and in the field next to them a mare and her two-week-old foal.",
+          "Paragraph 4 (Just below Jane's window): Describes chickens below the window frame — cackling, scratching the dust with their claws, and pecking with their beaks; Jane feels hungry for breakfast."
+        ],
+        "image": "assets/media/pb8_window_scene.webp",
+        "caption": "Illustration from PB page 8 showing Jane looking out of the window across the fields"
+      },
+      "edu_note_html": "<strong>ملاحظة التوثيق وحقوق النص (RULE 7):</strong> صورة الصفحة الرسمية الكاملة <bdi dir='ltr'>PB p. 8</bdi> مرفقة دون إنترنت في تبويب «مرجع الصفحة» (<bdi dir='ltr'>pb_p008.webp</bdi>) للرجوع إلى النص المطبوع حرفياً؛ واكتُفي هنا بتفكيك الفقرات الأربع تحليلياً (البعيد ← الأقرب ← المجاور ← تحت النافذة مباشرة) مع حفظ جميع أسئلة الكتاب والتمارين كما وردت لتفادي حظر التلاوة الآلي في النماذج اللغوية، وسُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "الترتيب المكاني للفقرات الأربع (Far → Near)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 8,
+            "html": "<p>الإجابة عن سؤالي التحليل في أسفل <bdi dir='ltr'>PB p. 8</bdi>:</p><ol><li><b>عبارات المكان (Phrases telling you where things are):</b> <span dir='ltr'>Far away on the horizon</span> ← <span dir='ltr'>A little bit nearer</span> ← <span dir='ltr'>to her left / In a nearby field / In the field next to...</span> ← <span dir='ltr'>Just below Jane's window</span>.</li><li><b>اتجاه الحركة:</b> تتحرك الفقرات الأربع بوضوح <b>من الأبعد إلى الأقرب</b> (<span dir='ltr'>from far to near</span>)، وهو النمط نفسه الذي درسته في <bdi dir='ltr'>1.9</bdi>.</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 8,
+            "caption": "تدرّج المسافة من الأفق البعيد إلى أسفل النافذة (PB ص 8)",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='15' y='24' width='130' height='72' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='80' y='52' text-anchor='middle' font-size='12' font-weight='700'>Para 1: Far away</text><text x='80' y='74' text-anchor='middle' font-size='11'>mist on horizon</text><rect x='160' y='24' width='130' height='72' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='225' y='52' text-anchor='middle' font-size='12' font-weight='700'>Para 2: Nearer</text><text x='225' y='74' text-anchor='middle' font-size='11'>the wood &amp; birds</text><rect x='305' y='24' width='135' height='72' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='372' y='52' text-anchor='middle' font-size='12' font-weight='700'>Para 3: Nearby</text><text x='372' y='74' text-anchor='middle' font-size='11'>cows &amp; 2 horses</text><rect x='455' y='24' width='130' height='72' rx='8' fill='#FCE7F3' stroke='#DB2777'/><text x='520' y='52' text-anchor='middle' font-size='12' font-weight='700'>Para 4: Closest</text><text x='520' y='74' text-anchor='middle' font-size='11'>chickens below</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 8,
+            "html": "<p dir='ltr'><b>Order:</b> Far away on the horizon → A little bit nearer → In a nearby field → Just below Jane's window.</p>"
+          },
+          "self_check_ref": "chk-1_11-a",
+          "page_ref": { "book": "PB", "page": 8, "pdf_page": 10, "image": "assets/ref/pb_p008.webp" }
+        }
+      }
+    },
+    {
+      "id": "u1-1_11-pb-prompts",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "PB", "page": 8 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "'Far away' is a phrase telling you where things are. Find similar phrases in the passage.",
+          "Does the description move from near to far or the other way around?",
+          "Now do activities A and B in the Workbook."
+        ]
+      }
+    },
+    {
+      "id": "u1-1_11-wb-a",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 11 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.11 A Re-read the first paragraph on PB page 8 and write short answers to these questions.",
+          "1 Why does Jane look out of the window every morning?",
+          "2 What was the weather like this time?",
+          "3 Is the wood near to Jane's window?",
+          "4 What do you find in a wood?",
+          "5 How many cows could Jane see in the field?",
+          "6 What was in the field next to the cows?",
+          "7 What can Jane see which is not in the picture?",
+          "8 Why do you think Jane was suddenly hungry?"
+        ]
+      },
+      "edu_note_html": "<strong>تنبيه مطبعي في تعليمات التمرين A:</strong> ذُكر في التوجيه المطبوع عبارة <span dir='ltr'><code>first paragraph</code></span> رغم أن الأسئلة 3–8 تغطي الفقرات الثانية والثالثة والرابعة أيضاً، وقد حُفظ النص المطبوع حرفياً."
+    },
+    {
+      "id": "u1-1_11-wb-b",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 12 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "B Word work",
+          "1 What do you have at a window to stop people looking in?",
+          "2 What is a wall of mist?",
+          "3 What do you think chewing the cud means?",
+          "4 What does the word suckle mean?",
+          "5 Choose the closest in meaning to 'cackling': a) sleeping [ ] b) making a noise [ ] c) running",
+          "6 A chicken's claw is on its: a) tail [ ] b) head [ ] c) feet. [ ]",
+          "7 A chicken's beak is its: a) mouth [ ] b) feet [ ] c) wings. [ ]"
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "curtains": { "pos": "n pl", "ar": "ستائر (النافذة)", "in_book_wordlist": false, "wb_page": 12 },
+    "horizon": { "pos": "n", "ar": "الأفق", "in_book_wordlist": true, "wb_page": 111 },
+    "mist": { "pos": "n", "ar": "ضباب خفيف / سديم", "in_book_wordlist": true, "wb_page": 111 },
+    "wood": { "pos": "n", "ar": "غابة صغيرة / حَرَج", "in_book_wordlist": true, "wb_page": 111 },
+    "awake": { "pos": "adj", "ar": "مستيقظ", "in_book_wordlist": true, "wb_page": 111 },
+    "song": { "pos": "n", "ar": "أغنية / تغريد", "in_book_wordlist": true, "wb_page": 111 },
+    "mare": { "pos": "n", "ar": "فَرَس (أنثى الحصان)", "in_book_wordlist": true, "wb_page": 111 },
+    "foal": { "pos": "n", "ar": "مُهْر (صغير الحصان)", "in_book_wordlist": true, "wb_page": 111 },
+    "rich": { "pos": "adj", "ar": "غنيّ / دسم (للحليب)", "in_book_wordlist": true, "wb_page": 111 },
+    "noisily": { "pos": "adv", "ar": "بصخب / بضوضاء", "in_book_wordlist": true, "wb_page": 111 },
+    "scratch": { "pos": "v", "ar": "يخدش / ينبش التراب", "in_book_wordlist": true, "wb_page": 111 },
+    "claw": { "pos": "n", "ar": "مخلب (في قدم الطائر)", "in_book_wordlist": true, "wb_page": 111 },
+    "beak": { "pos": "n", "ar": "منقار (فم الطائر)", "in_book_wordlist": true, "wb_page": 111 },
+    "dust": { "pos": "n", "ar": "تراب / غبار", "in_book_wordlist": true, "wb_page": 111 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_11-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 11 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.11 A Re-read the first paragraph on PB page 8 and write short answers to these questions.",
+      "prompt_ar": "أجب بإجابات قصيرة عن الأسئلة 1–8 في كتاب التمارين ص 11 (استعن بصورة صفحة الكتاب pb_p008.webp):",
+      "items": [
+        { "num": 1, "question": "Why does Jane look out of the window every morning?", "model_answer": "Because it was a quiet time and she liked the view.", "explain_ar": "من الفقرة 1: because it was a quiet time and she liked the view." },
+        { "num": 2, "question": "What was the weather like this time?", "model_answer": "Misty in the distance (there was a wall of white mist on the horizon, though it would get hotter later).", "explain_ar": "تظهر في الأفق كتلة من الضباب الأبيض (wall of white mist) قبل اشتداد حرارة النهار." },
+        { "num": 3, "question": "Is the wood near to Jane's window?", "model_answer": "Fairly near (closer than the mist, but still at some distance — she walked home through it after school).", "explain_ar": "الفقرة 2: أقرب قليلاً من الأفق (a little bit nearer)، لكن الطيور تُسمع فيه عن بُعد (even from a distance)." },
+        { "num": 4, "question": "What do you find in a wood?", "model_answer": "Hundreds of trees and birds.", "explain_ar": "ذُكر في الفقرة 2 وجود مئات الأشجار والطيور التي تغرّد فيها." },
+        { "num": 5, "question": "How many cows could Jane see in the field?", "model_answer": "More than twenty cows.", "explain_ar": "الفقرة 3: In a nearby field there were more than twenty cows." },
+        { "num": 6, "question": "What was in the field next to the cows?", "model_answer": "Two horses — a mare and her two-week-old foal.", "explain_ar": "انظر يمين اللوحة المرسومة: الفرس (mare) مع مهرها حديث الولادة." },
+        { "num": 7, "question": "What can Jane see which is not in the picture?", "model_answer": "The chickens just below her window.", "explain_ar": "الدجاج يوجد مباشرة أسفل النافذة (Just below Jane's window) خارج إطار اللوحة المرسومة." },
+        { "num": 8, "question": "Why do you think Jane was suddenly hungry?", "model_answer": "Watching the chickens looking for food (and realizing it was six o'clock morning) reminded her it was time for breakfast.", "explain_ar": "ختام الفقرة 4: كانت الدجاجات تبحث عن المزيد من الطعام، فأحسّت جين بأن وقت ارتداء الملابس وتناول الفطور قد حان." }
+      ],
+      "hints": [
+        "البنود 1–2 في الفقرة الأولى، 3–4 في الثانية، 5–6 في الثالثة، و7–8 في الرابعة.",
+        "في السؤال 6: راجع صورة النافذة في أعلى صفحة 8 لترى الفرس والمهر في الحقل المجاور للأبقار."
+      ]
+    },
+    {
+      "id": "wb-1_11-b-open",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 12 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Word work (Questions 1–4)",
+      "prompt_ar": "استنبط معاني الكلمات والتعابير 1–4 في تمرين Word work (WB ص 12):",
+      "items": [
+        { "num": 1, "question": "What do you have at a window to stop people looking in?", "model_answer": "Curtains.", "explain_ar": "الستائر (curtains) هي التي تُفتح صباحاً عند النافذة وتُغلق لمنع النظر." },
+        { "num": 2, "question": "What is a wall of mist?", "model_answer": "Thick white mist rising steeply like a solid wall across the horizon.", "explain_ar": "استعارة بصرية تصف ضباباً أبيض كثيفاً ومتراكماً يبدو كجدار ممتد على الأفق." },
+        { "num": 3, "question": "What do you think chewing the cud means?", "model_answer": "Chewing food brought back up from the stomach (rumination by cows while lying down).", "explain_ar": "الاجترار: إعادة مضغ الطعام المرتجع من المعدة لدى الأبقار." },
+        { "num": 4, "question": "What does the word suckle mean?", "model_answer": "To drink milk from the mother (or for the mother animal to feed her young with milk).", "explain_ar": "يرضع / يُرضع الحليب من الأم، كما يفعل المهر الصغير مع أمه الفرس." }
+      ],
+      "hints": [
+        "استعمل دلائل السياق (Context clues): opened the curtains of her bedroom window / foal ... getting plenty of rich milk.",
+        "الإجابة 1: curtains، 2: thick white mist، 3: chewing returned stomach food، 4: drinking milk from the mother."
+      ]
+    },
+    {
+      "id": "wb-1_11-b-mcq",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 12 },
+      "type": "matching",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Word work (Items 5–7 Multiple choice)",
+      "prompt_ar": "اختر المعنى الدقيق للبنود 5–7 في كتاب التمارين ص 12:",
+      "choices": [
+        { "value": "b", "label": "b) making a noise" },
+        { "value": "c", "label": "c) feet" },
+        { "value": "a", "label": "a) mouth" }
+      ],
+      "items": [
+        { "letter": "5", "word": "Closest meaning to 'cackling'", "ar": "صوت الدجاج الصاخب (cackling noisily)", "answer": "b" },
+        { "letter": "6", "word": "A chicken's claw is on its...", "ar": "مخلب الدجاجة يوجد في ...", "answer": "c" },
+        { "letter": "7", "word": "A chicken's beak is its...", "ar": "منقار الدجاجة هو ...", "answer": "a" }
+      ],
+      "hints": [
+        "5: يُوصف في النص بعبارة cackling noisily، 6: تحفر به التراب، 7: تلتقط به الحب.",
+        "الحل: 5→b) making a noise ، 6→c) feet ، 7→a) mouth."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_11-a",
+      "origin": "educational_addition",
+      "page_ref": 8,
+      "questions": [
+        {
+          "id": "q-1_11-1",
+          "type": "mcq",
+          "stem": "In what spatial direction does the description on PB page 8 ('A view from a window') move?",
+          "evidence_block_id": "u1-1_11-scene-guide",
+          "options": [
+            { "text": "From far to near", "is_correct": true, "why_wrong": null },
+            { "text": "From near to far", "is_correct": false, "why_wrong": "تبدأ الفقرة 1 بالأفق البعيد (Far away on the horizon) وتنتهي بالفقرة 4 بالدجاج تحت النافذة مباشرة (Just below Jane's window)." },
+            { "text": "From east to west only", "is_correct": false, "why_wrong": "التدرج الرئيسي هنا هو البُعد عن النافذة عبر المسافة من الأفق حتى أسفل الجدار." },
+            { "text": "From inside the room to the bathroom", "is_correct": false, "why_wrong": "جين تصف المشهد الخارجي المرئي من نافذة غرفتها فقط." }
+          ],
+          "hints": [
+            "قارن عبارة الفقرة 1 (Far away) بعبارة الفقرة 4 (Just below Jane's window).",
+            "المسافة تتقلص تدريجياً نحو غرفة جين.",
+            "الصحيح: From far to near."
+          ],
+          "explain": "يتدرج وصف جين من أبعد نقطة في الأفق (الضباب) فالغابة ثم الحقول المجاورة وأخيراً الدجاج أسفل النافذة مباشرة (far → near)."
+        },
+        {
+          "id": "q-1_11-2",
+          "type": "mcq",
+          "stem": "According to WB page 12 (Word work 6 & 7), which body parts of a chicken correspond to 'claw' and 'beak'?",
+          "evidence_block_id": "u1-1_11-wb-b",
+          "options": [
+            { "text": "Claw → feet; Beak → mouth", "is_correct": true, "why_wrong": null },
+            { "text": "Claw → tail; Beak → wings", "is_correct": false, "why_wrong": "المخالب (claws) تخدش التراب بالأرجل، والمنقار (beak) يُلتقط به الطعام بالفم." },
+            { "text": "Claw → head; Beak → feet", "is_correct": false, "why_wrong": "مخلب الطائر في قدميه وليس في رأسه، ومنقاره هو فمه." },
+            { "text": "Claw → wings; Beak → tail", "is_correct": false, "why_wrong": "الخياران يعكسان دلالة الكلمتين في وصف نبش التراب والتقاط الحب." }
+          ],
+          "hints": [
+            "scratching in the dust with their claws / pecking with their beaks.",
+            "النبش بالأقدام والنقر بالفم/المنقار.",
+            "الصحيح: Claw → feet; Beak → mouth."
+          ],
+          "explain": "المخلب (claw) في قدم الدجاجة لخدش التراب، والمنقار (beak) في فمها لالتقاط الحبوب."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_11-horizon", "origin": "from_book", "page_ref": 8, "front": "horizon (n)", "back": "الأفق (خط التقاء السماء بالأرض)", "tag": "Unit 1 · 1.11" },
+    { "id": "fc-1_11-marefoal", "origin": "from_book", "page_ref": 8, "front": "mare / foal (n)", "back": "فَرَس (أنثى الحصان) / مُهْر (صغير الحصان)", "tag": "Unit 1 · 1.11" },
+    { "id": "fc-1_11-claw", "origin": "from_book", "page_ref": 12, "front": "claw (n)", "back": "مخلب (في قدم الطائر/الحيوان)", "tag": "Unit 1 · 1.11" },
+    { "id": "fc-1_11-beak", "origin": "from_book", "page_ref": 12, "front": "beak (n)", "back": "منقار الطائر", "tag": "Unit 1 · 1.11" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "فُحصت صفحة PB ص 8 الممسوحة ضوئياً عبر 4 شرائح 600 DPI وحُفظت صورتها الكاملة (pb_p008.webp) وصورة النافذة (pb8_window_scene.webp)؛ ونظراً لتفعيل مرشح التلاوة الآلي لفقرات النص الأدبي، أُدرجت بُنية الفقرات والعبارات المكانية وتوثيقها في REVIEW_NEEDED.md مع توفر صورة الصفحة الرسمية الكاملة داخل الدرس دون إنترنت.",
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 11–12 مع tesseract.js eng: حُفظ التوجيه الحرفي 'first paragraph' رغم شمول الأسئلة للفقرات الأربع، وصُحّحت قراءة OCR للعناوين والاختيارات من شرائح 250 DPI."
+  }
+}
