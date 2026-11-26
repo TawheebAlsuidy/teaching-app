@@ -1,0 +1,228 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u5", "number": 5, "title": "Working things out" },
+  "lesson": {
+    "id": "eng-u5-5_5",
+    "code": "5.5",
+    "title": "Language review 9",
+    "title_ar": "مراجعة القواعد 9: الأفعال الناقصة (الاحتمال والقدرة والمنع)، وأفعال الحواس (+ -ing / المصدر)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 38, "book_page": 36 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 61, "book_page": 60 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 62, "book_page": 61 }
+    ],
+    "reference_images": {
+      "pb_36": "assets/ref/pb_p036.webp",
+      "wb_60": "assets/ref/wb_p060.webp",
+      "wb_61": "assets/ref/wb_p061.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u5-5_5-modals",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 36 },
+      "dir": "ltr",
+      "recall_words": ["modal verb", "possibility", "allow", "can't", "must not"],
+      "content": {
+        "lines": [
+          "5.5 Language review 9",
+          "1 Modal verbs - 1",
+          "Modal verbs are not used on their own. They are used with other verbs to express different meanings.",
+          "• Degrees of possibility — You are not certain.",
+          "Example: It may (not)/might (not)could be a toothbrush.",
+          "You are certain.",
+          "Examples: (Positive) I must be a toothbrush. | (Negative) I can't be a toothbrush.",
+          "Note: Must not (mustn't) can only be used when you want to tell somebody that they are not allowed to do something.",
+          "Example: You must not look at your books during an exam.",
+          "• Ability: can/cannot refers to the present | could (not) is used - to refer to the past - after wish - in conditional sentences",
+          "Examples: I can /cannot swim. | I could (not) swim when I was six. | I wish I could swim. | If I lived near the sea, I could learn to swim.",
+          "Note: You can use be able to instead of can.",
+          "Examples: I am able to swim. | I wish I was able to swim."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي بارزة (<bdi dir='ltr'>PB p. 36</bdi> و<bdi dir='ltr'>WB p. 61</bdi>):</strong><br>1) في <bdi dir='ltr'>PB p. 36</bdi> سقطت علامة <span dir='ltr'>/</span> والمسافة في <span dir='ltr'><code>might (not)could be</code></span>، وورد الضمير <span dir='ltr'><code>I</code></span> مكان <span dir='ltr'><code>It</code></span> خطأً في <span dir='ltr'><code>(Positive) I must be a toothbrush. / (Negative) I can't be a toothbrush.</code></span> (قارن بصحيح <span dir='ltr'>It may...</span> في السطر السابق!)، وجاءت مسافة زائدة قبل الشرطة المائلة في <span dir='ltr'><code>I can /cannot</code></span>.<br>2) في <bdi dir='ltr'>WB 5.5 A #10</bdi> طُبعت الملكية بفاصلة متأخرة: <span dir='ltr'><code>Khaleds' brother</code></span> (بينما في #1 <span dir='ltr'><code>Khaled's brother</code></span>). قد حُفظت كل هذه الصيغ حرفياً مع تنبيه الطالب.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "المقارنة الحاسمة بين can't (مستحيل) وmustn't (ممنوع)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 36,
+            "html": "<ul><li><b>الاحتمال واليقين في الحاضر:</b><ul><li>غير متأكد (<span dir='ltr'>not certain / possible</span>) → <span dir='ltr'><b>may / might / could</b> (+ be / V1)</span></li><li>متأكد بالإثبات (<span dir='ltr'>certain / sure</span>) → <span dir='ltr'><b>must</b></span></li><li>متأكد بالاستحالة (<span dir='ltr'>impossible</span>) → <span dir='ltr'><b>can't</b></span> (انتبه: <b>لا نستعمل mustn't هنا أبداً!</b>)</li></ul></li><li><b>المنع والتحريم (<span dir='ltr'>not allowed</span>):</b> فقط نستعمل <b><span dir='ltr'>must not / mustn't</span></b> (مثل: <span dir='ltr'>not allowed to speak in a library → mustn't speak</span>).</li><li><b>القدرة (<span dir='ltr'>Ability</span>):</b> الحاضر <span dir='ltr'>can / am able to</span>؛ والماضي أو بعد <span dir='ltr'>wish</span> أو في الشرط الثاني <span dir='ltr'>could</span>.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 36,
+            "caption": "سلّم درجات اليقين مقابل المنع",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='14' y='18' width='175' height='84' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='101' y='44' text-anchor='middle' font-size='12' font-weight='700'>Sure True (100%)</text><text x='101' y='72' text-anchor='middle' font-size='12' font-weight='700'>must + V1</text><rect x='204' y='18' width='186' height='84' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='297' y='44' text-anchor='middle' font-size='12' font-weight='700'>Possible (Not sure)</text><text x='297' y='72' text-anchor='middle' font-size='12' font-weight='700'>may / might / could</text><rect x='405' y='18' width='181' height='84' rx='8' fill='#FEE2E2' stroke='#DC2626'/><text x='495' y='44' text-anchor='middle' font-size='11.5' font-weight='700'>Impossible vs Forbidden</text><text x='495' y='66' text-anchor='middle' font-size='11'>Impossible → can't</text><text x='495' y='86' text-anchor='middle' font-size='11'>Not allowed → mustn't</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 60,
+            "html": "<p dir='ltr'><i>It is impossible that it is so late</i> → <b>It can't be so late.</b> (NOT <i>mustn't</i>)<br><i>You are not allowed to speak</i> → <b>You must not / mustn't speak.</b></p>"
+          },
+          "self_check_ref": "chk-5_5-a",
+          "page_ref": { "book": "PB", "page": 36, "pdf_page": 38, "image": "assets/ref/pb_p036.webp" }
+        }
+      }
+    },
+    {
+      "id": "u5-5_5-sense",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 36 },
+      "dir": "ltr",
+      "recall_words": ["infinitive", "continuous", "setting the scene"],
+      "content": {
+        "lines": [
+          "2 'Sense' verbs + object + verb",
+          "Some sense verbs are followed by the -ing form. This emphasizes the action as continuous and is often used for setting the scene (see Language review 4). When followed by the infinitive, this emphasizes that the action is completed.",
+          "Example: I saw/heard/watched the goats come down the street. (And later told the farmer what I saw/heard, etc.) | I saw/heard/watched the goats coming down the street. (And tried to stop them coming into the garden.)",
+          "Find examples of this language in the texts.",
+          "Now do activities A and B in the Workbook."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "أفعال الحواس (see / hear / watch / feel) مع المصدر المجرد مقابل -ing",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 36,
+            "html": "<ul><li><b>المصدر المجرد (<span dir='ltr'>V1 without to</span>):</b> حين تشهد الحدث <b>مكتملاً أو لحظياً أو متكرراً كل يوم</b> (مثال <bdi dir='ltr'>5.5 B #2, #3</bdi>: شروق الشمس يومياً ثم الفطور: <span dir='ltr'>watch the sun <b>rise</b> ... and then have breakfast</span>؛ أو تحطم الطائرة وانفجار الوقود لحظياً: <span dir='ltr'>saw a plane <b>crash</b> ... hear the petrol <b>explode</b></span>).</li><li><b>صيغة <span dir='ltr'>-ing</span>:</b> حين تصف <b>مشهداً مستمراً أثناء حدوثه</b> (مثال <bdi dir='ltr'>5.5 B #1, #5</bdi>: المعلم يمشي في الممر: <span dir='ltr'>saw the teacher <b>coming</b></span>؛ ومشهد المجاعة المستمر: <span dir='ltr'>see people <b>dying</b> ... hear people <b>crying</b></span>).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 61,
+            "html": "<p dir='ltr'><b>Action in progress:</b> saw him <i>coming</i> | <b>Completed event:</b> saw a plane <i>crash</i>.</p>"
+          },
+          "self_check_ref": "chk-5_5-a",
+          "page_ref": { "book": "PB", "page": 36, "pdf_page": 38, "image": "assets/ref/pb_p036.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "modal verb": { "pos": "n", "ar": "فعل ناقص (مثل must, may, might, could, can)", "in_book_wordlist": true, "wb_page": 113 },
+    "allow": { "pos": "v", "ar": "يسمح (be allowed to = يُسمح له بـ)", "in_book_wordlist": true, "wb_page": 113 },
+    "explode": { "pos": "v", "ar": "ينفجر", "in_book_wordlist": false, "wb_page": 61 }
+  },
+  "activities": [
+    {
+      "id": "wb-5_5-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 60 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.5 A Re-write the underlined sentences using suitable modal verbs. (Items 1–8 on WB p. 60; 9–10 on WB p. 61 [Note: Q10 prints 'Khaleds' brother'].)",
+      "prompt_ar": "أعد صياغة العبارات المسطّرة باستعمال الفعل الناقص الدقيق للمعنى في الجمل 1–10:",
+      "word_bank": [
+        "You must be Khaled's brother.",
+        "I could visit my friends more often.",
+        "I may/might/could be wrong.",
+        "It can't be so late.",
+        "I can't see without glasses.",
+        "You must not speak in a public library.",
+        "today must be Tuesday.",
+        "I wish I could fly like a bird.",
+        "It may/might/could rain tomorrow.",
+        "You can't be Khaled's brother."
+      ],
+      "items": [
+        { "num": 1, "prompt": "1 I am absolutely certain that you are Khaled's brother. → ______", "answers": ["You must be Khaled's brother."] },
+        { "num": 2, "prompt": "2 If I lived in the town, I would be able to visit my friends more often. → If I lived in the town, ______", "answers": ["I could visit my friends more often."] },
+        { "num": 3, "prompt": "3 It is possible that I am wrong. I'm not sure. → ______", "answers": ["I may/might/could be wrong.", "I might be wrong.", "I may be wrong.", "I could be wrong."] },
+        { "num": 4, "prompt": "4 It is impossible that it is so late. → ______", "answers": ["It can't be so late."] },
+        { "num": 5, "prompt": "5 I do not have the ability to see without glasses. → ______", "answers": ["I can't see without glasses.", "I cannot see without glasses."] },
+        { "num": 6, "prompt": "6 You are not allowed to speak in a public library. → ______", "answers": ["You must not speak in a public library.", "You mustn't speak in a public library."] },
+        { "num": 7, "prompt": "7 Yesterday was Monday, so I'm sure that today is Tuesday. → Yesterday was Monday, so ______", "answers": ["today must be Tuesday."] },
+        { "num": 8, "prompt": "8 I wish that I had the ability to fly like a bird. → ______", "answers": ["I wish I could fly like a bird."] },
+        { "num": 9, "prompt": "9 (WB p. 61) It is possible that it will rain tomorrow. → ______", "answers": ["It may/might/could rain tomorrow.", "It may rain tomorrow.", "It might rain tomorrow."] },
+        { "num": 10, "prompt": "10 (WB p. 61) It is absolutely impossible that you are Khaleds' brother. → ______", "answers": ["You can't be Khaled's brother.", "You can't be Khaleds' brother."] }
+      ],
+      "hints": [
+        "1 و7: يقين (must)؛ 3 و9: احتمال (may/might/could)؛ 4 و10: استحالة (can't)؛ 6: منع (mustn't)؛ 2 و5 و8: قدرة (could / can't)."
+      ]
+    },
+    {
+      "id": "wb-5_5-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 61 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Write the verbs in brackets in the correct form (infinitive or -ing after sense verbs).",
+      "prompt_ar": "اكتب الأفعال بين الأقواس بصيغة -ing (للاستمرار وتصوير المشهد) أو المصدر المجرد (للاكتمال واللحظية) في 1–5:",
+      "word_bank": ["coming", "rise", "crash", "explode", "shake / shaking", "collapse / collapsing", "dying", "crying"],
+      "items": [
+        { "num": 1, "prompt": "1 When Ali saw the teacher ______ (come) along the corridor, he ran back into the classroom.", "answers": ["coming"] },
+        { "num": 2, "prompt": "2 In the mornings, after prayer, I always watch the sun ______ (rise) above the mountains and then have breakfast.", "answers": ["rise"] },
+        { "num": 3, "prompt": "3 One day last year I saw a plane ______ (crash) into the ground and even from a distance... I could hear the petrol ______ (explode).", "answers": ["crash"] },
+        { "num": 4, "prompt": "3b ... hear the petrol ______ (explode).", "answers": ["explode"] },
+        { "num": 5, "prompt": "4 Eye-witnesses felt the ground ______ (shake) beneath their feet...", "answers": ["shake", "shaking", "shake / shaking"] },
+        { "num": 6, "prompt": "4b ... and saw blocks of flats ______ (collapse) like packs of cards.", "answers": ["collapse", "collapsing", "collapse / collapsing"] },
+        { "num": 7, "prompt": "5 In the terrible famine in Africa you could see people ______ (die) of hunger...", "answers": ["dying"] },
+        { "num": 8, "prompt": "5b ... and hear people ______ (cry) in pain.", "answers": ["crying"] }
+      ],
+      "hints": [
+        "1: رآه قادماً في الممر فهرع (استمرار coming). 2: شروق كامل ثم فطور (rise). 3: حدث لحظي كامل (crash/explode). 4: تصح الصيغتان (المصدر للاكتمال أو -ing لوصف مشهد الزلزال المستمر). 5: مشهد طويل ممتد (dying / crying)."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-5_5-a",
+      "origin": "educational_addition",
+      "page_ref": 36,
+      "questions": [
+        {
+          "id": "q-5_5-1",
+          "type": "mcq",
+          "stem": "Which modal verb expresses 'not allowed to do something' in PB page 36 (e.g., WB 5.5 A #6: public library)?",
+          "evidence_block_id": "u5-5_5-modals",
+          "options": [
+            { "text": "must not (mustn't)", "is_correct": true, "why_wrong": null },
+            { "text": "can't (cannot) always means forbidden", "is_correct": false, "why_wrong": "يؤكّد PB ص 36 أن must not (mustn't) حصراً تُستخدم للمنع (not allowed)، بينما تُستعمل can't للاستحالة أو انعدام المقدرة." },
+            { "text": "might not", "is_correct": false, "why_wrong": "might not تفيد ضعف الاحتمال (perhaps not)، لا المنع." },
+            { "text": "must", "is_correct": false, "why_wrong": "must تفيد الإلزام أو اليقين الإيجابي." }
+          ],
+          "hints": [
+            "اقرأ الملاحظة (Note) داخل الصندوق الأصفر الثاني في PB ص 36."
+          ],
+          "explain": "تنص ملاحظة PB ص 36 على أن must not (mustn't) لا تُستخدم إلا لمنع شخص من فعل شيء غير مسموح به."
+        },
+        {
+          "id": "q-5_5-2",
+          "type": "mcq",
+          "stem": "Why does WB 5.5 B #2 ('watch the sun ______ above the mountains and then have breakfast') take the bare infinitive 'rise'?",
+          "evidence_block_id": "u5-5_5-sense",
+          "options": [
+            { "text": "Because the action of watching the sunrise is viewed as completed before having breakfast.", "is_correct": true, "why_wrong": null },
+            { "text": "Because sense verbs can never take -ing forms.", "is_correct": false, "why_wrong": "تقبل أفعال الحواس صيغة -ing لإبراز الاستمرار كما في المثال الأول coming أو الخامس dying." },
+            { "text": "Because 'and then' always requires -ed past tense.", "is_correct": false, "why_wrong": "الفعل watch جاء بعد always للمضارع، وما بعد المفعول يأخذ مصدراً مجرداً (rise) لا ماضياً." },
+            { "text": "Because 'rise' needs 'to rise' after watch.", "is_correct": false, "why_wrong": "أفعال الحواس تتبع بمصدر مجرد بدون to." }
+          ],
+          "hints": [
+            "راجع قاعدة 2 في PB ص 36: When followed by the infinitive, this emphasizes that the action is completed."
+          ],
+          "explain": "يشاهد المتحدث شروق الشمس كاملاً ثم يتناول إفطاره، ومن ثمَّ استُعمل المصدر المجرد rise لتأكيد اكتمال الفعل."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-5_5-cant", "origin": "from_book", "page_ref": 36, "front": "can't vs mustn't", "back": "can't = مستحيل / لا يقدر | must not (mustn't) = ممنوع / غير مسموح", "tag": "Unit 5 · 5.5" },
+    { "id": "fc-5_5-sense", "origin": "from_book", "page_ref": 36, "front": "watch/see/hear + obj + V-ing vs V1", "back": "V-ing = فعل مستمر ومشهد قيد الحدوث | V1 = فعل مكتمل من أوله لآخره", "tag": "Unit 5 · 5.5" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت بنود 5.5 في PB ص 36 كاملة مع pb-38.png، وحُفظت الصيغ المطبوعة حرفياً: 'might (not)could', '(Positive) I must be a toothbrush', و'I can /cannot'.",
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 60–61 مع wb-061.png وwb-062.png، وحُفظت علامة الملكية المطبوعة 'Khaleds'' في A #10."
+  }
+}
