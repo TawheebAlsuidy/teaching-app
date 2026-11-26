@@ -1,0 +1,190 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "arts", "number": 7, "title": "Arts Reader (Literary Section)" },
+  "lesson": {
+    "id": "eng-arts-3",
+    "code": "AR3",
+    "title": "Telford Hall Episode 1",
+    "title_ar": "القسم الأدبي (3): قصة تيلفورد هول — الحلقة 1: وصول أحمد إلى نورتون وبداية الدراسة",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 55, "book_page": 53 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 85, "book_page": 84 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 86, "book_page": 85 }
+    ],
+    "reference_images": {
+      "pb_53": "assets/ref/pb_p053.webp",
+      "wb_84": "assets/ref/wb_p084.webp",
+      "wb_85": "assets/ref/wb_p085.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "arts-3-episode1",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 53 },
+      "dir": "ltr",
+      "recall_words": ["town planning", "glance", "drag", "reception desk", "dining room", "Shepherd's pie", "unpack", "assignment", "questionnaire", "water-powered"],
+      "content": {
+        "lines": [
+          "ARTS 3   Telford Hall Episode 1",
+          "[Complete two-column story page available offline in assets/ref/pb_p053.webp; structured episode summary & verbatim cue anchors below for WB Arts 3 A–E:]",
+          "Part 1 (Arrival on the train): Ahmed Hassan Al-Hadrami glanced at his new watch (a present from his parents), 15 minutes from Norton College in the North of England for a three-year course in town planning. Seeing grey skies and streams of rain running down the window glass, he hoped the weather wasn't always like this.",
+          "Part 2 (Telford Hall & Dining Room): Ahmed dragged 'his two large suitcase' into Telford Hall, where silver-haired receptionist Mrs Dale placed him in room 123 (1st floor) and called tall, fair-haired second-year engineering student Derek Barker to carry his cases before dinner in 5 minutes. At dinner, Ahmed asked about 'Shepherd's pie' (meat and onions covered with mashed potatoes), frowned to check what kind of meat ('Beef, sometimes lamb') and met neighbour Bob Wilson (also studying town planning). Derek offered to show both new students around town tomorrow. After dinner, tired from flying to England and finding Telford Hall, Ahmed unpacked and thought 'So far, so good'.",
+          "Part 3 (Exploring Norton & The Lecture): Within one week Ahmed felt at home, strolling along old stone pavements: Mill Street, Silk Street, Canal Street, weaver's Square, Loom Hill... In their Wednesday lecture on Norton's development ('As part of their town planning curse,' [printed typo for 'course']), the lecturer explained coal discovery in the late 18th century changed Norton from an agricultural market town to an industrial centre; small water-powered hill factories closed as town factories opened. He gave them questionnaires to investigate those old factories out in the country.",
+          "Part 4 (Buying a car): To reach the countryside, Ahmed bargained with a car salesman and bought a ten-year-old black London taxi in good condition (which he had wanted ever since seeing a London TV programme); next day he and Bob drove into the country.",
+          "Discussion: 1 What have you learned from the story about England and English student life? 2 How is life in England different from life in your own country?"
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي ومراقبة الأخطاء المطبعية (<bdi dir='ltr'>PB p. 53</bdi>):</strong> تضمّ هذه الصفحة عدداً كبيراً من الهفوات المطبعية الحرفية في الطبعة الرسمية: <span dir='ltr'><code>two large suitcase</code></span> (مفرد بدل جمع)، <span dir='ltr'><code>town planning curse</code></span> (<span dir='ltr'>curse</span> بدل <span dir='ltr'>course</span>)، <span dir='ltr'><code>all the away</code></span> بدل <span dir='ltr'>all the way</span>، <span dir='ltr'><code>weaver's Square</code></span> بحرف صغير، ومسافات/علامات اقتباس ساقطة (<span dir='ltr'><code>. 'welcome</code></span>، <span dir='ltr'><code>'What's that?</code></span>، <span dir='ltr'><code>. 'coal</code></span>). حُفظت المواضع المطبوعة أوفلاين في <span dir='ltr'>pb_p053.webp</span> ووُثّقت في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "خريطة الشخصيات والأماكن والانفعالات في الحلقة 1",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 53,
+            "html": "<ul><li><b>الشخصيات:</b> أحمد حسن الحضرمي (طالب تخطيط عمراني لـ3 سنوات) · بوب ويلسون (زميل في نفس التخصص) · ديريك باركر (سنة ثانية هندسة) · السيدة دايل (موظفة استقبال ذات شعر فضي).</li><li><b>تدرّج المشاعر (WB 3 D):</b> من الحزن على المطر الرمادي ← التوتر عند الوصول والقلق من نوع اللحم في <span dir='ltr'>Shepherd's pie</span> ← الامتنان لديريك ← السرور بالتأقلم في نورتون ← البهجة البالغة بشراء التاكسي اللندني الأسود.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 84,
+            "html": "<p dir='ltr'><b>Industrial shift clue (WB 3 C #7):</b> <i>agricultural market town</i> → coal discovered nearby (late 18th century) → <i>water-powered hill factories closed</i> and steam/coal town factories opened.</p>"
+          },
+          "self_check_ref": "chk-arts_3-a",
+          "page_ref": { "book": "PB", "page": 53, "pdf_page": 55, "image": "assets/ref/pb_p053.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "town planning": { "pos": "n", "ar": "تخطيط المدن (التخطيط العمراني)", "in_book_wordlist": true, "wb_page": 114 },
+    "Shepherd's pie": { "pos": "n", "ar": "فطيرة الراعي (لحم بقر/غنم وبصل مغطى ببطاطس مهروسة)", "in_book_wordlist": true, "wb_page": 114 },
+    "feel at home": { "pos": "phr", "ar": "يشعر بالألفة والارتياح وكأنه في بيته", "in_book_wordlist": true, "wb_page": 114 },
+    "questionnaire": { "pos": "n", "ar": "استبانة / استمارة أسئلة بحثية", "in_book_wordlist": true, "wb_page": 114 },
+    "water-powered": { "pos": "adj", "ar": "يُدار بقوة المياه", "in_book_wordlist": true, "wb_page": 114 },
+    "industrial": { "pos": "adj", "ar": "صناعي", "in_book_wordlist": true, "wb_page": 114 },
+    "drag": { "pos": "v", "ar": "يجرّ بثقل", "in_book_wordlist": true, "wb_page": 114 },
+    "unpack": { "pos": "v", "ar": "يُفرغ الحقائب من الأمتعة", "in_book_wordlist": true, "wb_page": 114 }
+  },
+  "activities": [
+    {
+      "id": "wb-arts_3-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 84 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "ARTS 3 B Read the story on PB page 53. Find the names of these places and people in the story.",
+      "prompt_ar": "استخرج أسماء الأماكن والشخصيات السبعة من الحلقة الأولى (WB ص 84):",
+      "word_bank": ["Norton College", "Norton", "Telford Hall", "123", "Mrs Dale", "Derek Barker and Bob Wilson", "Mill Street, Silk Street, Canal Street, weaver's Square, Loom Hill"],
+      "items": [
+        { "num": 1, "prompt": "1 the college where Ahmed is studying: ______", "answers": ["Norton College"] },
+        { "num": 2, "prompt": "2 the town which the college is in: ______", "answers": ["Norton"] },
+        { "num": 3, "prompt": "3 the place where Ahmed is staying: ______", "answers": ["Telford Hall"] },
+        { "num": 4, "prompt": "4 the number of his room: ______", "answers": ["123", "room 123"] },
+        { "num": 5, "prompt": "5 the receptionist or housekeeper: ______", "answers": ["Mrs Dale"] },
+        { "num": 6, "prompt": "6 some other students in Ahmed's accommodation: ______", "answers": ["Derek Barker, Bob Wilson", "Derek, Bob", "Bob Wilson and Derek Barker"] },
+        { "num": 7, "prompt": "7 some old streets in the town: ______", "answers": ["Mill Street, Silk Street, Canal Street, weaver's Square, Loom Hill", "Mill Street, Silk Street, Canal Street, Weaver's Square, Loom Hill"] }
+      ],
+      "hints": [
+        "حافظ النص الأصلي على كتابة weaver's بحرف w صغير في weaver's Square."
+      ]
+    },
+    {
+      "id": "wb-arts_3-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 84 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Complete these sentences.",
+      "prompt_ar": "أكمل الجمل الثماني بما يعلّل أحداث الحلقة الأولى (WB ص 84–85):",
+      "items": [
+        { "num": 1, "question": "1 Ahmed would probably stay in England for three years because ______", "model_answer": "he had come to Norton College to do a three-year course in town planning.", "explain_ar": "الفقرة الأولى." },
+        { "num": 2, "question": "2 Mrs Dale must be quite old because ______", "model_answer": "she had silver hair.", "explain_ar": "الشعر الفضي يدل على تقدم السن." },
+        { "num": 3, "question": "3 Ahmed didn't unpack immediately he arrived because ______", "model_answer": "dinner was in five minutes (Derek said 'See you at dinner in five minutes').", "explain_ar": "تأجل تفريغ الحقائب إلى ما بعد العشاء." },
+        { "num": 4, "question": "4 Derek offered to show Ahmed and Bob the town because ______", "model_answer": "they were both new to Norton.", "explain_ar": "قال ديريك: you're both new." },
+        { "num": 5, "question": "5 Ahmed was tired at the end of his first day at Telford Hall because ______", "model_answer": "he had flown all the way to England, travelled by train, found Telford Hall, met Derek, Bob and Mrs Dale, and it had been a long day.", "explain_ar": "تعب السفر والوصول والتعرّف الأول." },
+        { "num": 6, "question": "6 Ahmed and Bob became friends because ______", "model_answer": "they sat beside each other at dinner, were both new and were both doing town planning.", "explain_ar": "زمالة السكن والتخصص الواحد." },
+        { "num": 7, "question": "7 The water-powered factories in the hills closed because ______", "model_answer": "coal was discovered nearby at the end of the 18th century and new coal-powered factories opened in the town.", "explain_ar": "الانتقال إلى الطاقة الفحمية في وسط المدينة الصناعية." },
+        { "num": 8, "question": "8 Ahmed bought a car because ______", "model_answer": "they needed to drive out into the country for their assignment on old factories (and he had always wanted a black London taxi).", "explain_ar": "لحاجة البحث الميداني خارج المدينة." }
+      ],
+      "hints": [
+        "أجب بجمل سببية واضحة بعد because استناداً إلى PB ص 53."
+      ]
+    },
+    {
+      "id": "wb-arts_3-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 85 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Ahmed experienced many different feelings in his first week in England. Find a point in the story when he felt... (1 delighted: when he bought the taxi.)",
+      "prompt_ar": "اربط كل شعور من المشاعر 2–6 بالموقف الدال عليه في القصة (WB ص 85):",
+      "items": [
+        { "num": 2, "question": "2 depressed", "model_answer": "when he looked out of the train window at the grey sky and streams of rain running down the glass.", "explain_ar": "الفقرة الثانية: الجو الكئيب الممطر." },
+        { "num": 3, "question": "3 grateful", "model_answer": "when Derek helped him with his heavy suitcases and offered to show him and Bob round Norton.", "explain_ar": "قال 'Thank you very much'." },
+        { "num": 4, "question": "4 nervous", "model_answer": "when he arrived alone at Telford Hall (15 minutes to go, dragging two heavy suitcases) or hesitated before asking about the meat in Shepherd's pie.", "explain_ar": "توتر البداية في بلد غريب." },
+        { "num": 5, "question": "5 pleased", "model_answer": "after dinner thinking 'So far, so good', when Bob turned out to be studying town planning too, and after one week feeling at home in Norton.", "explain_ar": "الارتياح والبهجة بالتأقلم." },
+        { "num": 6, "question": "6 worried", "model_answer": "when he frowned looking at the unfamiliar dish ('What kind of meat?' — worried it might not be beef/lamb) or heard they had to get out into the country ('Now I have to buy a car').", "explain_ar": "القلق بشأن الطعام الحلال وتكليف الخروج للريف." }
+      ],
+      "hints": [
+        "موقف 1 محلول مسبقاً في الكتاب: delighted — when he bought the taxi."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-arts_3-a",
+      "origin": "educational_addition",
+      "page_ref": 53,
+      "questions": [
+        {
+          "id": "q-arts_3-1",
+          "type": "mcq",
+          "stem": "In PB page 53 (WB Arts 3 C #7), why did the small water-powered factories in the hills around Norton close?",
+          "evidence_block_id": "arts-3-episode1",
+          "options": [
+            { "text": "Because coal was discovered nearby at the end of the 18th century and new factories opened in the town.", "is_correct": true, "why_wrong": null },
+            { "text": "Because Ahmed and Bob finished their questionnaires and bought a London taxi.", "is_correct": false, "why_wrong": "تلك المصانع أغلقت تاريخياً في أواخر القرن الثامن عشر قبل مجيء أحمد بقرنين." },
+            { "text": "Because nobody in Norton knew how to make shepherd's pie.", "is_correct": false, "why_wrong": "فطيرة الراعي وجبة في مطعم السكن الجامعي ولا صلة لها بالمصانع." },
+            { "text": "Because the rain flooded all streets like Loom Hill.", "is_correct": false, "why_wrong": "تحوّل المدينة كان بسبب اكتشاف الفحم لا المطر." }
+          ],
+          "hints": [
+            "اقرأ جزء محاضرة الأربعاء حول تاريخ نورتون."
+          ],
+          "explain": "اكتشاف الفحم حوّل نورتون من بلدة سوق زراعية إلى مركز صناعي في المدينة، فتوقفت طواحين الماء الجبلية."
+        },
+        {
+          "id": "q-arts_3-2",
+          "type": "mcq",
+          "stem": "Why did Ahmed frown and ask Derek 'What kind of meat?' at dinner in Telford Hall?",
+          "evidence_block_id": "arts-3-episode1",
+          "options": [
+            { "text": "He wanted to check the meat in Shepherd's pie was beef or lamb (halal/permissible), not pork.", "is_correct": true, "why_wrong": null },
+            { "text": "He disliked mashed potatoes.", "is_correct": false, "why_wrong": "سؤاله انصب تحديداً على نوع اللحم: 'What kind of meat?'." },
+            { "text": "He wanted Mrs Dale to unpack his suitcases.", "is_correct": false, "why_wrong": "السيدة دايل موظفة الاستقبال وقد ساعده ديريك في الحقائب قبل العشاء." },
+            { "text": "He wanted to drive his black taxi to the dining room.", "is_correct": false, "why_wrong": "لم يشترِ التاكسي إلا لاحقاً بعد محاضرة يوم الأربعاء." }
+          ],
+          "hints": [
+            "أجابه بوب ويلسون مطمئناً: 'Beef, sometimes lamb'."
+          ],
+          "explain": "كمسلم قادم إلى بريطانيا لأول مرة، يتحقق أحمد من نوع اللحم في الطبق المجهول قبل تناوله."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-ar3-shepherd", "origin": "from_book", "page_ref": 114, "front": "Shepherd's pie", "back": "فطيرة الراعي (لحم وبصل مغطى ببطاطس مهروسة)", "tag": "Arts · AR3" },
+    { "id": "fc-ar3-townplan", "origin": "from_book", "page_ref": 114, "front": "town planning / questionnaire", "back": "تخطيط المدن / استمارة استبانة", "tag": "Arts · AR3" },
+    { "id": "fc-ar3-water", "origin": "from_book", "page_ref": 114, "front": "water-powered / industrial", "back": "يُدار بقوة المياه / صناعي", "tag": "Arts · AR3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 53 مع pb-55.png وأُرفقت pb_p053.webp أوفلاين، مع توثيق الهفوات المطبعية الحرفية ('curse' بدل course، 'two large suitcase'، 'all the away').",
+    "wb_ocr_vs_image": "طُوبقت WB ص 84–85 مع wb-085.png وwb-086.png وحُلّت أنشطة B–D بالكامل."
+  }
+}
