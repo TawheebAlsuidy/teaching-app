@@ -1,0 +1,228 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u2", "number": 2, "title": "Reporting events" },
+  "lesson": {
+    "id": "eng-u2-2_3",
+    "code": "2.3",
+    "title": "Listening to news interviews",
+    "title_ar": "الاستماع إلى مقابلات إخبارية وكتابة تقرير قصير",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 16, "book_page": 15 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 17, "book_page": 16 }
+    ],
+    "reference_images": {
+      "wb_15": "assets/ref/wb_p015.webp",
+      "wb_16": "assets/ref/wb_p016.webp",
+      "pb_10": "assets/ref/pb_p010.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u2-2_3-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "WB", "page": 15 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "2.3 Listening to interviews (Workbook)",
+          "2.3 A You are going to hear three interviews connected with stories on PB page 10. Write the headlines of the stories.",
+          "1 ______   2 ______   3 ______"
+        ]
+      },
+      "edu_note_html": "<strong>تنبيه مادة الاستماع (RULE 7):</strong> هذا الدرس في كتاب التمارين فقط (<bdi dir='ltr'>WB pp. 15–16</bdi>)، ولا تحتوي ملفات PDF الرسمية على نص الشريط الصوتي للمقابلات الثلاث (شريط المعلّم). لذلك استخرجنا العناوين الثلاثة القابلة للاستنتاج القطعي من الأسئلة المطبوعة في <bdi dir='ltr'>2.3 B</bdi> (<span dir='ltr'>Fog crash / Heat wave victim recovers / Rare bird excitement</span>)، وسُجّلت تفاصيل المقابلات غير المطبوعة في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> دون تخمين، مع توفير ورشة تفاعلية لكتابة التقرير الإخباري <bdi dir='ltr'>2.3 C</bdi>."
+    },
+    {
+      "id": "u2-2_3-interview-1",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 15 },
+      "dir": "ltr",
+      "recall_words": ["witness", "accident", "foggy", "fault"],
+      "content": {
+        "lines": [
+          "B Listen again and answer these questions.",
+          "1",
+          "a) Where was the witness at the time of the accident?",
+          "b) Did the witness see the accident?",
+          "c) How many cars were there in the accident?",
+          "d) How did you know it was very foggy?",
+          "e) How did the witness know that the passenger in the black car was hurt?",
+          "f) The witness thinks that the accident was the fault of the driver of the yellow car. What does she think he was doing wrong?",
+          "g) Is she a good witness?"
+        ]
+      }
+    },
+    {
+      "id": "u2-2_3-interviews-2-3",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 16 },
+      "dir": "ltr",
+      "recall_words": ["ambulance", "relationship", "hobby", "black stork"],
+      "content": {
+        "lines": [
+          "2",
+          "a) How long was he in hospital?",
+          "b) What was he doing when he collapsed?",
+          "c) Why did he collapse?",
+          "d) What had his wife said before they went walking?",
+          "e) Who called the ambulance?",
+          "f) What did the doctor say he needed?",
+          "g) Do you think they have a good relationship? Why? Why not?",
+          "3",
+          "a) Who is Robin Crow?",
+          "b) How long has he had this hobby?",
+          "c) Where does the black stork usually live?",
+          "d) Why is it in Britain?",
+          "e) When was the last time it was seen in Britain?",
+          "f) How would you describe Robin Crow?",
+          "C Choose one of the stories and use your answers to write a short report in your copybook."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "ربط أسئلة 2.3 B الثلاثة بعناوين جريدة PB ص 10",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 16,
+            "html": "<p>رغم غياب الشريط الصوتي من الملفات الرسمية، تكشف الأسئلة المطبوعة في <bdi dir='ltr'>2.3 B</bdi> بدقةٍ أيَّ خبرٍ من <bdi dir='ltr'>PB p. 10</bdi> يتناولُه كل حوار:</p><ul><li><b>المقابلة 1:</b> شاهد عيان (<span dir='ltr'>witness</span>)، حادث سيارتين في الضباب (<span dir='ltr'>accident / foggy</span>) ← <b>Fog crash</b>.</li><li><b>المقابلة 2:</b> رجل دخل المستشفى بعد إغمائه (<span dir='ltr'>hospital / collapsed</span>) ← <b>Heat wave victim recovers</b>.</li><li><b>المقابلة 3:</b> هاوي مراقبة طيور رأى طائر اللقلق الأسود في بريطانيا (<span dir='ltr'>Robin Crow / black stork</span>) ← <b>Rare bird excitement</b>.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 16,
+            "html": "<p dir='ltr'><b>Clue matching:</b> 'Where does the <i>black stork</i> usually live?' ↔ PB p. 10 '<b>Rare bird excitement</b>'.</p>"
+          },
+          "self_check_ref": "chk-2_3-a",
+          "page_ref": { "book": "WB", "page": 16, "pdf_page": 17, "image": "assets/ref/wb_p016.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "witness": { "pos": "n", "ar": "شاهد عيان", "in_book_wordlist": false, "wb_page": 15 },
+    "fault": { "pos": "n", "ar": "خطأ / تقصير", "in_book_wordlist": false, "wb_page": 15 },
+    "ambulance": { "pos": "n", "ar": "سيارة إسعاف", "in_book_wordlist": false, "wb_page": 16 },
+    "black stork": { "pos": "n", "ar": "طائر اللقلق الأسود", "in_book_wordlist": false, "wb_page": 16 }
+  },
+  "activities": [
+    {
+      "id": "wb-2_3-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 15 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "2.3 A You are going to hear three interviews connected with stories on PB page 10. Write the headlines of the stories.",
+      "prompt_ar": "استنتج العناوين الثلاثة من PB ص 10 التي ترتبط بها المقابلات 1 و2 و3 في 2.3 B:",
+      "word_bank": ["Fog crash", "Heat wave victim recovers", "Rare bird excitement"],
+      "items": [
+        { "num": 1, "prompt": "1 Interview 1 (witness to two cars colliding in heavy fog): ______", "answers": ["Fog crash"] },
+        { "num": 2, "prompt": "2 Interview 2 (a tourist who collapsed in heat and went to hospital): ______", "answers": ["Heat wave victim recovers"] },
+        { "num": 3, "prompt": "3 Interview 3 (Robin Crow speaking about spotting a black stork in Britain): ______", "answers": ["Rare bird excitement"] }
+      ],
+      "hints": [
+        "اقرأ أسئلة كل رقم (1، 2، 3) في 2.3 B ثم ابحث عن الكلمات المطابقة في PB ص 10.",
+        "الإجابات: 1 Fog crash، 2 Heat wave victim recovers، 3 Rare bird excitement."
+      ]
+    },
+    {
+      "id": "wb-2_3-b-note",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 15 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Listen again and answer these questions. (1 a–g, 2 a–g, 3 a–f)",
+      "prompt_ar": "تنبيه الأمانة العلمية (Rule 7) لأسئلة الاستماع 2.3 B:",
+      "items": [
+        {
+          "num": 1,
+          "question": "Which facts in 2.3 B can be verified from PB page 10 vs which require the teacher's cassette audio?",
+          "model_answer": "Verifiable from PB p. 10 & WB p. 16 clues: (1) Two cars (black & yellow) collided in fog near Norton. (2) Tourist Ed Shaw collapsed in hot weather while walking with his wife and stayed in hospital a week. (3) The black stork was seen in Britain for the first time in 10 years. Detailed cassette details (e.g., whether the woman was a good witness, exact ambulance caller, or Robin Crow's hobby duration) are NOT in the printed PDFs and are logged in REVIEW_NEEDED.md.",
+          "explain_ar": "امتنعنا عن تأليف تفاصيل من حوار مسموع غير متاح في الملفات الرسمية التزاماً بالقاعدة الذهبية 7، وتبقى الأسئلة الـ 20 كاملة لإجرائها مع المعلّم عند سماع الشريط."
+        }
+      ],
+      "hints": [
+        "استعمل أسئلة 2.3 B 1–3 كخريطة عناصر عند إجابتك عن التقرير الإخباري في 2.3 C."
+      ]
+    },
+    {
+      "id": "wb-2_3-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 16 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Choose one of the stories and use your answers to write a short report in your copybook.",
+      "prompt_ar": "تدرّب على كتابة تقرير صحفي قصير (2.3 C) استناداً إلى خبر PB ص 10 (مثلاً Fog crash أو Heat wave victim recovers):",
+      "guidance_literal": "Headline + What happened + When/Where + Eye-witness quote + Result",
+      "steps": [
+        { "label_ar": "1) اختر عنوان الخبر (Headline)", "placeholder": "Heat wave victim recovers" },
+        { "label_ar": "2) اكتب الجملة الافتتاحية الموجزة (من / ماذا / أين / متى)", "placeholder": "American tourist Ed Shaw came out of hospital yesterday after collapsing in unusually hot weather a week ago." },
+        { "label_ar": "3) أضف تفاصيل الحدث واقتباساً مباشراً بعلامات التنصيص", "placeholder": "'I nearly died,' the tourist said. 'But I feel great now.'" },
+        { "label_ar": "4) جملة ختامية للنتيجة أو النصيحة", "placeholder": "Doctors advised visitors to drink plenty of water during hot days." }
+      ],
+      "hints": [
+        "استعن بالجملة الواردة في WB 2.2 B #1 لبناء اقتباس السائح الأمريكي بدقة.",
+        "راجع علامات التنصيص والفاصلة داخل القوس المقتبس تمهيداً لدرس 2.5."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-2_3-a",
+      "origin": "educational_addition",
+      "page_ref": 16,
+      "questions": [
+        {
+          "id": "q-2_3-1",
+          "type": "mcq",
+          "stem": "Based on the printed WB page 16 questions for Interview 3 (Robin Crow & black stork), which headline on PB page 10 matches Interview 3?",
+          "evidence_block_id": "u2-2_3-interviews-2-3",
+          "options": [
+            { "text": "Rare bird excitement", "is_correct": true, "why_wrong": null },
+            { "text": "Roman dam found", "is_correct": false, "why_wrong": "الأسئلة تذكر طائر اللقلق الأسود (black stork) وBritain وليس سداً رومانياً." },
+            { "text": "Castle to go", "is_correct": false, "why_wrong": "خبر القلعة يتناول هدم قلعة قديمة على حافة العاصمة." },
+            { "text": "Wind Turbines Start Operation", "is_correct": false, "why_wrong": "لا يذكر التوربينات بل هواية مراقبة الطيور النادرة." }
+          ],
+          "hints": [
+            "اقرأ السؤال 3 c): Where does the black stork usually live?",
+            "اربط black stork بعنوانه في PB ص 10.",
+            "الصحيح: Rare bird excitement."
+          ],
+          "explain": "أسئلة المقابلة 3 تسأل مباشرةً عن Robin Crow وطائر black stork في بريطانيا، وهو موضوع خبر Rare bird excitement."
+        },
+        {
+          "id": "q-2_3-2",
+          "type": "mcq",
+          "stem": "What factual country setting is directly revealed by WB p. 16 question 3 d) for the black stork report?",
+          "evidence_block_id": "u2-2_3-interviews-2-3",
+          "options": [
+            { "text": "Britain ('this country' in the PB p. 10 summary)", "is_correct": true, "why_wrong": null },
+            { "text": "Central Russia", "is_correct": false, "why_wrong": "روسيا الوسطى (Central Russia) كانت موقع تحطم الطائرة في الخبر المجاور." },
+            { "text": "The North Pole", "is_correct": false, "why_wrong": "القطب الشمالي ورد في خبر Arctic ice scare." },
+            { "text": "White Hill in Central America", "is_correct": false, "why_wrong": "White Hill وردت في خبر توربينات الرياح دون ذكر أمريكا الوسطى." }
+          ],
+          "hints": [
+            "انظر إلى نص السؤالين 3 d و3 e في WB ص 16.",
+            "الكلمة المذكورة صراحةً هي Britain.",
+            "الصحيح: Britain."
+          ],
+          "explain": "تصرح الأسئلة المطبوعة في WB ص 16 (3 d و3 e) أن اللقلق الأسود شوهد في Britain."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-2_3-witness", "origin": "from_book", "page_ref": 15, "front": "witness (n)", "back": "شاهد عيان (في حادث أو واقعة)", "tag": "Unit 2 · 2.3" },
+    { "id": "fc-2_3-fault", "origin": "from_book", "page_ref": 15, "front": "fault (n)", "back": "خطأ / مسؤولية عن التقصير", "tag": "Unit 2 · 2.3" },
+    { "id": "fc-2_3-ambulance", "origin": "from_book", "page_ref": 16, "front": "ambulance (n)", "back": "سيارة إسعاف", "tag": "Unit 2 · 2.3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 15–16 مع tesseract.js eng: أخرجت OCR رموزاً مغلوطة لترقيم الأحرف والأرقام ('c)' → '¢)', 'a)' → '3)') وجرى تصحيحها كلها بصرياً عبر wb-016.png وwb-017.png؛ وسُجّل غياب الشريط الصوتي للمقابلات في REVIEW_NEEDED.md."
+  }
+}
