@@ -1,0 +1,211 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "science", "number": 8, "title": "Science Reader (Scientific Section)" },
+  "lesson": {
+    "id": "eng-sci-3",
+    "code": "SR3",
+    "title": "Light",
+    "title_ar": "القسم العلمي (3): الضوء (طبيعته وانعكاسه وانكساره والعدسات)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 69, "book_page": 67 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 99, "book_page": 98 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 100, "book_page": 99 }
+    ],
+    "reference_images": {
+      "pb_67": "assets/ref/pb_p067.webp",
+      "wb_98": "assets/ref/wb_p098.webp",
+      "wb_99": "assets/ref/wb_p099.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "sci-3-definition-reflection",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 67 },
+      "dir": "ltr",
+      "recall_words": ["physicist", "quantum theory", "vacuum", "outer space", "emit", "reflect", "reflection", "angle of incidence", "angle of reflection", "scatter"],
+      "content": {
+        "lines": [
+          "SCIENCE 3   Light",
+          "Definition",
+          "Light is a form of energy. Over the years, physicists have had different ideas about how light behaves. First some said it acts like a stream of particles. Later others observed that light acts like a wave that can travel through a vacuum, such as outer space. Most recently, the quantum theory has stated that it is a combination of both.",
+          "Reflection",
+          "We see something when an object emits light, reflects light like a mirror, or changes light passing through it. We see most things by reflection. When you look at your desk, what you really see is light reflected from the desk. How much light is reflected depends on the surface that the light hits. A smooth white surface reflects more light than a rough black one. On a smooth surface, the angle at which light hits it is the same as the angle at which it is reflected. On a rough surface, these angles are different because the surface scatters the light.",
+          "Diagram labels (PB p. 67 top right): ANGLE OF INCIDENCE = ANGLE OF REFLECTION (SMOOTH SURFACE) | Scattered rays (ROUGH SURFACE)"
+        ],
+        "image": "assets/media/sci3_reflection.webp",
+        "caption": "Regular reflection on a smooth surface vs scattered light on a rough surface (PB page 67)"
+      }
+    },
+    {
+      "id": "sci-3-refraction-lenses",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 67 },
+      "dir": "ltr",
+      "recall_words": ["refract", "refraction", "transparent", "medium", "lens", "convex", "concave", "converge", "diverge", "focus", "prism"],
+      "content": {
+        "lines": [
+          "Refraction",
+          "Put a spoon at an angle in a glass of water. Stand back and look at it. The spoon appears to bend or split into two parts. This happens because light waves bend when they pass from one transparent medium to another. This effect is called refraction.",
+          "Refraction is made use of most commonly in lenses. Lenses are specially-shaped pieces of glass that refract light exactly. There two types of lenses. A convex lens is thicker in the middle than at the edges and can make objects look larger. A concave lens is thinner in the middle than at the edges and makes objects look smaller.",
+          "Diagram labels: CONVEX LENS (LIGHT RAYS CONVERGE → FOCUS) | CONCAVE LENS (LIGHT RAYS DIVERGE) | Photo caption: The prism an example of refraction",
+          "Discussion: 1 What is our main source of natural light? 2 When does a raindrop act like a prism? 3 When do we use lenses?"
+        ],
+        "image": "assets/media/sci3_refraction.webp",
+        "caption": "Convex vs concave lenses and prism refraction (PB page 67)"
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي واستخراج من الصور (<bdi dir='ltr'>PB p. 67 &amp; WB p. 99</bdi>):</strong><br>1) طُبعت في <span dir='ltr'>PB ص 67</span> عبارة <span dir='ltr'><code>There two types of lenses.</code></span> (بسقوط الفعل <span dir='ltr'>are</span>) وبطاقة المنشور <span dir='ltr'><code>The prism an example of refraction</code></span> (بسقوط الفعل <span dir='ltr'>is</span>)، كما حُفظت عبارات <span dir='ltr'>WB ص 98–99</span> حرفياً: <span dir='ltr'>each word.</span> (بدون علامة استفهام)، <span dir='ltr'>'Definition'</span> (بسقوط الفتح في 3 B)، و<span dir='ltr'><code>which is describe</code></span> (بسقوط <span dir='ltr'>-d</span> في 3 D #1).<br>2) مفردات المخططات (<span dir='ltr'>angle of incidence, angle of reflection, converge, diverge, focus</span>) مستخرجة من الرسوم ومطابقة لقائمة <span dir='ltr'>WB ص 115</span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "العدسة المحدّبة مقابل المقعّرة وأسئلة النقاش والتفسير (WB 3 E)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 67,
+            "html": "<ul><li><b>العدسة المحدّبة (<span dir='ltr'>Convex lens</span>):</b> سميكة في الوسط رقيقة عند الأطراف؛ تجمّع الأشعة في بؤرة (<span dir='ltr'>converge to focus</span>) وتُكبّر الأجسام — لذا تناسب <b>نظارات القراءة</b> (WB 3 D #2).</li><li><b>العدسة المقعّرة (<span dir='ltr'>Concave lens</span>):</b> رقيقة في الوسط سميكة عند الأطراف؛ تفرّق الأشعة (<span dir='ltr'>diverge</span>) وتُصغّر الأجسام.</li><li><b>أسئلة المناقشة (PB ص 67):</b> مصدر الضوء الطبيعي الرئيس هو الشمس (<span dir='ltr'>the Sun</span>)؛ وتعمل قطرة المطر عمل المنشور عند تكوّن قوس قزح (<span dir='ltr'>rainbow</span>) فتُفرّق الضوء إلى ألوان الطيف؛ ونستخدم العدسات في النظارات والمجاهر والكاميرات والمقاريب.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 67,
+            "caption": "مقارنة سلوك الأشعة في العدستين المحدّبة والمقعّرة",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#FFFBEB'/><rect x='14' y='18' width='276' height='84' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='152' y='42' text-anchor='middle' font-size='11' font-weight='700'>Convex Lens (Reading glasses)</text><text x='152' y='64' text-anchor='middle' font-size='10'>Thicker in middle · Rays CONVERGE → FOCUS</text><text x='152' y='84' text-anchor='middle' font-size='10'>Objects look LARGER</text><rect x='310' y='18' width='276' height='84' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='448' y='42' text-anchor='middle' font-size='11' font-weight='700'>Concave Lens</text><text x='448' y='64' text-anchor='middle' font-size='10'>Thinner in middle · Rays DIVERGE</text><text x='448' y='84' text-anchor='middle' font-size='10'>Objects look SMALLER</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 99,
+            "html": "<p dir='ltr'><b>Scientific explanation (WB 3 E #3):</b> A rounded drop of water on a leaf acts like a tiny convex lens, refracting and focusing sunlight to a hot point that can scorch the leaf.</p>"
+          },
+          "self_check_ref": "chk-sci_3-a",
+          "page_ref": { "book": "PB", "page": 67, "pdf_page": 69, "image": "assets/ref/pb_p067.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "angle of incidence": { "pos": "n", "ar": "زاوية السقوط", "in_book_wordlist": true, "wb_page": 115 },
+    "angle of reflection": { "pos": "n", "ar": "زاوية الانعكاس", "in_book_wordlist": true, "wb_page": 115 },
+    "convex": { "pos": "adj", "ar": "محدّب (سميك الوسط يجمع الضوء ويُكبّر)", "in_book_wordlist": true, "wb_page": 115 },
+    "concave": { "pos": "adj", "ar": "مقعّر (رقيق الوسط يفرّق الضوء ويُصغّر)", "in_book_wordlist": true, "wb_page": 115 },
+    "converge": { "pos": "v", "ar": "تتجمع الأشعة في نقطة واحدة", "in_book_wordlist": true, "wb_page": 115 },
+    "diverge": { "pos": "v", "ar": "تتفرّق الأشعة وتتباعد", "in_book_wordlist": true, "wb_page": 115 },
+    "refraction": { "pos": "n", "ar": "انكسار الضوء عند انتقاله بين وسطين", "in_book_wordlist": true, "wb_page": 115 },
+    "scatter": { "pos": "v", "ar": "يُشتّت / يُبعثر الضوء (السطح الخشن)", "in_book_wordlist": true, "wb_page": 115 },
+    "transparent": { "pos": "adj", "ar": "شفاف (يسمح بنفاذ الضوء)", "in_book_wordlist": true, "wb_page": 115 },
+    "vacuum": { "pos": "n", "ar": "فراغ (كالفضاء الخارجي)", "in_book_wordlist": true, "wb_page": 115 }
+  },
+  "activities": [
+    {
+      "id": "wb-sci_3-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 99 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "SCIENCE 3 B Read Definition' again. Number these definitions of light in historical order.",
+      "prompt_ar": "رتّب نظريات طبيعة الضوء تاريخياً من 1 (الأقدم) إلى 3 (الأحدث) في WB ص 99:",
+      "word_bank": ["1", "2", "3"],
+      "items": [
+        { "num": 1, "prompt": "______ Light is a combination of particles and waves.", "answers": ["3"] },
+        { "num": 2, "prompt": "______ Light is a series of waves.", "answers": ["2"] },
+        { "num": 3, "prompt": "______ Light is a stream of particles.", "answers": ["1"] }
+      ],
+      "hints": [
+        "1 First: stream of particles ← 2 Later: wave ← 3 Most recently: combination of both (quantum theory)."
+      ]
+    },
+    {
+      "id": "wb-sci_3-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 99 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Read 'Reflection'. Are these statements true or false? Write T or F.",
+      "prompt_ar": "حدّد صحة (T) أو خطأ (F) العبارات الخمس حول انعكاس الضوء (WB ص 99):",
+      "word_bank": ["T", "F"],
+      "items": [
+        { "num": 1, "prompt": "1 We see things in three different ways. ______", "answers": ["T"] },
+        { "num": 2, "prompt": "2 The most common way is by reflection. ______", "answers": ["T"] },
+        { "num": 3, "prompt": "3 Your desk is not really there, only the reflection. ______", "answers": ["F"] },
+        { "num": 4, "prompt": "4 The surface of a sheet of glass reflects more light than the surface of your desk. ______", "answers": ["T"] },
+        { "num": 5, "prompt": "5 Rough surfaces scatter light. ______", "answers": ["T"] }
+      ],
+      "hints": [
+        "1:T (الابتعاث/الانعكاس/تغيير الضوء النافذ) · 2:T · 3:F (المكتب موجود فعلاً وإنما نراه بفضل الضوء المنعكس عنه) · 4:T (الزجاج أملس فيعكس بانتظام مقارنة بسطح المكتب الخشب، مع الانتباه أن الزجاج الشفاف ينفذ كثيراً من الضوء أيضاً) · 5:T."
+      ]
+    },
+    {
+      "id": "wb-sci_3-de",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 99 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Read 'Refraction'. 1 In your copybook, draw the experiment with the spoon which is describe in the first paragraph. 2 Which sort of lens would be most useful for reading glasses? Why? E Write an explanation for each of these statements (1–3).",
+      "prompt_ar": "أسئلة تطبيقات الانعكاس والانكسار والعدسات في 3 D #2 و3 E (WB ص 99):",
+      "items": [
+        { "num": 1, "question": "3 D #2: Which sort of lens would be most useful for reading glasses? Why?", "model_answer": "A convex lens (thicker in the middle than at the edges), because it converges light rays and makes objects — such as small print on a page — look larger.", "explain_ar": "العدسة المحدّبة تُكبّر النص." },
+        { "num": 2, "question": "3 E #1: You must stand in front of a mirror to see your reflection.", "model_answer": "Because a mirror is a smooth surface where the angle of reflection equals the angle of incidence; if you stand to the side, light hitting the mirror from you reflects away at an equal angle in the opposite direction instead of back to your eyes.", "explain_ar": "تساوي زاوية السقوط مع زاوية الانعكاس على المرآة الملساء." },
+        { "num": 3, "question": "3 E #2: When you look at yourself in the bowl of a spoon, you look smaller; when you look at yourself in the back of a spoon, you look bigger.", "model_answer": "The hollow bowl of a spoon curves inward like a concave surface (making reflected images look smaller), whereas the curved outer back bulges outward like a convex surface (making images/details look bigger at close range).", "explain_ar": "تشبيه تقعّر الملعقة وتحدّب ظهرها بمبدأ العدسة المقعرة والمحدبة المذكور في النص." },
+        { "num": 4, "question": "3 E #3: Leaves are sometimes burnt by sunlight passing through raindrops on the leaves.", "model_answer": "A round raindrop on a leaf acts like a small convex lens, refracting sunlight waves and bringing them to a sharp focus at one point, concentrating the Sun's heat enough to burn the leaf.", "explain_ar": "تعمل قطرة الماء كعدسة محدبة تجمّع أشعة الشمس في البؤرة (focus)." }
+      ],
+      "hints": [
+        "وظّف مفردات الدرس الصريحة: smooth surface, angle of incidence/reflection, convex, concave, focus."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-sci_3-a",
+      "origin": "educational_addition",
+      "page_ref": 67,
+      "questions": [
+        {
+          "id": "q-sci_3-1",
+          "type": "mcq",
+          "stem": "According to PB page 67, why does a rough surface scatter light instead of producing a clear reflection?",
+          "evidence_block_id": "sci-3-definition-reflection",
+          "options": [
+            { "text": "Because the uneven angles at which light hits and reflects are different across the rough surface.", "is_correct": true, "why_wrong": null },
+            { "text": "Because light cannot travel through a vacuum.", "is_correct": false, "why_wrong": "موجات الضوء قادرة على الانتقال في الفراغ (such as outer space) بخلاف موجات الصوت." },
+            { "text": "Because all rough surfaces are transparent prisms.", "is_correct": false, "why_wrong": "التشتت يحدث بالانعكاس عن السطوح الخشنة لا عبر منشور شفاف." },
+            { "text": "Because convex lenses always scatter rays outward (diverge).", "is_correct": false, "why_wrong": "العدسة المحدبة تجمع الأشعة (converge)، والمقعرة هي التي تفرّقها." }
+          ],
+          "hints": [
+            "انظر الجملتين الأخيرتين من فقرة Reflection."
+          ],
+          "explain": "على السطح الأملس تتساوى زاويتا السقوط والانعكاس، أما على السطح الخشن فتختلفان فيتشتت الضوء."
+        },
+        {
+          "id": "q-sci_3-2",
+          "type": "mcq",
+          "stem": "Which type of lens is thicker in the middle than at the edges, converges light rays to a focus, and helps for reading glasses (WB 3 D #2)?",
+          "evidence_block_id": "sci-3-refraction-lenses",
+          "options": [
+            { "text": "A convex lens", "is_correct": true, "why_wrong": null },
+            { "text": "A concave lens", "is_correct": false, "why_wrong": "العدسة المقعرة أرق في الوسط وتفرّق الأشعة وتُصغّر الأجسام." },
+            { "text": "A flat rough board", "is_correct": false, "why_wrong": "الأجسام المعتمة الخشنة تشتت الضوء ولا تكسره عبر عدسة." },
+            { "text": "A water bottle with a small leak", "is_correct": false, "why_wrong": "تلك في تجربة حالات المادة في الدرس السابق." }
+          ],
+          "hints": [
+            "انظر وصف النوع الأول تحت Refraction والرسوم التوضيحية أسفل PB ص 67."
+          ],
+          "explain": "العدسة المحدّبة (convex lens) سميكة الوسط وتكبر الخط الصغير بتجميع الأشعة في بؤرة."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-sr3-reflect", "origin": "from_book", "page_ref": 115, "front": "angle of incidence / angle of reflection", "back": "زاوية السقوط / زاوية الانعكاس", "tag": "Science · SR3" },
+    { "id": "fc-sr3-refract", "origin": "from_book", "page_ref": 115, "front": "refraction / transparent medium", "back": "انكسار الضوء / وسط شفاف", "tag": "Science · SR3" },
+    { "id": "fc-sr3-lenses", "origin": "from_book", "page_ref": 115, "front": "convex (converge) vs concave (diverge)", "back": "محدبة تجمّع وتكبّر ≠ مقعرة تفرّق وتصغّر", "tag": "Science · SR3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 67 مع pb-69.png وتكبيرات 600 DPI (s3_reflect.png, s3_lenses.png): حُفظ سقوط الفعل في 'There two types of lenses.' و'The prism an example of refraction'.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 98–99 مع wb_tail-099.png وwb_tail-100.png وحُفظت عبارات 'Definition'' و'which is describe'."
+  }
+}
