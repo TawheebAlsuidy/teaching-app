@@ -1,0 +1,191 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_5",
+    "code": "4.5",
+    "title": "Tables and cooking conversations",
+    "title_ar": "تطبيقات جدول الزراعة ومحادثة الطبخ الثنائية (طالب A / طالب B)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 45, "book_page": 44 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 46, "book_page": 45 }
+    ],
+    "reference_images": {
+      "wb_44": "assets/ref/wb_p044.webp",
+      "wb_45": "assets/ref/wb_p045.webp",
+      "pb_27": "assets/ref/pb_p027.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_5-abc",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "WB", "page": 44 },
+      "dir": "ltr",
+      "recall_words": ["subtropical", "slopes", "catch", "restaurant", "zone"],
+      "content": {
+        "lines": [
+          "4.5 A Look at the table you completed in the last lesson. Use the information to test your partner. Ask questions like these:",
+          "How high are the Eastern mountain slopes?",
+          "Where does cotton grow?",
+          "Where will you find a subtropical climate?",
+          "B Make conversations. Listen to what your partner says and choose the right thing to say.",
+          "Pupil A - You begin.",
+          "1 Can you cook?",
+          "3 { Would you like to learn? | Who taught you? }",
+          "5 { What do you cook? | Why not? }",
+          "7 { What do you do if you're by yourself? | What's your favourite? }",
+          "9 { Do you catch your own fish? | You can't go every day. }",
+          "(WB p. 45) Pupil B - Your partner begins.",
+          "2 { Yes, I can. | No, I can't. }",
+          "4 { No, not really. | My aunt. }",
+          "6 { I don't have to. | Lots of things. Fish, lamb, rice, vegetables. }",
+          "8 { I go to a restaurant. | Fish. I love fish. }",
+          "10 { No. I haven't got a boat. | Why not? }",
+          "C Prepare some notes in your copybooks on the zone you live in. Be ready to tell the rest of the class about it if you are asked."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "مسارا الحوار المتشعبان في 4.5 B (مسار نعم أجيد الطبخ / مسار لا أجيد الطبخ)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 44,
+            "html": "<ul><li><b>المسار الأول (الإجابة بنعم — <span dir='ltr'>Yes, I can</span>):</b><br><span dir='ltr'>1 Can you cook? → 2 Yes, I can. → 3 Who taught you? → 4 My aunt. → 5 What do you cook? → 6 Lots of things. Fish, lamb, rice, vegetables. → 7 What's your favourite? → 8 Fish. I love fish. → 9 Do you catch your own fish? → 10 No. I haven't got a boat.</span></li><li><b>المسار الثاني (الإجابة بلا — <span dir='ltr'>No, I can't</span>):</b><br><span dir='ltr'>1 Can you cook? → 2 No, I can't. → 3 Would you like to learn? → 4 No, not really. → 5 Why not? → 6 I don't have to. → 7 What do you do if you're by yourself? → 8 I go to a restaurant. → 9 You can't go every day. → 10 Why not?</span></li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 44,
+            "caption": "شجرة التفرع الثنائية لتمرين المحادثة 4.5 B",
+            "svg": "<svg viewBox='0 0 600 130' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='130' rx='10' fill='#ECFDF5'/><rect x='200' y='10' width='200' height='26' rx='6' fill='#E2E8F0' stroke='#475569'/><text x='300' y='27' text-anchor='middle' font-size='11' font-weight='700'>1 A: Can you cook?</text><rect x='14' y='52' width='276' height='66' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='152' y='73' text-anchor='middle' font-size='11' font-weight='700'>Path 1: 2 Yes, I can.</text><text x='152' y='92' text-anchor='middle' font-size='10'>Who taught you? → My aunt → Fish →</text><text x='152' y='108' text-anchor='middle' font-size='10'>Do you catch...? → Haven't got a boat.</text><rect x='310' y='52' width='276' height='66' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='448' y='73' text-anchor='middle' font-size='11' font-weight='700'>Path 2: 2 No, I can't.</text><text x='448' y='92' text-anchor='middle' font-size='10'>Learn? → Not really → Don't have to →</text><text x='448' y='108' text-anchor='middle' font-size='10'>Restaurant → You can't go every day.</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 44,
+            "html": "<p dir='ltr'><b>Listen &amp; pick:</b> Notice that Pupil B's odd-branch replies swap vertically across lines 4–10 so both partners must listen closely!</p>"
+          },
+          "self_check_ref": "chk-4_5-a",
+          "page_ref": { "book": "WB", "page": 45, "pdf_page": 46, "image": "assets/ref/wb_p045.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "subtropical": { "pos": "adj", "ar": "شبه مداري", "in_book_wordlist": true, "wb_page": 113 },
+    "by yourself": { "pos": "phr", "ar": "بمفردك / وحدك", "in_book_wordlist": false, "wb_page": 44 },
+    "catch": { "pos": "v", "ar": "يصطاد", "in_book_wordlist": false, "wb_page": 44 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_5-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 44 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.5 A Look at the table you completed in the last lesson. Use the information to test your partner. Ask questions like these:",
+      "prompt_ar": "أسئلة وأجوبة الاختبار السريع من جدول 4.4 A (بما فيها الأسئلة الثلاثة المطبوعة):",
+      "items": [
+        { "num": 1, "question": "How high are the Eastern mountain slopes?", "model_answer": "From 2,300 metres down to 1,100 metres (2,300 -1,100m).", "explain_ar": "من بيانات المنطقة الرابعة في الجدول وPB ص 27." },
+        { "num": 2, "question": "Where does cotton grow?", "model_answer": "In Zone 1 — the Tihamah on the Red Sea (0 to 300m).", "explain_ar": "يُزرع القطن والتمور والخضراوات والحبوب في السهل التهامي." },
+        { "num": 3, "question": "Where will you find a subtropical climate?", "model_answer": "In Zone 2 (Western mountain slopes) and Zone 4 (Eastern mountain slopes).", "explain_ar": "تتصف المنحدرات الغربية والشرقية بمناخ شبه مداري." }
+      ],
+      "hints": [
+        "يمكنك طرح أسئلة إضافية لزميلك مثل: Where is coffee grown? أو How high are the Central Highlands?"
+      ]
+    },
+    {
+      "id": "wb-4_5-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 44 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Make conversations. Listen to what your partner says and choose the right thing to say. (Complete the key logical replies across both dialogue branches.)",
+      "prompt_ar": "أكمل الردّ المنطقي الموافق لقول شريكك في مسارَي المحادثة 4.5 B:",
+      "word_bank": ["Who taught you?", "Would you like to learn?", "I don't have to.", "Fish. I love fish.", "No. I haven't got a boat.", "Why not?"],
+      "items": [
+        { "num": 1, "prompt": "1 Partner says 'Yes, I can.' (Q2) → Turn 3 replies: ______", "answers": ["Who taught you?"] },
+        { "num": 2, "prompt": "2 Partner says 'No, I can't.' (Q2) → Turn 3 asks: ______", "answers": ["Would you like to learn?"] },
+        { "num": 3, "prompt": "3 Partner asks 'Why not?' after 'No, not really.' (Q5) → Turn 6 replies: ______", "answers": ["I don't have to."] },
+        { "num": 4, "prompt": "4 Partner asks 'What's your favourite?' (Q7) → Turn 8 replies: ______", "answers": ["Fish. I love fish."] },
+        { "num": 5, "prompt": "5 Partner asks 'Do you catch your own fish?' (Q9) → Turn 10 replies: ______", "answers": ["No. I haven't got a boat."] },
+        { "num": 6, "prompt": "6 Partner says 'You can't go every day.' (Q9) → Turn 10 replies: ______", "answers": ["Why not?"] }
+      ],
+      "hints": [
+        "انتبه أن خيارات الطالب B من الخطوة 4 إلى 10 ليست بترتيب مسار واحد؛ بل يستلزم كل خيار المتابعة المنطقية لجملة شريكه."
+      ]
+    },
+    {
+      "id": "wb-4_5-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 45 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Prepare some notes in your copybooks on the zone you live in. Be ready to tell the rest of the class about it if you are asked.",
+      "prompt_ar": "أعدّ بطاقة ملاحظات منظمة في دفترك عن المنطقة التي تسكن فيها (الارتفاع والمناخ والمحاصيل):",
+      "guidance_literal": "Zone name & height → Summer & winter climate → Main crops & trees → Water source",
+      "steps": [
+        { "label_ar": "1) اسم المنطقة وارتفاعها عن سطح البحر", "placeholder": "Zone: Central Highlands (Sana'a / Dhamar) — Height: about 2,200 to 2,400 metres." },
+        { "label_ar": "2) المناخ صيفاً وشتاءً وهطول الأمطار", "placeholder": "Climate: moderate with warm days, summer rains, and cold winter nights." },
+        { "label_ar": "3) المحاصيل والفواكه التي تشتهر بها منطقتك", "placeholder": "Vegetation: sorghum, wheat, grapes, apricots, peaches and figs grown on terraces and in wadi beds." }
+      ],
+      "hints": [
+        "اذكر اسم منطقتك الحقيقية واستعن بصفات المناخ والمحاصيل من درس 4.4."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_5-a",
+      "origin": "educational_addition",
+      "page_ref": 44,
+      "questions": [
+        {
+          "id": "q-4_5-1",
+          "type": "mcq",
+          "stem": "In WB 4.5 B conversation #2, if Pupil B says 'Yes, I can.', which option must Pupil A choose in Turn 3?",
+          "evidence_block_id": "u4-4_5-abc",
+          "options": [
+            { "text": "Who taught you?", "is_correct": true, "why_wrong": null },
+            { "text": "Would you like to learn?", "is_correct": false, "why_wrong": "هذا السؤال لا يُطرح إلا إذا أجاب الشريك: No, I can't." },
+            { "text": "Why not?", "is_correct": false, "why_wrong": "هذه العبارة في الخطوة 5 ولا تناسب من قال إنّه يستطيع الطبخ." },
+            { "text": "Do you catch your own fish?", "is_correct": false, "why_wrong": "هذا السؤال في الخطوة 9 ولا يأتي إلا بعد أن يذكر السمك بوصفه طبقه المفضل." }
+          ],
+          "hints": [
+            "اقرأ خيارات الخطوة 3 تحت Pupil A في WB ص 44."
+          ],
+          "explain": "الردّ الطبيعي على Yes, I can (نعم أجيد الطبخ) هو سؤاله عمّن علّمه ذلك: Who taught you?"
+        },
+        {
+          "id": "q-4_5-2",
+          "type": "mcq",
+          "stem": "In WB 4.5 B Turn 7, if Pupil B replied 'I don't have to.' in Turn 6, what should Pupil A say next?",
+          "evidence_block_id": "u4-4_5-abc",
+          "options": [
+            { "text": "What do you do if you're by yourself?", "is_correct": true, "why_wrong": null },
+            { "text": "What's your favourite?", "is_correct": false, "why_wrong": "يتبع هذا السؤال إجابة الأطعمة المتنوعة (Lots of things...) في المسار الأول." },
+            { "text": "Do you catch your own fish?", "is_correct": false, "why_wrong": "يتعلق بصيد السمك في الخطوة 9 لا بالطعام في عدم الطبخ." },
+            { "text": "My aunt.", "is_correct": false, "why_wrong": "هذا جواب للطالب B في الخطوة 4 بالمسار الأول." }
+          ],
+          "hints": [
+            "انظر إلى الردّ المتطابق في الخطوة 8 (I go to a restaurant)."
+          ],
+          "explain": "يسأل ماذا تفعل حين تكون وحدك فيرد: أذهب إلى مطعم (I go to a restaurant)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_5-self", "origin": "from_book", "page_ref": 44, "front": "by yourself", "back": "وحدك / بمفردك (بدون أحد يساعدك)", "tag": "Unit 4 · 4.5" },
+    { "id": "fc-4_5-catch", "origin": "from_book", "page_ref": 44, "front": "Do you catch your own fish?", "back": "هل تصطاد سمكك بنفسك؟", "tag": "Unit 4 · 4.5" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 44–45 مع tesseract.js eng: أخرجت OCR تشوهاً في خيارات المحادثة ('Ss you like', '{oa do you', '{ £0 to', 'fn not?'), وصُحّحت كلها بصرياً بالرجوع إلى wb-045.png وwb-046.png."
+  }
+}
