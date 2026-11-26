@@ -1,0 +1,151 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u5", "number": 5, "title": "Working things out" },
+  "lesson": {
+    "id": "eng-u5-5_3",
+    "code": "5.3",
+    "title": "Listening: Where are they? & The Coronation",
+    "title_ar": "الاستماع والاستنتاج: أين المتحدثون؟ وقصة تتويج الملكة إليزابيث 1953",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 58, "book_page": 57 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 59, "book_page": 58 }
+    ],
+    "reference_images": {
+      "wb_57": "assets/ref/wb_p057.webp",
+      "wb_58": "assets/ref/wb_p058.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u5-5_3-listening",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 57 },
+      "dir": "ltr",
+      "recall_words": ["ceremony", "crowned", "coronation", "sword"],
+      "content": {
+        "lines": [
+          "5.3 A Listen and write the names of the places. Where are they?",
+          "Items 1 to 8: (blank lines for cassette listening comprehension).",
+          "B Listen to a woman talking about a special day in her life. Are the statements below true or false? Write T or F.",
+          "1 Elizabeth became Queen on 2nd June, 1953. [ ]",
+          "2 The ceremony was in London. [ ]",
+          "3 Other kings and queens were at the ceremony. [ ]",
+          "4 The Queen rode through London in a white coach. [ ]",
+          "5 The soldiers were wearing swords. [ ]",
+          "6 People had waited along time to see the Queen. [ ]",
+          "7 The Queen got wet. [ ]",
+          "8 The speaker was at the ceremony. [ ]",
+          "9 The speaker lived in London. [ ]",
+          "10 The speaker got a present. [ ]",
+          "11 There was a picture of the King on the present. [ ]",
+          "12 The speaker liked the music best. [ ]",
+          "(WB p. 58) C Listen again and correct the false sentences.",
+          "D Some answers are not given directly. Listen again carefully and think about the information. Then write short answers to these questions.",
+          "1 How long was Elizabeth Queen before she was crowned?",
+          "2 What could the Queen hear as she rode through London?",
+          "3 How do you know that a lot of people were interested in seeing the Queen ride past?",
+          "4 Do you think the speaker got wet?",
+          "5 Do you think she saw the ceremony in colour or in black and white?",
+          "6 How old is the speaker now?",
+          "7 What is the name of the ceremony at which a king or queen is crowned?"
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي وتوثيق الأشرطة المفقودة (<bdi dir='ltr'>RULE 2 &amp; RULE 7</bdi>):</strong><br>1) في البند <span dir='ltr'>5.3 B #6</span> طُبعت كلمة <span dir='ltr'><code>along</code></span> موصولة بدون مسافة (<span dir='ltr'><code>waited along time</code></span> بدل <span dir='ltr'><code>a long time</code></span>)، وحُفظت حرفياً.<br>2) يكشف منطوق السؤال <span dir='ltr'>5.3 D #1</span> (<span dir='ltr'>How long was Elizabeth Queen before she was crowned?</span>) أن العبارة <span dir='ltr'>5.3 B #1</span> (<span dir='ltr'>became Queen on 2nd June, 1953</span>) <b>خاطئة (F)</b> لأنها أصبحت ملكة قبل يوم تتويجها؛ كما يحدد <span dir='ltr'>D #5</span> زمن البث سنة 1953 (الأبيض والأسود) و<span dir='ltr'>D #7</span> اسم مراسم التتويج (<span dir='ltr'>coronation</span>). أما بقية إجابات <span dir='ltr'>5.3 A–D</span> فتتوقف على الشريط الصوتي المفقود الذي نُقل إلى <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> دون تخمين."
+    }
+  ],
+  "word_glossary_map": {
+    "sword": { "pos": "n", "ar": "سيف", "in_book_wordlist": true, "wb_page": 113 },
+    "coronation": { "pos": "n", "ar": "حفل تتويج الملك أو الملكة", "in_book_wordlist": false, "wb_page": 58 },
+    "ceremony": { "pos": "n", "ar": "مراسم / احتفال رسمي", "in_book_wordlist": false, "wb_page": 57 }
+  },
+  "activities": [
+    {
+      "id": "wb-5_3-deducible",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 58 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.3 B #1 & D #5, #7 — Facts verifiable directly from the printed questions and historical fact of the 1953 ceremony:",
+      "prompt_ar": "أجب عن البنود المحسومة نصياً ومنطقياً من أسئلة 5.3 B وD دون تأليف تفاصيل الشريط المفقود:",
+      "word_bank": ["F (she was already Queen before her coronation on 2nd June, 1953)", "in black and white", "coronation"],
+      "items": [
+        { "num": 1, "prompt": "1 B #1 'Elizabeth became Queen on 2nd June, 1953' (compare D #1): ______", "answers": ["F (she was already Queen before her coronation on 2nd June, 1953)", "F"] },
+        { "num": 2, "prompt": "2 D #5 In 1953 television broadcast the ceremony: ______", "answers": ["in black and white", "black and white"] },
+        { "num": 3, "prompt": "3 D #7 Ceremony at which a king or queen is crowned: a ______", "answers": ["coronation"] }
+      ],
+      "hints": [
+        "1: طرح السؤال D #1 ('كم بقيت ملكة قبل أن تُتوّج؟') يُثبت أن 2 يونيو 1953 تاريخ التتويج لا تاريخ اعتلاء العرش. 3: كلمة التتويج هي coronation."
+      ]
+    },
+    {
+      "id": "wb-5_3-cassette-guide",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 57 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.3 A, B (#2–12), C & D (#1–4, #6) — Cassette listening tasks recorded in REVIEW_NEEDED.md for classroom playback:",
+      "prompt_ar": "خطة استماع ذكية لتنفيذ التمارين 5.3 A–D عند تشغيل الشريط الصوتي مع المعلّم:",
+      "items": [
+        { "num": 1, "question": "5.3 A (8 places — inference listening)", "model_answer": "Requires classroom audio playback; listen for clue sounds, vocabulary and modal inference (e.g., must be / could be in...). Logged in REVIEW_NEEDED.md.", "explain_ar": "نصوص الشريط في دليل المعلّم فقط؛ لا نخترع الأماكن الثمانية." },
+        { "num": 2, "question": "5.3 B (#2–12) & C (correct false statements)", "model_answer": "Verify each printed detail against the audio (London setting, colour of the coach, swords/uniforms, waiting in the rain, speaker watching vs attending, souvenir picture/music). Note D #1 implies Elizabeth became Queen ~16 months before 2 June 1953 (Feb 1952).", "explain_ar": "استمع إلى التواريخ والألوان وما فعله الناس وأخطاء التذكّر المتعمدة في العبارات." },
+        { "num": 3, "question": "5.3 D (#1–4, #6) — Reading between the lines", "model_answer": "Train the skill of inference: combine spoken details from the tape (e.g., speaker's age at the time + current year, crowd applause/cheers, rain outside vs indoors) to infer answers not stated word-for-word.", "explain_ar": "يمهّد هذا التمرين لمهارة الاستنتاج غير المباشر في درس 5.4 التالي." }
+      ],
+      "hints": [
+        "الهدف التربوي للدرس هو التدريب على الاستنتاج من القرائن (working things out) لا الحفظ الصم."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-5_3-a",
+      "origin": "educational_addition",
+      "page_ref": 58,
+      "questions": [
+        {
+          "id": "q-5_3-1",
+          "type": "mcq",
+          "stem": "In WB 5.3 D #7, what is the English word for 'the ceremony at which a king or queen is crowned'?",
+          "evidence_block_id": "u5-5_3-listening",
+          "options": [
+            { "text": "coronation", "is_correct": true, "why_wrong": null },
+            { "text": "application", "is_correct": false, "why_wrong": "application تعني طلب تقديم وظيفة (من الوحدة 3)." },
+            { "text": "forestation", "is_correct": false, "why_wrong": "forestation تعني التشجير والغابات (من الوحدة 5.1 D)." },
+            { "text": "displacement", "is_correct": false, "why_wrong": "displacement تعني إزاحة الماء (من الوحدة 4.9)." }
+          ],
+          "hints": [
+            "كلمة مشتقة من اللغة اللاتينية تعني التتويج (crown ← coronation)."
+          ],
+          "explain": "المصطلح الإنجليزي الخاص بحفل تتويج الملك أو الملكة هو coronation."
+        },
+        {
+          "id": "q-5_3-2",
+          "type": "mcq",
+          "stem": "How does WB 5.3 D question 1 ('How long was Elizabeth Queen before she was crowned?') help evaluate statement B #1 ('Elizabeth became Queen on 2nd June, 1953')?",
+          "evidence_block_id": "u5-5_3-listening",
+          "options": [
+            { "text": "It shows Statement B #1 is FALSE because she became Queen earlier and 2nd June 1953 was her crowning ceremony.", "is_correct": true, "why_wrong": null },
+            { "text": "It proves she was never crowned in London.", "is_correct": false, "why_wrong": "السؤال يتحدث عن المدة بين اعتلاء العرش والتتويج، لا عن مكان التتويج." },
+            { "text": "It shows B #1 must be TRUE because she became Queen at the ceremony.", "is_correct": false, "why_wrong": "قول السؤال 'before she was crowned' يدل على أنها كانت ملكة قبل يوم التتويج بالفعل." },
+            { "text": "It refers to Queen Victoria instead of Elizabeth.", "is_correct": false, "why_wrong": "السؤال يذكر Elizabeth بالاسم تماماً مثل البند الأول في B." }
+          ],
+          "hints": [
+            "تأمل العلاقة الزمنية في عبارة: became Queen قبل coronation."
+          ],
+          "explain": "صياغة السؤال D #1 تكشف أن 2 يونيو 1953 هو يوم التتويج لا يوم صيرورتها ملكة؛ ومن ثمَّ فالجملة الأولى في B خاطئة."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-5_3-cor", "origin": "from_book", "page_ref": 58, "front": "ceremony at which a king/queen is crowned", "back": "coronation (مراسم التتويج)", "tag": "Unit 5 · 5.3" },
+    { "id": "fc-5_3-sword", "origin": "from_book", "page_ref": 57, "front": "sword (n)", "back": "سيف (ويرد أيضاً في قصة السفينة Mary Celeste)", "tag": "Unit 5 · 5.3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 57–58 مع wb-058.png وwb-059.png: صُحّح التعرّف الضوئي على الأرقام ('ra', 'x', 's ay') والمربعات وعبارة D #4 المشوهة ('“a JO YOU...'), وحُفظ الإملاء المطبوع حرفياً في B #6 ('waited along time'); وسُجّل غياب الشريط الصوتي بصدق في REVIEW_NEEDED.md."
+  }
+}
