@@ -1,0 +1,231 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_9",
+    "code": "4.9",
+    "title": "Water displacement and Ahmed's experiment",
+    "title_ar": "تجربة إزاحة الماء (أرخميدس) والاستماع لتجربة أحمد عن السقوط الحر",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 50, "book_page": 49 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 51, "book_page": 50 }
+    ],
+    "reference_images": {
+      "wb_49": "assets/ref/wb_p049.webp",
+      "wb_50": "assets/ref/wb_p050.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_9-abc",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 49 },
+      "dir": "ltr",
+      "recall_words": ["displacement", "displace", "overflowed", "scales", "procedure"],
+      "content": {
+        "lines": [
+          "4.9 A Here is some information about another experiment. Write each piece of information in the correct place in the table.",
+          "• Put the toy boat in the jug ...  • 13.12.1999  • A large jug, a bowl, a small toy boat, a pair of scales, some stones.  • Aisha Yousif  • An investigation into water displacement.  • Floating objects displace their own weight in water.  • The data confirms the hypothesis.  • When the stones were put in the boat, some water from the jug overflowed into the bowl.  • When you get into the bath, the level of the water rises.  • Why do metal ships float?",
+          "Table rows: Name (Aisha Yousif given), Date, TITLE, QUESTION, RESEARCH, HYPOTHESIS, MATERIALS, PROCEDURE, DATA, CONCLUSION",
+          "B Here is the procedure in full. Number the sentences in a logical order.",
+          "[ ] Put the jug in the bowl.",
+          "[ ] Fill the jug with water right up to the top.",
+          "[ ] Fill the toy boat with stones.",
+          "[1] Put the toy boat in the jug.",
+          "[ ] Take the jug out of the bowl.",
+          "[ ] Weigh the bowl with the water.",
+          "[ ] Empty the water out and weigh the bowl again.",
+          "[ ] Weigh the stones.",
+          "(WB p. 50) C In your copybooks, draw and label a diagram of the experiment.",
+          "D Here is the data from the experiment. Complete the information with a suitable word in each space.",
+          "When the stones ______ put in the boat, some water from the ______ overflowed into the ______. The bowl ______ 50 grams with the water and 40 grams without, ______ the water weighed 10 grams. The stones also weighed 10 ______."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الأساس الفيزيائي لخطوة [1] قبل ملء الإبريق ورسم تجربة الإزاحة (4.9 C)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 49,
+            "html": "<p>لماذا جعل الكتاب في تمرين <bdi dir='ltr'>4.9 B</bdi> عبارة <b><span dir='ltr'>Put the toy boat in the jug.</span></b> هي الخطوة رقم <span dir='ltr'>[1]</span>؟</p><ul><li>لو ملأنا الإبريق إلى الحافة أولاً ثم وضعنا القارب الفارغ لأزاح القاربُ ماءً يعادل وزنه؛ أما بوضع القارب الفارغ أولاً ثم وضع الإبريق في الوعاء وملئه إلى الحافة فإنه يصبح جاهزاً بحيث إن إضافة الأحجار وحدها هي ما يُفيض <b>وزن الأحجار فقط (<span dir='ltr'>10 grams</span>)</b>!</li><li>وخطوة <b><span dir='ltr'>Weigh the stones</span></b> قد تُنفَّذ قبل وضع الأحجار في القارب (خطوة 4 أو 5) أو بعد تفريغ الماء في النهاية (خطوة 8)، وكلاهما منطقي وسليم مخبرياً.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 50,
+            "caption": "نموذج الرسم التخطيطي المطلوب في تمرين 4.9 C",
+            "svg": "<svg viewBox='0 0 600 140' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='140' rx='10' fill='#ECFDF5'/><path d='M90,72 L110,120 L250,120 L270,72' fill='#E0F2FE' stroke='#0284C7' stroke-width='2'/><rect x='135' y='30' width='90' height='80' fill='#BAE6FD' stroke='#0369A1' stroke-width='2'/><path d='M155,34 L165,48 L195,48 L205,34 Z' fill='#FEF3C7' stroke='#D97706' stroke-width='2'/><circle cx='175' cy='38' r='4' fill='#57534E'/><circle cx='185' cy='38' r='4' fill='#57534E'/><text x='320' y='44' font-size='11.5' font-weight='700'>1. Small toy boat with stones (10 g)</text><text x='320' y='72' font-size='11.5'>2. Large jug filled to brim (displaces 10 g water)</text><text x='320' y='100' font-size='11.5'>3. Catching bowl (40 g empty → 50 g with water)</text><text x='320' y='124' font-size='11'>4. Pair of scales compares weight of water &amp; stones</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 50,
+            "html": "<p dir='ltr'><b>Math proof (4.9 D):</b> Bowl + water (50 g) &minus; empty bowl (40 g) = <b>10 g water</b> = weight of <b>stones (10 g)</b>.</p>"
+          },
+          "self_check_ref": "chk-4_9-a",
+          "page_ref": { "book": "WB", "page": 49, "pdf_page": 50, "image": "assets/ref/wb_p049.webp" }
+        }
+      }
+    },
+    {
+      "id": "u4-4_9-e",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 50 },
+      "dir": "ltr",
+      "recall_words": ["disprove", "hypothesis", "procedure", "materials"],
+      "content": {
+        "lines": [
+          "E Listen to the conversation and tick the correct boxes.",
+          "1 Ahmed did the experiment: a) to prove Galileo's hypothesis [ ] b) to disprove Galileo's hypothesis [ ] c) because he had to. [ ]",
+          "2 He used: a) two metal balls [ ] b) an orange ball and paper [ ] c) an orange and a paper ball. [ ]",
+          "3 Saleh agreed with Ahmed that to prove Galileo's hypothesis: a) the objects should be the same weight [ ] b) the objects should be different weights [ ] c) the size and weight do not matter. [ ]",
+          "4 When the paper ball hit the ground he knew he would not: a) see it [ ] b) hear it [ ] c) know it. [ ]",
+          "5 To help him, he got his: a) brother [ ] b) cousin [ ] c) sister. [ ]",
+          "6 As the balls fell, she: a) watched [ ] b) listened [ ] c) shouted to Ahmed. [ ]",
+          "7 The paper ball hit the ground: a) at the same time as the orange [ ] b) after the orange [ ] c) before the orange. [ ]",
+          "8 Which of the following did Saleh conclude was not quite right? a) the hypothesis [ ] b) the procedure [ ] c) the materials [ ]"
+        ]
+      },
+      "edu_note_html": "<strong>توثيق غياب التسجيل الصوتي (<bdi dir='ltr'>RULE 7</bdi>):</strong><br>1) <b>ما يُحسم قطعاً من المطبوع:</b> في البند 2 تكون الإجابة <b><span dir='ltr'>c) an orange and a paper ball</span></b> بدلالة ذِكر <span dir='ltr'>the paper ball</span> في السؤال 4 و<span dir='ltr'>the orange</span> في السؤال 7! كما يكشف الضمير <span dir='ltr'>she</span> في السؤال 6 استبعاد <span dir='ltr'>brother</span> من البند 5.<br>2) <b>ما يتوقف على الشريط الصوتي المفقود:</b> بقية البنود (<span dir='ltr'>1, 3, 4, 5, 6, 7, 8</span>) لم يرد نص محادثتها في كتاب الطالب أو التمارين (إنما هي في دليل المعلّم)، لذا سُجّلت في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> لإكمالها في الصف أو عند توفر دليل المعلّم دون تخمين."
+    }
+  ],
+  "word_glossary_map": {
+    "overflow": { "pos": "v", "ar": "يفيض / ينسكب من الحافة", "in_book_wordlist": false, "wb_page": 49 },
+    "displace": { "pos": "v", "ar": "يزيح (سائلاً)", "in_book_wordlist": false, "wb_page": 49 },
+    "procedure": { "pos": "n", "ar": "إجراءات / خطوات العمل", "in_book_wordlist": true, "wb_page": 113 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_9-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 49 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.9 A Match the 9 remaining notes into the scientific experiment sheet (Name: Aisha Yousif is already given).",
+      "prompt_ar": "وزّع البنود التسعة المعطاة في خاناتها العلمية داخل الجدول (خانة Name مملوءة سلفاً بـ Aisha Yousif):",
+      "word_bank": [
+        "13.12.1999",
+        "An investigation into water displacement.",
+        "Why do metal ships float?",
+        "When you get into the bath, the level of the water rises.",
+        "Floating objects displace their own weight in water.",
+        "A large jug, a bowl, a small toy boat, a pair of scales, some stones.",
+        "Put the toy boat in the jug ...",
+        "When the stones were put in the boat, some water from the jug overflowed into the bowl.",
+        "The data confirms the hypothesis."
+      ],
+      "items": [
+        { "num": 1, "prompt": "Date: ______", "answers": ["13.12.1999"] },
+        { "num": 2, "prompt": "TITLE: ______", "answers": ["An investigation into water displacement."] },
+        { "num": 3, "prompt": "QUESTION: ______", "answers": ["Why do metal ships float?"] },
+        { "num": 4, "prompt": "RESEARCH: ______", "answers": ["When you get into the bath, the level of the water rises."] },
+        { "num": 5, "prompt": "HYPOTHESIS: ______", "answers": ["Floating objects displace their own weight in water."] },
+        { "num": 6, "prompt": "MATERIALS: ______", "answers": ["A large jug, a bowl, a small toy boat, a pair of scales, some stones."] },
+        { "num": 7, "prompt": "PROCEDURE: ______", "answers": ["Put the toy boat in the jug ..."] },
+        { "num": 8, "prompt": "DATA: ______", "answers": ["When the stones were put in the boat, some water from the jug overflowed into the bowl."] },
+        { "num": 9, "prompt": "CONCLUSION: ______", "answers": ["The data confirms the hypothesis."] }
+      ],
+      "hints": [
+        "السؤال ينتهي بعلامة استفهام (Why do metal ships float?)، والتاريخ 13.12.1999، والاستنتاج يختم بتأكيد الفرضية."
+      ]
+    },
+    {
+      "id": "wb-4_9-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 49 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Here is the procedure in full. Number the sentences in a logical order (Step 1 is pre-numbered).",
+      "prompt_ar": "الترتيب المنطقي الكامل لخطوات تجربة إزاحة الماء (مع بدء الخطوة 1 بوضع القارب الفارغ):",
+      "items": [
+        { "num": 1, "question": "Step 1 (already numbered [1] in WB)", "model_answer": "Put the toy boat in the jug.", "explain_ar": "يُوضع القارب الفارغ أولاً حتى لا يُحسب وزنه عند ملء الإبريق بالماء." },
+        { "num": 2, "question": "Step 2", "model_answer": "Put the jug in the bowl.", "explain_ar": "وضع الإبريق داخل الوعاء ليستقبل أي ماء يفيض لاحقاً." },
+        { "num": 3, "question": "Step 3", "model_answer": "Fill the jug with water right up to the top.", "explain_ar": "ملء الإبريق إلى حافته والقارب طافٍ بداخله." },
+        { "num": 4, "question": "Step 4", "model_answer": "Weigh the stones. (OR weigh the stones in Step 8 after measuring the bowl)", "explain_ar": "وزن الأحجار قبل وضعها في القارب أو في نهاية التجربة للمقارنة." },
+        { "num": 5, "question": "Step 5", "model_answer": "Fill the toy boat with stones.", "explain_ar": "فيفيض من الإبريق ماء يعادل وزن الأحجار المضافة." },
+        { "num": 6, "question": "Step 6", "model_answer": "Take the jug out of the bowl.", "explain_ar": "إخراج الإبريق برفق لوزن الوعاء مع الماء المزاح." },
+        { "num": 7, "question": "Step 7", "model_answer": "Weigh the bowl with the water.", "explain_ar": "كان وزنه 50 جم حسب بيانات 4.9 D." },
+        { "num": 8, "question": "Step 8", "model_answer": "Empty the water out and weigh the bowl again.", "explain_ar": "كان وزن الوعاء فارغاً 40 جم، فوزن الماء = 10 جم = وزن الأحجار." }
+      ],
+      "hints": [
+        "الأرقام داخل مربعات الكتاب من الأعلى إلى الأسفل: Put jug in bowl (2) · Fill jug (3) · Fill boat with stones (5 أو 4) · Put toy boat [1] · Take jug out (6 أو 5) · Weigh bowl with water (7 أو 6) · Empty water & weigh (8 أو 7) · Weigh stones (4 أو 8)."
+      ]
+    },
+    {
+      "id": "wb-4_9-de",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 50 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.9 D Complete the data paragraph; plus E #2 deducible strictly from printed text.",
+      "prompt_ar": "أكمل فقرة بيانات التجربة في 4.9 D مع القاعدة المستخلصة قطعاً في 4.9 E #2:",
+      "word_bank": ["were", "jug", "bowl", "weighed", "so", "grams", "c) an orange and a paper ball"],
+      "items": [
+        { "num": 1, "prompt": "1 When the stones ______ put in the boat,", "answers": ["were"] },
+        { "num": 2, "prompt": "2 some water from the ______ overflowed", "answers": ["jug"] },
+        { "num": 3, "prompt": "3 into the ______.", "answers": ["bowl"] },
+        { "num": 4, "prompt": "4 The bowl ______ 50 grams with the water and 40 grams without,", "answers": ["weighed"] },
+        { "num": 5, "prompt": "5 ______ the water weighed 10 grams.", "answers": ["so"] },
+        { "num": 6, "prompt": "6 The stones also weighed 10 ______.", "answers": ["grams"] },
+        { "num": 7, "prompt": "7 E #2 — Materials Ahmed actually used (shown in Q4 'paper ball' & Q7 'orange'): ______", "answers": ["c) an orange and a paper ball"] }
+      ],
+      "hints": [
+        "بنود 4.9 E المتبقية (1، 3–8) تتبع الشريط الصوتي المفقود الموثَّق في REVIEW_NEEDED.md."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_9-a",
+      "origin": "educational_addition",
+      "page_ref": 49,
+      "questions": [
+        {
+          "id": "q-4_9-1",
+          "type": "mcq",
+          "stem": "In WB 4.9 B, why is '[1] Put the toy boat in the jug' printed as Step 1 BEFORE filling the jug up to the top?",
+          "evidence_block_id": "u4-4_9-abc",
+          "options": [
+            { "text": "So the water that later overflows after adding stones equals only the weight of the stones, not the boat itself.", "is_correct": true, "why_wrong": null },
+            { "text": "Because the toy boat would not float if added last.", "is_correct": false, "why_wrong": "القارب يطفو سواء وضع قبل الماء أو بعده، لكن وضعه بعد الملء إلى الحافة يُفيض وزن القارب نفسه ويفسد قياس وزن الأحجار." },
+            { "text": "Because the bowl is placed inside the jug.", "is_correct": false, "why_wrong": "الإبريق هو الذي يوضع داخل الوعاء الأكبر (Put the jug in the bowl)." },
+            { "text": "So the stones can sink straight to the bottom without floating.", "is_correct": false, "why_wrong": "الأحجار توضع داخل القارب الطافي لا في قاع الإبريق." }
+          ],
+          "hints": [
+            "اقرأ بيانات 4.9 D: وزن الماء المزاح كان 10 جم، وهو مساوٍ لوزن الأحجار وحدها."
+          ],
+          "explain": "بما أن الإبريق يُملأ إلى حافته والقارب الفارغ بداخله، فإن إضافة الأحجار وحدها تسبب فيضان ماء وزنه مساوٍ لوزن الأحجار (10 جم)."
+        },
+        {
+          "id": "q-4_9-2",
+          "type": "mcq",
+          "stem": "From WB 4.9 D, if the bowl with the overflowed water weighed 50 g and empty weighed 40 g, how much did the stones weigh?",
+          "evidence_block_id": "u4-4_9-abc",
+          "options": [
+            { "text": "10 grams", "is_correct": true, "why_wrong": null },
+            { "text": "90 grams", "is_correct": false, "why_wrong": "نطرح وزن الوعاء فارغاً (40 جم) من وزنه بالماء (50 جم) لا نجمعهما." },
+            { "text": "40 grams", "is_correct": false, "why_wrong": "40 جم هو وزن الوعاء فارغاً بدون الماء." },
+            { "text": "50 grams", "is_correct": false, "why_wrong": "50 جم هو وزن الوعاء مع الماء المزاح معاً." }
+          ],
+          "hints": [
+            "50 − 40 = 10 grams (وحسب الفرضية، وزن الماء المزاح يساوي وزن الجسم المضاف)."
+          ],
+          "explain": "وزن الماء المزاح = 50 − 40 = 10 غرامات، وبما أن الفرضية تأكدت فوزن الأحجار أيضاً 10 غرامات."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_9-disp", "origin": "from_book", "page_ref": 49, "front": "Floating objects displace...", "back": "...their own weight in water. (الأجسام الطافية تزيح من الماء ما يساوي وزنها)", "tag": "Unit 4 · 4.9" },
+    { "id": "fc-4_9-ov", "origin": "from_book", "page_ref": 50, "front": "overflow (v)", "back": "يفيض / ينسكب من الإناء", "tag": "Unit 4 · 4.9" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 49–50 مع wb-050.png وwb-051.png: استُعيد تنسيق الجدول 4.9 A بالكامل ورصد الرقم [1] المطبوع سلفاً أمام الخطوة الرابعة في 4.9 B، كما حُفظت بيانات الشريط الصوتي المفقود 4.9 E بصدق تام دون تخمين."
+  }
+}
