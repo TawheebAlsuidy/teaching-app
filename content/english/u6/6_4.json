@@ -1,0 +1,196 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_4",
+    "code": "6.4",
+    "title": "Saving Anwar: listening & vocabulary",
+    "title_ar": "إنقاذ أنور (1): الاستماع لتسلسل المشاهد ومطابقة الأفعال والتراكيب الطبية",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 46, "book_page": 44 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 75, "book_page": 74 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 76, "book_page": 75 }
+    ],
+    "reference_images": {
+      "pb_44": "assets/ref/pb_p044.webp",
+      "wb_74": "assets/ref/wb_p074.webp",
+      "wb_75": "assets/ref/wb_p075.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_4-pictures",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "PB", "page": 44 },
+      "dir": "ltr",
+      "recall_words": ["heart surgeon", "rush", "examine", "first aid", "specialist", "ambulance", "operate", "recover"],
+      "content": {
+        "lines": [
+          "6.4 6.5 Saving Anwar",
+          "Listen to the conversation. In Workbook activity A, number the pictures in the order you hear them.",
+          "Picture labels (top to bottom): D, B, F, A, H, C, E, G",
+          "Now do activities B, C and D in the Workbook."
+        ],
+        "image": "assets/media/pb44_saving_anwar.webp",
+        "caption": "Eight lettered pictures showing the rescue and treatment of Anwar (PB page 44)"
+      },
+      "edu_note_html": "<strong>ملاحظات منهجية وأمانة التوثيق (<bdi dir='ltr'>RULE 2 &amp; RULE 7</bdi>):</strong><br>1) لا يتوفر نص الشريط الصوتي الرسمي المرافق لهذا الدرس في الكتابين؛ لذا حُلّ تمرين الأفعال العشرة <bdi dir='ltr'>6.4 C</bdi> بالكامل لاستناده القطعي إلى القرائن اللغوية في النص والمطبوع، وحُدّد دور <span dir='ltr'>Salwa Mafouz</span> (<span dir='ltr'>nurse</span>، من <span dir='ltr'>PB ص 43</span>) ووالدَي أنور (<span dir='ltr'>6.4 D</span>، من اللوحة <span dir='ltr'>G</span> و<span dir='ltr'>6.5 A</span>)، بينما أُشير بوضوح إلى حاجة بنود الاستماع الصرف (<span dir='ltr'>6.4 A</span> وبقية أسماء <span dir='ltr'>6.4 B/D</span>) إلى الكاسيت وسُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi>.<br>2) في تمرين <span dir='ltr'>WB 6.4 D (ص 74)</span> ورد خطأ طباعي: <span dir='ltr'><code>Use expressions from activity B above.</code></span> والمقصود بها تعابير التمرين <b>C</b> أعلاه.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "وصف المشاهد الثمانية (D, B, F, A, H, C, E, G) في PB ص 44",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 44,
+            "html": "<ul><li><b>D:</b> سلوى محفوظ تقود سيارتها الزرقاء بأنور نحو مستشفى حجة ويتبعها قاسم بسيارته الـ <span dir='ltr'>pick-up</span>.</li><li><b>B:</b> طبيب يفحص أنور بسماعة في حجة وبجانبه سلوى وقاسم.</li><li><b>F:</b> اتصال هاتفي مسبق بمستشفى صنعاء للتحذير بينما تقف سيارة الإسعاف بالهلال الأحمر في الخارج.</li><li><b>A:</b> نقل أنور بالإسعاف وبجانبه المسعف.</li><li><b>H:</b> استقبال وإرشاد في قسم المستشفى بصنعاء.</li><li><b>C:</b> جراحان باللباس الأخضر يُجريان العملية العاجلة.</li><li><b>E:</b> أنور يتماثل للشفاء في السرير مع محلول وريدي وممرضة تفحصه.</li><li><b>G:</b> تعافي أنور وزيارة والديه والطاقم في نهاية العلاج.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 74,
+            "html": "<p dir='ltr'><b>Verb patterns in 6.4 C:</b> <i>rush</i> somebody to hospital · <i>call ahead</i> to warn · <i>operate <b>on</b></i> somebody · <i>recover <b>from</b></i> an operation.</p>"
+          },
+          "self_check_ref": "chk-6_4-a",
+          "page_ref": { "book": "PB", "page": 44, "pdf_page": 46, "image": "assets/ref/pb_p044.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "heart surgeon": { "pos": "n", "ar": "جرّاح قلب", "in_book_wordlist": true, "wb_page": 113 },
+    "ambulanceman": { "pos": "n", "ar": "مسعف / سائق إسعاف", "in_book_wordlist": false },
+    "operate (on)": { "pos": "v", "ar": "يُجري عملية جراحية لـ", "in_book_wordlist": false },
+    "recover (from)": { "pos": "v", "ar": "يتعافى / يشفى من", "in_book_wordlist": false },
+    "specialist": { "pos": "n", "ar": "طبيب اختصاصي", "in_book_wordlist": false }
+  },
+  "activities": [
+    {
+      "id": "wb-6_4-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 74 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.4 A Write the letters of each picture on PB page 44 in the order you hear them. (1-8)",
+      "prompt_ar": "ترتيب اللوحات الثماني على PB ص 44 بحسب أحداث القصة — مع التنبيه لتبعية الترتيب السماعي للكاسيت (WB ص 74):",
+      "items": [
+        { "num": 1, "question": "1-8: Pictures D, B, F, A, H, C, E, G", "model_answer": "[يتطلب الشريط الصوتي لتأكيد الترتيب الذي تُذكر به الصور في الحوار؛ أما الترتيب الزمني للأحداث في 6.3 و6.5 A فهو غالباً: D (النقل لحجة) ← B (فحص طبيب حجة) ← F (الاتصال بصنعاء) ← A (الإسعاف إلى صنعاء) ← H (الوصول/الاستقبال بالمستشفى) ← C (العملية الجراحية) ← E (فترة النقاهة بالمستشفى) ← G (عودة والديه لأخذه)]", "explain_ar": "لأن الحوار قد يبدأ من نهاية القصة ثم يسترجعها (flashback)، لا نجزم بترتيب السماع دون الشريط." }
+      ],
+      "hints": [
+        "تابع تعليمات المعلّم عند تشغيل شريط الاستماع لترقيم المربعات 1–8."
+      ]
+    },
+    {
+      "id": "wb-6_4-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 74 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.4 B Listen and match these people with their jobs. Now find them in the pictures. (Salwa Mafouz, Alia Shakri, Amri Badri, Hassan Mustapha — heart specialist and surgeon, ambulanceman, nurse, doctor)",
+      "prompt_ar": "ربط الأسماء الأربعة بالوظائف الأربع في تمرين 6.4 B (WB ص 74):",
+      "items": [
+        { "num": 1, "question": "Salwa Mafouz", "model_answer": "nurse — مؤكد من PB ص 43 (District Nurse Salwa Mafouz) وتظهر في اللوحة D.", "explain_ar": "الوحيدة المحسومة نصياً بدون شريط الصوت." },
+        { "num": 2, "question": "Alia Shakri / Amri Badri / Hassan Mustapha", "model_answer": "[يتطلب الشريط الصوتي لحسم أيٍّ من الثلاثة يشغل وظيفة: heart specialist and surgeon، وambulanceman، وdoctor، وعدم التخمين بدون السماع.]", "explain_ar": "تطبيقاً للقاعدة 7 لا تُخمَّن أدوار الأسماء الثلاثة المتبقية." }
+      ],
+      "hints": [
+        "الممرضة سلوى محفوظ فقط معلومة يقيناً من الدرس السابق 6.3."
+      ]
+    },
+    {
+      "id": "wb-6_4-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 74 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.4 C Listen again and complete the expressions with these verbs.",
+      "prompt_ar": "أكمل التعابير العشرة بالفعل المناسب من الصندوق (WB ص 74):",
+      "word_bank": ["call", "come", "examine", "give", "need", "operate", "recover", "rush", "show", "take"],
+      "items": [
+        { "num": 1, "prompt": "1 ______ somebody to hospital as fast as possible", "answers": ["rush", "Rush"] },
+        { "num": 2, "prompt": "2 ______ somebody to see what is wrong", "answers": ["examine", "Examine"] },
+        { "num": 3, "prompt": "3 ______ somebody first aid", "answers": ["give", "Give"] },
+        { "num": 4, "prompt": "4 ______ to see a specialist", "answers": ["need", "Need"] },
+        { "num": 5, "prompt": "5 ______ somebody somewhere by ambulance", "answers": ["take", "Take"] },
+        { "num": 6, "prompt": "6 ______ ahead to warn the hospital", "answers": ["call", "Call"] },
+        { "num": 7, "prompt": "7 ______ somebody round the hospital", "answers": ["show", "Show"] },
+        { "num": 8, "prompt": "8 ______ from an operation", "answers": ["recover", "Recover"] },
+        { "num": 9, "prompt": "9 ______ on somebody urgently", "answers": ["operate", "Operate"] },
+        { "num": 10, "prompt": "10 ______ to take somebody home", "answers": ["come", "Come"] }
+      ],
+      "hints": [
+        "حروف الجر والسياق تحسم كل فعل: operate ON، recover FROM، call AHEAD، show ROUND، rush TO hospital as fast as possible."
+      ]
+    },
+    {
+      "id": "wb-6_4-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 74 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.4 D Say what each of these people did for Anwar. Use expressions from activity B above.",
+      "prompt_ar": "كوّن جملاً تصف ما فعله كل شخص لإنقاذ أنور باستعمال تعابير 6.4 C — طُبعت خطأً 'from activity B' (WB ص 74–75):",
+      "items": [
+        { "num": 1, "question": "Salwa Mafouz: She gave Anwar first-aid and ______", "model_answer": "She gave Anwar first-aid and rushed him to hospital in Hajjah as fast as possible (by car).", "explain_ar": "مؤكد من أحداث 6.3 واللوحة D." },
+        { "num": 2, "question": "Amri Badri / Hassan Mustapha / Alia Shakri", "model_answer": "[تُستكمل جملهم بالزمن الماضي البسيط بعد مطابقة وظائفهم في الكاسيت (6.4 B)، باستخدام الأفعال: examined him to see what was wrong and saw he needed to see a specialist / called ahead to warn the hospital / took him to Sana'a by ambulance / showed them round the hospital / operated on him urgently.]", "explain_ar": "مبنية جميعاً على تعابير التمرين C في الماضي البسيط." },
+        { "num": 3, "question": "His parents:", "model_answer": "His parents came to take him home (after he recovered from the operation).", "explain_ar": "مؤكد من تعبير 6.4 C #10 ومن التمرين 6.5 A." }
+      ],
+      "hints": [
+        "لاحظ الخطأ المطبعي في السؤال: أشار إلى activity B والمقصود هو activity C التي تحتوي الأفعال."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_4-a",
+      "origin": "educational_addition",
+      "page_ref": 74,
+      "questions": [
+        {
+          "id": "q-6_4-1",
+          "type": "mcq",
+          "stem": "Which verb from WB 6.4 C correctly completes: '______ from an operation'?",
+          "evidence_block_id": "u6-6_4-pictures",
+          "options": [
+            { "text": "recover", "is_correct": true, "why_wrong": null },
+            { "text": "operate", "is_correct": false, "why_wrong": "الفعل operate يأخذ حرف الجر on: operate on somebody (البند 9)." },
+            { "text": "rush", "is_correct": false, "why_wrong": "الفعل rush يعني الإسراع بنقل شخص للمستشفى (البند 1)." },
+            { "text": "examine", "is_correct": false, "why_wrong": "examine يعني فحص المريض لبيان علّته (البند 2)." }
+          ],
+          "hints": [
+            "يرتبط هذا الفعل بحرف الجر from ليدل على التعافي."
+          ],
+          "explain": "الفعل recover from يعني يتعافى من عملية جراحية أو مرض."
+        },
+        {
+          "id": "q-6_4-2",
+          "type": "mcq",
+          "stem": "Which verb + preposition pair correctly completes item 9 in WB 6.4 C: '______ on somebody urgently'?",
+          "evidence_block_id": "u6-6_4-pictures",
+          "options": [
+            { "text": "operate", "is_correct": true, "why_wrong": null },
+            { "text": "give", "is_correct": false, "why_wrong": "give يرد مع first aid في البند 3: give somebody first aid." },
+            { "text": "call", "is_correct": false, "why_wrong": "call يرد مع ahead في البند 6: call ahead to warn the hospital." },
+            { "text": "need", "is_correct": false, "why_wrong": "need يتبعه to + المصدر: need to see a specialist (البند 4)." }
+          ],
+          "hints": [
+            "تُظهر اللوحة C على PB ص 44 الجراحين داخل غرفة العمليات."
+          ],
+          "explain": "نقول بالإنكليزية operate on somebody لعملية جراحية تُجرى للمريض."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_4-heart", "origin": "from_book", "page_ref": 113, "front": "heart surgeon", "back": "جرّاح القلب", "tag": "Unit 6 · 6.4" },
+    { "id": "fc-6_4-operate", "origin": "from_book", "page_ref": 74, "front": "operate on somebody urgently", "back": "يُجري عملية جراحية عاجلة لشخص", "tag": "Unit 6 · 6.4" },
+    { "id": "fc-6_4-recover", "origin": "from_book", "page_ref": 74, "front": "recover from an operation", "back": "يتعافى من العملية الجراحية", "tag": "Unit 6 · 6.4" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 44 مع pb-46.png وتكبير 600 DPI وتأكّد ترتيب الحروف الدالة على اللوحات الثماني: D, B, F, A, H, C, E, G.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 74–75 مع wb-075.png وwb-076.png: حُفظت عبارة 'from activity B' المطبوعة خطأً بدل C، وحُلّت بنود C العشرة والأجزاء المحسومة من D دون تخمين عناصر الكاسيت."
+  }
+}
