@@ -103,7 +103,7 @@
   - [x] `6.9` Huge changes in Libyan health care: comprehension & vocabulary (PB p. 47 / WB pp. 77–78)
   - [x] `6.10` Discovering Yemen (PB p. 48 / WB p. 78)
   - [x] `6.11` Tourism and the future: reading (PB p. 49 / WB pp. 78–79)
-  - [ ] `6.12` Tourism and the future: writing about your future (PB p. 49 / WB pp. 79–80)
+  - [x] `6.12` Tourism and the future: writing about your future (PB p. 49 / WB pp. 79–80)
 - **Arts Reader (PB pp. 50–62)**
   - [ ] `arts-1` A difficult choice? (p. 51)
   - [ ] `arts-2` Proverbs and idioms (p. 52)

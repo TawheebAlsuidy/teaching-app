@@ -1,0 +1,185 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_12",
+    "code": "6.12",
+    "title": "Tourism and the future: writing about your future",
+    "title_ar": "السياحة والمستقبل (2): استخراج تعابير الطموح والرأي وكتابة مقال ثلاثي الفقرات عن مستقبلك",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 51, "book_page": 49 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 80, "book_page": 79 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 81, "book_page": 80 }
+    ],
+    "reference_images": {
+      "pb_49": "assets/ref/pb_p049.webp",
+      "wb_79": "assets/ref/wb_p079.webp",
+      "wb_80": "assets/ref/wb_p080.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_12-language-prompt",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 49 },
+      "dir": "ltr",
+      "recall_words": ["interested in", "ambition", "hope", "want", "believe", "even", "anywhere", "vehicle"],
+      "content": {
+        "lines": [
+          "You are now going to write about yourself, what you are interested in, what you hope for and what you want to do in the future. Look at the article and find language that will help you. Underline expressions that show:",
+          "1 what Faysal is interested in",
+          "2 his ambition",
+          "3 his hopes",
+          "4 what he wants / does not want",
+          "5 what he believes",
+          "Follow the instructions in activity 6.12 A in the Workbook to complete the writing activity."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي (<bdi dir='ltr'>WB pp. 79–80</bdi>):</strong> في السؤال الثالث من الفقرة 1 (<span dir='ltr'>WB 6.12 A</span>) طُبعت عبارة <span dir='ltr'><code>these skills and interest</code></span> بصيغة المفرد <span dir='ltr'>interest</span> ووصل الشرطة بلا مسافات <span dir='ltr'><code>school-in</code></span>، وحُفظ النص المطبوع حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "الرصيد اللغوي المستخرج من مقال فيصل (بنود 1–5 في PB ص 49)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 49,
+            "html": "<ol><li><b>الاهتمام:</b> <span dir='ltr'>Having always been <b>interested in</b> tourism...</span></li><li><b>الطموح:</b> <span dir='ltr'>full of energy and <b>ambition for the future</b></span> / <span dir='ltr'>His <b>ambition is to</b> have eight or ten 4WDs...</span></li><li><b>الآمال:</b> <span dir='ltr'>Faysal <b>hopes he will</b> have a wife and children</span> / <span dir='ltr'>he <b>does hope to</b> own a house...</span></li><li><b>ما يريد / لا يريد:</b> <span dir='ltr'>He <b>doesn't want to</b> be very rich, but he does hope to give his family the things they need.</span></li><li><b>ما يعتقد ويؤمن به:</b> <span dir='ltr'>he <b>believes</b> most of the changes will be good ones</span> / <span dir='ltr'>he <b>doesn't feel that</b>...</span> / <span dir='ltr'>He <b>is certain that</b>...</span></li></ol>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 80,
+            "html": "<p dir='ltr'><b>Structure template:</b> I have always been <i>interested in</i> [subject] → My <i>ambition is to</i> [verb] → Looking ahead, I <i>hope to</i> [verb] → I <i>believe</i> future improvements in [X] will outweigh negative changes.</p>"
+          },
+          "self_check_ref": "chk-6_12-a",
+          "page_ref": { "book": "WB", "page": 80, "pdf_page": 81, "image": "assets/ref/wb_p080.webp" }
+        }
+      }
+    },
+    {
+      "id": "u6-6_12-wb-questions",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 79 },
+      "dir": "ltr",
+      "recall_words": ["ambition", "good at", "interested in", "likely to", "on balance"],
+      "content": {
+        "lines": [
+          "6.12 A Use the questions to help you write notes about yourself. Then write three paragraphs about your own plans and views of the future.",
+          "Paragraph 1: Thinking about the future",
+          "1 What are you good at in school?",
+          "2 What are you interested in out of school?",
+          "3 How could you continue with these skills and interest after you leave school-in your job, for example?",
+          "4 Will it be possible for you to do that? How? If not, what else are you likely to do? Why?",
+          "Paragraph 2: My plans for the future",
+          "1 What are your ambitions for the next two or three years?",
+          "2 What do you hope will happen in the next five or ten years?",
+          "Paragraph 3: Future changes in Yemen that will affect my life",
+          "1 What sort of changes do you think will change life for you in the future?",
+          "2 Which do you think will improve your life?",
+          "3 Which do you think may not be so good?",
+          "4 On balance, do you feel happy or unhappy about the future?"
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "anywhere": { "pos": "adv", "ar": "في أي مكان (من مفردات الوحدة ص 113)", "in_book_wordlist": true, "wb_page": 113 },
+    "even": { "pos": "adv", "ar": "حتى (مثلاً: even when من ص 113)", "in_book_wordlist": true, "wb_page": 113 },
+    "vehicle": { "pos": "n", "ar": "مركبة / آلية (من ص 113)", "in_book_wordlist": true, "wb_page": 113 },
+    "on balance": { "pos": "phr", "ar": "في المحصّلة / عند موازنة الإيجابيات والسلبيات", "in_book_wordlist": false }
+  },
+  "activities": [
+    {
+      "id": "pb-6_12-expressions",
+      "origin": "from_book",
+      "source": { "book": "PB", "page": 49 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "Look at the article and find language that will help you. Underline expressions that show: 1 what Faysal is interested in, 2 his ambition, 3 his hopes, 4 what he wants / does not want, 5 what he believes.",
+      "prompt_ar": "استخرج العبارات الخمس من مقال فيصل على PB ص 49:",
+      "items": [
+        { "num": 1, "question": "1 what Faysal is interested in", "model_answer": "Having always been interested in tourism", "explain_ar": "بداية الفقرة الثانية." },
+        { "num": 2, "question": "2 his ambition", "model_answer": "full of energy and ambition for the future; His ambition is to have eight or ten 4WDs two years from now and to take visitors all over Yemen.", "explain_ar": "نهاية الفقرة الأولى وبداية الفقرة الثالثة." },
+        { "num": 3, "question": "3 his hopes", "model_answer": "Faysal hopes he will have a wife and children; he does hope to own a house and to give his family the things they need.", "explain_ar": "منتصف ونهاية الفقرة الثالثة." },
+        { "num": 4, "question": "4 what he wants / does not want", "model_answer": "He doesn't want to be very rich (but wants to give his family the things they need).", "explain_ar": "الفقرة الثالثة." },
+        { "num": 5, "question": "5 what he believes", "model_answer": "he believes most of the changes will be good ones; he doesn't feel that people will start to think about money and nothing else; He is certain that the traditional way of life is strong enough to prevent that.", "explain_ar": "الفقرة الرابعة." }
+      ],
+      "hints": [
+        "استعن بالفقرات 2 و3 و4 من مقال DISCOVERING YEMEN على PB ص 49."
+      ]
+    },
+    {
+      "id": "wb-6_12-a-essay",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 79 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.12 A Use the questions to help you write notes about yourself. Then write three paragraphs about your own plans and views of the future.",
+      "prompt_ar": "ورشة كتابة المقال ثلاثي الفقرات عن خططك ورؤيتك للمستقبل (WB ص 79–80):",
+      "guidance_literal": "Paragraph 1 (Skills & interests) → Paragraph 2 (2–3 & 5–10 year plans) → Paragraph 3 (Changes in Yemen & overall view)",
+      "steps": [
+        { "label_ar": "Paragraph 1: Thinking about the future (المهارات والاهتمامات والمهنة الممكنة)", "placeholder": "At school I am good at science and English, and outside school I am interested in repairing electronics and helping younger students understand difficult topics. After leaving school, I hope to continue using these skills by studying electrical engineering at university and building a useful technical career." },
+        { "label_ar": "Paragraph 2: My plans for the future (الطموح لـ 2–3 سنوات ثم 5–10 سنوات)", "placeholder": "My main ambition for the next two or three years is to graduate with high grades, improve my practical skills and start university. Looking five or ten years into the future, I hope I will qualify as an engineer, start a small team of my own, and support my parents and family." },
+        { "label_ar": "Paragraph 3: Future changes in Yemen that will affect my life (التحولات الإيجابية والسلبية والمحصّلة)", "placeholder": "In the future, better education facilities, cleaner energy and faster internet connections will improve our daily lives and create new jobs. On the other hand, rapid city growth may make living more expensive and push people to spend less time together. On balance, however, I feel positive and hopeful about the future because our strong community values will help us handle change wisely." }
+      ],
+      "hints": [
+        "تأكد من الإجابة داخل مسودتك عن كل الأسئلة المرقّمة داخل الفقرات الثلاث، مع استعمال روابط التوازن مثل On the other hand وOn balance."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_12-a",
+      "origin": "educational_addition",
+      "page_ref": 79,
+      "questions": [
+        {
+          "id": "q-6_12-1",
+          "type": "mcq",
+          "stem": "In PB page 49 (6.12), which structure expresses Faysal's ambition correctly as a model for your essay?",
+          "evidence_block_id": "u6-6_12-language-prompt",
+          "options": [
+            { "text": "His ambition is to have eight or ten 4WDs two years from now.", "is_correct": true, "why_wrong": null },
+            { "text": "He doesn't want to be very rich.", "is_correct": false, "why_wrong": "هذه العبارة تمثل البند 4 (ما لا يريده) وليست صياغة الطموح." },
+            { "text": "He believes most of the changes will be good ones.", "is_correct": false, "why_wrong": "هذه العبارة تمثل البند 5 (ما يعتقده عن تغيّر المستقبل)." },
+            { "text": "He left Sana'a early on Day 3.", "is_correct": false, "why_wrong": "هذا سرد لوقائع الرحلة لا تعبير عن الطموح المستقبلي." }
+          ],
+          "hints": [
+            "ابحث عن الصيغة: My/His ambition is to + مصدر."
+          ],
+          "explain": "التعبير: ambition is to + المصدر هو القالب النموذجي لصياغة الطموح في الفقرة الثانية."
+        },
+        {
+          "id": "q-6_12-2",
+          "type": "mcq",
+          "stem": "According to WB 6.12 A, what should Paragraph 3 ('Future changes in Yemen that will affect my life') conclude with?",
+          "evidence_block_id": "u6-6_12-wb-questions",
+          "options": [
+            { "text": "Question 4: 'On balance, do you feel happy or unhappy about the future?' (weighing positive and less good changes).", "is_correct": true, "why_wrong": null },
+            { "text": "Question 1 from Paragraph 1: what school subjects you are good at today.", "is_correct": false, "why_wrong": "نقاط التفوق الدراسي تُكتب في الفقرة الأولى لا في خاتمة الفقرة الثالثة." },
+            { "text": "A Past passive summary of how Anwar was rescued.", "is_correct": false, "why_wrong": "قصة أنور كانت في دروس 6.3–6.5." },
+            { "text": "Only negative complaints without considering improvements.", "is_correct": false, "why_wrong": "السؤالان 2 و3 يوازنان بين ما سيحسّن حياتك وما قد يكون أقل جودة قبل خلاصة 4." }
+          ],
+          "hints": [
+            "راجع البند 4 تحت Paragraph 3 في WB ص 80."
+          ],
+          "explain": "تختتم الفقرة الثالثة بموازنة الإيجابيات والتحديات باستخدام عبارة On balance للوصول إلى موقف واضح نحو المستقبل."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_12-anywhere", "origin": "from_book", "page_ref": 113, "front": "anywhere (adv)", "back": "في أي مكان (من قائمة مفردات الوحدة 6)", "tag": "Unit 6 · 6.12" },
+    { "id": "fc-6_12-onbalance", "origin": "from_book", "page_ref": 80, "front": "On balance, ...", "back": "في المحصّلة / بعد موازنة الإيجابيات والسلبيات", "tag": "Unit 6 · 6.12" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت تعليمات 6.12 في PB ص 49 مع pb-51.png وقورنت بعبارات مقال فيصل الخمس.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 79–80 (wb-080.png وwb-081.png): حُفظت صيغة 'skills and interest' و'school-in' حرفياً ورُصد ترقيم صفحة 80 بالأرقام الهندية '٨٠'."
+  }
+}
