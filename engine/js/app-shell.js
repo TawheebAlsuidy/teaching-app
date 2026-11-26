@@ -278,8 +278,8 @@
         sec.appendChild(wrap);
       });
       var timedHost = document.createElement("div");
-      global.ThakerQuiz.renderTimedExamPanel(timedHost, ctx.lesson.section_checks, ctx);
       sec.appendChild(timedHost);
+      global.ThakerQuiz.renderTimedExamPanel(timedHost, ctx.lesson.section_checks, ctx);
     }
   }
 
@@ -362,7 +362,9 @@
       ctx.persistState();
 
       document.getElementById("tkBookKicker").textContent = ctx.book.title_ar || ctx.book.title;
-      document.getElementById("tkHeaderTitle").textContent = lessonObj.lesson.code + " · " + lessonObj.lesson.title;
+      var hdrEl = document.getElementById("tkHeaderTitle");
+      hdrEl.setAttribute("dir", lessonObj.lesson.direction || "auto");
+      hdrEl.textContent = lessonObj.lesson.code + " · " + lessonObj.lesson.title;
 
       renderBlocks();
       renderPracticeSection();
@@ -376,61 +378,79 @@
           label: "مرجع صفحة الكتاب",
           tabs: { page_ref: { book: r0.book, page: r0.book_page, pdf_page: r0.pdf_page, image: lessonObj.lesson.reference_images[imgK] } }
         }, "page_ref");
+      } else if (options && options.spot) {
+        var targetBlk = (lessonObj.blocks || []).find(function (b) { return b.id === options.spot; });
+        if (targetBlk && targetBlk.interactive_spot) {
+          global.ThakerSheet.open(ctx, targetBlk.interactive_spot, options.tab || "simple_explain");
+        }
       }
     } catch (e) {
-      global.ThakerSpeech.showToast("تعذّر تحميل الدرس المطلوب: " + lessonId);
+      global.ThakerSpeech.showToast("تعذّر تحميل الدرس (" + lessonId + "): " + (e && e.message ? e.message : e));
     }
   }
 
   async function boot() {
-    var book = global.__THAKER_BOOK__;
-    if (!book) return;
-    ctx.book = book;
-    ctx.state = await global.ThakerStorage.loadState(book.subject);
-
-    var hash = parseHash();
-    if (hash.mode && ["read", "study", "practice"].indexOf(hash.mode) >= 0) {
-      ctx.state.mode = hash.mode;
-    }
-
-    ctx.persistState = function () {
-      global.ThakerStorage.saveState(book.subject, ctx.state);
-    };
-    ctx.loadLesson = loadLesson;
-    ctx.switchMainView = switchMainView;
-    ctx.rerenderBlocks = renderBlocks;
-    ctx.recordAnswer = function (qid, ok) {
-      ctx.state.quizResults[qid] = ok;
-      if (ok && ctx.lesson) {
-        ctx.state.completedLessons[ctx.lesson.lesson.id] = true;
+    try {
+      var book = global.__THAKER_BOOK__;
+      if (!book) {
+        global.ThakerSpeech.showToast("تعذّر العثور على بيانات الكتاب book.js");
+        return;
       }
-      ctx.persistState();
-      updateProgressBar();
-    };
+      ctx.book = book;
+      ctx.state = await global.ThakerStorage.loadState(book.subject);
 
-    global.ThakerMode.init(ctx);
-    global.ThakerSheet.init();
+      var hash = parseHash();
+      if (hash.mode && ["read", "study", "practice"].indexOf(hash.mode) >= 0) {
+        ctx.state.mode = hash.mode;
+      }
 
-    document.querySelectorAll("[data-nav-view]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        switchMainView(b.getAttribute("data-nav-view"));
-      });
-    });
-
-    var backBtn = document.getElementById("tkBackBtn");
-    if (backBtn) {
-      backBtn.addEventListener("click", function () {
-        if (global.ThakerBridge && typeof global.ThakerBridge.returnToHome === "function") {
-          global.ThakerBridge.returnToHome();
-        } else {
-          switchMainView("toc");
+      ctx.persistState = function () {
+        global.ThakerStorage.saveState(book.subject, ctx.state);
+      };
+      ctx.loadLesson = loadLesson;
+      ctx.switchMainView = switchMainView;
+      ctx.rerenderBlocks = renderBlocks;
+      ctx.recordAnswer = function (qid, ok) {
+        ctx.state.quizResults[qid] = ok;
+        if (ok && ctx.lesson) {
+          ctx.state.completedLessons[ctx.lesson.lesson.id] = true;
         }
-      });
-    }
+        ctx.persistState();
+        updateProgressBar();
+      };
 
-    var targetLesson = hash.lesson || ctx.state.lastLessonId || book.default_lesson;
-    await loadLesson(targetLesson, { tab: hash.tab });
+      global.ThakerMode.init(ctx);
+      global.ThakerSheet.init();
+
+      document.querySelectorAll("[data-nav-view]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          switchMainView(b.getAttribute("data-nav-view"));
+        });
+      });
+
+      var backBtn = document.getElementById("tkBackBtn");
+      if (backBtn) {
+        backBtn.addEventListener("click", function () {
+          if (global.ThakerBridge && typeof global.ThakerBridge.returnToHome === "function") {
+            global.ThakerBridge.returnToHome();
+          } else {
+            switchMainView("toc");
+          }
+        });
+      }
+
+      var targetLesson = hash.lesson || ctx.state.lastLessonId || book.default_lesson;
+      await loadLesson(targetLesson, { tab: hash.tab, view: hash.view, spot: hash.spot });
+    } catch (err) {
+      if (global.ThakerSpeech) {
+        global.ThakerSpeech.showToast("خطأ أثناء التهيئة: " + (err && err.message ? err.message : err));
+      }
+    }
   }
 
-  document.addEventListener("DOMContentLoaded", boot);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })(window);

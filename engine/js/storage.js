@@ -12,10 +12,14 @@
   function openDb() {
     if (dbPromise) return dbPromise;
     dbPromise = new Promise(function (resolve) {
-      if (!global.indexedDB) {
+      if (!global.indexedDB || (global.location && global.location.protocol === "file:")) {
         resolve(null);
         return;
       }
+      var settled = false;
+      var timer = setTimeout(function () {
+        if (!settled) { settled = true; resolve(null); }
+      }, 250);
       try {
         var req = global.indexedDB.open(DB_NAME, DB_VER);
         req.onupgradeneeded = function (ev) {
@@ -24,10 +28,17 @@
             db.createObjectStore(STORE_NAME);
           }
         };
-        req.onsuccess = function (ev) { resolve(ev.target.result); };
-        req.onerror = function () { resolve(null); };
+        req.onsuccess = function (ev) {
+          if (!settled) { settled = true; clearTimeout(timer); resolve(ev.target.result); }
+        };
+        req.onerror = function () {
+          if (!settled) { settled = true; clearTimeout(timer); resolve(null); }
+        };
+        req.onblocked = function () {
+          if (!settled) { settled = true; clearTimeout(timer); resolve(null); }
+        };
       } catch (e) {
-        resolve(null);
+        if (!settled) { settled = true; clearTimeout(timer); resolve(null); }
       }
     });
     return dbPromise;

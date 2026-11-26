@@ -417,9 +417,9 @@
       '<div id="tkTimedHost"></div>';
     mount.appendChild(bar);
 
-    var startBtn = document.getElementById("tkStartTimedBtn");
-    var timerEl = document.getElementById("tkTimedTimer");
-    var hostEl = document.getElementById("tkTimedHost");
+    var startBtn = bar.querySelector("#tkStartTimedBtn");
+    var timerEl = bar.querySelector("#tkTimedTimer");
+    var hostEl = bar.querySelector("#tkTimedHost");
     var timerHandle = null;
 
     startBtn.addEventListener("click", function () {
