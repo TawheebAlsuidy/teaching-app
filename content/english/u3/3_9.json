@@ -1,0 +1,221 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u3", "number": 3, "title": "Looking for a job" },
+  "lesson": {
+    "id": "eng-u3-3_9",
+    "code": "3.9",
+    "title": "Intonation and job interview roleplay",
+    "title_ar": "النطق والنبرة ومحادثة مقابلة العمل (وكالة Sunrise Travel Agency)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 39, "book_page": 38 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 40, "book_page": 39 }
+    ],
+    "reference_images": {
+      "wb_38": "assets/ref/wb_p038.webp",
+      "wb_39": "assets/ref/wb_p039.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u3-3_9-ab",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 38 },
+      "dir": "ltr",
+      "recall_words": ["ambitious", "successful", "available", "selected", "inadequate", "prospects"],
+      "content": {
+        "lines": [
+          "3.9 A With a partner, say the words.",
+          "Pupil A: Say one word from each of the pairs below.",
+          "Pupil B: Close your book. Write the word you hear in your copybook.",
+          "Pupil A: Check the six words in your partner's copybook.",
+          "1 get  gate    2 sell  sail    3 tell  tail",
+          "4 sheep  ship    5 feet  fit    6 scheme  skim",
+          "Change roles.",
+          "Now say these words to each other.",
+          "ambitious   successful   available   selected   inadequate",
+          "B Ask these questions. Remember, your voice falls on this arrow (↓) and rises on this arrow (↑).",
+          "1 What will I have to (↓) do in this job?",
+          "2 What qualifications do I (↓) need?",
+          "3 What is the (↓)training like?",
+          "4 Do I have to take an exami(↑)nation?",
+          "5 Is the job (↑) here, or do I have to leave (↓) home?",
+          "6 What (↓) prospects are there?",
+          "7 When can I (↓) start?"
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي (<bdi dir='ltr'>RULE 2</bdi>):</strong> في السؤال <span dir='ltr'>3.9 B #3</span> طُبع السهم ملاصقاً للكلمة بدون مسافة: <span dir='ltr'><code>(↓)training</code></span>، وحُفظ كذلك حرفياً؛ كما تصحّح المراجعة البصرية لصورة <bdi dir='ltr'>wb-039.png</bdi> غياب الضمير <span dir='ltr'>I</span> في مخرجات OCR للسؤال 7 لتثبيت النص الصحيح: <span dir='ltr'><code>When can I (↓) start?</code></span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "قواعد النطق: الثنائيات الصوتية ونبرة أسئلة مقابلة العمل",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 38,
+            "html": "<ul><li><b>تمييز أصوات العلة في <bdi dir='ltr'>3.9 A</bdi>:</b><ul><li>المجموعة 1–3 تقابل صوتاً قصيراً <span dir='ltr'>/e/</span> (<span dir='ltr'>get, sell, tell</span>) بصوتٍ مزدوج <span dir='ltr'>/eɪ/</span> (<span dir='ltr'>gate, sail, tail</span>).</li><li>المجموعة 4–6 تقابل مدّاً طويلاً <span dir='ltr'>/iː/</span> (<span dir='ltr'>sheep, feet, scheme</span>) بكسرة قصيرة <span dir='ltr'>/ɪ/</span> (<span dir='ltr'>ship, fit, skim</span>).</li></ul></li><li><b>نبر الكلمات الخمس (مطابقة مع <bdi dir='ltr'>3.7 A</bdi>):</b> <span dir='ltr'>am<b>BI</b>tious</span> ، <span dir='ltr'>suc<b>CESS</b>ful</span> ، <span dir='ltr'>a<b>VAIL</b>able</span> ، <span dir='ltr'>se<b>LEC</b>ted</span> ، <span dir='ltr'>in<b>AD</b>equate</span>.</li><li><b>نبرة الأسئلة في <bdi dir='ltr'>3.9 B</bdi>:</b> تنخفض (↓) في أسئلة أدوات الاستفهام <span dir='ltr'>Wh-</span> (<span dir='ltr'>1, 2, 3, 6, 7</span>)، وتصعد (↑) في سؤال <span dir='ltr'>Yes/No</span> (<span dir='ltr'>4</span>: <span dir='ltr'>exami(↑)nation</span>)، وتصعد ثم تهبط (↑ … ↓) في سؤال التخيير بـ <span dir='ltr'>or</span> (<span dir='ltr'>5</span>).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 38,
+            "html": "<p dir='ltr'><b>Pronunciation check:</b> <i>scheme</i> = /skiːm/ (long vowel) vs <i>skim</i> = /skɪm/ (short vowel).</p>"
+          },
+          "self_check_ref": "chk-3_9-a",
+          "page_ref": { "book": "WB", "page": 38, "pdf_page": 39, "image": "assets/ref/wb_p038.webp" }
+        }
+      }
+    },
+    {
+      "id": "u3-3_9-cd",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "WB", "page": 38 },
+      "dir": "ltr",
+      "recall_words": ["employer", "interview", "available", "training", "initially"],
+      "content": {
+        "lines": [
+          "C The Sunrise Travel Agency wants to employ a clerk. The employer is interviewing an applicant for the job. Read all the sentences in the interview below silently. Then make conversations.",
+          "Pupil A: Take the part of the applicant. Choose the first of each of the things the applicant says.",
+          "Pupil B: Take the part of the employer. Listen to the applicant carefully and choose a correct reply.",
+          "Turn 1 — Applicant: { What will I have to do in this job? | When can I start? }",
+          "Turn 1 — Employer: { You must be available next week. | Help people book their holidays. }",
+          "Turn 2 — Applicant: { What qualifications do I need? | What is the training like? }",
+          "(WB p. 39) Turn 2 — Employer: { You will learn how to book plane tickets and how to use a computer. | You don't need any. We will teach you everything. }",
+          "Turn 3 — Applicant: { Do I have to take an examination? | Is the job here, or do I have to leave home? }",
+          "Turn 3 — Employer: { No. But we will look at your work after three months. | Later you will have the chance to work abroad. }",
+          "Turn 4 — Applicant: { What prospects are there? | How much will I earn? }",
+          "Turn 4 — Employer: { Initially you will get £800 a month. | Oh, this is a job with a future because more and more people are going on holiday nowadays. }",
+          "Change roles. The new applicant should choose the second options.",
+          "Listen to the model conversations to check your own.",
+          "D Ask and answer questions about another job. One of you takes the part of the applicant, the other the employer."
+        ]
+      },
+      "edu_note_html": "<strong>توثيق أثر الحوار الصوتي (<bdi dir='ltr'>RULE 7</bdi>):</strong> أزواج الأسئلة والأجوبة داخل <bdi dir='ltr'>3.9 C</bdi> محسومة 100% منطقياً من النص المطبوع (انظر الحل التفاعلي أدناه)؛ أما عبارة <span dir='ltr'>Listen to the model conversations</span> فتشير إلى تسجيل نموذجي في الكاسيت المفقود، وسُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> لتدريب النطق مع المعلّم دون تأليف نصوص كاسيت."
+    }
+  ],
+  "word_glossary_map": {
+    "employer": { "pos": "n", "ar": "صاحب العمل / جهة التوظيف", "in_book_wordlist": true, "wb_page": 112 },
+    "interview": { "pos": "n", "ar": "مقابلة عمل", "in_book_wordlist": true, "wb_page": 112 },
+    "training": { "pos": "n", "ar": "تدريب", "in_book_wordlist": true, "wb_page": 112 },
+    "prospects": { "pos": "n pl", "ar": "آفاق مستقبلية / فرص تدرّج وظيفي", "in_book_wordlist": false, "wb_page": 38 },
+    "initially": { "pos": "adv", "ar": "مبدئياً / في البداية", "in_book_wordlist": false, "wb_page": 39 },
+    "available": { "pos": "adj", "ar": "متاح / متفرغ للعمل", "in_book_wordlist": false, "wb_page": 38 }
+  },
+  "activities": [
+    {
+      "id": "wb-3_9-ab",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 38 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "3.9 A & B Complete the minimal-pair vowel pattern and question-intonation arrows (↑ or ↓).",
+      "prompt_ar": "صنّف الصوت الطويل/المزدوج مقابل القصير في 3.9 A وحدّد اتجاه النبرة في 3.9 B:",
+      "word_bank": ["gate", "skim", "am-BI-tious", "falling (↓)", "rising (↑)", "rising (↑) then falling (↓)"],
+      "items": [
+        { "num": 1, "prompt": "1 Short /e/ in 'get' contrasts with diphthong /eɪ/ in: ______", "answers": ["gate"] },
+        { "num": 2, "prompt": "2 Long /iː/ in 'scheme' contrasts with short /ɪ/ in: ______", "answers": ["skim"] },
+        { "num": 3, "prompt": "3 Stressed syllable pattern for 'ambitious': ______", "answers": ["am-BI-tious"] },
+        { "num": 4, "prompt": "4 Intonation in Wh-questions (#1, 2, 3, 6, 7, e.g., What prospects are there?): ______", "answers": ["falling (↓)"] },
+        { "num": 5, "prompt": "5 Intonation in Yes/No Q4 (Do I have to take an exami__nation?): ______", "answers": ["rising (↑)"] },
+        { "num": 6, "prompt": "6 Intonation in alternative Q5 (Is the job __ here, or do I have to leave __ home?): ______", "answers": ["rising (↑) then falling (↓)"] }
+      ],
+      "hints": [
+        "1: get/gate, sell/sail, tell/tail كلها تقابل /e/ مع /eɪ/. 4–6: لاحظ الأسهم المطبوعة في 3.9 B وقارنها مع 3.7 B."
+      ]
+    },
+    {
+      "id": "wb-3_9-c-match",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 38 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "3.9 C Sunrise Travel Agency interview — match every Applicant Option 1 & Option 2 to the Employer's correct reply.",
+      "prompt_ar": "الحواران الكاملان لمقابلة وكالة السفر (الخيارات الأولى أولاً ثم الثانية عند تبادل الأدوار):",
+      "items": [
+        { "num": 1, "question": "Turn 1 — Option 1: 'What will I have to do in this job?'", "model_answer": "Help people book their holidays.", "explain_ar": "يسأل عن مهام الوظيفة (do)، فيردّ صاحب العمل بمساعدة الناس على حجز العطلات." },
+        { "num": 2, "question": "Turn 1 — Option 2: 'When can I start?'", "model_answer": "You must be available next week.", "explain_ar": "يسأل عن موعد البدء (When)، فيردّ بتفرّغه الأسبوع القادم." },
+        { "num": 3, "question": "Turn 2 — Option 1: 'What qualifications do I need?'", "model_answer": "You don't need any. We will teach you everything.", "explain_ar": "يسأل عن المؤهلات (qualifications)، والإجابة: لا تحتاج أياً منها (any)." },
+        { "num": 4, "question": "Turn 2 — Option 2: 'What is the training like?'", "model_answer": "You will learn how to book plane tickets and how to use a computer.", "explain_ar": "يسأل عن طبيعة التدريب، والإجابة توضّح ما سيتعلمه." },
+        { "num": 5, "question": "Turn 3 — Option 1: 'Do I have to take an examination?'", "model_answer": "No. But we will look at your work after three months.", "explain_ar": "سؤال نعم/لا عن وجود اختبار ← يبدأ الردّ بـ No." },
+        { "num": 6, "question": "Turn 3 — Option 2: 'Is the job here, or do I have to leave home?'", "model_answer": "Later you will have the chance to work abroad.", "explain_ar": "يسأل عن مكان العمل/السفر ← الإجابة تتحدث عن العمل بالخارج (work abroad)." },
+        { "num": 7, "question": "Turn 4 — Option 1: 'What prospects are there?'", "model_answer": "Oh, this is a job with a future because more and more people are going on holiday nowadays.", "explain_ar": "prospects تعني المستقبل الوظيفي (a job with a future)." },
+        { "num": 8, "question": "Turn 4 — Option 2: 'How much will I earn?'", "model_answer": "Initially you will get £800 a month.", "explain_ar": "يسأل عن الراتب ← £800 شهرياً مبدئياً." }
+      ],
+      "hints": [
+        "في الجولة الأولى يختار المتقدم الخيار الأول في كل دور (1, 3, 5, 7)، وفي الجولة الثانية الخيار الثاني (2, 4, 6, 8)."
+      ]
+    },
+    {
+      "id": "wb-3_9-d-roleplay",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 39 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "3.9 D Ask and answer questions about another job. One of you takes the part of the applicant, the other the employer.",
+      "prompt_ar": "طبّق مقابلة عمل جديدة لوظيفة أخرى من اختيارك مستعيناً بهيكل الأسئلة الواردة في 3.9 C:",
+      "guidance_literal": "Duties → Qualifications & Training → Location/Exam → Prospects & Salary",
+      "steps": [
+        { "label_ar": "1) سؤال المهام (Wh-questions بنبرة هابطة ↓)", "placeholder": "Applicant: What will I have to do in this job? | Employer: You will help visitors as a tourist guide." },
+        { "label_ar": "2) سؤال المؤهلات والتدريب والاختبار (بنبرة ↑ في Yes/No)", "placeholder": "Applicant: Do I have to take an exami(↑)nation? | Employer: No, you will receive two weeks of training first." },
+        { "label_ar": "3) سؤال المستقبل الوظيفي والراتب وموعد البدء", "placeholder": "Applicant: What prospects are there and when can I start? | Employer: You can become a senior guide; please start next Sunday." }
+      ],
+      "hints": [
+        "بدّل الأدوار بين متقدم وصاحب عمل مع مراعاة أسهم النبرة الصوتية من 3.9 B."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-3_9-a",
+      "origin": "educational_addition",
+      "page_ref": 38,
+      "questions": [
+        {
+          "id": "q-3_9-1",
+          "type": "mcq",
+          "stem": "In WB 3.9 B, why does question 4 ('Do I have to take an exami(↑)nation?') use a rising arrow (↑)?",
+          "evidence_block_id": "u3-3_9-ab",
+          "options": [
+            { "text": "Because it is a Yes/No question ending in a rising tone on the main stressed syllable (-na-).", "is_correct": true, "why_wrong": null },
+            { "text": "Because all Wh-questions rise at the end.", "is_correct": false, "why_wrong": "أسئلة Wh- في 3.9 B (أرقام 1 و2 و3 و6 و7) تستخدم سهماً هابطاً (↓) لا صاعداً." },
+            { "text": "Because it contains two alternatives joined by 'or'.", "is_correct": false, "why_wrong": "السؤال الخامس هو سؤال التخيير بـ or، وفيه تصعد النبرة ثم تهبط (↑ … ↓)." },
+            { "text": "Because the word 'examination' is unstressed.", "is_correct": false, "why_wrong": "المقطع -na- هو المقطع المنبور الأساسي في كلمة ex-am-i-NA-tion ولذلك جاء سهم (↑) قبله مباشرة." }
+          ],
+          "hints": [
+            "قارن بين بداية السؤال 4 (Do I...?) وبداية الأسئلة 1، 2، 3، 6، 7 (What/When...?).",
+            "سؤال نعم/لا يصعد، وأسئلة Wh- تهبط."
+          ],
+          "explain": "أسئلة Yes/No تصعد نبرتها عند المقطع المنبور الأخير (exami-NA-tion ↑)، بينما تهبط في أسئلة أدوات الاستفهام Wh-."
+        },
+        {
+          "id": "q-3_9-2",
+          "type": "mcq",
+          "stem": "In the Sunrise Travel Agency interview (WB pp. 38–39), which employer reply matches the applicant's question 'What qualifications do I need?'",
+          "evidence_block_id": "u3-3_9-cd",
+          "options": [
+            { "text": "You don't need any. We will teach you everything.", "is_correct": true, "why_wrong": null },
+            { "text": "You will learn how to book plane tickets and how to use a computer.", "is_correct": false, "why_wrong": "هذه إجابة السؤال الثاني: What is the training like?" },
+            { "text": "Help people book their holidays.", "is_correct": false, "why_wrong": "هذه إجابة سؤال المهام: What will I have to do in this job?" },
+            { "text": "Initially you will get £800 a month.", "is_correct": false, "why_wrong": "هذه إجابة سؤال الراتب: How much will I earn?" }
+          ],
+          "hints": [
+            "ابحث عن الكلمة المعوِّضة لكلمة qualifications في الرد.",
+            "كلمة any في You don't need any تعود على qualifications."
+          ],
+          "explain": "تعود any في جملة 'You don't need any' مباشرة على qualifications (المؤهلات)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-3_9-prospects", "origin": "from_book", "page_ref": 38, "front": "What prospects are there?", "back": "ما فرص التطور والمستقبل الوظيفي في هذه الوظيفة؟", "tag": "Unit 3 · 3.9" },
+    { "id": "fc-3_9-initially", "origin": "from_book", "page_ref": 39, "front": "Initially you will get...", "back": "مبدئياً / في البداية ستحصل على...", "tag": "Unit 3 · 3.9" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 38–39 مع tesseract.js eng: أسقطت OCR الضمير I من 'When can (↓) start?' في 3.9 B #7 وأخرجت الأسهم '(']' و'('T')' كما دمجت قوس التجمع '{' مع أحرف غير موجودة ('J')؛ صُحّح كل ذلك بصرياً عبر wb-039.png وwb-040.png، وحُفظ غياب المسافة المطبوع في 'the (↓)training' حرفياً."
+  }
+}
