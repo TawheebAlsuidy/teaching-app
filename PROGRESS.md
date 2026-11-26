@@ -120,7 +120,7 @@
   - [x] `sci-2` States of matter (PB p. 66 / WB pp. 97–98)
   - [x] `sci-3` Light (PB p. 67 / WB pp. 98–99)
   - [x] `sci-4` Sound (PB p. 68 / WB p. 100)
-  - [ ] `sci-5` Arab scientists (p. 69)
+  - [x] `sci-5` Arab scientists (PB p. 69 / WB p. 101)
   - [ ] `sci-6` Vaccinations (p. 70)
   - [ ] `sci-7` Experimental procedures (p. 71)
   - [ ] `sci-8` Internal combustion engine (p. 72)
