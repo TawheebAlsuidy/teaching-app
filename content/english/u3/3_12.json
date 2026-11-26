@@ -1,0 +1,198 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u3", "number": 3, "title": "Looking for a job" },
+  "lesson": {
+    "id": "eng-u3-3_12",
+    "code": "3.12",
+    "title": "Writing a letter of application",
+    "title_ar": "كتابة رسالة التقدّم لوظيفة (الصحيفة الجديدة والمجلة الشبابية)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 26, "book_page": 24 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 41, "book_page": 40 }
+    ],
+    "reference_images": {
+      "pb_24": "assets/ref/pb_p024.webp",
+      "wb_40": "assets/ref/wb_p040.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u3-3_12-ad",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 24 },
+      "dir": "ltr",
+      "recall_words": ["fantastic", "reporters", "photographers", "magazine", "willing", "chance"],
+      "content": {
+        "lines": [
+          "3.11 3.12 A business letter",
+          "Write a business letter in answer to this job advertisement in the Daily News of April 20th.",
+          "Fantastic Job Opportunity!",
+          "Have you ever wanted to work on a newspaper?",
+          "We are looking for young men and women to train as reporters and photographers for a new general interest magazine for people under 25.",
+          "No experience is necessary but the successful applicants must be willing to work hard and already have a wide range of interests.",
+          "Write and tell us all about yourself and why you think we should give you the chance to join our exciting team.",
+          "Write to: The Editor, The Daily News, PO Box 0055, London S18 9HP"
+        ],
+        "image": "assets/media/pb24_job_opportunity.webp",
+        "caption": "Fantastic Job Opportunity! — The Daily News advertisement (PB page 24)"
+      },
+      "edu_note_html": "<strong>ملاحظة استخراجية (<bdi dir='ltr'>600 DPI</bdi>):</strong> إعلان <span dir='ltr'>Fantastic Job Opportunity!</span> مضمّن كصورة في الكتاب ولا يستخرجه <span dir='ltr'>pdftotext</span>؛ قد قُرئت كافة سطوره والعنوان البريدي (<span dir='ltr'>PO Box 0055, London S18 9HP</span>) بصرياً عبر <span dir='ltr'>pb24_opp_sharp.png</span> بدقة <span dir='ltr'>600 DPI</span>."
+    },
+    {
+      "id": "u3-3_12-guide",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 24 },
+      "dir": "ltr",
+      "recall_words": ["sell yourself", "interests", "hobbies", "ambitions", "miss out"],
+      "content": {
+        "lines": [
+          "When writing a letter of application, you must sell yourself, that is, you must give as much interesting information about yourself as you can.",
+          "Answer these questions:",
+          "• Which school subjects do you like most? Why?",
+          "• What interests or hobbies do you have? Give details. If you like music, say which music and why; if you play sport, say which sport and why.",
+          "• Have you ever had any work experience? What was it?",
+          "• Have you done anything connected with the job itself? What was it?",
+          "• Have you travelled? Where to, when and why?",
+          "• Do you have any ambitions? What are they?",
+          "Remember!",
+          "• Lay out your letter correctly.",
+          "• Refer to the advertisement.",
+          "• Ask for an interview.",
+          "• Keep the letter short, but do not miss out anything important.",
+          "• Use the correct form of address."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الربط بين التخطيط اللفظي وتنسيق الأجزاء العشرة للرسالة",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 24,
+            "html": "<ol><li><b>صيغة المخاطبة والختام (<span dir='ltr'>Form of address</span>):</b> بما أن المرسَل إليه هو <span dir='ltr'><b>The Editor</b></span> (دون ذكر اسمه الشخصي)، استعمل التحية <span dir='ltr'><b>Dear Sir or Madam,</b></span> أو <span dir='ltr'><b>Dear Sir,</b></span>، فتتعين معها الخاتمة <span dir='ltr'><b>Yours faithfully,</b></span>! (وليس <span dir='ltr'>Yours sincerely</span>).</li><li><b>الإشارة إلى الإعلان:</b> اذكر وظيفة التدريب (<span dir='ltr'>trainee reporter / photographer</span>)، اسم الصحيفة (<span dir='ltr'>the Daily News</span>)، وتاريخها (<span dir='ltr'>April 20th</span>) والتاريخ التالي في الترويسة (مثلاً <span dir='ltr'>April 22nd</span>).</li><li><b>التسويق للنفس (<span dir='ltr'>Sell yourself</span>):</b> قدّم أمثلة ملموسة بدل الصفات المبهمة — فبدلاً من <span dir='ltr'>I like sport</span> قُل مثلاً <span dir='ltr'>I play football for my school team</span> أو اذكر عملك في مجلة المدرسة والتصوير.</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 24,
+            "caption": "قائمة التحقق الذاتية قبل تسليم رسالة التقديم",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='14' y='20' width='134' height='78' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='81' y='50' text-anchor='middle' font-size='11' font-weight='700'>Boxes 1–4</text><text x='81' y='72' text-anchor='middle' font-size='10'>Addresses, Date, Dear Sir</text><rect x='160' y='20' width='134' height='78' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='227' y='50' text-anchor='middle' font-size='11' font-weight='700'>Box 5 (Ad Ref)</text><text x='227' y='72' text-anchor='middle' font-size='10'>Daily News of April 20th</text><rect x='306' y='20' width='134' height='78' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='373' y='50' text-anchor='middle' font-size='11' font-weight='700'>Box 6 (Sell Self)</text><text x='373' y='72' text-anchor='middle' font-size='10'>Subjects, Hobbies, Skills</text><rect x='452' y='20' width='134' height='78' rx='8' fill='#F3E8FF' stroke='#9333EA'/><text x='519' y='50' text-anchor='middle' font-size='11' font-weight='700'>Boxes 7–10</text><text x='519' y='72' text-anchor='middle' font-size='10'>Interview + Faithfully</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 24,
+            "html": "<p dir='ltr'><b>Model Body Paragraph (Box 6):</b><br>I am 18 years old and in my final year at secondary school. My favourite subjects are English and History because I enjoy reading and researching events. In addition, I write articles for our school magazine and take photographs for the school club. Furthermore, I have travelled to Aden and Taiz with my family.</p>"
+          },
+          "self_check_ref": "chk-3_12-a",
+          "page_ref": { "book": "PB", "page": 24, "pdf_page": 26, "image": "assets/ref/pb_p024.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "fantastic": { "pos": "adj", "ar": "رائع / مذهل", "in_book_wordlist": true, "wb_page": 112 },
+    "miss out": { "pos": "phr v", "ar": "يُفوِّت / يُسقط (عنصراً أو فرصةً مهمة)", "in_book_wordlist": true, "wb_page": 112 },
+    "hobby": { "pos": "n", "ar": "هواية", "in_book_wordlist": true, "wb_page": 112 },
+    "Yours faithfully": { "pos": "phr", "ar": "ختام رسمي عند عدم معرفة اسم المرسَل إليه", "in_book_wordlist": true, "wb_page": 112 },
+    "ambition": { "pos": "n", "ar": "طموح", "in_book_wordlist": false, "wb_page": 24 }
+  },
+  "activities": [
+    {
+      "id": "wb-3_12-a-plan",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 40 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "3.12 A Prepare the key facts for your letter to The Editor of The Daily News using the 10-box layout and PB page 24 rules.",
+      "prompt_ar": "تحقّق من العناصر الواجبة في رسالتك استجابةً لإعلان PB ص 24 (WB 3.12 A):",
+      "word_bank": ["The Editor, The Daily News", "London S18 9HP", "Daily News of April 20th", "Dear Sir", "Yours faithfully", "photographers"],
+      "items": [
+        { "num": 1, "prompt": "1 Receiver (Box 2 line 1): ______", "answers": ["The Editor, The Daily News"] },
+        { "num": 2, "prompt": "2 Receiver postcode (Box 2 last line): PO Box 0055, ______", "answers": ["London S18 9HP"] },
+        { "num": 3, "prompt": "3 Formal greeting when name is unknown (Box 4): ______ (or Dear Sir or Madam)", "answers": ["Dear Sir"] },
+        { "num": 4, "prompt": "4 Advertisement reference (Box 5): I am writing to apply for the training post advertised in the ______.", "answers": ["Daily News of April 20th"] },
+        { "num": 5, "prompt": "5 Target training roles: reporters and ______ for a new general interest magazine for people under 25.", "answers": ["photographers"] },
+        { "num": 6, "prompt": "6 Mandatory closing matching Box 4 'Dear Sir' (Box 8): ______", "answers": ["Yours faithfully"] }
+      ],
+      "hints": [
+        "راجع عنوان الإعلان بالصورة، وتأكد من مطابقة Dear Sir مع Yours faithfully (لا Yours sincerely)."
+      ]
+    },
+    {
+      "id": "wb-3_12-a-draft",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 40 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "3.12 A Write a letter of application in response to the advertisement on PB page 24.",
+      "prompt_ar": "ورشة كتابة رسالة التقدّم الكاملة (الأجزاء 1–10) إلى محرر صحيفة The Daily News:",
+      "guidance_literal": "1 Sender address → 2 Receiver address → 3 Date → 4 Dear Sir → 5 Ref to April 20th ad → 6 About yourself → 7 Interview request → 8 Yours faithfully → 9 Signature → 10 Printed name",
+      "steps": [
+        { "label_ar": "Boxes 1–3: عنوان المرسل (يميناً)، عنوان المستلم (يساراً)، والتاريخ (يميناً تحت عنوانك)", "placeholder": "[Right] Al-Zubairi Street, Sana'a, Yemen | [Date] April 22nd, 2005  ||  [Left] The Editor, The Daily News, PO Box 0055, London S18 9HP" },
+        { "label_ar": "Boxes 4–5: التحية الرسمية والإشارة للإعلان والتخصص", "placeholder": "Dear Sir,  I would like to apply for the post of trainee reporter as advertised in the Daily News of April 20th." },
+        { "label_ar": "Box 6: التسويق للنفس (المواد، الهوايات المفصّلة، الخبرة المتصلة، السفر، الطموح)", "placeholder": "I am 18 years old and in my last year at secondary school. My favourite subjects are English and Geography because I enjoy researching world events. I am interested in photography and have been taking photos for our school magazine for two years. Furthermore, I have visited several towns in Yemen to write short reports. One day, I hope to work as a full-time journalist." },
+        { "label_ar": "Boxes 7–10: طلب المقابلة والختام الرسمي والتوقيع والاسم المطبوع", "placeholder": "I look forward to hearing from you and would be grateful for the chance of attending an interview.  Yours faithfully,  [Signature]  Tariq Ahmed" }
+      ],
+      "hints": [
+        "لا تنسَ وضع الفاصلة بعد التحية والختام، وتطبيق روابط Unit 3 مثل Furthermore / In addition / Because / Look forward to."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-3_12-a",
+      "origin": "educational_addition",
+      "page_ref": 24,
+      "questions": [
+        {
+          "id": "q-3_12-1",
+          "type": "mcq",
+          "stem": "When replying to 'Write to: The Editor, The Daily News, PO Box 0055, London S18 9HP' without knowing the Editor's name, which greeting and closing pair is required by PB page 24?",
+          "evidence_block_id": "u3-3_12-ad",
+          "options": [
+            { "text": "Dear Sir, ... Yours faithfully,", "is_correct": true, "why_wrong": null },
+            { "text": "Dear Sir, ... Yours sincerely,", "is_correct": false, "why_wrong": "تحية Dear Sir أو Dear Madam لا تجتمع مع Yours sincerely، بل توجب Yours faithfully." },
+            { "text": "Dear Editor Jones, ... Yours faithfully,", "is_correct": false, "why_wrong": "الإعلان لم يذكر اسم المحرر (Jones)، ومتى ذُكر اسم شخص استُعملت Yours sincerely." },
+            { "text": "Dear Mr Editor, ... Best wishes,", "is_correct": false, "why_wrong": "عبارة Best wishes غير رسمية ولا تطابق قواعد الرسالة التجارية في PB ص 24." }
+          ],
+          "hints": [
+            "اقرأ الملاحظة (Note) أعلى PB ص 24 بعناية.",
+            "غياب الاسم الشخصي = Dear Sir / Dear Madam + Yours faithfully."
+          ],
+          "explain": "عند توجيه الرسالة إلى صفة وظيفية مثل The Editor دون اسم شخص، نستعمل Dear Sir / Dear Madam ونختم بـ Yours faithfully."
+        },
+        {
+          "id": "q-3_12-2",
+          "type": "mcq",
+          "stem": "According to the 'When writing a letter of application' checklist on PB page 24, what does 'sell yourself' mean?",
+          "evidence_block_id": "u3-3_12-guide",
+          "options": [
+            { "text": "Give as much interesting, specific information about your subjects, hobbies, experience and ambitions as you can while keeping the letter concise.", "is_correct": true, "why_wrong": null },
+            { "text": "Ask immediately about the starting salary and demand a high wage.", "is_correct": false, "why_wrong": "الإعلان مخصص للتدريب ولا يركّز على المطالبة بالراتب؛ بل ينص الكتاب على شرح sell yourself بتقديم معلومات مشوّقة عنك." },
+            { "text": "Write a very long three-page essay including unrelated personal stories.", "is_correct": false, "why_wrong": "ينص قسم Remember على: Keep the letter short, but do not miss out anything important." },
+            { "text": "Leave out hobbies because employers only read school marks.", "is_correct": false, "why_wrong": "الإعلان يطلب أصحاب اهتمامات واسعة (a wide range of interests)، والصندوق يوصي بتفصيل الهوايات." }
+          ],
+          "hints": [
+            "انظر الجملة الأولى في الإطار الأحمر الكبير أسفل PB ص 24.",
+            "that is, you must give as much interesting information about yourself as you can."
+          ],
+          "explain": "يفسّر كتاب الطالب نفسه المصطلح في PB ص 24 بأنه إبراز قدراتك واهتماماتك بتفاصيل مقنعة ومختصرة."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-3_12-sell", "origin": "from_book", "page_ref": 24, "front": "sell yourself (in an application letter)", "back": "إبراز قدراتك واهتماماتك بتفاصيل مشوّقة ومقنعة لصاحب العمل مع الإيجاز", "tag": "Unit 3 · 3.12" },
+    { "id": "fc-3_12-miss", "origin": "from_book", "page_ref": 24, "front": "do not miss out anything important", "back": "لا تُغفِل / لا تُسقط أي معلومة مهمة", "tag": "Unit 3 · 3.12" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "استُخرج نص إعلان 'Fantastic Job Opportunity!' كاملاً بصرياً عبر تكبير pb24_opp_sharp.png (600 DPI) مع الحفاظ على التهجئة والعنوان 'PO Box 0055, London S18 9HP'، وطُوبقت أسئلة التوجيه وصندوق Remember في pb-26.png.",
+    "wb_ocr_vs_image": "طُوبق منطوق 3.12 A في WB ص 40 مع صورة wb-041.png وصُحّح خطأ OCR في الرقم '312 A' إلى '3.12 A'."
+  }
+}
