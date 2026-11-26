@@ -1,0 +1,226 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_8",
+    "code": "1.8",
+    "title": "Vocabulary and comprehension (PB p. 6)",
+    "title_ar": "استخراج المفردات والاستيعاب لنص (A drive in the countryside)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 9, "book_page": 8 },
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 8, "book_page": 6 }
+    ],
+    "reference_images": {
+      "wb_8": "assets/ref/wb_p008.webp",
+      "pb_6": "assets/ref/pb_p006.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_8-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "WB", "page": 8 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.8 A Read the text on PB page 6. Find words that mean the following:",
+          "1 not being at work para 1 ______",
+          "2 a road near the sea para 1 ______",
+          "3 eating grass para 1 ______",
+          "4 a machine used by a farmer para 1 ______",
+          "5 turning over the soil para 1 ______",
+          "6 most important or biggest para 2 ______",
+          "7 the highest part of a mountain para 3 ______",
+          "8 see with difficulty para 3 ______"
+        ]
+      }
+    },
+    {
+      "id": "u1-1_8-b-prompt",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 8 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "B Read the text again and write short answers to these questions.",
+          "1 Where did the writer spend his holiday?",
+          "2 Which road did he take when he began his drive?",
+          "3 In which direction was the sea?",
+          "4 What was nearer the writer, the farmer or the cows?",
+          "5 What were the birds looking for?",
+          "6 When did the writer see the river?",
+          "7 What happened to the river?",
+          "8 Where did the road end?",
+          "9 Was the peak above or below the place where the road ended?",
+          "10 Why did the writer climb down from the peak?",
+          "11 What was the weather like when he started eating his sandwiches?",
+          "12 What suddenly happened to the weather?"
+        ]
+      }
+    },
+    {
+      "id": "u1-1_8-pb6-ref-text",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 6 },
+      "dir": "ltr",
+      "recall_words": ["holiday", "coast road", "grazing", "tractor", "ploughing", "main", "peak", "make out"],
+      "content": {
+        "lines": [
+          "1.9 A drive in the countryside (Reference text from PB page 6)",
+          "Last year, I spent my holiday in Wales, where the scenery is wonderful. One bright, sunny day I decided to go for a drive. I drove out of town along the coast road. The sea was to my left about two kilometres away. Between the sea and the road was farmland. In one field there were a lot of cows with their heads down, grazing. In another field, closer to me, a farmer on a tractor was ploughing. Behind the plough were lots of birds, looking for something to eat in the newly turned-over soil.",
+          "To the right of the road were some high, rocky hills. I turned off the main coast road and soon I was in a deep valley. Hills rose on both sides of the road. At first, the road climbed gently, but as I drove higher, it got steeper and steeper. Further up I could see a river to the left. I drove higher and higher and the river got narrower and narrower, until it was just a stream.",
+          "Near the top of the hill, the road ended. I got out of the car and climbed to the peak to take in the view of the valley below. At the end of the valley I could see the farmer on his tractor. Away in the distance I could just make out the sea. As I looked, I began to feel hungry and thirsty.",
+          "I went back down to the stream below. The water was cold and clear and tasted very good. I sat on a rock to eat my sandwiches, my back warmed by the sun. Suddenly a cloud came across the sun. I felt cold. A mist came down over the mountain. Soon I would not be able to see where I was going. I knew I had to leave. I put away a half-eaten sandwich, got into the car and drove back down the valley."
+        ],
+        "image": "assets/media/pb6_drive_scene.webp",
+        "caption": "Scenery illustration from PB page 6 (coastal farmland, tractor ploughing, valley and mountain peak)"
+      },
+      "edu_note_html": "<strong>توثيق الترقيم وجودة المسح:</strong> يُحيل تمرين <bdi dir='ltr'>WB 1.8</bdi> هنا مباشرةً إلى نص <bdi dir='ltr'>PB p. 6</bdi> المرقّم <bdi dir='ltr'>1.9</bdi> في كتاب الطالب، وقد أوردناه كاملاً أعلاه لتسهيل الاستخراج دون تنقل. كما يغطي طرف ورقة شجر داكنة موضع الكلمتين قبل <span dir='ltr'><code>the view</code></span> في الفقرة 3 (مُرجّح <span dir='ltr'>take in</span> أو <span dir='ltr'>look at</span> وسُجّل في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> للتحقق من النسخة الورقية).",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "مفاتيح استخراج معاني المفردات 1–8 من الفقرات الثلاث",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 8,
+            "html": "<p>مقارنة المعنى في <bdi dir='ltr'>WB 1.8 A</bdi> بالكلمة الدقيقة داخل <bdi dir='ltr'>PB p. 6</bdi>:</p><ul><li><b>Para 1:</b> <span dir='ltr'>not being at work → <b>holiday</b></span> | <span dir='ltr'>road near the sea → <b>coast road</b></span> | <span dir='ltr'>eating grass → <b>grazing</b></span> | <span dir='ltr'>farmer's machine → <b>tractor</b></span> | <span dir='ltr'>turning over the soil → <b>ploughing</b></span> (لاحظ تطابق صيغة <span dir='ltr'>-ing</span> مع الدليلين 3 و5).</li><li><b>Para 2:</b> <span dir='ltr'>most important or biggest → <b>main</b></span>.</li><li><b>Para 3:</b> <span dir='ltr'>highest part of a mountain → <b>peak</b></span> | <span dir='ltr'>see with difficulty → <b>make out</b></span> (واردة في قائمة كلمات الوحدة 1 بالصيغة الحرفية <span dir='ltr'>make out (= see)</span>).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 6,
+            "html": "<p dir='ltr'>Away in the distance I could just <b>make out</b> the sea. (= see with difficulty)</p>"
+          },
+          "self_check_ref": "chk-1_8-a",
+          "page_ref": { "book": "PB", "page": 6, "pdf_page": 8, "image": "assets/ref/pb_p006.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "holiday": { "pos": "n", "ar": "إجازة / عطلة", "in_book_wordlist": false, "wb_page": 8 },
+    "coast road": { "pos": "n", "ar": "طريق ساحلي (بمحاذاة البحر)", "in_book_wordlist": false, "wb_page": 8 },
+    "grazing": { "pos": "v (-ing)", "ar": "يرعى (يأكل العشب)", "in_book_wordlist": true, "wb_page": 111 },
+    "tractor": { "pos": "n", "ar": "جرار زراعي", "in_book_wordlist": false, "wb_page": 8 },
+    "ploughing": { "pos": "v (-ing)", "ar": "يحرث (يقلب التربة)", "in_book_wordlist": true, "wb_page": 111 },
+    "main": { "pos": "adj", "ar": "رئيسي / أكبر", "in_book_wordlist": false, "wb_page": 8 },
+    "peak": { "pos": "n", "ar": "قمة الجبل", "in_book_wordlist": true, "wb_page": 111 },
+    "make out": { "pos": "phr v", "ar": "يتبيّن / يرى بصعوبة عن بُعد", "in_book_wordlist": true, "wb_page": 111 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_8-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 8 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.8 A Read the text on PB page 6. Find words that mean the following:",
+      "prompt_ar": "استخرج الكلمة أو العبارة من نص PB ص 6 التي تطابق كل تعريف (رقم الفقرة محدد بجانب كل عبارة):",
+      "word_bank": ["holiday", "coast road", "grazing", "tractor", "ploughing", "main", "peak", "make out"],
+      "items": [
+        { "num": 1, "prompt": "1 not being at work (para 1): ______", "answers": ["holiday"] },
+        { "num": 2, "prompt": "2 a road near the sea (para 1): ______", "answers": ["coast road"] },
+        { "num": 3, "prompt": "3 eating grass (para 1): ______", "answers": ["grazing"] },
+        { "num": 4, "prompt": "4 a machine used by a farmer (para 1): ______", "answers": ["tractor"] },
+        { "num": 5, "prompt": "5 turning over the soil (para 1): ______", "answers": ["ploughing"] },
+        { "num": 6, "prompt": "6 most important or biggest (para 2): ______", "answers": ["main"] },
+        { "num": 7, "prompt": "7 the highest part of a mountain (para 3): ______", "answers": ["peak"] },
+        { "num": 8, "prompt": "8 see with difficulty (para 3): ______", "answers": ["make out"] }
+      ],
+      "hints": [
+        "البنود 1–5 في الفقرة الأولى، والبند 6 في الثانية، والبندان 7–8 في الثالثة.",
+        "تطابق صيغ الأسماء والأفعال: grazing تطابق eating، وploughing تطابق turning، وmake out تعني يرى بمشقة.",
+        "الحل: 1 holiday، 2 coast road، 3 grazing، 4 tractor، 5 ploughing، 6 main، 7 peak، 8 make out."
+      ]
+    },
+    {
+      "id": "wb-1_8-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 8 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Read the text again and write short answers to these questions.",
+      "prompt_ar": "أجب بإجابات قصيرة عن الأسئلة الـ 12 بالاعتماد المباشر على نص PB ص 6:",
+      "items": [
+        { "num": 1, "question": "Where did the writer spend his holiday?", "model_answer": "In Wales.", "explain_ar": "الجملة 1 في الفقرة 1: Last year, I spent my holiday in Wales." },
+        { "num": 2, "question": "Which road did he take when he began his drive?", "model_answer": "The coast road.", "explain_ar": "الفقرة 1: I drove out of town along the coast road." },
+        { "num": 3, "question": "In which direction was the sea?", "model_answer": "To his left.", "explain_ar": "الفقرة 1: The sea was to my left about two kilometres away." },
+        { "num": 4, "question": "What was nearer the writer, the farmer or the cows?", "model_answer": "The farmer (on his tractor).", "explain_ar": "الفقرة 1: In another field, closer to me, a farmer on a tractor was ploughing." },
+        { "num": 5, "question": "What were the birds looking for?", "model_answer": "Something to eat (in the newly turned-over soil).", "explain_ar": "آخر جملة في الفقرة 1." },
+        { "num": 6, "question": "When did the writer see the river?", "model_answer": "Further up the valley (as he drove higher).", "explain_ar": "الفقرة 2: Further up I could see a river to the left." },
+        { "num": 7, "question": "What happened to the river?", "model_answer": "It got narrower and narrower, until it was just a stream.", "explain_ar": "آخر جملة في الفقرة 2." },
+        { "num": 8, "question": "Where did the road end?", "model_answer": "Near the top of the hill.", "explain_ar": "أول جملة في الفقرة 3." },
+        { "num": 9, "question": "Was the peak above or below the place where the road ended?", "model_answer": "Above.", "explain_ar": "لأنه نزل من السيارة وتسلّق (climbed to the peak) أي أن القمة أعلى." },
+        { "num": 10, "question": "Why did the writer climb down from the peak?", "model_answer": "Because he began to feel hungry and thirsty.", "explain_ar": "الفقرة 3: As I looked, I began to feel hungry and thirsty. ثم عاد أدراجه للجدول." },
+        { "num": 11, "question": "What was the weather like when he started eating his sandwiches?", "model_answer": "Sunny and warm (his back was warmed by the sun).", "explain_ar": "الفقرة 4: I sat on a rock to eat my sandwiches, my back warmed by the sun." },
+        { "num": 12, "question": "What suddenly happened to the weather?", "model_answer": "A cloud came across the sun, he felt cold, and a mist came down over the mountain.", "explain_ar": "الفقرة 4: Suddenly a cloud came across the sun. I felt cold. A mist came down over the mountain." }
+      ],
+      "hints": [
+        "ترتيب الأسئلة 1–12 يتبع تسلسل النص في الفقرات من البداية إلى النهاية.",
+        "في السؤال 4: ابحث عن كلمة closer to me. وفي 9: ابحث عن فعل climbed."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_8-a",
+      "origin": "educational_addition",
+      "page_ref": 8,
+      "questions": [
+        {
+          "id": "q-1_8-1",
+          "type": "mcq",
+          "stem": "In PB page 6, what does 'make out' mean in the sentence 'Away in the distance I could just make out the sea'?",
+          "evidence_block_id": "u1-1_8-pb6-ref-text",
+          "options": [
+            { "text": "See with difficulty", "is_correct": true, "why_wrong": null },
+            { "text": "Build something out of wood", "is_correct": false, "why_wrong": "معنى make في السياق الأصلي يرتبط بـ out ليؤدي معنى التبيّن البصري عن بُعد." },
+            { "text": "Swim quickly towards", "is_correct": false, "why_wrong": "الكاتب كان على قمة الجبل ينظر بعيداً نحو البحر ولم يكن يسبح." },
+            { "text": "Climb down steep rocks", "is_correct": false, "why_wrong": "النزول من القمة ورد لاحقاً بعبارة I went back down، وليس هذا معنى make out." }
+          ],
+          "hints": [
+            "اربط الجملة ببند رقم 8 في تمرين WB 1.8 A.",
+            "Away in the distance تدل على رؤية الشيء البعيد بصعوبة.",
+            "الصحيح: See with difficulty."
+          ],
+          "explain": "الفعل المركب make out يعني أن ترى أو تميّز شيئاً بصعوبة من مسافة بعيدة (= see with difficulty)."
+        },
+        {
+          "id": "q-1_8-2",
+          "type": "mcq",
+          "stem": "According to PB page 6 paragraph 1, who was closer to the writer while driving along the coast road?",
+          "evidence_block_id": "u1-1_8-pb6-ref-text",
+          "options": [
+            { "text": "The farmer on a tractor", "is_correct": true, "why_wrong": null },
+            { "text": "The cows grazing in the first field", "is_correct": false, "why_wrong": "النص يصرح بعد ذكر الأبقار مباشرةً: In another field, closer to me, a farmer on a tractor was ploughing." },
+            { "text": "The sea two kilometres away", "is_correct": false, "why_wrong": "البحر كان على مسافة نحو كيلومترين وليس الأقرب." },
+            { "text": "The mountain peak", "is_correct": false, "why_wrong": "القمة الجبلية لم يصلها إلا بعد أن ترك الطريق الساحلي وصعد الوادي في الفقرتين 2 و3." }
+          ],
+          "hints": [
+            "اقرأ الجملتين الأخيرتين من الفقرة الأولى في PB ص 6.",
+            "ابحث عن الصفة closer to me.",
+            "الإجابة الصحيحة: الفلاح فوق الجرار (the farmer on a tractor)."
+          ],
+          "explain": "ذكرت الفقرة الأولى أن الفلاح فوق الجرار كان في حقل «أقرب إليّ» (closer to me) من حقل الأبقار."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_8-graze", "origin": "from_book", "page_ref": 8, "front": "graze / grazing (v)", "back": "يرعى العشب", "tag": "Unit 1 · 1.8" },
+    { "id": "fc-1_8-plough", "origin": "from_book", "page_ref": 8, "front": "plough / ploughing (n, v)", "back": "محراث / يحرث التربة", "tag": "Unit 1 · 1.8" },
+    { "id": "fc-1_8-makeout", "origin": "from_book", "page_ref": 8, "front": "make out (phr v)", "back": "يميز / يرى بصعوبة عن بُعد", "tag": "Unit 1 · 1.8" },
+    { "id": "fc-1_8-peak", "origin": "from_book", "page_ref": 8, "front": "peak (n)", "back": "قمة الجبل", "tag": "Unit 1 · 1.8" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبق النص المستشهد به من PB ص 6 (صفحة ممسوحة ضوئياً في PDF) عبر شرائح 600 DPI؛ الكلمات واضحة باستثناء موضع صغير خلف ظل ورقة شجر في الفقرة 3 (take in / look at the view) الذي سُجّل في REVIEW_NEEDED.md.",
+    "wb_ocr_vs_image": "قُورنت صفحة WB ص 8 مع tesseract.js eng: أخرجت OCR رقم 'para /' بدلاً من 'para 1' في البنود 1–5 (بسبب الخط المائل)، وصُحّحت بصرياً من شرائح 250 DPI."
+  }
+}
