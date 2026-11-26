@@ -39,7 +39,7 @@
   - [x] `1.10` Language review 2 (PB p. 7, WB pp. 10–11)
   - [x] `1.11` A view from a window (PB p. 8, WB pp. 11–12)
   - [x] `1.12` Write a description in your copybook (WB p. 12)
-- **Unit 2: Reporting events (PB pp. 9–16 / WB pp. 13–28)**
+- **Unit 2: Reporting events (PB pp. 9–16 / WB pp. 13–28)** — *(مكتمل: 12 درساً + QA + مراجعة + WebP)*
   - [x] `2.1` Newspaper headlines (PB p. 9, WB pp. 13–14)
   - [x] `2.2` Today's news (PB p. 10, WB pp. 14–15)
   - [x] `2.3` Listening to news interviews (WB pp. 15–16)
@@ -50,8 +50,8 @@
   - [x] `2.8` Listening to the radio news (WB pp. 21–22)
   - [x] `2.9` Questions, intonation and interviewing (WB pp. 22–24)
   - [x] `2.10` Language review 4 (PB p. 15, WB pp. 24–26)
-  - [ ] `2.11` Armenia - 7, December 1988 (PB p. 16, WB pp. 26–27)
-  - [ ] `2.12` Planning and writing a newspaper report (WB pp. 27–28)
+  - [x] `2.11` Armenia - 7, December 1988 (PB p. 16, WB pp. 26–27)
+  - [x] `2.12` Planning and writing a newspaper report (WB pp. 27–28)
 - **Unit 3: Looking for a job (PB pp. 17–24)**
   - [ ] `3.1` Getting work experience (PB p. 17)
   - [ ] `3.2` Thinking about the future (PB p. 18)
