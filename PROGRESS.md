@@ -110,7 +110,7 @@
   - [x] `arts-3` Telford Hall Episode 1 (PB p. 53 / WB pp. 84–85)
   - [x] `arts-4` A famous play by Shakespeare (PB p. 54 / WB pp. 85–87)
   - [x] `arts-5` Telford Hall Episode 2 (PB pp. 55–56 / WB pp. 87–89)
-  - [ ] `arts-6` Critics and criticism (p. 57)
+  - [x] `arts-6` Critics and criticism (PB p. 57 / WB pp. 89–90)
   - [ ] `arts-7` Telford Hall Episode 3 (p. 58)
   - [ ] `arts-8` Calligraphy (p. 60)
   - [ ] `arts-9` A poem (p. 61)
