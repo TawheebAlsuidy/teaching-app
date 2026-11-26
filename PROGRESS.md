@@ -99,7 +99,7 @@
   - [x] `6.5` Saving Anwar: retelling the story (PB p. 44 / WB p. 75)
   - [x] `6.6` How a hospital works (PB p. 45 / WB p. 75)
   - [x] `6.7` Working in public service (PB p. 46 / WB p. 76)
-  - [ ] `6.8` Huge changes in Libyan health care: reading (PB p. 47)
+  - [x] `6.8` Huge changes in Libyan health care: reading (PB p. 47)
   - [ ] `6.9` Huge changes in Libyan health care: comprehension & vocabulary (PB p. 47 / WB pp. 77–78)
   - [ ] `6.10` Discovering Yemen (PB p. 48 / WB p. 78)
   - [ ] `6.11` Tourism and the future: reading (PB p. 49 / WB pp. 78–79)
