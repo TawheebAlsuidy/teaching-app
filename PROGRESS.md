@@ -105,7 +105,7 @@
   - [x] `6.11` Tourism and the future: reading (PB p. 49 / WB pp. 78–79)
   - [x] `6.12` Tourism and the future: writing about your future (PB p. 49 / WB pp. 79–80)
 - **Arts Reader (PB pp. 50–62)**
-  - [ ] `arts-1` A difficult choice? (p. 51)
+  - [x] `arts-1` A difficult choice? (PB pp. 50–51 / WB pp. 81–82)
   - [ ] `arts-2` Proverbs and idioms (p. 52)
   - [ ] `arts-3` Telford Hall Episode 1 (p. 53)
   - [ ] `arts-4` A famous play by Shakespeare (p. 54)

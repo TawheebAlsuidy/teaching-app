@@ -1,0 +1,235 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "arts", "number": 7, "title": "Arts Reader (Literary Section)" },
+  "lesson": {
+    "id": "eng-arts-1",
+    "code": "AR1",
+    "title": "A difficult choice?",
+    "title_ar": "القسم الأدبي (1): اختيارٌ صعب — التبرع بالكلية وتحويل الكلام غير المباشر إلى مباشر",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 52, "book_page": 50 },
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 53, "book_page": 51 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 82, "book_page": 81 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 83, "book_page": 82 }
+    ],
+    "reference_images": {
+      "pb_50": "assets/ref/pb_p050.webp",
+      "pb_51": "assets/ref/pb_p051.webp",
+      "wb_81": "assets/ref/wb_p081.webp",
+      "wb_82": "assets/ref/wb_p082.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "arts-1-story",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 51 },
+      "dir": "ltr",
+      "recall_words": ["donor", "athletic", "kidney", "transplant", "risk", "scar", "nevertheless", "hold back", "worth the pain"],
+      "content": {
+        "lines": [
+          "ARTS 1   A difficult choice?",
+          "[Complete illustrated narrative text available offline in assets/ref/pb_p051.webp; structured paragraph anchors & exact quotes below for WB Arts 1 A–E:]",
+          "Introduction box (verbatim cue lines): Olivia Lee was travelling in a taxi when the taxi-driver told her he had 11-year-old twin daughters, one very ill with kidney disease. 'Why don't you give her one of your kidneys?' asked Olivia, 'or her sister could give her one'. 'What would you know about it? asked the taxi-driver. Olivia told him she was a kidney donor for her brother; he stopped the taxi to hear her story.",
+          "Para 1 (Meeting Michael & Two choices): After not seeing her brother Michael for a long time, athletic and lively Michael was now thin, tired and ill with a life-threatening kidney infection ('He had a two choices.': wait for a matching kidney from someone who died for a transplant, or spend the rest of his life connected to a kidney machine).",
+          "Para 2 (Olivia's decision): Olivia immediately decided to donate one kidney, knowing some people are born with one and live normal lives.",
+          "Para 3 (Doctor's warning): At hospital the doctor explained surgery always carries small risk for a healthy person, but would be more serious for Olivia: cutting deeply into her body, leaving a 30-centimetre scar, staying in hospital a week to ten days, then resting three to four weeks.",
+          "Para 4–6 (Outcome & Advice): Nevertheless, the operation succeeded; Michael leads a healthy life and Olivia feels no different despite her scar. Her advice to the taxi-driver: 'If you are close to somebody, don't hold back. It's worth the pain and the small risk.' (True story with names changed.)",
+          "Discussion: From what you now know, would you donate one of your kidney to a brother or sister?"
+        ],
+        "image": "assets/media/arts1_kidney_machine.webp",
+        "caption": "A kidney machine — dialysis alternative to a transplant (PB page 51)"
+      },
+      "edu_note_html": "<strong>ملاحظات نشر أوفلاين ونقل حرفي (<bdi dir='ltr'>RULE 2 &amp; RULE 7</bdi>):</strong><br>1) أُدرجت صورة الصفحة الرسمية كاملةً (<span dir='ltr'>assets/ref/pb_p051.webp</span>) أوفلاين، مع المرتكزات الكاملة لحل جميع تمارين <bdi dir='ltr'>WB Arts 1 A–E</bdi>.<br>2) صيغ مطبعية محفوظة حرفياً في <span dir='ltr'>PB ص 51</span>: <span dir='ltr'><code>it? asked</code></span> (سقوط علامة التنصيص)، <span dir='ltr'><code>He had a two choices.</code></span>، <span dir='ltr'><code>him-life</code></span>، و<span dir='ltr'><code>one of your kidney</code></span> (مفرد بدل جمع) في سؤال المناقشة؛ وفي <span dir='ltr'>WB ص 82</span>: <span dir='ltr'><code>in a hospital</code></span> (بند 9)، وفي قائمة المفردات <span dir='ltr'>WB ص 114</span>: <span dir='ltr'><code>along time</code></span> متصلةً بدل <span dir='ltr'><code>a long time</code></span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "قاعدة عكس الكلام غير المباشر إلى مباشر (WB Arts 1 D)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 81,
+            "html": "<ul><li><b>تحويل الأزمنة (<span dir='ltr'>Reported → Direct</span>):</b> نرجع بالماضي إلى زمن المتكلم الأصلي: <span dir='ltr'>had → have · was → is · could → can · would → will</span>.</li><li><b>تحويل الضمائر حسب المتحدث والمخاطَب:</b> عندما يتحدث الطبيب مع مايكل: <span dir='ltr'>he / his / him → you / your / you</span>. وعندما يتحدث مع أوليفيا: <span dir='ltr'>she / Olivia → you / your</span>، أمّا <span dir='ltr'><b>He</b> would have to cut</span> (= الجرّاح نفسه) فتصير <span dir='ltr'><b>I</b> will have to cut</span>!</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 82,
+            "html": "<p dir='ltr'><b>Pronoun shift alert (WB D #7):</b> Indirect: <i>He [the doctor] would have to cut deeply into Olivia's body</i> → Direct (doctor speaking to Olivia): <i>'<b>I</b> will have to cut deeply into <b>your</b> body.'</i></p>"
+          },
+          "self_check_ref": "chk-arts_1-a",
+          "page_ref": { "book": "PB", "page": 51, "pdf_page": 53, "image": "assets/ref/pb_p051.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "athletic": { "pos": "adj", "ar": "رياضي / قوي البنية", "in_book_wordlist": true, "wb_page": 114 },
+    "donor": { "pos": "n", "ar": "متبرّع (بعضو أو دم)", "in_book_wordlist": true, "wb_page": 114 },
+    "hold back": { "pos": "phr v", "ar": "يمتنع / يتردد / يحجم عن الفعل", "in_book_wordlist": true, "wb_page": 114 },
+    "kidney": { "pos": "n", "ar": "كِلية", "in_book_wordlist": true, "wb_page": 114 },
+    "nevertheless": { "pos": "adv", "ar": "مع ذلك / رغم ذلك", "in_book_wordlist": true, "wb_page": 114 },
+    "risk": { "pos": "n", "ar": "مخاطرة / خطر", "in_book_wordlist": true, "wb_page": 114 },
+    "scar": { "pos": "n", "ar": "ندبة (أثر الجرح بعد التئامه)", "in_book_wordlist": true, "wb_page": 114 },
+    "transplant": { "pos": "n", "ar": "زراعة عضو", "in_book_wordlist": true, "wb_page": 114 },
+    "worth the pain": { "pos": "phr", "ar": "يستحق تحمّل الألم", "in_book_wordlist": true, "wb_page": 114 }
+  },
+  "activities": [
+    {
+      "id": "wb-arts_1-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 81 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "ARTS 1 A Read the introduction on PB page 51. Are these statements true or false? Write T or F.",
+      "prompt_ar": "حدّد صحة (T) أو خطأ (F) العبارات الخمس عن مقدّمة القصة في PB ص 51 (WB ص 81):",
+      "word_bank": ["T", "F"],
+      "items": [
+        { "num": 1, "prompt": "1 The taxi-driver had two daughters. ______", "answers": ["T"] },
+        { "num": 2, "prompt": "2 They were both 11 years old. ______", "answers": ["T"] },
+        { "num": 3, "prompt": "3 They were very ill with a kidney disease. ______", "answers": ["F"] },
+        { "num": 4, "prompt": "4 Olivia had kidney disease too. ______", "answers": ["F"] },
+        { "num": 5, "prompt": "5 Olivia had a sister. ______", "answers": ["F"] }
+      ],
+      "hints": [
+        "1–2 صحيحان (توأم في الحادية عشرة) · 3 خطأ (إحداهما فقط مريضة) · 4–5 خطأ (أوليفيا سليمة وتبرعت لأخيها مايكل)."
+      ]
+    },
+    {
+      "id": "wb-arts_1-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 81 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Number these events from the text in the correct order.",
+      "prompt_ar": "رقّم الأحداث السبعة من 1 إلى 7 بحسب تسلسلها الزمني الواقعي في القصة (WB ص 81):",
+      "word_bank": ["1", "2", "3", "4", "5", "6", "7"],
+      "items": [
+        { "num": 1, "prompt": "______ Olivia advised the taxi-driver to give his daughter a kidney.", "answers": ["7"] },
+        { "num": 2, "prompt": "______ Olivia decided to help Michael.", "answers": ["3"] },
+        { "num": 3, "prompt": "______ Olivia had the operation.", "answers": ["5"] },
+        { "num": 4, "prompt": "______ Michael got a kidney infection.", "answers": ["1"] },
+        { "num": 5, "prompt": "______ Olivia met Michael after a long time.", "answers": ["2"] },
+        { "num": 6, "prompt": "______ The doctor explained the risks of the operation.", "answers": ["4"] },
+        { "num": 7, "prompt": "______ The operation was successful.", "answers": ["6"] }
+      ],
+      "hints": [
+        "1 أصيب مايكل بالعدوى ← 2 قابلته أوليفيا ورأت مرضه ← 3 قررت مساعدته ← 4 شرح الطبيب المخاطر ← 5 أجرت العملية ← 6 نجحت العملية ← 7 نصحت سائق التاكسي في ختام رواية قصتها."
+      ]
+    },
+    {
+      "id": "wb-arts_1-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 81 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Find words that mean the following:",
+      "prompt_ar": "استخرج من PB ص 51 الكلمات الست المطابقة للتعريفات (WB ص 81):",
+      "word_bank": ["athletic", "transplant", "risk", "scar", "nevertheless", "hold back"],
+      "items": [
+        { "num": 1, "prompt": "1 fit and good at sport ______", "answers": ["athletic"] },
+        { "num": 2, "prompt": "2 changing one organ in the body for another ______", "answers": ["transplant", "kidney transplant"] },
+        { "num": 3, "prompt": "3 danger ______", "answers": ["risk"] },
+        { "num": 4, "prompt": "4 mark on the body after a cut ______", "answers": ["scar"] },
+        { "num": 5, "prompt": "5 however, despite this ______", "answers": ["nevertheless"] },
+        { "num": 6, "prompt": "6 stop doing something, resist ______", "answers": ["hold back"] }
+      ],
+      "hints": [
+        "6 ورد في النص: don't hold back."
+      ]
+    },
+    {
+      "id": "wb-arts_1-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 81 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D What did the doctors actually say to Michael and Olivia? Turn these sentences from the text into direct speech. (Example 1: 'You have a kidney infection that could kill you'.)",
+      "prompt_ar": "حوّل الجمل المنقولة 2–10 إلى كلام مباشر على لسان الطبيب مخاطباً مايكل (2–5) ثم أوليفيا (6–10) (WB ص 81–82):",
+      "items": [
+        { "num": 2, "question": "2 He had two choices.", "model_answer": "'You have two choices.'", "explain_ar": "had → have، الضمير He → You." },
+        { "num": 3, "question": "3 He could wait for somebody with healthy kidneys to die.", "model_answer": "'You can wait for somebody with healthy kidneys to die.'", "explain_ar": "could → can." },
+        { "num": 4, "question": "4 His second choice was to spend the rest of his life connected to a machine ...", "model_answer": "'Your second choice is to spend the rest of your life connected to a machine ...'", "explain_ar": "His → Your، was → is." },
+        { "num": 5, "question": "5 ... that would do the job of his kidneys for him.", "model_answer": "'... that will do the job of your kidneys for you.'", "explain_ar": "would → will، his / him → your / you." },
+        { "num": 6, "question": "6 The operation would be more serious for Olivia than for her brother.", "model_answer": "'The operation will be more serious for you than for your brother.'", "explain_ar": "مخاطبة أوليفيا مباشرةً: Olivia / her → you / your." },
+        { "num": 7, "question": "7 He would have to cut deeply into Olivia's body.", "model_answer": "'I will have to cut deeply into your body.'", "explain_ar": "انتبه: الضمير He يعود للجرّاح المتحدث نفسه لذا يصبح I." },
+        { "num": 8, "question": "8 The scar would be 30 centimetres long.", "model_answer": "'The scar will be 30 centimetres long.'", "explain_ar": "would → will." },
+        { "num": 9, "question": "9 She would be in a hospital for a week to ten days...", "model_answer": "'You will be in hospital for a week to ten days...'", "explain_ar": "She → You، وطُبعت a قبل hospital هنا في التمارين." },
+        { "num": 10, "question": "10 ... and then have to rest for three to four weeks.", "model_answer": "'... and then you will have to rest for three to four weeks.'", "explain_ar": "تكملة التحذير الطبي لأوليفيا." }
+      ],
+      "hints": [
+        "راجع بند 7 خصوصاً: الفاعل He يشير إلى الطبيب فيرجع في كلامه المباشر إلى I."
+      ]
+    },
+    {
+      "id": "wb-arts_1-e",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 82 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "E Have you ever had to make a difficult choice? Tell your partner. (Also Discussion PB p. 51: would you donate one of your kidney to a brother or sister?)",
+      "prompt_ar": "نموذج مناقشة القرارات الصعبة والتبرع الأخوي (E ص 82 ومناقشة PB ص 51):",
+      "guidance_literal": "Context -> Options -> Final decision & reflection",
+      "steps": [
+        { "label_ar": "1) موقف تطلّب اختياراً صعباً وإجابة سؤال التبرع للأخ/الأخت", "placeholder": "Yes, choosing my scientific study path while balancing family duties was difficult, and after reading Olivia's story I would seriously consider donating a kidney to save my brother or sister because life is worth the small risk." }
+      ],
+      "hints": [
+        "وظّف مفردات النص: risk, worth the pain, don't hold back."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-arts_1-a",
+      "origin": "educational_addition",
+      "page_ref": 82,
+      "questions": [
+        {
+          "id": "q-arts_1-1",
+          "type": "mcq",
+          "stem": "In WB Arts 1 D #7, what is the correct direct-speech version of the doctor's words 'He would have to cut deeply into Olivia's body'?",
+          "evidence_block_id": "arts-1-story",
+          "options": [
+            { "text": "'I will have to cut deeply into your body.'", "is_correct": true, "why_wrong": null },
+            { "text": "'He will have to cut deeply into your body.'", "is_correct": false, "why_wrong": "الفاعل He هو الطبيب نفسه المتحدث، لذا يصبح في المباشر I." },
+            { "text": "'You will have to cut deeply into my body.'", "is_correct": false, "why_wrong": "عكست الضمائر: الجرّاح هو من يجري الشق الجراحي لا المريضة." },
+            { "text": "'I would cut deeply into Olivia's body.'", "is_correct": false, "why_wrong": "لم يُرجَع الفعل would have إلى will have ولم يتحول الاسم للمخاطَب your." }
+          ],
+          "hints": [
+            "الطبيب هو المتكلم (I) وأوليفيا هي المستمعة (your)."
+          ],
+          "explain": "في الكلام غير المباشر نُقل قول الطبيب بضمير الغائب He، فيعود في الكلام المباشر إلى I بينما يصبح جسم أوليفيا your body."
+        },
+        {
+          "id": "q-arts_1-2",
+          "type": "mcq",
+          "stem": "Which word in WB Arts 1 C means 'stop doing something, resist' (seen in Olivia's final advice)?",
+          "evidence_block_id": "arts-1-story",
+          "options": [
+            { "text": "hold back", "is_correct": true, "why_wrong": null },
+            { "text": "transplant", "is_correct": false, "why_wrong": "transplant معناها عملية زرع عضو (البند 2)." },
+            { "text": "scar", "is_correct": false, "why_wrong": "scar معناها أثر الجرح على الجلد بعد الشفاء (البند 4)." },
+            { "text": "nevertheless", "is_correct": false, "why_wrong": "nevertheless أداة استدراك تعني رغم ذلك (البند 5)." }
+          ],
+          "hints": [
+            "انظر نصيحة أوليفيا الأخيرة: If you are close to somebody, don't..."
+          ],
+          "explain": "الفعل المركب hold back يعني الإحجام أو التوقف عن الإقدام على عمل ما."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-ar1-donor", "origin": "from_book", "page_ref": 114, "front": "kidney donor / transplant", "back": "متبرّع بالكلية / عملية زراعة عضو", "tag": "Arts · AR1" },
+    { "id": "fc-ar1-holdback", "origin": "from_book", "page_ref": 114, "front": "hold back", "back": "يمتنع / يتردد عن الفعل", "tag": "Arts · AR1" },
+    { "id": "fc-ar1-scar", "origin": "from_book", "page_ref": 114, "front": "scar (n) / nevertheless", "back": "ندبة بعد الجرح / مع ذلك", "tag": "Arts · AR1" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 50–51 مع pb-52.png وpb-53.png: حُفظت الصيغ الحرفية 'it? asked' و'a two choices' و'your kidney' مع إرفاق pb_p051.webp أوفلاين.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 81–82 مع wb-082.png وwb-083.png ورُصدت صيغة 'in a hospital' في D #9 و'along time' في قائمة المفردات ص 114."
+  }
+}

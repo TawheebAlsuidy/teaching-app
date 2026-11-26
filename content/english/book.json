@@ -136,16 +136,16 @@
       "number": 7,
       "title": "Arts Reader (Literary Section)",
       "lessons": [
-        { "id": "eng-arts-1", "code": "AR1", "title": "A difficult choice?", "pb_page": 51 },
-        { "id": "eng-arts-2", "code": "AR2", "title": "Proverbs and idioms", "pb_page": 52 },
-        { "id": "eng-arts-3", "code": "AR3", "title": "Telford Hall Episode 1", "pb_page": 53 },
-        { "id": "eng-arts-4", "code": "AR4", "title": "A famous play by Shakespeare", "pb_page": 54 },
-        { "id": "eng-arts-5", "code": "AR5", "title": "Telford Hall Episode 2", "pb_page": 55 },
-        { "id": "eng-arts-6", "code": "AR6", "title": "Critics and criticism", "pb_page": 57 },
-        { "id": "eng-arts-7", "code": "AR7", "title": "Telford Hall Episode 3", "pb_page": 58 },
-        { "id": "eng-arts-8", "code": "AR8", "title": "Calligraphy", "pb_page": 60 },
-        { "id": "eng-arts-9", "code": "AR9", "title": "A poem", "pb_page": 61 },
-        { "id": "eng-arts-10", "code": "AR10", "title": "Strange happenings", "pb_page": 62 }
+        { "id": "eng-arts-1", "code": "AR1", "title": "A difficult choice?", "pb_page": 51, "wb_page": 81 },
+        { "id": "eng-arts-2", "code": "AR2", "title": "Proverbs and idioms", "pb_page": 52, "wb_page": 82 },
+        { "id": "eng-arts-3", "code": "AR3", "title": "Telford Hall Episode 1", "pb_page": 53, "wb_page": 84 },
+        { "id": "eng-arts-4", "code": "AR4", "title": "A famous play by Shakespeare", "pb_page": 54, "wb_page": 85 },
+        { "id": "eng-arts-5", "code": "AR5", "title": "Telford Hall Episode 2", "pb_page": 55, "wb_page": 87 },
+        { "id": "eng-arts-6", "code": "AR6", "title": "Critics and criticism", "pb_page": 57, "wb_page": 89 },
+        { "id": "eng-arts-7", "code": "AR7", "title": "Telford Hall Episode 3", "pb_page": 58, "wb_page": 90 },
+        { "id": "eng-arts-8", "code": "AR8", "title": "Calligraphy", "pb_page": 60, "wb_page": 92 },
+        { "id": "eng-arts-9", "code": "AR9", "title": "A poem", "pb_page": 61, "wb_page": 93 },
+        { "id": "eng-arts-10", "code": "AR10", "title": "Strange happenings", "pb_page": 62, "wb_page": 94 }
       ]
     },
     {
@@ -153,16 +153,16 @@
       "number": 8,
       "title": "Science Reader (Scientific Section)",
       "lessons": [
-        { "id": "eng-sci-1", "code": "SR1", "title": "Acids and alkalis", "pb_page": 65 },
-        { "id": "eng-sci-2", "code": "SR2", "title": "States of matter", "pb_page": 66 },
-        { "id": "eng-sci-3", "code": "SR3", "title": "Light", "pb_page": 67 },
-        { "id": "eng-sci-4", "code": "SR4", "title": "Sound", "pb_page": 68 },
-        { "id": "eng-sci-5", "code": "SR5", "title": "Arab scientists", "pb_page": 69 },
-        { "id": "eng-sci-6", "code": "SR6", "title": "Vaccinations", "pb_page": 70 },
-        { "id": "eng-sci-7", "code": "SR7", "title": "Experimental procedures", "pb_page": 71 },
-        { "id": "eng-sci-8", "code": "SR8", "title": "Internal combustion engine", "pb_page": 72 },
-        { "id": "eng-sci-9", "code": "SR9", "title": "The Moon", "pb_page": 73 },
-        { "id": "eng-sci-10", "code": "SR10", "title": "Radioactivity", "pb_page": 74 }
+        { "id": "eng-sci-1", "code": "SR1", "title": "Acids and alkalis", "pb_page": 65, "wb_page": 96 },
+        { "id": "eng-sci-2", "code": "SR2", "title": "States of matter", "pb_page": 66, "wb_page": 97 },
+        { "id": "eng-sci-3", "code": "SR3", "title": "Light", "pb_page": 67, "wb_page": 98 },
+        { "id": "eng-sci-4", "code": "SR4", "title": "Sound", "pb_page": 68, "wb_page": 100 },
+        { "id": "eng-sci-5", "code": "SR5", "title": "Arab scientists", "pb_page": 69, "wb_page": 101 },
+        { "id": "eng-sci-6", "code": "SR6", "title": "Vaccinations", "pb_page": 70, "wb_page": 102 },
+        { "id": "eng-sci-7", "code": "SR7", "title": "Experimental procedures", "pb_page": 71, "wb_page": 103 },
+        { "id": "eng-sci-8", "code": "SR8", "title": "Internal combustion engine", "pb_page": 72, "wb_page": 105 },
+        { "id": "eng-sci-9", "code": "SR9", "title": "The Moon", "pb_page": 73, "wb_page": 107 },
+        { "id": "eng-sci-10", "code": "SR10", "title": "Radioactivity", "pb_page": 74, "wb_page": 109 }
       ]
     }
   ]
