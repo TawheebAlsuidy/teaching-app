@@ -113,7 +113,7 @@
   - [x] `arts-6` Critics and criticism (PB p. 57 / WB pp. 89–90)
   - [x] `arts-7` Telford Hall Episode 3 (PB pp. 58–59 / WB pp. 90–92)
   - [x] `arts-8` Calligraphy (PB p. 60 / WB pp. 92–93)
-  - [ ] `arts-9` A poem (p. 61)
+  - [x] `arts-9` A poem (PB p. 61 / WB pp. 93–94)
   - [ ] `arts-10` Strange happenings (p. 62)
 - **Science Reader (PB pp. 64–74)**
   - [ ] `sci-1` Acids and alkalis (p. 65)
