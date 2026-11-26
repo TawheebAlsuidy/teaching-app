@@ -1,0 +1,170 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_2",
+    "code": "1.2",
+    "title": "Listening and describing",
+    "title_ar": "الاستماع ووصف الأشخاص والأشياء",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 3, "book_page": 2 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 4, "book_page": 3 }
+    ],
+    "reference_images": {
+      "wb_2": "assets/ref/wb_p002.webp",
+      "wb_3": "assets/ref/wb_p003.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_2-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "WB", "page": 2 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.2 Listening and describing (Workbook)",
+          "A Listen to descriptions of two men. Choose the picture that best matches each description."
+        ],
+        "image": "assets/media/wb2_men_af.webp",
+        "caption": "Pictures A–F from Workbook 1.2 A (page 2)"
+      },
+      "edu_note_html": "<strong>ملاحظة المنهج (مادة الاستماع):</strong> هذا الدرس وارد في كتاب التمارين فقط (<bdi dir='ltr'>WB p. 2–3</bdi>) دون نص استماع مطبوع في كتاب الطالب، لأن نصوص الأشرطة تكون في دليل المعلّم فقط؛ وقد سُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> ووُفّر تدريب تفاعلي يمرّن الطالب على مهارات الوصف نفسه.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "مفردات وصف الأشخاص في الصور A–F",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "html": "<p>لوصف شخص من الصور <span dir='ltr'>A–F</span> ركّز على العناصر الخمسة التي حددها التمرين <span dir='ltr'>B</span> في نفس الصفحة:</p><ul><li>الشعر والعمر (<span dir='ltr'>He had short/long/grey hair</span>)</li><li>العيون أو النظارة (<span dir='ltr'>glasses / dark eyes</span>)</li><li>السترة وربطة العنق (<span dir='ltr'>dark/light jacket, striped tie</span>)</li><li>البنطال (<span dir='ltr'>loose/smart trousers</span>)</li><li>الحذاء (<span dir='ltr'>dark/light shoes</span>)</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "caption": "الترتيب الخماسي لوصف الأشخاص من كتاب التمارين ص 2",
+            "svg": "<svg viewBox='0 0 580 120' xmlns='http://www.w3.org/2000/svg'><rect width='580' height='120' rx='10' fill='#ECFDF5'/><rect x='15' y='24' width='100' height='70' rx='8' fill='#fff' stroke='#059669'/><text x='65' y='62' text-anchor='middle' font-size='12' font-weight='700'>1. He had...</text><rect x='128' y='24' width='100' height='70' rx='8' fill='#fff' stroke='#059669'/><text x='178' y='62' text-anchor='middle' font-size='12' font-weight='700'>2. His eyes...</text><rect x='241' y='24' width='100' height='70' rx='8' fill='#fff' stroke='#059669'/><text x='291' y='62' text-anchor='middle' font-size='12' font-weight='700'>3. He wore...</text><rect x='354' y='24' width='100' height='70' rx='8' fill='#fff' stroke='#059669'/><text x='404' y='62' text-anchor='middle' font-size='12' font-weight='700'>4. His trousers</text><rect x='467' y='24' width='100' height='70' rx='8' fill='#fff' stroke='#059669'/><text x='517' y='62' text-anchor='middle' font-size='12' font-weight='700'>5. On his feet</text></svg>"
+          },
+          "simulation": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "type": "describing_builder"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "html": "<p dir='ltr'><b>Picture F:</b> He has shoulder-length dark hair and glasses. He wore a dark jacket, a patterned tie, light trousers and dark shoes.</p>"
+          },
+          "self_check_ref": "chk-1_2-a",
+          "page_ref": { "book": "WB", "page": 2, "pdf_page": 3, "image": "assets/ref/wb_p002.webp" }
+        }
+      }
+    },
+    {
+      "id": "u1-1_2-wb-bcd",
+      "origin": "from_book",
+      "type": "paragraph",
+      "source": { "book": "WB", "page": 2 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "B Complete the description of the first man as you remember it. You do not have to use the exact words.",
+          "He had ______. His eyes ______. He wore ______. His trousers ______. On his feet ______.",
+          "C Work with your partner. Discuss how you could make your descriptions more like the one you heard. Re-write the description in your copybook.",
+          "D Listen to these descriptions. Tick the correct answer.",
+          "1 a) motor bike  b) car  c) bicycle  d) horse",
+          "2 a) bird  b) plane  c) car  d) kite",
+          "3 a) tomato  b)orange  c) banana  d) potato",
+          "4 a) fish  b) zebra  c) tiger  d) cat",
+          "5 a) table  b) book  c) newspaper  d) pen"
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي:</strong> وردت <span dir='ltr'><code>b)orange</code></span> دون مسافة بعد القوس في الفقرة 3 من كتاب التمارين المطبوع ص 2، وأُبقيت كما هي التزاماً بالأمانة."
+    },
+    {
+      "id": "u1-1_2-wb-e",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 3 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "E Think of two objects. In your copybooks, write descriptions similar to those you heard on the cassette."
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "descriptions": { "pos": "n pl", "ar": "أوصاف", "in_book_wordlist": false, "wb_page": 2 },
+    "trousers": { "pos": "n pl", "ar": "بنطال / سروال", "in_book_wordlist": false, "wb_page": 2 },
+    "motor bike": { "pos": "n", "ar": "دراجة نارية", "in_book_wordlist": false, "wb_page": 2 },
+    "bicycle": { "pos": "n", "ar": "دراجة هوائية", "in_book_wordlist": false, "wb_page": 2 },
+    "zebra": { "pos": "n", "ar": "حمار وحشي", "in_book_wordlist": false, "wb_page": 2 },
+    "newspaper": { "pos": "n", "ar": "صحيفة / جريدة", "in_book_wordlist": false, "wb_page": 2 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_2-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 2 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Complete the description of the first man as you remember it. You do not have to use the exact words.",
+      "prompt_ar": "كوّن وصفاً للرجل الظاهر في إحدى الصور (مثلاً الرجل F أو A) مستعيناً ببداية كل جملة من الكتاب:",
+      "guidance_literal": "He had ... His eyes ... He wore ... His trousers ... On his feet ...",
+      "steps": [
+        { "label_ar": "1) الشعر/الرأس (He had ...)", "placeholder": "He had dark hair and wore glasses." },
+        { "label_ar": "2) العيون والملامح (His eyes ...)", "placeholder": "His eyes were dark and serious." },
+        { "label_ar": "3) الملابس العلوية (He wore ...)", "placeholder": "He wore a dark jacket, a light shirt and a tie." },
+        { "label_ar": "4) البنطال (His trousers ...)", "placeholder": "His trousers were light-coloured and straight." },
+        { "label_ar": "5) الحذاء (On his feet ...)", "placeholder": "On his feet he wore dark shoes." }
+      ],
+      "hints": [
+        "ابدأ من أعلى إلى أسفل: الرأس والشعر ثم العيون ثم السترة والبنطال ثم الحذاء.",
+        "اختر إحدى الصور A–F في ص 2 وصف تفاصيل ملابسها الظاهرة.",
+        "استمع لوصفك المجمّع وتدرّب على إعادته في دفترك حسب نشاط C."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_2-a",
+      "origin": "educational_addition",
+      "page_ref": 2,
+      "questions": [
+        {
+          "id": "q-1_2-1",
+          "type": "mcq",
+          "stem": "In WB p. 2 pictures (A–F), which visible feature distinguishes man F from men D and E?",
+          "evidence_block_id": "u1-1_2-head",
+          "options": [
+            { "text": "He wears glasses and has longer hair and a dark jacket.", "is_correct": true, "why_wrong": null },
+            { "text": "He has no jacket at all.", "is_correct": false, "why_wrong": "الرجل F يرتدي سترة داكنة اللون بوضوح في الصورة." },
+            { "text": "He is completely bald.", "is_correct": false, "why_wrong": "شعر الرجل F هو الأطول بين الرجال الستة." },
+            { "text": "He is wearing shorts instead of trousers.", "is_correct": false, "why_wrong": "جميع الرجال A–F يرتدون بناطيل طويلة." }
+          ],
+          "hints": [
+            "قارن شكل الوجه والشعر والملابس بين D وE وF في الصورة أعلاه.",
+            "لاحظ السترة السوداء والنظارة وطول الشعر عند F.",
+            "الإجابة الصحيحة: يرتدي نظارة ولديه شعر أطول وسترة داكنة."
+          ],
+          "explain": "في صورة التمرين A، يتميز الرجل F بسترة داكنة وشعر أطول ونظارة على عينيه."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_2-trousers", "origin": "from_book", "page_ref": 2, "front": "trousers (n pl)", "back": "بنطال", "tag": "Unit 1 · 1.2" },
+    { "id": "fc-1_2-wore", "origin": "from_book", "page_ref": 2, "front": "wore (past of wear)", "back": "ارتدى / لبس", "tag": "Unit 1 · 1.2" },
+    { "id": "fc-1_2-newspaper", "origin": "from_book", "page_ref": 2, "front": "newspaper (n)", "back": "جريدة", "tag": "Unit 1 · 1.2" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "طُوبق النص مع tesseract.js eng و3 شرائح أفقية لصفحة WB PDF ص 3–4 (كتاب ص 2–3). سُجّل غياب نص الشريط السماعي في REVIEW_NEEDED.md، كما حُفظت الصيغة الحرفية b)orange."
+  }
+}
