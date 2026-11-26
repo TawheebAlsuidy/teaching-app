@@ -1,0 +1,257 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_5",
+    "code": "1.5",
+    "title": "Language review 1",
+    "title_ar": "مراجعة القواعد 1: المقارنة والتبايُن (Comparison & Contrast)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 6, "book_page": 4 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 6, "book_page": 5 }
+    ],
+    "reference_images": {
+      "pb_4": "assets/ref/pb_p004.webp",
+      "wb_5": "assets/ref/wb_p005.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_5-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 4 },
+      "dir": "ltr",
+      "content": { "text": "1.5 Language review 1" }
+    },
+    {
+      "id": "u1-1_5-comparison",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 4 },
+      "dir": "ltr",
+      "recall_words": ["older", "oldest", "as", "same", "like", "unlike"],
+      "content": {
+        "lines": [
+          "1 Comparison",
+          "• Comparative and superlative forms of adjectives",
+          "The most common way to compare things is to use these forms of the adjective.",
+          "Examples: Hassan is older than me. | Yousif is the oldest boy in the class.",
+          "• as",
+          "We use a positive statement with as to say that things are equal. We use a negative statement (as + not) to show that things are not equal.",
+          "Examples: My sister is as tall as me. | My friends are as interested in football as I am. | My car is not as fast as yours.",
+          "Note: This is the same as saying: My car is slower than yours.",
+          "• same",
+          "This word shows that things are equal. It can also be used in a negative statement.",
+          "Examples: My sister is the same height as me. | My cousin is not the same age as me.",
+          "Note: The word same is followed by a noun, not an adjective. The word can also be used at the end of a sentence.",
+          "Examples: These two colours are/aren't the same.",
+          "• like/unlike",
+          "The two words are not adjectives but they are used to make comparisons.",
+          "Examples: Like my father, I am interested in sports. Unlike my father, I am not interested in football.",
+          "Note: The underlined phrases can be used at the end of a sentence or at the beginning. In both cases, a comma separates them from the rest of the sentence."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "جدول قواعد المقارنة والتساوي",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 4,
+            "html": "<p>الفارق الجوهري في اختيارات الامتحان الوزاري:</p><ul><li><span dir='ltr'><b>as + adjective + as</b></span>: يأتي بينها <b>صفة مجرّدة</b> (<span dir='ltr'>as tall as</span>).</li><li><span dir='ltr'><b>the same + noun + as</b></span>: يتبع <span dir='ltr'>same</span> <b>اسم</b> وليس صفة (<span dir='ltr'>the same height / age as</span>)، وقد تأتي <span dir='ltr'>the same</span> في آخر الجملة (<span dir='ltr'>are the same</span>).</li><li><span dir='ltr'><b>Like / Unlike + noun phrase, ...</b></span>: مفصولة بفاصلة، وتُستخدم للشبه أو الاختلاف.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 4,
+            "caption": "التمييز النحوي السريع بين as وsame",
+            "svg": "<svg viewBox='0 0 580 120' xmlns='http://www.w3.org/2000/svg'><rect width='580' height='120' rx='10' fill='#ECFDF5'/><rect x='20' y='20' width='255' height='80' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='147' y='50' text-anchor='middle' font-size='14' font-weight='700'>as + ADJECTIVE + as</text><text x='147' y='76' text-anchor='middle' font-size='12'>as tall as / not as fast as</text><rect x='305' y='20' width='255' height='80' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='432' y='50' text-anchor='middle' font-size='14' font-weight='700'>the same + NOUN + as</text><text x='432' y='76' text-anchor='middle' font-size='12'>the same height/age as</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 4,
+            "html": "<p dir='ltr'>Salim is <b>as tall as</b> Tariq. = Salim is <b>the same height as</b> Tariq.<br>My pen is <b>not as expensive as</b> yours.</p>"
+          },
+          "self_check_ref": "chk-1_5-a",
+          "page_ref": { "book": "PB", "page": 4, "pdf_page": 6, "image": "assets/ref/pb_p004.webp" }
+        }
+      }
+    },
+    {
+      "id": "u1-1_5-contrast",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 4 },
+      "dir": "ltr",
+      "recall_words": ["however", "although", "whereas"],
+      "content": {
+        "lines": [
+          "2 Contrast",
+          "• however/although",
+          "These two words can be used to give the same meaning as but.",
+          "Examples: Although he worked hard, he didn’t pass his exam. | He worked hard. However, he didn't pass his exam.",
+          "Note: They contrast unexpected relationships between two actions or events.",
+          "• whereas",
+          "This word can be used to give the same meaning as but.",
+          "Examples: Whereas Ahmed worked hard, his brother didn't.",
+          "Note: It can only be used to describe opposites.",
+          "Find examples of comparison and contrast in the texts.",
+          "Now do activities A, B and C in the Workbook."
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "الفرق بين however / although وwhereas",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 4,
+            "html": "<p>أدوات التناقض والتبايُن في الدرس:</p><ul><li><span dir='ltr'><b>Although</b></span>: تربط جملتين متناقضتين غير متوقعتين (رغم أنّه اجتهد، لم ينجح) وتبدأ إحدى الجملتين دون الحاجة لنقطة قبلها إذا جاءت في الوسط.</li><li><span dir='ltr'><b>However</b></span>: تفيد المعنى نفسه لكنها تأتي عادة في بداية الجملة الثانية متبوعة بفاصلة (<span dir='ltr'>. However, ...</span>) أو في آخر الجملة مسبوقة بفاصلة.</li><li><span dir='ltr'><b>Whereas</b></span>: تُستخدم حصراً للمقابلة المباشرة بين طرفين متعاكسين في الصفة أو الفعل (<span dir='ltr'>Ahmed worked hard, whereas his brother didn't</span>).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 4,
+            "html": "<p dir='ltr'><b>Although</b> it was raining, we went out.<br>It was raining. <b>However</b>, we went out.<br><b>Whereas</b> Arabia is hot, mountain peaks in South America are cold.</p>"
+          },
+          "self_check_ref": "chk-1_5-a",
+          "page_ref": { "book": "PB", "page": 4, "pdf_page": 6, "image": "assets/ref/pb_p004.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "adjective": { "pos": "n", "ar": "صفة", "in_book_wordlist": true, "wb_page": 112 },
+    "positive": { "pos": "adj", "ar": "مثبت / إيجابي", "in_book_wordlist": true, "wb_page": 112 },
+    "equal": { "pos": "adj", "ar": "متساوٍ", "in_book_wordlist": true, "wb_page": 112 },
+    "noun": { "pos": "n", "ar": "اسم", "in_book_wordlist": true, "wb_page": 112 },
+    "phrase": { "pos": "n", "ar": "عبارة", "in_book_wordlist": true, "wb_page": 112 },
+    "underlined": { "pos": "adj", "ar": "تحته خط", "in_book_wordlist": true, "wb_page": 112 },
+    "comma": { "pos": "n", "ar": "فاصلة", "in_book_wordlist": true, "wb_page": 112 },
+    "contrast": { "pos": "n", "ar": "تبايُن / تناقض", "in_book_wordlist": true, "wb_page": 112 },
+    "unlike": { "pos": "prep", "ar": "على عكس / بخلاف", "in_book_wordlist": true, "wb_page": 112 },
+    "whereas": { "pos": "conj", "ar": "بينما (للمقابلة والتضاد)", "in_book_wordlist": true, "wb_page": 112 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_5-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 5 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.5 A Read this paragraph about three sisters. Then complete the sentences.",
+      "prompt_ar": "اقرأ الفقرة التالية (ملاحظة: كُتب الاسم «Noura» ثم «Nura» في السطر التالي بالطبعة الرسمية) ثم أكمل الفراغات:",
+      "word_bank": ["oldest", "younger", "tall as", "youngest"],
+      "items": [
+        {
+          "num": 1,
+          "prompt": "Aisha is 16 years old. She has two sisters, Noura and Huda. Noura is 17 and Huda is 11. Nura is 1.78 metres and so is Aisha. Noura is the ______ of the three. Although Aisha is ______ than Noura, she is as ______ her sister. Since she is only 11, Huda is the ______ of the three.",
+          "answers": ["oldest", "younger", "tall as", "youngest"]
+        }
+      ],
+      "hints": [
+        "الأعمار: Noura 17 (الأكبر)، Aisha 16 (أصغر من نورة)، Huda 11 (الأصغر بين الثلاث).",
+        "لاحظ وجود as قبل الفراغ الثالث، لذا يلزم كتابة «tall as» أو تحديدها في الخيارات.",
+        "الحل: oldest ، younger ، tall as ، youngest."
+      ]
+    },
+    {
+      "id": "wb-1_5-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 5 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Write these sentences another way. Use words from the box: most · like · same · not · as",
+      "prompt_ar": "أعد صياغة الجمل الأربع مستعملاً الكلمات من الصندوق (most, like, same, not, as):",
+      "items": [
+        { "num": 1, "question": "Bill's car is white and Richard's is blue. → Richard's car is ______ colour ______.", "model_answer": "Richard's car is not the same colour as Bill's.", "explain_ar": "نفي التساوي باستعمال not the same + noun (colour) + as." },
+        { "num": 2, "question": "Two brothers, Ahmed and Hassan, got 90% in their English exam. → ______, Ahmed got 90% in the examination.", "model_answer": "Like Hassan, Ahmed got 90% in the examination.", "explain_ar": "استعمال Like + اسم + فاصلة للتشابه." },
+        { "num": 3, "question": "My pen was not expensive, but my friend has a very expensive one. → My pen was ______.", "model_answer": "My pen was not as expensive as my friend's.", "explain_ar": "نفي المساواة بـ not as + صفة + as." },
+        { "num": 4, "question": "There are three classes in year 1. Class A has 30 pupils, class B has 35 pupils and class C has 33 pupils. → Class B has ______.", "model_answer": "Class B has the most pupils.", "explain_ar": "صيغة التفضيل للعدد الأكبر: the most pupils." }
+      ],
+      "hints": [
+        "1) not + the same + colour + as، 2) Like ...، 3) not as ... as، 4) the most pupils.",
+        "انتبه لوضع الفاصلة بعد Like Hassan في الجملة 2."
+      ]
+    },
+    {
+      "id": "wb-1_5-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 5 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Complete the sentences using however or although.",
+      "prompt_ar": "أكمل الجمل الآتية باستخدام however أو although مع مراعاة موضع الفاصلة والنقطة:",
+      "word_bank": ["although", "Although", "However", "however"],
+      "items": [
+        { "num": 1, "prompt": "Football is a very popular game, ______ not everybody enjoys it.", "answers": ["although"] },
+        { "num": 2, "prompt": "______ I like fishing, I don't catch a lot of fish.", "answers": ["Although"] },
+        { "num": 3, "prompt": "The factory manager gets very angry sometimes. ______, he is very good at his job.", "answers": ["However"] },
+        { "num": 4, "prompt": "The book wasn't very interesting. I read it from start to finish, ______.", "answers": ["however"] }
+      ],
+      "hints": [
+        "تأتي Although في بداية جملة متبوعة بجملتها، وتأتي However بعد نقطة ومتبوعة بفاصلة أو في نهاية الجملة.",
+        "1: although (في وسط جملة)، 2: Although (في أول الجملة)، 3: However (بعد نقطة وقبل فاصلة)، 4: however (في ختام الجملة)."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_5-a",
+      "origin": "educational_addition",
+      "page_ref": 4,
+      "questions": [
+        {
+          "id": "q-1_5-1",
+          "type": "mcq",
+          "stem": "Which sentence correctly uses 'same' according to PB page 4?",
+          "evidence_block_id": "u1-1_5-comparison",
+          "options": [
+            { "text": "My sister is the same height as me.", "is_correct": true, "why_wrong": null },
+            { "text": "My sister is the same tall as me.", "is_correct": false, "why_wrong": "قاعدة الكتاب تنص: The word same is followed by a noun (height), not an adjective (tall)." },
+            { "text": "My sister is same height than me.", "is_correct": false, "why_wrong": "تُسبق same بأداة التعريف the وتتبعها as وليس than." },
+            { "text": "These two colours are same as.", "is_correct": false, "why_wrong": "في نهاية الجملة يُقال: are/aren't the same بدون as." }
+          ],
+          "hints": [
+            "اقرأ الملاحظة تحت بند same في PB ص 4.",
+            "قارن height (اسم) مع tall (صفة).",
+            "الصحيح: the same height as me."
+          ],
+          "explain": "كلمة same يتلوها اسم (مثل height أو age) مع the ... as، ولا يتلوها صفة."
+        },
+        {
+          "id": "q-1_5-2",
+          "type": "mcq",
+          "stem": "According to PB p. 4, what is 'whereas' strictly used to describe?",
+          "evidence_block_id": "u1-1_5-contrast",
+          "options": [
+            { "text": "Opposites (direct contrast between two subjects or things).", "is_correct": true, "why_wrong": null },
+            { "text": "Equal measurements in height and age.", "is_correct": false, "why_wrong": "التساوي يُعبَّر عنه بـ as...as أو same وليس whereas." },
+            { "text": "Causes and results of past actions.", "is_correct": false, "why_wrong": "الأسباب تستخدم because / because of، أما whereas فهي للتضاد." },
+            { "text": "Questions about animal coverings.", "is_correct": false, "why_wrong": "whereas أداة ربط للتناقض (contrast) وليست أداة استفهام." }
+          ],
+          "hints": [
+            "انظر آخر سطرين في قسم Contrast من PB ص 4.",
+            "ابحث عن جملة: Note: It can only be used to describe...",
+            "الإجابة: opposites."
+          ],
+          "explain": "تنص قاعدة الكتاب ص 4 صراحةً على أن whereas تُستعمل لوصف الأضداد والمقابلة المباشرة (opposites)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_5-equal", "origin": "from_book", "page_ref": 4, "front": "equal (adj)", "back": "متساوٍ", "tag": "Unit 1 · 1.5" },
+    { "id": "fc-1_5-contrast", "origin": "from_book", "page_ref": 4, "front": "contrast (n)", "back": "تبايُن / تناقض", "tag": "Unit 1 · 1.5" },
+    { "id": "fc-1_5-whereas", "origin": "from_book", "page_ref": 4, "front": "whereas (conj)", "back": "بينما (للمقابلة بين الأضداد)", "tag": "Unit 1 · 1.5" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبق النص المستخرج لصفحة PB ص 4 مع الصورة عالية الدقة: جميع الأمثلة والتنبيهات والملاحظات الخطية مطابقة 100%.",
+    "wb_ocr_vs_image": "قُورن نص WB ص 5 مع tesseract.js eng (الذي أخرج fowever بدل however في عنوان C، وصُحّحت بصرياً؛ وحُفظ التباين النادر Noura/Nura في نص الكتاب)."
+  }
+}

@@ -27,10 +27,13 @@
         { "id": "eng-u1-1_3", "code": "1.3", "title": "Lost", "pb_page": 2, "wb_page": 3 },
         { "id": "eng-u1-1_4", "code": "1.4", "title": "An unusual animal", "pb_page": 3, "wb_page": 4 },
         { "id": "eng-u1-1_5", "code": "1.5", "title": "Language review 1", "pb_page": 4, "wb_page": 5 },
-        { "id": "eng-u1-1_6", "code": "1.6", "title": "The countryside", "pb_page": 5, "wb_page": 7 },
-        { "id": "eng-u1-1_7", "code": "1.7", "title": "A drive in the countryside", "pb_page": 6, "wb_page": 8 },
-        { "id": "eng-u1-1_8", "code": "1.8", "title": "Language review 2", "pb_page": 7, "wb_page": 10 },
-        { "id": "eng-u1-1_9", "code": "1.9", "title": "A view from a window", "pb_page": 8, "wb_page": 11 }
+        { "id": "eng-u1-1_6", "code": "1.6", "title": "The countryside", "pb_page": 5, "wb_page": 5 },
+        { "id": "eng-u1-1_7", "code": "1.7", "title": "Listening and map directions", "pb_page": null, "wb_page": 6 },
+        { "id": "eng-u1-1_8", "code": "1.8", "title": "Vocabulary and comprehension (PB p. 6)", "pb_page": 6, "wb_page": 8 },
+        { "id": "eng-u1-1_9", "code": "1.9", "title": "A drive in the countryside", "pb_page": 6, "wb_page": 9 },
+        { "id": "eng-u1-1_10", "code": "1.10", "title": "Language review 2", "pb_page": 7, "wb_page": 10 },
+        { "id": "eng-u1-1_11", "code": "1.11", "title": "A view from a window", "pb_page": 8, "wb_page": 11 },
+        { "id": "eng-u1-1_12", "code": "1.12", "title": "Write a description in your copybook", "pb_page": null, "wb_page": 12 }
       ]
     },
     {
