@@ -1,0 +1,213 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "science", "number": 8, "title": "Science Reader (Scientific Section)" },
+  "lesson": {
+    "id": "eng-sci-2",
+    "code": "SR2",
+    "title": "States of matter",
+    "title_ar": "القسم العلمي (2): حالات المادة الثلاث والنظرية الحركية للجسيمات ودورة الماء",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 68, "book_page": 66 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 98, "book_page": 97 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 99, "book_page": 98 }
+    ],
+    "reference_images": {
+      "pb_66": "assets/ref/pb_p066.webp",
+      "wb_97": "assets/ref/wb_p097.webp",
+      "wb_98": "assets/ref/wb_p098.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "sci-2-states-kinetic",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 66 },
+      "dir": "ltr",
+      "recall_words": ["matter", "solid", "liquid", "fixed", "container", "leak", "kinetic theory", "particle", "motion", "melt", "evaporate", "vapour"],
+      "content": {
+        "lines": [
+          "SCIENCE 2   States of matter",
+          "In science, the word 'matter' is used to describe what things are made of. Matter comes in three different forms, called states: solid, liquid and gas.",
+          "Solids have a fixed shape that cannot easily be changed. Liquids have no fixed shape and can only be picked up in a container. Gases are even less easy to hold. They have to be kept in closed containers or they will escape into the air and spread very quickly. For example, you will soon be able to smell gas all over your house even if there is just a small leak in the gas container in your kitchen.",
+          "The kinetic theorystates that matter is made up of particles that are always in motion - always moving. This theory helps us understand the different properties that matter has in its three states. In a solid, particles are packed together like balls in a box and can hardly move. heating the solid gives the particles more energy. They move more quickly, and are pushed apart. If there is enough heat, the particles have enough room to change places. This is when the solid becomes a liquid.",
+          "More heat makes the particles move even faster and travel further apart. They can then move freely to fill any space they are in. This third state of matter is called gas.",
+          "Diagram captions: Solid | Liquid | Gas (particle spacing comparison)",
+          "The three states of water (& The Water Cycle): Water is the only substance that is easy to find in the three states of solid, liquid and gas - as ice, water and water vapour or steam. The properties of water are very important for life on Earth.",
+          "• SOLID: Water is stored as snow or ice, which melts in warm weather.",
+          "• GAS: Water evaporates and forms clouds.",
+          "• LIQUID: Water vapour in clouds becomes rain and falls to the earth.",
+          "Discussion: Think of a substance. What state of matter is it in? When can it be found in a different state of matter?"
+        ],
+        "image": "assets/media/sci2_states_water.webp",
+        "caption": "Particles in solids/liquids/gases and The Water Cycle (PB page 66)"
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي واستخراج من الصور (<bdi dir='ltr'>PB p. 66</bdi>):</strong><br>1) قسم <span dir='ltr'>The three states of water</span> ودورة الماء وردت مدمجةً كصورة في <span dir='ltr'>PB ص 66</span> ولم يستخرجها <span dir='ltr'>pdftotext</span>؛ وقُرئت حروفها عبر تكبير <span dir='ltr'>600 DPI</span> وتطابقت مع <span dir='ltr'>WB 2 D</span>.<br>2) طُبعت في <span dir='ltr'>PB ص 66</span> عبارة <span dir='ltr'><code>kinetic theorystates</code></span> دون مسافة فاصلة، وحرف <span dir='ltr'><code>heating</code></span> صغيراً بعد نقطة، وقد حُفظت الصيغ المطبوعة حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "ملخص النظرية الحركية ومعاني الألفاظ المزدوجة (WB 2 A)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 97,
+            "html": "<ul><li><b>الكلمات متعددة المعاني (WB 2 A):</b><br>• <span dir='ltr'><b>state</b></span>: دولة / يقول أو يصرّح (= <span dir='ltr'>say</span>) / <b>حالة المادة</b> (<span dir='ltr'>condition: solid, liquid, gas</span>).<br>• <span dir='ltr'><b>room</b></span>: غرفة / <b>حيّز ومجال متاح</b> (<span dir='ltr'>room to change places</span>).<br>• <span dir='ltr'><b>property</b></span>: مُلك عقاري / <b>خاصية فيزيائية</b>.<br>• <span dir='ltr'><b>matter</b></span>: شأن أو مشكلة / <b>مادة</b>.</li><li><b>أثر التسخين والتبريد:</b> التسخين يزيد طاقة وحركة الجسيمات وتباعدها (انصهار ثم تبخر)، والتبريد يبطئها ويقرّبها (تكثف ثم تجمد).</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 66,
+            "caption": "التحولات الحرارية بين حالات المادة الثلاث",
+            "svg": "<svg viewBox='0 0 600 115' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='115' rx='10' fill='#F8FAFC'/><rect x='14' y='20' width='155' height='74' rx='8' fill='#E2E8F0' stroke='#475569'/><text x='91' y='44' text-anchor='middle' font-size='11' font-weight='700'>SOLID (ice)</text><text x='91' y='66' text-anchor='middle' font-size='9.5'>Packed tight · fixed shape</text><text x='194' y='52' text-anchor='middle' font-size='9.5' font-weight='700' fill='#DC2626'>melts →</text><rect x='220' y='20' width='160' height='74' rx='8' fill='#DBEAFE' stroke='#2563EB'/><text x='300' y='44' text-anchor='middle' font-size='11' font-weight='700'>LIQUID (water)</text><text x='300' y='66' text-anchor='middle' font-size='9.5'>Room to change places</text><text x='406' y='52' text-anchor='middle' font-size='9.5' font-weight='700' fill='#DC2626'>evaporates →</text><rect x='432' y='20' width='154' height='74' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='509' y='44' text-anchor='middle' font-size='11' font-weight='700'>GAS (vapour)</text><text x='509' y='66' text-anchor='middle' font-size='9.5'>Fast &amp; fills any space</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 98,
+            "html": "<p dir='ltr'><b>Kinetic explanation model (WB 2 E):</b> When a kettle boils, heat gives the water particles much more energy; they move faster, travel further apart, and escape freely into the air as steam (gas).</p>"
+          },
+          "self_check_ref": "chk-sci_2-a",
+          "page_ref": { "book": "PB", "page": 66, "pdf_page": 68, "image": "assets/ref/pb_p066.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "matter": { "pos": "n", "ar": "المادة", "in_book_wordlist": true, "wb_page": 115 },
+    "kinetic theory": { "pos": "n", "ar": "النظرية الحركية (حركة الجسيمات)", "in_book_wordlist": true, "wb_page": 115 },
+    "particle": { "pos": "n", "ar": "جُسَيم", "in_book_wordlist": true, "wb_page": 115 },
+    "property": { "pos": "n", "ar": "خاصية / صفة مميزة للمادة", "in_book_wordlist": true, "wb_page": 115 },
+    "fixed": { "pos": "adj", "ar": "ثابت (الشكل)", "in_book_wordlist": true, "wb_page": 115 },
+    "hardly": { "pos": "adv", "ar": "بالكاد (تتحرك بصعوبة بالغة)", "in_book_wordlist": true, "wb_page": 115 },
+    "melt": { "pos": "v", "ar": "ينصهر / يذوب بالحرارة", "in_book_wordlist": true, "wb_page": 115 },
+    "evaporate": { "pos": "v", "ar": "يتبخر", "in_book_wordlist": true, "wb_page": 115 },
+    "vapour": { "pos": "n", "ar": "بخار", "in_book_wordlist": true, "wb_page": 115 },
+    "leak": { "pos": "v/n", "ar": "يتسرّب / تسرّب غاز", "in_book_wordlist": true, "wb_page": 115 }
+  },
+  "activities": [
+    {
+      "id": "wb-sci_2-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 97 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "SCIENCE 2 B Read the introduction. Answer the questions. (1–3)",
+      "prompt_ar": "أجب عن الأسئلة الثلاثة من مقدّمة درس حالات المادة (WB ص 97):",
+      "items": [
+        { "num": 1, "question": "1 Why can't the shape of a solid be changed easily?", "model_answer": "Because solids have a fixed shape (as particles in a solid are packed closely together and can hardly move).", "explain_ar": "لها شكل ثابت وجسيماتها متراصة." },
+        { "num": 2, "question": "2 Why can't you pick up a liquid without a container?", "model_answer": "Because liquids have no fixed shape and can only be held in a container.", "explain_ar": "السائل يأخذ شكل الوعاء ولا يتماسك من تلقاء نفسه." },
+        { "num": 3, "question": "3 Why can you smell gas all over the house from even a small leak?", "model_answer": "Because gases escape into the air and spread very quickly to fill any space they are in unless kept in closed containers.", "explain_ar": "جسيمات الغاز تنتشر بسرعة وحرية لتملأ المكان كله." }
+      ],
+      "hints": [
+        "ابدأ كل جواب من جمل المقدمة الثلاث في PB ص 66."
+      ]
+    },
+    {
+      "id": "wb-sci_2-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 98 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Read the information in the box. Name each state of matter from the definition. (1–5)",
+      "prompt_ar": "اكتب اسم حالة المادة (solid / liquid / gas) لكل تعريف من الخمسة (WB ص 98):",
+      "word_bank": ["solid", "liquid", "gas"],
+      "items": [
+        { "num": 1, "prompt": "1 The particles are moving about quickly. ______", "answers": ["gas", "liquid"] },
+        { "num": 2, "prompt": "2 The particles are hardly moving. ______", "answers": ["solid"] },
+        { "num": 3, "prompt": "3 The particles have room to change places. ______", "answers": ["liquid"] },
+        { "num": 4, "prompt": "4 The particles are close together. ______", "answers": ["solid"] },
+        { "num": 5, "prompt": "5 The particles can fill any space. ______", "answers": ["gas"] }
+      ],
+      "hints": [
+        "hardly moving وclose together ← صلب (solid)؛ room to change places ← سائل (liquid)؛ fill any space وmoving fast/quickly ← غاز (gas)؛ علماً أن التسخين يجعل جسيمات السائل تتحرك أسرع من الصلب."
+      ]
+    },
+    {
+      "id": "wb-sci_2-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 98 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Read 'The three states of water'. Complete the diagram. (solid | liquid | (1) ___ ; (2) ___ melts into water (3) ___ into vapour)",
+      "prompt_ar": "أكمل الفراغات المرقّمة 1 و2 و3 في مخطط حالات الماء الثلاث (WB ص 98):",
+      "word_bank": ["gas", "ice", "evaporates"],
+      "items": [
+        { "num": 1, "prompt": "solid | liquid | (1) ______", "answers": ["gas"] },
+        { "num": 2, "prompt": "(2) ______ melts into water", "answers": ["ice", "Ice"] },
+        { "num": 3, "prompt": "water (3) ______ into vapour", "answers": ["evaporates", "turns"] }
+      ],
+      "hints": [
+        "الثلاثي العلوي: solid | liquid | gas؛ والسفلي: ice melts into water → evaporates into vapour."
+      ]
+    },
+    {
+      "id": "wb-sci_2-e",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 98 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "E Answer these questions in terms of the kinetic theory. What happens when... (1 freezer example printed; solve 2–4)",
+      "prompt_ar": "فسّر الظواهر 2–4 وفق النظرية الحركية للجسيمات على غرار المثال 1 (WB ص 98):",
+      "items": [
+        { "num": 2, "question": "2 you put an ice-cube into a glass of orange juice.", "model_answer": "Heat passes from the warmer juice to the ice, giving the water particles in the ice more energy so they move faster, push apart, and have room to change places — changing from solid ice into liquid water (melting).", "explain_ar": "تنتقل الحرارة للمكعب فتزيد حركة الجسيمات وتنصهر." },
+        { "num": 3, "question": "3 a kettle boils.", "model_answer": "Heating gives the water particles much more energy; they move even faster, travel further apart, and escape freely into the air as steam (a gas).", "explain_ar": "التسخين الشديد يحوّل السائل إلى بخار/غاز طليق." },
+        { "num": 4, "question": "4 gas leaks from a gas bottle.", "model_answer": "Because gas particles already move quickly and travel far apart, they spread freely out of the container to fill all spaces in the house quickly.", "explain_ar": "تباعد وحرية حركة جسيمات الغاز يسببان سرعة الانتشار." }
+      ],
+      "hints": [
+        "اذكر دائماً تغيّر طاقة الجسيمات (energy) وسرعة حركتها (move slower / faster) والمسافة بينها (closer / apart)."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-sci_2-a",
+      "origin": "educational_addition",
+      "page_ref": 66,
+      "questions": [
+        {
+          "id": "q-sci_2-1",
+          "type": "mcq",
+          "stem": "According to PB page 66, when does a heated solid turn into a liquid?",
+          "evidence_block_id": "sci-2-states-kinetic",
+          "options": [
+            { "text": "When heat gives the particles enough energy to move faster, push apart, and have room to change places.", "is_correct": true, "why_wrong": null },
+            { "text": "When the particles stop moving completely and fill every room.", "is_correct": false, "why_wrong": "توقف الحركة يكون قريباً من الصلب البارد، وملء كل حيز يخص الغاز." },
+            { "text": "When water vapour evaporates from ice directly in a freezer.", "is_correct": false, "why_wrong": "الثلاجة تبرد الطعام فتبطئ حركة الجسيمات وتقرّبها لا تسخنها." },
+            { "text": "When the substance disappears from its closed container.", "is_correct": false, "why_wrong": "المادة تتحول من حالة لأخرى دون أن تفنى." }
+          ],
+          "hints": [
+            "اقرأ نهاية الفقرة الثانية في PB ص 66: enough room to change places."
+          ],
+          "explain": "عند اكتساب حرارة كافية تبتعد الجسيمات قليلاً وتجد مجالاً لتبادل المواقع، فتتحول المادة من صلبة إلى سائلة."
+        },
+        {
+          "id": "q-sci_2-2",
+          "type": "mcq",
+          "stem": "In The Water Cycle diagram on PB page 66, what causes clouds to form?",
+          "evidence_block_id": "sci-2-states-kinetic",
+          "options": [
+            { "text": "Liquid water evaporates into gas (water vapour) and forms clouds.", "is_correct": true, "why_wrong": null },
+            { "text": "Snow and ice freeze into iron molecules.", "is_correct": false, "why_wrong": "الثلج يذوب في الجو الدافئ ليكون ماءً ولا يتحول لحديد." },
+            { "text": "Solid rain falls directly from a closed kitchen container.", "is_correct": false, "why_wrong": "المطر سائل ينتج من تكثّف بخار الماء في السحب." },
+            { "text": "Gas containers leak steam underwater.", "is_correct": false, "why_wrong": "تسرب أنبوبة الغاز مثال لحركة الغازات وليس لتكوّن السحب." }
+          ],
+          "hints": [
+            "انظر سطر GAS في المستطيل الأزرق أسفل دورة الماء على PB ص 66."
+          ],
+          "explain": "تنص بطاقة الغاز في دورة الماء على: Water evaporates and forms clouds."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-sr2-kinetic", "origin": "from_book", "page_ref": 115, "front": "kinetic theory / particle", "back": "النظرية الحركية (المادة مكونة من جسيمات دائمة الحركة)", "tag": "Science · SR2" },
+    { "id": "fc-sr2-evaporate", "origin": "from_book", "page_ref": 115, "front": "melt / evaporate / vapour", "back": "ينصهر / يتبخر / بخار", "tag": "Science · SR2" },
+    { "id": "fc-sr2-hardly", "origin": "from_book", "page_ref": 115, "front": "fixed shape / hardly move", "back": "شكل ثابت / بالكاد تتحرك (في الحالة الصلبة)", "tag": "Science · SR2" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 66 مع pb-68.png وتكبيرات 600 DPI (s2_particles.png, s2_water.png) لإدراج نص 'The three states of water' ودورة الماء غير المستخرجة نصياً وحفظ 'kinetic theorystates' و'heating' حرفياً.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 97–98 مع wb_tail-098.png وwb_tail-099.png وحُلّت أنشطة B–E."
+  }
+}

@@ -117,7 +117,7 @@
   - [x] `arts-10` Strange happenings (PB p. 62 / WB pp. 94–95)
 - **Science Reader (PB pp. 64–74)**
   - [x] `sci-1` Acids and alkalis (PB pp. 63–65 / WB pp. 96–97)
-  - [ ] `sci-2` States of matter (p. 66)
+  - [x] `sci-2` States of matter (PB p. 66 / WB pp. 97–98)
   - [ ] `sci-3` Light (p. 67)
   - [ ] `sci-4` Sound (p. 68)
   - [ ] `sci-5` Arab scientists (p. 69)
