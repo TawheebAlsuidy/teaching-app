@@ -1,0 +1,178 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u6", "number": 6, "title": "Looking back" },
+  "lesson": {
+    "id": "eng-u6-6_3",
+    "code": "6.3",
+    "title": "Accident at Jebel Kebir",
+    "title_ar": "حادثة في جبل كبير: قراءة القصة واستخلاص المفردات وتحديد قائلي العبارات",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 45, "book_page": 43 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 74, "book_page": 73 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 75, "book_page": 74 }
+    ],
+    "reference_images": {
+      "pb_43": "assets/ref/pb_p043.webp",
+      "wb_73": "assets/ref/wb_p073.webp",
+      "wb_74": "assets/ref/wb_p074.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u6-6_3-story",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 43 },
+      "dir": "ltr",
+      "recall_words": ["shaking", "unconscious", "stung", "wrist", "pulse", "groaned", "raced", "pick-up", "ground"],
+      "content": {
+        "lines": [
+          "6.3 Accident at Jebel Kebir",
+          "Look at the picture. Guess what has happened and what is happening now. Then read the text to find out if you were right.",
+          "[Complete illustrated narrative card available offline in assets/ref/pb_p043.webp; structured paragraph anchors below for all PB/WB questions:]",
+          "Para 1 (Opening & Rock-fall): In the school holidays Anwar always helped his father Kassim with the farm. One morning, they were checking the line of beehives below the high, broken rocks of Jebel Kebir. Literal printed typo line: \"The had nearly finished when hey heard a loud crash above them.\" Kassim shouted 'Look out!' and 'Get back!'; heavy rolling rocks made the ground shake, frightening hundreds and thousands of bees out of the hives.",
+          "Para 2 (Fall & Bee Stings): Anwar tripped on the shaking ground; his hat and protective face cloth fell off. A large rock missed his head, then angry bees swarmed over Anwar's face, hands and neck. Kassim rushed through the swarm hitting out at the bees and half pulled, half carried Anwar to safety.",
+          "Para 3 (Drive to the clinic): As Kassim raced back to the village in his pick-up, he kept looking beside him at Anwar's hugely swollen face and hands; Anwar groaned in intense pain.",
+          "Para 4 (At the clinic with Nurse Salwa): Ten minutes later the pick-up screamed to a stop outside the clinic where District Nurse Salwa Mafouz was saying goodbye to her last patients. Anwar's eyes were closed and he was almost unconscious ('He's been stung hundreds of times.'). Checking his wrist, Salwa could only just feel his pulse, said they must take him to hospital in Hajjah, put Anwar on her car's back seat and drove at high speed while Kassim followed in his pick-up.",
+          "Answer these questions.",
+          "1 What turned an ordinary job into a terrifying incident?",
+          "2 What turned the incident into a major medical emergency?",
+          "Now do activities A and B in the Workbook."
+        ],
+        "image": "assets/media/pb43_beehives.webp",
+        "caption": "Kassim arriving at the village clinic in his pick-up (PB page 43; full article in assets/ref/pb_p043.webp)"
+      },
+      "edu_note_html": "<strong>ملاحظات نشر أوفلاين ونقل حرفي (<bdi dir='ltr'>RULE 2 &amp; RULE 7</bdi>):</strong><br>1) أُدرجت صورة الصفحة الرسمية كاملةً (<span dir='ltr'>assets/ref/pb_p043.webp</span>) أوفلاين للمطالعة الكاملة، مع المرتكزات الفقروية الوافية لحل جميع أسئلة <bdi dir='ltr'>PB Q1–2</bdi> و<bdi dir='ltr'>WB 6.3 A–B</bdi>.<br>2) في الفقرة 1 من <span dir='ltr'>PB ص 43</span> طُبع خطأ مطبعي حرفي في سطر 3: <span dir='ltr'><code>The had nearly finished when hey heard</code></span> (سقوط حرف <span dir='ltr'><code>y</code></span> من <span dir='ltr'>They</span> وسقوط <span dir='ltr'><code>t</code></span> من <span dir='ltr'>they</span>).<br>3) في سؤال <span dir='ltr'>WB 6.3 B #4 (ص 73)</span> ورد الاسم <span dir='ltr'><code>Fuad</code></span> (<span dir='ltr'><code>Now bring Fuad back to see me at the clinic next Monday.</code></span>) بينما في القصة كانت الممرضة تودّع آخر مرضاها (<span dir='ltr'>her last patients</span>) قبيل وصول أنور.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "إجابة سؤالي PB ص 43 وتتبع مسار الأزمة الطبية",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 43,
+            "html": "<ol><li><b>سؤال PB #1 (من عملٍ عادي إلى حادث مرعب):</b> انهيار صخور جبل كبير فوق خلايا النحل، اهتزاز الأرض، هياج آلاف النحل، وسقوط غطاء الوجه عن أنور عند تعثره.</li><li><b>سؤال PB #2 (من حادثٍ إلى طوارئ طبية كبرى):</b> تلقّي أنور مئات اللسعات في الوجه واليدين والرقبة حتى تورّم وفقد وعيه تقريباً وضعف نبضه جداً (<span dir='ltr'>could only just feel his pulse</span>).</li></ol>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 73,
+            "html": "<p dir='ltr'><b>Scene-to-vocab link:</b> <i>shaking ground</i> (moving quickly side to side) → <i>stung hundreds of times</i> (hurt by bees) → <i>almost unconscious</i> → <i>held his wrist / check his pulse</i>.</p>"
+          },
+          "self_check_ref": "chk-6_3-a",
+          "page_ref": { "book": "PB", "page": 43, "pdf_page": 45, "image": "assets/ref/pb_p043.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "groaned": { "pos": "v past", "ar": "أنَّ من الألم (في القائمة: groan)", "in_book_wordlist": true, "wb_page": 113 },
+    "ground": { "pos": "n", "ar": "الأرض", "in_book_wordlist": true, "wb_page": 113 },
+    "keep (~ looking)": { "pos": "phr", "ar": "واصل النظر مراراً / استمر يلتفت", "in_book_wordlist": true, "wb_page": 113 },
+    "patient": { "pos": "n", "ar": "مريض", "in_book_wordlist": true, "wb_page": 113 },
+    "pick-up": { "pos": "n", "ar": "سيارة نقل مكشوفة الصندوق (في القائمة: pick up)", "in_book_wordlist": true, "wb_page": 113 },
+    "pulse": { "pos": "n", "ar": "النبض (نبضات القلب في الرسغ)", "in_book_wordlist": true, "wb_page": 113 },
+    "shaking": { "pos": "adj", "ar": "مهتز / مرتجف", "in_book_wordlist": true, "wb_page": 113 },
+    "unconscious": { "pos": "adj", "ar": "فاقد الوعي", "in_book_wordlist": true, "wb_page": 113 },
+    "wrist": { "pos": "n", "ar": "الرسغ / المعصم", "in_book_wordlist": false },
+    "stung": { "pos": "v pp", "ar": "مُلسوع / لدغه النحل (من sting)", "in_book_wordlist": false }
+  },
+  "activities": [
+    {
+      "id": "wb-6_3-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 73 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.3 A Find words in the text that mean the following:",
+      "prompt_ar": "استخرج من قصة PB ص 43 الكلمات السبع المطابقة للتعريفات (WB ص 73):",
+      "word_bank": ["shaking", "unconscious", "stung", "wrist", "pulse", "groaned", "raced"],
+      "items": [
+        { "num": 1, "prompt": "1 moving very quickly up and down, or from side to side ______", "answers": ["shaking"] },
+        { "num": 2, "prompt": "2 not thinking or moving, often after an injury ______", "answers": ["unconscious"] },
+        { "num": 3, "prompt": "3 hurt by bees ______", "answers": ["stung"] },
+        { "num": 4, "prompt": "4 part of the body just above the hand ______", "answers": ["wrist"] },
+        { "num": 5, "prompt": "5 beating of blood through the body ______", "answers": ["pulse"] },
+        { "num": 6, "prompt": "6 making a deep sound because of pain ______", "answers": ["groaned"] },
+        { "num": 7, "prompt": "7 drove very fast ______", "answers": ["raced"] }
+      ],
+      "hints": [
+        "1: the shaking ground · 4-5: held his wrist to check his pulse · 7: raced back to the village."
+      ]
+    },
+    {
+      "id": "wb-6_3-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 73 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "6.3 B Write down who thought or said these things, and when. (Example: 'I really enjoy helping Dad like this with his work.' — Anwar thought this when they were checking the beehives.)",
+      "prompt_ar": "حدّد من قال أو فكّر في كل عبارة من العبارات السبع ومتى حدث ذلك (WB ص 73–74):",
+      "items": [
+        { "num": 1, "question": "1 He's a good worker. He'll look after the farm well one day.", "model_answer": "Kassim thought this while he and Anwar were checking the beehives below Jebel Kebir (before the rock-fall).", "explain_ar": "فكّر الأب قاسم بذلك وهو يراقب حماس ابنه للعمل بالخلايا." },
+        { "num": 2, "question": "2 Aah! Help! The pain!", "model_answer": "Anwar thought/cried this when hundreds of bees stung his face, hands and neck (and while groaning in pain in the pick-up).", "explain_ar": "أنور هو من تألّم وصاح وئَنَّ من شدة اللسعات." },
+        { "num": 3, "question": "3 Faster! He looks terrible!", "model_answer": "Kassim thought this as he raced back to the village in his pick-up, looking at Anwar's swollen face and hands beside him.", "explain_ar": "لاحظ الأب تضخم وجه أنور ويديه وهو يقود مسرعاً للعيادة." },
+        { "num": 4, "question": "4 Now bring Fuad back to see me at the clinic next Monday.", "model_answer": "District Nurse Salwa Mafouz said this when she was saying goodbye to her last patient(s) just before leaving the clinic (right before Kassim arrived).", "explain_ar": "تنويه: ذكرت العبارة اسم Fuad لمريضها الأخير في العيادة (أو بقايا مسودة اسم سابقة)، وقالتها سلوى قبل وصول أنور بلحظات." },
+        { "num": 5, "question": "5 I'm so glad there's not much wrong with him.", "model_answer": "District Nurse Salwa Mafouz (or her last clinic patient's parent) thought this while finishing with the last clinic patient before Anwar's emergency arrived.", "explain_ar": "ارتياح على سلامة المريض الأخير البسيط يمهّد درامياً لوصول حالة أنور الحرجة." },
+        { "num": 6, "question": "6 What's this? Another patient?", "model_answer": "District Nurse Salwa Mafouz thought this when Kassim's pick-up screamed to a stop outside the clinic as she was getting ready to leave.", "explain_ar": "فوجئت الممرضة سلوى بتوقف الشاحنة فجأة وهي تستعد للمغادرة." },
+        { "num": 7, "question": "7 I mustn't say it, but I think his son is dying.", "model_answer": "District Nurse Salwa Mafouz thought this when she held Anwar's wrist, could only just feel his pulse, and urged them to rush him to hospital in Hajjah.", "explain_ar": "تبيّنت سلوى خطورة النبض الضعيف فأمرت بسرعة نقله لمستشفى حجة." }
+      ],
+      "hints": [
+        "البندان 4 و5 يتعلقان بوداع آخر مريض للعيادة قبل توقف سيارة قاسم مباشرة."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-6_3-a",
+      "origin": "educational_addition",
+      "page_ref": 43,
+      "questions": [
+        {
+          "id": "q-6_3-1",
+          "type": "mcq",
+          "stem": "In PB page 43, what turned the scary rock-fall into a major medical emergency for Anwar?",
+          "evidence_block_id": "u6-6_3-story",
+          "options": [
+            { "text": "His protective hat and face cloth fell off when he tripped, and angry bees stung him hundreds of times until his pulse grew very weak.", "is_correct": true, "why_wrong": null },
+            { "text": "A large rock hit Anwar on the leg while he was inside the clinic.", "is_correct": false, "why_wrong": "الصخرة مرّت بجواره دون أن تصيب رأسه كما يوضح النص." },
+            { "text": "Nurse Salwa had already gone home and the clinic was locked.", "is_correct": false, "why_wrong": "بل كانت سلوى محفوظ لا تزال عند باب العيادة تودّع آخر مرضاها." },
+            { "text": "Anwar crashed Kassim's pick-up truck into a cliff.", "is_correct": false, "why_wrong": "الأب قاسم هو من قاد السيارة مسرعاً إلى القرية ولم يقع حادث سير." }
+          ],
+          "hints": [
+            "راجع السؤال الثاني في أسفل PB ص 43."
+          ],
+          "explain": "تعثر أنور وسقوط غطاء الوجه جعله عرضةً لمئات اللسعات التي أفقدته وعيه تقريباً وأضعفت نبضه."
+        },
+        {
+          "id": "q-6_3-2",
+          "type": "mcq",
+          "stem": "Which word in WB 6.3 A means 'not thinking or moving, often after an injury'?",
+          "evidence_block_id": "u6-6_3-story",
+          "options": [
+            { "text": "unconscious", "is_correct": true, "why_wrong": null },
+            { "text": "shaking", "is_correct": false, "why_wrong": "shaking تعني مهتزاً أو مرتجفاً بسرعة (البند 1)." },
+            { "text": "pulse", "is_correct": false, "why_wrong": "pulse معناها النبض (البند 5)." },
+            { "text": "groaned", "is_correct": false, "why_wrong": "groaned معناها أنَّ متوجعاً من الألم (البند 6)." }
+          ],
+          "hints": [
+            "وردت في: Anwar's eyes were closed and he was almost..."
+          ],
+          "explain": "كلمة unconscious تعني فاقد الوعي (عينا أنور مغمضتان وشبه فاقد للإحساس والحركة)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-6_3-unconscious", "origin": "from_book", "page_ref": 113, "front": "unconscious (adj)", "back": "فاقد الوعي (not thinking or moving after injury)", "tag": "Unit 6 · 6.3" },
+    { "id": "fc-6_3-pulse", "origin": "from_book", "page_ref": 113, "front": "pulse (n)", "back": "النبض (beating of blood felt at the wrist)", "tag": "Unit 6 · 6.3" },
+    { "id": "fc-6_3-groan", "origin": "from_book", "page_ref": 113, "front": "groan (v)", "back": "يئنّ من شدة الألم (make a deep sound from pain)", "tag": "Unit 6 · 6.3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت PB ص 43 مع pb-45.png: حُفظ خطأ 'The had nearly finished when hey heard' حرفياً وأُرفقت pb_p043.webp للمطالعة الكاملة أوفلاين.",
+    "wb_ocr_vs_image": "طُوبقت WB ص 73–74 مع wb-074.png وwb-075.png: أزيلت آثار العلامة المائية عن السطر 6.3 A #1 وتأكدت صياغة B #4 ('Fuad')."
+  }
+}
