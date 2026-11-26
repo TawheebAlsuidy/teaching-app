@@ -1,0 +1,175 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_12",
+    "code": "4.12",
+    "title": "Stuffed olives: flow chart and process",
+    "title_ar": "تصنيع الزيتون المحشي: قراءة مخطط التسلسل وكتابة الوصف بالمبني للمجهول",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 34, "book_page": 32 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 54, "book_page": 53 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 55, "book_page": 54 }
+    ],
+    "reference_images": {
+      "wb_53": "assets/ref/wb_p053.webp",
+      "wb_54": "assets/ref/wb_p054.webp",
+      "pb_32": "assets/ref/pb_p032.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_12-olives",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "WB", "page": 53 },
+      "dir": "ltr",
+      "recall_words": ["harvest", "soak", "brine", "belt", "remove", "stuff", "pack", "jars"],
+      "content": {
+        "lines": [
+          "4.12 A Read this short text about olives. Then look at the flow chart on the next page describing the process of producing stuffed olives for sale in the shops.",
+          "Olives are small black or green fruit. In the middle of an olive is a seed called a 'stone'. Sometimes the stones are taken out and red pepper paste is put into the holes that are left. This is called 'stuffing' the olive.",
+          "(WB p. 54) Flow chart: [HARVEST OLIVES] → [SEND TO FACTORY] → [SOAK IN CAUSTIC SODA] → [WASH] → [COVER WITH BRINE] → [ADD LACTIC ACID] → [PLACE ON MOVING BELT] → [REMOVE STONES] → [STUFF OLIVES] → [PACK IN JARS] → [SEND TO SHOPS]",
+          "Match each of these words from the flow chart with its meaning:",
+          "1 harvest | 2 soak | 3 place | 4 belt | 5 remove | 6 pack | 7 jars",
+          "B Use the information in the flow chart to write a description of the process. Use the Present passive. Do not forget to use sequence words and phrases."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة بصرية (<bdi dir='ltr'>WB p. 54</bdi>):</strong> في صورة المخطط المطبوعة بالكتاب، تظهر خط رأسي هامشي بجانب الصندوق الثاني (<span dir='ltr'>SEND TO FACTORY</span>) وبروز طفيف لحد الصندوق الثالث (<span dir='ltr'>SOAK IN CAUSTIC SODA</span>) واقتطاع علوي خفيف لحافة صندوق <span dir='ltr'>REMOVE STONES</span>؛ وجميع الكلمات مقروءة بوضوح تام في <bdi dir='ltr'>wb_p054.webp</bdi>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الربط القاعدي الختامي للوحدة الرابعة: المخطط + كلمات التسلسل + Present Passive",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 54,
+            "html": "<ol><li><b>انتبه للفاعل المخفي والتوافق في <span dir='ltr'>4.12 B</span>:</b> الفاعل الحقيقي (<span dir='ltr'>the olives / they</span>) جمع؛ لذا نستخدم مع كل مراحل الزيتون <b><span dir='ltr'>are + V3</span></b> (مثل: <span dir='ltr'>are harvested, are sent, are soaked, are washed, are covered, are placed, are stuffed, are packed</span>).</li><li><b>استثناءان مفردان غير معدودين في المخطط:</b> عند كتابة <span dir='ltr'>ADD LACTIC ACID</span> تصبح بالمجهول <b><span dir='ltr'>lactic acid is added</span></b> (<span dir='ltr'>is</span> للمفرد غير المعدود)، وعند <span dir='ltr'>REMOVE STONES</span> تصبح <b><span dir='ltr'>the stones are removed</span></b>.</li><li><b>تنويع أدوات التسلسل:</b> <span dir='ltr'>First, Next, Then, After that, Finally</span> (ولكون الخطوات 11 خطوة يمكنك دمج خطوتين متصلتين بـ <span dir='ltr'>and</span>).</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 54,
+            "caption": "المراحل الأربع الكبرى لإنتاج الزيتون المحشي (WB ص 54)",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='12' y='18' width='134' height='84' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='79' y='44' text-anchor='middle' font-size='11' font-weight='700'>1–2 Harvest &amp; Supply</text><text x='79' y='68' text-anchor='middle' font-size='10'>are harvested → sent</text><rect x='158' y='18' width='138' height='84' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='227' y='44' text-anchor='middle' font-size='11' font-weight='700'>3–6 Treat &amp; Pickle</text><text x='227' y='66' text-anchor='middle' font-size='10'>caustic soda → wash →</text><text x='227' y='84' text-anchor='middle' font-size='10'>brine + lactic acid</text><rect x='308' y='18' width='138' height='84' rx='8' fill='#DCFCE7' stroke='#16A34A'/><text x='377' y='44' text-anchor='middle' font-size='11' font-weight='700'>7–9 Core &amp; Stuff</text><text x='377' y='66' text-anchor='middle' font-size='10'>moving belt → stones</text><text x='377' y='84' text-anchor='middle' font-size='10'>removed → stuffed</text><rect x='458' y='18' width='130' height='84' rx='8' fill='#F3E8FF' stroke='#9333EA'/><text x='523' y='44' text-anchor='middle' font-size='11' font-weight='700'>10–11 Pack &amp; Ship</text><text x='523' y='66' text-anchor='middle' font-size='10'>packed in jars →</text><text x='523' y='84' text-anchor='middle' font-size='10'>sent to shops</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 54,
+            "html": "<p dir='ltr'><b>Active box → Passive prose:</b> <code>ADD LACTIC ACID</code> → <i>Next, lactic acid <b>is added</b>.</i> (uncountable → <i>is</i>)</p>"
+          },
+          "self_check_ref": "chk-4_12-a",
+          "page_ref": { "book": "WB", "page": 54, "pdf_page": 55, "image": "assets/ref/wb_p054.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "harvest": { "pos": "v", "ar": "يجني / يقطف (من الأشجار)", "in_book_wordlist": true, "wb_page": 112 },
+    "remove": { "pos": "v", "ar": "ينزع / يُخرج", "in_book_wordlist": true, "wb_page": 113 },
+    "soak": { "pos": "v", "ar": "ينقع في سائل مدةً طويلة", "in_book_wordlist": false, "wb_page": 54 },
+    "belt": { "pos": "n", "ar": "سير متحرك (شريط مطاطي طويل)", "in_book_wordlist": false, "wb_page": 54 },
+    "stuff": { "pos": "v", "ar": "يحشو", "in_book_wordlist": false, "wb_page": 53 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_12-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 54 },
+      "type": "matching",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.12 A Match each of these words from the flow chart with its meaning.",
+      "prompt_ar": "طابق كل كلمة من كلمات المخطط 1–7 بمعناها الصحيح a)–g) في WB ص 54:",
+      "choices": [
+        { "value": "a", "label": "a) long thin strip of rubber" },
+        { "value": "b", "label": "b) put" },
+        { "value": "c", "label": "c) put in liquid for a long period of time" },
+        { "value": "d", "label": "d) put in tightly" },
+        { "value": "e", "label": "e) small glass bottles" },
+        { "value": "f", "label": "f) take from the trees" },
+        { "value": "g", "label": "g) take out" }
+      ],
+      "items": [
+        { "letter": "1", "word": "harvest", "ar": "يقطف / يجني", "answer": "f" },
+        { "letter": "2", "word": "soak", "ar": "ينقع", "answer": "c" },
+        { "letter": "3", "word": "place", "ar": "يضع", "answer": "b" },
+        { "letter": "4", "word": "belt", "ar": "حزام/سير مطاطي", "answer": "a" },
+        { "letter": "5", "word": "remove", "ar": "يزيل / يُخرج", "answer": "g" },
+        { "letter": "6", "word": "pack", "ar": "يرصّ/يعبّئ بإحكام", "answer": "d" },
+        { "letter": "7", "word": "jars", "ar": "برطمانات/عبوات زجاجية", "answer": "e" }
+      ],
+      "hints": [
+        "1→f ، 2→c ، 3→b ، 4→a ، 5→g ، 6→d ، 7→e."
+      ]
+    },
+    {
+      "id": "wb-4_12-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 54 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.12 B Use the information in the flow chart to write a description of the process. Use the Present passive. Do not forget to use sequence words and phrases.",
+      "prompt_ar": "حوّل مخطط تصنيع الزيتون المحشي (11 مربعاً) إلى وصفة متكاملة بالمبني للمجهول وأدوات التسلسل:",
+      "guidance_literal": "First... are harvested → sent to factory → soaked → washed → covered with brine + lactic acid is added → placed on moving belt → stones removed → stuffed → packed in jars → sent to shops",
+      "steps": [
+        { "label_ar": "1) الجني والنقل والمعالجة الكيميائية والتخليل (المربعات 1–6)", "placeholder": "First, the olives are harvested and sent to a factory. Next, they are soaked in caustic soda and washed. After that, they are covered with brine, and lactic acid is added." },
+        { "label_ar": "2) السير المتحرك ونزع النوى والحشو والتعليب للشحن (المربعات 7–11)", "placeholder": "Then the olives are placed on a moving belt, where the stones are removed and the olives are stuffed (with red pepper paste). Finally, they are packed in jars and sent to shops." },
+        { "label_ar": "3) النص الكامل المتصل في الدفتر (مثال نموذجي منقّح)", "placeholder": "First, the olives are harvested and sent to the factory. Next, they are soaked in caustic soda and then washed thoroughly. After that, they are covered with brine and lactic acid is added. Next, the olives are placed on a moving belt where the stones are removed. Then the olives are stuffed with red pepper paste. Finally, they are packed in jars and sent to shops." }
+      ],
+      "hints": [
+        "تحقّق أن كل فعل صيغَ بـ (is/are + التصريف الثالث)، مع الانتباه لـ is added مع lactic acid المفرد غير المعدود."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_12-a",
+      "origin": "educational_addition",
+      "page_ref": 54,
+      "questions": [
+        {
+          "id": "q-4_12-1",
+          "type": "mcq",
+          "stem": "In WB 4.12 B, what is the correct Present passive sentence for the flow-chart step 'ADD LACTIC ACID'?",
+          "evidence_block_id": "u4-4_12-olives",
+          "options": [
+            { "text": "Then lactic acid is added.", "is_correct": true, "why_wrong": null },
+            { "text": "Then lactic acid are added.", "is_correct": false, "why_wrong": "حمض اللاكتيك (lactic acid) مادة سائلة غير معدودة تُعامل معاملة المفرد (is)." },
+            { "text": "Then you are added lactic acid.", "is_correct": false, "why_wrong": "نقدّم المفعول به lactic acid ونحذف الفاعل you." },
+            { "text": "Then lactic acid is adding.", "is_correct": false, "why_wrong": "الصيغة هنا مبني للمعلوم مستمر وليس مبنياً للمجهول (is added)." }
+          ],
+          "hints": [
+            "اجعل lactic acid نائب فاعل (مفرد غير معدود) + is + التصريف الثالث من add."
+          ],
+          "explain": "الاسم غير المعدود lactic acid يأخذ دائماً الفعل المساعد is متبوعاً بالتصريف الثالث added."
+        },
+        {
+          "id": "q-4_12-2",
+          "type": "mcq",
+          "stem": "From WB 4.12 A, what does 'stuffing' an olive mean?",
+          "evidence_block_id": "u4-4_12-olives",
+          "options": [
+            { "text": "Removing the seed ('stone') and putting red pepper paste into the hole left.", "is_correct": true, "why_wrong": null },
+            { "text": "Picking olives from the trees at harvest time.", "is_correct": false, "why_wrong": "جني الثمار من الأشجار هو harvest (بند 1)." },
+            { "text": "Leaving the olives in caustic soda and water.", "is_correct": false, "why_wrong": "النقع الطويل في السائل هو soak (بند 2)." },
+            { "text": "Sealing glass bottles tightly before shipping.", "is_correct": false, "why_wrong": "التعبئة المحكمة هي pack in jars (المربعات 10 و6)." }
+          ],
+          "hints": [
+            "اقرأ الجملتين الأخيرتين في WB 4.12 A (ص 53)."
+          ],
+          "explain": "يشرح التمرين 4.12 A نفسه أن الحشو (stuffing) هو إخراج النواة (stone) وحشو التجويف بمعجون الفلفل الأحمر."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_12-soak", "origin": "from_book", "page_ref": 54, "front": "soak (v — 4.12 A)", "back": "put in liquid for a long period of time (ينقع)", "tag": "Unit 4 · 4.12" },
+    { "id": "fc-4_12-stuff", "origin": "from_book", "page_ref": 53, "front": "stone & stuff (in olives)", "back": "stone = بذرة/نواة الزيتون | stuff = يحشو تجويف الزيتونة بعد نزع النواة", "tag": "Unit 4 · 4.12" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 53–54 مع wb-054.png وwb-055.png: أُزيل شغب OCR بين الخطين 470–473 ('MM ALT MANLAMACSNTINIFIT') وأُثبت تسلسل المربعات الأحد عشر ومطابقات المعاني السبع (1–7 ↔ a–g) كاملةً."
+  }
+}
