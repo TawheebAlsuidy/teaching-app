@@ -116,7 +116,7 @@
   - [x] `arts-9` A poem (PB p. 61 / WB pp. 93–94)
   - [x] `arts-10` Strange happenings (PB p. 62 / WB pp. 94–95)
 - **Science Reader (PB pp. 64–74)**
-  - [ ] `sci-1` Acids and alkalis (p. 65)
+  - [x] `sci-1` Acids and alkalis (PB pp. 63–65 / WB pp. 96–97)
   - [ ] `sci-2` States of matter (p. 66)
   - [ ] `sci-3` Light (p. 67)
   - [ ] `sci-4` Sound (p. 68)
