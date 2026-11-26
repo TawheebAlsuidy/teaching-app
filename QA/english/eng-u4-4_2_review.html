@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مراجعة بشرية — 4.2 · Flow charts</title>
+<style>
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #F1F5F9; color: #0F172A; }
+header { background: #064E3B; color: #fff; padding: 12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 12px; }
+@media (min-width: 960px) { .grid { grid-template-columns: 45% 55%; align-items: start; } .pane-img { position: sticky; top: 12px; } }
+.pane { background: #fff; border: 1px solid #CBD5E1; border-radius: 12px; padding: 12px; }
+.pane img { width: 100%; height: auto; border: 1px solid #E2E8F0; border-radius: 8px; margin-top: 8px; }
+.blk { border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px; margin-bottom: 10px; background: #F8FAFC; }
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.pill { padding: 2px 8px; border-radius: 8px; background: #E2E8F0; font-size: 12px; }
+pre.txt { white-space: pre-wrap; font-family: inherit; margin: 4px 0; line-height: 1.65; }
+pre.json { white-space: pre-wrap; font-size: 12px; background: #fff; padding: 8px; border-radius: 8px; overflow-x: auto; }
+.note { margin-top: 6px; background: #E0F2FE; padding: 6px 9px; border-radius: 8px; font-size: 13px; }
+select { padding: 6px 10px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div><strong>أداة المراجعة البشرية (أوفلاين): 4.2 · Flow charts</strong> · درس: eng-u4-4_2</div>
+  <div><select id="refSel" onchange="document.getElementById('refImg').src=this.value"><option value="../../books/english/assets/ref/wb_p041.webp">WB_41 (assets/ref/wb_p041.webp)</option><option value="../../books/english/assets/ref/wb_p042.webp">WB_42 (assets/ref/wb_p042.webp)</option></select></div>
+</header>
+<div class="grid">
+  <section class="pane pane-img">
+    <strong>صورة الصفحة الأصلية من الكتاب</strong>
+    <img id="refImg" src="../../books/english/assets/ref/wb_p041.webp" alt="Reference page">
+  </section>
+  <section class="pane">
+    <h3>النصوص المستخرجة كتلةً كتلة (2)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">u4-4_2-egg-chart · activity · WB ص 41</span></div><pre class="txt" dir="ltr">4.2 A A flow chart is a simple way of showing information. Look at the text and flow chart below, both showing how to cook a hard-boiled egg. Compare how they give the instructions.
+First put some water in a pan. Next put the egg in the water. Heat the water until it is boiling. Then boil for seven minutes. After that, take the egg out of the water.
+Flow chart: [PUT WATER IN PAN] → [PUT EGG IN WATER] → [HEAT WATER UNTIL BOILING] → [BOIL 7 MINUTES] → [TAKE EGG OUT]</pre></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">u4-4_2-bc · activity · WB ص 42</span></div><pre class="txt" dir="ltr">B Complete the flow chart using the information in the text.
+First choose which programme you want to record. Next put a cassette in the video. Then choose the correct TV channel. After that, check the time the programme begins. Then set the timer on the video. Finally, push the record button.
+6 empty boxes linked vertically by downward arrows (↓).
+C The flow chart below tells you how to plant a small tree. Use the information to write a paragraph in your copybooks. Don&#x27;t forget to use sequence words like first, next, then, after that and finally. You can use some of them more than once.
+Flow chart: [DIG HOLE] → [MIX FERTILISER WITH SOIL FROM HOLE] → [PUT WATER IN HOLE] → [PUT TREE IN] → [PUT SOIL BACK] → [PUSH SOIL DOWN]</pre></div>
+    <h3>أنشطة كتاب التمارين (2)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-4_2-b · WB ص 42</span></div><div class="txt" dir="ltr">4.2 B Complete the flow chart using the information in the text (recording a TV programme on a video recorder).</div><details><summary>عرض العناصر والحل المقترح (6)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;prompt&quot;: &quot;1 First choose which programme you want to record → Box 1: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;CHOOSE PROGRAMME YOU WANT TO RECORD&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 2,
+    &quot;prompt&quot;: &quot;2 Next put a cassette in the video → Box 2: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;PUT CASSETTE IN VIDEO&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;prompt&quot;: &quot;3 Then choose the correct TV channel → Box 3: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;CHOOSE CORRECT TV CHANNEL&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 4,
+    &quot;prompt&quot;: &quot;4 After that, check the time the programme begins → Box 4: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;CHECK TIME PROGRAMME BEGINS&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 5,
+    &quot;prompt&quot;: &quot;5 Then set the timer on the video → Box 5: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;SET TIMER ON VIDEO&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 6,
+    &quot;prompt&quot;: &quot;6 Finally, push the record button → Box 6: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;PUSH RECORD BUTTON&quot;
+    ]
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-4_2-c · WB ص 42</span></div><div class="txt" dir="ltr">4.2 C The flow chart below tells you how to plant a small tree. Use the information to write a paragraph in your copybooks. Don&#x27;t forget to use sequence words like first, next, then, after that and finally. You can use some of them more than once.</div><details><summary>عرض العناصر والحل المقترح (4)</summary><pre class="json">[
+  {
+    &quot;label_ar&quot;: &quot;1) الخطوتان الأولى والثانية (First ... Next ...)&quot;,
+    &quot;placeholder&quot;: &quot;First, dig a hole. Next, mix some fertiliser with the soil from the hole.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;2) الخطوتان الثالثة والرابعة (Then ... After that ...)&quot;,
+    &quot;placeholder&quot;: &quot;Then put some water in the hole. After that, put the tree in.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;3) الخطوتان الخامسة والسادسة (Then ... Finally ...)&quot;,
+    &quot;placeholder&quot;: &quot;Then put the soil back and finally, push the soil down.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;4) الفقرة المتصلة كاملة في الدفتر&quot;,
+    &quot;placeholder&quot;: &quot;First, dig a hole. Next, mix some fertiliser with the soil from the hole. Then, put some water in the hole. After that, put the tree in the hole. Next, put the soil back. Finally, push the soil down.&quot;
+  }
+]</pre></details></div>
+    <h3>الأسئلة والاختبارات الذاتية</h3>
+    <div class="blk"><div class="meta"><span class="pill">q-4_2-1 · mcq · دليل: u4-4_2-egg-chart</span></div><div class="txt" dir="auto"><strong>When converting the sentence &#x27;After that, take the egg out of the water&#x27; into a flow-chart box in WB 4.2 A, how does the book write it?</strong></div><ul><li style="color:#065F46">TAKE EGG OUT ✓</li><li style="color:#991B1B">After that, take the egg out of the water. ✗ — هذه صيغة الفقرة الكاملة، أما المخطط فيحذف الروابط والأدوات والتفاصيل المكررة.</li><li style="color:#991B1B">The egg is taken out later ✗ — المخطط هنا يستعمل فعل أمر مقتضباً في بداية المربع.</li><li style="color:#991B1B">FINALLY TAKE THE EGG OUT OF THE WATER ✗ — تحذف المخططات كلمات الترتيب مثل Finally وAfter that.</li></ul></div><div class="blk"><div class="meta"><span class="pill">q-4_2-2 · mcq · دليل: u4-4_2-bc</span></div><div class="txt" dir="auto"><strong>When turning the flow-chart box &#x27;DIG HOLE&#x27; (WB 4.2 C) back into a complete paragraph sentence, which form is required?</strong></div><ul><li style="color:#065F46">First, dig a hole. ✓</li><li style="color:#991B1B">DIG HOLE. ✗ — داخل الفقرة النثرية السليمة يلزم إضافة أداة التسلسل وأداة التنكير (a).</li><li style="color:#991B1B">First hole dig a. ✗ — ترتيب الجملة الإنجليزية للأمر يبدأ بالفعل بعد كلمة الترتيب.</li><li style="color:#991B1B">Digging hole in water. ✗ — ليس مطابقاً للتعليمات الإجرائية بفعل الأمر والربط الزمني.</li></ul></div>
+    <h3>ملاحظات التدقيق والاستخراج الأولي</h3><pre class="json">{
+  &quot;wb_ocr_vs_image&quot;: &quot;قُورنت صفحتا WB ص 41–42 مع tesseract.js eng: سقطت أسهم ومربعات المخطط الثاني في OCR (&#x27;F Wi virvi =ih WN&#x27;), واستُعيض عن &#x27;Cc&#x27; بتأكيد الحرف &#x27;C&#x27;، كما تحقّقت الصورة wb-043.png من وجود مسافة دقيقة بين &#x27;that&#x27; المائلة و&#x27;and&#x27; في تعليمات 4.2 C.&quot;
+}</pre>
+  </section>
+</div>
+</body>
+</html>

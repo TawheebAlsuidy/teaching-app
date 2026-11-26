@@ -1,0 +1,183 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u4", "number": 4, "title": "Tables, flow charts and diagrams" },
+  "lesson": {
+    "id": "eng-u4-4_2",
+    "code": "4.2",
+    "title": "Flow charts",
+    "title_ar": "مخططات التسلسل (Flow charts): تحويل التعليمات بين النص والمخطط",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 42, "book_page": 41 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 43, "book_page": 42 }
+    ],
+    "reference_images": {
+      "wb_41": "assets/ref/wb_p041.webp",
+      "wb_42": "assets/ref/wb_p042.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u4-4_2-egg-chart",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 41 },
+      "dir": "ltr",
+      "recall_words": ["flow chart", "instructions", "pan", "boiling"],
+      "content": {
+        "lines": [
+          "4.2 A A flow chart is a simple way of showing information. Look at the text and flow chart below, both showing how to cook a hard-boiled egg. Compare how they give the instructions.",
+          "First put some water in a pan. Next put the egg in the water. Heat the water until it is boiling. Then boil for seven minutes. After that, take the egg out of the water.",
+          "Flow chart: [PUT WATER IN PAN] → [PUT EGG IN WATER] → [HEAT WATER UNTIL BOILING] → [BOIL 7 MINUTES] → [TAKE EGG OUT]"
+        ]
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الفرق بين أسلوب الفقرة النصية وأسلوب مخطط التسلسل (Flow chart)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 41,
+            "html": "<ul><li><b>الفقرة النصية (Text):</b> تستعمل كلمات الترتيب الزمني (<span dir='ltr'>First, Next, Then, After that, Finally</span>)، وأدوات التعريف والتنكير (<span dir='ltr'>some, a, the</span>)، والأعداد مكتوبة حروفاً (<span dir='ltr'>seven minutes</span>) في جمل تامة.</li><li><b>مخطط التسلسل (Flow chart):</b> يعتمد <b>الاختصار التلغرافي</b> داخل مربعات متصلة بأسهم <span dir='ltr'>↓</span>؛ إذ يحذف كلمات الترتيب (<span dir='ltr'>First/Then</span> لأن السهم يؤدي وظيفتها)، ويحذف الأدوات (<span dir='ltr'>a/the/some</span>)، ويبدأ مباشرةً بفعل الأمر المختصر بأحرف كبيرة (<span dir='ltr'>PUT WATER IN PAN</span>، <span dir='ltr'>BOIL 7 MINUTES</span>).</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 41,
+            "caption": "تحويل النص الإجرائي إلى مربعات المخطط",
+            "svg": "<svg viewBox='0 0 600 130' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='130' rx='10' fill='#ECFDF5'/><rect x='14' y='18' width='265' height='94' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='146' y='44' text-anchor='middle' font-size='12' font-weight='700'>Paragraph Style</text><text x='146' y='66' text-anchor='middle' font-size='10.5'>First + put some water in a pan.</text><text x='146' y='86' text-anchor='middle' font-size='10.5'>Full sentences + sequence words</text><text x='295' y='70' text-anchor='middle' font-size='18' font-weight='700'>⇄</text><rect x='314' y='18' width='272' height='94' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='450' y='44' text-anchor='middle' font-size='12' font-weight='700'>Flow Chart Style</text><text x='450' y='66' text-anchor='middle' font-size='10.5'>PUT WATER IN PAN ↓</text><text x='450' y='86' text-anchor='middle' font-size='10.5'>Arrows replace connectors; caps</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 42,
+            "html": "<p dir='ltr'><b>Text → Chart:</b> <i>After that, check the time the programme begins.</i> → <code>CHECK TIME PROGRAMME BEGINS</code></p>"
+          },
+          "self_check_ref": "chk-4_2-a",
+          "page_ref": { "book": "WB", "page": 41, "pdf_page": 42, "image": "assets/ref/wb_p041.webp" }
+        }
+      }
+    },
+    {
+      "id": "u4-4_2-bc",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 42 },
+      "dir": "ltr",
+      "recall_words": ["cassette", "timer", "fertiliser", "soil"],
+      "content": {
+        "lines": [
+          "B Complete the flow chart using the information in the text.",
+          "First choose which programme you want to record. Next put a cassette in the video. Then choose the correct TV channel. After that, check the time the programme begins. Then set the timer on the video. Finally, push the record button.",
+          "6 empty boxes linked vertically by downward arrows (↓).",
+          "C The flow chart below tells you how to plant a small tree. Use the information to write a paragraph in your copybooks. Don't forget to use sequence words like first, next, then, after that and finally. You can use some of them more than once.",
+          "Flow chart: [DIG HOLE] → [MIX FERTILISER WITH SOIL FROM HOLE] → [PUT WATER IN HOLE] → [PUT TREE IN] → [PUT SOIL BACK] → [PUSH SOIL DOWN]"
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "flow chart": { "pos": "n", "ar": "مخطط تسلسلي للخطوات", "in_book_wordlist": false, "wb_page": 41 },
+    "fertiliser": { "pos": "n", "ar": "سماد", "in_book_wordlist": false, "wb_page": 42 },
+    "soil": { "pos": "n", "ar": "تربة", "in_book_wordlist": false, "wb_page": 42 }
+  },
+  "activities": [
+    {
+      "id": "wb-4_2-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 42 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.2 B Complete the flow chart using the information in the text (recording a TV programme on a video recorder).",
+      "prompt_ar": "أكمل مربعات المخطط الستة بتحويل كل جملة إلى صيغة مختصرة موجزة كما في مثال 4.2 A:",
+      "word_bank": [
+        "CHOOSE PROGRAMME YOU WANT TO RECORD",
+        "PUT CASSETTE IN VIDEO",
+        "CHOOSE CORRECT TV CHANNEL",
+        "CHECK TIME PROGRAMME BEGINS",
+        "SET TIMER ON VIDEO",
+        "PUSH RECORD BUTTON"
+      ],
+      "items": [
+        { "num": 1, "prompt": "1 First choose which programme you want to record → Box 1: ______", "answers": ["CHOOSE PROGRAMME YOU WANT TO RECORD"] },
+        { "num": 2, "prompt": "2 Next put a cassette in the video → Box 2: ______", "answers": ["PUT CASSETTE IN VIDEO"] },
+        { "num": 3, "prompt": "3 Then choose the correct TV channel → Box 3: ______", "answers": ["CHOOSE CORRECT TV CHANNEL"] },
+        { "num": 4, "prompt": "4 After that, check the time the programme begins → Box 4: ______", "answers": ["CHECK TIME PROGRAMME BEGINS"] },
+        { "num": 5, "prompt": "5 Then set the timer on the video → Box 5: ______", "answers": ["SET TIMER ON VIDEO"] },
+        { "num": 6, "prompt": "6 Finally, push the record button → Box 6: ______", "answers": ["PUSH RECORD BUTTON"] }
+      ],
+      "hints": [
+        "احذف روابط الترتيب (First / Next / Then / After that / Finally) لأن الأسهم بين المربعات تدل عليها، واحذف أدوات التعريف (a / the) عند الإمكان."
+      ]
+    },
+    {
+      "id": "wb-4_2-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 42 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "4.2 C The flow chart below tells you how to plant a small tree. Use the information to write a paragraph in your copybooks. Don't forget to use sequence words like first, next, then, after that and finally. You can use some of them more than once.",
+      "prompt_ar": "حوّل مخطط زراعة الشجرة الصغيرة إلى فقرة تامة الروابط والأدوات (WB ص 42):",
+      "guidance_literal": "DIG HOLE → MIX FERTILISER WITH SOIL FROM HOLE → PUT WATER IN HOLE → PUT TREE IN → PUT SOIL BACK → PUSH SOIL DOWN",
+      "steps": [
+        { "label_ar": "1) الخطوتان الأولى والثانية (First ... Next ...)", "placeholder": "First, dig a hole. Next, mix some fertiliser with the soil from the hole." },
+        { "label_ar": "2) الخطوتان الثالثة والرابعة (Then ... After that ...)", "placeholder": "Then put some water in the hole. After that, put the tree in." },
+        { "label_ar": "3) الخطوتان الخامسة والسادسة (Then ... Finally ...)", "placeholder": "Then put the soil back and finally, push the soil down." },
+        { "label_ar": "4) الفقرة المتصلة كاملة في الدفتر", "placeholder": "First, dig a hole. Next, mix some fertiliser with the soil from the hole. Then, put some water in the hole. After that, put the tree in the hole. Next, put the soil back. Finally, push the soil down." }
+      ],
+      "hints": [
+        "عند التحويل العكسي من المخطط إلى الفقرة أعد كلمات الترتيب، وأعد أدوات النكرة والتعريف (a hole, the hole, some water, some fertiliser, the soil, the tree)."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-4_2-a",
+      "origin": "educational_addition",
+      "page_ref": 41,
+      "questions": [
+        {
+          "id": "q-4_2-1",
+          "type": "mcq",
+          "stem": "When converting the sentence 'After that, take the egg out of the water' into a flow-chart box in WB 4.2 A, how does the book write it?",
+          "evidence_block_id": "u4-4_2-egg-chart",
+          "options": [
+            { "text": "TAKE EGG OUT", "is_correct": true, "why_wrong": null },
+            { "text": "After that, take the egg out of the water.", "is_correct": false, "why_wrong": "هذه صيغة الفقرة الكاملة، أما المخطط فيحذف الروابط والأدوات والتفاصيل المكررة." },
+            { "text": "The egg is taken out later", "is_correct": false, "why_wrong": "المخطط هنا يستعمل فعل أمر مقتضباً في بداية المربع." },
+            { "text": "FINALLY TAKE THE EGG OUT OF THE WATER", "is_correct": false, "why_wrong": "تحذف المخططات كلمات الترتيب مثل Finally وAfter that." }
+          ],
+          "hints": [
+            "انظر المربع الخامس والأخير في مخطط WB 4.2 A (ص 41)."
+          ],
+          "explain": "تختزل مربعات مخطط التسلسل الجملة بإسقاط كلمات التسلسل والأدوات والاكتفاء بالحدث الأساسي بأحرف كبيرة."
+        },
+        {
+          "id": "q-4_2-2",
+          "type": "mcq",
+          "stem": "When turning the flow-chart box 'DIG HOLE' (WB 4.2 C) back into a complete paragraph sentence, which form is required?",
+          "evidence_block_id": "u4-4_2-bc",
+          "options": [
+            { "text": "First, dig a hole.", "is_correct": true, "why_wrong": null },
+            { "text": "DIG HOLE.", "is_correct": false, "why_wrong": "داخل الفقرة النثرية السليمة يلزم إضافة أداة التسلسل وأداة التنكير (a)." },
+            { "text": "First hole dig a.", "is_correct": false, "why_wrong": "ترتيب الجملة الإنجليزية للأمر يبدأ بالفعل بعد كلمة الترتيب." },
+            { "text": "Digging hole in water.", "is_correct": false, "why_wrong": "ليس مطابقاً للتعليمات الإجرائية بفعل الأمر والربط الزمني." }
+          ],
+          "hints": [
+            "راجع المثال في 4.2 A: First put some water in a pan."
+          ],
+          "explain": "عند إعادة كتابة المخطط كفقرة نضيف كلمة تسلسل (First) ونعيد الأدوات المحذوفة (a hole)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-4_2-fc", "origin": "from_book", "page_ref": 41, "front": "Why use a flow chart?", "back": "لعرض خطوات العملية باختصار وبترتيب واضح دون تكرار كلمات الربط والروابط", "tag": "Unit 4 · 4.2" },
+    { "id": "fc-4_2-tree", "origin": "from_book", "page_ref": 42, "front": "MIX FERTILISER WITH SOIL", "back": "اخلط السماد بالتربة", "tag": "Unit 4 · 4.2" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 41–42 مع tesseract.js eng: سقطت أسهم ومربعات المخطط الثاني في OCR ('F Wi virvi =ih WN'), واستُعيض عن 'Cc' بتأكيد الحرف 'C'، كما تحقّقت الصورة wb-043.png من وجود مسافة دقيقة بين 'that' المائلة و'and' في تعليمات 4.2 C."
+  }
+}
