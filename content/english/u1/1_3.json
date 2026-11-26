@@ -1,0 +1,309 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_3",
+    "code": "1.3",
+    "title": "Lost",
+    "title_ar": "مفقودات (حوار المطار وحوار قسم الشرطة)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 4, "book_page": 2 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 4, "book_page": 3 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 5, "book_page": 4 }
+    ],
+    "reference_images": {
+      "pb_2": "assets/ref/pb_p002.webp",
+      "wb_3": "assets/ref/wb_p003.webp",
+      "wb_4": "assets/ref/wb_p004.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_3-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 2 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.3 Lost",
+          "Listen to how the passenger speaks. How does he feel? Answer the questions in Workbook activity A. Listen and repeat the conversation."
+        ]
+      }
+    },
+    {
+      "id": "u1-1_3-conv1",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "PB", "page": 2 },
+      "dir": "ltr",
+      "recall_words": ["luggage", "upset", "rectangular", "square-looking", "tags"],
+      "content": {
+        "lines": [
+          "Passenger: Excuse me! Excuse me, miss!",
+          "Clerk: Can I help you, sir?",
+          "Passenger: Yes. I've just got off the plane from Paris, but my luggage hasn't arrived yet.",
+          "Clerk: Can you describe your luggage, sir?",
+          "Passenger: What am I going to do? No clothes! Nothing!",
+          "Clerk: Calm down, sir. There's no point in getting upset. Now, can you describe your luggage?",
+          "Passenger: Two suitcases.",
+          "Clerk: Are they the same size?",
+          "Passenger: No. One is bigger than the other.",
+          "Clerk: Are they the same colour?",
+          "Passenger: Well, they're both green, but the smaller one is a very light green.",
+          "Clerk: Ok. What shape are they?",
+          "Passenger: The larger one is rectangular. The smaller one is more square-looking.",
+          "Clerk: Now, don't worry, sir. Give me your luggage tags and we'll soon find them."
+        ],
+        "image": "assets/media/pb2_airport_clerk.webp",
+        "caption": "Conversation 1 at the airport lost-luggage desk (PB p. 2)"
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "dialogue_roleplay",
+        "label": "تحليل الحوار الأول وتطبيقات المقارنة",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "html": "<p>يشعر المسافر في البداية بالقلق والاضطراب (<b>upset / worried</b>) لأن حقيبتيه لم تصلا من باريس، وتهدّئه الموظفة بعبارة: <span dir='ltr'><i>Calm down, sir. There's no point in getting upset.</i></span></p><p>مواصفات الحقيبتين: حقيبتان خضراوان، الكبيرة مستطيلة (<span dir='ltr'>rectangular</span>)، والصغيرة مربّعة الشكل نسبياً (<span dir='ltr'>square-looking</span>) وخضراء فاتحة.</p>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "html": "<p dir='ltr'>Are they <b>the same size</b>? No. One is bigger than the other.</p>"
+          },
+          "self_check_ref": "chk-1_3-a",
+          "page_ref": { "book": "PB", "page": 2, "pdf_page": 4, "image": "assets/ref/pb_p002.webp" }
+        }
+      }
+    },
+    {
+      "id": "u1-1_3-conv2-intro",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 2 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "Listen to how the girl speaks. How does she feel? Answer the question in Workbook activity C. Listen and repeat the conversation."
+        ]
+      }
+    },
+    {
+      "id": "u1-1_3-conv2",
+      "origin": "from_book",
+      "type": "dialogue",
+      "source": { "book": "PB", "page": 2 },
+      "dir": "ltr",
+      "recall_words": ["officer", "twin", "same", "last", "Come along"],
+      "content": {
+        "lines": [
+          "Girl: Excuse me, officer. Can you help me, please? My name is June, and I've lost my sister, Kate.",
+          "Officer: Oh, dear! How old is she?",
+          "Girl: Ten. She's my twin sister. She's the same age as me.",
+          "Officer: And does she look the same as you?",
+          "Girl: No, not really. She's not as tall as me. And she's a little bit fatter. She eats a lot you see.",
+          "Officer: Is her hair the same colours as yours?",
+          "Girl: Yes, but mine isn't as long as hers. Hers is much longer.",
+          "Officer: What is she wearing?",
+          "Girl: The same as I am ... except her T-shirt is red.",
+          "Officer: And when did you last see her?",
+          "Girl: Oh. About half an hour ago.",
+          "Officer: All right. Don't worry. Come along with me and we'll soon find your sister.",
+          "Girl: Ok. Thank you.",
+          "Take turns to describe similar objects or people.",
+          "Now do activities C and D in the Workbook."
+        ],
+        "image": "assets/media/pb2_police_officer.webp",
+        "caption": "Conversation 2 with the police officer (PB p. 2)"
+      },
+      "edu_note_html": "<strong>ملاحظة مطابقة حرفية:</strong> وردت في طبعة الكتاب المطبوعة ص 2 جملة الضابط <span dir='ltr'><code>Is her hair the same colours as yours?</code></span> بصيغة الجمع <span dir='ltr'>colours</span>، وحُفظت حرفياً هنا مع أن القياس اللغوي للشخص الواحد <span dir='ltr'>colour</span>.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "dialogue_roleplay",
+        "label": "أوصاف كيت وتراكيب التساوي (the same / not as...as)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "html": "<p>تستعمل الفتاة (<b>June</b>) صيغتي المقارنة الآتيتين لوصف أختها التوأم (<b>Kate</b>):</p><ul><li><span dir='ltr'><b>the same + noun + as</b></span>: للتساوي (<span dir='ltr'>the same age as me</span>).</li><li><span dir='ltr'><b>not as + adj + as</b></span>: لعدم التساوي (<span dir='ltr'>not as tall as me</span> = أقصر مني، <span dir='ltr'>mine isn't as long as hers</span> = شعر كيت أطول بكثير).</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 2,
+            "html": "<p dir='ltr'>Kate wears the same clothes as June, except her T-shirt is red, and her hair is much longer.</p>"
+          },
+          "self_check_ref": "chk-1_3-a",
+          "page_ref": { "book": "PB", "page": 2, "pdf_page": 4, "image": "assets/ref/pb_p002.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "miss": { "pos": "n", "ar": "آنسة (صيغة مخاطبة)", "in_book_wordlist": true, "wb_page": 112 },
+    "sir": { "pos": "n", "ar": "سيدي", "in_book_wordlist": true, "wb_page": 112 },
+    "calm down": { "pos": "phr", "ar": "اهدأ", "in_book_wordlist": true, "wb_page": 112 },
+    "there's no point": { "pos": "phr", "ar": "لا جدوى من", "in_book_wordlist": true, "wb_page": 112 },
+    "upset": { "pos": "adj", "ar": "منزعج / مضطرب", "in_book_wordlist": true, "wb_page": 112 },
+    "rectangular": { "pos": "adj", "ar": "مستطيل", "in_book_wordlist": true, "wb_page": 112 },
+    "square-looking": { "pos": "adj", "ar": "يبدو مربع الشكل", "in_book_wordlist": true, "wb_page": 112 },
+    "tags": { "pos": "n pl", "ar": "بطاقات الأمتعة", "in_book_wordlist": true, "wb_page": 112 },
+    "officer": { "pos": "n", "ar": "ضابط / شرطي", "in_book_wordlist": true, "wb_page": 112 },
+    "twin": { "pos": "n/adj", "ar": "توأم", "in_book_wordlist": true, "wb_page": 112 },
+    "not really": { "pos": "phr", "ar": "ليس تماماً", "in_book_wordlist": true, "wb_page": 112 },
+    "last": { "pos": "adv", "ar": "آخر مرة (when did you last see her)", "in_book_wordlist": true, "wb_page": 112 },
+    "come along": { "pos": "phr v", "ar": "تعالَ معي", "in_book_wordlist": true, "wb_page": 112 },
+    "take turns": { "pos": "phr", "ar": "يتناوب الأدوار", "in_book_wordlist": true, "wb_page": 112 },
+    "luggage": { "pos": "n", "ar": "أمتعة السفر (لا يُجمع)", "in_book_wordlist": false, "wb_page": 3 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_3-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 3 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.3 A Read conversation 1 on PB page 2. Which pieces of luggage belong to the passenger?",
+      "prompt_ar": "انظر إلى الحقائب (1–10) وحدد الحقيبتين اللتين تطابقان وصف المسافر في الحوار 1:",
+      "picture_items": [
+        { "num": "1-10", "img": "assets/media/wb3_luggage_1_10.webp" }
+      ],
+      "items": [
+        {
+          "num": 1,
+          "question": "Which two numbered suitcases belong to the passenger?",
+          "model_answer": "Numbers 5 and 2 (two suitcases: #5 is the larger dark green rectangular suitcase, and #2 is the smaller square-looking light case).",
+          "explain_ar": "وصف المسافر: حقيبتان (Two suitcases) إحداهما أكبر ومستطيلة داكنة (#5)، والأخرى أصغر فاتحة اللون ومربعة الشكل نسبياً (#2)."
+        }
+      ],
+      "hints": [
+        "استبعد الحقائب القماشية أو حقائب الظهر (#1، #3، #4، #7، #8، #9) والصناديق الضخمة (#6، #10).",
+        "قارن مواصفات: Two suitcases — bigger rectangular vs smaller square-looking.",
+        "الحل المقترح: الحقيبتان رقم 5 ورقم 2."
+      ]
+    },
+    {
+      "id": "wb-1_3-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 3 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Read conversation 2 on PB page 2. Which girl is Kate?",
+      "prompt_ar": "انظر إلى الفتيات (1–5) وحدد أي فتاة هي كيت بناءً على حوار جين مع الشرطي:",
+      "picture_items": [
+        { "num": "1-5", "img": "assets/media/wb3_girls_1_5.webp" }
+      ],
+      "items": [
+        {
+          "num": 1,
+          "question": "Which girl (1–5) is Kate?",
+          "model_answer": "Girl 3 (longer loose hair, wearing a T-shirt and trousers, shorter than #1/#5 and slightly heavier).",
+          "explain_ar": "المواصفات: ليست طويلة (#1 و#5 طويلتان)، ذات شعر طويل منسدل (ليس ذيل حصان مثل #2 أو ضفيرتين قصيرتين وفستاناً مثل #4)، وترتدي قميص T-shirt وبنطالاً."
+        }
+      ],
+      "hints": [
+        "ابحث عن الفتاة التي يمتد شعرها طويلاً على كتفيها (hers is much longer).",
+        "تذكّر أنها ترتدي بنطالاً (مثل جين) وليس فستاناً أو تنورة قصيرة، مع قميص T-shirt.",
+        "الحل المقترح: الفتاة رقم 3."
+      ]
+    },
+    {
+      "id": "wb-1_3-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 3 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C What do you say in these situations?",
+      "prompt_ar": "اختر العبارة المناسبة لكل موقف اعتماداً على الحوارين في كتاب الطالب ص 2:",
+      "items": [
+        { "num": 1, "question": "Somebody is upset and is speaking loudly.", "model_answer": "Calm down. There's no point in getting upset.", "explain_ar": "كما قالت الموظفة للمسافر في الحوار 1." },
+        { "num": 2, "question": "Somebody thinks something bad is going to happen but you think they are wrong.", "model_answer": "Don't worry.", "explain_ar": "كما قال الموظف والشرطي لطمأنة الشخص." },
+        { "num": 3, "question": "Somebody tells you some bad news.", "model_answer": "Oh, dear!", "explain_ar": "تعبير تعاطف ورد على لسان الشرطي عند سماع ضياع الطفلة." }
+      ],
+      "hints": [
+        "استخرج التعابير مباشرة من حواري المطار والشرطة في PB ص 2.",
+        "الموقف 1 يطابق رد Clerk على المسافر، والموقف 3 يطابق أول رد للشرطي.",
+        "1: Calm down / There's no point in getting upset. 2: Don't worry. 3: Oh, dear!"
+      ]
+    },
+    {
+      "id": "wb-1_3-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 4 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Think of a vegetable, a fruit or an animal. Ask your partner to guess what you are thinking of. You partner should ask questions like these:",
+      "prompt_ar": "فكّر في خضار أو فاكهة أو حيوان، وتدرّب على الأسئلة الواردة حرفياً (ملاحظة: طُبعت في الكتاب «You partner» بدلاً من «Your partner»):",
+      "guidance_literal": "Can you eat it?  Is it a vegetable?  What colour is it?  Does it have feathers?  Can you find it in Yemen?",
+      "steps": [
+        { "label_ar": "هل يُؤكل ونوعه (Can you eat it? / Is it a ...?)", "placeholder": "Yes, you can eat it. It is a curved yellow fruit." },
+        { "label_ar": "لونه ومكان وجوده (What colour / Can you find it in Yemen?)", "placeholder": "It is yellow, and you can easily find it in Yemen (a banana)." }
+      ],
+      "hints": [
+        "استعمل أسئلة Yes/No أو Wh- للوصول تدريجياً إلى الاسم.",
+        "اربط الدرس بمفردات الأشكال والأغطية من الدرس 1.1."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_3-a",
+      "origin": "educational_addition",
+      "page_ref": 2,
+      "questions": [
+        {
+          "id": "q-1_3-1",
+          "type": "mcq",
+          "stem": "In Conversation 1, how are the passenger's two suitcases different from each other?",
+          "evidence_block_id": "u1-1_3-conv1",
+          "options": [
+            { "text": "One is bigger and rectangular; the smaller one is lighter green and more square-looking.", "is_correct": true, "why_wrong": null },
+            { "text": "One is red and round, and the other is made of wood.", "is_correct": false, "why_wrong": "كلتا الحقيبتين خضراوان (both green)، ولم يُذكر أنهما من الخشب أو دائريتان." },
+            { "text": "They are both the exact same size and shape.", "is_correct": false, "why_wrong": "المسافر أجاب بالنفي: No. One is bigger than the other." },
+            { "text": "He lost only one backpack from Paris.", "is_correct": false, "why_wrong": "المسافر فقد حقيبتي سفر (Two suitcases) وليس حقيبة ظهر واحدة." }
+          ],
+          "hints": [
+            "راجع إجابات Passenger عن size وcolour وshape.",
+            "ابحث عن الكلمتين square-looking وlight green.",
+            "الجواب الأول يجمع الحجم واللون والشكل بدقة."
+          ],
+          "explain": "الحقيبتان خضراوان لكن الكبرى مستطيلة وأكبر، والصغرى أخف خضرة وأقرب للشكل المربع."
+        },
+        {
+          "id": "q-1_3-2",
+          "type": "mcq",
+          "stem": "In Conversation 2, what difference in hair length exists between June and Kate?",
+          "evidence_block_id": "u1-1_3-conv2",
+          "options": [
+            { "text": "Kate's hair is much longer than June's hair.", "is_correct": true, "why_wrong": null },
+            { "text": "June's hair is longer than Kate's hair.", "is_correct": false, "why_wrong": "جين قالت العكس: mine isn't as long as hers. Hers is much longer." },
+            { "text": "Their hair is completely different colours.", "is_correct": false, "why_wrong": "أجابت جين بـ Yes عن تشابه لون الشعر." },
+            { "text": "Kate has short curly hair.", "is_correct": false, "why_wrong": "وُصف شعر كيت بأنه أطول بكثير (much longer)." }
+          ],
+          "hints": [
+            "اقرأ رد June على سؤال الضابط عن الشعر.",
+            "افهم معنى الجملة: mine isn't as long as hers.",
+            "شعر كيت (hers) هو الأطول بكثير."
+          ],
+          "explain": "النفي mine isn't as long as hers يعني أن شعر كيت أطول من شعر جين."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_3-upset", "origin": "from_book", "page_ref": 2, "front": "upset (adj)", "back": "منزعج / مضطرب", "tag": "Unit 1 · 1.3" },
+    { "id": "fc-1_3-tags", "origin": "from_book", "page_ref": 2, "front": "tags (n pl)", "back": "بطاقات الأمتعة", "tag": "Unit 1 · 1.3" },
+    { "id": "fc-1_3-twin", "origin": "from_book", "page_ref": 2, "front": "twin (n/adj)", "back": "توأم", "tag": "Unit 1 · 1.3" },
+    { "id": "fc-1_3-calm-down", "origin": "from_book", "page_ref": 2, "front": "Calm down!", "back": "اهدأ!", "tag": "Unit 1 · 1.3" },
+    { "id": "fc-1_3-come-along", "origin": "from_book", "page_ref": 2, "front": "Come along.", "back": "تعالَ معي.", "tag": "Unit 1 · 1.3" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبق النص المستخرج من PB PDF ص 4 مع الصورة عالية الدقة؛ استخرجنا الحوارين كاملين مع رصد صيغة الجمع المطبوعة same colours في جملة الضابط.",
+    "wb_ocr_vs_image": "طُوبقت أنشطة WB ص 3–4 (PDF 4–5) مع مخرجات tesseract.js eng، وصُححت التسميات فوق الصور المرسومة ورُصدت العبارة المطبوعة You partner."
+  }
+}
