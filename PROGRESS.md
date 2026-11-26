@@ -26,16 +26,19 @@
 ### 1) اللغة الإنجليزية (`english`)
 **المصادر:** `انجليزي-الطالب-للصف-الثالث-الثانوي.pdf` (77 ص) + `english_work_12th (1).pdf` (120 ص)
 
-- **Unit 1: Describing things (PB pp. 1–8)**
-  - [x] `1.1` Shapes, coverings and materials (PB p. 1, WB p. 1) — *الدرس التجريبي 1 (مُنفّذ + QA + مراجعة)*
-  - [ ] `1.2` Workbook listening/description task (WB p. 2) *(تُطابق صفحة WB وتُراجع مع فهرس PB)*
-  - [ ] `1.3` Lost (PB p. 2)
-  - [x] `1.4` An unusual animal (PB p. 3, WB p. 4) — *اختبار الضغط التجريبي 2 (مُنفّذ + QA + مراجعة)*
-  - [ ] `1.5` Language review 1 (PB p. 4)
-  - [ ] `1.6` The countryside (PB p. 5)
-  - [ ] `1.7` A drive in the countryside (PB p. 6)
-  - [ ] `1.8` Language review 2 (PB p. 7)
-  - [ ] `1.9` A view from a window (PB p. 8)
+- **Unit 1: Describing things (PB pp. 1–8 / WB pp. 1–12)** — *(مكتمل: 12 درساً + QA + مراجعة + WebP)*
+  - [x] `1.1` Shapes, coverings and materials (PB p. 1, WB p. 1)
+  - [x] `1.2` Listening and describing (WB pp. 2–3)
+  - [x] `1.3` Lost (PB p. 2, WB pp. 3–4)
+  - [x] `1.4` An unusual animal (PB p. 3, WB pp. 4–5)
+  - [x] `1.5` Language review 1 (PB p. 4, WB p. 5)
+  - [x] `1.6` The countryside (PB p. 5, WB pp. 5–6)
+  - [x] `1.7` Listening and map directions (WB pp. 6–7)
+  - [x] `1.8` Vocabulary and comprehension (PB p. 6 / WB p. 8)
+  - [x] `1.9` A drive in the countryside (PB p. 6, WB pp. 9–10)
+  - [x] `1.10` Language review 2 (PB p. 7, WB pp. 10–11)
+  - [x] `1.11` A view from a window (PB p. 8, WB pp. 11–12)
+  - [x] `1.12` Write a description in your copybook (WB p. 12)
 - **Unit 2: Reporting events (PB pp. 9–16)**
   - [ ] `2.1` Newspaper headlines (PB p. 9)
   - [ ] `2.2` Today's news (PB p. 10)
