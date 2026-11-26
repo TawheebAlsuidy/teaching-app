@@ -1,0 +1,215 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u5", "number": 5, "title": "Working things out" },
+  "lesson": {
+    "id": "eng-u5-5_4",
+    "code": "5.4",
+    "title": "Puzzles and riddles",
+    "title_ar": "الألغاز والأحاجي والاستنتاج بالأفعال الناقصة (might / could / must / can't)",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 37, "book_page": 35 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 60, "book_page": 59 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 61, "book_page": 60 }
+    ],
+    "reference_images": {
+      "pb_35": "assets/ref/pb_p035.webp",
+      "wb_59": "assets/ref/wb_p059.webp",
+      "wb_60": "assets/ref/wb_p060.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u5-5_4-puzzles-a",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 35 },
+      "dir": "ltr",
+      "recall_words": ["puzzle", "sand", "chat", "waiting room"],
+      "content": {
+        "lines": [
+          "5.4 Puzzles and riddles",
+          "Understanding some reading tests is like solving a puzzle. Things are not always stated or described directly. The reader has to infer what the writer is talking about.",
+          "Read the puzzles below and work out what the answers might be. Activities A, B and C in the Workbook will help you think.",
+          "A More than one possible answer:",
+          "What is it?",
+          "1 His day's work was over. He sat down and looked at the object on the table. He smiled, picked it up and put it to his mouth.",
+          "2 He was walking along the beach when suddenly he saw it lying on the sand. He went over and had a good look at it. 'I can use this,' he said to himself. He picked it up carefully and took it home.",
+          "Where are they?",
+          "1 He turned to the man in the seat next to him. 'What time do we leave?' he asked. 'Any minute now,' was the reply. Just then he heard the engine start. 'You're right,' he said.",
+          "2 I'm in a large room. People are talking quietly. Somebody comes into the room. Everybody stops chatting. The person starts speaking in a loud voice."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي (<bdi dir='ltr'>PB p. 35</bdi> و<bdi dir='ltr'>WB pp. 59–60</bdi>):</strong> في الكتاب، سقطت علامتا الاقتباس المفردتان حول بند <span dir='ltr'>B #4</span> في <bdi dir='ltr'>PB p. 35</bdi> (<span dir='ltr'><code>These peas will be ready...</code></span>)، وطُبعت في <bdi dir='ltr'>WB 5.4 B</bdi> أسفل الصفحة <span dir='ltr'><code>1 Number I must...</code></span> بدل <span dir='ltr'>1</span>، وطُبعت في <bdi dir='ltr'>WB 5.4 C</bdi> عبارة <span dir='ltr'><code>What do this people feel?</code></span> بدل <span dir='ltr'>these people</span>؛ وحُفظت جميعها حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "الاستنتاج والتعاريف (كيف نستبعد المستحيل بـ can't ونحتمل بـ might/could؟)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 35,
+            "html": "<ul><li><b>في المجموعة A (أكثر من إجابة محتملة):</b> لا توجد قرائن تحصر الشيء أو المكان في خيار واحد؛ لذلك نستعمل <b><span dir='ltr'>can't be</span></b> لاستبعاد خيار مستحيل (كالفيل أو القارب المجذف)، و<b><span dir='ltr'>might / could be</span></b> لاقتراح الاحتمالات المعقولة.</li><li><b>في المجموعة B (إجابة واحدة منطقية):</b> كل لغز يعطي مفتاحاً حاسماً (الإنقاذ بالماء ← إطفائي؛ ركل الكرة للشباك ← كرة قدم؛ أين توجد أعلى قمة في إفريقيا ← معلم؛ قفز عن جبل والطيران ← مظلة أو طائرة شراعية)؛ لذلك نستعمل <b><span dir='ltr'>must be</span></b>!</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 59,
+            "html": "<p dir='ltr'><b>Pattern in WB 5.4 A:</b> It <b>can't</b> be an elephant, but it <b>might/could</b> be a cup of coffee. It <b>could</b> also be a spoon.</p>"
+          },
+          "self_check_ref": "chk-5_4-a",
+          "page_ref": { "book": "PB", "page": 35, "pdf_page": 37, "image": "assets/ref/pb_p035.webp" }
+        }
+      }
+    },
+    {
+      "id": "u5-5_4-puzzles-b",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 35 },
+      "dir": "ltr",
+      "recall_words": ["kick", "net", "waiting room", "riddle"],
+      "content": {
+        "lines": [
+          "B Only one possible answer.",
+          "Who says the following in their job?",
+          "1 'As you can see, the inside of the building is decorated in the Chinese style.'",
+          "2 'I'm afraid we couldn't save the house because there wasn't enough water.'",
+          "3 'Can anybody tell me the name of the highest mountain in Africa?'",
+          "4 These peas will be ready for picking in about three days.",
+          "5 'How long do you wish to remain in the country, sir?'",
+          "What objects might say something like this?",
+          "1 'People kick me all the time but it doesn't worry me. It makes them happy, especially when they put me in the net.'",
+          "2 'People keep me in a safe place and use me when they want to buy things. I have a different name in most countries.'",
+          "3 'Without me you have to do your Mathematics homework in your head or on paper.'",
+          "4 'North, south, east or west - I'll show you where they are.'",
+          "5 'Hold me, jump off a mountain and fly like a bird.'",
+          "What do these people feel? Why?",
+          "1 He paced up and down the waiting room in the hospital.",
+          "2 She covered her face when she heard the news.",
+          "Now do activity D in the Workbook."
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "puzzle": { "pos": "n", "ar": "لغز / أحجية", "in_book_wordlist": true, "wb_page": 113 },
+    "sand": { "pos": "n", "ar": "رمل", "in_book_wordlist": true, "wb_page": 113 },
+    "kick": { "pos": "v", "ar": "يركل بقدمه", "in_book_wordlist": true, "wb_page": 113 },
+    "net": { "pos": "n", "ar": "شبكة (المرمى / الصيد)", "in_book_wordlist": true, "wb_page": 113 },
+    "chat": { "pos": "v/n", "ar": "يدردش في أمور غير رسمية", "in_book_wordlist": true, "wb_page": 113 },
+    "waiting room": { "pos": "n", "ar": "غرفة الانتظار", "in_book_wordlist": true, "wb_page": 113 }
+  },
+  "activities": [
+    {
+      "id": "wb-5_4-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 59 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.4 A Complete these sentences with suitable words. (What is it? #1–2; Where are they? #1–2)",
+      "prompt_ar": "أكمل جمل الاستنتاج المفتوح بالأفعال الناقصة (can't / might / could) والأمثلة المعقولة في 5.4 A:",
+      "items": [
+        { "num": 1, "question": "What is it? #1 — It ___ be an elephant but it ___ be a cigarette or a cup of coffee. It ___ also be ___.", "model_answer": "It can't be an elephant but it might/could be a cigarette or a cup of coffee. It could also be a spoon / a flute / a sweet / a toothbrush.", "explain_ar": "كل شيء صغير يُقرّب للفم باليد يصلح كاحتمال، بينما الفيل مستحيل الحجم." },
+        { "num": 2, "question": "What is it? #2 — It ___ be a boat but it ___ be a bottle or a piece of wood. It ___ also be ___.", "model_answer": "It can't be a boat but it might/could be a bottle or a piece of wood. It might also be a large shell / a rope / an oar / a plastic bag.", "explain_ar": "لا يستطيع رجل يسير على الشاطئ حمل قارب بيده وإدخاله بيته بسهولة؛ فبقية الأشياء المفيدة تصلح احتمالاً." },
+        { "num": 3, "question": "Where are they? #1 — He ___ be in a rowing boat, but he ___ be in a motor boat. He ___ also be on a ___.", "model_answer": "He can't be in a rowing boat, but he might/could be in a motor boat. He could also be on a bus / train / plane / ferry.", "explain_ar": "سماع تشغيل المحرك (engine start) ينفي قارب التجديف ويفتح احتمال القارب الآلي أو الحافلة/القطار/الطائرة." },
+        { "num": 4, "question": "Where are they? #2 — He or she ___ be in a shop, but they ___ be in a classroom or a meeting hall. They ___ also be in a ___.", "model_answer": "He or she can't be in a shop, but they might/could be in a classroom or a meeting hall. They might also be in a courtroom / theatre / mosque / lecture hall.", "explain_ar": "الصمت التام فور دخول المتحدث الرسمي يدل على قاعة صف أو محكمة أو اجتماع وليس متجراً عادياً." }
+      ],
+      "hints": [
+        "الشق الأول دائماً منفي مستبعد (can't)، والشقان التاليان احتمالات معقولة (might / could / may)."
+      ]
+    },
+    {
+      "id": "wb-5_4-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 59 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Complete these sentences with suitable words. (Who says the following in their job? 1–5; What objects might say something like this? 1–5 [Note: Q1 prints 'Number I must...'])",
+      "prompt_ar": "استبعد المهنة الخاطئة بـ can't واستنتج المهنة والأداة الوحيدة الصحيحة بـ must في 5.4 B:",
+      "items": [
+        { "num": 1, "question": "Who #1: 'As you can see, the inside of the building is decorated in the Chinese style.'", "model_answer": "Number 1 can't be a doctor. He or she must be a tourist guide (or architect / estate agent).", "explain_ar": "المتحدث يشرح طراز مبنى للزوار." },
+        { "num": 2, "question": "Who #2: '... couldn't save the house because there wasn't enough water.'", "model_answer": "Number 2 can't be a policeman. He or she must be a fire-fighter.", "explain_ar": "عدم القدرة على إنقاذ المنزل لقلّة الماء عمل الإطفائي." },
+        { "num": 3, "question": "Who #3: 'Can anybody tell me the name of the highest mountain in Africa?'", "model_answer": "Number 3 can't be a cook. He or she must be a (Geography) teacher.", "explain_ar": "يطرح سؤالاً صفياً للطلبة عن قارة إفريقيا." },
+        { "num": 4, "question": "Who #4: 'These peas will be ready for picking in about three days.'", "model_answer": "Number 4 can't be a nurse. He or she must be a farmer.", "explain_ar": "يعرف موعد نضج البازلاء وحصادها: المزارع." },
+        { "num": 5, "question": "Who #5: 'How long do you wish to remain in the country, sir?'", "model_answer": "Number 5 can't be a zoo-keeper. He or she must be a customs officer / immigration officer (passport official).", "explain_ar": "يسأل المسافر القادم عن مدة إقامته في البلد." },
+        { "num": 6, "question": "Objects 1–5 (What objects might say...)", "model_answer": "1 Number 1 must be a football.\n2 Number 2 must be money (or a banknote).\n3 Number 3 must be a calculator.\n4 Number 4 must be a compass.\n5 Number 5 must be a parachute (or hang-glider).", "explain_ar": "أدوات الوحيدة المطابقة لقرائن الألغاز الخمسة في PB ص 35." }
+      ],
+      "hints": [
+        "تحقّق أن كل فراغ أول في (Who 1–5) يستعمل can't والثاني must."
+      ]
+    },
+    {
+      "id": "wb-5_4-cd",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 60 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.4 C Discuss: What do this people feel? Why? | D Find words or phrases from PB page 35 that mean the following (1–6).",
+      "prompt_ar": "استخرج الكلمات الست من نص PB ص 35 الموافقة للمعاني 1–6 في 5.4 D (تأمل إشارة 'this people' الحرفية في C):",
+      "word_bank": ["have a good look at", "remain", "kick", "riddle", "pace", "chat"],
+      "items": [
+        { "num": 1, "prompt": "1 look very carefully at: ______", "answers": ["have a good look at"] },
+        { "num": 2, "prompt": "2 stay: ______", "answers": ["remain"] },
+        { "num": 3, "prompt": "3 hit with your foot: ______", "answers": ["kick"] },
+        { "num": 4, "prompt": "4 puzzle: ______", "answers": ["riddle"] },
+        { "num": 5, "prompt": "5 walk with slow, regular steps: ______", "answers": ["pace"] },
+        { "num": 6, "prompt": "6 talk in a friendly way about non-important things: ______", "answers": ["chat"] }
+      ],
+      "hints": [
+        "إجابات 5.4 C التمهيدية: 1 الرجل القلق ينتظر في غرفة انتظار المستشفى أخبار مريض عزيز (ولادة أو عملية جراحية). 2 المرأة غطّت وجهها لصدمة حزنٍ شديد أو فرحةٍ غامرة عند سماع الخبر."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-5_4-a",
+      "origin": "educational_addition",
+      "page_ref": 35,
+      "questions": [
+        {
+          "id": "q-5_4-1",
+          "type": "mcq",
+          "stem": "Which object from PB page 35 B says: 'People keep me in a safe place and use me when they want to buy things. I have a different name in most countries'?",
+          "evidence_block_id": "u5-5_4-puzzles-b",
+          "options": [
+            { "text": "money", "is_correct": true, "why_wrong": null },
+            { "text": "a calculator", "is_correct": false, "why_wrong": "الآلة الحاسبة للرياضيات (رقم 3)." },
+            { "text": "a compass", "is_correct": false, "why_wrong": "البوصلة لتحديد الاتجاهات الأربعة (رقم 4)." },
+            { "text": "a parachute", "is_correct": false, "why_wrong": "المظلة للقفز والطيران من الجبال (رقم 5)." }
+          ],
+          "hints": [
+            "فكّر في الشيء الذي نشتري به وله عملة مختلفة في كل دولة (ريال، دولار، جنيه...)."
+          ],
+          "explain": "النقود (money) تُحفظ في مكان آمن وتُستعمل للشراء وتختلف تسمياتها بين الدول."
+        },
+        {
+          "id": "q-5_4-2",
+          "type": "mcq",
+          "stem": "Which modal verb correctly fills the first blank in WB 5.4 B #3: 'Number 3 ______ be a cook. He or she must be a teacher'?",
+          "evidence_block_id": "u5-5_4-puzzles-b",
+          "options": [
+            { "text": "can't", "is_correct": true, "why_wrong": null },
+            { "text": "must", "is_correct": false, "why_wrong": "من يسأل الطلاب عن أعلى جبل في إفريقيا لا يمكن أن يكون هنا بصفة طباخ." },
+            { "text": "mightn't to", "is_correct": false, "why_wrong": "لا تأتي to بعد الفعل الناقص might." },
+            { "text": "is able", "is_correct": false, "why_wrong": "لا تفيد يقين الاستبعاد مثل can't." }
+          ],
+          "hints": [
+            "القسم الأول ينفي الاحتمال الخاطئ بيقين (impossible)."
+          ],
+          "explain": "للاستحالة اليقينية في المضارع نستعمل can't (Number 3 can't be a cook)."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-5_4-pace", "origin": "from_book", "page_ref": 60, "front": "pace (v — 5.4 D #5)", "back": "walk with slow, regular steps (يمشي ذهاباً وإياباً بقلق)", "tag": "Unit 5 · 5.4" },
+    { "id": "fc-5_4-chat", "origin": "from_book", "page_ref": 60, "front": "chat (v — 5.4 D #6)", "back": "talk in a friendly way about non-important things (يدردش)", "tag": "Unit 5 · 5.4" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت ألغاز A وB والأسئلة في PB ص 35 مع pb-37.png وحُفظ سقوط علامتي الاقتباس في B #4 ('These peas will be ready...') حرفياً.",
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 59–60 مع wb-060.png وwb-061.png: صُحّحت فواصل OCR ('beina', 'RE Son', 'I' ← 1) وحُفظت الصيغ المطبوعة 'Number I must' و'this people' حرفياً."
+  }
+}
