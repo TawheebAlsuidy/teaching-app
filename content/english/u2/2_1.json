@@ -1,0 +1,255 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u2", "number": 2, "title": "Reporting events" },
+  "lesson": {
+    "id": "eng-u2-2_1",
+    "code": "2.1",
+    "title": "Newspaper headlines",
+    "title_ar": "عناوين الصحف واستنتاج معاني الكلمات من السياق",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 11, "book_page": 9 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 14, "book_page": 13 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 15, "book_page": 14 }
+    ],
+    "reference_images": {
+      "pb_9": "assets/ref/pb_p009.webp",
+      "wb_13": "assets/ref/wb_p013.webp",
+      "wb_14": "assets/ref/wb_p014.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u2-2_1-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 9 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "UNIT 2 REPORTING EVENTS",
+          "2.1 Newspaper headlines"
+        ]
+      }
+    },
+    {
+      "id": "u2-2_1-headline-rules",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 9 },
+      "dir": "ltr",
+      "recall_words": ["shortened", "simplified", "simple present", "scare", "survivors", "turbines"],
+      "content": {
+        "lines": [
+          "A newspaper headline says in a few words what the report below it is about. They generally use shortened, simplified sentences. For example, in English-language headlines, the verb to be, there is/are, and the articles a, an and the are usually left out. Also, they are often written in the simple present tense even when talking about the past or the future.",
+          "Look at the headlines below and try to work out the meaning of the underlined words.",
+          "A Boxer Weds Sweetheart (underlined: Sweetheart)",
+          "B Health Scare — People Frightened of New Disease (underlined: Scare)",
+          "C Victim of Road Accident Dies (underlined: Victim)",
+          "D 220 Dead in Air Crash: No Survivors (underlined: Survivors)",
+          "E THICK FOG TO CLEAR BY AFTERNOON, THEN SUN (underlined: FOG)",
+          "F Heat Wave Over — \"The long period of hot weather will end tomorrow,\" says weatherman. (underlined: Heat Wave)",
+          "G New Cars Sign of Wealth (underlined: Wealth)",
+          "H Wind Turbines Mean Cheap Electricity (underlined: Turbines)"
+        ],
+        "image": "assets/media/pb9_headlines.webp",
+        "caption": "Eight newspaper headlines A–H with underlined target vocabulary (PB page 9)"
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "سمات عناوين الصحف الإنجليزية + معاني الكلمات A–H",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 9,
+            "html": "<p><strong>كيف تُصاغ عناوين الصحف (Headlines style):</strong></p><ul><li><b>الحذف للاختصار:</b> تُحذف أفعال الكينونة <span dir='ltr'>(is / are / were)</span> وعبارة <span dir='ltr'>(there is/are)</span> وأدوات التعريف والتنكير <span dir='ltr'>(a / an / the)</span>.</li><li><b>الزمن:</b> يُستخدم المضارع البسيط للأحداث الماضية (<span dir='ltr'>Weds, Dies</span>)، وتُستخدم صيغة <span dir='ltr'>to + infinitive</span> للمستقبل (<span dir='ltr'>THICK FOG TO CLEAR</span>).</li></ul><p><strong>استنتاج الكلمات المسطّرة في A–H:</strong></p><ul><li><span dir='ltr'><b>Sweetheart</b></span>: المحبوب / الخطيبة (تُرتبط بـ <span dir='ltr'>Weds</span> = يتزوج).</li><li><span dir='ltr'><b>Scare</b></span>: حالة ذعر / خوف عام (التفسير تحتها: <span dir='ltr'>People Frightened...</span>).</li><li><span dir='ltr'><b>Victim</b></span>: ضحية (ارتباطها بـ <span dir='ltr'>Road Accident Dies</span>).</li><li><span dir='ltr'><b>Survivors</b></span>: ناجون (عكس <span dir='ltr'>Dead</span> = قتلى).</li><li><span dir='ltr'><b>FOG</b></span>: ضباب كثيف (تضاد مع <span dir='ltr'>CLEAR ... THEN SUN</span>).</li><li><span dir='ltr'><b>Heat Wave</b></span>: موجة حر (مُفسَّرة بـ <span dir='ltr'>long period of hot weather</span>).</li><li><span dir='ltr'><b>Wealth</b></span>: ثراء / غِنى (امتلاك السيارات الجديدة دليل عليه).</li><li><span dir='ltr'><b>Turbines</b></span>: توربينات / عنفات لتوليد الكهرباء من الرياح.</li></ul>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 9,
+            "html": "<p dir='ltr'><b>Headline:</b> 220 Dead in Air Crash: No Survivors<br><b>Full sentence:</b> <u>There are</u> 220 <u>people</u> dead in <u>an</u> air crash <u>and there are</u> no survivors.</p>"
+          },
+          "self_check_ref": "chk-2_1-a",
+          "page_ref": { "book": "PB", "page": 9, "pdf_page": 11, "image": "assets/ref/pb_p009.webp" }
+        }
+      }
+    },
+    {
+      "id": "u2-2_1-clues",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 9 },
+      "dir": "ltr",
+      "recall_words": ["commences", "scruffy", "diligent", "artefacts", "recklessly", "telescope", "painkiller", "hopeless", "darken", "unwell"],
+      "content": {
+        "lines": [
+          "Read how to work out the meaning of words. Then look at the underlined words again. Say which clue helped you understand them.",
+          "Working out meanings",
+          "Remember to use these clues to help you work out the meanings of new works.",
+          "1 Synonyms - words with the same meaning",
+          "Example: The English lesson starts at 8:45; the History lesson commences at 9:45.",
+          "2 Antonyms - words with the opposite meaning",
+          "Example: Sue is always well dressed; Barry, however, always looks scruffy.",
+          "3 A definition or explanation",
+          "Example: Mona is a diligent, that is to say, a very hard-working pupil.",
+          "4 Examples or illustrations that show the meaning",
+          "Example: Tourists want to buy local artefacts, such as knives, pots and jewellery.",
+          "5 Cause and effect or result; if you understand the cause of something, you can work out the effect, and the other way around.",
+          "Example: Ali has had many accidents because he always drives recklessly.",
+          "6 Purpose - what something does",
+          "Example: I've just bought a telescope so that I can study the stars.",
+          "7 Word formation",
+          "Examples: - two known words make a new word: pain + killer = painkiller",
+          "- suffixes: hope + less = hopeless, dark+ en = darken",
+          "- prefixes: un+ well = unwell",
+          "Now do activities A and B in the Workbook."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة نقل حرفي:</strong> وردت في الكتاب المطبوع ص 9 كلمة <span dir='ltr'><code>new works.</code></span> بدلاً من <span dir='ltr'><code>new words.</code></span>، كما وردت المسافات <span dir='ltr'><code>dark+ en</code></span> و<span dir='ltr'><code>un+ well</code></span> دون فراغ قبل الإضافة؛ وحُفظ النص المطبوع حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "الاستراتيجيات السبع لتخمين معاني المفردات",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 9,
+            "html": "<p><strong>مفاتيح القراءة السبع (Word attack skills) وهي تطابق بالضبط البنود 1–7 في تمرين <bdi dir='ltr'>WB 2.1 B</bdi>:</strong></p><ol><li><b>Synonyms</b> (المرادف: كلمة بمعنى نفسه مثل <span dir='ltr'>starts / commences</span>).</li><li><b>Antonyms</b> (التضاد: عكس المعنى، غالباً مع <span dir='ltr'>however / but / don't</span>).</li><li><b>Definition / explanation</b> (تعريف مباشر بعد <span dir='ltr'>that is to say</span> أو بين فاصلتين).</li><li><b>Examples</b> (أمثلة بعد <span dir='ltr'>such as / for example</span>).</li><li><b>Cause &amp; effect</b> (السبب والنتيجة بعد <span dir='ltr'>because / so</span>).</li><li><b>Purpose</b> (الغرض/الوظيفة بعد <span dir='ltr'>to / so that</span>).</li><li><b>Word formation</b> (تركيب كلمتين أو البادئة <span dir='ltr'>un-</span> واللاحقة <span dir='ltr'>-less / -en</span>).</li></ol>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 9,
+            "caption": "دليل المفاتيح السبع في PB ص 9",
+            "svg": "<svg viewBox='0 0 600 130' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='130' rx='10' fill='#ECFDF5'/><rect x='12' y='18' width='135' height='42' rx='6' fill='#E0F2FE' stroke='#0284C7'/><text x='79' y='44' text-anchor='middle' font-size='11' font-weight='700'>1 Synonym (=)</text><rect x='159' y='18' width='135' height='42' rx='6' fill='#FCE7F3' stroke='#DB2777'/><text x='226' y='44' text-anchor='middle' font-size='11' font-weight='700'>2 Antonym (≠)</text><rect x='306' y='18' width='135' height='42' rx='6' fill='#FEF3C7' stroke='#D97706'/><text x='373' y='44' text-anchor='middle' font-size='11' font-weight='700'>3 Definition</text><rect x='453' y='18' width='135' height='42' rx='6' fill='#DCFCE7' stroke='#16A34A'/><text x='520' y='44' text-anchor='middle' font-size='11' font-weight='700'>4 Examples (such as)</text><rect x='45' y='72' width='160' height='42' rx='6' fill='#fff' stroke='#059669'/><text x='125' y='97' text-anchor='middle' font-size='11' font-weight='700'>5 Cause &amp; Effect (because)</text><rect x='220' y='72' width='160' height='42' rx='6' fill='#fff' stroke='#059669'/><text x='300' y='97' text-anchor='middle' font-size='11' font-weight='700'>6 Purpose (so that / to)</text><rect x='395' y='72' width='160' height='42' rx='6' fill='#F3E8FF' stroke='#9333EA'/><text x='475' y='97' text-anchor='middle' font-size='11' font-weight='700'>7 Word Formation (un-/-less)</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 9,
+            "html": "<p dir='ltr'><b>Word formation:</b> <code>un-</code> (not) + <code>well</code> = <b>unwell</b> (not well / ill).</p>"
+          },
+          "self_check_ref": "chk-2_1-a",
+          "page_ref": { "book": "PB", "page": 9, "pdf_page": 11, "image": "assets/ref/pb_p009.webp" }
+        }
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "shortened": { "pos": "adj", "ar": "مُختصَر", "in_book_wordlist": true, "wb_page": 112 },
+    "simplified": { "pos": "adj", "ar": "مُبسَّط", "in_book_wordlist": true, "wb_page": 112 },
+    "leave out": { "pos": "phr v", "ar": "يحذف / يتجاوز", "in_book_wordlist": true, "wb_page": 111 },
+    "artefact": { "pos": "n", "ar": "مصنوعة يدوية / قطعة أثرية أو حرفية", "in_book_wordlist": true, "wb_page": 111 },
+    "scruffy": { "pos": "adj", "ar": "رثّ الهيئة / غير مرتّب الملابس", "in_book_wordlist": true, "wb_page": 111 },
+    "well dressed": { "pos": "adj", "ar": "أنيق الملبس", "in_book_wordlist": true, "wb_page": 112 },
+    "recklessly": { "pos": "adv", "ar": "بتهور / بلا مبالاة", "in_book_wordlist": true, "wb_page": 111 },
+    "telescope": { "pos": "n", "ar": "منظار مقرّب / تلسكوب", "in_book_wordlist": true, "wb_page": 112 },
+    "hopeless": { "pos": "adj", "ar": "عديم الأمل / يائس", "in_book_wordlist": true, "wb_page": 111 },
+    "unwell": { "pos": "adj", "ar": "مريض / غير متعافٍ", "in_book_wordlist": true, "wb_page": 112 },
+    "commence": { "pos": "v", "ar": "يبدأ", "in_book_wordlist": false, "wb_page": 13 },
+    "diligent": { "pos": "adj", "ar": "مجتهد ومثابر", "in_book_wordlist": false, "wb_page": 13 }
+  },
+  "activities": [
+    {
+      "id": "wb-2_1-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 13 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "2.1 A Complete these sentences with suitable words from the box. They are taken from PB page 9.",
+      "prompt_ar": "أكمل الجمل الست باختيار الكلمة المناسبة من الصندوق (يضم الصندوق 10 كلمات، منها 4 زائدة):",
+      "word_bank": ["commence", "scruffy", "diligent", "artefacts", "recklessly", "telescope", "painkillers", "hopeless", "darken", "unwell"],
+      "items": [
+        { "num": 1, "prompt": "1 In the market are many jewellers and potters, selling their ______.", "answers": ["artefacts"] },
+        { "num": 2, "prompt": "2 'Let the ceremony ______!' said the old man, and the music started.", "answers": ["commence"] },
+        { "num": 3, "prompt": "3 If you want to get better marks, you must be more ______.", "answers": ["diligent"] },
+        { "num": 4, "prompt": "4 The sailor put his ______ to his eye and looked at the ships on the horizon.", "answers": ["telescope"] },
+        { "num": 5, "prompt": "5 I have a headache. Can I have some ______, please?", "answers": ["painkillers"] },
+        { "num": 6, "prompt": "6 Why doesn't he wear better clothes? He's quite rich, but he always looks ______.", "answers": ["scruffy"] }
+      ],
+      "hints": [
+        "اربط كل جملة بدليلها في PB ص 9: (1) الصاغة والخزافون، (2) بدأ الحفل والموسيقى، (3) تحسين الدرجات، (4) النظر للأفق، (5) الصداع، (6) عكس الأناقة.",
+        "الحل: 1 artefacts، 2 commence، 3 diligent، 4 telescope، 5 painkillers، 6 scruffy."
+      ]
+    },
+    {
+      "id": "wb-2_1-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 13 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Work out the meaning of the underlined words. First, write what kind of clue helps you.",
+      "prompt_ar": "حدّد نوع الدليل (Clue) ثم استنتج المعنى (Meaning) لكل كلمة تحتها خط في WB ص 13–14:",
+      "items": [
+        { "num": 1, "question": "'Too many crimes go unpunished,' says Police Chief. (underlined: unpunished)", "model_answer": "Clue: Word formation (prefix un- + punish + -ed) | Meaning: not punished.", "explain_ar": "البادئة un- تعطي النفي (= دون عقاب / غير معاقَب)." },
+        { "num": 2, "question": "The firemen were exhausted after fighting the fire. 'I'm extremely tired,' one said. 'I just want to sleep.' (underlined: exhausted)", "model_answer": "Clue: Synonym ('extremely tired') / Cause and effect | Meaning: very tired / worn out.", "explain_ar": "جاء المرادف الصريح extremely tired في الجملة الثانية مباشرة." },
+        { "num": 3, "question": "'Don't be silly. Try to behave in a sensible way,' the teacher said. (underlined: sensible)", "model_answer": "Clue: Antonym (opposite of 'silly') | Meaning: wise / reasonable.", "explain_ar": "التضاد مع silly (أحمق/سخيف) يدل على معنى عاقل ومتزن." },
+        { "num": 4, "question": "We've just bought a microwave to save time cooking. (underlined: microwave)", "model_answer": "Clue: Purpose ('to save time cooking') / Word formation | Meaning: an electric oven/machine for cooking food quickly.", "explain_ar": "بيان الغرض (to save time cooking) مع تركيب micro+wave يوضحان أنها أداة طهي سريعة." },
+        { "num": 5, "question": "In his book, Hussein wrote about his many exploits, such as sailing around the North Pole and flying in a balloon. (underlined: exploits)", "model_answer": "Clue: Examples ('such as sailing around the North Pole and flying in a balloon') | Meaning: brave or exciting adventures/deeds.", "explain_ar": "الأمثلة بعد such as توضح المقصود: مغامرات أو إنجازات جريئة." },
+        { "num": 6, "question": "(WB p. 14) Many trees and bushes are evergreens, that is to say they have leaves all year round. (underlined: evergreens)", "model_answer": "Clue: Definition or explanation ('that is to say...') & Word formation (ever + green) | Meaning: trees/plants that stay green with leaves all the year round.", "explain_ar": "عبارة that is to say تعرّف الكلمة حرفياً بعدها." },
+        { "num": 7, "question": "(WB p. 14) Mona's writing is very easy to read because she writes very neatly. (underlined: neatly)", "model_answer": "Clue: Cause and effect ('because' + very easy to read) | Meaning: tidily / clearly / carefully.", "explain_ar": "الأثر (easy to read) يوضح سبب الكلمة (بخط مرتّب وواضح)." }
+      ],
+      "hints": [
+        "البنود 1–7 في التمرين B تمثّل الأنواع السبعة نفسها المرقّمة 1–7 في جدول PB ص 9.",
+        "راجع الكلمات الرابطة الدالة: that is to say، such as، because، un-، opposite."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-2_1-a",
+      "origin": "educational_addition",
+      "page_ref": 9,
+      "questions": [
+        {
+          "id": "q-2_1-1",
+          "type": "mcq",
+          "stem": "According to PB page 9, which clue helps you understand the underlined word 'artefacts' in: 'Tourists want to buy local artefacts, such as knives, pots and jewellery'?",
+          "evidence_block_id": "u2-2_1-clues",
+          "options": [
+            { "text": "Examples or illustrations that show the meaning", "is_correct": true, "why_wrong": null },
+            { "text": "Antonyms showing the opposite meaning", "is_correct": false, "why_wrong": "الأداة such as تورد أمثلة لما يشمله المصطلح ولا تذكر ضداً له." },
+            { "text": "Word formation using a negative prefix", "is_correct": false, "why_wrong": "لا توجد بادئة نفي مثل un- أو لاحقة هنا، بل أمثلة مادية (السكاكين والأواني والمجوهرات)." },
+            { "text": "Cause and effect relationship", "is_correct": false, "why_wrong": "ليست هناك رابطة سببية (because/so)، بل قائمة أمثلة بعد such as." }
+          ],
+          "hints": [
+            "انظر إلى عبارة such as knives, pots and jewellery.",
+            "راجع قائمة الأدلة السبع في PB ص 9، رقم 4.",
+            "الصحيح: Examples or illustrations."
+          ],
+          "explain": "جاءت عبارة such as لتقديم أمثلة ملموسة تشرح كلمة artefacts."
+        },
+        {
+          "id": "q-2_1-2",
+          "type": "mcq",
+          "stem": "Which grammatical items are usually left out of English newspaper headlines according to PB page 9?",
+          "evidence_block_id": "u2-2_1-headline-rules",
+          "options": [
+            { "text": "The verb to be, there is/are, and the articles a, an and the", "is_correct": true, "why_wrong": null },
+            { "text": "All verbs and nouns in every sentence", "is_correct": false, "why_wrong": "تحافظ العناوين على الأفعال والأسماء الرئيسة وتصوغها غالباً في المضارع البسيط." },
+            { "text": "Question marks and numbers like 220", "is_correct": false, "why_wrong": "الأرقام تُذكر في العناوين للاختصار والدقة مثل 220 Dead in Air Crash." },
+            { "text": "All simple present tense verbs", "is_correct": false, "why_wrong": "العكس صحيح: العناوين تُكتب غالباً في المضارع البسيط (simple present tense)." }
+          ],
+          "hints": [
+            "اقرأ الفقرة الافتتاحية أعلى PB ص 9.",
+            "ابحث عن جملة: ...are usually left out.",
+            "الصحيح: فعل to be وthere is/are وأدوات التعريف والتنكير a, an, the."
+          ],
+          "explain": "توضح الفقرة الافتتاحية في PB ص 9 أن عناوين الصحف تحذف غالباً فعل الكينونة وthere is/are وa/an/the للاختصار."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-2_1-artefact", "origin": "from_book", "page_ref": 9, "front": "artefacts (n pl)", "back": "مصنوعات يدوية / قطع أثرية (كالأواني والمجوهرات)", "tag": "Unit 2 · 2.1" },
+    { "id": "fc-2_1-scruffy", "origin": "from_book", "page_ref": 9, "front": "scruffy (adj)", "back": "رثّ / مهمل المظهر (ضد well dressed)", "tag": "Unit 2 · 2.1" },
+    { "id": "fc-2_1-diligent", "origin": "from_book", "page_ref": 9, "front": "diligent (adj)", "back": "مجتهد ومثابر (= very hard-working)", "tag": "Unit 2 · 2.1" },
+    { "id": "fc-2_1-recklessly", "origin": "from_book", "page_ref": 9, "front": "recklessly (adv)", "back": "بتهور وطيش", "tag": "Unit 2 · 2.1" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت صفحة PB ص 9 مع شريحة 400 DPI للعناوين A–H: استُخرجت جميع العناوين وتحديد الكلمات المسطّرة بالأحمر بدقة؛ كما حُفظت الصياغات الحرفية للكتاب ('new works.', 'dark+ en', 'un+ well').",
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 13–14 مع tesseract.js eng: أخرجت OCR رقم الدرس '241 A' بدلاً من '2.1 A' و'I just' → 'T just' و'In his' → 'Inhis'، وصُحّحت جميعها بصرياً من wb-014.png وwb-015.png."
+  }
+}
