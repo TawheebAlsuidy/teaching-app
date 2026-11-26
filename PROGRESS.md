@@ -108,7 +108,7 @@
   - [x] `arts-1` A difficult choice? (PB pp. 50–51 / WB pp. 81–82)
   - [x] `arts-2` Proverbs and idioms (PB p. 52 / WB pp. 82–83)
   - [x] `arts-3` Telford Hall Episode 1 (PB p. 53 / WB pp. 84–85)
-  - [ ] `arts-4` A famous play by Shakespeare (p. 54)
+  - [x] `arts-4` A famous play by Shakespeare (PB p. 54 / WB pp. 85–87)
   - [ ] `arts-5` Telford Hall Episode 2 (p. 55)
   - [ ] `arts-6` Critics and criticism (p. 57)
   - [ ] `arts-7` Telford Hall Episode 3 (p. 58)
