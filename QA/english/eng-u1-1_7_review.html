@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مراجعة بشرية — 1.7 · Listening and map directions</title>
+<style>
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #F1F5F9; color: #0F172A; }
+header { background: #064E3B; color: #fff; padding: 12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 12px; }
+@media (min-width: 960px) { .grid { grid-template-columns: 45% 55%; align-items: start; } .pane-img { position: sticky; top: 12px; } }
+.pane { background: #fff; border: 1px solid #CBD5E1; border-radius: 12px; padding: 12px; }
+.pane img { width: 100%; height: auto; border: 1px solid #E2E8F0; border-radius: 8px; margin-top: 8px; }
+.blk { border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px; margin-bottom: 10px; background: #F8FAFC; }
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.pill { padding: 2px 8px; border-radius: 8px; background: #E2E8F0; font-size: 12px; }
+pre.txt { white-space: pre-wrap; font-family: inherit; margin: 4px 0; line-height: 1.65; }
+pre.json { white-space: pre-wrap; font-size: 12px; background: #fff; padding: 8px; border-radius: 8px; overflow-x: auto; }
+.note { margin-top: 6px; background: #E0F2FE; padding: 6px 9px; border-radius: 8px; font-size: 13px; }
+select { padding: 6px 10px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div><strong>أداة المراجعة البشرية (أوفلاين): 1.7 · Listening and map directions</strong> · درس: eng-u1-1_7</div>
+  <div><select id="refSel" onchange="document.getElementById('refImg').src=this.value"><option value="../../books/english/assets/ref/wb_p006.webp">WB_6 (assets/ref/wb_p006.webp)</option><option value="../../books/english/assets/ref/wb_p007.webp">WB_7 (assets/ref/wb_p007.webp)</option></select></div>
+</header>
+<div class="grid">
+  <section class="pane pane-img">
+    <strong>صورة الصفحة الأصلية من الكتاب</strong>
+    <img id="refImg" src="../../books/english/assets/ref/wb_p006.webp" alt="Reference page">
+  </section>
+  <section class="pane">
+    <h3>النصوص المستخرجة كتلةً كتلة (4)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">u1-1_7-head · heading · WB ص 6</span></div><pre class="txt" dir="ltr">1.7 Listening and describing locations (Workbook)
+1.7 A Listen to the conversation once and tick the correct information.</pre><div class="note"><strong>إضافة تعليمية:</strong> <strong>ملاحظة المنهج (مادة الاستماع):</strong> هذا الدرس وارد في كتاب التمارين فقط (<bdi dir='ltr'>WB pp. 6–7</bdi>) دون نص استماع مطبوع في كتاب الطالب، لأن حوار مايك وآندي محفوظ في شريط/دليل المعلّم. سُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> دون تخمين لإجابات الشريط، مع توفير تدريب تفاعلي شامل لقراءة خريطة <bdi dir='ltr'>Snow Peak</bdi> والاتجاهات والمسافات بالكيلومترات.</div></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">u1-1_7-a-qs · activity · WB ص 6</span></div><pre class="txt" dir="ltr">1 Mike and Andy are   a) in a boat [ ]   b) in a field [ ]   c) on a mountain. [ ]
+2 Andy is   a) hurt [ ]   b) angry [ ]   c) happy. [ ]
+3 The weather is   a) sunny [ ]   b) misty [ ]   c) wet. [ ]
+4 It is   a) early morning [ ]   b) early evening [ ]   c) night-time. [ ]
+(WB p. 7) 5 At the end of the conversation, Andy and Mike are   a) happy [ ]   b) worried [ ]   c) amazed. [ ]</pre></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">u1-1_7-map · diagram · WB ص 7</span></div><pre class="txt" dir="ltr">B Listen again and look at the map. Answer the questions by marking the positions on the map.
+1 Where did Andy and Mike cross the river together?
+2 Where did Andy leave Mike?
+3 Where did Andy fall?
+4 Where are they now?</pre></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">u1-1_7-cde · activity · WB ص 7</span></div><pre class="txt" dir="ltr">C Describe to your partner the location of Andy and Mike exactly. Use some of the following words and phrases.
+near ...   north of ... / south of ...
+on the east side of ...   about ... kilometres from ...
+D Role play a telephone conversation with your partner.
+Pupil A: Imagine you are stuck on Snow Peak. You have a mobile phone   Decide where you are. Call Snow Peak Rescue. Describe your location.
+Pupil B: Your work for Snow Peak Rescue. You get a call from someone stuck on the mountain. It&#x27;s getting dark, so you have to find exactly where he/she is.
+E Work in pairs. Think of a place in the countryside and describe its location. Your partner tries to guess where it is.</pre><div class="note"><strong>إضافة تعليمية:</strong> <strong>ملاحظة مطابقة حرفية:</strong> وردت في طبعة كتاب التمارين المطبوعة ص 7 عبارة <span dir='ltr'><code>Your work for Snow Peak Rescue</code></span> (خطأ مطبعي لـ <span dir='ltr'>You work</span>)، كما سقطت النقطة بعد <span dir='ltr'><code>mobile phone</code></span> في دور الطالب A، وحُفظتا حرفياً التزاماً بالقاعدة الذهبية رقم 2.</div></div>
+    <h3>أنشطة كتاب التمارين (3)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-1_7-ab-notes · WB ص 6</span></div><div class="txt" dir="ltr">1.7 A Listen to the conversation once and tick the correct information. / 1.7 B Listen again and look at the map.</div><details><summary>عرض العناصر والحل المقترح (1)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;question&quot;: &quot;Why must activities 1.7 A (questions 1–5) and 1.7 B (marking Andy &amp; Mike on the map) be completed with your teacher or the official cassette?&quot;,
+    &quot;model_answer&quot;: &quot;The Pupil&#x27;s Book and Workbook do not print the listening transcript of Andy and Mike&#x27;s conversation (it belongs to the Teacher&#x27;s Book cassette script). Therefore, marking where they crossed the river, where Andy fell, or ticking &#x27;worried/hurt&#x27; must come from listening to the official audio rather than guessing.&quot;,
+    &quot;explain_ar&quot;: &quot;طبقاً لقواعد الأمانة العلمية (Rule 7)، لم نخترع إجابات شريط غير متاح في الملفات الرسمية، وسُجّل غياب شريط 1.7 في REVIEW_NEEDED.md. يمكنك التدرّب عملياً على مهارات الدرس في النشاطين C وD أدناه.&quot;
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-1_7-c · WB ص 7</span></div><div class="txt" dir="ltr">C Describe to your partner the location of Andy and Mike exactly. Use some of the following words and phrases: near ... / north of ... / south of ... / on the east side of ... / about ... kilometres from ...</div><details><summary>عرض العناصر والحل المقترح (5)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;prompt&quot;: &quot;1 Cliff Farm is ______ of Snow Peak.&quot;,
+    &quot;answers&quot;: [
+      &quot;north&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 2,
+    &quot;prompt&quot;: &quot;2 High View is ______ of Snow Peak.&quot;,
+    &quot;answers&quot;: [
+      &quot;south&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;prompt&quot;: &quot;3 Valley Side is on the ______ side of Snow Peak.&quot;,
+    &quot;answers&quot;: [
+      &quot;east&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 4,
+    &quot;prompt&quot;: &quot;4 The central river passes ______ Sheep Moor before reaching Snow Peak.&quot;,
+    &quot;answers&quot;: [
+      &quot;near&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 5,
+    &quot;prompt&quot;: &quot;5 Looking at the scale bar, Snow Peak is about 15 ______ east of North Edge.&quot;,
+    &quot;answers&quot;: [
+      &quot;kilometres&quot;
+    ]
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-1_7-d · WB ص 7</span></div><div class="txt" dir="ltr">D Role play a telephone conversation with your partner. Imagine you are stuck on Snow Peak. Call Snow Peak Rescue. Describe your location.</div><details><summary>عرض العناصر والحل المقترح (4)</summary><pre class="json">[
+  {
+    &quot;label_ar&quot;: &quot;1) اذكر معْلَماً رئيسياً قريباً (near ...)&quot;,
+    &quot;placeholder&quot;: &quot;I am stuck near Snow Peak, close to the small circle at the top.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;2) حدد موقعك شمال أو جنوب مَعْلَم آخر&quot;,
+    &quot;placeholder&quot;: &quot;I am south of Cliff Farm and north of High View.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;3) حدد الجهة (on the east / west side of ...)&quot;,
+    &quot;placeholder&quot;: &quot;I am on the east side of the river crossing near Snow Peak.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;4) قدّر المسافة بمقياس الخريطة (about ... kilometres from ...)&quot;,
+    &quot;placeholder&quot;: &quot;I am about 10 kilometres west of Valley Side.&quot;
+  }
+]</pre></details></div>
+    <h3>الأسئلة والاختبارات الذاتية</h3>
+    <div class="blk"><div class="meta"><span class="pill">q-1_7-1 · mcq · دليل: u1-1_7-map</span></div><div class="txt" dir="auto"><strong>On the WB page 7 map (using compass N pointing straight up), where is Cliff Farm located relative to Snow Peak?</strong></div><ul><li style="color:#065F46">North (slightly north-west) of Snow Peak ✓</li><li style="color:#991B1B">South of High View ✗ — High View تقع في أقصى جنوب الخريطة، أما Cliff Farm فهي في الحافة الشمالية.</li><li style="color:#991B1B">On the east side of Green Dale ✗ — Green Dale تقع في الركن الشمالي الشرقي شرق النهر، أما Cliff Farm فتقع غرب النهر وشمال Sheep Moor.</li><li style="color:#991B1B">South-west of North Edge ✗ — North Edge هي التي تقع في الجنوب الغربي من Snow Peak.</li></ul></div><div class="blk"><div class="meta"><span class="pill">q-1_7-2 · mcq · دليل: u1-1_7-map</span></div><div class="txt" dir="auto"><strong>What is the total length represented by the marked scale bar at the bottom-left corner of the WB p. 7 map?</strong></div><ul><li style="color:#065F46">10 Km ✓</li><li style="color:#991B1B">5 Km ✗ — مقياس الرسم في أسفل اليسار مكتوب تحته صراحةً 10 Km.</li><li style="color:#991B1B">50 Km ✗ — هذا الرقم غير موجود على مقياس الرسم؛ المكتوب أسفل الشريط الأسود والأبيض هو 10 Km.</li><li style="color:#991B1B">100 Km ✗ — الرقم المثبت في زاوية الخريطة هو 10 Km وليس 100 Km.</li></ul></div>
+    <h3>ملاحظات التدقيق والاستخراج الأولي</h3><pre class="json">{
+  &quot;wb_ocr_vs_image&quot;: &quot;قُورنت صفحتا WB ص 6–7 مع tesseract.js eng: أخرجت OCR التسمية &#x27;17 A&#x27; و&#x27;tis&#x27; (It is) ورموزاً مشوّشة لأسماء الخريطة، وصُحّحت جميعها بصرياً من شرائح 250 DPI لخريطة WB ص 7؛ كما حُفظ الخطأ المطبعي &#x27;Your work for Snow Peak Rescue&#x27; حرفياً وسُجّل غياب نص الشريط السماعي في REVIEW_NEEDED.md.&quot;
+}</pre>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_7",
+    "code": "1.7",
+    "title": "Listening and map directions",
+    "title_ar": "الاستماع وتحديد المواقع والاتجاهات على الخريطة",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 7, "book_page": 6 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 8, "book_page": 7 }
+    ],
+    "reference_images": {
+      "wb_6": "assets/ref/wb_p006.webp",
+      "wb_7": "assets/ref/wb_p007.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_7-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "WB", "page": 6 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.7 Listening and describing locations (Workbook)",
+          "1.7 A Listen to the conversation once and tick the correct information."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة المنهج (مادة الاستماع):</strong> هذا الدرس وارد في كتاب التمارين فقط (<bdi dir='ltr'>WB pp. 6–7</bdi>) دون نص استماع مطبوع في كتاب الطالب، لأن حوار مايك وآندي محفوظ في شريط/دليل المعلّم. سُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> دون تخمين لإجابات الشريط، مع توفير تدريب تفاعلي شامل لقراءة خريطة <bdi dir='ltr'>Snow Peak</bdi> والاتجاهات والمسافات بالكيلومترات."
+    },
+    {
+      "id": "u1-1_7-a-qs",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 6 },
+      "dir": "ltr",
+      "recall_words": ["hurt", "angry", "misty", "worried", "amazed"],
+      "content": {
+        "lines": [
+          "1 Mike and Andy are   a) in a boat [ ]   b) in a field [ ]   c) on a mountain. [ ]",
+          "2 Andy is   a) hurt [ ]   b) angry [ ]   c) happy. [ ]",
+          "3 The weather is   a) sunny [ ]   b) misty [ ]   c) wet. [ ]",
+          "4 It is   a) early morning [ ]   b) early evening [ ]   c) night-time. [ ]",
+          "(WB p. 7) 5 At the end of the conversation, Andy and Mike are   a) happy [ ]   b) worried [ ]   c) amazed. [ ]"
+        ]
+      }
+    },
+    {
+      "id": "u1-1_7-map",
+      "origin": "from_book",
+      "type": "diagram",
+      "source": { "book": "WB", "page": 7 },
+      "dir": "ltr",
+      "recall_words": ["Snow Peak", "Cliff Farm", "Sheep Moor", "Green Dale", "North Edge", "Valley Side", "High View"],
+      "content": {
+        "lines": [
+          "B Listen again and look at the map. Answer the questions by marking the positions on the map.",
+          "1 Where did Andy and Mike cross the river together?",
+          "2 Where did Andy leave Mike?",
+          "3 Where did Andy fall?",
+          "4 Where are they now?"
+        ],
+        "image": "assets/media/wb7_snow_peak_map.webp",
+        "caption": "Contour map of Snow Peak, Cliff Farm, Sheep Moor, Green Dale, North Edge, Valley Side, High View (scale 10 Km, compass N) — WB page 7"
+      },
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "diagram",
+        "label": "بوصلة الخريطة ومقياس الرسم وتعبيرات الموقع",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 7,
+            "html": "<p>لقراءة أي موضع على خريطة <span dir='ltr'><b>Snow Peak (WB p. 7)</b></span> ووصفه بدقة:</p><ul><li><b>سهم الشمال (<span dir='ltr'>N</span>)</b> في أسفل اليسار يشير للأعلى = شمال (<span dir='ltr'>north</span>)، والأسفل = جنوب (<span dir='ltr'>south</span>)، واليمين = شرق (<span dir='ltr'>east</span>)، واليسار = غرب (<span dir='ltr'>west</span>).</li><li><b>عبارات الموقع الجاهزة في التمرين C:</b><ul><li><span dir='ltr'><code>near ...</code></span> (بالقرب من...)</li><li><span dir='ltr'><code>north of ... / south of ...</code></span> (شمال ... / جنوب ...)</li><li><span dir='ltr'><code>on the east side of ...</code></span> (على الجانب الشرقي من ...)</li><li><span dir='ltr'><code>about ... kilometres from ...</code></span> (على بُعد نحو ... كيلومتراً من ...)</li></ul></li><li><b>مقياس الرسم (<span dir='ltr'>10 Km</span>):</b> الشريط الأسود والأبيض أسفل اليسار يمثل <b>10 كيلومترات</b> إجمالاً (كل شُعبة 2.5 كم تقريباً)، وبما أن الخريطة كلها تعادل ~4.5 أمثال الشريط، فعرض المنطقة يقارب 45 كم.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 7,
+            "caption": "مخطط الاتجاهات النسبية لمعالم خريطة Snow Peak",
+            "svg": "<svg viewBox='0 0 600 185' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='185' rx='10' fill='#ECFDF5'/><circle cx='56' cy='50' r='26' fill='#fff' stroke='#047857'/><text x='56' y='35' text-anchor='middle' font-size='12' font-weight='700'>N</text><text x='56' y='70' text-anchor='middle' font-size='11'>S</text><text x='36' y='54' text-anchor='middle' font-size='11'>W</text><text x='76' y='54' text-anchor='middle' font-size='11'>E</text><rect x='215' y='16' width='130' height='32' rx='6' fill='#FEF3C7' stroke='#D97706'/><text x='280' y='36' text-anchor='middle' font-size='12' font-weight='700'>Cliff Farm (North)</text><rect x='430' y='24' width='135' height='32' rx='6' fill='#E0F2FE' stroke='#0284C7'/><text x='497' y='44' text-anchor='middle' font-size='12'>Green Dale (NE)</text><rect x='145' y='66' width='120' height='30' rx='6' fill='#fff' stroke='#059669'/><text x='205' y='85' text-anchor='middle' font-size='12'>Sheep Moor (NW)</text><rect x='290' y='74' width='130' height='34' rx='6' fill='#FEE2E2' stroke='#DC2626'/><text x='355' y='95' text-anchor='middle' font-size='12' font-weight='700'>Snow Peak (Center)</text><rect x='95' y='115' width='120' height='30' rx='6' fill='#fff' stroke='#059669'/><text x='155' y='134' text-anchor='middle' font-size='12'>North Edge (SW)</text><rect x='440' y='100' width='125' height='30' rx='6' fill='#E0F2FE' stroke='#0284C7'/><text x='502' y='119' text-anchor='middle' font-size='12'>Valley Side (SE)</text><rect x='330' y='138' width='130' height='30' rx='6' fill='#fff' stroke='#059669'/><text x='395' y='157' text-anchor='middle' font-size='12'>High View (South)</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 7,
+            "html": "<p dir='ltr'><b>Example call:</b> I'm hurt and I'm stuck near Snow Peak, south of Cliff Farm and west of Valley Side, about 15 kilometres east of North Edge.</p>"
+          },
+          "self_check_ref": "chk-1_7-a",
+          "page_ref": { "book": "WB", "page": 7, "pdf_page": 8, "image": "assets/ref/wb_p007.webp" }
+        }
+      }
+    },
+    {
+      "id": "u1-1_7-cde",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "WB", "page": 7 },
+      "dir": "ltr",
+      "recall_words": ["stuck", "rescue", "kilometres", "east", "south", "north"],
+      "content": {
+        "lines": [
+          "C Describe to your partner the location of Andy and Mike exactly. Use some of the following words and phrases.",
+          "near ...   north of ... / south of ...",
+          "on the east side of ...   about ... kilometres from ...",
+          "D Role play a telephone conversation with your partner.",
+          "Pupil A: Imagine you are stuck on Snow Peak. You have a mobile phone   Decide where you are. Call Snow Peak Rescue. Describe your location.",
+          "Pupil B: Your work for Snow Peak Rescue. You get a call from someone stuck on the mountain. It's getting dark, so you have to find exactly where he/she is.",
+          "E Work in pairs. Think of a place in the countryside and describe its location. Your partner tries to guess where it is."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظة مطابقة حرفية:</strong> وردت في طبعة كتاب التمارين المطبوعة ص 7 عبارة <span dir='ltr'><code>Your work for Snow Peak Rescue</code></span> (خطأ مطبعي لـ <span dir='ltr'>You work</span>)، كما سقطت النقطة بعد <span dir='ltr'><code>mobile phone</code></span> في دور الطالب A، وحُفظتا حرفياً التزاماً بالقاعدة الذهبية رقم 2."
+    }
+  ],
+  "word_glossary_map": {
+    "hurt": { "pos": "adj", "ar": "مُصاب / متألم", "in_book_wordlist": false, "wb_page": 6 },
+    "angry": { "pos": "adj", "ar": "غاضب", "in_book_wordlist": false, "wb_page": 6 },
+    "worried": { "pos": "adj", "ar": "قلق", "in_book_wordlist": false, "wb_page": 7 },
+    "amazed": { "pos": "adj", "ar": "مندهش / مذهول", "in_book_wordlist": false, "wb_page": 7 },
+    "map": { "pos": "n", "ar": "خريطة", "in_book_wordlist": false, "wb_page": 7 },
+    "peak": { "pos": "n", "ar": "قمّة جبل", "in_book_wordlist": true, "wb_page": 111 },
+    "side": { "pos": "n", "ar": "جانب / ناحية", "in_book_wordlist": true, "wb_page": 111 },
+    "stuck": { "pos": "adj", "ar": "عالق / محاصر", "in_book_wordlist": false, "wb_page": 7 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_7-ab-notes",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 6 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.7 A Listen to the conversation once and tick the correct information. / 1.7 B Listen again and look at the map.",
+      "prompt_ar": "مراجعة أسئلة الاستماع 1.7 A و1.7 B (مع التنبيه لغياب نص الشريط الصوتي الرسمي من الكتابين):",
+      "items": [
+        {
+          "num": 1,
+          "question": "Why must activities 1.7 A (questions 1–5) and 1.7 B (marking Andy & Mike on the map) be completed with your teacher or the official cassette?",
+          "model_answer": "The Pupil's Book and Workbook do not print the listening transcript of Andy and Mike's conversation (it belongs to the Teacher's Book cassette script). Therefore, marking where they crossed the river, where Andy fell, or ticking 'worried/hurt' must come from listening to the official audio rather than guessing.",
+          "explain_ar": "طبقاً لقواعد الأمانة العلمية (Rule 7)، لم نخترع إجابات شريط غير متاح في الملفات الرسمية، وسُجّل غياب شريط 1.7 في REVIEW_NEEDED.md. يمكنك التدرّب عملياً على مهارات الدرس في النشاطين C وD أدناه."
+        }
+      ],
+      "hints": [
+        "يمكنك مع ذلك توقّع سياق الحوار من الخريطة: Snow Peak (جبل)، نهران يعبران المنطقة، وسؤال عن السقوط والمغادرة.",
+        "العمل التفاعلي الأساسي القابل للحل الذاتي في هذه الصفحة هو قراءة خريطة Snow Peak في 1.7 C و1.7 D."
+      ]
+    },
+    {
+      "id": "wb-1_7-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 7 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Describe to your partner the location of Andy and Mike exactly. Use some of the following words and phrases: near ... / north of ... / south of ... / on the east side of ... / about ... kilometres from ...",
+      "prompt_ar": "تدرّب على وصف المواقع الجغرافية على خريطة WB ص 7 مستعيناً بتعابير التمرين C:",
+      "word_bank": ["north", "south", "east", "near", "kilometres"],
+      "items": [
+        { "num": 1, "prompt": "1 Cliff Farm is ______ of Snow Peak.", "answers": ["north"] },
+        { "num": 2, "prompt": "2 High View is ______ of Snow Peak.", "answers": ["south"] },
+        { "num": 3, "prompt": "3 Valley Side is on the ______ side of Snow Peak.", "answers": ["east"] },
+        { "num": 4, "prompt": "4 The central river passes ______ Sheep Moor before reaching Snow Peak.", "answers": ["near"] },
+        { "num": 5, "prompt": "5 Looking at the scale bar, Snow Peak is about 15 ______ east of North Edge.", "answers": ["kilometres"] }
+      ],
+      "hints": [
+        "ارسم الاتجاهات الأربعة حول Snow Peak: Cliff Farm في الأعلى (north)، High View في الأسفل (south)، Valley Side في اليمين (east).",
+        "الإجابات: 1 north، 2 south، 3 east، 4 near، 5 kilometres."
+      ]
+    },
+    {
+      "id": "wb-1_7-d",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 7 },
+      "type": "guided_steps",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "D Role play a telephone conversation with your partner. Imagine you are stuck on Snow Peak. Call Snow Peak Rescue. Describe your location.",
+      "prompt_ar": "محاكاة مكالمة الطوارئ مع فريق إنقاذ Snow Peak Rescue (النشاط D) خطوة بخطوة:",
+      "guidance_literal": "near ... north of ... / south of ... on the east side of ... about ... kilometres from ...",
+      "steps": [
+        { "label_ar": "1) اذكر معْلَماً رئيسياً قريباً (near ...)", "placeholder": "I am stuck near Snow Peak, close to the small circle at the top." },
+        { "label_ar": "2) حدد موقعك شمال أو جنوب مَعْلَم آخر", "placeholder": "I am south of Cliff Farm and north of High View." },
+        { "label_ar": "3) حدد الجهة (on the east / west side of ...)", "placeholder": "I am on the east side of the river crossing near Snow Peak." },
+        { "label_ar": "4) قدّر المسافة بمقياس الخريطة (about ... kilometres from ...)", "placeholder": "I am about 10 kilometres west of Valley Side." }
+      ],
+      "hints": [
+        "استخدم تراكيب النشاط C الأربعة بالترتيب لتوجيه فريق الإنقاذ بدقة قبل حلول الظلام.",
+        "تحقّق من مقياس 10 Km في زاوية الخريطة لتقدير المسافة منطقياً."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_7-a",
+      "origin": "educational_addition",
+      "page_ref": 7,
+      "questions": [
+        {
+          "id": "q-1_7-1",
+          "type": "mcq",
+          "stem": "On the WB page 7 map (using compass N pointing straight up), where is Cliff Farm located relative to Snow Peak?",
+          "evidence_block_id": "u1-1_7-map",
+          "options": [
+            { "text": "North (slightly north-west) of Snow Peak", "is_correct": true, "why_wrong": null },
+            { "text": "South of High View", "is_correct": false, "why_wrong": "High View تقع في أقصى جنوب الخريطة، أما Cliff Farm فهي في الحافة الشمالية." },
+            { "text": "On the east side of Green Dale", "is_correct": false, "why_wrong": "Green Dale تقع في الركن الشمالي الشرقي شرق النهر، أما Cliff Farm فتقع غرب النهر وشمال Sheep Moor." },
+            { "text": "South-west of North Edge", "is_correct": false, "why_wrong": "North Edge هي التي تقع في الجنوب الغربي من Snow Peak." }
+          ],
+          "hints": [
+            "انظر إلى سهم الشمال N في الزاوية اليسرى السفلية للخريطة.",
+            "ابحث عن موقع Cliff Farm في أعلى منتصف الخريطة مقارنة بـ Snow Peak في الوسط.",
+            "الصحيح: شمال (شمال غرب قليلاً) من Snow Peak."
+          ],
+          "explain": "يشير سهم البوصلة N إلى أعلى الصفحة، وتقع Cliff Farm في أعلى الخريطة فوق Snow Peak أي شمالها."
+        },
+        {
+          "id": "q-1_7-2",
+          "type": "mcq",
+          "stem": "What is the total length represented by the marked scale bar at the bottom-left corner of the WB p. 7 map?",
+          "evidence_block_id": "u1-1_7-map",
+          "options": [
+            { "text": "10 Km", "is_correct": true, "why_wrong": null },
+            { "text": "5 Km", "is_correct": false, "why_wrong": "مقياس الرسم في أسفل اليسار مكتوب تحته صراحةً 10 Km." },
+            { "text": "50 Km", "is_correct": false, "why_wrong": "هذا الرقم غير موجود على مقياس الرسم؛ المكتوب أسفل الشريط الأسود والأبيض هو 10 Km." },
+            { "text": "100 Km", "is_correct": false, "why_wrong": "الرقم المثبت في زاوية الخريطة هو 10 Km وليس 100 Km." }
+          ],
+          "hints": [
+            "انظر إلى أسفل اليسار تحت عبارة North Edge مباشرة.",
+            "اقرأ الرقم والوحدة تحت مقياس الرسم المقسّم بالأبيض والأسود.",
+            "الصحيح: 10 Km."
+          ],
+          "explain": "يُظهر شريط القياس أسفل الخريطة يساراً القيمة 10 Km لتقدير المسافات في التمرين C."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_7-northof", "origin": "from_book", "page_ref": 7, "front": "north of / south of", "back": "شمال ... / جنوب ...", "tag": "Unit 1 · 1.7" },
+    { "id": "fc-1_7-eastside", "origin": "from_book", "page_ref": 7, "front": "on the east side of ...", "back": "على الجانب الشرقي من ...", "tag": "Unit 1 · 1.7" },
+    { "id": "fc-1_7-stuck", "origin": "from_book", "page_ref": 7, "front": "stuck (adj)", "back": "عالق (لا يستطيع الخروج/التحرك)", "tag": "Unit 1 · 1.7" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 6–7 مع tesseract.js eng: أخرجت OCR التسمية '17 A' و'tis' (It is) ورموزاً مشوّشة لأسماء الخريطة، وصُحّحت جميعها بصرياً من شرائح 250 DPI لخريطة WB ص 7؛ كما حُفظ الخطأ المطبعي 'Your work for Snow Peak Rescue' حرفياً وسُجّل غياب نص الشريط السماعي في REVIEW_NEEDED.md."
+  }
+}
