@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مراجعة بشرية — SR4 · Sound</title>
+<style>
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #F1F5F9; color: #0F172A; }
+header { background: #064E3B; color: #fff; padding: 12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 12px; }
+@media (min-width: 960px) { .grid { grid-template-columns: 45% 55%; align-items: start; } .pane-img { position: sticky; top: 12px; } }
+.pane { background: #fff; border: 1px solid #CBD5E1; border-radius: 12px; padding: 12px; }
+.pane img { width: 100%; height: auto; border: 1px solid #E2E8F0; border-radius: 8px; margin-top: 8px; }
+.blk { border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px; margin-bottom: 10px; background: #F8FAFC; }
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.pill { padding: 2px 8px; border-radius: 8px; background: #E2E8F0; font-size: 12px; }
+pre.txt { white-space: pre-wrap; font-family: inherit; margin: 4px 0; line-height: 1.65; }
+pre.json { white-space: pre-wrap; font-size: 12px; background: #fff; padding: 8px; border-radius: 8px; overflow-x: auto; }
+.note { margin-top: 6px; background: #E0F2FE; padding: 6px 9px; border-radius: 8px; font-size: 13px; }
+select { padding: 6px 10px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div><strong>أداة المراجعة البشرية (أوفلاين): SR4 · Sound</strong> · درس: eng-sci-4</div>
+  <div><select id="refSel" onchange="document.getElementById('refImg').src=this.value"><option value="../../books/english/assets/ref/pb_p068.webp">PB_68 (assets/ref/pb_p068.webp)</option><option value="../../books/english/assets/ref/wb_p100.webp">WB_100 (assets/ref/wb_p100.webp)</option></select></div>
+</header>
+<div class="grid">
+  <section class="pane pane-img">
+    <strong>صورة الصفحة الأصلية من الكتاب</strong>
+    <img id="refImg" src="../../books/english/assets/ref/pb_p068.webp" alt="Reference page">
+  </section>
+  <section class="pane">
+    <h3>النصوص المستخرجة كتلةً كتلة (2)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">sci-4-waves-frequency · reading · PB ص 68</span></div><pre class="txt" dir="ltr">SCIENCE 4   Sound
+SOUND WAVES
+Sound travels as waves. Unlike light waves, sound waves need a substance, such as air, to travel through. Because sound waves cannot travel through a vacuum, there is no sound in outer space.
+Sound is created by something vibrating. As the source of the sound vibrates - an oud string, for example - the molecules in the air near the source are squeezed together. They, in turn, hit against the molecules next to them and are pulled back into place by the molecules behind them. In this way, sound waves move through the air.
+FREQUENCY
+Sound range from very low to very high. What makes the pitch different is the frequency of the sound waves. Frequency is measured in hertz (Hz) - the number of waves per second. One hertz is equal to one wave per second. A person with very good hearing can hear sounds down to about 20 Hz and up to about 20 kilohertz (kHz), or 20,000 Hz.
+Graph box: Sound waves can be represented by graphs showing how the intensity, or strength, varies with time. These graphs represent sound of three frequencies. At a frequency of 20 Hz, 1 complete wave occurs in 1/20 second. At a frequency of 50 Hz, there are 2 1/2 waves during the same time, and at 100 Hz there are 5.</pre></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">sci-4-ultrasound-volume · reading · PB ص 68</span></div><pre class="txt" dir="ltr">ULTRASONIC SOUND
+Frequencies higher than those that can be heard by people are called ultrasonic, meaning &#x27; beyond sound&#x27;. One of the special qualities of ultrasound is that it does not spread out nearly as much as ordinary sound, so it can be directed almost like a beam of light. In industry, it can be used to find invisible flaws in solid metals.
+Caption: Ultrasonic sound can be heard by many animals. Bats and dolphins can produce and hear sounds of 120 kHz or more. Ultrasonic sound allows bats to &#x27; see&#x27; in the dark and dolphins to find their way underwater.
+VOLUME
+Volume, or loudness is measured in decibels (dB). The sound of people talking measures between 50 and 70 dB; the sound of a jet plane taking off measures between 110 and 140 dB. Sounds of more than 120 dB cause pain and can lead to deafness.
+Discussion: • How is ultrasound used in medicine?  • What is the loudness sound you have heard?</pre><div class="note"><strong>إضافة تعليمية:</strong> <strong>ملاحظات استخراج كسور ونقل حرفي (<bdi dir='ltr'>PB p. 68 &amp; WB p. 116</bdi>):</strong><br>1) أُعيد التحقق بصرياً من الكسرين داخل صندوق التردد في <span dir='ltr'>pb-70.png</span>: <code>1/20 second</code> و<code>2 1/2 waves</code> (إذ يدمج مستخرج النص الآلي الأرقام فيصير <code>22 waves</code> سهواً!).<br>2) صيغ مطبعية محفوظة حرفياً: <span dir='ltr'><code>Sound range from</code></span> (بلا <span dir='ltr'>-s</span> المفرد)، ومسافات قبل <span dir='ltr'><code>' beyond sound'</code></span> و<span dir='ltr'><code>' see'</code></span>، وصفة <span dir='ltr'><code>the loudness sound</code></span> (بدل <span dir='ltr'>loudest</span>) في سؤال المناقشة، وسقوط القوس المفتوح في قائمة المفردات <span dir='ltr'><code>hertz Hz)</code></span> (WB ص 116).</div></div>
+    <h3>أنشطة كتاب التمارين (3)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-sci_4-c · WB ص 100</span></div><div class="txt" dir="ltr">SCIENCE 4 C Read the texts more carefully and complete this table about measuring sound.</div><details><summary>عرض العناصر والحل المقترح (8)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;prompt&quot;: &quot;frequency → unit of measurement: ______ (and kilohertz)&quot;,
+    &quot;answers&quot;: [
+      &quot;hertz&quot;,
+      &quot;Hertz&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 2,
+    &quot;prompt&quot;: &quot;frequency → abbreviation: ______ (and kHz)&quot;,
+    &quot;answers&quot;: [
+      &quot;Hz&quot;,
+      &quot;Hz / kHz&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;prompt&quot;: &quot;frequency examples → human range: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;20 Hz to 20 kHz&quot;,
+      &quot;20 Hz - 20 kHz&quot;,
+      &quot;20 Hz to 20,000 Hz&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 4,
+    &quot;prompt&quot;: &quot;frequency examples → bat and dolphin range: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;120 kHz or more&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 5,
+    &quot;prompt&quot;: &quot;item (with unit &#x27;decibels&#x27;): ______&quot;,
+    &quot;answers&quot;: [
+      &quot;volume&quot;,
+      &quot;loudness&quot;,
+      &quot;volume / loudness&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 6,
+    &quot;prompt&quot;: &quot;decibels → abbreviation: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;dB&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 7,
+    &quot;prompt&quot;: &quot;decibels examples → talking: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;50-70 dB&quot;,
+      &quot;50 to 70 dB&quot;,
+      &quot;between 50 and 70 dB&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 8,
+    &quot;prompt&quot;: &quot;decibels examples → jet plane: ______&quot;,
+    &quot;answers&quot;: [
+      &quot;110-140 dB&quot;,
+      &quot;110 to 140 dB&quot;,
+      &quot;between 110 and 140 dB&quot;
+    ]
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-sci_4-d · WB ص 100</span></div><div class="txt" dir="ltr">D What is the significance of these words in the text? (1 vacuum: Sound waves cannot travel through a vacuum.)</div><details><summary>عرض العناصر والحل المقترح (3)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 2,
+    &quot;question&quot;: &quot;2 vibration&quot;,
+    &quot;model_answer&quot;: &quot;Sound is created by something vibrating (e.g. an oud string).&quot;,
+    &quot;explain_ar&quot;: &quot;مصدر تولّد كل صوت.&quot;
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;question&quot;: &quot;3 molecules&quot;,
+    &quot;model_answer&quot;: &quot;Molecules in the air near a vibrating source are squeezed together, hit neighbouring molecules, and carry sound waves through the air.&quot;,
+    &quot;explain_ar&quot;: &quot;تنتقل الموجة بتضاغط جزيئات الهواء وتصادمها.&quot;
+  },
+  {
+    &quot;num&quot;: 4,
+    &quot;question&quot;: &quot;4 pitch&quot;,
+    &quot;model_answer&quot;: &quot;How low or high a sound is, which depends on the frequency of the sound waves.&quot;,
+    &quot;explain_ar&quot;: &quot;تتحدد درجة الحدة أو الغلظة بالتردد.&quot;
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-sci_4-e · WB ص 100</span></div><div class="txt" dir="ltr">E From the information in the texts, write answers to these questions. (1–3)</div><details><summary>عرض العناصر والحل المقترح (3)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;question&quot;: &quot;1 How can sound be useful in factories?&quot;,
+    &quot;model_answer&quot;: &quot;Ultrasound does not spread out much and can be directed like a beam of light to detect invisible flaws inside solid metals.&quot;,
+    &quot;explain_ar&quot;: &quot;كشف الشقوق الخفية داخل المعادن الصلبة بالصناعة.&quot;
+  },
+  {
+    &quot;num&quot;: 2,
+    &quot;question&quot;: &quot;2 How can headphones be dangerous?&quot;,
+    &quot;model_answer&quot;: &quot;If played at very loud volume (especially over 120 dB), sounds right against the ear cause pain and can lead to deafness.&quot;,
+    &quot;explain_ar&quot;: &quot;الضوضاء العالية فوق 120 ديسيبل تؤدي إلى الصمم.&quot;
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;question&quot;: &quot;3 How do bats &#x27;see&#x27;?&quot;,
+    &quot;model_answer&quot;: &quot;They produce and hear high-frequency ultrasonic sound waves (120 kHz or more) that bounce off objects in the dark, allowing them to navigate without light.&quot;,
+    &quot;explain_ar&quot;: &quot;استعمال صدى الموجات فوق الصوتية في الظلام.&quot;
+  }
+]</pre></details></div>
+    <h3>الأسئلة والاختبارات الذاتية</h3>
+    <div class="blk"><div class="meta"><span class="pill">q-sci_4-1 · mcq · دليل: sci-4-waves-frequency</span></div><div class="txt" dir="auto"><strong>According to the frequency graph on PB page 68, how many complete waves occur in 1/20 second at 50 Hz?</strong></div><ul><li style="color:#065F46">2 1/2 waves ✓</li><li style="color:#991B1B">22 waves ✗ — الرقم 22 قراءة آلية خاطئة للكسر المطبوع 2 1/2!</li><li style="color:#991B1B">1 wave ✗ — موجة واحدة تحدث في 1/20 ثانية عند تردد 20 Hz.</li><li style="color:#991B1B">5 waves ✗ — 5 موجات تحدث في 1/20 ثانية عند تردد 100 Hz.</li></ul></div><div class="blk"><div class="meta"><span class="pill">q-sci_4-2 · mcq · دليل: sci-4-ultrasound-volume</span></div><div class="txt" dir="auto"><strong>Above which decibel level (dB) do sounds begin to cause pain and potentially lead to deafness (PB p. 68)?</strong></div><ul><li style="color:#065F46">More than 120 dB ✓</li><li style="color:#991B1B">Between 50 and 70 dB ✗ — هذا هو مستوى محادثة الناس العادية وهو آمن تماماً.</li><li style="color:#991B1B">Below 20 Hz ✗ — الهيرتز وحدة للتردد وليس لشدة الصوت (decibels).</li><li style="color:#991B1B">Between 2.2 and 5 ✗ — هذا نطاق الرقم الهيدروجيني للمطر الحمضي في الدرس العلمي الأول.</li></ul></div>
+    <h3>ملاحظات التدقيق والاستخراج الأولي</h3><pre class="json">{
+  &quot;pb_text_vs_image&quot;: &quot;طُوبقت PB ص 68 مع pb-70.png: صُحّحت قراءة pdftotext الخاطئة &#x27;22 waves&#x27; إلى الكسر المطبوع فعلياً &#x27;2 1/2 waves&#x27;، وحُفظت صيغ &#x27;Sound range from&#x27; و&#x27;the loudness sound&#x27;.&quot;,
+  &quot;wb_ocr_vs_image&quot;: &quot;طُوبقت WB ص 100 مع wb_tail-101.png وتم استكمال جدول القياس 4 C و4 D و4 E.&quot;
+}</pre>
+  </section>
+</div>
+</body>
+</html>

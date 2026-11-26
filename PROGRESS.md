@@ -119,7 +119,7 @@
   - [x] `sci-1` Acids and alkalis (PB pp. 63–65 / WB pp. 96–97)
   - [x] `sci-2` States of matter (PB p. 66 / WB pp. 97–98)
   - [x] `sci-3` Light (PB p. 67 / WB pp. 98–99)
-  - [ ] `sci-4` Sound (p. 68)
+  - [x] `sci-4` Sound (PB p. 68 / WB p. 100)
   - [ ] `sci-5` Arab scientists (p. 69)
   - [ ] `sci-6` Vaccinations (p. 70)
   - [ ] `sci-7` Experimental procedures (p. 71)
