@@ -125,7 +125,7 @@
   - [x] `sci-7` Experimental procedures (PB p. 71 / WB pp. 103–105)
   - [x] `sci-8` Internal combustion engine (p. 72)
   - [x] `sci-9` The Moon (p. 73)
-  - [ ] `sci-10` Radioactivity (p. 74)
+  - [x] `sci-10` Radioactivity (p. 74)
 - **QA & التغطية الكاملة للإنجليزي**
   - [ ] مطابقة صفحة بصفحة مع PB (77 ص) وWB (120 ص) وقوائم المفردات (ص 112–118) + تقرير `QA/english/COVERAGE_REPORT.md`
 
