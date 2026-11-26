@@ -122,7 +122,7 @@
   - [x] `sci-4` Sound (PB p. 68 / WB p. 100)
   - [x] `sci-5` Arab scientists (PB p. 69 / WB p. 101)
   - [x] `sci-6` Vaccinations (PB p. 70 / WB pp. 102–103)
-  - [ ] `sci-7` Experimental procedures (p. 71)
+  - [x] `sci-7` Experimental procedures (PB p. 71 / WB pp. 103–105)
   - [ ] `sci-8` Internal combustion engine (p. 72)
   - [ ] `sci-9` The Moon (p. 73)
   - [ ] `sci-10` Radioactivity (p. 74)

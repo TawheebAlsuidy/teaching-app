@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مراجعة بشرية — SR7 · Experimental procedures</title>
+<style>
+body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #F1F5F9; color: #0F172A; }
+header { background: #064E3B; color: #fff; padding: 12px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 12px; }
+@media (min-width: 960px) { .grid { grid-template-columns: 45% 55%; align-items: start; } .pane-img { position: sticky; top: 12px; } }
+.pane { background: #fff; border: 1px solid #CBD5E1; border-radius: 12px; padding: 12px; }
+.pane img { width: 100%; height: auto; border: 1px solid #E2E8F0; border-radius: 8px; margin-top: 8px; }
+.blk { border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px; margin-bottom: 10px; background: #F8FAFC; }
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.pill { padding: 2px 8px; border-radius: 8px; background: #E2E8F0; font-size: 12px; }
+pre.txt { white-space: pre-wrap; font-family: inherit; margin: 4px 0; line-height: 1.65; }
+pre.json { white-space: pre-wrap; font-size: 12px; background: #fff; padding: 8px; border-radius: 8px; overflow-x: auto; }
+.note { margin-top: 6px; background: #E0F2FE; padding: 6px 9px; border-radius: 8px; font-size: 13px; }
+select { padding: 6px 10px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div><strong>أداة المراجعة البشرية (أوفلاين): SR7 · Experimental procedures</strong> · درس: eng-sci-7</div>
+  <div><select id="refSel" onchange="document.getElementById('refImg').src=this.value"><option value="../../books/english/assets/ref/pb_p071.webp">PB_71 (assets/ref/pb_p071.webp)</option><option value="../../books/english/assets/ref/wb_p103.webp">WB_103 (assets/ref/wb_p103.webp)</option><option value="../../books/english/assets/ref/wb_p104.webp">WB_104 (assets/ref/wb_p104.webp)</option><option value="../../books/english/assets/ref/wb_p105.webp">WB_105 (assets/ref/wb_p105.webp)</option></select></div>
+</header>
+<div class="grid">
+  <section class="pane pane-img">
+    <strong>صورة الصفحة الأصلية من الكتاب</strong>
+    <img id="refImg" src="../../books/english/assets/ref/pb_p071.webp" alt="Reference page">
+  </section>
+  <section class="pane">
+    <h3>النصوص المستخرجة كتلةً كتلة (1)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">sci-7-guidelines · reading · PB ص 71</span></div><pre class="txt" dir="ltr">SCIENCE 7   Experimental procedures
+When you carry out a scientific experiment, every stage of the process should be recorded and written up as a full report to show your results and conclusions. Such reports help you think about what you did and point you towards possible solutions to problems.
+Without a correctly written-up procedure, it is impossible to monitor scientific progress or exchange scientific information.
+The starting point for scientific experiments is to answer a question, for example: What happens when you heat wood/metal/plastic? Experiments should always be measurable and show cause and effect.
+Reports on experimental procedures should follow these (or similar) guidelines:
+Writing experiments (PB p. 71 form)
+QUESTION: The question should be detailed.
+RESEARCH: This should be one or two sentences describing the information you know about the question. It should be the information on which you base your hypothesis.
+HYPOTHESIS: This is an educated guess - a statement based on your previous research and experience that should answer the question.
+MATERIALS: A list of everything needed for the experiment.
+PROCEDURE: A step-by-step list of numbered instructions showing how to do the experiment. Each step should start on a new line and usually begin with a verb.
+DATA: This is information collected during the experiment. It should include: • all measurements and observations  • tables showing the data  • numerical data shown as graphs
+SUMMARY: The summary is one or two sentences that explain the data.
+CONCLUSION: This can have four parts: • analyse the data  • see if your hypothesis was correct  • describe or explain your evidence  • identify experiment errors
+Discussion: • What experiments would you like to carry out?  • Why are experiments important for progress?</pre><div class="note"><strong>إضافة تعليمية:</strong> <strong>ملاحظات نقل حرفي (<bdi dir='ltr'>WB p. 103 &amp; p. 104</bdi>):</strong> حُفظت الصيغ المطبوعة في <span dir='ltr'>WB</span> حرفياً: النقطتان في <span dir='ltr'><code>set out to..</code></span> (<span dir='ltr'>7 A #4</span>)، والنقطة بعد <span dir='ltr'><code>for example.</code></span> داخل الملاحظة النموذجية (<span dir='ltr'>7 B</span>)، والشرطة المفردة مع مسافة في قائمة المفردات <span dir='ltr'><code>step -by-step</code></span> (<span dir='ltr'>WB ص 116</span>).</div></div>
+    <h3>أنشطة كتاب التمارين (3)</h3>
+    <div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-sci_7-a · WB ص 103</span></div><div class="txt" dir="ltr">SCIENCE 7 A Read the introduction on PB page 71, then match the beginnings and endings of the sentences without looking at the text.</div><details><summary>عرض العناصر والحل المقترح (5)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;prompt&quot;: &quot;1 Every stage of a scientific experiment should ... → ______&quot;,
+    &quot;answers&quot;: [
+      &quot;c&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 2,
+    &quot;prompt&quot;: &quot;2 This report will ... → ______&quot;,
+    &quot;answers&quot;: [
+      &quot;e&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;prompt&quot;: &quot;3 If the procedure isn&#x27;t written up, it is impossible to... → ______&quot;,
+    &quot;answers&quot;: [
+      &quot;d&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 4,
+    &quot;prompt&quot;: &quot;4 Scientific experiments set out to.. → ______&quot;,
+    &quot;answers&quot;: [
+      &quot;a&quot;
+    ]
+  },
+  {
+    &quot;num&quot;: 5,
+    &quot;prompt&quot;: &quot;5 Experiments should always... → ______&quot;,
+    &quot;answers&quot;: [
+      &quot;b&quot;
+    ]
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-sci_7-b · WB ص 104</span></div><div class="txt" dir="ltr">B Read the information about writing up experiments. Then discuss this report. What is wrong with it? (QUESTION solved as example; solve RESEARCH–CONCLUSION)</div><details><summary>عرض العناصر والحل المقترح (7)</summary><pre class="json">[
+  {
+    &quot;num&quot;: 1,
+    &quot;question&quot;: &quot;RESEARCH: &#x27;Some things float on water.&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Too vague and does not provide useful scientific information to base a hypothesis on (e.g., density, shape, or trapped air inside hollow metal ships).&quot;,
+    &quot;explain_ar&quot;: &quot;لم يقدّم خلفية علمية تؤسَّس عليها الفرضية.&quot;
+  },
+  {
+    &quot;num&quot;: 2,
+    &quot;question&quot;: &quot;HYPOTHESIS: &#x27;Perhaps water is solid.&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Not an educated guess based on research or experience — everyone already knows water at room temperature is a liquid, not a solid.&quot;,
+    &quot;explain_ar&quot;: &quot;تخمين غير منطقي لا يستند إلى البحث ولا الخبرة.&quot;
+  },
+  {
+    &quot;num&quot;: 3,
+    &quot;question&quot;: &quot;MATERIALS: &#x27;water, things&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Incomplete and far too vague (&#x27;things&#x27;); it must list every specific item and measuring tool needed (e.g. tank of water, steel ball, empty hollow metal tin/dish, balance).&quot;,
+    &quot;explain_ar&quot;: &quot;كلمة things مبهمة وتنقصها القائمة الدقيقة.&quot;
+  },
+  {
+    &quot;num&quot;: 4,
+    &quot;question&quot;: &quot;PROCEDURE: &#x27;Put some things in water. See what happens.&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Not a step-by-step numbered list, lacks measurable details and clear verbs on separate lines.&quot;,
+    &quot;explain_ar&quot;: &quot;تنقصها الخطوات المرقّمة المحددة والقياسات.&quot;
+  },
+  {
+    &quot;num&quot;: 5,
+    &quot;question&quot;: &quot;DATA: &#x27;I put some things in water. The small heavy things sank but some of the flat heavy things floated.&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Repeats procedure wording (&#x27;I put...&#x27;) and lacks concrete measurements (weight/dimensions of specific named objects), structured observations, tables, or graphs.&quot;,
+    &quot;explain_ar&quot;: &quot;تخلو من الأرقام والملاحظات المجدولة.&quot;
+  },
+  {
+    &quot;num&quot;: 6,
+    &quot;question&quot;: &quot;SUMMARY: &#x27;Flat things usually float.&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Too general and unsupported by measured data (for instance, a flat solid iron plate sinks whereas hollow shaped dishes float by displacing water).&quot;,
+    &quot;explain_ar&quot;: &quot;استنتاج متسرّع لا يفسّر البيانات بدقة.&quot;
+  },
+  {
+    &quot;num&quot;: 7,
+    &quot;question&quot;: &quot;CONCLUSION: &#x27;My idea was wrong.&#x27;&quot;,
+    &quot;model_answer&quot;: &quot;Too short and missing most of the four parts required: it does not analyse the data, state the original hypothesis, explain the evidence, or identify experiment errors.&quot;,
+    &quot;explain_ar&quot;: &quot;اقتصر على جملة قصيرة وغاب عنه التحليل والدليل ورصد الأخطاء.&quot;
+  }
+]</pre></details></div><div class="blk"><div class="meta"><span class="badge" style="background:#D1FAE5;color:#065F46">من الكتاب</span><span class="pill">wb-sci_7-c · WB ص 105</span></div><div class="txt" dir="ltr">C Do heavy things fall faster than light things? Devise an experiment to find out. Write it up on the form below. (QUESTION: Is the speed of falling directly related to the weight of an object?)</div><details><summary>عرض العناصر والحل المقترح (3)</summary><pre class="json">[
+  {
+    &quot;label_ar&quot;: &quot;RESEARCH &amp; HYPOTHESIS (الخلفية والفرضية المعلّلة)&quot;,
+    &quot;placeholder&quot;: &quot;RESEARCH: Gravity pulls all objects toward Earth, while air pushes upward (air resistance) more strongly on wide, flat objects than on compact spheres.  |  HYPOTHESIS: Compact heavy and light spheres of equal size will hit the ground at the same time (speed does NOT depend on weight alone).&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;MATERIALS &amp; PROCEDURE (الأدوات والخطوات المرقّمة بالأفعال)&quot;,
+    &quot;placeholder&quot;: &quot;MATERIALS: A solid iron ball (500 g), a hollow plastic ball of identical diameter (50 g), a 2-metre measuring tape, a flat tray on the floor.  |  PROCEDURE: 1. Hold both spheres at exactly 2.00 metres above the tray. 2. Release both at the exact same instant. 3. Listen and watch which hits the tray first. 4. Repeat 3 times and also compare dropping a flat sheet vs a crumpled paper ball.&quot;
+  },
+  {
+    &quot;label_ar&quot;: &quot;DATA, SUMMARY &amp; 4-PART CONCLUSION (البيانات، الملخص، والاستنتاج رباعي الأجزاء)&quot;,
+    &quot;placeholder&quot;: &quot;DATA: Trial 1–3: Iron ball &amp; plastic ball hit simultaneously (at ~0.64 s); flat paper took ~1.9 s while crumpled ball (~0.66 s).  |  SUMMARY: Compact spheres of very different weights fell at the same speed, whereas flat paper slowed down.  |  CONCLUSION: Analysing the data confirms our hypothesis: falling speed is not caused by weight, because equal-sized balls reached the bottom together (our evidence); differences with flat paper came from air resistance, and timing errors come from slight hand-release delay.&quot;
+  }
+]</pre></details></div>
+    <h3>الأسئلة والاختبارات الذاتية</h3>
+    <div class="blk"><div class="meta"><span class="pill">q-sci_7-1 · mcq · دليل: sci-7-guidelines</span></div><div class="txt" dir="auto"><strong>According to the Writing experiments guide on PB page 71, how should every line of the PROCEDURE be written?</strong></div><ul><li style="color:#065F46">As a step-by-step list of numbered instructions, each starting on a new line with a verb. ✓</li><li style="color:#991B1B">As one paragraph in the past tense beginning with &#x27;I think maybe&#x27;. ✗ — الخطوات تُكتب مرقّمة في صورة تعليمات (أفعال أمر) لا تخمينات.</li><li style="color:#991B1B">Without listing materials or numbers so readers guess what to use. ✗ — قائمة MATERIALS تأتي قبلها وتحدد كل أداة مطلوبة بوضوح.</li><li style="color:#991B1B">Combining hypothesis errors and graphs into one word. ✗ — الرسوم في قسم DATA، وأخطاء التجربة في قسم CONCLUSION.</li></ul></div><div class="blk"><div class="meta"><span class="pill">q-sci_7-2 · mcq · دليل: sci-7-guidelines</span></div><div class="txt" dir="auto"><strong>Why is &#x27;Perhaps water is solid&#x27; in WB Science 7 B a poor HYPOTHESIS?</strong></div><ul><li style="color:#065F46">Because a hypothesis must be an educated guess based on prior research and experience, not something known to be false. ✓</li><li style="color:#991B1B">Because hypotheses must always appear inside graphs in DATA. ✗ — الرسوم البيانية تخص DATA بعد تنفيذ التجربة.</li><li style="color:#991B1B">Because hypotheses should only list materials like water and metal. ✗ — سرد المواد هو وظيفة قسم MATERIALS.</li><li style="color:#991B1B">Because water only exists in gas state. ✗ — الماء السائل معروف للجميع في التجارب المعتادة.</li></ul></div>
+    <h3>ملاحظات التدقيق والاستخراج الأولي</h3><pre class="json">{
+  &quot;pb_text_vs_image&quot;: &quot;طُوبقت PB ص 71 مع pb-73.png (قائمة Writing experiments + أدوات المختبر والمناقشة).&quot;,
+  &quot;wb_ocr_vs_image&quot;: &quot;طُوبقت WB ص 103–105 مع wb_tail-104.png وwb_tail-105.png وwb_tail-106.png: حُفظت صيغ &#x27;set out to..&#x27; و&#x27;for example.&#x27;، وحُلّ نقد 7 B واستمارة 7 C.&quot;
+}</pre>
+  </section>
+</div>
+</body>
+</html>
