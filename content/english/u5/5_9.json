@@ -1,0 +1,215 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u5", "number": 5, "title": "Working things out" },
+  "lesson": {
+    "id": "eng-u5-5_9",
+    "code": "5.9",
+    "title": "Language review 10",
+    "title_ar": "مراجعة القواعد 10: الاستنتاج في الماضي، والفعل + مفعول + to + المصدر، والضمائر الانعكاسية",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 41, "book_page": 39 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 66, "book_page": 65 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 67, "book_page": 66 }
+    ],
+    "reference_images": {
+      "pb_39": "assets/ref/pb_p039.webp",
+      "wb_65": "assets/ref/wb_p065.webp",
+      "wb_66": "assets/ref/wb_p066.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u5-5_9-modals2",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 39 },
+      "dir": "ltr",
+      "recall_words": ["past participle", "mutiny", "because"],
+      "content": {
+        "lines": [
+          "5.9 Language review 10",
+          "1 Modal verbs - 2",
+          "There are different ways of talking about how something happened in the past.",
+          "• Suggesting a possible explanation-may/might/could+ have+ past participle",
+          "• Deciding on an explanation - must + have + past participle",
+          "• Not accepting the suggestion or decision - cannot/could not + have + past participle",
+          "• Giving reasons for (not) accepting a suggestion or decision - because",
+          "Examples: The sailors may/might/could have mutinied. | The sailors must have mutinied. | The sailors cannot/could not have mutinied. | The sailors of the Mary Celeste may (not) have mutinied because Captain Morehouse found a sword stained with blood."
+        ]
+      },
+      "edu_note_html": "<strong>ملاحظات نقل حرفي (<bdi dir='ltr'>PB p. 39</bdi> و<bdi dir='ltr'>WB p. 66</bdi>):</strong><br>1) حُفظ اتصال الشرطة وعلامة الجمع في السطر الأول من <bdi dir='ltr'>PB p. 39</bdi> كما طُبع: <span dir='ltr'><code>explanation-may/might/could+ have+ past participle</code></span>.<br>2) في <bdi dir='ltr'>WB 5.9 C #5</bdi> (ص 66) سقط الفعل الرئيسي <span dir='ltr'>decided</span> في الطباعة: <span dir='ltr'><code>All the passengers on the ship to throw ______ into the sea.</code></span> (المقتبسة من <bdi dir='ltr'>PB p. 39</bdi>: <span dir='ltr'>The passengers decided to drown themselves</span>)، وحُفظ النص المطبوع حرفياً.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "grammar_table",
+        "label": "قاعدة الاستنتاج الماضي: Modal + have + V3 (التصريف الثالث)",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 39,
+            "html": "<ul><li><b>الاستنتاج في الماضي (مع دليل حاضر أو ماضٍ):</b> نضع بعد الفعل الناقص دائماً <span dir='ltr'><b>have + V3</b></span> (مثال: <span dir='ltr'>It <b>must have</b> rained</span> / <span dir='ltr'>The crew <b>can't have</b> been eaten</span>).</li><li><b>تذكّر التحذير الذهبي:</b><br>الاستنتاج المستحيل في الماضي هو <span dir='ltr'><b>cannot / could not have + V3</b></span> (مثل #3 و#4 في <bdi dir='ltr'>5.9 A</bdi>) — وليس <span dir='ltr'>mustn't have</span>!</li><li>أما الاحتمال غير المؤكد (<span dir='ltr'>I don't know yet / It's difficult to say</span>) فيستعمل <span dir='ltr'><b>may / might / could have + V3</b></span>.</li></ul>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 39,
+            "caption": "الفرق الزمني بين أفعال الاستنتاج (Unit 5)",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><rect x='14' y='18' width='276' height='84' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='152' y='44' text-anchor='middle' font-size='12' font-weight='700'>Present Deduction (5.5)</text><text x='152' y='72' text-anchor='middle' font-size='11'>must / can't / may / might / could + V1</text><rect x='310' y='18' width='276' height='84' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='448' y='44' text-anchor='middle' font-size='12' font-weight='700'>Past Deduction (5.9)</text><text x='448' y='72' text-anchor='middle' font-size='11'>must / can't / may / might / could + HAVE + V3</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 65,
+            "html": "<p dir='ltr'><b>Notice WB 5.9 A #3 &amp; #4:</b> 'put' and 'been' are already printed after the blank, so write only <b>can't have</b> (not repeating 'been').</p>"
+          },
+          "self_check_ref": "chk-5_9-a",
+          "page_ref": { "book": "PB", "page": 39, "pdf_page": 41, "image": "assets/ref/pb_p039.webp" }
+        }
+      }
+    },
+    {
+      "id": "u5-5_9-pattern-reflex",
+      "origin": "from_book",
+      "type": "rule",
+      "source": { "book": "PB", "page": 39 },
+      "dir": "ltr",
+      "recall_words": ["order", "myself", "ourselves", "themselves"],
+      "content": {
+        "lines": [
+          "2 Verb + object + infinitive with to",
+          "This is a very common sentence pattern, used with many verbs.",
+          "Examples: He ordered his crew to put up signal flags. | The teacher wants us to work harder. | I would like you to come home early. | My mother asked me to help her.",
+          "3 Reflexive pronouns",
+          "The reflexive pronoun is used when the subject of a verb is also the object.",
+          "Singular: myself | yourself | himself | herself | itself",
+          "Plural: ourselves | yourselves | themselves",
+          "Example: The passengers decided to drown themselves.",
+          "Find examples of this language in the texts.",
+          "Now do activities A, B and C in the Workbook."
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "past participle": { "pos": "n", "ar": "التصريف الثالث للفعل (V3)", "in_book_wordlist": true, "wb_page": 113 },
+    "order": { "pos": "v", "ar": "يأمر (order + obj + to + V1)", "in_book_wordlist": true, "wb_page": 113 }
+  },
+  "activities": [
+    {
+      "id": "wb-5_9-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 65 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.9 A Use a modal verb to complete these sentences.",
+      "prompt_ar": "أكمل الجمل 1–6 باستعمال الفعل الناقص المناسب + have (انتبه لوجود الفعل في التصريف الثالث بعد الفراغ):",
+      "word_bank": ["must have", "may have / might have / could have", "can't have / couldn't have"],
+      "items": [
+        { "num": 1, "prompt": "1 It ______ rained last night. The roads are wet.", "answers": ["must have"] },
+        { "num": 2, "prompt": "2 I ______ passed the exam. I don't know yet.", "answers": ["may have", "might have", "could have", "may have / might have / could have"] },
+        { "num": 3, "prompt": "3 I ______ put enough salt in this soup. It's tasteless.", "answers": ["can't have", "couldn't have", "can't have / couldn't have"] },
+        { "num": 4, "prompt": "4 The crew ______ been eaten by a monster because there is no sign of panic.", "answers": ["can't have", "couldn't have", "can't have / couldn't have"] },
+        { "num": 5, "prompt": "5 The earthquake ______ been very strong because nearly all the buildings collapsed.", "answers": ["must have"] },
+        { "num": 6, "prompt": "6 Pirates ______ attacked the ship. It's difficult to say.", "answers": ["may have", "might have", "could have", "may have / might have / could have"] }
+      ],
+      "hints": [
+        "1 و5: دليل قاطع (roads wet / buildings collapsed) ← must have. 2 و6: تردد (don't know / difficult to say) ← may/might/could have. 3 و4: استحالة (tasteless / no sign of panic) ← can't/couldn't have."
+      ]
+    },
+    {
+      "id": "wb-5_9-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 66 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.9 B Report what these people say using the verb in brackets. Look at the example: 'Left turn!' the officer said to his men. (order) → The officer ordered his men to turn left.",
+      "prompt_ar": "حوّل الكلام المباشر 1–4 باستعمال التركيب: (Verb + object + to + infinitive):",
+      "word_bank": [
+        "My mother asked me to help her with the washing up.",
+        "Our teacher wanted us to learn ten new words for a test.",
+        "Captain Morehouse ordered his crew to row faster.",
+        "I asked the waiter to bring a glass of water."
+      ],
+      "items": [
+        { "num": 1, "prompt": "1 'Help me with the washing up,' my mother asked. (ask) → ______", "answers": ["My mother asked me to help her with the washing up."] },
+        { "num": 2, "prompt": "2 'Learn ten new words for a test,' said our teacher. (want) → ______", "answers": ["Our teacher wanted us to learn ten new words for a test.", "Our teacher wants us to learn ten new words for a test."] },
+        { "num": 3, "prompt": "3 'Row faster!' Captain Morehouse ordered his crew. (order) → ______", "answers": ["Captain Morehouse ordered his crew to row faster."] },
+        { "num": 4, "prompt": "4 'Please bring a glass of water,' I said to the waiter. (ask) → ______", "answers": ["I asked the waiter to bring a glass of water.", "I asked the waiter to bring me a glass of water."] }
+      ],
+      "hints": [
+        "أمثلة شخصية لأسئلة Write your own sentences: I want my best friend to help me revise. / I want my parents to be proud of me. / I want my teacher to explain the rule clearly."
+      ]
+    },
+    {
+      "id": "wb-5_9-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 66 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "5.9 C Use the correct reflexive pronouns. [Note: Item 5 prints 'All the passengers on the ship to throw ______ into the sea.' omitting 'decided']",
+      "prompt_ar": "املأ الفراغات 1–6 بالضمير الانعكاسي المطابق للفاعل (WB ص 66):",
+      "word_bank": ["ourselves", "yourselves", "herself", "myself", "themselves", "yourself"],
+      "items": [
+        { "num": 1, "prompt": "1 There's no need to help. We can take care of ______.", "answers": ["ourselves"] },
+        { "num": 2, "prompt": "2 Come in, please, and sit down. You are both most welcome. Make ______ at home.", "answers": ["yourselves"] },
+        { "num": 3, "prompt": "3 My sister hurt ______ playing volleyball yesterday.", "answers": ["herself"] },
+        { "num": 4, "prompt": "4 You never listen to me. I may as well talk to ______.", "answers": ["myself"] },
+        { "num": 5, "prompt": "5 All the passengers on the ship to throw ______ into the sea.", "answers": ["themselves"] },
+        { "num": 6, "prompt": "6 Ahmed! What have you been doing? Go and wash ______.", "answers": ["yourself"] }
+      ],
+      "hints": [
+        "انتبه للفرق بين المخاطب المفرد في #6 (Ahmed! → yourself) والمخاطب المثنى/الجمع في #2 (You are both → yourselves)!"
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-5_9-a",
+      "origin": "educational_addition",
+      "page_ref": 39,
+      "questions": [
+        {
+          "id": "q-5_9-1",
+          "type": "mcq",
+          "stem": "Choose the right modal form for WB 5.9 A #3: 'I ______ put enough salt in this soup. It's tasteless.'",
+          "evidence_block_id": "u5-5_9-modals2",
+          "options": [
+            { "text": "can't have / couldn't have", "is_correct": true, "why_wrong": null },
+            { "text": "must have", "is_correct": false, "why_wrong": "لو وضع ملحاً كافياً لما كان الحساء بلا طعم (tasteless)." },
+            { "text": "mustn't have", "is_correct": false, "why_wrong": "تستعمل لغة المنهج cannot / could not + have + V3 لنفي الاستنتاج في الماضي." },
+            { "text": "may to have", "is_correct": false, "why_wrong": "لا تأتي to بعد الأفعال الناقصة." }
+          ],
+          "hints": [
+            "الدليل الحاضر (It's tasteless) يدل على استحالة وضع ملح كافٍ في الماضي."
+          ],
+          "explain": "للاستبعاد المنطقي في الماضي نستعمل can't/couldn't have متبوعةً بالتصريف الثالث (put)."
+        },
+        {
+          "id": "q-5_9-2",
+          "type": "mcq",
+          "stem": "Why does WB 5.9 C #2 ('You are both most welcome. Make ______ at home.') use 'yourselves' rather than 'yourself'?",
+          "evidence_block_id": "u5-5_9-pattern-reflex",
+          "options": [
+            { "text": "Because 'both' shows the speaker is addressing two people (plural 'you' → yourselves).", "is_correct": true, "why_wrong": null },
+            { "text": "Because all reflexive pronouns end in -selves.", "is_correct": false, "why_wrong": "للمفرد نستعمل -self (مثل myself وyourself وhimself)." },
+            { "text": "Because 'make' requires plural objects.", "is_correct": false, "why_wrong": "مع المخاطب المفرد نقول Make yourself at home." },
+            { "text": "Because it refers to third-person passengers.", "is_correct": false, "why_wrong": "الفاعل الضمني للأمر هو أنتما (you both)، لا هم (they → themselves)." }
+          ],
+          "hints": [
+            "اقرأ الجملة التي تسبق الأمر: You are both most welcome."
+          ],
+          "explain": "تحديد المثنى بكلمة both يعني أن المخاطب جمع في الإنجليزية، فيأخذ الصيغة الجمع yourselves."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-5_9-pastmod", "origin": "from_book", "page_ref": 39, "front": "Modal deduction in the past", "back": "must / can't / may / might / could + HAVE + past participle (V3)", "tag": "Unit 5 · 5.9" },
+    { "id": "fc-5_9-yourselves", "origin": "from_book", "page_ref": 66, "front": "yourself vs yourselves", "back": "yourself = لمخاطب واحد (Ahmed!) | yourselves = لمخاطبين أو أكثر (You are both...)", "tag": "Unit 5 · 5.9" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "طُوبقت قواعد PB ص 39 الثلاث مع pb-41.png، وحُفظ الاتصال المطبعي 'explanation-may/might/could+ have+ past participle'.",
+    "wb_ocr_vs_image": "طُوبقت صفحتا WB ص 65–66 مع wb-066.png وwb-067.png، ورُصد سقوط كلمة decided المطبعي في C #5 ('passengers on the ship to throw ______') وحُفظ حرفياً."
+  }
+}
