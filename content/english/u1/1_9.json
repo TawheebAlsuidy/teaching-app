@@ -1,0 +1,247 @@
+{
+  "schema_version": "3.0.0",
+  "subject": "english",
+  "book_title": "English Course - Pupil's Book 6 & Workbook 6",
+  "unit": { "id": "u1", "number": 1, "title": "Describing things" },
+  "lesson": {
+    "id": "eng-u1-1_9",
+    "code": "1.9",
+    "title": "A drive in the countryside",
+    "title_ar": "رحلة بالسيارة في الريف وتنظيم الوصف المكاني",
+    "direction": "ltr",
+    "source_refs": [
+      { "book": "PB", "pdf": "انجليزي-الطالب-للصف-الثالث-الثانوي.pdf", "pdf_page": 8, "book_page": 6 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 10, "book_page": 9 },
+      { "book": "WB", "pdf": "english_work_12th (1).pdf", "pdf_page": 11, "book_page": 10 }
+    ],
+    "reference_images": {
+      "pb_6": "assets/ref/pb_p006.webp",
+      "wb_9": "assets/ref/wb_p009.webp",
+      "wb_10": "assets/ref/wb_p010.webp"
+    }
+  },
+  "blocks": [
+    {
+      "id": "u1-1_9-head",
+      "origin": "from_book",
+      "type": "heading",
+      "source": { "book": "PB", "page": 6 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "1.9 A drive in the countryside",
+          "Read this description. As you read, try to imagine the scene as the driver travels through the countryside."
+        ]
+      }
+    },
+    {
+      "id": "u1-1_9-reading",
+      "origin": "from_book",
+      "type": "reading",
+      "source": { "book": "PB", "page": 6 },
+      "dir": "ltr",
+      "recall_words": ["scenery", "coast", "plough", "turn off", "steep", "narrow", "half-eaten"],
+      "content": {
+        "lines": [
+          "Last year, I spent my holiday in Wales, where the scenery is wonderful. One bright, sunny day I decided to go for a drive. I drove out of town along the coast road. The sea was to my left about two kilometres away. Between the sea and the road was farmland. In one field there were a lot of cows with their heads down, grazing. In another field, closer to me, a farmer on a tractor was ploughing. Behind the plough were lots of birds, looking for something to eat in the newly turned-over soil.",
+          "To the right of the road were some high, rocky hills. I turned off the main coast road and soon I was in a deep valley. Hills rose on both sides of the road. At first, the road climbed gently, but as I drove higher, it got steeper and steeper. Further up I could see a river to the left. I drove higher and higher and the river got narrower and narrower, until it was just a stream.",
+          "Near the top of the hill, the road ended. I got out of the car and climbed to the peak to take in the view of the valley below. At the end of the valley I could see the farmer on his tractor. Away in the distance I could just make out the sea. As I looked, I began to feel hungry and thirsty.",
+          "I went back down to the stream below. The water was cold and clear and tasted very good. I sat on a rock to eat my sandwiches, my back warmed by the sun. Suddenly a cloud came across the sun. I felt cold. A mist came down over the mountain. Soon I would not be able to see where I was going. I knew I had to leave. I put away a half-eaten sandwich, got into the car and drove back down the valley."
+        ],
+        "image": "assets/media/pb6_drive_scene.webp",
+        "caption": "Illustration of the coastal farmland, ploughing tractor and valley road (PB page 6)"
+      },
+      "edu_note_html": "<strong>ملاحظة استخراجية (صفحة مصوَّرة):</strong> صفحة <bdi dir='ltr'>PB p. 6</bdi> ممسوحة ضوئياً في PDF الرسمي ولا تحتوي نصاً قابلاً للتحديد؛ جرى تفريغها عبر شرائح <span dir='ltr'>600 DPI</span>. في السطر 3 من الفقرة الثالثة يقع ظل ورق شجرة فوق الكلمتين بين <span dir='ltr'>to</span> و<span dir='ltr'>the view</span> (مرجّح <span dir='ltr'>take in</span> أو <span dir='ltr'>look at</span>)، وقد سُجّل ذلك في <bdi dir='ltr'>REVIEW_NEEDED.md</bdi> للتحقق من النسخة الورقية.",
+      "interactive_spot": {
+        "enabled": true,
+        "kind": "reading_vocab",
+        "label": "تنظيم الوصف المكاني + تمهيد قواعد 1.10",
+        "tabs": {
+          "simple_explain": {
+            "origin": "educational_addition",
+            "page_ref": 6,
+            "html": "<p><strong>كيف نظّم الكاتب المشهد في الفقرة 1 (من البعيد إلى القريب)؟</strong></p><ol><li>نظر الكاتب أولاً <b>جهة اليسار (to his left)</b> بدءاً من الأبعد: <b>البحر</b> على بعد نحو 2 كم (farthest away).</li><li>ثم اقترب تدريجياً: <b>الأرض الزراعية (farmland)</b> ← <b>حقل الأبقار الراعية</b> ← <b>الفلاح الأقرب (closer to me)</b> ← <b>الطيور خلف المحراث مباشرة</b> (nearest).</li><li>في الفقرة 2 التفت <b>جهة اليمين (To the right of the road)</b>: التلال الصخرية العالية.</li></ol><p><strong>تمهيد لقواعد 1.10:</strong> لاحظ التقديم للأسلوب والتركيز مثل <span dir='ltr'><code>Between the sea and the road was farmland</code></span>، والتكرار للتأكيد <span dir='ltr'><code>steeper and steeper</code></span>، وربط الجمل بـ <span dir='ltr'><code>-ing</code></span> مثل <span dir='ltr'><code>...birds, looking for something to eat</code></span>.</p>"
+          },
+          "diagram": {
+            "origin": "educational_addition",
+            "page_ref": 6,
+            "caption": "خريطة التدرّج البصري للفقرة الأولى: من الأبعد إلى الأقرب",
+            "svg": "<svg viewBox='0 0 600 120' xmlns='http://www.w3.org/2000/svg'><rect width='600' height='120' rx='10' fill='#ECFDF5'/><text x='300' y='24' text-anchor='middle' font-size='13' font-weight='700' fill='#065F46'>Far → Near Order (Left of Coast Road)</text><rect x='15' y='40' width='125' height='58' rx='8' fill='#E0F2FE' stroke='#0284C7'/><text x='77' y='64' text-anchor='middle' font-size='12' font-weight='700'>1. The Sea</text><text x='77' y='84' text-anchor='middle' font-size='11'>~2 km away</text><rect x='160' y='40' width='125' height='58' rx='8' fill='#FEF3C7' stroke='#D97706'/><text x='222' y='64' text-anchor='middle' font-size='12' font-weight='700'>2. Cows grazing</text><text x='222' y='84' text-anchor='middle' font-size='11'>farmland field</text><rect x='305' y='40' width='135' height='58' rx='8' fill='#fff' stroke='#059669'/><text x='372' y='64' text-anchor='middle' font-size='12' font-weight='700'>3. Farmer (closer)</text><text x='372' y='84' text-anchor='middle' font-size='11'>ploughing on tractor</text><rect x='460' y='40' width='125' height='58' rx='8' fill='#FCE7F3' stroke='#DB2777'/><text x='522' y='64' text-anchor='middle' font-size='12' font-weight='700'>4. Birds (closest)</text><text x='522' y='84' text-anchor='middle' font-size='11'>behind the plough</text></svg>"
+          },
+          "example": {
+            "origin": "educational_addition",
+            "page_ref": 6,
+            "html": "<p dir='ltr'><b>Inverted focus:</b> Between the sea and the road <b>was</b> farmland.<br><b>-ing join:</b> Behind the plough were lots of birds, <b>looking</b> for something to eat.</p>"
+          },
+          "self_check_ref": "chk-1_9-a",
+          "page_ref": { "book": "PB", "page": 6, "pdf_page": 8, "image": "assets/ref/pb_p006.webp" }
+        }
+      }
+    },
+    {
+      "id": "u1-1_9-pb-questions",
+      "origin": "from_book",
+      "type": "activity",
+      "source": { "book": "PB", "page": 6 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "Read the first paragraph carefully and think about how it is organized.",
+          "Which side of the road did the writer look at first?",
+          "What was furthest away from him?",
+          "What was nearest to him?",
+          "Then look at how the other paragraphs are organized.",
+          "Now do activities A and B in the Workbook."
+        ]
+      }
+    },
+    {
+      "id": "u1-1_9-wb-c-text",
+      "origin": "from_book",
+      "type": "paragraph",
+      "source": { "book": "WB", "page": 10 },
+      "dir": "ltr",
+      "content": {
+        "lines": [
+          "C Written descriptions should be organized with the reader in mind. In the text on PB page 6, the writer started with things at a distance. Another way is to start writing about things which are nearby. Re-order this paragraph to make a description going from near to far.",
+          "I sat in the car and looked around me. A little bit further away, to my left, a man was waiting for a bus. In the distance were some hills, the tops of them covered in mist. Just in front of me, a family of four were having a picnic. Opposite him, to my right, three men were sitting, drinking coffee. Further away, two women were walking down the road."
+        ]
+      }
+    }
+  ],
+  "word_glossary_map": {
+    "drive": { "pos": "n", "ar": "نزهة / قيادة بالسيارة", "in_book_wordlist": true, "wb_page": 111 },
+    "spend": { "pos": "v", "ar": "يقضي (عطلة/وقتاً)", "in_book_wordlist": true, "wb_page": 111 },
+    "turn off": { "pos": "phr v", "ar": "ينعطف تاركاً الطريق الرئيسي", "in_book_wordlist": true, "wb_page": 111 },
+    "steep": { "pos": "adj", "ar": "شديد الانحدار", "in_book_wordlist": true, "wb_page": 111 },
+    "narrow": { "pos": "adj", "ar": "ضيق", "in_book_wordlist": true, "wb_page": 111 },
+    "newly": { "pos": "adv", "ar": "حديثاً / للتو", "in_book_wordlist": true, "wb_page": 111 },
+    "rocky": { "pos": "adj", "ar": "صخري", "in_book_wordlist": true, "wb_page": 111 },
+    "half-eaten": { "pos": "adj", "ar": "مأكول نصفه", "in_book_wordlist": true, "wb_page": 111 },
+    "organize": { "pos": "v", "ar": "ينظّم / يرتّب", "in_book_wordlist": true, "wb_page": 111 }
+  },
+  "activities": [
+    {
+      "id": "wb-1_9-a",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 9 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "1.9 A Use the information you know about 'A drive in the countryside' to answer these questions.",
+      "prompt_ar": "أجب عن أسئلة الاستنتاج الستة في كتاب التمارين ص 9 بناءً على معلومات النص:",
+      "items": [
+        { "num": 1, "question": "Why do you think the writer decided to go for a drive?", "model_answer": "Because it was a bright, sunny day and he wanted to see the wonderful scenery in Wales during his holiday.", "explain_ar": "جمعَ السطران الأولان من الفقرة 1 بين جمال المناظر (wonderful scenery) وسطوع الشمس (bright, sunny day)." },
+        { "num": 2, "question": "Why do you think he chose to drive into the hills and mountains?", "model_answer": "To enjoy the scenery / view from higher up.", "explain_ar": "صعد الطريق نحو القمة ليُطلّ على الوادي والريف من الأعلى كما صرّح في الفقرة 3 (to take in the view)." },
+        { "num": 3, "question": "Do you think the car went faster or slower as he drove on past the river?", "model_answer": "Slower, because the road got steeper and steeper.", "explain_ar": "تتباطأ السيارة عند صعود المنحدرات الحادة (it got steeper and steeper)." },
+        { "num": 4, "question": "When the writer described the view from the mountain peak, did he describe what was closer or further away from him first?", "model_answer": "Closer first (the valley below and the farmer on his tractor at the end of the valley, then the sea away in the distance).", "explain_ar": "في الفقرة 3 وصف أولاً ما تحت القمة (the valley below / the farmer) ثم الأبعد في الأفق (Away in the distance... the sea)." },
+        { "num": 5, "question": "How do you know he drank from the stream?", "model_answer": "Because he wrote that the water was cold and clear and 'tasted very good'.", "explain_ar": "معرفة طعم الماء ('tasted very good') دليل قاطع على أنه شرب منه." },
+        { "num": 6, "question": "Why did he leave the mountain before he finished eating?", "model_answer": "Because a mist came down over the mountain, so soon he would not be able to see where he was going.", "explain_ar": "أصبح الجو بارداً وهبط الضباب فخشي انعدام الرؤية (he knew he had to leave)." }
+      ],
+      "hints": [
+        "هذه الأسئلة تعتمد على الاستنتاج المنطقي من وقائع النص (Inference).",
+        "في السؤال 5 انتبه لعبارة tasted very good."
+      ]
+    },
+    {
+      "id": "wb-1_9-b",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 9 },
+      "type": "fill_blank",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "B Complete these sentences.",
+      "prompt_ar": "أكمل الجمل الثماني من مفردات الدرس (أضفنا بنك كلمات مساعداً يطابق الكلمات المطلوبة في كل جملة):",
+      "word_bank": ["right", "distance", "plough", "higher", "river", "valley", "desert", "misty"],
+      "items": [
+        { "num": 1, "prompt": "1 The opposite of left is ______.", "answers": ["right"] },
+        { "num": 2, "prompt": "2 We use kilometres to measure ______.", "answers": ["distance"] },
+        { "num": 3, "prompt": "3 A farmer often uses a ______ to break up the soil.", "answers": ["plough"] },
+        { "num": 4, "prompt": "4 A mountain is ______ than a hill.", "answers": ["higher"] },
+        { "num": 5, "prompt": "5 If a number of streams meet or come together, they become a ______.", "answers": ["river"] },
+        { "num": 6, "prompt": "6 Between two hills you will always find a ______.", "answers": ["valley"] },
+        { "num": 7, "prompt": "7 A place where very little or nothing grows is called a ______.", "answers": ["desert"] },
+        { "num": 8, "prompt": "8 If the weather is ______, it is not easy to see where you are going.", "answers": ["misty"] }
+      ],
+      "hints": [
+        "ملاحظة: في الجملة 4 يصح أيضاً لغةً كلمة bigger، وقد اخترنا هنا higher في بنك الكلمات المساعد للتمييز عن WB 1.6.",
+        "الحل: 1 right، 2 distance، 3 plough، 4 higher، 5 river، 6 valley، 7 desert، 8 misty."
+      ]
+    },
+    {
+      "id": "wb-1_9-c",
+      "origin": "from_book",
+      "source": { "book": "WB", "page": 10 },
+      "type": "comprehension",
+      "solution_origin": "proposed_solution",
+      "prompt_literal": "C Written descriptions should be organized with the reader in mind. Re-order this paragraph to make a description going from near to far.",
+      "prompt_ar": "أعد ترتيب جمل الفقرة الست من الأقرب إلى الراوي نحو الأبعد في الأفق (Near → Far):",
+      "items": [
+        {
+          "num": 1,
+          "question": "Write the 6 sentences of the WB p. 10 paragraph in logical Near → Far spatial order:",
+          "model_answer": "(1) I sat in the car and looked around me. (2) Just in front of me, a family of four were having a picnic. (3) A little bit further away, to my left, a man was waiting for a bus. (4) Opposite him, to my right, three men were sitting, drinking coffee. (5) Further away, two women were walking down the road. (6) In the distance were some hills, the tops of them covered in mist.",
+          "explain_ar": "تسلسل المؤشرات المكانية من الأقرب إلى الأبعد: Just in front of me (أمامي مباشرة) ← A little bit further away (أبعد قليلاً؛ والضمير him في الجملة التالية يعود على الرجل فيها) ← Opposite him, to my right ← Further away ← In the distance (في الأفق البعيد)."
+        }
+      ],
+      "hints": [
+        "ابدأ بجملة البداية: I sat in the car and looked around me.",
+        "لاحظ الضمير 'Opposite him' — لا يمكن أن يأتي إلا بعد ذكر 'a man was waiting for a bus'."
+      ]
+    }
+  ],
+  "section_checks": [
+    {
+      "id": "chk-1_9-a",
+      "origin": "educational_addition",
+      "page_ref": 6,
+      "questions": [
+        {
+          "id": "q-1_9-1",
+          "type": "mcq",
+          "stem": "In PB page 6 paragraph 1, how does the writer organize his description of the scenery on his left?",
+          "evidence_block_id": "u1-1_9-reading",
+          "options": [
+            { "text": "From the farthest object (the sea) to the closest objects (the farmer and the birds)", "is_correct": true, "why_wrong": null },
+            { "text": "From the closest object (the car window) to the farthest object (the sea)", "is_correct": false, "why_wrong": "هذا هو الترتيب المعاكس المطلوب في WB 1.9 C؛ أما نص PB ص 6 الفقرة 1 فقد بدأ بالبحر على بعد 2 كم ثم اقترب إلى الحقل الأقرب." },
+            { "text": "Randomly without any location phrases", "is_correct": false, "why_wrong": "استخدم الكاتب عبارات مسافة متدرجة: two kilometres away ثم between ثم in another field, closer to me ثم behind." },
+            { "text": "From the right side of the road first, then the left", "is_correct": false, "why_wrong": "ذكر أولاً جهة اليسار في الفقرة 1 (The sea was to my left)، ولم يذكر جهة اليمين إلا في بداية الفقرة 2." }
+          ],
+          "hints": [
+            "اقرأ سؤال PB ص 6 أسفل النص + وصف WB 1.9 C.",
+            "ابدأ بتتبع البحر ← الأبقار ← الفلاح ← الطيور.",
+            "الإجابة: من الأبعد إلى الأقرب."
+          ],
+          "explain": "بدأ الكاتب بأبعد معلم على يساره (البحر على بعد 2 كم) ثم اقترب تدريجياً إلى الحقل الأقرب فالطيور خلف المحراث."
+        },
+        {
+          "id": "q-1_9-2",
+          "type": "mcq",
+          "stem": "In WB p. 10 activity C (near-to-far re-ordering), why must 'Opposite him, to my right...' follow 'A little bit further away, to my left, a man was waiting for a bus'?",
+          "evidence_block_id": "u1-1_9-wb-c-text",
+          "options": [
+            { "text": "Because 'him' refers back to 'a man' waiting for the bus.", "is_correct": true, "why_wrong": null },
+            { "text": "Because three men are farther away than hills in the mist.", "is_correct": false, "why_wrong": "التلال المغطاة بالضباب (In the distance) هي الأبعد على الإطلاق في نهاية الوصف." },
+            { "text": "Because 'Opposite him' starts every English paragraph.", "is_correct": false, "why_wrong": "الفقرة تبدأ بتحديد موضع الكاتب أولاً: I sat in the car and looked around me." },
+            { "text": "Because the family of four were on the top of the mountain.", "is_correct": false, "why_wrong": "الأسرة كانت 'Just in front of me' أمام السيارة مباشرة." }
+          ],
+          "hints": [
+            "انظر إلى الضمير المفرد المذكر 'him' في عبارة Opposite him.",
+            "ابحث في الجمل عن الاسم المفرد المذكر الذي يعود عليه الضمير.",
+            "الإجابة: يعود على a man (الرجل المنتظر للحافلة)."
+          ],
+          "explain": "الربط النحوي للضمير المرجعي (Opposite him) يثبت أنها تأتي مباشرة بعد جملة a man was waiting for a bus."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    { "id": "fc-1_9-steep", "origin": "from_book", "page_ref": 6, "front": "steep / steeper (adj)", "back": "شديد الانحدار / أكثر انحداراً", "tag": "Unit 1 · 1.9" },
+    { "id": "fc-1_9-turnoff", "origin": "from_book", "page_ref": 6, "front": "turn off (phr v)", "back": "ينعطف مغادراً الطريق الرئيسي", "tag": "Unit 1 · 1.9" },
+    { "id": "fc-1_9-halfeaten", "origin": "from_book", "page_ref": 6, "front": "half-eaten (adj)", "back": "نصف مأكول", "tag": "Unit 1 · 1.9" },
+    { "id": "fc-1_9-organize", "origin": "from_book", "page_ref": 10, "front": "organize (v)", "back": "يرتب / ينظّم (الأفكار أو الوصف)", "tag": "Unit 1 · 1.9" }
+  ],
+  "extensions": [],
+  "extraction_audit": {
+    "pb_text_vs_image": "استُخرجت صفحة PB ص 6 الممسوحة ضوئياً كاملةً عبر 5 شرائح 600 DPI؛ صُحّح فيها التهجئة الحرفية 'furthest' في أسئلة أسفل الصفحة، وسُجّل موضع ظل الشجرة فوق [take in / look at] في الفقرة 3 في REVIEW_NEEDED.md.",
+    "wb_ocr_vs_image": "قُورنت صفحتا WB ص 9–10 مع tesseract.js eng: أخرجت OCR رقم الدرس '19 A' و'Ifa'، وصُحّحتا بصرياً إلى '1.9 A' و'If a' من شرائح 250 DPI."
+  }
+}
