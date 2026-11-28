@@ -28,11 +28,20 @@ def sync():
         "biology-12th-book.html",
         "math-12th-book.html",
         "arabic-literature-12th-book.html",
+        "quran-12th-book.html",
         "chem-lab-book.html",
         "math-12th-lab.html",
     ]
     assets_dir = os.path.join(ROOT, "thaker-android-src", "assets")
     os.makedirs(assets_dir, exist_ok=True)
+
+    src_fonts = os.path.join(ROOT, "engine", "vendor", "fonts")
+    if os.path.exists(src_fonts):
+        for rel_font_dir in [
+            os.path.join(assets_dir, "engine", "vendor", "fonts"),
+            os.path.join(assets_dir, "assets", "engine", "vendor", "fonts"),
+        ]:
+            shutil.copytree(src_fonts, rel_font_dir, dirs_exist_ok=True)
 
     for b in books:
         src_book = os.path.join(ROOT, b)

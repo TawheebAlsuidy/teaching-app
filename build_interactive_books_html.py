@@ -10,6 +10,7 @@ import os
 import json
 from build_chemistry_renderers import get_chemistry_2d_js
 from build_chemistry_3d_scenes import get_chemistry_3d_js
+from build_quran_engine import QURAN_MODAL_HTML, QURAN_ENGINE_JS
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -2049,7 +2050,7 @@ renderSummaryView = function() {
     cards.push(`
       <div class="summary-stripe-card blue">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span style="font-size:15px; font-weight:800; color:#0284C7;">📐 القوانين والمفاهيم الأساسية</span>
+          <span style="font-size:15px; font-weight:800; color:#0284C7;">${BOOK_SUBJECT_KEY === 'quran' ? '🕌 الآيات والأحكام والمفاهيم الأساسية' : '📐 القوانين والمفاهيم الأساسية'}</span>
           <span class="page-chip-soft">${unit.title?.split(':')[0] || uId.toUpperCase()}</span>
         </div>
         ${eqBlock}
@@ -2350,10 +2351,10 @@ const UNITS = CURR_DATA?.units || [];
     html_new = html_new.replace("فهرس وحدات الجزء الثاني", f"فهرس وحدات {title_sub}")
     html_new = html_new.replace("المعادلات الكيميائية المرتبطة:", eq_label)
 
-    if subject_key == "arabic_lit":
+    if subject_key in ("arabic_lit", "quran"):
         html_new = html_new.replace(
             "</head>",
-            '<link rel="stylesheet" href="engine/vendor/fonts/fonts.css">\n<style id="arabic-lit-reader-theme">:root{--font-base:\'Amiri\',\'Tajawal\',serif} body{font-family:\'Amiri\',\'Tajawal\',serif} .title-main{font-family:\'Amiri\',\'Tajawal\',serif}</style>\n</head>',
+            '<link rel="stylesheet" href="engine/vendor/fonts/fonts.css">\n<style id="arabic-lit-reader-theme">:root{--font-base:\'Cairo\',\'Amiri\',sans-serif} body{font-family:\'Cairo\',\'Amiri\',sans-serif} .title-main{font-family:\'Amiri\',\'Cairo\',serif}</style>\n</head>',
             1,
         )
 
@@ -2411,18 +2412,20 @@ const UNITS = CURR_DATA?.units || [];
 
     literary_modal = f"{LITERARY_MODAL_HTML}\n" if subject_key == "arabic_lit" else ""
     literary_engine = f"\n{LITERARY_ENGINE_JS}" if subject_key == "arabic_lit" else ""
+    quran_modal = f"{QURAN_MODAL_HTML}\n" if subject_key == "quran" else ""
+    quran_engine = f"\n{QURAN_ENGINE_JS}" if subject_key == "quran" else ""
     chem_engine = f"\n{get_chemistry_2d_js()}\n{get_chemistry_3d_js()}" if subject_key == "chemistry" else ""
     injection = f"""
 {ACTIVITY_MODAL_HTML}
 {MATH_SOLUTION_MODAL_HTML}
-{literary_modal}<script>
-{INTERACTIVE_ENGINE_JS}{chem_engine}{literary_engine}
+{literary_modal}{quran_modal}<script>
+{INTERACTIVE_ENGINE_JS}{chem_engine}{literary_engine}{quran_engine}
 </script>
 </body>
 """
     html_new = html_new.replace("</body>", injection)
 
-    if subject_key == "arabic_lit":
+    if subject_key in ("arabic_lit", "quran"):
         html_new = "\n".join(line.rstrip() for line in html_new.splitlines()) + "\n"
 
     # Save to workspace root and mirror to android assets
@@ -2515,6 +2518,23 @@ def main():
         bundle_file="data/curriculum/grade12/arabic_lit/data_bundle.js",
         out_filename="arabic-literature-12th-book.html",
         eq_label="المحاور الأدبية والبلاغية المرتبطة:",
+        lab_html_file="",
+        lab_btn_label="",
+        default_diag=""
+    )
+
+    build_book(
+        subject_key="quran",
+        title_main="كتاب القرآن الكريم وعلومه التفاعلي",
+        title_sub="الحفظ والتفسير · علوم القرآن · التلاوة",
+        primary_color="#047857",
+        primary_dark="#064E3B",
+        primary_light="#ECFDF5",
+        accent_color="#D97706",
+        bundle_js_var="window.THAKER_CURRICULUM_G12_QURAN",
+        bundle_file="data/curriculum/grade12/quran/data_bundle.js",
+        out_filename="quran-12th-book.html",
+        eq_label="الأحكام والضوابط القرآنية المرتبطة:",
         lab_html_file="",
         lab_btn_label="",
         default_diag=""

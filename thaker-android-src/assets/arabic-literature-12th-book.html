@@ -654,7 +654,7 @@ body.dark-theme .soft-mistake-box { background: rgba(239,68,68,0.15); color: #fe
 #toast.show { opacity: 1; }
 </style>
 <link rel="stylesheet" href="engine/vendor/fonts/fonts.css">
-<style id="arabic-lit-reader-theme">:root{--font-base:'Amiri','Tajawal',serif} body{font-family:'Amiri','Tajawal',serif} .title-main{font-family:'Amiri','Tajawal',serif}</style>
+<style id="arabic-lit-reader-theme">:root{--font-base:'Cairo','Amiri',sans-serif} body{font-family:'Cairo','Amiri',sans-serif} .title-main{font-family:'Amiri','Cairo',serif}</style>
 </head>
 <body>
 
@@ -22799,7 +22799,7 @@ renderSummaryView = function() {
     cards.push(`
       <div class="summary-stripe-card blue">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-          <span style="font-size:15px; font-weight:800; color:#0284C7;">📐 القوانين والمفاهيم الأساسية</span>
+          <span style="font-size:15px; font-weight:800; color:#0284C7;">${BOOK_SUBJECT_KEY === 'quran' ? '🕌 الآيات والأحكام والمفاهيم الأساسية' : '📐 القوانين والمفاهيم الأساسية'}</span>
           <span class="page-chip-soft">${unit.title?.split(':')[0] || uId.toUpperCase()}</span>
         </div>
         ${eqBlock}

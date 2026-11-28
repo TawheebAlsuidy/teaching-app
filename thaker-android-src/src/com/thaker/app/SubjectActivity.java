@@ -73,6 +73,39 @@ public class SubjectActivity extends Activity {
                 ThakerStore.getBookPct(this, "sci_p2", 38), "148 صفحة تفاعلية", "أنشطة 3D وشروحات ذكية",
                 "📖 افتح الكتاب التفاعلي", "html", "thaker-interactive-book.html",
                 "📄 عرض الكتاب الرسمي PDF", "pdf:sci_p2");
+        } else if ("math12".equals(subjectKey)) {
+            tvTitle.setText("الرياضيات 3D");
+            tvMeta.setText("7 وحدات · 250 صفحة · 13 مجسماً تفاعلياً");
+            tvGradePill.setText("الثالث الثانوي");
+            ivIcon.setImageResource(R.drawable.ic_subj_math);
+            quizKey = "math_12";
+
+            addPartCard("الكتاب التفاعلي الشامل ومعمل الرياضيات 3D", "الأعداد المركبة، ذات الحدين، القطوع، الهندسة الفضائية، الاحتمالات، المشتقات والتكامل",
+                ThakerStore.getBookPct(this, "math_12", 20), "250 صفحة تفاعلية", "22 حلاً خطوة بخطوة + 13 مجسماً",
+                "📐 افتح كتاب الرياضيات التفاعلي", "html", "math-12th-book.html",
+                "🧊 افتح معمل الرياضيات 3D (13 مجسماً)", "math-12th-lab.html");
+        } else if ("arabic_lit".equals(subjectKey)) {
+            tvTitle.setText("الأدب والنصوص");
+            tvMeta.setText("قسمان · 36 موضوعاً · 212 صفحة");
+            tvGradePill.setText("الثالث الثانوي");
+            ivIcon.setImageResource(R.drawable.ic_subj_literature);
+            quizKey = "arabic_lit";
+
+            addPartCard("الكتاب التفاعلي للأدب والنصوص والنقد", "الأدب في العصرين المملوكي والعثماني، النهضة، المدارس الأدبية، والنقد الأدبي",
+                ThakerStore.getBookPct(this, "arabic_lit", 20), "212 صفحة تفاعلية", "36 تحليلاً جمالياً + بطاقات نصوص",
+                "افتح كتاب الأدب والنصوص التفاعلي", "html", "arabic-literature-12th-book.html",
+                "تصفح قسم النقد الأدبي", "arabic-literature-12th-book.html");
+        } else if ("quran".equals(subjectKey)) {
+            tvTitle.setText("القرآن الكريم وعلومه");
+            tvMeta.setText("3 أقسام · 34 درساً · 188 صفحة");
+            tvGradePill.setText("الثالث الثانوي");
+            ivIcon.setImageResource(R.drawable.ic_subj_quran);
+            quizKey = "quran";
+
+            addPartCard("كتاب القرآن الكريم التفاعلي + المصحف الصوتي", "تفسير سورة النور (الحصري المعلم)، علوم القرآن، و18 حصة تلاوة بالرسم العثماني",
+                ThakerStore.getBookPct(this, "quran", 15), "188 صفحة تفاعلية", "120 تلاوة أوفلاين + 16 تقويماً",
+                "🕌 افتح كتاب القرآن الكريم التفاعلي", "html", "quran-12th-book.html",
+                "🎧 افتح المصحف الصوتي والقصص", "quran-12th-book.html");
         } else if ("math".equals(subjectKey)) {
             tvTitle.setText("الرياضيات");
             tvMeta.setText("جزءان · 8 وحدات · جبر وهندسة ومثلثات");

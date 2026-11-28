@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0.0",
+  "pack_id": "quran-g12-interactive-2026",
+  "subject": "quran",
+  "grade": 12,
+  "edition": {
+    "title": "القرآن الكريم وعلومه (الحفظ والتفسير - علوم القرآن - التلاوة)",
+    "ministry": "الجمهورية اليمنية - وزارة التربية والتعليم - قطاع المناهج",
+    "curriculum_version": "1435هـ / 2014م — طبعة التحقق 2026م",
+    "official_pdf": "القرآن-ثالث ثانوي- (1).pdf",
+    "total_pdf_pages": 190,
+    "start_pdf_page": 2,
+    "end_pdf_page": 189,
+    "total_book_pages": 188,
+    "page_offset": "book_page = pdf_page + 3",
+    "text_source": "Tanzil Project (Quran Text, Uthmani & Simple, Hafs 'an Asim)",
+    "reciter_source": "الشيخ محمود خليل الحصري — المصحف المعلم (قارئ بشري حقيقي مسجل أوفلاين)"
+  },
+  "features": {
+    "original_page_rendering": true,
+    "uthmani_mushaf_mode": true,
+    "tajweed_color_layer": true,
+    "real_reciter_offline_audio": true,
+    "ai_assisted_scenes_respectful": true,
+    "tts_lesson_narration": true,
+    "interactive_taqwim_drills": true,
+    "hifz_verse_tester": true
+  },
+  "data_files": [
+    "manifest.json",
+    "units.json",
+    "pages.json",
+    "lessons.json",
+    "interactions.json",
+    "explanations.json",
+    "glossary.json",
+    "assessments.json",
+    "taqwim_drills.json",
+    "hifz_drills.json",
+    "scenes.json",
+    "verses.json",
+    "data_bundle.js"
+  ]
+}

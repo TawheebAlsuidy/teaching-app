@@ -9,6 +9,7 @@ Enforces all standards from thaker-comprehensive-analysis.md:
 - Lab experiment links integrity (activities and interactions -> chem-lab experiments)
 """
 import glob
+import html as py_html
 import json
 import os
 import re
@@ -508,6 +509,127 @@ class TestCurriculumIntegrity(unittest.TestCase):
                 2,
                 f"Expected exact pair of 2D + 3D renderer branches for {sk}",
             )
+
+    def test_13_quran_curriculum_tanzil_and_offline_audio(self):
+        """Verify Grade 12 Quran 100% Tanzil Uthmani fidelity, offline Husary MP3s, Taqwim drills, scenes, and Android sync."""
+        base = os.path.join(ROOT_DIR, "data/curriculum/grade12/quran")
+        names = [
+            "manifest", "units", "pages", "lessons", "interactions", "explanations",
+            "glossary", "assessments", "taqwim_drills", "hifz_drills", "scenes", "verses"
+        ]
+        data = {}
+        for name in names:
+            with open(os.path.join(base, f"{name}.json"), "r", encoding="utf-8") as f:
+                data[name] = json.load(f)
+
+        with open(os.path.join(base, "data_bundle.js"), "r", encoding="utf-8") as f:
+            bundle_text = f.read()
+        self.assertIn("window.THAKER_CURRICULUM_G12_QURAN =", bundle_text)
+        bundle_payload = bundle_text.split("=", 1)[1].strip().rstrip(";").strip()
+        bundled = json.loads(bundle_payload)
+        for name in names:
+            self.assertEqual(bundled[name], data[name], f"Quran data_bundle.js mismatch on {name}")
+
+        self.assertEqual(data["manifest"]["schema_version"], "2.0.0")
+        self.assertEqual(data["manifest"]["edition"]["page_offset"], "book_page = pdf_page + 3")
+        self.assertEqual(len(data["pages"]), 188)
+        self.assertEqual([p["book_page"] for p in data["pages"]], list(range(5, 193)))
+        self.assertEqual(len(data["units"]), 3)
+        self.assertEqual(len(data["lessons"]), 34)
+        self.assertIsInstance(data["glossary"], dict)
+        self.assertGreaterEqual(len(data["glossary"]), 90)
+
+        for p in data["pages"]:
+            self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, p["image"])), f"Missing Quran page thumb: {p['image']}")
+            self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, p["image_full"])), f"Missing Quran page full: {p['image_full']}")
+
+        # 100% Tanzil Uthmani text verification across ALL verses + Tajweed HTML stripped equality
+        basmala_u = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"
+        tanzil_path = os.path.join(ROOT_DIR, "scripts/quran_refs/tanzil_uthmani.txt")
+        tanzil = {}
+        with open(tanzil_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "|" not in line:
+                    continue
+                parts = line.split("|", 2)
+                if len(parts) == 3:
+                    s_i, a_i, txt = int(parts[0]), int(parts[1]), parts[2]
+                    if a_i == 1 and s_i not in (1, 9) and txt.startswith(basmala_u + " "):
+                        txt = txt[len(basmala_u) + 1:]
+                    tanzil[f"{s_i}:{a_i}"] = txt
+        self.assertEqual(len(tanzil), 6236)
+
+        verses = data["verses"]
+        self.assertGreaterEqual(len(verses), 750)
+        for a in range(1, 65):
+            self.assertIn(f"24:{a}", verses, f"Surah An-Nur verse 24:{a} missing")
+
+        for vkey, vobj in verses.items():
+            self.assertEqual(vobj["uthmani"], tanzil[vkey], f"Tanzil Uthmani mismatch on {vkey}")
+            stripped_tj = py_html.unescape(re.sub(r"<[^>]+>", "", vobj["tajweed_html"]))
+            self.assertEqual(stripped_tj, tanzil[vkey], f"Tajweed HTML altered script on {vkey}")
+            if vobj["surah"] == 24 or vobj["audio_src"]:
+                self.assertTrue(vobj["audio_src"], f"Missing audio_src for {vkey}")
+                ap = os.path.join(ROOT_DIR, vobj["audio_src"])
+                a_ap = os.path.join(ROOT_DIR, "thaker-android-src/assets", vobj["audio_src"])
+                self.assertTrue(os.path.exists(ap) and os.path.getsize(ap) > 1024, f"Missing/corrupt MP3 {ap}")
+                self.assertTrue(os.path.exists(a_ap), f"Android mirror MP3 missing: {a_ap}")
+                with open(ap, "rb") as af:
+                    hdr = af.read(3)
+                self.assertTrue(hdr.startswith(b"ID3") or hdr[0] == 0xFF, f"Invalid MP3 header in {ap}")
+
+        # Section assessments (>=15 per unit), 16 Taqwim drill lessons, 13 Hifz Tanzil drills
+        for s_key in ("quiz-qur-s1", "quiz-qur-s2", "quiz-qur-s3"):
+            qs = data["assessments"][s_key]
+            self.assertGreaterEqual(len(qs), 15, f"{s_key} needs >= 15 questions")
+            for q in qs:
+                self.assertTrue(q.get("explain"))
+                for idx, opt in enumerate(q["options"]):
+                    if idx != q["answer"]:
+                        self.assertTrue(opt.get("why_wrong"), f"{q['id']} opt {idx} missing why_wrong")
+
+        self.assertEqual(len(data["taqwim_drills"]), 16)
+        self.assertEqual(len(data["hifz_drills"]), 13)
+        for lid, hd in data["hifz_drills"].items():
+            vkey = f"{hd['surah']}:{hd['ayah']}"
+            self.assertEqual(hd["full_uthmani"], tanzil[vkey], f"Hifz {lid} text mismatch")
+            self.assertEqual(hd["options"][hd["answer"]], hd["answer_word"])
+
+        # Scene artwork & hotspots
+        scene_img = "assets/curriculum/grade12/quran/scenes/ayah_nur_mishkah.jpg"
+        self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, scene_img)))
+        self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, "thaker-android-src/assets", scene_img)))
+        self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, "thaker-android-src/assets/curriculum/grade12/quran/scenes/ayah_nur_mishkah.jpg")))
+
+        allowed_types = {"quran_reader", "quran_scene", "quran_taqwim", "explainable_text", "assessment"}
+        for pid, spots in data["interactions"].items():
+            self.assertTrue(spots, f"Empty hotspots on {pid}")
+            for sp in spots:
+                self.assertIn(sp["type"], allowed_types)
+                for k in ("x", "y", "w", "h"):
+                    self.assertGreaterEqual(sp["bounds"][k], 0.0)
+                    self.assertLessEqual(sp["bounds"][k], 1.0)
+
+        # HTML & Android files + offline fonts + native hooks
+        html_path = os.path.join(ROOT_DIR, "quran-12th-book.html")
+        android_html = os.path.join(ROOT_DIR, "thaker-android-src/assets/quran-12th-book.html")
+        self.assertTrue(os.path.exists(html_path) and os.path.exists(android_html))
+        with open(html_path, "r", encoding="utf-8") as f:
+            html_txt = f.read()
+        cdn_re = re.compile(r'<(?:script|link)[^>]*(?:src|href)=["\']https?://', re.IGNORECASE)
+        self.assertEqual(cdn_re.findall(html_txt), [], "quran-12th-book.html contains online CDN links")
+        for marker in ("quranReaderModal", "quranSceneModal", "quranTaqwimModal", "engine/vendor/fonts/fonts.css"):
+            self.assertIn(marker, html_txt, f"Missing Quran UI marker: {marker}")
+
+        font_path = "engine/vendor/fonts/amiri-quran/amiri-quran-arabic-400-normal.woff2"
+        self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, font_path)))
+        self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, "thaker-android-src/assets", font_path)))
+        self.assertTrue(os.path.exists(os.path.join(ROOT_DIR, "thaker-android-src/res/drawable-nodpi/ic_subj_quran.png")))
+
+        dst_dir = os.path.join(ROOT_DIR, "thaker-android-src/assets/data/curriculum/grade12/quran")
+        for fname in ["manifest.json", "assessments.json", "verses.json", "data_bundle.js"]:
+            self.assertEqual(os.path.getsize(os.path.join(base, fname)), os.path.getsize(os.path.join(dst_dir, fname)))
 
 if __name__ == "__main__":
     unittest.main()

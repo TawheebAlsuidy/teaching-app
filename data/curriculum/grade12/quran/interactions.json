@@ -1,0 +1,8074 @@
+{
+  "qur12-p005": [
+    {
+      "id": "hs-qur12-p005-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p005-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p005-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p006": [
+    {
+      "id": "hs-qur12-p006-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p006-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p006-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p007": [
+    {
+      "id": "hs-qur12-p007-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p007-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p007-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p008": [
+    {
+      "id": "hs-qur12-p008-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p008-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p008-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p009": [
+    {
+      "id": "hs-qur12-p009-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p009-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p009-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p010": [
+    {
+      "id": "hs-qur12-p010-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p010-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p010-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p011": [
+    {
+      "id": "hs-qur12-p011-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p011-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p011-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p012": [
+    {
+      "id": "hs-qur12-p012-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p012-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p012-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p013": [
+    {
+      "id": "hs-qur12-p013-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p013-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p013-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p014": [
+    {
+      "id": "hs-qur12-p014-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p014-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-01",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p014-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-01",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p015": [
+    {
+      "id": "hs-qur12-p015-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p015-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-02",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p015-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p016": [
+    {
+      "id": "hs-qur12-p016-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p016-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-02",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p016-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p017": [
+    {
+      "id": "hs-qur12-p017-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p017-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-02",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p017-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p018": [
+    {
+      "id": "hs-qur12-p018-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p018-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-02",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p018-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p019": [
+    {
+      "id": "hs-qur12-p019-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p019-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-02",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p019-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p020": [
+    {
+      "id": "hs-qur12-p020-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p020-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-02",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p020-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-02",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p021": [
+    {
+      "id": "hs-qur12-p021-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p021-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p021-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p021-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p022": [
+    {
+      "id": "hs-qur12-p022-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p022-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p022-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p022-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p023": [
+    {
+      "id": "hs-qur12-p023-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p023-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p023-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p023-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p024": [
+    {
+      "id": "hs-qur12-p024-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p024-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p024-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p024-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p025": [
+    {
+      "id": "hs-qur12-p025-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p025-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p025-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p025-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p026": [
+    {
+      "id": "hs-qur12-p026-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p026-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p026-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p026-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p027": [
+    {
+      "id": "hs-qur12-p027-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p027-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p027-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p027-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p028": [
+    {
+      "id": "hs-qur12-p028-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p028-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-03",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p028-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p028-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-03",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p029": [
+    {
+      "id": "hs-qur12-p029-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p029-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-04",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p029-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p029-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p030": [
+    {
+      "id": "hs-qur12-p030-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p030-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-04",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p030-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p030-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p031": [
+    {
+      "id": "hs-qur12-p031-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p031-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-04",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p031-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p031-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p032": [
+    {
+      "id": "hs-qur12-p032-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p032-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-04",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p032-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p032-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p033": [
+    {
+      "id": "hs-qur12-p033-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p033-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-04",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p033-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p033-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p034": [
+    {
+      "id": "hs-qur12-p034-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p034-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-04",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p034-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ifk-map",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p034-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-04",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p035": [
+    {
+      "id": "hs-qur12-p035-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p035-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-05",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p035-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p035-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p036": [
+    {
+      "id": "hs-qur12-p036-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p036-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-05",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p036-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p036-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p037": [
+    {
+      "id": "hs-qur12-p037-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p037-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-05",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p037-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p037-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p038": [
+    {
+      "id": "hs-qur12-p038-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p038-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-05",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p038-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p038-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p039": [
+    {
+      "id": "hs-qur12-p039-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p039-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-05",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p039-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p039-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-05",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p040": [
+    {
+      "id": "hs-qur12-p040-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p040-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p040-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p041": [
+    {
+      "id": "hs-qur12-p041-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p041-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p041-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p042": [
+    {
+      "id": "hs-qur12-p042-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p042-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p042-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p043": [
+    {
+      "id": "hs-qur12-p043-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p043-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p043-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p044": [
+    {
+      "id": "hs-qur12-p044-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p044-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p044-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p045": [
+    {
+      "id": "hs-qur12-p045-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p045-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p045-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p046": [
+    {
+      "id": "hs-qur12-p046-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p046-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-06",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p046-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-06",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p047": [
+    {
+      "id": "hs-qur12-p047-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p047-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-07",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p047-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p048": [
+    {
+      "id": "hs-qur12-p048-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p048-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-07",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p048-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p049": [
+    {
+      "id": "hs-qur12-p049-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p049-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-07",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p049-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p050": [
+    {
+      "id": "hs-qur12-p050-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p050-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-07",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p050-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p051": [
+    {
+      "id": "hs-qur12-p051-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p051-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-07",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p051-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p052": [
+    {
+      "id": "hs-qur12-p052-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p052-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-07",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p052-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-07",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p053": [
+    {
+      "id": "hs-qur12-p053-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p053-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-08",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p053-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-nur-mishkah",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p053-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p054": [
+    {
+      "id": "hs-qur12-p054-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p054-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-08",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p054-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-nur-mishkah",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p054-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p055": [
+    {
+      "id": "hs-qur12-p055-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p055-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-08",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p055-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-nur-mishkah",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p055-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p056": [
+    {
+      "id": "hs-qur12-p056-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p056-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-08",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p056-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-nur-mishkah",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p056-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p057": [
+    {
+      "id": "hs-qur12-p057-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p057-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-08",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p057-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-nur-mishkah",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p057-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p058": [
+    {
+      "id": "hs-qur12-p058-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p058-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-08",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p058-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-nur-mishkah",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p058-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-08",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p059": [
+    {
+      "id": "hs-qur12-p059-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p059-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-09",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p059-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-cosmic-rain",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p059-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p060": [
+    {
+      "id": "hs-qur12-p060-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p060-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-09",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p060-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-cosmic-rain",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p060-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p061": [
+    {
+      "id": "hs-qur12-p061-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p061-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-09",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p061-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-cosmic-rain",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p061-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p062": [
+    {
+      "id": "hs-qur12-p062-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p062-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-09",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p062-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-cosmic-rain",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p062-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p063": [
+    {
+      "id": "hs-qur12-p063-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p063-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-09",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p063-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-cosmic-rain",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p063-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p064": [
+    {
+      "id": "hs-qur12-p064-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p064-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-09",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p064-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-cosmic-rain",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p064-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-09",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p065": [
+    {
+      "id": "hs-qur12-p065-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p065-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-10",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p065-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p066": [
+    {
+      "id": "hs-qur12-p066-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p066-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-10",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p066-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p067": [
+    {
+      "id": "hs-qur12-p067-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p067-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-10",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p067-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p068": [
+    {
+      "id": "hs-qur12-p068-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p068-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-10",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p068-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p069": [
+    {
+      "id": "hs-qur12-p069-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p069-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-10",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p069-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p070": [
+    {
+      "id": "hs-qur12-p070-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p070-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-10",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p070-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-10",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p071": [
+    {
+      "id": "hs-qur12-p071-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p071-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-11",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p071-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p072": [
+    {
+      "id": "hs-qur12-p072-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p072-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-11",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p072-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p073": [
+    {
+      "id": "hs-qur12-p073-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p073-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-11",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p073-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p074": [
+    {
+      "id": "hs-qur12-p074-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p074-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-11",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p074-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p075": [
+    {
+      "id": "hs-qur12-p075-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p075-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-11",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p075-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-11",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p076": [
+    {
+      "id": "hs-qur12-p076-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p076-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p076-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p076-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p077": [
+    {
+      "id": "hs-qur12-p077-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p077-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p077-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p077-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p078": [
+    {
+      "id": "hs-qur12-p078-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p078-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p078-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p078-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p079": [
+    {
+      "id": "hs-qur12-p079-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p079-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p079-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p079-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p080": [
+    {
+      "id": "hs-qur12-p080-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p080-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p080-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p080-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p081": [
+    {
+      "id": "hs-qur12-p081-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p081-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p081-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p081-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p082": [
+    {
+      "id": "hs-qur12-p082-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p082-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-12",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p082-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-istiizan-house",
+      "indicator_label": "🕌 القصة بالصوت",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p082-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-12",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.915,
+        "w": 0.32,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p083": [
+    {
+      "id": "hs-qur12-p083-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p083-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-13",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p083-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p084": [
+    {
+      "id": "hs-qur12-p084-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p084-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-13",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p084-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p085": [
+    {
+      "id": "hs-qur12-p085-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p085-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-13",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p085-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p086": [
+    {
+      "id": "hs-qur12-p086-recite",
+      "type": "quran_reader",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "🎧 الحصري والمصحف",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p086-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s1-13",
+      "indicator_label": "📖 الشرح والمعاني",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p086-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s1-13",
+      "indicator_label": "✍️ التقويم والحفظ",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p087": [
+    {
+      "id": "hs-qur12-p087-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p087-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p087-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p088": [
+    {
+      "id": "hs-qur12-p088-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p088-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p088-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p089": [
+    {
+      "id": "hs-qur12-p089-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p089-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p089-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p090": [
+    {
+      "id": "hs-qur12-p090-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p090-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p090-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p091": [
+    {
+      "id": "hs-qur12-p091-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p091-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p091-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p092": [
+    {
+      "id": "hs-qur12-p092-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p092-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p092-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p093": [
+    {
+      "id": "hs-qur12-p093-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-01",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p093-scene",
+      "type": "quran_scene",
+      "scene_ref": "scene-ijaz-science",
+      "indicator_label": "✨ لوحة الإعجاز",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.35,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p093-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-01",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p094": [
+    {
+      "id": "hs-qur12-p094-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-02",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p094-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-02",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p095": [
+    {
+      "id": "hs-qur12-p095-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-02",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p095-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-02",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p096": [
+    {
+      "id": "hs-qur12-p096-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-02",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p096-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-02",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p097": [
+    {
+      "id": "hs-qur12-p097-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-02",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p097-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-02",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p098": [
+    {
+      "id": "hs-qur12-p098-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-02",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p098-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-02",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p099": [
+    {
+      "id": "hs-qur12-p099-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-02",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p099-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-02",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p100": [
+    {
+      "id": "hs-qur12-p100-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-03",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p100-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-03",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p101": [
+    {
+      "id": "hs-qur12-p101-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-03",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p101-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-03",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p102": [
+    {
+      "id": "hs-qur12-p102-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-03",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p102-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-03",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p103": [
+    {
+      "id": "hs-qur12-p103-explain",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s2-03",
+      "indicator_label": "📖 الشرح والشواهد",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p103-taqwim",
+      "type": "quran_taqwim",
+      "lesson_ref": "q-s2-03",
+      "indicator_label": "✍️ التقويم الرسمي",
+      "highlight_color": "rgba(14, 165, 233, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.29,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p104": [
+    {
+      "id": "hs-qur12-p104-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p104-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p104-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p105": [
+    {
+      "id": "hs-qur12-p105-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p105-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p105-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p106": [
+    {
+      "id": "hs-qur12-p106-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p106-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p106-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p107": [
+    {
+      "id": "hs-qur12-p107-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p107-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p107-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p108": [
+    {
+      "id": "hs-qur12-p108-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p108-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p108-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p109": [
+    {
+      "id": "hs-qur12-p109-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p109-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p109-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p110": [
+    {
+      "id": "hs-qur12-p110-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-01",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p110-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-01",
+      "indicator_label": "🏷️ أحكام الراء",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p110-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p111": [
+    {
+      "id": "hs-qur12-p111-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-02",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p111-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-02",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإظهار والإدغام)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p111-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p112": [
+    {
+      "id": "hs-qur12-p112-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-02",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p112-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-02",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإظهار والإدغام)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p112-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p113": [
+    {
+      "id": "hs-qur12-p113-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-02",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p113-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-02",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإظهار والإدغام)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p113-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p114": [
+    {
+      "id": "hs-qur12-p114-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-02",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p114-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-02",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإظهار والإدغام)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p114-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p115": [
+    {
+      "id": "hs-qur12-p115-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-02",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p115-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-02",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإظهار والإدغام)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p115-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p116": [
+    {
+      "id": "hs-qur12-p116-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-02",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p116-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-02",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإظهار والإدغام)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p116-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p117": [
+    {
+      "id": "hs-qur12-p117-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-03",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p117-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-03",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإقلاب والإخفاء)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p117-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p118": [
+    {
+      "id": "hs-qur12-p118-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-03",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p118-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-03",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإقلاب والإخفاء)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p118-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p119": [
+    {
+      "id": "hs-qur12-p119-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-03",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p119-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-03",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإقلاب والإخفاء)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p119-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p120": [
+    {
+      "id": "hs-qur12-p120-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-03",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p120-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-03",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإقلاب والإخفاء)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p120-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p121": [
+    {
+      "id": "hs-qur12-p121-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-03",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p121-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-03",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإقلاب والإخفاء)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p121-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p122": [
+    {
+      "id": "hs-qur12-p122-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-03",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p122-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-03",
+      "indicator_label": "🏷️ أحكام النون الساكنة والتنوين (الإقلاب والإخفاء)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p122-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p123": [
+    {
+      "id": "hs-qur12-p123-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-04",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p123-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-04",
+      "indicator_label": "🏷️ القلقلة والميم الساكنة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p123-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p124": [
+    {
+      "id": "hs-qur12-p124-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-04",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p124-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-04",
+      "indicator_label": "🏷️ القلقلة والميم الساكنة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p124-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p125": [
+    {
+      "id": "hs-qur12-p125-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-04",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p125-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-04",
+      "indicator_label": "🏷️ القلقلة والميم الساكنة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p125-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p126": [
+    {
+      "id": "hs-qur12-p126-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-04",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p126-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-04",
+      "indicator_label": "🏷️ القلقلة والميم الساكنة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p126-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p127": [
+    {
+      "id": "hs-qur12-p127-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-04",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p127-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-04",
+      "indicator_label": "🏷️ القلقلة والميم الساكنة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p127-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p128": [
+    {
+      "id": "hs-qur12-p128-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-04",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p128-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-04",
+      "indicator_label": "🏷️ القلقلة والميم الساكنة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p128-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p129": [
+    {
+      "id": "hs-qur12-p129-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-05",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p129-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-05",
+      "indicator_label": "🏷️ المد الطبيعي (وفيه علامة السجدة التلاوية في آية ٢٠٦)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p129-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p130": [
+    {
+      "id": "hs-qur12-p130-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-05",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p130-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-05",
+      "indicator_label": "🏷️ المد الطبيعي (وفيه علامة السجدة التلاوية في آية ٢٠٦)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p130-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p131": [
+    {
+      "id": "hs-qur12-p131-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-05",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p131-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-05",
+      "indicator_label": "🏷️ المد الطبيعي (وفيه علامة السجدة التلاوية في آية ٢٠٦)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p131-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p132": [
+    {
+      "id": "hs-qur12-p132-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-05",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p132-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-05",
+      "indicator_label": "🏷️ المد الطبيعي (وفيه علامة السجدة التلاوية في آية ٢٠٦)",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p132-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p133": [
+    {
+      "id": "hs-qur12-p133-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-06",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p133-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-06",
+      "indicator_label": "🏷️ المد المتصل والمد المنفصل",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p133-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p134": [
+    {
+      "id": "hs-qur12-p134-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-06",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p134-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-06",
+      "indicator_label": "🏷️ المد المتصل والمد المنفصل",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p134-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p135": [
+    {
+      "id": "hs-qur12-p135-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-06",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p135-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-06",
+      "indicator_label": "🏷️ المد المتصل والمد المنفصل",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p135-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p136": [
+    {
+      "id": "hs-qur12-p136-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-06",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p136-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-06",
+      "indicator_label": "🏷️ المد المتصل والمد المنفصل",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p136-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p137": [
+    {
+      "id": "hs-qur12-p137-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-06",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p137-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-06",
+      "indicator_label": "🏷️ المد المتصل والمد المنفصل",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p137-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p138": [
+    {
+      "id": "hs-qur12-p138-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-07",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p138-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-07",
+      "indicator_label": "🏷️ المد العارض للسكون ومد اللين",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p138-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p139": [
+    {
+      "id": "hs-qur12-p139-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-07",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p139-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-07",
+      "indicator_label": "🏷️ المد العارض للسكون ومد اللين",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p139-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p140": [
+    {
+      "id": "hs-qur12-p140-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-07",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p140-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-07",
+      "indicator_label": "🏷️ المد العارض للسكون ومد اللين",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p140-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p141": [
+    {
+      "id": "hs-qur12-p141-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-07",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p141-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-07",
+      "indicator_label": "🏷️ المد العارض للسكون ومد اللين",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p141-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p142": [
+    {
+      "id": "hs-qur12-p142-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-07",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p142-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-07",
+      "indicator_label": "🏷️ المد العارض للسكون ومد اللين",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p142-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p143": [
+    {
+      "id": "hs-qur12-p143-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-08",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p143-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-08",
+      "indicator_label": "🏷️ المد اللازم",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p143-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p144": [
+    {
+      "id": "hs-qur12-p144-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-08",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p144-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-08",
+      "indicator_label": "🏷️ المد اللازم",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p144-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p145": [
+    {
+      "id": "hs-qur12-p145-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-08",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p145-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-08",
+      "indicator_label": "🏷️ المد اللازم",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p145-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p146": [
+    {
+      "id": "hs-qur12-p146-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-08",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p146-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-08",
+      "indicator_label": "🏷️ المد اللازم",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p146-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p147": [
+    {
+      "id": "hs-qur12-p147-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-08",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p147-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-08",
+      "indicator_label": "🏷️ المد اللازم",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p147-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p148": [
+    {
+      "id": "hs-qur12-p148-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-09",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p148-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-09",
+      "indicator_label": "🏷️ مد الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p148-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p149": [
+    {
+      "id": "hs-qur12-p149-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-09",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p149-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-09",
+      "indicator_label": "🏷️ مد الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p149-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p150": [
+    {
+      "id": "hs-qur12-p150-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-09",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p150-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-09",
+      "indicator_label": "🏷️ مد الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p150-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p151": [
+    {
+      "id": "hs-qur12-p151-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-09",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p151-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-09",
+      "indicator_label": "🏷️ مد الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p151-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p152": [
+    {
+      "id": "hs-qur12-p152-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-10",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p152-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-10",
+      "indicator_label": "🏷️ أحكام الوقف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p152-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p153": [
+    {
+      "id": "hs-qur12-p153-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-10",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p153-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-10",
+      "indicator_label": "🏷️ أحكام الوقف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p153-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p154": [
+    {
+      "id": "hs-qur12-p154-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-10",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p154-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-10",
+      "indicator_label": "🏷️ أحكام الوقف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p154-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p155": [
+    {
+      "id": "hs-qur12-p155-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-10",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p155-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-10",
+      "indicator_label": "🏷️ أحكام الوقف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p155-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p156": [
+    {
+      "id": "hs-qur12-p156-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-10",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p156-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-10",
+      "indicator_label": "🏷️ أحكام الوقف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p156-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p157": [
+    {
+      "id": "hs-qur12-p157-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-11",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p157-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-11",
+      "indicator_label": "🏷️ النون والميم المشددتان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p157-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p158": [
+    {
+      "id": "hs-qur12-p158-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-11",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p158-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-11",
+      "indicator_label": "🏷️ النون والميم المشددتان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p158-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p159": [
+    {
+      "id": "hs-qur12-p159-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-11",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p159-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-11",
+      "indicator_label": "🏷️ النون والميم المشددتان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p159-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p160": [
+    {
+      "id": "hs-qur12-p160-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-11",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p160-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-11",
+      "indicator_label": "🏷️ النون والميم المشددتان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p160-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p161": [
+    {
+      "id": "hs-qur12-p161-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-11",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p161-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-11",
+      "indicator_label": "🏷️ النون والميم المشددتان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p161-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p162": [
+    {
+      "id": "hs-qur12-p162-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-11",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p162-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-11",
+      "indicator_label": "🏷️ النون والميم المشددتان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p162-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p163": [
+    {
+      "id": "hs-qur12-p163-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-12",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p163-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-12",
+      "indicator_label": "🏷️ مخارج حروف اللسان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p163-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p164": [
+    {
+      "id": "hs-qur12-p164-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-12",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p164-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-12",
+      "indicator_label": "🏷️ مخارج حروف اللسان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p164-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p165": [
+    {
+      "id": "hs-qur12-p165-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-12",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p165-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-12",
+      "indicator_label": "🏷️ مخارج حروف اللسان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p165-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p166": [
+    {
+      "id": "hs-qur12-p166-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-12",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p166-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-12",
+      "indicator_label": "🏷️ مخارج حروف اللسان",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p166-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p167": [
+    {
+      "id": "hs-qur12-p167-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-13",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p167-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-13",
+      "indicator_label": "🏷️ مخارج حروف الشفتين والحلق والجوف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p167-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p168": [
+    {
+      "id": "hs-qur12-p168-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-13",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p168-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-13",
+      "indicator_label": "🏷️ مخارج حروف الشفتين والحلق والجوف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p168-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p169": [
+    {
+      "id": "hs-qur12-p169-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-13",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p169-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-13",
+      "indicator_label": "🏷️ مخارج حروف الشفتين والحلق والجوف",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p169-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p170": [
+    {
+      "id": "hs-qur12-p170-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-14",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p170-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-14",
+      "indicator_label": "🏷️ الإظهار",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p170-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p171": [
+    {
+      "id": "hs-qur12-p171-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-14",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p171-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-14",
+      "indicator_label": "🏷️ الإظهار",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p171-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p172": [
+    {
+      "id": "hs-qur12-p172-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-14",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p172-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-14",
+      "indicator_label": "🏷️ الإظهار",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p172-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p173": [
+    {
+      "id": "hs-qur12-p173-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-14",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p173-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-14",
+      "indicator_label": "🏷️ الإظهار",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p173-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p174": [
+    {
+      "id": "hs-qur12-p174-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-14",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p174-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-14",
+      "indicator_label": "🏷️ الإظهار",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p174-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p175": [
+    {
+      "id": "hs-qur12-p175-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-15",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p175-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-15",
+      "indicator_label": "🏷️ الإدغام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p175-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p176": [
+    {
+      "id": "hs-qur12-p176-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-15",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p176-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-15",
+      "indicator_label": "🏷️ الإدغام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p176-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p177": [
+    {
+      "id": "hs-qur12-p177-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-15",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p177-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-15",
+      "indicator_label": "🏷️ الإدغام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p177-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p178": [
+    {
+      "id": "hs-qur12-p178-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-16",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p178-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-16",
+      "indicator_label": "🏷️ أنواع الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p178-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p179": [
+    {
+      "id": "hs-qur12-p179-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-16",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p179-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-16",
+      "indicator_label": "🏷️ أنواع الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p179-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p180": [
+    {
+      "id": "hs-qur12-p180-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-16",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p180-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-16",
+      "indicator_label": "🏷️ أنواع الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p180-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p181": [
+    {
+      "id": "hs-qur12-p181-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-16",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p181-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-16",
+      "indicator_label": "🏷️ أنواع الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p181-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p182": [
+    {
+      "id": "hs-qur12-p182-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-16",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p182-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-16",
+      "indicator_label": "🏷️ أنواع الصلة",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p182-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p183": [
+    {
+      "id": "hs-qur12-p183-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-17",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p183-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-17",
+      "indicator_label": "🏷️ أحكام اللام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p183-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p184": [
+    {
+      "id": "hs-qur12-p184-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-17",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p184-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-17",
+      "indicator_label": "🏷️ أحكام اللام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p184-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p185": [
+    {
+      "id": "hs-qur12-p185-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-17",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p185-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-17",
+      "indicator_label": "🏷️ أحكام اللام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p185-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p186": [
+    {
+      "id": "hs-qur12-p186-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-17",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p186-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-17",
+      "indicator_label": "🏷️ أحكام اللام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p186-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p187": [
+    {
+      "id": "hs-qur12-p187-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-17",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p187-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-17",
+      "indicator_label": "🏷️ أحكام اللام",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p187-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p188": [
+    {
+      "id": "hs-qur12-p188-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-18",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p188-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-18",
+      "indicator_label": "🏷️ المد الأصلي",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p188-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p189": [
+    {
+      "id": "hs-qur12-p189-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-18",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p189-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-18",
+      "indicator_label": "🏷️ المد الأصلي",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p189-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p190": [
+    {
+      "id": "hs-qur12-p190-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-18",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p190-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-18",
+      "indicator_label": "🏷️ المد الأصلي",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p190-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p191": [
+    {
+      "id": "hs-qur12-p191-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-18",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p191-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-18",
+      "indicator_label": "🏷️ المد الأصلي",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p191-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ],
+  "qur12-p192": [
+    {
+      "id": "hs-qur12-p192-tilawa",
+      "type": "quran_reader",
+      "lesson_ref": "q-s3-18",
+      "indicator_label": "📜 التجويد الملوّن",
+      "highlight_color": "rgba(5, 150, 105, 0.12)",
+      "bounds": {
+        "x": 0.67,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p192-tajweed",
+      "type": "explainable_text",
+      "explanation_ref": "exp-q-s3-18",
+      "indicator_label": "🏷️ المد الأصلي",
+      "highlight_color": "rgba(180, 83, 9, 0.12)",
+      "bounds": {
+        "x": 0.34,
+        "y": 0.012,
+        "w": 0.3,
+        "h": 0.055
+      }
+    },
+    {
+      "id": "hs-qur12-p192-quiz",
+      "type": "assessment",
+      "assessment_ref": "quiz-qur-s3",
+      "indicator_label": "📝 اختبار التجويد",
+      "highlight_color": "rgba(16, 185, 129, 0.12)",
+      "bounds": {
+        "x": 0.03,
+        "y": 0.012,
+        "w": 0.28,
+        "h": 0.055
+      }
+    }
+  ]
+}

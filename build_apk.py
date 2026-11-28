@@ -37,6 +37,10 @@ SOURCE_PHYS_HTML = f"{WORKSPACE}/physics-12th-book.html"
 SOURCE_PHYS_LAB = f"{WORKSPACE}/physics-12th-lab.html"
 SOURCE_BIO_HTML = f"{WORKSPACE}/biology-12th-book.html"
 SOURCE_BIO_LAB = f"{WORKSPACE}/biology-12th-lab.html"
+SOURCE_MATH12_HTML = f"{WORKSPACE}/math-12th-book.html"
+SOURCE_MATH12_LAB = f"{WORKSPACE}/math-12th-lab.html"
+SOURCE_LIT12_HTML = f"{WORKSPACE}/arabic-literature-12th-book.html"
+SOURCE_QURAN12_HTML = f"{WORKSPACE}/quran-12th-book.html"
 SOURCE_SCI9_HTML = f"{WORKSPACE}/science9-interactive.html"
 SOURCE_SCI9_3D = f"{WORKSPACE}/science-9th-book.html"
 SOURCE_MATH9_3D = f"{WORKSPACE}/math-9th-book.html"
@@ -4612,6 +4616,18 @@ def copy_assets(base_dir):
     if os.path.exists(SOURCE_BIO_LAB):
         shutil.copy2(SOURCE_BIO_LAB, f"{assets_dir}/biology-12th-lab.html")
         print(f"  ✓ Bundled 3D Biology Lab: biology-12th-lab.html ({os.path.getsize(SOURCE_BIO_LAB) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_MATH12_HTML):
+        shutil.copy2(SOURCE_MATH12_HTML, f"{assets_dir}/math-12th-book.html")
+        print(f"  ✓ Bundled 3D Math Book: math-12th-book.html ({os.path.getsize(SOURCE_MATH12_HTML) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_MATH12_LAB):
+        shutil.copy2(SOURCE_MATH12_LAB, f"{assets_dir}/math-12th-lab.html")
+        print(f"  ✓ Bundled 3D Math Lab: math-12th-lab.html ({os.path.getsize(SOURCE_MATH12_LAB) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_LIT12_HTML):
+        shutil.copy2(SOURCE_LIT12_HTML, f"{assets_dir}/arabic-literature-12th-book.html")
+        print(f"  ✓ Bundled 12th Arabic Lit Book: arabic-literature-12th-book.html ({os.path.getsize(SOURCE_LIT12_HTML) / 1024:.0f} KB)")
+    if os.path.exists(SOURCE_QURAN12_HTML):
+        shutil.copy2(SOURCE_QURAN12_HTML, f"{assets_dir}/quran-12th-book.html")
+        print(f"  ✓ Bundled 12th Quran Book: quran-12th-book.html ({os.path.getsize(SOURCE_QURAN12_HTML) / 1024:.0f} KB)")
     if os.path.exists(SOURCE_SCI9_3D):
         shutil.copy2(SOURCE_SCI9_3D, f"{assets_dir}/science-9th-book.html")
         shutil.copy2(SOURCE_SCI9_3D, f"{assets_dir}/science9-interactive.html")
@@ -4651,6 +4667,9 @@ def copy_assets(base_dir):
     if os.path.exists(f"{WORKSPACE}/thaker-engine"):
         shutil.copytree(f"{WORKSPACE}/thaker-engine", f"{assets_dir}/thaker-engine", dirs_exist_ok=True)
         print("  ✓ Bundled Thaker Engine: assets/thaker-engine")
+    if os.path.exists(f"{WORKSPACE}/engine"):
+        shutil.copytree(f"{WORKSPACE}/engine", f"{assets_dir}/engine", dirs_exist_ok=True)
+        print("  ✓ Bundled Engine Fonts & Vendor Libs: assets/engine")
 
 def compile_and_package(base_dir):
     print("-> Running Android Toolchain (aapt2, javac, d8, zipalign, apksigner)...")

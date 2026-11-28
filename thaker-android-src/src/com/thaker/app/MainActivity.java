@@ -210,8 +210,15 @@ public class MainActivity extends Activity {
             row2.setPadding(0, (int) (10 * dp), 0, 0);
             row2.addView(makeSubjectTile("الأحياء 3D", "منهج تفاعلي", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
             row2.addView(makeSpace(10));
-            row2.addView(makeSubjectTile("التاسع (العلوم)", "استعراض الإعدادية", R.drawable.ic_subj_science, R.drawable.card_white_rounded, "science", true));
+            row2.addView(makeSubjectTile("الرياضيات 3D", "250 صفحة + 13 مجسماً", R.drawable.ic_subj_math, R.drawable.card_white_rounded, "math12", true));
             homeSubjectsContainer.addView(row2);
+
+            LinearLayout row3 = makeRow();
+            row3.setPadding(0, (int) (10 * dp), 0, 0);
+            row3.addView(makeSubjectTile("الأدب والنصوص", "212 صفحة + تحليل جمالي", R.drawable.ic_subj_literature, R.drawable.card_cream_tint, "arabic_lit", true));
+            row3.addView(makeSpace(10));
+            row3.addView(makeSubjectTile("القرآن الكريم", "188 ص + الحصري + تقويمات", R.drawable.ic_subj_quran, R.drawable.card_mint_tint, "quran", true));
+            homeSubjectsContainer.addView(row3);
         }
     }
 
@@ -237,7 +244,16 @@ public class MainActivity extends Activity {
         LinearLayout r3 = makeRow();
         r3.setPadding(0, (int) (10 * dp), 0, 0);
         r3.addView(makeSubjectTile("الأحياء 3D", "219 صفحة + معمل 18 تجربة", R.drawable.ic_subj_bio, R.drawable.card_mint_tint, "biology", true));
+        r3.addView(makeSpace(10));
+        r3.addView(makeSubjectTile("الرياضيات 3D", "250 صفحة + معمل 13 مجسماً", R.drawable.ic_subj_math, R.drawable.card_white_rounded, "math12", true));
         allSubjectsContainer.addView(r3);
+
+        LinearLayout r4 = makeRow();
+        r4.setPadding(0, (int) (10 * dp), 0, 0);
+        r4.addView(makeSubjectTile("الأدب والنصوص", "212 صفحة + 36 تحليلاً جمالياً", R.drawable.ic_subj_literature, R.drawable.card_cream_tint, "arabic_lit", true));
+        r4.addView(makeSpace(10));
+        r4.addView(makeSubjectTile("القرآن الكريم", "188 ص + 120 تلاوة للحصري", R.drawable.ic_subj_quran, R.drawable.card_mint_tint, "quran", true));
+        allSubjectsContainer.addView(r4);
     }
 
     private void buildLibraryTab() {
@@ -258,6 +274,10 @@ public class MainActivity extends Activity {
         addHtmlBookItem("🔬 معمل الفيزياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الفيزياء 1–9", "physics-12th-lab.html");
         addHtmlBookItem("🧬 الأحياء 12 التفاعلي (219 صفحة)", "الجهاز العصبي، الوراثة، DNA والتقانة الحيوية", "biology-12th-book.html");
         addHtmlBookItem("🧪 معمل الأحياء التفاعلي 3D (18 تجربة)", "تطبيقات تفاعلية متدرجة الخطوات لجميع وحدات الأحياء 1–8", "biology-12th-lab.html");
+        addHtmlBookItem("📐 الرياضيات 12 التفاعلي (250 صفحة + حلول)", "الأعداد المركبة، القطوع، الهندسة الفضائية، الاحتمالات، المشتقات والتكامل", "math-12th-book.html");
+        addHtmlBookItem("🧊 معمل الرياضيات التفاعلي 3D (13 مجسماً)", "مستوى أرغاند، القطوع، المجسمات، الاحتمالات، المشتقات والتكامل", "math-12th-lab.html");
+        addHtmlBookItem("الأدب والنصوص 12 التفاعلي (212 صفحة)", "36 موضوعاً، تحليل جمالي، بطاقات نصوص، وفهرس النقد الأدبي", "arabic-literature-12th-book.html");
+        addHtmlBookItem("🕌 القرآن الكريم وعلومه 12 التفاعلي (188 صفحة)", "سورة النور، علوم القرآن، التلاوة والتجويد، 120 تلاوة للحصري", "quran-12th-book.html");
         addHtmlBookItem("⚗️ مختبر الكيمياء 3D (10 تجارب تفاعلية)", "معمل كيمياء ثلاثي الأبعاد مربوط مباشرة بكتاب الكيمياء", "chem-lab-book.html");
         addHtmlBookItem("🔬 المعمل التفاعلي 3D لعلوم التاسع", "13 درساً وتجربة علمية ثلاثية الأبعاد", "science-9th-book.html");
         addHtmlBookItem("📐 كتاب الرياضيات التفاعلي 3D (التاسع)", "نماذج هندسية تفاعلية للمبرهنات والدائرة", "math-9th-book.html");

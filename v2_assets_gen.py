@@ -256,6 +256,14 @@ def _make_badge_icon(out_path, bg_rgba, kind):
         d.chord([68, 70, 188, 190], start=30, end=210, fill=(5, 150, 105, 255))
         d.line([(86, 170), (170, 86)], fill=(255, 255, 255, 240), width=8)
         d.ellipse([106, 98, 126, 118], fill=(254, 243, 199, 255))
+    elif kind == "quran":
+        # Emerald + Gold Open Mushaf Emblem
+        d.polygon([(46, 82), (126, 94), (126, 184), (46, 170)], fill=(4, 120, 87, 255))
+        d.polygon([(210, 82), (130, 94), (130, 184), (210, 170)], fill=(5, 150, 105, 255))
+        d.polygon([(54, 88), (122, 99), (122, 174), (54, 163)], fill=(254, 252, 232, 255))
+        d.polygon([(202, 88), (134, 99), (134, 174), (202, 163)], fill=(254, 249, 195, 255))
+        d.line([(128, 92), (128, 184)], fill=(217, 119, 6, 255), width=6)
+        d.polygon([(128, 52), (138, 70), (156, 70), (142, 82), (128, 90), (114, 82), (100, 70), (118, 70)], fill=(245, 158, 11, 255))
     elif kind == "literature":
         d.polygon([(52, 76), (116, 66), (128, 82), (128, 190), (116, 174), (52, 184)], fill=(180, 83, 9, 255))
         d.polygon([(204, 76), (140, 66), (128, 82), (128, 190), (140, 174), (204, 184)], fill=(217, 119, 6, 255))
@@ -282,3 +290,4 @@ def generate_v2_artwork(res_dir):
     _make_badge_icon(f"{nodpi}/ic_subj_chem.png", (204, 251, 241, 255), "chem")
     _make_badge_icon(f"{nodpi}/ic_subj_bio.png", (220, 252, 231, 255), "bio")
     _make_badge_icon(f"{nodpi}/ic_subj_literature.png", (255, 251, 235, 255), "literature")
+    _make_badge_icon(f"{nodpi}/ic_subj_quran.png", (236, 253, 245, 255), "quran")

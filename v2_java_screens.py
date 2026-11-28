@@ -238,6 +238,8 @@ public class MainActivity extends Activity {
             LinearLayout row3 = makeRow();
             row3.setPadding(0, (int) (10 * dp), 0, 0);
             row3.addView(makeSubjectTile("الأدب والنصوص", "212 صفحة + تحليل جمالي", R.drawable.ic_subj_literature, R.drawable.card_cream_tint, "arabic_lit", true));
+            row3.addView(makeSpace(10));
+            row3.addView(makeSubjectTile("القرآن الكريم", "188 ص + الحصري + تقويمات", R.drawable.ic_subj_quran, R.drawable.card_mint_tint, "quran", true));
             homeSubjectsContainer.addView(row3);
         }
     }
@@ -271,6 +273,8 @@ public class MainActivity extends Activity {
         LinearLayout r4 = makeRow();
         r4.setPadding(0, (int) (10 * dp), 0, 0);
         r4.addView(makeSubjectTile("الأدب والنصوص", "212 صفحة + 36 تحليلاً جمالياً", R.drawable.ic_subj_literature, R.drawable.card_cream_tint, "arabic_lit", true));
+        r4.addView(makeSpace(10));
+        r4.addView(makeSubjectTile("القرآن الكريم", "188 ص + 120 تلاوة للحصري", R.drawable.ic_subj_quran, R.drawable.card_mint_tint, "quran", true));
         allSubjectsContainer.addView(r4);
     }
 
@@ -295,6 +299,7 @@ public class MainActivity extends Activity {
         addHtmlBookItem("📐 الرياضيات 12 التفاعلي (250 صفحة + حلول)", "الأعداد المركبة، القطوع، الهندسة الفضائية، الاحتمالات، المشتقات والتكامل", "math-12th-book.html");
         addHtmlBookItem("🧊 معمل الرياضيات التفاعلي 3D (13 مجسماً)", "مستوى أرغاند، القطوع، المجسمات، الاحتمالات، المشتقات والتكامل", "math-12th-lab.html");
         addHtmlBookItem("الأدب والنصوص 12 التفاعلي (212 صفحة)", "36 موضوعاً، تحليل جمالي، بطاقات نصوص، وفهرس النقد الأدبي", "arabic-literature-12th-book.html");
+        addHtmlBookItem("🕌 القرآن الكريم وعلومه 12 التفاعلي (188 صفحة)", "سورة النور، علوم القرآن، التلاوة والتجويد، 120 تلاوة للحصري", "quran-12th-book.html");
         addHtmlBookItem("⚗️ مختبر الكيمياء 3D (10 تجارب تفاعلية)", "معمل كيمياء ثلاثي الأبعاد مربوط مباشرة بكتاب الكيمياء", "chem-lab-book.html");
         addHtmlBookItem("🔬 المعمل التفاعلي 3D لعلوم التاسع", "13 درساً وتجربة علمية ثلاثية الأبعاد", "science-9th-book.html");
         addHtmlBookItem("📐 كتاب الرياضيات التفاعلي 3D (التاسع)", "نماذج هندسية تفاعلية للمبرهنات والدائرة", "math-9th-book.html");
@@ -660,6 +665,17 @@ public class SubjectActivity extends Activity {
                 ThakerStore.getBookPct(this, "arabic_lit", 20), "212 صفحة تفاعلية", "36 تحليلاً جمالياً + بطاقات نصوص",
                 "افتح كتاب الأدب والنصوص التفاعلي", "html", "arabic-literature-12th-book.html",
                 "تصفح قسم النقد الأدبي", "arabic-literature-12th-book.html");
+        } else if ("quran".equals(subjectKey)) {
+            tvTitle.setText("القرآن الكريم وعلومه");
+            tvMeta.setText("3 أقسام · 34 درساً · 188 صفحة");
+            tvGradePill.setText("الثالث الثانوي");
+            ivIcon.setImageResource(R.drawable.ic_subj_quran);
+            quizKey = "quran";
+
+            addPartCard("كتاب القرآن الكريم التفاعلي + المصحف الصوتي", "تفسير سورة النور (الحصري المعلم)، علوم القرآن، و18 حصة تلاوة بالرسم العثماني",
+                ThakerStore.getBookPct(this, "quran", 15), "188 صفحة تفاعلية", "120 تلاوة أوفلاين + 16 تقويماً",
+                "🕌 افتح كتاب القرآن الكريم التفاعلي", "html", "quran-12th-book.html",
+                "🎧 افتح المصحف الصوتي والقصص", "quran-12th-book.html");
         } else if ("math".equals(subjectKey)) {
             tvTitle.setText("الرياضيات");
             tvMeta.setText("جزءان · 8 وحدات · جبر وهندسة ومثلثات");
@@ -1149,6 +1165,7 @@ public class SummaryActivity extends Activity {
         if ("math_p2".equals(s)) return "math_p2";
         if ("math12".equals(s)) return "math_12";
         if ("arabic_lit".equals(s)) return "arabic_lit";
+        if ("quran".equals(s)) return "quran";
         if ("physics".equals(s)) return "phys_12";
         if ("biology".equals(s)) return "bio_12";
         if ("chemistry".equals(s)) return "chem_12";
@@ -1218,6 +1235,29 @@ public class SummaryActivity extends Activity {
                 "التطبيقات النقدية", "• التجربة الشعرية ص 189.\n• القصة ص 198، والنص المسرحي ص 200، والمقالة ص 202.", "ص 189",
                 "طريقة التطبيق", "طبّق المفهوم النقدي على نص من الكتاب، واربط الحكم بالشاهد النصي.",
                 "خطأ شائع", "اعتبار القصة والنص المسرحي والمقالة نوعاً واحداً؛ لكل منها خصائصه الخاصة."
+            ));
+        } else if ("quran".equals(subject)) {
+            tvTitle.setText("القرآن الكريم وعلومه · الثالث الثانوي");
+            groups.add(new SummaryGroup(
+                "سورة النور (القسم الأول)", "ص 8–86: أحكام الأسرة والمجتمع وآداب الاستئذان",
+                "💡 محاور السورة", "• حماية الأعراض وحد القذف واللعان وحادثة الإفك.\n• آداب الاستئذان والبيوت وغض البصر والحجاب والزواج.", "ص 8",
+                "📖 آيات ومفاهيم أساسية", "من ص 8 إلى ص 86: 13 درس تفسير (الآيات 24:1–64) مع المعاني والتلاوة أوفلاين بصوت الحصري المعلم.", "افتح أي درس داخل كتاب القرآن التفاعلي للاستماع للتلاوة ومشاهدة التحليل التجويدي.", "ص 24",
+                "🎧 التلاوة والقصص المرئية", "• قصة حادثة الإفك عبر 6 محطات موثقة بالصوت والصورة، وتطبيق آداب الاستئذان.", "ص 22",
+                "⚠️ تنبيه علمي", "التحقق من الأخبار بالبينة قبل نشرها هو أساس الوقاية من الشائعات كما قررت آيات الإفك."
+            ));
+            groups.add(new SummaryGroup(
+                "علوم القرآن الكريم (القسم الثاني)", "ص 88–103: جمع القرآن، الإعجاز، ومخارج الحروف",
+                "💡 محاور علوم القرآن", "• جمع القرآن الكريم في عهد النبي ﷺ وأبي بكر وعثمان رضي الله عنهم.\n• وجوه إعجاز القرآن الكريم والضوابط الأربعة للتفسير العلمي الصحيح.", "ص 88",
+                "📐 المخارج الرئيسية الخمسة", "الجوف · الحلق · اللسان · الشفتان · الخيشوم", "تمتد عليها سبعة عشر مخرجاً خاصاً عند ابن الجزري وجمهور القراء.", "ص 100",
+                "🧪 الضبط المنهجي للإعجاز", "• التمييز بين الحقيقة العلمية القطعية والنظرية الظنية قبل ربطها بالآية الكريمة.", "ص 94",
+                "⚠️ خطأ شائع", "الاكتفاء بالملاحظات الإملائية في كتب التفسير دون التمييز بين الرسم العثماني والرسم الإملائي."
+            ));
+            groups.add(new SummaryGroup(
+                "التلاوة والتجويد (القسم الثالث)", "ص 105–192: الأعراف، الأنفال، التوبة، يونس، هود",
+                "💡 السور المقررة للتلاوة", "• 18 حصة تلاوة بالرسم العثماني الموثق من مصحف المدينة.\n• إبراز أحكام التجويد الملونة وعلامات الوقف في القارئ الذكي.", "ص 105",
+                "🗣️ قواعد الوصل والابتداء", "لا بِسْمِ اللَّهِ في مفتتح سورة التوبة (ص 139)، مع تطبيق التفخيم والترقيق والمدود والغنة.", "تشمل الحصص تطبيقات: قلقلة، إدغام، إخفاء، مد لازم، ومواضع الإمالة في سورة هود.", "ص 175",
+                "🧪 مراجعة الحصص والتقاويم", "• جميع التقاويم الرسمية الـ16 مدمجة بإجاباتها النموذجية واختبار الحفظ التفاعلي.", "ص 188",
+                "⚠️ خطأ شائع", "قراءة البسملة عند البدء بسورة التوبة، أو إهمال علامات الوقف المانعة."
             ));
         } else if ("physics".equals(subject)) {
             tvTitle.setText("الفيزياء 3D · الثالث الثانوي");
@@ -1652,6 +1692,26 @@ public class QuizActivity extends Activity {
             "المبدأ العلمي الذي تُفصل به مكونات النفط الخام داخل برج التقطير التجزيئي هو:",
             new String[]{"الاختلاف في درجات الغليان والأوزان الجزيئية", "تفاعل التصبّن بالقلويات", "الاندماج النووي", "الطلاء بالفضة"}, 0,
             "تتصاعد الغازات والجازولين إلى القمة لانخفاض درجة غليانها وتتكثف الأجزاء الثقيلة كالإسفلت أسفل البرج.", "chemistry-12th-book.html", 131));
+        bank.add(new Question("qur_1", "سهل · سورة النور",
+            "كم جلدة حُدِّدَتْ عقوبةً لقاذف المحصنات الغافلات إذا لم يأتِ بأربعة شهداء في مطلع سورة النور؟",
+            new String[]{"أربعون جلدة", "ثمانون جلدة", "مائة جلدة", "ستون جلدة"}, 1,
+            "فرض الله في آية القذف من سورة النور عقوبة ثمانين جلدة وردَّ شهادة القاذف حتى يتوب صيانةً للأعراض.", "quran-12th-book.html", 11));
+        bank.add(new Question("qur_2", "متوسط · حادثة الإفك",
+            "في طريق العودة من أي غزوة وقعت حادثة الإفك التي برَّأ الله أمَّ المؤمنين عائشة رضي الله عنها من فوق سبع سماوات؟",
+            new String[]{"غزوة تبوك", "غزوة بني المصطلق (المريسيع)", "غزوة خيبر", "غزوة حنين"}, 1,
+            "وقعت حادثة الإفك أثناء عودة الجيش من غزوة بني المصطلق (المريسيع) في السنة الخامسة أو السادسة للهجرة.", "quran-12th-book.html", 21));
+        bank.add(new Question("qur_3", "سهل · آداب الاستئذان",
+            "كم مرة يُشرع الاستئذان عند دخول البيوت غير المسكونة أو بيوت الغير قبل الرجوع إذا لم يُؤذن؟",
+            new String[]{"مرة واحدة", "مرتان", "ثلاث مرات", "خمس مرات"}, 2,
+            "الاستئذان ثلاث مرات، فإن أُذن وإلا رجع كما صح عن النبي ﷺ وشُرح في آداب سورة النور.", "quran-12th-book.html", 40));
+        bank.add(new Question("qur_4", "متوسط · علوم القرآن",
+            "الصحابي الذي أشار على الخليفة أبي بكر الصديق رضي الله عنه بجمع القرآن بعد استشهاد القرّاء في اليمامة هو:",
+            new String[]{"عثمان بن عفان", "عمر بن الخطاب", "زيد بن ثابت", "معاذ بن جبل"}, 1,
+            "أشار عمر بن الخطاب على أبي بكر الصديق رضي الله عنهما بجمع القرآن، وكلّف أبو بكر زيد بن ثابت رضي الله عنه بهذه المهمة.", "quran-12th-book.html", 88));
+        bank.add(new Question("qur_5", "متوسط · التلاوة والتجويد",
+            "تتميز سورة التوبة في مطلعها ضمن منهج التلاوة بأنها:",
+            new String[]{"تُفتتح بسكتة طويلة قبل البسملة", "تخلو من البسملة في أولها", "تُقرأ بالإمالة الكاملة في فواتحها", "تُختم بسجدة تلاوة واجبة"}, 1,
+            "سورة التوبة هي السورة الوحيدة التي تُقرأ من أولها دون البسملة، وتبدأ مباشرة بالبراءة.", "quran-12th-book.html", 139));
         return bank;
     }
 
@@ -1672,6 +1732,7 @@ public class QuizActivity extends Activity {
             else if ("math_p1".equals(quizSubject) || "math_p2".equals(quizSubject)) prefix = "mp";
             else if ("math_12".equals(quizSubject)) prefix = "m12_";
             else if ("arabic_lit".equals(quizSubject)) prefix = "lit_";
+            else if ("quran".equals(quizSubject)) prefix = "qur_";
             else if ("phys_12".equals(quizSubject)) prefix = "p12_";
             else if ("bio_12".equals(quizSubject)) prefix = "b12_";
             else if ("chem_12".equals(quizSubject)) prefix = "c12_";
@@ -1771,7 +1832,7 @@ public class QuizActivity extends Activity {
         ThakerStore.setTaskDone(this, 2, true);
         ThakerStore.bumpStudyStreak(this);
 
-        String unitKey = "phys_12".equals(quizSubject) ? "phys_u1" : ("bio_12".equals(quizSubject) ? "bio_u1" : "u9");
+        String unitKey = "phys_12".equals(quizSubject) ? "phys_u1" : ("bio_12".equals(quizSubject) ? "bio_u1" : ("quran".equals(quizSubject) ? "quran_s1" : "u9"));
         ThakerStore.setUnitMastery(this, unitKey, pct >= 80 ? 3 : (pct >= 50 ? 2 : 1));
 
         String gradeMsg = pct >= 85 ? "ممتاز! إتقان رائع 🌟" : (pct >= 60 ? "جيد جداً! واصل التقدم 👍" : "تحتاج مراجعة بسيطة، أخطاؤك محفوظة للتدرب 💪");
