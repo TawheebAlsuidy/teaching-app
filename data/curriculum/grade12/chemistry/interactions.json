@@ -12,6 +12,19 @@
         "w": 0.65,
         "h": 0.3547
       }
+    },
+    {
+      "id": "hs-chem12-p013-fig-1",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-1-blocks",
+      "indicator_label": "🔍 مواقع الفئتين d و f في الجدول 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.18,
+        "y": 0.24,
+        "w": 0.64,
+        "h": 0.22
+      }
     }
   ],
   "chem12-p014": [
@@ -74,16 +87,16 @@
   ],
   "chem12-p017": [
     {
-      "id": "hs-chem12-p017-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u1-l2",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p017-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-1-config",
+      "indicator_label": "🔍 التوزيع الإلكتروني 3d وشذوذ Cr/Cu 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
         "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "y": 0.145,
+        "w": 0.34,
+        "h": 0.35
       }
     }
   ],
@@ -104,34 +117,17 @@
   ],
   "chem12-p019": [
     {
-      "id": "hs-chem12-p019-fig-0",
-      "type": "interactive_3d",
-      "diagram_ref": "diag-chem-iron-test",
-      "indicator_label": "🔍 الكشف عن أملاح الحديد 3D",
-      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "id": "hs-chem12-p019-concept-fallback",
+      "type": "explainable_text",
+      "explanation_ref": "exp-chem-u1-l3",
+      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
+      "highlight_color": "rgba(0, 168, 89, 0.11)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.3088,
-        "w": 0.58,
-        "h": 0.19
-      },
-      "lab_exp": "exp-1",
-      "lab_url": "chem-lab-book.html#exp=exp-1&from=book&page=21"
-    },
-    {
-      "id": "hs-chem12-p019-fig-1",
-      "type": "interactive_3d",
-      "diagram_ref": "diag-chem-iron-test",
-      "indicator_label": "🔍 الكشف عن أملاح الحديد 3D",
-      "highlight_color": "rgba(239, 68, 68, 0.14)",
-      "bounds": {
-        "x": 0.2,
-        "y": 0.5503,
-        "w": 0.58,
-        "h": 0.19
-      },
-      "lab_exp": "exp-1",
-      "lab_url": "chem-lab-book.html#exp=exp-1&from=book&page=21"
+        "x": 0.18,
+        "y": 0.16,
+        "w": 0.64,
+        "h": 0.14
+      }
     }
   ],
   "chem12-p020": [
@@ -139,13 +135,13 @@
       "id": "hs-chem12-p020-fig-0",
       "type": "interactive_3d",
       "diagram_ref": "diag-chem-iron-blast",
-      "indicator_label": "🔍 الفرن العالي واختزال الحديد 3D",
+      "indicator_label": "🔍 شكل (1-1): الفرن العالي 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3001,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.145,
+        "w": 0.38,
+        "h": 0.345
       }
     }
   ],
@@ -166,17 +162,19 @@
   ],
   "chem12-p022": [
     {
-      "id": "hs-chem12-p022-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u1-l3",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p022-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-iron-test",
+      "indicator_label": "🔍 الخمول Fe₃O₄ وكشف أملاح الحديد 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
-      }
+        "x": 0.19,
+        "y": 0.725,
+        "w": 0.62,
+        "h": 0.105
+      },
+      "lab_exp": "exp-1",
+      "lab_url": "chem-lab-book.html#exp=exp-1&from=book&page=20"
     }
   ],
   "chem12-p023": [
@@ -229,66 +227,60 @@
     {
       "id": "hs-chem12-p025-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-1-energy",
+      "indicator_label": "🔍 شكل (2-1): صور الطاقة وتحولاتها 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.4117,
-        "w": 0.58,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+        "x": 0.19,
+        "y": 0.4,
+        "w": 0.62,
+        "h": 0.22
+      }
     }
   ],
   "chem12-p026": [
     {
       "id": "hs-chem12-p026-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-2-kwater",
+      "indicator_label": "🔍 شكل (2-2): تفاعل K + H₂O (طارد) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.171,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+        "x": 0.18,
+        "y": 0.145,
+        "w": 0.22,
+        "h": 0.215
+      }
     },
     {
       "id": "hs-chem12-p026-fig-1",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-3-nh4no3",
+      "indicator_label": "🔍 شكل (2-3): تحلل NH₄NO₃ (ماص) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3705,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.385,
+        "w": 0.22,
+        "h": 0.185
       },
       "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=24"
     }
   ],
   "chem12-p027": [
     {
       "id": "hs-chem12-p027-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-4-system",
+      "indicator_label": "🔍 شكل (2-4): النظام والوسط المحيط 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.2637,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+        "x": 0.18,
+        "y": 0.25,
+        "w": 0.32,
+        "h": 0.21
+      }
     }
   ],
   "chem12-p028": [
@@ -353,17 +345,15 @@
     {
       "id": "hs-chem12-p031-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-5-endoexo",
+      "indicator_label": "🔍 شكل (2-5): منحنيات الطارد والماص 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.635,
-        "w": 0.58,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+        "x": 0.19,
+        "y": 0.61,
+        "w": 0.62,
+        "h": 0.21
+      }
     },
     {
       "id": "hs-chem12-p031-ex-1",
@@ -442,17 +432,15 @@
     {
       "id": "hs-chem12-p034-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-6-heating",
+      "indicator_label": "🔍 شكل (2-6): منحنى تسخين الماء 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.4473,
-        "w": 0.58,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+        "x": 0.19,
+        "y": 0.41,
+        "w": 0.62,
+        "h": 0.22
+      }
     }
   ],
   "chem12-p035": [
@@ -474,17 +462,15 @@
     {
       "id": "hs-chem12-p036-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-thermo",
-      "indicator_label": "🔍 الطاقة والحرارة الكيميائية 3D",
+      "diagram_ref": "diag-chem-2-7-calorimeter",
+      "indicator_label": "🔍 شكل (2-7): مسعر القنبلة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6421,
+        "x": 0.18,
+        "y": 0.61,
         "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-2",
-      "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31"
+        "h": 0.23
+      }
     }
   ],
   "chem12-p037": [
@@ -684,30 +670,17 @@
     {
       "id": "hs-chem12-p049-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-galvanic",
-      "indicator_label": "🔍 الخلية الجلفانية ودانيال 3D",
+      "diagram_ref": "diag-chem-3-1-zn-cuso4",
+      "indicator_label": "🔍 شكل (3-1): أكسدة واختزال Zn/CuSO₄ 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.4252,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.19,
+        "y": 0.27,
+        "w": 0.62,
+        "h": 0.345
       },
-      "lab_exp": "exp-4",
-      "lab_url": "chem-lab-book.html#exp=exp-4&from=book&page=49"
-    },
-    {
-      "id": "hs-chem12-p049-concept-1",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u3-l2",
-      "indicator_label": "📌 مفهوم ومعادلة أساسية (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.13)",
-      "bounds": {
-        "x": 0.17,
-        "y": 0.1576,
-        "w": 0.66,
-        "h": 0.13
-      }
+      "lab_exp": "exp-3",
+      "lab_url": "chem-lab-book.html#exp=exp-3&from=book&page=47"
     }
   ],
   "chem12-p050": [
@@ -730,31 +703,31 @@
     {
       "id": "hs-chem12-p050-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-galvanic",
-      "indicator_label": "🔍 الخلية الجلفانية ودانيال 3D",
+      "diagram_ref": "diag-chem-3-2-porous",
+      "indicator_label": "🔍 شكل (3-2): الخلية ذات الحاجز المسامي 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.426,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.33,
+        "w": 0.39,
+        "h": 0.285
       },
-      "lab_exp": "exp-4",
-      "lab_url": "chem-lab-book.html#exp=exp-4&from=book&page=49"
+      "lab_exp": "exp-3",
+      "lab_url": "chem-lab-book.html#exp=exp-3&from=book&page=48"
     }
   ],
   "chem12-p051": [
     {
       "id": "hs-chem12-p051-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-galvanic",
-      "indicator_label": "🔍 الخلية الجلفانية ودانيال 3D",
+      "diagram_ref": "diag-chem-3-3-daniell",
+      "indicator_label": "🔍 شكل (3-3): خلية دانيال والقنطرة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.3333,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.19,
+        "y": 0.13,
+        "w": 0.62,
+        "h": 0.39
       },
       "lab_exp": "exp-4",
       "lab_url": "chem-lab-book.html#exp=exp-4&from=book&page=49"
@@ -782,17 +755,15 @@
     {
       "id": "hs-chem12-p053-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-4-she",
+      "indicator_label": "🔍 شكل (3-4): قطب الهيدروجين القياسي 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.5677,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-5",
-      "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
+        "x": 0.18,
+        "y": 0.52,
+        "w": 0.4,
+        "h": 0.24
+      }
     }
   ],
   "chem12-p054": [
@@ -829,64 +800,56 @@
     {
       "id": "hs-chem12-p056-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-5-drytypes",
+      "indicator_label": "🔍 شكل (3-5): مقارنة البطاريات الجافة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3666,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-5",
-      "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
+        "x": 0.18,
+        "y": 0.305,
+        "w": 0.295,
+        "h": 0.25
+      }
     },
     {
       "id": "hs-chem12-p056-fig-1",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-6-zn-carbon",
+      "indicator_label": "🔍 شكل (3-6): خلية الخارصين-الكربون 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6397,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-5",
-      "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
+        "x": 0.18,
+        "y": 0.615,
+        "w": 0.295,
+        "h": 0.215
+      }
     }
   ],
   "chem12-p057": [
     {
       "id": "hs-chem12-p057-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-7-alkaline",
+      "indicator_label": "🔍 شكل (3-7): الخلية القاعدية (Alkaline) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.2668,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-5",
-      "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
+        "x": 0.18,
+        "y": 0.228,
+        "w": 0.31,
+        "h": 0.24
+      }
     },
     {
       "id": "hs-chem12-p057-fig-1",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-8-mercury",
+      "indicator_label": "🔍 شكل (3-8): خلية الزئبق (الساعات) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.4941,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-5",
-      "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
+        "x": 0.18,
+        "y": 0.535,
+        "w": 0.32,
+        "h": 0.16
+      }
     }
   ],
   "chem12-p058": [
@@ -909,14 +872,14 @@
     {
       "id": "hs-chem12-p058-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-9-lead",
+      "indicator_label": "🔍 شكل (3-9): المركم الرصاصي (12V) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.1591,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.15,
+        "w": 0.31,
+        "h": 0.21
       },
       "lab_exp": "exp-5",
       "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
@@ -926,17 +889,15 @@
     {
       "id": "hs-chem12-p059-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-battery",
-      "indicator_label": "🔍 المركم الرصاصي 3D",
+      "diagram_ref": "diag-chem-3-10-fuel",
+      "indicator_label": "🔍 شكل (3-10): خلية الوقود (H₂-O₂) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.2383,
-        "w": 0.58,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-5",
-      "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56"
+        "x": 0.19,
+        "y": 0.22,
+        "w": 0.62,
+        "h": 0.21
+      }
     }
   ],
   "chem12-p060": [
@@ -958,17 +919,17 @@
     {
       "id": "hs-chem12-p061-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-electrolysis",
-      "indicator_label": "🔍 التحليل الكهربي 3D",
+      "diagram_ref": "diag-chem-3-11-cucl2",
+      "indicator_label": "🔍 شكل (3-11): التحليل الكهربي لـ CuCl₂ 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.5273,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.49,
+        "w": 0.4,
+        "h": 0.24
       },
       "lab_exp": "exp-6",
-      "lab_url": "chem-lab-book.html#exp=exp-6&from=book&page=60"
+      "lab_url": "chem-lab-book.html#exp=exp-6&from=book&page=59"
     }
   ],
   "chem12-p062": [
@@ -1023,14 +984,14 @@
     {
       "id": "hs-chem12-p065-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-electroplating",
-      "indicator_label": "⚗️ الطلاء بالفضة (افتح بالمعمل 3D)",
+      "diagram_ref": "diag-chem-3-12-plate",
+      "indicator_label": "🔍 شكل (3-12): خلية الطلاء الكهربي بالفضة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.2423,
+        "x": 0.18,
+        "y": 0.148,
         "w": 0.37,
-        "h": 0.1892
+        "h": 0.285
       },
       "lab_exp": "exp-7",
       "lab_url": "chem-lab-book.html#exp=exp-7&from=book&page=63"
@@ -1145,14 +1106,14 @@
     {
       "id": "hs-chem12-p073-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-1-massspec",
+      "indicator_label": "🔍 شكل (4-1): مطياف الكتلة وفصل النظائر 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.502,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.46,
+        "w": 0.44,
+        "h": 0.235
       }
     },
     {
@@ -1233,14 +1194,14 @@
     {
       "id": "hs-chem12-p078-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-2-binding",
+      "indicator_label": "🔍 شكل (4-2): منحنى طاقة الترابط النووي 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.6556,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.19,
+        "y": 0.53,
+        "w": 0.62,
+        "h": 0.315
       }
     },
     {
@@ -1276,14 +1237,14 @@
     {
       "id": "hs-chem12-p080-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-3-belt",
+      "indicator_label": "🔍 شكل (4-3): حزام الاستقرار النووي (N/Z) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3468,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.15,
+        "w": 0.39,
+        "h": 0.39
       }
     }
   ],
@@ -1306,14 +1267,14 @@
     {
       "id": "hs-chem12-p082-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-4-penetration",
+      "indicator_label": "🔍 شكل (4-4): قدرة نفاذ α و β و γ 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.1338,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.148,
+        "w": 0.39,
+        "h": 0.18
       }
     },
     {
@@ -1379,14 +1340,14 @@
     {
       "id": "hs-chem12-p086-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-5-chain",
+      "indicator_label": "🔍 شكل (4-5): الانشطار المتسلسل لـ U-235 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3325,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.148,
+        "w": 0.63,
+        "h": 0.385
       }
     }
   ],
@@ -1394,27 +1355,27 @@
     {
       "id": "hs-chem12-p087-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-6-reactor",
+      "indicator_label": "🔍 شكل (4-6): مكونات المفاعل النووي 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.4014,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.295,
+        "w": 0.63,
+        "h": 0.3
       }
     },
     {
       "id": "hs-chem12-p087-fig-1",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-7-isotope",
+      "indicator_label": "🔍 شكل (4-7): التصوير النووي بالنظائر 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.616,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.59,
+        "w": 0.28,
+        "h": 0.225
       }
     }
   ],
@@ -1422,14 +1383,14 @@
     {
       "id": "hs-chem12-p088-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-8-radiotherapy",
+      "indicator_label": "🔍 شكل (4-8): علاج السرطان بالأشعة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.1496,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.15,
+        "w": 0.31,
+        "h": 0.195
       }
     }
   ],
@@ -1437,14 +1398,14 @@
     {
       "id": "hs-chem12-p089-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nuclear",
-      "indicator_label": "🔍 الترابط والإشعاع النووي 3D",
+      "diagram_ref": "diag-chem-4-9-hbomb",
+      "indicator_label": "🔍 شكل (4-9): الاندماج والقنبلة الهيدروجينية 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3017,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.228,
+        "w": 0.31,
+        "h": 0.265
       }
     },
     {
@@ -1520,11 +1481,37 @@
         "w": 0.65,
         "h": 0.35
       }
+    },
+    {
+      "id": "hs-chem12-p093-fig-1",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-rings",
+      "indicator_label": "🔍 مركبات النيتروجين العضوية الحلقية 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.19,
+        "y": 0.24,
+        "w": 0.62,
+        "h": 0.23
+      }
     }
   ],
   "chem12-p094": [
     {
-      "id": "hs-chem12-p094-concept-0",
+      "id": "hs-chem12-p094-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-amines",
+      "indicator_label": "🔍 تصنيف الأمينات (أولي/ثانوي/ثالثي) 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.19,
+        "y": 0.6,
+        "w": 0.62,
+        "h": 0.115
+      }
+    },
+    {
+      "id": "hs-chem12-p094-concept-1",
       "type": "explainable_text",
       "explanation_ref": "exp-chem-u5-l1",
       "indicator_label": "📌 مفهوم ومعادلة أساسية (3 مستويات)",
@@ -1539,16 +1526,16 @@
   ],
   "chem12-p095": [
     {
-      "id": "hs-chem12-p095-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u5-l1",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p095-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-hetero",
+      "indicator_label": "🔍 البيبيريدين والبيريدين والأنيلين 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "x": 0.19,
+        "y": 0.345,
+        "w": 0.62,
+        "h": 0.098
       }
     }
   ],
@@ -1569,7 +1556,20 @@
   ],
   "chem12-p097": [
     {
-      "id": "hs-chem12-p097-concept-0",
+      "id": "hs-chem12-p097-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-amides",
+      "indicator_label": "🔍 صيغ الأميدات واليوريا والبنزاميد 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.19,
+        "y": 0.72,
+        "w": 0.62,
+        "h": 0.11
+      }
+    },
+    {
+      "id": "hs-chem12-p097-concept-1",
       "type": "explainable_text",
       "explanation_ref": "exp-chem-u5-l2",
       "indicator_label": "📌 مفهوم ومعادلة أساسية (3 مستويات)",
@@ -1599,29 +1599,16 @@
   ],
   "chem12-p099": [
     {
-      "id": "hs-chem12-p099-ex-0",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u5-l3",
-      "indicator_label": "🧮 مثال وتطبيق — الشرح والخطوات",
-      "highlight_color": "rgba(16, 185, 129, 0.13)",
+      "id": "hs-chem12-p099-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-nitriles",
+      "indicator_label": "🔍 النيتريلات وتفاعلات R–C≡N 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6492,
-        "w": 0.66,
-        "h": 0.1346
-      }
-    },
-    {
-      "id": "hs-chem12-p099-concept-1",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u5-l3",
-      "indicator_label": "📌 مفهوم ومعادلة أساسية (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.13)",
-      "bounds": {
-        "x": 0.17,
-        "y": 0.5241,
-        "w": 0.66,
-        "h": 0.13
+        "x": 0.19,
+        "y": 0.45,
+        "w": 0.62,
+        "h": 0.275
       }
     }
   ],
@@ -1642,16 +1629,16 @@
   ],
   "chem12-p101": [
     {
-      "id": "hs-chem12-p101-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u5-l3",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p101-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-amino-class",
+      "indicator_label": "🔍 تصنيف الحموض الأمينية: متعادلة/حمضية/قاعدية 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "x": 0.19,
+        "y": 0.24,
+        "w": 0.62,
+        "h": 0.59
       }
     }
   ],
@@ -1672,16 +1659,16 @@
   ],
   "chem12-p103": [
     {
-      "id": "hs-chem12-p103-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u5-l3",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p103-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-5-zwitterion",
+      "indicator_label": "🔍 الأيون ثنائي القطب Zwitterion والسلوك الأمفوتيري 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "x": 0.19,
+        "y": 0.295,
+        "w": 0.62,
+        "h": 0.29
       }
     }
   ],
@@ -1734,14 +1721,14 @@
     {
       "id": "hs-chem12-p107-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-biochem",
-      "indicator_label": "🔍 الكيمياء الحيوية والسكريات 3D",
+      "diagram_ref": "diag-chem-6-1-tree",
+      "indicator_label": "🔍 شكل (6-1): علاقة الكيمياء الحيوية بالعلوم 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.6089,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.19,
+        "y": 0.42,
+        "w": 0.62,
+        "h": 0.39
       }
     },
     {
@@ -1777,33 +1764,33 @@
     {
       "id": "hs-chem12-p109-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-biochem",
-      "indicator_label": "🔍 الكيمياء الحيوية والسكريات 3D",
+      "diagram_ref": "diag-chem-6-2-fruits",
+      "indicator_label": "🔍 شكل (6-2): فواكه السكريات الأحادية 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6247,
-        "w": 0.37,
-        "h": 0.1892
-      }
-    },
-    {
-      "id": "hs-chem12-p109-ex-1",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u6-l1",
-      "indicator_label": "🧮 مثال وتطبيق — الشرح والخطوات",
-      "highlight_color": "rgba(16, 185, 129, 0.13)",
-      "bounds": {
-        "x": 0.17,
-        "y": 0.4822,
-        "w": 0.66,
-        "h": 0.1346
+        "x": 0.18,
+        "y": 0.6,
+        "w": 0.29,
+        "h": 0.225
       }
     }
   ],
   "chem12-p110": [
     {
-      "id": "hs-chem12-p110-ex-0",
+      "id": "hs-chem12-p110-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-6-glcfru",
+      "indicator_label": "🔍 صيغ الجلوكوز والفركتوز المفتوحة والحلقية 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.18,
+        "y": 0.44,
+        "w": 0.63,
+        "h": 0.37
+      }
+    },
+    {
+      "id": "hs-chem12-p110-ex-1",
       "type": "explainable_text",
       "explanation_ref": "exp-chem-u6-l1",
       "indicator_label": "🧮 مثال وتطبيق — الشرح والخطوات",
@@ -1865,17 +1852,17 @@
     {
       "id": "hs-chem12-p112-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-biochem-test",
-      "indicator_label": "⚗️ كشف النشا والسكريات (افتح بالمعمل 3D)",
+      "diagram_ref": "diag-chem-6-3-lactose",
+      "indicator_label": "🔍 شكل (6-3): الصيغة التركيبية للاكتوز 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6421,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.65,
+        "w": 0.31,
+        "h": 0.19
       },
       "lab_exp": "exp-8",
-      "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111"
+      "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=110"
     }
   ],
   "chem12-p113": [
@@ -1891,6 +1878,21 @@
         "y": 0.6263,
         "w": 0.65,
         "h": 0.1267
+      },
+      "lab_exp": "exp-8",
+      "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111"
+    },
+    {
+      "id": "hs-chem12-p113-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-6-sucrose",
+      "indicator_label": "🔍 تكاثف الجلوكوز والفركتوز ← السكروز 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.18,
+        "y": 0.295,
+        "w": 0.63,
+        "h": 0.22
       },
       "lab_exp": "exp-8",
       "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111"
@@ -1918,31 +1920,29 @@
     {
       "id": "hs-chem12-p115-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-biochem-test",
-      "indicator_label": "⚗️ كشف النشا والسكريات (افتح بالمعمل 3D)",
+      "diagram_ref": "diag-chem-6-4-amino6",
+      "indicator_label": "🔍 شكل (6-4): ستة أحماض أمينية تركيبية 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.6413,
-        "w": 0.58,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-8",
-      "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111"
+        "x": 0.18,
+        "y": 0.38,
+        "w": 0.63,
+        "h": 0.45
+      }
     }
   ],
   "chem12-p116": [
     {
-      "id": "hs-chem12-p116-ex-0",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u6-l2",
-      "indicator_label": "🧮 مثال وتطبيق — الشرح والخطوات",
-      "highlight_color": "rgba(16, 185, 129, 0.13)",
+      "id": "hs-chem12-p116-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-6-peptide",
+      "indicator_label": "🔍 تكوّن الرابطة الببتيدية (جلايسيل ألانين) 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6587,
-        "w": 0.66,
-        "h": 0.1346
+        "x": 0.18,
+        "y": 0.51,
+        "w": 0.63,
+        "h": 0.32
       }
     }
   ],
@@ -1966,14 +1966,14 @@
     {
       "id": "hs-chem12-p118-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-biochem",
-      "indicator_label": "🔍 الكيمياء الحيوية والسكريات 3D",
+      "diagram_ref": "diag-chem-6-5-lipids",
+      "indicator_label": "🔍 شكل (6-5): أحماض دهنية مشبعة وغير مشبعة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.1734,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.145,
+        "w": 0.63,
+        "h": 0.23
       }
     }
   ],
@@ -2026,14 +2026,14 @@
     {
       "id": "hs-chem12-p122-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-biochem",
-      "indicator_label": "🔍 الكيمياء الحيوية والسكريات 3D",
+      "diagram_ref": "diag-chem-6-6-enzyme",
+      "indicator_label": "🔍 شكل (6-6): آلية عمل الإنزيم (قفل ومفتاح) 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.5891,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.58,
+        "w": 0.63,
+        "h": 0.215
       }
     }
   ],
@@ -2100,14 +2100,14 @@
     {
       "id": "hs-chem12-p126-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-petro",
-      "indicator_label": "🔍 البترول والصناعات البتروكيماوية 3D",
+      "diagram_ref": "diag-chem-7-1-products",
+      "indicator_label": "🔍 شكل (7-1): صناعات ومنتجات البترول 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.5131,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.525,
+        "w": 0.32,
+        "h": 0.175
       }
     },
     {
@@ -2189,14 +2189,14 @@
     {
       "id": "hs-chem12-p131-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-petro",
-      "indicator_label": "🔍 البترول والصناعات البتروكيماوية 3D",
+      "diagram_ref": "diag-chem-7-2-seismic",
+      "indicator_label": "🔍 شكل (7-2): المسح السيزمي ومصيدة النفط 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.5962,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.415,
+        "w": 0.63,
+        "h": 0.385
       }
     }
   ],
@@ -2227,20 +2227,20 @@
         "x": 0.18,
         "y": 0.1504,
         "w": 0.65,
-        "h": 0.1267
+        "h": 0.1016
       }
     },
     {
       "id": "hs-chem12-p133-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-distillation",
-      "indicator_label": "⚗️ برج التقطير التجزيئي (افتح بالمعمل 3D)",
+      "diagram_ref": "diag-chem-7-3-tower",
+      "indicator_label": "🔍 شكل (7-3): برج التقطير التجزيئي للنفط 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.4679,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.26,
+        "w": 0.295,
+        "h": 0.41
       },
       "lab_exp": "exp-10",
       "lab_url": "chem-lab-book.html#exp=exp-10&from=book&page=131"
@@ -2265,17 +2265,15 @@
     {
       "id": "hs-chem12-p135-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-distillation",
-      "indicator_label": "⚗️ برج التقطير التجزيئي (افتح بالمعمل 3D)",
+      "diagram_ref": "diag-chem-7-4-uses",
+      "indicator_label": "🔍 شكل (7-4): استخدامات مشتقات النفط 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.3096,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-10",
-      "lab_url": "chem-lab-book.html#exp=exp-10&from=book&page=131"
+        "x": 0.18,
+        "y": 0.145,
+        "w": 0.355,
+        "h": 0.375
+      }
     }
   ],
   "chem12-p136": [
@@ -2310,27 +2308,27 @@
     {
       "id": "hs-chem12-p137-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-petro",
-      "indicator_label": "🔍 البترول والصناعات البتروكيماوية 3D",
+      "diagram_ref": "diag-chem-7-5-gasoline",
+      "indicator_label": "🔍 شكل (7-5): وقود الجازولين ورقم الأوكتان 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.274,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.27,
+        "w": 0.63,
+        "h": 0.2
       }
     },
     {
       "id": "hs-chem12-p137-fig-1",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-petro",
-      "indicator_label": "🔍 البترول والصناعات البتروكيماوية 3D",
+      "diagram_ref": "diag-chem-7-6-drum",
+      "indicator_label": "🔍 شكل (7-6): نسب استهلاك النفط 87% / 13% 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6105,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.545,
+        "w": 0.27,
+        "h": 0.27
       }
     }
   ],
@@ -2429,29 +2427,29 @@
     {
       "id": "hs-chem12-p144-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nylon",
-      "indicator_label": "🔍 الأسمدة والألياف والنايلون 3D",
+      "diagram_ref": "diag-chem-8-1-fertilizers",
+      "indicator_label": "🔍 شكل (8-1): تصنيف الأسمدة الكيميائية 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.5653,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.315,
+        "w": 0.63,
+        "h": 0.445
       }
     }
   ],
   "chem12-p145": [
     {
-      "id": "hs-chem12-p145-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u8-l1",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p145-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-8-urea-synth",
+      "indicator_label": "🔍 تحضير سماد اليوريا من الأمونيا و CO₂ 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "x": 0.19,
+        "y": 0.495,
+        "w": 0.62,
+        "h": 0.115
       }
     }
   ],
@@ -2489,14 +2487,14 @@
     {
       "id": "hs-chem12-p148-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nylon",
-      "indicator_label": "🔍 الأسمدة والألياف والنايلون 3D",
+      "diagram_ref": "diag-chem-8-2-mixedbag",
+      "indicator_label": "🔍 شكل (8-2): السماد المخلوط 6-12-12 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.5566,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.515,
+        "w": 0.34,
+        "h": 0.235
       }
     },
     {
@@ -2530,46 +2528,46 @@
   ],
   "chem12-p150": [
     {
-      "id": "hs-chem12-p150-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u8-l2",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p150-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-8-ddt",
+      "indicator_label": "🔍 تركيب وتحضر مبيد DDT المكلور 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
         "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "y": 0.65,
+        "w": 0.63,
+        "h": 0.17
       }
     }
   ],
   "chem12-p151": [
     {
-      "id": "hs-chem12-p151-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u8-l2",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p151-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-8-bhc",
+      "indicator_label": "🔍 مركب BHC وأيزومر جاما (لندان) 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
         "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "y": 0.405,
+        "w": 0.63,
+        "h": 0.255
       }
     }
   ],
   "chem12-p152": [
     {
-      "id": "hs-chem12-p152-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u8-l2",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p152-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-8-organophos",
+      "indicator_label": "🔍 مبيدات الفسفور (تراي كلوروفون وباراثيون) 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
         "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "y": 0.34,
+        "w": 0.63,
+        "h": 0.345
       }
     }
   ],
@@ -2636,14 +2634,14 @@
     {
       "id": "hs-chem12-p156-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nylon",
-      "indicator_label": "🔍 الأسمدة والألياف والنايلون 3D",
+      "diagram_ref": "diag-chem-8-3-nylon",
+      "indicator_label": "🔍 شكل (8-3): سحب خيوط النايلون 66 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.1694,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.148,
+        "w": 0.25,
+        "h": 0.215
       }
     }
   ],
@@ -2651,14 +2649,14 @@
     {
       "id": "hs-chem12-p157-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nylon",
-      "indicator_label": "🔍 الأسمدة والألياف والنايلون 3D",
+      "diagram_ref": "diag-chem-8-4-fabrics",
+      "indicator_label": "🔍 شكل (8-4): أقمشة النايلون والأسترة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.3428,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.275,
+        "w": 0.63,
+        "h": 0.26
       }
     }
   ],
@@ -2681,32 +2679,43 @@
     {
       "id": "hs-chem12-p159-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-industry",
-      "indicator_label": "⚗️ صناعة الصابون وإزالة الأوساخ (المعمل 3D)",
+      "diagram_ref": "diag-chem-8-5-suit",
+      "indicator_label": "🔍 شكل (8-5): بدلة من ألياف الداكرون 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.1631,
-        "w": 0.37,
-        "h": 0.1892
-      },
-      "lab_exp": "exp-9",
-      "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=158"
+        "x": 0.505,
+        "y": 0.185,
+        "w": 0.305,
+        "h": 0.175
+      }
     },
     {
       "id": "hs-chem12-p159-fig-1",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-industry",
-      "indicator_label": "⚗️ صناعة الصابون وإزالة الأوساخ (المعمل 3D)",
+      "diagram_ref": "diag-chem-8-6-heart",
+      "indicator_label": "🔍 شكل (8-6): رقعة الداكرون في جراحة القلب 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.6421,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.185,
+        "w": 0.31,
+        "h": 0.19
+      }
+    },
+    {
+      "id": "hs-chem12-p159-fig-2",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-8-7-soapbars",
+      "indicator_label": "🔍 شكل (8-7): ألوان الصابون وصناعته 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.18,
+        "y": 0.675,
+        "w": 0.63,
+        "h": 0.155
       },
       "lab_exp": "exp-9",
-      "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=158"
+      "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=157"
     }
   ],
   "chem12-p160": [
@@ -2731,31 +2740,31 @@
     {
       "id": "hs-chem12-p161-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-industry",
-      "indicator_label": "⚗️ صناعة الصابون وإزالة الأوساخ (المعمل 3D)",
+      "diagram_ref": "diag-chem-8-8-micelle",
+      "indicator_label": "🔍 شكل (8-8): تركيب جزيء الصابون وآليته 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.2043,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.145,
+        "w": 0.63,
+        "h": 0.25
       },
       "lab_exp": "exp-9",
-      "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=158"
+      "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=159"
     }
   ],
   "chem12-p162": [
     {
-      "id": "hs-chem12-p162-concept-fallback",
-      "type": "explainable_text",
-      "explanation_ref": "exp-chem-u8-l4",
-      "indicator_label": "📌 شرح الدرس والمعادلات (3 مستويات)",
-      "highlight_color": "rgba(0, 168, 89, 0.11)",
+      "id": "hs-chem12-p162-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-8-detergents",
+      "indicator_label": "🔍 تحضير المنظفات الصناعية الأنيونية 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.18,
-        "y": 0.16,
-        "w": 0.64,
-        "h": 0.14
+        "x": 0.19,
+        "y": 0.34,
+        "w": 0.62,
+        "h": 0.345
       }
     }
   ],
@@ -2808,14 +2817,14 @@
     {
       "id": "hs-chem12-p166-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-nylon",
-      "indicator_label": "🔍 الأسمدة والألياف والنايلون 3D",
+      "diagram_ref": "diag-chem-8-9-paint",
+      "indicator_label": "🔍 شكل (8-9): الطلاء وآلية جفافه 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.1979,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.195,
+        "w": 0.31,
+        "h": 0.195
       }
     }
   ],
@@ -2868,14 +2877,14 @@
     {
       "id": "hs-chem12-p170-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-environment",
-      "indicator_label": "🔍 التوازن البيئي والمطر الحمضي 3D",
+      "diagram_ref": "diag-chem-9-1-carbon",
+      "indicator_label": "🔍 شكل (9-1): دورة الكربون في الطبيعة 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6057,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.4,
+        "w": 0.47,
+        "h": 0.39
       }
     },
     {
@@ -2926,14 +2935,14 @@
     {
       "id": "hs-chem12-p173-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-environment",
-      "indicator_label": "🔍 التوازن البيئي والمطر الحمضي 3D",
+      "diagram_ref": "diag-chem-9-2-greenhouse",
+      "indicator_label": "🔍 شكل (9-2): ظاهرة الاحتباس الحراري 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.4378,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.285,
+        "w": 0.63,
+        "h": 0.35
       }
     }
   ],
@@ -2971,14 +2980,14 @@
     {
       "id": "hs-chem12-p176-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-environment",
-      "indicator_label": "🔍 التوازن البيئي والمطر الحمضي 3D",
+      "diagram_ref": "diag-chem-9-3-pollution",
+      "indicator_label": "🔍 شكل (9-3): التلوث البيئي ومصادره 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.2,
-        "y": 0.6374,
-        "w": 0.58,
-        "h": 0.1892
+        "x": 0.22,
+        "y": 0.55,
+        "w": 0.55,
+        "h": 0.275
       }
     }
   ],
@@ -3001,14 +3010,14 @@
     {
       "id": "hs-chem12-p178-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-environment",
-      "indicator_label": "🔍 التوازن البيئي والمطر الحمضي 3D",
+      "diagram_ref": "diag-chem-9-4-statue",
+      "indicator_label": "🔍 شكل (9-4): تأثير المطر الحمضي على التماثيل 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6128,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.595,
+        "w": 0.39,
+        "h": 0.215
       }
     }
   ],
@@ -3016,14 +3025,14 @@
     {
       "id": "hs-chem12-p179-fig-0",
       "type": "interactive_3d",
-      "diagram_ref": "diag-chem-environment",
-      "indicator_label": "🔍 التوازن البيئي والمطر الحمضي 3D",
+      "diagram_ref": "diag-chem-9-5-smog",
+      "indicator_label": "🔍 شكل (9-5): ظاهرة الضباب الدخاني 3D",
       "highlight_color": "rgba(239, 68, 68, 0.14)",
       "bounds": {
-        "x": 0.17,
-        "y": 0.6413,
-        "w": 0.37,
-        "h": 0.1892
+        "x": 0.18,
+        "y": 0.575,
+        "w": 0.48,
+        "h": 0.255
       }
     }
   ],
@@ -3181,16 +3190,29 @@
   ],
   "chem12-p190": [
     {
+      "id": "hs-chem12-p190-fig-0",
+      "type": "interactive_3d",
+      "diagram_ref": "diag-chem-periodic-table",
+      "indicator_label": "🔍 الجدول الدوري التفاعلي للعناصر 3D",
+      "highlight_color": "rgba(239, 68, 68, 0.14)",
+      "bounds": {
+        "x": 0.19,
+        "y": 0.145,
+        "w": 0.62,
+        "h": 0.445
+      }
+    },
+    {
       "id": "hs-chem12-p190-periodic",
       "type": "explainable_text",
       "explanation_ref": "exp-chem-periodic-table",
-      "indicator_label": "⚛️ استعراض وشرح الجدول الدوري للعناصر",
+      "indicator_label": "⚛️ دليل فئات ومفاتيح الجدول الدوري",
       "highlight_color": "rgba(2, 132, 199, 0.14)",
       "bounds": {
-        "x": 0.15,
-        "y": 0.1,
-        "w": 0.72,
-        "h": 0.76
+        "x": 0.18,
+        "y": 0.61,
+        "w": 0.63,
+        "h": 0.21
       }
     }
   ]

@@ -1,389 +1,2139 @@
 {
+  "diag-chem-1-blocks": {
+    "id": "diag-chem-1-blocks",
+    "sim_key": "chem_u1_d_f_blocks",
+    "book_page": 11,
+    "bounds": [
+      0.18,
+      0.24,
+      0.64,
+      0.22
+    ],
+    "hotspot_label": "🔍 مواقع الفئتين d و f في الجدول 3D",
+    "lab_exp": null,
+    "title": "موقع العناصر الانتقالية (الفئتين d و f) في الجدول الدوري (ص 11)",
+    "formula": "الفئة d: 3d, 4d, 5d, 6d (وسط الجدول)  |  الفئة f: 4f اللانثانيدات و 5f الأكتينيدات",
+    "slider_label": "السلسلة:",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "dblock",
+        "name": "العناصر الانتقالية الرئيسية (d)",
+        "role": "تقع في وسط الجدول بين المجموعتين IIA و IIIA وتشمل 10 أعمدة أفقية."
+      },
+      {
+        "id": "fblock",
+        "name": "العناصر الانتقالية الداخلية (f)",
+        "role": "مفصولة أسفل الجدول في سلسلتين (4f اللانثانيدات، 5f الأكتينيدات) لملء الغلاف الداخلي المحجوب."
+      }
+    ]
+  },
+  "diag-chem-1-config": {
+    "id": "diag-chem-1-config",
+    "sim_key": "chem_u1_orbitals",
+    "book_page": 15,
+    "bounds": [
+      0.18,
+      0.145,
+      0.34,
+      0.35
+    ],
+    "hotspot_label": "🔍 التوزيع الإلكتروني 3d وشذوذ Cr/Cu 3D",
+    "lab_exp": null,
+    "title": "التوزيع الإلكتروني وحالات التأكسد للسلاسل الانتقالية (جدول 1-1 و 1-2 · ص 15)",
+    "formula": "₂₄Cr: [Ar] 4s¹ 3d⁵  |  ₂₉Cu: [Ar] 4s¹ 3d¹⁰  |  ₂₅Mn: +2,+3,+4,+6,+7",
+    "slider_label": "العدد الذري:",
+    "slider_min": 21,
+    "slider_max": 30,
+    "slider_val": 24,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "anom",
+        "name": "ثبات 3d⁵ و 3d¹⁰ (Cr, Cu)",
+        "role": "ينتقل إلكترون من 4s إلى 3d ليصبح نصف ممتلئ أو تام الامتلاء فتزداد طاقة الاستقرار."
+      },
+      {
+        "id": "ox",
+        "name": "تعدد حالات التأكسد",
+        "role": "لتقارب طاقتي 4s و 3d، فتفقد إلكترونات 4s أولاً ثم تتتابع إلكترونات 3d حتى +7 في Mn."
+      }
+    ]
+  },
   "diag-chem-iron-blast": {
     "id": "diag-chem-iron-blast",
-    "lab_exp": null,
-    "title": "الفرن العالي (اللافح) واختزال خامات الحديد (ص 18)",
     "sim_key": "chem_blast_furnace",
-    "formula": "FeO + CO → Fe + CO₂",
-    "slider_label": "حرارة المنطقة:",
+    "book_page": 18,
+    "bounds": [
+      0.18,
+      0.145,
+      0.38,
+      0.345
+    ],
+    "hotspot_label": "🔍 شكل (1-1): الفرن العالي 3D",
+    "lab_exp": null,
+    "title": "شكل (1-1): الفرن العالي (اللافح) واختزال خامات الحديد (ص 18)",
+    "formula": "C + O₂ → CO₂ | CO₂ + C → 2CO | 3Fe₂O₃ + CO → 2Fe₃O₄ → FeO → Fe + CO₂",
+    "slider_label": "حرارة منطقة الاختزال:",
     "slider_min": 400,
-    "slider_max": 1900,
-    "slider_val": 1100,
-    "slider_unit": " °C",
+    "slider_max": 1800,
+    "slider_val": 900,
+    "slider_unit": "°C",
     "components": [
       {
         "id": "charge",
-        "name": "الشحنة (هيماتيت + كوك + حجر جيري)",
-        "role": "تلقم من أعلى الفرن لإتمام الاختزال والتخلص من الشوائب كخبث."
+        "name": "شحنة القمة (خام + كوك + جير)",
+        "role": "خام Fe₂O₃ مع فحم الكوك CaCO₃؛ يبدأ الاختزال عند 400–700°C."
       },
       {
-        "id": "hotblast",
-        "name": "منطقة الاحتراق السفلى (1900°C)",
-        "role": "تنتج أول أكسيد الكربون CO اللازم لاختزال الأكاسيد وينصهر الحديد في القاع."
+        "id": "blast",
+        "name": "منطقة الاحتراق وتكوين CO",
+        "role": "تيار هواء ساخن يحرق الكوك إلى CO₂ ثم يُختزل بالكوك إلى CO."
+      },
+      {
+        "id": "hearth",
+        "name": "القاع: حديد غفل + خبث",
+        "role": "ينصهر الحديد ويتجمع أسفل الخبث الخفيف CaSiO₃ الذي يحميه من الأكسدة."
       }
     ]
   },
   "diag-chem-iron-test": {
     "id": "diag-chem-iron-test",
-    "lab_exp": "exp-1",
-    "lab_url": "chem-lab-book.html#exp=exp-1&from=book&page=21",
-    "title": "الكشف عن أيونات الحديد Fe²⁺ و Fe³⁺ 3D (ص 21)",
     "sim_key": "chem_iron_ions",
-    "formula": "Fe³⁺ + 3SCN⁻ → [Fe(SCN)₃] (أحمر دموي)",
-    "slider_label": "تركيز الكاشف:",
-    "slider_min": 10,
-    "slider_max": 100,
-    "slider_val": 70,
-    "slider_unit": "%",
-    "components": [
-      {
-        "id": "fe2",
-        "name": "أنبوبة الحديد الثنائي Fe²⁺",
-        "role": "تعطي مع NaOH راسباً أخضر باهتاً Fe(OH)₂."
-      },
-      {
-        "id": "fe3",
-        "name": "أنبوبة الحديد الثلاثي Fe³⁺",
-        "role": "تعطي راسباً بنياً محمراً مع NaOH وأحمر دموياً مع KSCN."
-      }
-    ]
-  },
-  "diag-chem-thermo": {
-    "id": "diag-chem-thermo",
-    "lab_exp": "exp-2",
-    "lab_url": "chem-lab-book.html#exp=exp-2&from=book&page=31",
-    "title": "التغيرات الحرارية والطارد والماص للحرارة 3D (ص 23–34)",
-    "sim_key": "chem_calorimetry",
-    "formula": "q = m · c · ΔT  |  ΔH = H(N) − H(R)",
-    "slider_label": "كمية المذاب:",
-    "slider_min": 1,
-    "slider_max": 10,
-    "slider_val": 4,
-    "slider_unit": " mol",
-    "components": [
-      {
-        "id": "endo",
-        "name": "نظام ماص (NH₄NO₃)",
-        "role": "يمتص الحرارة من الماء والوسط فتبرد الكأس (ΔH > 0)."
-      },
-      {
-        "id": "exo",
-        "name": "نظام طارد (NaOH)",
-        "role": "يطلق حرارة قوية للماء فيرتفع الترمومتر (ΔH < 0)."
-      }
-    ]
-  },
-  "diag-chem-galvanic": {
-    "id": "diag-chem-galvanic",
-    "lab_exp": "exp-4",
-    "lab_url": "chem-lab-book.html#exp=exp-4&from=book&page=49",
-    "title": "الخلية الجلفانية وخلية دانيال Zn/Cu 3D (ص 47–50)",
-    "sim_key": "chem_daniell_cell",
-    "formula": "Zn + Cu²⁺ → Zn²⁺ + Cu   (E° = 1.10 V)",
-    "slider_label": "فرق الجهد المقاس:",
-    "slider_min": 0,
-    "slider_max": 150,
-    "slider_val": 110,
-    "slider_unit": " ×0.01 V",
-    "components": [
-      {
-        "id": "zn",
-        "name": "مصعد الخارصين Zn (−)",
-        "role": "يتأكسد فيه الخارصين وتنطلق منه الإلكترونات عبر السلك."
-      },
-      {
-        "id": "cu",
-        "name": "مهبط النحاس Cu (+)",
-        "role": "تختزل عليه أيونات النحاس وتترسب بطبقة نحاسية حمراء."
-      },
-      {
-        "id": "bridge",
-        "name": "القنطرة الملحية",
-        "role": "تعادل الشحنات وتغلق الدائرة الأيونية لاستمرار التيار."
-      }
-    ]
-  },
-  "diag-chem-battery": {
-    "id": "diag-chem-battery",
-    "lab_exp": "exp-5",
-    "lab_url": "chem-lab-book.html#exp=exp-5&from=book&page=56",
-    "title": "المركم الرصاصي وبطارية السيارة 3D (ص 55–56)",
-    "sim_key": "chem_lead_battery",
-    "formula": "Pb + PbO₂ + 2H₂SO₄ ⇌ 2PbSO₄ + 2H₂O",
-    "slider_label": "نسبة الشحن:",
-    "slider_min": 10,
-    "slider_max": 100,
-    "slider_val": 90,
-    "slider_unit": "%",
-    "components": [
-      {
-        "id": "pb",
-        "name": "أقطاب Pb و PbO₂",
-        "role": "تغمران في حمض الكبريتيك المخفف (6 خلايا متوالية تعطي 12 فولت)."
-      },
-      {
-        "id": "hydrometer",
-        "name": "كثافة الحمض (الهيدروميتر)",
-        "role": "1.28 g/cm³ تعني شحناً كاملاً وتنخفض عند التفريغ إلى 1.15."
-      }
-    ]
-  },
-  "diag-chem-electrolysis": {
-    "id": "diag-chem-electrolysis",
-    "lab_exp": "exp-6",
-    "lab_url": "chem-lab-book.html#exp=exp-6&from=book&page=60",
-    "title": "خلية التحليل الكهربي وجهاز هوفمان 3D (ص 59–61)",
-    "sim_key": "chem_electrolysis",
-    "formula": "2H₂O(l) → 2H₂(g)↑ + O₂(g)↑",
-    "slider_label": "تيار التحليل:",
-    "slider_min": 1,
-    "slider_max": 10,
-    "slider_val": 5,
-    "slider_unit": " A",
-    "components": [
-      {
-        "id": "cath",
-        "name": "المهبط (−) H₂",
-        "role": "يتصاعد عنده غاز الهيدروجين بضعف حجم الأكسجين ويشتعل بفرقعة."
-      },
-      {
-        "id": "anod",
-        "name": "المصعد (+) O₂",
-        "role": "يتصاعد عنده غاز الأكسجين الذي يلهب شظية متقدة."
-      }
-    ]
-  },
-  "diag-chem-electroplating": {
-    "id": "diag-chem-electroplating",
-    "lab_exp": "exp-7",
-    "lab_url": "chem-lab-book.html#exp=exp-7&from=book&page=63",
-    "title": "خلية الطلاء الكهربي بالفضة 3D (شكل 3-12 · ص 63)",
-    "sim_key": "chem_electroplating",
-    "formula": "Ag⁺(aq) + e⁻ → Ag(s) (عند المهبط)",
-    "slider_label": "زمن الإمرار:",
-    "slider_min": 5,
-    "slider_max": 60,
-    "slider_val": 25,
-    "slider_unit": " min",
-    "components": [
-      {
-        "id": "anode_ag",
-        "name": "صفيحة الفضة (المصعد +)",
-        "role": "تذوب ذراتها كأيونات Ag⁺ لتعويض المحلول."
-      },
-      {
-        "id": "fork",
-        "name": "الشوكة/الملعقة (المهبط −)",
-        "role": "تترسب عليها طبقة فضية لامعة متماسكة من محلول AgNO₃."
-      }
-    ]
-  },
-  "diag-chem-nuclear": {
-    "id": "diag-chem-nuclear",
-    "lab_exp": null,
-    "title": "استقرار النواة والتفاعلات النووية 3D (الوحدة 4)",
-    "sim_key": "phys_bohr",
-    "formula": "ΔE = Δm · 931.5 MeV",
-    "slider_label": "النيوكليونات:",
-    "slider_min": 1,
-    "slider_max": 4,
-    "slider_val": 3,
-    "slider_unit": "",
-    "components": [
-      {
-        "id": "belt",
-        "name": "حزام الاستقرار",
-        "role": "الأنوية خارجه تطلق ألفا أو بيتا أو بوزيتروناً للوصول للاستقرار."
-      },
-      {
-        "id": "shield",
-        "name": "قدرة النفاذ",
-        "role": "ألفا تتوقف بالورق، وبيتا بالألومنيوم، وجاما بالرصاص السميك."
-      }
-    ]
-  },
-  "diag-chem-nitrogen": {
-    "id": "diag-chem-nitrogen",
-    "lab_exp": null,
-    "title": "مركبات النيتروجين العضوية والأحماض الأمينية 3D (الوحدة 5)",
-    "sim_key": "chem_organic_n",
-    "formula": "R–NH₂  |  R–CONH₂  |  H₂N–CH(R)–COOH",
-    "slider_label": "استبدال المجموعة:",
+    "book_page": 20,
+    "bounds": [
+      0.19,
+      0.725,
+      0.62,
+      0.105
+    ],
+    "hotspot_label": "🔍 الخمول Fe₃O₄ وكشف أملاح الحديد 3D",
+    "lab_exp": "exp-1",
+    "title": "خمول الحديد (Fe₃O₄)، الصدأ، والكشف عن أملاح الحديد Fe²⁺ و Fe³⁺ (ص 20–21)",
+    "formula": "4Fe + 2H₂O + 3O₂ → 2(Fe₂O₃·H₂O)  |  Fe³⁺ + 3SCN⁻ → [Fe(SCN)₃] (أحمر دموي)",
+    "slider_label": "الكاشف:",
     "slider_min": 1,
     "slider_max": 3,
-    "slider_val": 1,
+    "slider_val": 2,
     "slider_unit": "",
     "components": [
       {
-        "id": "amine",
-        "name": "المجموعة الأمينية (–NH₂)",
-        "role": "تمنح المركب صفات قاعدية لاستقبال البروتون H⁺."
+        "id": "passivity",
+        "name": "الخمول الكيميائي (Fe₃O₄)",
+        "role": "تتكون طبقة رقيقة متماسكة غير مسامية من أكسيد الحديد المغناطيسي تمنع استمرار التفاعل مع HNO₃ و H₂SO₄ المركزين."
       },
       {
-        "id": "amide",
-        "name": "رابطة الأميد (–CO–NH₂)",
-        "role": "تمنح الثبات وتتكسر في تفاعل خسف هوفمان."
+        "id": "fe2_fe3",
+        "name": "التمييز بـ NaOH و KSCN",
+        "role": "مع NaOH: Fe²⁺ يعطي راسباً أبيض مخضراً، و Fe³⁺ بنياً محمراً؛ وبـ KSCN يعطي Fe³⁺ لوناً أحمر دموياً."
       }
     ]
   },
-  "diag-chem-biochem": {
-    "id": "diag-chem-biochem",
+  "diag-chem-2-1-energy": {
+    "id": "diag-chem-2-1-energy",
+    "sim_key": "chem_energy_forms",
+    "book_page": 23,
+    "bounds": [
+      0.19,
+      0.4,
+      0.62,
+      0.22
+    ],
+    "hotspot_label": "🔍 شكل (2-1): صور الطاقة وتحولاتها 3D",
     "lab_exp": null,
-    "title": "البنية الحلقية للسكريات والإنزيمات 3D (الوحدة 6)",
-    "sim_key": "chem_biochem",
-    "formula": "جلوكوز + فركتوز → سكروز + H₂O",
-    "slider_label": "درجة الحرارة:",
-    "slider_min": 10,
-    "slider_max": 80,
-    "slider_val": 37,
-    "slider_unit": " °C",
-    "components": [
-      {
-        "id": "sugars",
-        "name": "السكريات الأحادية والثنائية",
-        "role": "المختزلة تعطي راسب Cu₂O أحمر طوبياً مع فهلنج."
-      },
-      {
-        "id": "enzyme",
-        "name": "الإنزيم ومادة التفاعل",
-        "role": "ترتبط بالموقع الفعال كالقفل والمفتاح عند pH وحرارة مثالية."
-      }
-    ]
-  },
-  "diag-chem-biochem-test": {
-    "id": "diag-chem-biochem-test",
-    "lab_exp": "exp-8",
-    "lab_url": "chem-lab-book.html#exp=exp-8&from=book&page=111",
-    "title": "الكشف عن النشا والسكريات المختزلة 3D (ص 110–113)",
-    "sim_key": "chem_biochem",
-    "formula": "نشا + I₂ (أزرق داكن)  |  سكر مختزل + فهلنج → Cu₂O↓",
-    "slider_label": "التسخين / التركيز:",
-    "slider_min": 10,
-    "slider_max": 100,
-    "slider_val": 75,
-    "slider_unit": "%",
-    "components": [
-      {
-        "id": "iodine",
-        "name": "كاشف اليود I₂ للنشا",
-        "role": "يلوّن النشا بالأزرق الداكن على البارد."
-      },
-      {
-        "id": "fehling",
-        "name": "كاشف فهلنج للسكريات المختزلة",
-        "role": "يتحول لأحمر طوبي Cu₂O بالتسخين مع الجلوكوز والمالتوز."
-      }
-    ]
-  },
-  "diag-chem-distillation": {
-    "id": "diag-chem-distillation",
-    "lab_exp": "exp-10",
-    "lab_url": "chem-lab-book.html#exp=exp-10&from=book&page=131",
-    "title": "برج التقطير التجزيئي للنفط الخام 3D (شكل 7-3 · ص 131)",
-    "sim_key": "chem_distillation_tower",
-    "formula": "غازات (<40°C) ← جازولين ← كيروسين ← ديزل ← إسفلت",
-    "slider_label": "ارتفاع الصينية:",
+    "title": "شكل (2-1): صور الطاقة الكيميائية وتحولاتها المتبادلة (ص 23)",
+    "formula": "طاقة كيميائية ⇌ طاقة حرارية ⇌ طاقة ميكانيكية ⇌ طاقة كهربائية ⇌ طاقة ضوئية",
+    "slider_label": "مستوى التحول:",
     "slider_min": 1,
     "slider_max": 5,
     "slider_val": 3,
     "slider_unit": "",
     "components": [
       {
-        "id": "furnace",
-        "name": "الفرن (400–500°C)",
-        "role": "يبخر خام النفط ليدخل قاعدة برج التقطير."
+        "id": "cons",
+        "name": "القانون الأول للثرموديناميك",
+        "role": "الطاقة لا تفنى ولا تستحدث من عدم، ولكن تتحول من صورة إلى أخرى."
       },
       {
-        "id": "trays",
-        "name": "صواني التكثف",
-        "role": "تفصل المشتقات حسب اختلاف درجات غليانها."
+        "id": "chem_e",
+        "name": "الطاقة الكيميائية المخزنة",
+        "role": "تتحول في التفاعلات والبطاريات والاحتراق إلى حرارة أو كهرباء أو حركة أو ضوء."
       }
     ]
   },
-  "diag-chem-petro": {
-    "id": "diag-chem-petro",
+  "diag-chem-2-2-kwater": {
+    "id": "diag-chem-2-2-kwater",
+    "sim_key": "chem_k_water_exo",
+    "book_page": 24,
+    "bounds": [
+      0.18,
+      0.145,
+      0.22,
+      0.215
+    ],
+    "hotspot_label": "🔍 شكل (2-2): تفاعل K + H₂O (طارد) 3D",
     "lab_exp": null,
-    "title": "الصناعات البتروكيماوية والهيدروكربونات 3D (الوحدة 7)",
-    "sim_key": "chem_distillation_tower",
-    "formula": "نفط خام → وقود + لدائن + ألياف + مذيبات",
-    "slider_label": "نسبة التكسير:",
-    "slider_min": 10,
+    "title": "شكل (2-2): تفاعل البوتاسيوم مع الماء كيميائياً (طارد للحرارة) (ص 24)",
+    "formula": "2K(s) + 2H₂O(l) → 2KOH(aq) + H₂(g)↑ + حرارة (ΔH < 0)",
+    "slider_label": "شدة التفاعل:",
+    "slider_min": 20,
     "slider_max": 100,
-    "slider_val": 60,
+    "slider_val": 75,
     "slider_unit": "%",
     "components": [
       {
-        "id": "cracking",
-        "name": "التكسير الحفزي والحراري",
-        "role": "يحوّل الجزيئات الثقيلة إلى جازولين وألكينات."
+        "id": "k",
+        "name": "قطعة البوتاسيوم فوق الماء",
+        "role": "يتفاعل بعنف مع الماء البارد منتجاً غاز الهيدروجين KOH."
+      },
+      {
+        "id": "flame",
+        "name": "اشتعال H₂ وانطلاق الحرارة",
+        "role": "الحرارة المنطلقة تشعل غاز الهيدروجين المتصاعد بلهب أرجواني دليل طرد الحرارة."
       }
     ]
   },
-  "diag-chem-nylon": {
-    "id": "diag-chem-nylon",
+  "diag-chem-2-3-nh4no3": {
+    "id": "diag-chem-2-3-nh4no3",
+    "sim_key": "chem_nh4no3_endo",
+    "book_page": 24,
+    "bounds": [
+      0.18,
+      0.385,
+      0.22,
+      0.185
+    ],
+    "hotspot_label": "🔍 شكل (2-3): تحلل NH₄NO₃ (ماص) 3D",
+    "lab_exp": "exp-2",
+    "title": "شكل (2-3): التحلّل الحراري لنترات الأمونيوم (تفاعل ماص) (ص 24)",
+    "formula": "NH₄NO₃(s) + حرارة → N₂O(g) + 2H₂O(g)   (ΔH > 0)",
+    "slider_label": "طاقة التسخين:",
+    "slider_min": 150,
+    "slider_max": 300,
+    "slider_val": 220,
+    "slider_unit": "°C",
+    "components": [
+      {
+        "id": "burner",
+        "name": "مصدر الحرارة المستمر",
+        "role": "تفاعل التحلل يحتاج إمداداً مستمراً بالحرارة؛ وبإبعاد اللهب يتوقف التفاعل."
+      },
+      {
+        "id": "gas",
+        "name": "تصاعد أكسيد النيتروز N₂O",
+        "role": "تتفكك البلورات إلى بخار ماء وغاز N₂O بالجمع فوق الماء."
+      }
+    ]
+  },
+  "diag-chem-2-4-system": {
+    "id": "diag-chem-2-4-system",
+    "sim_key": "chem_system_surroundings",
+    "book_page": 25,
+    "bounds": [
+      0.18,
+      0.25,
+      0.32,
+      0.21
+    ],
+    "hotspot_label": "🔍 شكل (2-4): النظام والوسط المحيط 3D",
     "lab_exp": null,
-    "title": "الأسمدة وبوليمر النايلون 6,6 3D (ص 140–156)",
-    "sim_key": "chem_soap_polymer",
-    "formula": "حمض أديبيك + هكساميثيلين ثنائي الأمين → نايلون 6,6",
-    "slider_label": "درجة البلمرة:",
+    "title": "شكل (2-4): النظام الكيميائي (الدورق) والوسط المحيط وحدودهما (ص 25)",
+    "formula": "الكون الحراري = النظام (المتفاعلات والنواتج) + الوسط المحيط (الإناء والغرفة)",
+    "slider_label": "تدفق الحرارة q:",
+    "slider_min": -100,
+    "slider_max": 100,
+    "slider_val": 40,
+    "slider_unit": "J",
+    "components": [
+      {
+        "id": "sys",
+        "name": "النظام (داخل الدورق)",
+        "role": "الجزء المحدد من الكون الذي تجري فيه الدراسة أو التفاعل الكيميائي."
+      },
+      {
+        "id": "surr",
+        "name": "الوسط المحيط والحدود",
+        "role": "كل ما يحيط بالنظام ويتبادل معه الطاقة أو المادة حسب نوع النظام (مفتوح/مغلق/معزول)."
+      }
+    ]
+  },
+  "diag-chem-2-5-endoexo": {
+    "id": "diag-chem-2-5-endoexo",
+    "sim_key": "chem_endo_exo_curves",
+    "book_page": 29,
+    "bounds": [
+      0.19,
+      0.61,
+      0.62,
+      0.21
+    ],
+    "hotspot_label": "🔍 شكل (2-5): منحنيات الطارد والماص 3D",
+    "lab_exp": null,
+    "title": "شكل (2-5): مخطط المحتوى الحراري للتفاعلين الماص والطارد (ص 29)",
+    "formula": "طارد: H(نواتج) < H(متفاعلات) ⇐ ΔH < 0  |  ماص: H(نواتج) > H(متفاعلات) ⇐ ΔH > 0",
+    "slider_label": "حالة التفاعل (- طارد / + ماص):",
+    "slider_min": -120,
+    "slider_max": 120,
+    "slider_val": -60,
+    "slider_unit": "kJ",
+    "components": [
+      {
+        "id": "exo",
+        "name": "المسار الطارد (ΔH سالبة)",
+        "role": "يفقد النظام حرارة للوسط فينخفض مستوى طاقة النواتج أسفل المتفاعلات."
+      },
+      {
+        "id": "endo",
+        "name": "المسار الماص (ΔH موجبة)",
+        "role": "يمتص النظام طاقة من الوسط فيرتفع المحتوى الحراري للنواتج فوق المتفاعلات."
+      }
+    ]
+  },
+  "diag-chem-2-6-heating": {
+    "id": "diag-chem-2-6-heating",
+    "sim_key": "chem_water_heating_curve",
+    "book_page": 32,
+    "bounds": [
+      0.19,
+      0.41,
+      0.62,
+      0.22
+    ],
+    "hotspot_label": "🔍 شكل (2-6): منحنى تسخين الماء 3D",
+    "lab_exp": null,
+    "title": "شكل (2-6): منحنى تسخين الماء وتغيّر الحالة (صلب ← سائل ← غاز) (ص 32)",
+    "formula": "ΔH(انصهار 0°C) = +6.0 kJ/mol  |  ΔH(تبخر 100°C) = +40.7 kJ/mol",
+    "slider_label": "كمية الحرارة المضافة:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 55,
+    "slider_unit": "kJ",
+    "components": [
+      {
+        "id": "plateau1",
+        "name": "ثبات الصفر المئوي (انصهار الجليد)",
+        "role": "تُستهلك الحرارة الكامنة في تفكيك الروابط البلورية دون رفع درجة الحرارة."
+      },
+      {
+        "id": "plateau2",
+        "name": "ثبات الـ 100°C (غليان وتبخر)",
+        "role": "حرارة التبخر أضعاف الانصهار لتكسير كل الروابط الهيدروجينية والتحول لبخار."
+      }
+    ]
+  },
+  "diag-chem-2-7-calorimeter": {
+    "id": "diag-chem-2-7-calorimeter",
+    "sim_key": "chem_bomb_calorimeter",
+    "book_page": 34,
+    "bounds": [
+      0.18,
+      0.61,
+      0.37,
+      0.23
+    ],
+    "hotspot_label": "🔍 شكل (2-7): مسعر القنبلة 3D",
+    "lab_exp": null,
+    "title": "شكل (2-7): مسعر القنبلة المعزول لقياس حرارة الاحتراق (ص 34)",
+    "formula": "q(التفاعل) = − [m(ماء)·c·ΔT + C(المسعر)·ΔT]",
+    "slider_label": "كتلة العينة المحترقة:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 2,
+    "slider_unit": "g",
+    "components": [
+      {
+        "id": "bomb",
+        "name": "وعاء الاحتراق الفولاذي (القنبلة)",
+        "role": "يُملأ بأكسجين مضغوط وتُشعل العينة بسلك كهربائي."
+      },
+      {
+        "id": "jacket",
+        "name": "حمام الماء والترمومتر والمحرّك",
+        "role": "يمتص الحرارة المنطلقة فيُقاس ΔT بدقة داخل غلاف عازل."
+      }
+    ]
+  },
+  "diag-chem-3-1-zn-cuso4": {
+    "id": "diag-chem-3-1-zn-cuso4",
+    "sim_key": "chem_zn_cuso4_redox",
+    "book_page": 47,
+    "bounds": [
+      0.19,
+      0.27,
+      0.62,
+      0.345
+    ],
+    "hotspot_label": "🔍 شكل (3-1): أكسدة واختزال Zn/CuSO₄ 3D",
+    "lab_exp": "exp-3",
+    "title": "شكل (3-1): غمس صفيحة الخارصين في محلول CuSO₄ والتصور الذري (ص 47)",
+    "formula": "Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s)↓   (أكسدة للخارصين واختزال للنحاس)",
+    "slider_label": "زمن التفاعل:",
+    "slider_min": 0,
+    "slider_max": 60,
+    "slider_val": 30,
+    "slider_unit": "د",
+    "components": [
+      {
+        "id": "anode_act",
+        "name": "ذوبان الخارصين Zn → Zn²⁺",
+        "role": "تفقد ذرات الخارصين إلكترونين وتنزل للمحلول فتتآكل الصفيحة."
+      },
+      {
+        "id": "cu_dep",
+        "name": "ترسب النحاس Cu²⁺ → Cu",
+        "role": "تكتسب أيونات النحاس الزرقاء الإلكترونات وتترسب بلون بني محمر ويبهت الأزرق."
+      }
+    ]
+  },
+  "diag-chem-3-2-porous": {
+    "id": "diag-chem-3-2-porous",
+    "sim_key": "chem_porous_cell",
+    "book_page": 48,
+    "bounds": [
+      0.18,
+      0.33,
+      0.39,
+      0.285
+    ],
+    "hotspot_label": "🔍 شكل (3-2): الخلية ذات الحاجز المسامي 3D",
+    "lab_exp": "exp-3",
+    "title": "شكل (3-2): خلية كهروكيميائية ذات حاجز مسامي وأميتر (ص 48)",
+    "formula": "Zn | Zn²⁺ ⋮ Cu²⁺ | Cu   (ينحرف مؤشر الفولتميتر بمرور الإلكترونات عبر السلك)",
+    "slider_label": "توصيل الدائرة:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 80,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "barrier",
+        "name": "الحاجز المسامي الفاصل",
+        "role": "يفصل المحلولين لمنع الترسيب المباشر مع السماح بنفاذ الأيونات للتعادل."
+      },
+      {
+        "id": "wire",
+        "name": "السلك والمقياس الخارجي",
+        "role": "تنتقل عبره الإلكترونات من الخارصين (−) إلى النحاس (+) ويُضيء المصباح."
+      }
+    ]
+  },
+  "diag-chem-3-3-daniell": {
+    "id": "diag-chem-3-3-daniell",
+    "sim_key": "chem_daniell_cell",
+    "book_page": 49,
+    "bounds": [
+      0.19,
+      0.13,
+      0.62,
+      0.39
+    ],
+    "hotspot_label": "🔍 شكل (3-3): خلية دانيال والقنطرة 3D",
+    "lab_exp": "exp-4",
+    "title": "شكل (3-3): الخلية الجلفانية (خلية دانيال Zn/Cu والقنطرة الملحية) (ص 49)",
+    "formula": "Zn(s) | ZnSO₄(1M) || CuSO₄(1M) | Cu(s)   (E° = +1.10 V)",
+    "slider_label": "انسياب الإلكترونات:",
+    "slider_min": 0,
+    "slider_max": 110,
+    "slider_val": 110,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "zn_half",
+        "name": "نصف خلية الأنود (Zn −)",
+        "role": "تحدث الأكسدة Zn → Zn²⁺ + 2e⁻ وتخرج الإلكترونات نحو السلك."
+      },
+      {
+        "id": "bridge",
+        "name": "القنطرة الملحية (حرف U)",
+        "role": "أنبوب يحوي KCl/Na₂SO₄ يغلق الدائرة ويعادل الشحنات بهجرة الأيونات."
+      },
+      {
+        "id": "cu_half",
+        "name": "نصف خلية الكاثود (Cu +)",
+        "role": "تُختزل أيونات Cu²⁺ فتترسب على اللوح ويزداد وزنه."
+      }
+    ]
+  },
+  "diag-chem-3-4-she": {
+    "id": "diag-chem-3-4-she",
+    "sim_key": "chem_she_cell",
+    "book_page": 51,
+    "bounds": [
+      0.18,
+      0.52,
+      0.4,
+      0.24
+    ],
+    "hotspot_label": "🔍 شكل (3-4): قطب الهيدروجين القياسي 3D",
+    "lab_exp": null,
+    "title": "شكل (3-4): خلية الهيدروجين القياسية (SHE) وقياس جهد الخارصين (+0.76 V) (ص 51)",
+    "formula": "Zn(s) + 2H⁺(1M) → Zn²⁺(1M) + H₂(g, 1 atm)   |   E°(H⁺/H₂) = 0.00 V",
+    "slider_label": "ضغط H₂ القياسي:",
+    "slider_min": 5,
+    "slider_max": 15,
+    "slider_val": 10,
+    "slider_unit": "×0.1 atm",
+    "components": [
+      {
+        "id": "pt_bell",
+        "name": "ناقص وقطب البلاتين المغطى بـ Pt الأسود",
+        "role": "يُمرر غاز H₂ بضغط 1 atm في محلول حمضي تركيزه 1M عند 25°C."
+      },
+      {
+        "id": "volt",
+        "name": "الفولتميتر (+0.76 V)",
+        "role": "بما أن جهد الهيدروجين يساوي صفراً، فالقراءة تعطي جهد تأكسد الخارصين القياسي مباشرة."
+      }
+    ]
+  },
+  "diag-chem-3-5-drytypes": {
+    "id": "diag-chem-3-5-drytypes",
+    "sim_key": "chem_cells_trio",
+    "book_page": 54,
+    "bounds": [
+      0.18,
+      0.305,
+      0.295,
+      0.25
+    ],
+    "hotspot_label": "🔍 شكل (3-5): مقارنة البطاريات الجافة 3D",
+    "lab_exp": null,
+    "title": "شكل (3-5): مقارنة الخلايا الجلفانية الجافة (الزنك-كربون والقاعدية والزئبق) (ص 54)",
+    "formula": "الخلايا الأولية غير القابلة لإعادة الشحن (1.35 V – 1.5 V)",
+    "slider_label": "اختيار البطارية:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "usage",
+        "name": "تنوع الأحجام والقدرات",
+        "role": "بطارية الزئبق الصغيرة للساعات، والقاعدية والأولية للراديو والأجهزة المحمولة."
+      }
+    ]
+  },
+  "diag-chem-3-6-zn-carbon": {
+    "id": "diag-chem-3-6-zn-carbon",
+    "sim_key": "chem_dry_cell_leclanche",
+    "book_page": 54,
+    "bounds": [
+      0.18,
+      0.615,
+      0.295,
+      0.215
+    ],
+    "hotspot_label": "🔍 شكل (3-6): خلية الخارصين-الكربون 3D",
+    "lab_exp": null,
+    "title": "شكل (3-6): تركيب خلية الخارصين – الكربون الجافة (1.5 V) (ص 54)",
+    "formula": "أنود: وعاء الخارصين Zn | كاثود: قضيب الجرافيت + MnO₂ + عجينة NH₄Cl رطبة",
+    "slider_label": "نسبة التفريغ:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 45,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "can",
+        "name": "إناء الخارصين (الأنود −)",
+        "role": "يعمل كحاوية وكقطب سالب يتأكسد إلى Zn²⁺."
+      },
+      {
+        "id": "rod",
+        "name": "ساق الجرافيت + MnO₂ (الكاثود +)",
+        "role": "محاط بعجينة كلوريد الأمونيوم وثاني أكسيد المنجنيز لمنع الاستقطاب."
+      }
+    ]
+  },
+  "diag-chem-3-7-alkaline": {
+    "id": "diag-chem-3-7-alkaline",
+    "sim_key": "chem_alkaline_cell",
+    "book_page": 55,
+    "bounds": [
+      0.18,
+      0.228,
+      0.31,
+      0.24
+    ],
+    "hotspot_label": "🔍 شكل (3-7): الخلية القاعدية (Alkaline) 3D",
+    "lab_exp": null,
+    "title": "شكل (3-7): تركيب الخلية القاعدية (KOH) الأطول عمراً (1.5 V) (ص 55)",
+    "formula": "Zn + 2MnO₂ + 2H₂O → Zn(OH)₂ + 2MnO(OH)  (في وسط KOH القاعدي)",
+    "slider_label": "كفاءة التيار:",
+    "slider_min": 20,
+    "slider_max": 100,
+    "slider_val": 85,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "zn_paste",
+        "name": "عجينة الخارصين المسامي + KOH",
+        "role": "استبدال NH₄Cl القلوي بـ KOH يقلل التآكل الذاتي ويثبت الجهد."
+      }
+    ]
+  },
+  "diag-chem-3-8-mercury": {
+    "id": "diag-chem-3-8-mercury",
+    "sim_key": "chem_mercury_button_cell",
+    "book_page": 55,
+    "bounds": [
+      0.18,
+      0.535,
+      0.32,
+      0.16
+    ],
+    "hotspot_label": "🔍 شكل (3-8): خلية الزئبق (الساعات) 3D",
+    "lab_exp": null,
+    "title": "شكل (3-8): خلية الزئبق الزرية للآلات الحاسبة والساعات (1.35 V) (ص 55)",
+    "formula": "Zn + HgO → ZnO + Hg   (جهد ثابت 1.35 V طوال فترة التشغيل)",
+    "slider_label": "ثبات الجهد:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 8,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "button",
+        "name": "القرص المعدني والغلاف العازل",
+        "role": "أنود الخارصين أعلى الغلاف وكاثود HgO أسفله، ويُحذّر من رميها لسمية الزئبق."
+      }
+    ]
+  },
+  "diag-chem-3-9-lead": {
+    "id": "diag-chem-3-9-lead",
+    "sim_key": "chem_lead_battery",
+    "book_page": 56,
+    "bounds": [
+      0.18,
+      0.15,
+      0.31,
+      0.21
+    ],
+    "hotspot_label": "🔍 شكل (3-9): المركم الرصاصي (12V) 3D",
+    "lab_exp": "exp-5",
+    "title": "شكل (3-9): المركم الرصاصي (بطارية السيارة 6 خلايا × 2V = 12V) (ص 56)",
+    "formula": "Pb(s) + PbO₂(s) + 2H₂SO₄(aq) ⇌ 2PbSO₄(s) + 2H₂O(l)  (تفريغ ⇌ شحن)",
+    "slider_label": "كثافة الحمض (شحن/تفريغ):",
+    "slider_min": 112,
+    "slider_max": 130,
+    "slider_val": 128,
+    "slider_unit": "×0.01",
+    "components": [
+      {
+        "id": "plates",
+        "name": "شبكة الرصاص Pb وثاني أكسيد الرصاص PbO₂",
+        "role": "الأنود (−) Pb والكاثود (+) PbO₂ في محلول H₂SO₄ كثافته 1.28–1.30 عند تمام الشحن."
+      },
+      {
+        "id": "hydro",
+        "name": "قياس الكثافة بالهيدروميتر",
+        "role": "انخفاض الكثافة دون 1.20 يدل على تكون الماء ووجوب إعادة الشحن."
+      }
+    ]
+  },
+  "diag-chem-3-10-fuel": {
+    "id": "diag-chem-3-10-fuel",
+    "sim_key": "chem_h2o2_fuel_cell",
+    "book_page": 57,
+    "bounds": [
+      0.19,
+      0.22,
+      0.62,
+      0.21
+    ],
+    "hotspot_label": "🔍 شكل (3-10): خلية الوقود (H₂-O₂) 3D",
+    "lab_exp": null,
+    "title": "شكل (3-10): خلية الوقود (الهيدروجين – الأكسجين في المركبات الفضائية) (ص 57)",
+    "formula": "2H₂(g) + 4OH⁻ → 4H₂O + 4e⁻  |  O₂ + 2H₂O + 4e⁻ → 4OH⁻  ⇒  2H₂ + O₂ → 2H₂O",
+    "slider_label": "ضخ الوقود H₂/O₂:",
     "slider_min": 10,
     "slider_max": 100,
     "slider_val": 75,
     "slider_unit": "%",
     "components": [
       {
-        "id": "nylon",
-        "name": "رابطة البولي أميد (–CO–NH–)",
-        "role": "تمنح ألياف النايلون 6,6 متانة تشبه الصلب عند شدها."
+        "id": "h2",
+        "name": "أقطاب كربون مسامية (وقود مستمر)",
+        "role": "لا تستهلك مكوناتها بل يتدفق H₂ و O₂ باستمرار لتوليد كهرباء وماء نقي شروب لرواد الفضاء."
       }
     ]
   },
-  "diag-chem-industry": {
-    "id": "diag-chem-industry",
-    "lab_exp": "exp-9",
-    "lab_url": "chem-lab-book.html#exp=exp-9&from=book&page=158",
-    "title": "تحضير الصابون وإزالة الأوساخ 3D (ص 157–164)",
-    "sim_key": "chem_soap_polymer",
-    "formula": "دهن + 3NaOH → صابون + جلسرين",
-    "slider_label": "نسبة القلوي/الملح:",
-    "slider_min": 10,
-    "slider_max": 100,
-    "slider_val": 60,
-    "slider_unit": "%",
+  "diag-chem-3-11-cucl2": {
+    "id": "diag-chem-3-11-cucl2",
+    "sim_key": "chem_cucl2_electrolysis",
+    "book_page": 59,
+    "bounds": [
+      0.18,
+      0.49,
+      0.4,
+      0.24
+    ],
+    "hotspot_label": "🔍 شكل (3-11): التحليل الكهربي لـ CuCl₂ 3D",
+    "lab_exp": "exp-6",
+    "title": "شكل (3-11): التحليل الكهربي لمحلول كلوريد النحاس CuCl₂ بأقطاب الجرافيت (ص 59)",
+    "formula": "عند الكاثود (−): Cu²⁺ + 2e⁻ → Cu↓  |  عند الأنود (+): 2Cl⁻ → Cl₂↑ + 2e⁻",
+    "slider_label": "الجهد المطبق DC:",
+    "slider_min": 1,
+    "slider_max": 12,
+    "slider_val": 6,
+    "slider_unit": "V",
     "components": [
       {
-        "id": "tail",
-        "name": "الذيل الكاره للماء (C₁₇H₃₅–)",
-        "role": "يغوص في قطيرة الزيت أو الدهن المراد إزالته."
+        "id": "anode_cl",
+        "name": "المصعد الموجب (جرافيت)",
+        "role": "تتجه إليه أيونات الكلوريد Cl⁻ وتتأكسد لتصاعد فقاعات غاز الكلور المخضر."
       },
       {
-        "id": "head",
-        "name": "الرأس المحب للماء (–COO⁻Na⁺)",
-        "role": "يرتبط بجزيئات الماء فيستحلب الدهون وتزول بالغسيل."
+        "id": "cathode_cu",
+        "name": "المهبط السالب (جرافيت)",
+        "role": "تختزل أيونات Cu²⁺ وتترسب طبقة نحاس حمراء على الساق."
       }
     ]
   },
-  "diag-chem-environment": {
-    "id": "diag-chem-environment",
+  "diag-chem-3-12-plate": {
+    "id": "diag-chem-3-12-plate",
+    "sim_key": "chem_electroplating",
+    "book_page": 63,
+    "bounds": [
+      0.18,
+      0.148,
+      0.37,
+      0.285
+    ],
+    "hotspot_label": "🔍 شكل (3-12): خلية الطلاء الكهربي بالفضة 3D",
+    "lab_exp": "exp-7",
+    "title": "شكل (3-12): الطلاء الكهربي لملعقة بطبقة من الفضة في AgNO₃ (ص 63)",
+    "formula": "المصعد (+): لوح فضة نقي Ag → Ag⁺ + e⁻  |  المهبط (−): الملعقة Ag⁺ + e⁻ → Ag↓",
+    "slider_label": "تيار الطلاء (أمبير):",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 4,
+    "slider_unit": "A",
+    "components": [
+      {
+        "id": "ag_anode",
+        "name": "لوح الفضة النقية (المصعد +)",
+        "role": "يذوب تدريجياً لتعويض أيونات Ag⁺ في المحلول بثبات التركيز."
+      },
+      {
+        "id": "spoon",
+        "name": "الملعقة المعدنية (المهبط −)",
+        "role": "تُكسى بطبقة رقيقة لامعة متماسكة من الفضة تحميها وتجملها."
+      }
+    ]
+  },
+  "diag-chem-4-1-massspec": {
+    "id": "diag-chem-4-1-massspec",
+    "sim_key": "chem_mass_spectrometer",
+    "book_page": 71,
+    "bounds": [
+      0.18,
+      0.46,
+      0.44,
+      0.235
+    ],
+    "hotspot_label": "🔍 شكل (4-1): مطياف الكتلة وفصل النظائر 3D",
     "lab_exp": null,
-    "title": "دورة الكربون والاحتباس الحراري والمطر الحمضي 3D (الوحدة 9)",
-    "sim_key": "chem_env_cycle",
-    "formula": "SO₃ + H₂O → H₂SO₄  |  2CO + 2NO → 2CO₂ + N₂",
-    "slider_label": "تركيز CO₂ / SO₂:",
-    "slider_min": 10,
+    "title": "شكل (4-1): مطياف الكتلة وفصل النظائر (¹²C مقابل ⁴He) (ص 71)",
+    "formula": "انحراف الأيون يتناسب عكسياً مع الكتلة (r ∝ m/q) عند ثبات المجال المغناطيسي",
+    "slider_label": "شدة المجال المغناطيسي:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 6,
+    "slider_unit": "T",
+    "components": [
+      {
+        "id": "src",
+        "name": "حزمة الأيونات والمعجل",
+        "role": "تؤين الذرات وتسرع نحو الحيز المغناطيسي المنحني."
+      },
+      {
+        "id": "det",
+        "name": "اللوح الفوتوغرافي والفصل",
+        "role": "ينحرف النظير الأخف (⁴He) بشدة أكبر من النظير الأثقل (¹²C)."
+      }
+    ]
+  },
+  "diag-chem-4-2-binding": {
+    "id": "diag-chem-4-2-binding",
+    "sim_key": "chem_binding_energy_curve",
+    "book_page": 76,
+    "bounds": [
+      0.19,
+      0.53,
+      0.62,
+      0.315
+    ],
+    "hotspot_label": "🔍 شكل (4-2): منحنى طاقة الترابط النووي 3D",
+    "lab_exp": null,
+    "title": "شكل (4-2): منحنى متوسط طاقة الترابط النووي لكل نيوكليون مقابل العدد الكتلي (ص 76)",
+    "formula": "تبلغ طاقة الترابط ذروتها (~8.8 MeV/نيوكليون) عند نواة الحديد ⁵⁶Fe",
+    "slider_label": "العدد الكتلي A:",
+    "slider_min": 4,
+    "slider_max": 238,
+    "slider_val": 56,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "peak",
+        "name": "ذروة الاستقرار (الحديد Fe-56)",
+        "role": "الأنوية المتوسطة (A بين 40 و 120) هي الأكثر تماسكاً واستقراراً في الطبيعة."
+      },
+      {
+        "id": "fusion_fiss",
+        "name": "طريقا التحول للاستقرار",
+        "role": "تندمج الأنوية الخفيفة جداً وتنشطر الثقيلة جداً لتقترب من منطقة Fe-56."
+      }
+    ]
+  },
+  "diag-chem-4-3-belt": {
+    "id": "diag-chem-4-3-belt",
+    "sim_key": "chem_stability_belt",
+    "book_page": 78,
+    "bounds": [
+      0.18,
+      0.15,
+      0.39,
+      0.39
+    ],
+    "hotspot_label": "🔍 شكل (4-3): حزام الاستقرار النووي (N/Z) 3D",
+    "lab_exp": null,
+    "title": "شكل (4-3): حزام الاستقرار النووي (عدد النيوترونات N مقابل البروتونات Z) (ص 78)",
+    "formula": "الأنوية الخفيفة تستقر عند N/Z ≈ 1.0  |  الثقيلة تصل إلى N/Z ≈ 1.5 (عند ²⁰⁸Pb)",
+    "slider_label": "نسبة N/Z في النواة:",
+    "slider_min": 8,
+    "slider_max": 17,
+    "slider_val": 13,
+    "slider_unit": "×0.1",
+    "components": [
+      {
+        "id": "above",
+        "name": "فوق الحزام (نيوترونات زائدة)",
+        "role": "تتحول نحو الحزام بإطلاق جسيم بيتا السالب ⁰₋₁e (n → p + e⁻)."
+      },
+      {
+        "id": "below",
+        "name": "تحت الحزام وثقيل (Z > 82)",
+        "role": "تصدر بوزيتروناً أو أسراً إلكترونياً، والأنوية فائقة الثقل تشع جسيمات ألفا."
+      }
+    ]
+  },
+  "diag-chem-4-4-penetration": {
+    "id": "diag-chem-4-4-penetration",
+    "sim_key": "chem_alpha_beta_gamma_shield",
+    "book_page": 80,
+    "bounds": [
+      0.18,
+      0.148,
+      0.39,
+      0.18
+    ],
+    "hotspot_label": "🔍 شكل (4-4): قدرة نفاذ α و β و γ 3D",
+    "lab_exp": null,
+    "title": "شكل (4-4): مقارنة القدرة على النفاذ لإشعاعات ألفا (α) وبيتا (β) وجاما (γ) (ص 80)",
+    "formula": "α (توقفها ورقة)  |  β (يوقفها زجاج/ألومنيوم)  |  γ (تحتاج رصاصاً أو خرسانة سميكة)",
+    "slider_label": "سمك الدرع الواقي:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 5,
+    "slider_unit": "cm",
+    "components": [
+      {
+        "id": "alpha",
+        "name": "جسيم ألفا ⁴₂He (+2)",
+        "role": "كتلته كبيرة وشحنته مضاعفة؛ تأيينه عالٍ جداً ونفاذه ضعيف يقف عند ورقة."
+      },
+      {
+        "id": "gamma",
+        "name": "أشعة جاما ⁰₀γ",
+        "role": "موجات كهرومغناطيسية عالية التردد تخترق الجسم وتحتاج حواجز كثيفة من الرصاص."
+      }
+    ]
+  },
+  "diag-chem-4-5-chain": {
+    "id": "diag-chem-4-5-chain",
+    "sim_key": "chem_u235_chain_fission",
+    "book_page": 84,
+    "bounds": [
+      0.18,
+      0.148,
+      0.63,
+      0.385
+    ],
+    "hotspot_label": "🔍 شكل (4-5): الانشطار المتسلسل لـ U-235 3D",
+    "lab_exp": null,
+    "title": "شكل (4-5): التفاعل الانشطاري المتسلسل لنواة اليورانيوم-235 (ص 84)",
+    "formula": "²³⁵₉₂U + ¹₀n → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + 3¹₀n + طاقة (200 MeV)",
+    "slider_label": "جيل الانشطار:",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "trigger",
+        "name": "قذف نيوترون بطيء",
+        "role": "تشطر النواة إلى نواتين متوسطتين مع تحرر 2–3 نيوترونات تضاعف التفاعل هندسياً."
+      }
+    ]
+  },
+  "diag-chem-4-6-reactor": {
+    "id": "diag-chem-4-6-reactor",
+    "sim_key": "chem_nuclear_reactor_5parts",
+    "book_page": 85,
+    "bounds": [
+      0.18,
+      0.295,
+      0.63,
+      0.3
+    ],
+    "hotspot_label": "🔍 شكل (4-6): مكونات المفاعل النووي 3D",
+    "lab_exp": null,
+    "title": "شكل (4-6): الرسم التوضيحي للمفاعل النووي السلمي لإنتاج الكهرباء (ص 85)",
+    "formula": "قلب اليورانيوم ← قضبان التحكم بالكادميوم ← المبادل الحراري ← التوربين ← المكثف",
+    "slider_label": "إدخال قضبان التحكم:",
+    "slider_min": 0,
     "slider_max": 100,
     "slider_val": 45,
     "slider_unit": "%",
     "components": [
       {
-        "id": "greenhouse",
-        "name": "الدفيئة والاحتباس الحراري",
-        "role": "يحبس CO₂ الأشعة تحت الحمراء فترتفع حرارة الأرض."
+        "id": "core",
+        "name": "الوقود والمهدئ وقضبان التحكم",
+        "role": "يمتص البورون والكادميوم النيوترونات الزائدة للسيطرة على معدل الانشطار."
       },
       {
-        "id": "acidrain",
-        "name": "الأمطار الحمضية",
-        "role": "تتلف الغابات والمحاصيل وتؤكل مباني الحجر الجيري."
+        "id": "turbine",
+        "name": "الدائرة الحرارية والمولد",
+        "role": "يحوّل البخار التوربين والمولد لتوليد الكهرباء داخل درع خرساني عازل."
+      }
+    ]
+  },
+  "diag-chem-4-7-isotope": {
+    "id": "diag-chem-4-7-isotope",
+    "sim_key": "chem_radioisotope_bone_scan",
+    "book_page": 85,
+    "bounds": [
+      0.18,
+      0.59,
+      0.28,
+      0.225
+    ],
+    "hotspot_label": "🔍 شكل (4-7): التصوير النووي بالنظائر 3D",
+    "lab_exp": null,
+    "title": "شكل (4-7): استخدام العناصر والنظائر المشعة في الطب النووي (ص 85)",
+    "formula": "حقن مقتفي مشع قصير العمر (مثل Tc-99 / I-131) لتصوير الهيكل والغدة الدرقية",
+    "slider_label": "حساسية كاميرا جاما:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 7,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "tracer",
+        "name": "المقتفي الإشعاعي الطبي",
+        "role": "تتركز النظائر في الأنسجة المستهدفة وتُرصد أشعتها لتشخيص الأورام والكسور دون جراحة."
+      }
+    ]
+  },
+  "diag-chem-4-8-radiotherapy": {
+    "id": "diag-chem-4-8-radiotherapy",
+    "sim_key": "chem_gamma_radiotherapy",
+    "book_page": 86,
+    "bounds": [
+      0.18,
+      0.15,
+      0.31,
+      0.195
+    ],
+    "hotspot_label": "🔍 شكل (4-8): علاج السرطان بالأشعة 3D",
+    "lab_exp": null,
+    "title": "شكل (4-8): العلاج الإشعاعي للأورام الخبيثة بأشعة الكوبالت-60 (ص 86)",
+    "formula": "⁶⁰₂₇Co → ⁶⁰₂₈Ni + ⁰₋₁e + γ (أشعة جاما عالية الطاقة موجهة للورم)",
+    "slider_label": "تركيز الحزمة (°):",
+    "slider_min": 0,
+    "slider_max": 180,
+    "slider_val": 90,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "gantry",
+        "name": "حزمة أشعة جاما الدوارة",
+        "role": "تُسلّط حزمة الكوبالت من زوايا دقيقة لتدمير الخلايا السرطانية وحماية النسيج السليم."
+      }
+    ]
+  },
+  "diag-chem-4-9-hbomb": {
+    "id": "diag-chem-4-9-hbomb",
+    "sim_key": "chem_fusion_hbomb",
+    "book_page": 87,
+    "bounds": [
+      0.18,
+      0.228,
+      0.31,
+      0.265
+    ],
+    "hotspot_label": "🔍 شكل (4-9): الاندماج والقنبلة الهيدروجينية 3D",
+    "lab_exp": null,
+    "title": "شكل (4-9): التفاعل الاندماجي النووي وانفجار القنبلة الهيدروجينية (ص 87)",
+    "formula": "²₁H (ديوتيريوم) + ³₁H (تريتيوم) → ⁴₂He + ¹₀n + طاقة حرارية هائلة",
+    "slider_label": "حرارة البلازما (مليون K):",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 80,
+    "slider_unit": "MK",
+    "components": [
+      {
+        "id": "plasma",
+        "name": "الاندماج الحراري النووي",
+        "role": "يتطلب حرارة ملايين الدرجات (يبدأ بقنبلة انشطارية كصاعق في الهيدروجينية) وتتفوق طاقته على الانشطار."
+      }
+    ]
+  },
+  "diag-chem-5-rings": {
+    "id": "diag-chem-5-rings",
+    "sim_key": "chem_u5_nitrogen_rings",
+    "book_page": 91,
+    "bounds": [
+      0.19,
+      0.24,
+      0.62,
+      0.23
+    ],
+    "hotspot_label": "🔍 مركبات النيتروجين العضوية الحلقية 3D",
+    "lab_exp": null,
+    "title": "صيغ وبنيات مركبات النيتروجين الحلقية في مطلع الوحدة الخامسة (ص 91)",
+    "formula": "مركبات نيتروجينية حلقية وأروماتية أساس الأدوية والفيتامينات والأصباغ",
+    "slider_label": "تدوير المركب:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "n_rings",
+        "name": "ذرات N داخل الحلقات العضوية",
+        "role": "تمثل القلويات والأدوية والصبغات الحلقية غير المتجانسة الحاوية للنيتروجين."
+      }
+    ]
+  },
+  "diag-chem-5-amines": {
+    "id": "diag-chem-5-amines",
+    "sim_key": "chem_amines_123",
+    "book_page": 92,
+    "bounds": [
+      0.19,
+      0.6,
+      0.62,
+      0.115
+    ],
+    "hotspot_label": "🔍 تصنيف الأمينات (أولي/ثانوي/ثالثي) 3D",
+    "lab_exp": null,
+    "title": "الأمينات الأولية والثانوية والثالثية ومقارنتها بجزيء الأمونيا NH₃ (ص 92)",
+    "formula": "NH₃ (أمونيا) ← R–NH₂ (أولي) ← R₂NH (ثانوي) ← R₃N (ثالثي)",
+    "slider_label": "عدد مجموعات الألكيل (R):",
+    "slider_min": 0,
+    "slider_max": 3,
+    "slider_val": 2,
+    "slider_unit": "R",
+    "components": [
+      {
+        "id": "sub",
+        "name": "استبدال ذرات هيدروجين النشادر",
+        "role": "يُصنف الأمين حسب عدد ذرات الكربون المتصلة مباشرة بذرة النيتروجين مع بقاء زوجها الحر."
+      }
+    ]
+  },
+  "diag-chem-5-hetero": {
+    "id": "diag-chem-5-hetero",
+    "sim_key": "chem_piperidine_pyridine_aniline",
+    "book_page": 93,
+    "bounds": [
+      0.19,
+      0.345,
+      0.62,
+      0.098
+    ],
+    "hotspot_label": "🔍 البيبيريدين والبيريدين والأنيلين 3D",
+    "lab_exp": null,
+    "title": "أمينات حلقية وأروماتية: البيبيريدين والبيريدين والأنيلين (ص 93)",
+    "formula": "C₅H₁₁N (بيبيريدين حلقي مشبع)  |  C₅H₅N (بيريدين أروماتي)  |  C₆H₅NH₂ (أنيلين)",
+    "slider_label": "اختيار المركب:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "comp3",
+        "name": "الفرق في القاعدية والبنية",
+        "role": "البيبيريدين أعلى قاعدية من البيريدين والأنيلين لأن زوج النيتروجين في الأنيلين ينشغل بالرنين مع الحلقة."
+      }
+    ]
+  },
+  "diag-chem-5-amides": {
+    "id": "diag-chem-5-amides",
+    "sim_key": "chem_amides_urea_benzamide",
+    "book_page": 95,
+    "bounds": [
+      0.19,
+      0.72,
+      0.62,
+      0.11
+    ],
+    "hotspot_label": "🔍 صيغ الأميدات واليوريا والبنزاميد 3D",
+    "lab_exp": null,
+    "title": "أشهر الأميدات: الأسيتاميد، النيكوتيناميد، البنزاميد، واليوريا (ص 95)",
+    "formula": "CH₃CONH₂ (أسيتاميد) | C₅H₄N-CONH₂ (نيكوتيناميد) | C₆H₅CONH₂ (بنزاميد) | CO(NH₂)₂ (يوريا)",
+    "slider_label": "استعراض الأميد:",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 4,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "amide_grp",
+        "name": "المجموعة الوظيفية للأميد –CO–NH₂",
+        "role": "تسحب مجموعة الكربونيل C=O زوج الإلكترونات من النيتروجين فتكون الأميدات متعادلة التأثير."
+      }
+    ]
+  },
+  "diag-chem-5-nitriles": {
+    "id": "diag-chem-5-nitriles",
+    "sim_key": "chem_nitriles_reactions",
+    "book_page": 97,
+    "bounds": [
+      0.19,
+      0.45,
+      0.62,
+      0.275
+    ],
+    "hotspot_label": "🔍 النيتريلات وتفاعلات R–C≡N 3D",
+    "lab_exp": null,
+    "title": "تحضير النيتريلات وتفاعلاتها: التحلل المائي والاختزال إلى أمين أولي (ص 97)",
+    "formula": "R–CONH₂ (–H₂O) → R–C≡N  |  R–C≡N + 2H₂O/H⁺ → R–COOH  |  + 4[H] → R–CH₂NH₂",
+    "slider_label": "نوع التفاعل:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "cn",
+        "name": "الرابطة الثلاثية –C≡N",
+        "role": "تخضع لتفاعلات إضافة الهيدروجين (لأمين أولي) أو التحلل المائي (لأميد ثم حمض كربوكسيلي)."
+      }
+    ]
+  },
+  "diag-chem-5-amino-class": {
+    "id": "diag-chem-5-amino-class",
+    "sim_key": "chem_amino_acids_types",
+    "book_page": 99,
+    "bounds": [
+      0.19,
+      0.24,
+      0.62,
+      0.59
+    ],
+    "hotspot_label": "🔍 تصنيف الحموض الأمينية: متعادلة/حمضية/قاعدية 3D",
+    "lab_exp": null,
+    "title": "الأحماض الأمينية المتعادلة والحمضية (الأسبارتيك) والقاعدية (الأرجينين) (ص 99)",
+    "formula": "متعادل (–NH₂ = –COOH)  |  حمضي (–COOH إضافية)  |  قاعدي (–NH₂ إضافية)",
+    "slider_label": "نوع الحمض الأميني:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "sidechain",
+        "name": "تأثير السلسلة الجانبية R",
+        "role": "تحدد عدد مجموعات الكربوكسيل والأمين الإضافية الصفة الغالبة للحمض الأميني."
+      }
+    ]
+  },
+  "diag-chem-5-zwitterion": {
+    "id": "diag-chem-5-zwitterion",
+    "sim_key": "chem_zwitterion_amphoteric",
+    "book_page": 101,
+    "bounds": [
+      0.19,
+      0.295,
+      0.62,
+      0.29
+    ],
+    "hotspot_label": "🔍 الأيون ثنائي القطب Zwitterion والسلوك الأمفوتيري 3D",
+    "lab_exp": null,
+    "title": "اتزان الأيون ثنائي القطب والسلوك المتردد للحمض الأميني مع H⁺ و OH⁻ (ص 101)",
+    "formula": "⁺H₃N–CH(R)–COOH  ⇌(وسط متعادل)  ⁺H₃N–CH(R)–COO⁻  ⇌(وسط قاعدي)  H₂N–CH(R)–COO⁻",
+    "slider_label": "الأس الهيدروجيني (pH):",
+    "slider_min": 1,
+    "slider_max": 13,
+    "slider_val": 7,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "zwit",
+        "name": "انتقال البروتون الداخلي (Zwitterion)",
+        "role": "عند التعادل يكون الحمض متعادلاً ظاهرياً ويفصل إلى أيون موجب عند الحمض وسالب عند القاعدة."
+      }
+    ]
+  },
+  "diag-chem-6-1-tree": {
+    "id": "diag-chem-6-1-tree",
+    "sim_key": "chem_biochem_sciences_map",
+    "book_page": 105,
+    "bounds": [
+      0.19,
+      0.42,
+      0.62,
+      0.39
+    ],
+    "hotspot_label": "🔍 شكل (6-1): علاقة الكيمياء الحيوية بالعلوم 3D",
+    "lab_exp": null,
+    "title": "شكل (6-1): ارتباط علم الكيمياء الحيوية بالطب والوراثة والزراعة والصيدلة (ص 105)",
+    "formula": "الكيمياء الحيوية ← دراسة التفاعلات الكيميائية في الخلية وعلاقتها بالعلوم الحياتية والطبية",
+    "slider_label": "تخصص التكامل:",
+    "slider_min": 1,
+    "slider_max": 6,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "bridge_sci",
+        "name": "حلقة وصل بين الكيمياء والأحياء",
+        "role": "ترتبط بالطب (التشخيص والأمراض)، والزراعة (التغذية والتربة)، وعلم الوراثة والإنزيمات."
+      }
+    ]
+  },
+  "diag-chem-6-2-fruits": {
+    "id": "diag-chem-6-2-fruits",
+    "sim_key": "chem_monosaccharide_fruits",
+    "book_page": 107,
+    "bounds": [
+      0.18,
+      0.6,
+      0.29,
+      0.225
+    ],
+    "hotspot_label": "🔍 شكل (6-2): فواكه السكريات الأحادية 3D",
+    "lab_exp": null,
+    "title": "شكل (6-2): المصادر الطبيعية للسكريات الأحادية (العنب والفواكه والعسل) (ص 107)",
+    "formula": "الجلوكوز (سكر العنب: ألدهيدي)  |  الفركتوز (سكر الفواكه: كيتوني)",
+    "slider_label": "التركيز:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 65,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "sources",
+        "name": "السكريات الأبسط C₆H₁₂O₆",
+        "role": "تزود الخلية بالطاقة الفورية دون حاجة لهضم معقد."
+      }
+    ]
+  },
+  "diag-chem-6-glcfru": {
+    "id": "diag-chem-6-glcfru",
+    "sim_key": "chem_glucose_fructose_rings",
+    "book_page": 108,
+    "bounds": [
+      0.18,
+      0.44,
+      0.63,
+      0.37
+    ],
+    "hotspot_label": "🔍 صيغ الجلوكوز والفركتوز المفتوحة والحلقية 3D",
+    "lab_exp": null,
+    "title": "الاتزان الديناميكي بين الصيغة المفتوحة والحلقية للجلوكوز (سداسي) والفركتوز (خماسي) (ص 108)",
+    "formula": "جلوكوز (–CHO ألدوهكسوز) ⇌ حلقة سُداسية  |  فركتوز (C=O كيتوهكسوز) ⇌ حلقة خُماسية",
+    "slider_label": "درجة التحلّق:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 90,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "ring_eq",
+        "name": "حلقة البيرانوز مقابل الفيورانوز",
+        "role": "في المحلول المائي يغلق الجلوكوز حلقة سداسية 6 ذرات بينما يغلق الفركتوز حلقة خماسية 5 ذرات."
+      }
+    ]
+  },
+  "diag-chem-6-3-lactose": {
+    "id": "diag-chem-6-3-lactose",
+    "sim_key": "chem_lactose_structure",
+    "book_page": 110,
+    "bounds": [
+      0.18,
+      0.65,
+      0.31,
+      0.19
+    ],
+    "hotspot_label": "🔍 شكل (6-3): الصيغة التركيبية للاكتوز 3D",
+    "lab_exp": "exp-8",
+    "title": "شكل (6-3): الصيغة التركيبية لسكر اللبن (اللاكتوز = جالاكتوز + جلوكوز) (ص 110)",
+    "formula": "جالاكتوز + جلوكوز —(–H₂O)→ لاكتوز C₁₂H₂₂O₁₁ (رابطة جليكوسيدية)",
+    "slider_label": "تدوير الرابطة الجليكوسيدية:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 5,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "lactose",
+        "name": "سكر الحليب (سكر ثنائي مختزل)",
+        "role": "يتحلل مائياً بإنزيم اللاكتيز ويحتفظ بطرف قابل للاختزال مع فهلنج."
+      }
+    ]
+  },
+  "diag-chem-6-sucrose": {
+    "id": "diag-chem-6-sucrose",
+    "sim_key": "chem_sucrose_condensation",
+    "book_page": 111,
+    "bounds": [
+      0.18,
+      0.295,
+      0.63,
+      0.22
+    ],
+    "hotspot_label": "🔍 تكاثف الجلوكوز والفركتوز ← السكروز 3D",
+    "lab_exp": "exp-8",
+    "title": "تفاعل تكاثف الجلوكوز والفركتوز لتكوين سكر القصب (السكروز) (ص 111)",
+    "formula": "جلوكوز + فركتوز ──(–H₂O)──▶ سكروز C₁₂H₂₂O₁₁ (سكر غير مختزل)",
+    "slider_label": "نزع جزيء الماء (تكاثف):",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 75,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "glyco",
+        "name": "إغلاق المجموعتين الوظيفيتين",
+        "role": "ارتباط ذرتي الكربون الفعالتين في الجلوكوز والفركتوز يمنع اختزال السكروز لكاشف فهلنج."
+      }
+    ]
+  },
+  "diag-chem-6-4-amino6": {
+    "id": "diag-chem-6-4-amino6",
+    "sim_key": "chem_six_amino_acids",
+    "book_page": 113,
+    "bounds": [
+      0.18,
+      0.38,
+      0.63,
+      0.45
+    ],
+    "hotspot_label": "🔍 شكل (6-4): ستة أحماض أمينية تركيبية 3D",
+    "lab_exp": null,
+    "title": "شكل (6-4): تركيب ستة أحماض أمينية (جلايسين، ألانين، فالين، ليوسين، حمض جلوتاميك، فينيل ألانين) (ص 113)",
+    "formula": "تشترك في المجموعة (–NH₂ و –COOH) وتختلف في المجموعة الجانبية (–R)",
+    "slider_label": "اختيار الحمض الأميني:",
+    "slider_min": 1,
+    "slider_max": 6,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "ess",
+        "name": "أحماض أساسية مقابل غير أساسية",
+        "role": "الأحماض الأساسية لا يبنيها الجسم ويلزم الحصول عليها من الغذاء كالفالين والليوسين."
+      }
+    ]
+  },
+  "diag-chem-6-peptide": {
+    "id": "diag-chem-6-peptide",
+    "sim_key": "chem_peptide_bond_dipeptide",
+    "book_page": 114,
+    "bounds": [
+      0.18,
+      0.51,
+      0.63,
+      0.32
+    ],
+    "hotspot_label": "🔍 تكوّن الرابطة الببتيدية (جلايسيل ألانين) 3D",
+    "lab_exp": null,
+    "title": "تكاثف الجلايسين والألانين لتكوين الرابطة الببتيدية (–CO–NH–) وثنائي الببتيد (ص 114)",
+    "formula": "H₂N–CH₂–COOH + H₂N–CH(CH₃)–COOH —(–H₂O)→ ثنائي ببتيد (–CO–NH–)",
+    "slider_label": "تقدم التكاثف:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 70,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "pep",
+        "name": "سحب OH من الكربوكسيل و H من الأمين",
+        "role": "تنشأ رابطة أميدية ببتيدية تربط 50–5000 حمض لتكوين البروتين."
+      }
+    ]
+  },
+  "diag-chem-6-5-lipids": {
+    "id": "diag-chem-6-5-lipids",
+    "sim_key": "chem_saturated_unsaturated_fats",
+    "book_page": 116,
+    "bounds": [
+      0.18,
+      0.145,
+      0.63,
+      0.23
+    ],
+    "hotspot_label": "🔍 شكل (6-5): أحماض دهنية مشبعة وغير مشبعة 3D",
+    "lab_exp": null,
+    "title": "شكل (6-5): الحمض المشبع (البالمتيك) وغير المشبع (اللينولينيك 3 روابط ثنائية) (ص 116)",
+    "formula": "البالمتيك CH₃(CH₂)₁₄COOH (صلب مستقيم) | اللينولينيك (سائل منثنٍ لوجود C=C)",
+    "slider_label": "عدد الروابط الثنائية (C=C):",
+    "slider_min": 0,
+    "slider_max": 3,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "kink",
+        "name": "انحناء السلسلة عند الرابطة المزدوجة",
+        "role": "يعوق التقارب الجزيئي فتبقى الزيوت النباتية سائلة بينما تتراص الدهون المشبعة وتصلب."
+      }
+    ]
+  },
+  "diag-chem-6-6-enzyme": {
+    "id": "diag-chem-6-6-enzyme",
+    "sim_key": "chem_enzyme_lock_key",
+    "book_page": 120,
+    "bounds": [
+      0.18,
+      0.58,
+      0.63,
+      0.215
+    ],
+    "hotspot_label": "🔍 شكل (6-6): آلية عمل الإنزيم (قفل ومفتاح) 3D",
+    "lab_exp": null,
+    "title": "شكل (6-6): نموذج القفل والمفتاح لتخصص الإنزيم وخفض طاقة التنشيط (ص 120)",
+    "formula": "إنزيم (E) + مادة التفاعل (S) ⇌ معقد (ES) → إنزيم (E) + نواتج (P)",
+    "slider_label": "تقارب المتفاعل والإنزيم:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 75,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "active",
+        "name": "الموقع النشط والتخصص النوعي",
+        "role": "يطابق الإنزيم ركيزته تطابق المفتاح مع قفله ويسرّع التفاعل دون أن يُستهلك."
+      }
+    ]
+  },
+  "diag-chem-7-1-products": {
+    "id": "diag-chem-7-1-products",
+    "sim_key": "chem_petro_products_grid",
+    "book_page": 124,
+    "bounds": [
+      0.18,
+      0.525,
+      0.32,
+      0.175
+    ],
+    "hotspot_label": "🔍 شكل (7-1): صناعات ومنتجات البترول 3D",
+    "lab_exp": null,
+    "title": "شكل (7-1): المنتجات والمصنوعات المشتقة من البترول في الحياة اليومية (ص 124)",
+    "formula": "عالم من المشتقات: البلاستيك، الأصباغ، الألياف، الأدوية، الأسفلت والوقود",
+    "slider_label": "نوع المنتج:",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "variety",
+        "name": "ثورة المنتجات البتروكيماوية",
+        "role": "تعتمد الصناعات الحديثة على البترول كمادة خام قبل كونه وقوداً."
+      }
+    ]
+  },
+  "diag-chem-7-2-seismic": {
+    "id": "diag-chem-7-2-seismic",
+    "sim_key": "chem_seismic_oil_trap",
+    "book_page": 129,
+    "bounds": [
+      0.18,
+      0.415,
+      0.63,
+      0.385
+    ],
+    "hotspot_label": "🔍 شكل (7-2): المسح السيزمي ومصيدة النفط 3D",
+    "lab_exp": null,
+    "title": "شكل (7-2): تحديد مكمن النفط بالاهتزازات الأرضية (المسح السيزمي) وطبقات المصيدة (ص 129)",
+    "formula": "الطبقة الصماء العليا ← الغاز الطبيعي ← النفط الخام ← الماء المالح",
+    "slider_label": "نبضة التفجير والاهتزاز:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 6,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "geo",
+        "name": "شاحنة التفجير والجيوفونات",
+        "role": "تسجل الموجات الصوتية المنعكسة عن القباب المحدبة لرسم خريطة الأعماق قبل الحفر."
+      }
+    ]
+  },
+  "diag-chem-7-3-tower": {
+    "id": "diag-chem-7-3-tower",
+    "sim_key": "chem_distillation_tower",
+    "book_page": 131,
+    "bounds": [
+      0.18,
+      0.26,
+      0.295,
+      0.41
+    ],
+    "hotspot_label": "🔍 شكل (7-3): برج التقطير التجزيئي للنفط 3D",
+    "lab_exp": "exp-10",
+    "title": "شكل (7-3): برج التقطير التجزيئي ومشتقاته حسب درجات الغليان (ص 131)",
+    "formula": "أعلى البرج (<40°C غازات) ← جازولين ← كيروسين ← ديزل ← أسفلت في القاع (>400°C)",
+    "slider_label": "مستوى صينية التكثيف:",
+    "slider_min": 40,
+    "slider_max": 400,
+    "slider_val": 180,
+    "slider_unit": "°C",
+    "components": [
+      {
+        "id": "trays",
+        "name": "صواني الفقاعات والتدرج الحراري",
+        "role": "تبرد الأبخرة كلما صعدت فتتكثف الأجزاء الأخف عند القمة والأثقل بالقاع."
+      }
+    ]
+  },
+  "diag-chem-7-4-uses": {
+    "id": "diag-chem-7-4-uses",
+    "sim_key": "chem_oil_fractions_uses",
+    "book_page": 133,
+    "bounds": [
+      0.18,
+      0.145,
+      0.355,
+      0.375
+    ],
+    "hotspot_label": "🔍 شكل (7-4): استخدامات مشتقات النفط 3D",
+    "lab_exp": null,
+    "title": "شكل (7-4): الاستخدامات الصناعية والمنزلية لكل قطفة من قطفات النفط (ص 133)",
+    "formula": "وقود طائرات (كيروسين) | سيارات (جازولين) | شاحنات (ديزل) | تعبيد طرق (قار)",
+    "slider_label": "اختيار المشتق:",
+    "slider_min": 1,
+    "slider_max": 6,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "uses",
+        "name": "توزيع الاستهلاك الحياتي",
+        "role": "من الغاز المنزلي C₁–C₄ وحتى الشموع والأسفلت الذي يتجاوز C₄₀."
+      }
+    ]
+  },
+  "diag-chem-7-5-gasoline": {
+    "id": "diag-chem-7-5-gasoline",
+    "sim_key": "chem_gasoline_cars",
+    "book_page": 135,
+    "bounds": [
+      0.18,
+      0.27,
+      0.63,
+      0.2
+    ],
+    "hotspot_label": "🔍 شكل (7-5): وقود الجازولين ورقم الأوكتان 3D",
+    "lab_exp": null,
+    "title": "شكل (7-5): استخدام الجازولين كوقود للسيارات وعلاقته برقم الأوكتان (ص 135)",
+    "formula": "الهبتان العادي (رقم أوكتان = 0)  |  الأيزوأوكتان 2,2,4-ثلاثي ميثيل بنتان (رقم أوكتان = 100)",
+    "slider_label": "رقم الأوكتان:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 95,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "oct",
+        "name": "منع الخبط والفرقعة داخل المحرك",
+        "role": "رفع التفرع يرفع رقم الأوكتان ويحسن احتراق الوقود دون تلويث بالرصاص."
+      }
+    ]
+  },
+  "diag-chem-7-6-drum": {
+    "id": "diag-chem-7-6-drum",
+    "sim_key": "chem_oil_consumption_87_13",
+    "book_page": 135,
+    "bounds": [
+      0.18,
+      0.545,
+      0.27,
+      0.27
+    ],
+    "hotspot_label": "🔍 شكل (7-6): نسب استهلاك النفط 87% / 13% 3D",
+    "lab_exp": null,
+    "title": "شكل (7-6): برميل استهلاك البترول الخام في الدول الصناعية (87% وقود / 13% بتروكيماويات) (ص 135)",
+    "formula": "87% يستهلك كوقود للطاقة والنقل  |  13% فقط لتصنيع البتروكيماويات",
+    "slider_label": "تبديل التركيز (% بتروكيماويات):",
+    "slider_min": 13,
+    "slider_max": 50,
+    "slider_val": 13,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "ratio",
+        "name": "أهمية القيمة المضافة",
+        "role": "تحويل النسبة الأقل إلى مواد بتروكيماوية يضاعف قيمتها الاقتصادية مقارنة بالحرق المباشر."
+      }
+    ]
+  },
+  "diag-chem-8-1-fertilizers": {
+    "id": "diag-chem-8-1-fertilizers",
+    "sim_key": "chem_fertilizer_taxonomy",
+    "book_page": 142,
+    "bounds": [
+      0.18,
+      0.315,
+      0.63,
+      0.445
+    ],
+    "hotspot_label": "🔍 شكل (8-1): تصنيف الأسمدة الكيميائية 3D",
+    "lab_exp": null,
+    "title": "شكل (8-1): الشجرة التصنيفية الكاملة للأسمدة الكيميائية المباشرة وغير المباشرة (ص 142)",
+    "formula": "مباشرة (أساسية أحادية N/P/K وعديدة مركبة/مخلوطة)  |  غير مباشرة (جير/دولوميت/كبريتيد)",
+    "slider_label": "فرع التصنيف:",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "tax",
+        "name": "مباشرة مقابل غير مباشرة",
+        "role": "غير المباشرة تعالج حموضة وملوحة التربة (CaCO₃, MgCO₃) والمباشرة تغذي النبات بـ N,P,K."
+      }
+    ]
+  },
+  "diag-chem-8-urea-synth": {
+    "id": "diag-chem-8-urea-synth",
+    "sim_key": "chem_urea_carbamate",
+    "book_page": 143,
+    "bounds": [
+      0.19,
+      0.495,
+      0.62,
+      0.115
+    ],
+    "hotspot_label": "🔍 تحضير سماد اليوريا من الأمونيا و CO₂ 3D",
+    "lab_exp": null,
+    "title": "معادلة تحضير سماد اليوريا (أعلى الأسمدة الصلبة نيتروجيناً ~46%) (ص 143)",
+    "formula": "2NH₃ + CO₂ ──(Δ/ضغط)→ [H₂N–COO⁻ NH₄⁺] ──(تحلل)→ H₂N–CO–NH₂ + H₂O",
+    "slider_label": "حرارة وضغط المفاعل:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 8,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "urea",
+        "name": "الوسيط كربامات الأمونيوم",
+        "role": "ينزع منه الماء بالحرارة لتكوين بلورات اليوريا CO(NH₂)₂."
+      }
+    ]
+  },
+  "diag-chem-8-2-mixedbag": {
+    "id": "diag-chem-8-2-mixedbag",
+    "sim_key": "chem_npk_bag_6_12_12",
+    "book_page": 146,
+    "bounds": [
+      0.18,
+      0.515,
+      0.34,
+      0.235
+    ],
+    "hotspot_label": "🔍 شكل (8-2): السماد المخلوط 6-12-12 3D",
+    "lab_exp": null,
+    "title": "شكل (8-2): كيس السماد المخلوط ونظام الشفرة الثلاثية (6-12-12) (ص 146)",
+    "formula": "الشفرة من اليسار: 6% نيتروجين (N) | 12% فوسفور على هيئة P₂O₅ | 12% بوتاسيوم K₂O",
+    "slider_label": "عينة النسب NPK:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "code",
+        "name": "قراءة أرقام السماد الثلاثة",
+        "role": "أداة قياسية لمعرفة تركيز كل مغذٍ أساسي (N – P₂O₅ – K₂O) قبل نثره في التربة."
+      }
+    ]
+  },
+  "diag-chem-8-ddt": {
+    "id": "diag-chem-8-ddt",
+    "sim_key": "chem_ddt_synthesis",
+    "book_page": 148,
+    "bounds": [
+      0.18,
+      0.65,
+      0.63,
+      0.17
+    ],
+    "hotspot_label": "🔍 تركيب وتحضر مبيد DDT المكلور 3D",
+    "lab_exp": null,
+    "title": "تحضير مبيد DDT (ثنائي كلورو ثنائي فينيل ثلاثي كلورو إيثان) من كلوروبنزين وكلورال (ص 148)",
+    "formula": "2 Cl–C₆H₅ + Cl₃C–CHO ──(H₂SO₄ / –H₂O)──▶ (Cl–C₆H₄)₂CH–CCl₃ (DDT)",
+    "slider_label": "تدوير جزيء DDT:",
+    "slider_min": 0,
+    "slider_max": 360,
+    "slider_val": 45,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "ddt_risk",
+        "name": "الثبات الحيوي والتراكم",
+        "role": "مبيد كلوري فعال لكنه لا يتحلل حيوياً ويتراكم في السلاسل الغذائية فحُظر دولياً."
+      }
+    ]
+  },
+  "diag-chem-8-bhc": {
+    "id": "diag-chem-8-bhc",
+    "sim_key": "chem_bhc_lindane",
+    "book_page": 149,
+    "bounds": [
+      0.18,
+      0.405,
+      0.63,
+      0.255
+    ],
+    "hotspot_label": "🔍 مركب BHC وأيزومر جاما (لندان) 3D",
+    "lab_exp": null,
+    "title": "تحضير مبيد BHC (سداسي كلوروهكسان حلقي) بالكلورة الضوئية والهيئة الفراغية للندان (ص 149)",
+    "formula": "C₆H₆ (حلقة بنزين) + 3Cl₂ ──(ضوء)──▶ C₆H₆Cl₆ (9 هيئات فراغية: أقواها جاما)",
+    "slider_label": "تدوير حلقة الكرسي:",
+    "slider_min": 0,
+    "slider_max": 360,
+    "slider_val": 60,
+    "slider_unit": "°",
+    "components": [
+      {
+        "id": "gamma_iso",
+        "name": "الهيئة الكرسية لأيزومر جاما",
+        "role": "من بين 9 أيزومرات فراغية، يتميز أيزومر جاما بفاعليته القوية كـ 'لندان'."
+      }
+    ]
+  },
+  "diag-chem-8-organophos": {
+    "id": "diag-chem-8-organophos",
+    "sim_key": "chem_trichlorophon_parathion",
+    "book_page": 150,
+    "bounds": [
+      0.18,
+      0.34,
+      0.63,
+      0.345
+    ],
+    "hotspot_label": "🔍 مبيدات الفسفور (تراي كلوروفون وباراثيون) 3D",
+    "lab_exp": null,
+    "title": "المبيدات الفسفورية العضوية: تراي كلوروفون، بارا أوكسون (P=O) وباراثيون (P=S) (ص 150)",
+    "formula": "(CH₃O)₂P–OH + Cl₃C–CHO → تراي كلوروفون  |  رابطة P=O / P=S سريعة التحلل",
+    "slider_label": "اختيار المبيد الفسفوري:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "po_ps",
+        "name": "سرعة التحلل والسمية الحادة",
+        "role": "تتحلل سريعاً في التربة بسبب رابطة P=O أو P=S الضعيفة لكنها شديدة السمية للإنسان."
+      }
+    ]
+  },
+  "diag-chem-8-3-nylon": {
+    "id": "diag-chem-8-3-nylon",
+    "sim_key": "chem_nylon66_interfacial",
+    "book_page": 154,
+    "bounds": [
+      0.18,
+      0.148,
+      0.25,
+      0.215
+    ],
+    "hotspot_label": "🔍 شكل (8-3): سحب خيوط النايلون 66 3D",
+    "lab_exp": null,
+    "title": "شكل (8-3): البلمرة التكاثفية البينية وتكوّن خيوط النايلون 6,6 (ص 154)",
+    "formula": "حمض الأديبيك (C₆) + هكساميثيلين ثنائي الأمين (C₆) → نايلون 6,6 (بولي أميد) + xH₂O",
+    "slider_label": "شد ومغزل الخيط (أضعاف):",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 3,
+    "slider_unit": "×",
+    "components": [
+      {
+        "id": "draw_thread",
+        "name": "شد الألياف 4 أضعاف طولها",
+        "role": "ينظم السلاسل البوليمرية بالتوازي فتكتسب خيوط النايلون متانة تماثل الصلب."
+      }
+    ]
+  },
+  "diag-chem-8-4-fabrics": {
+    "id": "diag-chem-8-4-fabrics",
+    "sim_key": "chem_nylon_fabrics_ester",
+    "book_page": 155,
+    "bounds": [
+      0.18,
+      0.275,
+      0.63,
+      0.26
+    ],
+    "hotspot_label": "🔍 شكل (8-4): أقمشة النايلون والأسترة 3D",
+    "lab_exp": null,
+    "title": "شكل (8-4): بكرات خيوط النايلون والأقمشة الملونة وتحضير البولي إستر بالأسترة (ص 155)",
+    "formula": "تفاعل الأسترة الأساسي: حمض كربوكسيلي + كحول ⇌ إستر + ماء",
+    "slider_label": "تنوع الألياف والألوان:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "ester_txt",
+        "name": "من النايلون إلى البولي إستر",
+        "role": "تنتقل الوحدة من الأميدات (نايلون) إلى الإسترات متعددة الحلقات المقاومة للعثّة."
+      }
+    ]
+  },
+  "diag-chem-8-5-suit": {
+    "id": "diag-chem-8-5-suit",
+    "sim_key": "chem_dacron_suit",
+    "book_page": 157,
+    "bounds": [
+      0.505,
+      0.185,
+      0.305,
+      0.175
+    ],
+    "hotspot_label": "🔍 شكل (8-5): بدلة من ألياف الداكرون 3D",
+    "lab_exp": null,
+    "title": "شكل (8-5): بدلة منسوجة من ألياف الداكرون (البولي إستر المقاوم للتجعد) (ص 157)",
+    "formula": "بولي إيثيلين تيريفثالات (داكرون): ألياف متينة لا تتجعد وتقاوم العثّ والانكماش",
+    "slider_label": "نسبة البوليستر:",
+    "slider_min": 30,
+    "slider_max": 100,
+    "slider_val": 80,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "apparel",
+        "name": "تطبيقات الداكرون النسيجية",
+        "role": "يحل محل الصوف والقطن أو يمزج بهما لثبات اللون وعدم الحاجة للكيّ المتكرر."
+      }
+    ]
+  },
+  "diag-chem-8-6-heart": {
+    "id": "diag-chem-8-6-heart",
+    "sim_key": "chem_dacron_heart_patch",
+    "book_page": 157,
+    "bounds": [
+      0.18,
+      0.185,
+      0.31,
+      0.19
+    ],
+    "hotspot_label": "🔍 شكل (8-6): رقعة الداكرون في جراحة القلب 3D",
+    "lab_exp": null,
+    "title": "شكل (8-6): استخدام رقعة طبية من خيوط الداكرون في جراحة القلب والأوعية (ص 157)",
+    "formula": "رقعة ألياف الداكرون الجراحية: غير سامة ولا تسبب حساسية أو تجلطاً للدم",
+    "slider_label": "ثبات الرقعة الحيوي:",
+    "slider_min": 1,
+    "slider_max": 10,
+    "slider_val": 9,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "patch",
+        "name": "أمان البولي إستر داخل الجسم",
+        "role": "خموله الكيميائي ونسيجه الشبكي الآمن يجعله مثالياً لترقيع الشرايين والقلب."
+      }
+    ]
+  },
+  "diag-chem-8-7-soapbars": {
+    "id": "diag-chem-8-7-soapbars",
+    "sim_key": "chem_soap_colors",
+    "book_page": 157,
+    "bounds": [
+      0.18,
+      0.675,
+      0.63,
+      0.155
+    ],
+    "hotspot_label": "🔍 شكل (8-7): ألوان الصابون وصناعته 3D",
+    "lab_exp": "exp-9",
+    "title": "شكل (8-7): ألواح وألوان الصابون التجاري وإضافات العطور والملونات (ص 157)",
+    "formula": "تصبن الزيوت مع NaOH (صابون صلب) أو KOH (ناعم) + إضافات اللون والرائحة",
+    "slider_label": "اللون والعطر المضاف:",
+    "slider_min": 1,
+    "slider_max": 5,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "bars",
+        "name": "أصناف الصابون الاستهلاكي",
+        "role": "بعد التمليح بـ NaCl يُضاف اللون والعطر ومواد مطرية لقوالب الصابون."
+      }
+    ]
+  },
+  "diag-chem-8-8-micelle": {
+    "id": "diag-chem-8-8-micelle",
+    "sim_key": "chem_soap_micelle",
+    "book_page": 159,
+    "bounds": [
+      0.18,
+      0.145,
+      0.63,
+      0.25
+    ],
+    "hotspot_label": "🔍 شكل (8-8): تركيب جزيء الصابون وآليته 3D",
+    "lab_exp": "exp-9",
+    "title": "شكل (8-8): بنية جزيء الصابون وآلية تفكيك قطرة الدهن بتكوين مستحلب (ص 159)",
+    "formula": "CH₃–(CH₂)₁₆–COO⁻ Na⁺  |  ذيل كاره للماء (R– في الدهن) + رأس محب للماء (–COO⁻ في الماء)",
+    "slider_label": "تركيز الصابون في الماء:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 75,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "tail",
+        "name": "السلسلة الهيدروكربونية (الكارهة للماء)",
+        "role": "تذوب داخل قطرة الزيت أو الشحم لتفكيك التصاقها بالنسيج."
+      },
+      {
+        "id": "head",
+        "name": "شق الملح (–COO⁻ Na⁺ المحب للماء)",
+        "role": "يتجه نحو الماء فيتنافر المشحون كهربياً ويُشطف المستحلب الدهني بالكامل."
+      }
+    ]
+  },
+  "diag-chem-8-detergents": {
+    "id": "diag-chem-8-detergents",
+    "sim_key": "chem_anionic_detergents",
+    "book_page": 160,
+    "bounds": [
+      0.19,
+      0.34,
+      0.62,
+      0.345
+    ],
+    "hotspot_label": "🔍 تحضير المنظفات الصناعية الأنيونية 3D",
+    "lab_exp": null,
+    "title": "معادلات تصنيع المنظف الأنيوني: ألكيل بنزين سلفونيك وكبريتات الكحول الطويل (ص 160)",
+    "formula": "R–C₆H₄–SO₃H + NaOH → منظف سلفوناتي | C₁₂H₂₅–OH + H₂SO₄ + NaOH → كبريتات لوريل الصوديوم",
+    "slider_label": "مسار التحضير (1 بنزين / 2 كحول):",
+    "slider_min": 1,
+    "slider_max": 2,
+    "slider_val": 1,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "hard_water",
+        "name": "المقاومة الفائقة لعسر الماء",
+        "role": "لا تترسب أملاح المنظفات الأنيونية مع Ca²⁺ و Mg²⁺ وتفوق فعالية السلفات السلفونات منزلياً."
+      }
+    ]
+  },
+  "diag-chem-8-9-paint": {
+    "id": "diag-chem-8-9-paint",
+    "sim_key": "chem_paint_oil_crosslink",
+    "book_page": 164,
+    "bounds": [
+      0.18,
+      0.195,
+      0.31,
+      0.195
+    ],
+    "hotspot_label": "🔍 شكل (8-9): الطلاء وآلية جفافه 3D",
+    "lab_exp": null,
+    "title": "شكل (8-9): الطلاء (الألوان والمخضبات وجفاف الطلاء الزيتي بأكسدة الهواء) (ص 164)",
+    "formula": "طلاء مائي (تبخر الماء)  |  طلاء زيتي (تطاير التوربنتين + جسر أكسجيني –O– بين سلاسل الزيت)",
+    "slider_label": "نسبة جفاف الجسر الأكسجيني:",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_val": 65,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "cure",
+        "name": "تكوّن جسر الأكسيد بين السلاسل",
+        "role": "يتفاعل أكسجين الهواء مع الذرة المجاورة للرابطة المزدوجة في زيت الكتان/الصويا ليجف السطح."
+      }
+    ]
+  },
+  "diag-chem-9-1-carbon": {
+    "id": "diag-chem-9-1-carbon",
+    "sim_key": "chem_carbon_cycle",
+    "book_page": 168,
+    "bounds": [
+      0.18,
+      0.4,
+      0.47,
+      0.39
+    ],
+    "hotspot_label": "🔍 شكل (9-1): دورة الكربون في الطبيعة 3D",
+    "lab_exp": null,
+    "title": "شكل (9-1): التوازن البيئي ودورة الكربون (التمثيل الضوئي والتنفس والتحلل) (ص 168)",
+    "formula": "تمثيل ضوئي: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂  |  تنفس: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O",
+    "slider_label": "مرحلة الدورة البيئية:",
+    "slider_min": 1,
+    "slider_max": 3,
+    "slider_val": 2,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "photo",
+        "name": "امتصاص CO₂ بالنباتات",
+        "role": "تحوّل الأشجار ثاني أكسيد الكربون وضوء الشمس إلى غذاء وأكسجين متجدد."
+      },
+      {
+        "id": "resp",
+        "name": "تنفس الحيوانات والتحلل البكتيري",
+        "role": "تعيد الكائنات والبكتيريا إطلاق CO₂ و H₂O للحفاظ على توازن الغلاف الجوي."
+      }
+    ]
+  },
+  "diag-chem-9-2-greenhouse": {
+    "id": "diag-chem-9-2-greenhouse",
+    "sim_key": "chem_greenhouse_effect",
+    "book_page": 171,
+    "bounds": [
+      0.18,
+      0.285,
+      0.63,
+      0.35
+    ],
+    "hotspot_label": "🔍 شكل (9-2): ظاهرة الاحتباس الحراري 3D",
+    "lab_exp": null,
+    "title": "شكل (9-2): ظاهرة الاحتباس الحراري (البيت الأخضر) وحبس الأشعة تحت الحمراء بواسطة CO₂ (ص 171)",
+    "formula": "موجات شمسية قصيرة تنفذ للأرض ← تنعكس تحت حمراء طويلة ← يحجزها CO₂ فتسخن الأرض",
+    "slider_label": "تركيز CO₂ في الجو (ppm):",
+    "slider_min": 280,
+    "slider_max": 600,
+    "slider_val": 420,
+    "slider_unit": "ppm",
+    "components": [
+      {
+        "id": "trap",
+        "name": "حجز الأشعة الحرارية المنعكسة",
+        "role": "كلما ارتفعت نسبة CO₂ ازدادت الأشعة الحمراء المحبوسة فترتفع حرارة الكوكب."
+      }
+    ]
+  },
+  "diag-chem-9-3-pollution": {
+    "id": "diag-chem-9-3-pollution",
+    "sim_key": "chem_pollution_sources",
+    "book_page": 174,
+    "bounds": [
+      0.22,
+      0.55,
+      0.55,
+      0.275
+    ],
+    "hotspot_label": "🔍 شكل (9-3): التلوث البيئي ومصادره 3D",
+    "lab_exp": null,
+    "title": "شكل (9-3): مصادر التلوث البيئي (مداخن المصانع وعوادم السيارات والهيدروكربونات) (ص 174)",
+    "formula": "CO + NOx + SOx + HC (من احتراق السولار والجازولين والفحم)",
+    "slider_label": "كثافة الانبعاثات:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 75,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "emit",
+        "name": "السحابة الملوثة فوق المدن",
+        "role": "تتصاعد أكاسيد النيتروجين والكبريت والهيدروكربونات غير مكتملة الاحتراق من وسائل النقل والمصانع."
+      }
+    ]
+  },
+  "diag-chem-9-4-statue": {
+    "id": "diag-chem-9-4-statue",
+    "sim_key": "chem_acid_rain_marble",
+    "book_page": 176,
+    "bounds": [
+      0.18,
+      0.595,
+      0.39,
+      0.215
+    ],
+    "hotspot_label": "🔍 شكل (9-4): تأثير المطر الحمضي على التماثيل 3D",
+    "lab_exp": null,
+    "title": "شكل (9-4): تآكل وتشوه التماثيل الكربوناتية بفعل المطر الحمضي (ص 176)",
+    "formula": "H₂SO₄(المطر الحمضي pH≈3) + CaCO₃(الرخام) → CaSO₄(ذائب) + H₂O + CO₂",
+    "slider_label": "درجة الحموضة pH للمطر:",
+    "slider_min": 2,
+    "slider_max": 6,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "erosion",
+        "name": "ذوبان الحجر الجيري والرخام",
+        "role": "يحول حمض الكبريتيك كربونات الكالسيوم الصلبة إلى كبريتات ذائبة فتنهار ملامح المنحوتات."
+      }
+    ]
+  },
+  "diag-chem-9-5-smog": {
+    "id": "diag-chem-9-5-smog",
+    "sim_key": "chem_photochemical_smog",
+    "book_page": 177,
+    "bounds": [
+      0.18,
+      0.575,
+      0.48,
+      0.255
+    ],
+    "hotspot_label": "🔍 شكل (9-5): ظاهرة الضباب الدخاني 3D",
+    "lab_exp": null,
+    "title": "شكل (9-5): سلسلة تفاعلات الضباب الدخاني الضوئي الكيميائي (NOx + HC + UV → O₃ + PAN) (ص 177)",
+    "formula": "NO₂ + ضوء → NO + O  |  O + O₂ → O₃ (أوزون سام)  |  + هيدروكربونات → PAN وألدهيدات",
+    "slider_label": "شدة أشعة الشمس والازدحام:",
+    "slider_min": 10,
+    "slider_max": 100,
+    "slider_val": 80,
+    "slider_unit": "%",
+    "components": [
+      {
+        "id": "pan",
+        "name": "تكوّن الأوزون السطحي و PAN",
+        "role": "ينشط التفاعل بضوء الشمس فوق عوادم السيارات مكوّناً ضباباً مهيّجاً للعين والجهاز التنفسي."
+      }
+    ]
+  },
+  "diag-chem-periodic-table": {
+    "id": "diag-chem-periodic-table",
+    "sim_key": "chem_periodic_table_interactive",
+    "book_page": 188,
+    "bounds": [
+      0.19,
+      0.145,
+      0.62,
+      0.445
+    ],
+    "hotspot_label": "🔍 الجدول الدوري التفاعلي للعناصر 3D",
+    "lab_exp": null,
+    "title": "الجدول الدوري الحديث للعناصر (الفئات s, p, d, f والفلزات القلوية والانتقالية) (ص 188)",
+    "formula": "18 مجموعة و 7 دورات  |  العناصر الانتقالية الوسطى d  |  اللانثانيدات والأكتينيدات f",
+    "slider_label": "تحديد الفئة (1:s 2:p 3:d 4:f):",
+    "slider_min": 1,
+    "slider_max": 4,
+    "slider_val": 3,
+    "slider_unit": "",
+    "components": [
+      {
+        "id": "pt_blocks",
+        "name": "الفئات الأربع بالجدول الدوري",
+        "role": "ينظم العناصر تصاعدياً حسب العدد الذري مع ألوان مميزة للفلزات وأشباه الفلزات واللافلزات والغازات النبيلة."
       }
     ]
   }

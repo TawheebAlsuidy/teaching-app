@@ -8,6 +8,8 @@ Generates:
 """
 import os
 import json
+from build_chemistry_renderers import get_chemistry_2d_js
+from build_chemistry_3d_scenes import get_chemistry_3d_js
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -1221,8 +1223,21 @@ function drawLab2DFallback(data, sliderVal) {
   if (!ctx) return;
   ctx.clearRect(0, 0, w, h);
 
-  // Only draw 2D canvas schematic when WebGL renderer is unavailable
-  if (labRenderer) return;
+  if (typeof ensureChemModeToggle === 'function') ensureChemModeToggle(data);
+  const isChem = !!(data && (data.sim_key || '').indexOf('chem_') === 0);
+  const wantChem2D = isChem && (window.__chemViewMode === '2d' || !labRenderer);
+
+  // Only draw 2D canvas schematic when WebGL renderer is unavailable or Chemistry 2D mode is toggled
+  if (labRenderer && !wantChem2D) {
+    labFallbackCanvas.style.display = 'none';
+    return;
+  }
+  labFallbackCanvas.style.display = 'block';
+
+  if (isChem && typeof drawChem2DSchematic === 'function') {
+    drawChem2DSchematic(data, sliderVal, ctx, w, h);
+    return;
+  }
 
   if (data && (data.sim_key || '').indexOf('math_') === 0) {
     drawMath2DFallback(data, sliderVal, ctx, w, h);
@@ -1534,33 +1549,8 @@ function buildSubject3dScene(diagRef) {
     }
     labApparatusGroup.add(dnaGroup);
     labDynamicMeshes.push({ type: 'spin', mesh: dnaGroup });
-  } else if (sk === 'chem_blast_furnace') {
-    addMesh(new THREE.CylinderGeometry(0.45, 0.72, 1.85, 24), 0x475569, 0, 0.1, 0);
-    addMesh(new THREE.CylinderGeometry(0.55, 0.55, 0.35, 24), 0xf97316, 0, -0.65, 0);
-    const molten = addMesh(new THREE.CylinderGeometry(0.48, 0.48, 0.18, 24), 0xfef08a, 0, -0.82, 0);
-    labDynamicMeshes.push({ type: 'bob', mesh: molten, amp: 0.04 });
-  } else if (sk === 'chem_iron_ions' || sk === 'chem_calorimetry' || sk === 'chem_biochem') {
-    const col1 = sk === 'chem_iron_ions' ? 0x4ade80 : (sk === 'chem_biochem' ? 0x1e3a8a : 0x38bdf8);
-    const col2 = sk === 'chem_iron_ions' ? 0x991b1b : (sk === 'chem_biochem' ? 0xc2410c : 0xf97316);
-    addMesh(new THREE.CylinderGeometry(0.26, 0.26, 1.35, 20), col1, -0.58, -0.1, 0, 0, 0, 0, 0.85);
-    addMesh(new THREE.CylinderGeometry(0.26, 0.26, 1.35, 20), col2, 0.58, -0.1, 0, 0, 0, 0, 0.85);
-    const stir = addMesh(new THREE.CylinderGeometry(0.04, 0.04, 1.4, 12), 0xe2e8f0, 0, 0.35, 0);
-    labDynamicMeshes.push({ type: 'bob', mesh: stir, amp: 0.08 });
-  } else if (sk === 'chem_daniell_cell' || sk === 'chem_lead_battery' || sk === 'chem_electrolysis' || sk === 'chem_electroplating') {
-    addMesh(new THREE.BoxGeometry(0.75, 0.85, 0.7), 0x0284c7, -0.68, -0.35, 0, 0, 0, 0, 0.55);
-    addMesh(new THREE.BoxGeometry(0.75, 0.85, 0.7), 0x38bdf8, 0.68, -0.35, 0, 0, 0, 0, 0.55);
-    addMesh(new THREE.BoxGeometry(0.14, 0.95, 0.14), 0x94a3b8, -0.68, 0, 0);
-    addMesh(new THREE.BoxGeometry(0.14, 0.95, 0.14), sk === 'chem_electroplating' ? 0xf8fafc : 0xd97706, 0.68, 0, 0);
-    addMesh(new THREE.CylinderGeometry(0.06, 0.06, 1.38, 12), 0xfde047, 0, 0.55, 0, 0, 0, Math.PI/2);
-    const ePulse = addMesh(new THREE.SphereGeometry(0.09, 12, 12), 0x4ade80, -0.6, 0.55, 0);
-    labDynamicMeshes.push({ type: 'pulse', mesh: ePulse });
-  } else if (sk === 'chem_distillation_tower') {
-    addMesh(new THREE.CylinderGeometry(0.42, 0.42, 2.0, 24), 0x94a3b8, 0, 0.1, 0, 0, 0, 0, 0.42);
-    [0x1e293b, 0x92400e, 0xd97706, 0xfacc15, 0x38bdf8].forEach((c, idx) => {
-      addMesh(new THREE.CylinderGeometry(0.4, 0.4, 0.06, 20), c, 0, -0.65 + idx * 0.36, 0);
-    });
-    const vap = addMesh(new THREE.SphereGeometry(0.1, 14, 14), 0xfef08a, 0, -0.6, 0);
-    labDynamicMeshes.push({ type: 'bob', mesh: vap, amp: 0.45 });
+  } else if (sk && sk.indexOf('chem_') === 0 && typeof buildChem3dScene === 'function' && buildChem3dScene(sk, addMesh, THREE, labApparatusGroup, labDynamicMeshes)) {
+    // Unique bespoke Three.js 3D scene built per unique Chemistry sim_key
   } else {
     const grp = new THREE.Group();
     grp.add(new THREE.Mesh(new THREE.SphereGeometry(0.58, 24, 24), new THREE.MeshPhongMaterial({ color: 0x10b981 })));
@@ -1691,6 +1681,7 @@ animateLab = function() {
 
   labDynamicMeshes.forEach(item => {
     if (item.type === 'spin') item.mesh.rotation.y += speedMul;
+    else if (item.type === 'chem_spin') item.mesh.rotation.y += (item.spd || 0.008);
     else if (item.type === 'spin_z') item.mesh.rotation.z += speedMul;
     else if (item.type === 'orbit') {
       item.angle += item.speed;
@@ -2420,11 +2411,12 @@ const UNITS = CURR_DATA?.units || [];
 
     literary_modal = f"{LITERARY_MODAL_HTML}\n" if subject_key == "arabic_lit" else ""
     literary_engine = f"\n{LITERARY_ENGINE_JS}" if subject_key == "arabic_lit" else ""
+    chem_engine = f"\n{get_chemistry_2d_js()}\n{get_chemistry_3d_js()}" if subject_key == "chemistry" else ""
     injection = f"""
 {ACTIVITY_MODAL_HTML}
 {MATH_SOLUTION_MODAL_HTML}
 {literary_modal}<script>
-{INTERACTIVE_ENGINE_JS}{literary_engine}
+{INTERACTIVE_ENGINE_JS}{chem_engine}{literary_engine}
 </script>
 </body>
 """

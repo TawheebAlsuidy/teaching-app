@@ -477,5 +477,37 @@ class TestCurriculumIntegrity(unittest.TestCase):
             self.assertTrue(os.path.exists(dst_file))
             self.assertEqual(os.path.getsize(src_file), os.path.getsize(dst_file))
 
+    def test_12_chemistry_unique_diagrams_and_renderers(self):
+        """Verify every Chemistry textbook figure uses a unique diagram_ref, unique sim_key, and bespoke 2D/3D renderers."""
+        base = os.path.join(ROOT_DIR, "data/curriculum/grade12/chemistry")
+        with open(os.path.join(base, "diagrams.json"), "r", encoding="utf-8") as f:
+            diags = json.load(f)
+        with open(os.path.join(base, "interactions.json"), "r", encoding="utf-8") as f:
+            interactions = json.load(f)
+        with open(os.path.join(ROOT_DIR, "chemistry-12th-book.html"), "r", encoding="utf-8") as f:
+            html_content = f.read()
+
+        self.assertGreaterEqual(len(diags), 74, "Chemistry must define >= 74 distinct diagram entries")
+
+        sim_keys = [d["sim_key"] for d in diags.values()]
+        self.assertEqual(len(sim_keys), len(set(sim_keys)), "Duplicate sim_key detected in Chemistry diagrams.json")
+
+        fig_refs = [
+            spot["diagram_ref"]
+            for spots in interactions.values()
+            for spot in spots
+            if spot.get("type") == "interactive_3d"
+        ]
+        self.assertEqual(len(fig_refs), len(set(fig_refs)), "Duplicate diagram_ref across Chemistry hotspots")
+        self.assertEqual(set(fig_refs), set(diags.keys()), "Unused or unlinked Chemistry diagram_ref detected")
+
+        for sk in sim_keys:
+            self.assertIn(f"sk === '{sk}'", html_content, f"Missing bespoke Chemistry 2D/3D renderer for {sk}")
+            self.assertEqual(
+                html_content.count(f"sk === '{sk}'"),
+                2,
+                f"Expected exact pair of 2D + 3D renderer branches for {sk}",
+            )
+
 if __name__ == "__main__":
     unittest.main()
