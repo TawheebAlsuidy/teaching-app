@@ -965,7 +965,7 @@ function updateActivitySimulation() {
     stage.innerHTML = `<div style="padding:12px;"><div style="font-size:17px; font-weight:800; color:#fbbf24;">🛢️ ${t}</div><div style="font-size:13px; margin-top:8px; color:#e2e8f0;">${d}</div></div>`;
     readout.innerHTML = `<b>📋 نشاط (7-1) ص 124:</b> تمتاز مشتقات البترول بتنوع استخداماتها الصناعية في كل بيت وسوق تجاري.`;
   } else if (st === 'chem_oil_origin_sim') {
-    const th = v.thetaeory || 1;
+    const th = v.theory || 1;
     stage.innerHTML = `<div style="padding:12px;"><div style="font-size:16px; font-weight:800; color:${th===1?'#4ade80':'#f59e0b'};">${th===1?'🐚 نظرية الأصل الحي (الراجحة علمياً)':'⛏️ نظرية الكربيد غير العضوية'}</div><div style="font-size:13px; margin-top:8px;">${th===1?'تحلل بقايا الكائنات البحرية والنباتية الدقيقة تحت طبقات الرسوب والضغط والحرارة عبر ملايين السنين.':'تفاعل كربيدات الفلزات مثل CaC₂ مع الماء منتجة أسيتيلين يتبلمر بالحرارة والضغط.'}</div></div>`;
     readout.innerHTML = `<b>🔍 الأدلة العلمية (نشاط 7-2 ص 128):</b> وجود مركبات النيتروجين والفوسفور والنشاط الضوئي والحفريات البحرية بالصخور الرسوبية يرجّح <b>نظرية الأصل الحي</b>.`;
   } else if (st === 'chem_yemen_oil_sim') {
